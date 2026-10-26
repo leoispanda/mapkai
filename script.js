@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.325";
+const appVersion = "0.1.326";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -18904,6 +18904,91 @@ const categoryGroupSongTracks = {
       "zh": "原版 · 内容待听审",
       "en": "Original · Content review pending"
     }
+  },
+  "089": {
+    "id": "b0bc9407-b3c7-425e-84f2-a1470ac9a1ba",
+    "title": "091 Follow the Little Number - MapKAI - Other Agriculture, Forestry, Fisheries & Veterinary - Lot Traceability",
+    "durationSeconds": 112.0391875,
+    "meta": {
+      "zh": "英文 · 原版 · 1:52 · 待听审",
+      "en": "English · Original · 1:52 · Listening review pending"
+    },
+    "core": {
+      "zh": "批次追溯用来源、批号和日期把一批产品与交接记录连接起来；虚构的三条记录只显示记下的路线，缺失项应标为未知，标签不证明实际旅程或食品安全。",
+      "en": "Lot traceability links a batch to its source, lot identifier and dated handoff records. Three invented records show a recorded route; missing information stays unknown. A label does not prove the actual journey or food safety."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "090": {
+    "id": "a7759fae-040e-4e7b-be67-e507f7df0b61",
+    "title": "092 Say It in Your Own Way - MapKAI - General Health and Welfare - Teach-Back",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "复述确认请对方用自己的话说明下一步，再由讲解者检查自己的表达、换一种说法并重新确认；可以使用提示卡，这不是记忆考试，也不代表一次确认就解决了所有疑问。",
+      "en": "Teach-back asks someone to explain the next step in their own words so the speaker can check the explanation, clarify it and ask again. A reminder card is allowed. This checks communication rather than memory; one matched step does not settle every question."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "091": {
+    "id": "bb604e2a-8cfe-4ec9-8868-f4a04b642487",
+    "title": "093 Out of How Many - MapKAI - Health - Absolute Risk",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "绝对风险要注明事件、人数和时间；在两个各一百人的虚构组中，同一年有两例和四例，对应2%和4%，相差2个百分点。这个差值不是任一组的风险，也不能预测某个人的结果。",
+      "en": "Absolute risk needs an event, a denominator and a time period. In two imagined groups of 100 over the same year, 2 and 4 cases give risks of 2% and 4%, a gap of 2 percentage points. That gap is not either risk itself, and the example does not predict one life."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "092": {
+    "id": "2fc1a9b1-dc33-4649-80cf-1d9c144d83e8",
+    "title": "094 Stay Beside the Choice - MapKAI - Welfare - Supported Decision-Making",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "支持性决策按当事人的偏好澄清选项，让其选择支持者和方式，再确认自己理解了其选择；帮助者不替当事人决定，一种支持方法也不适合所有人。",
+      "en": "Supported decision-making helps a person understand and compare options in their preferred way, choose who supports them and confirm their own choice. The helper does not take over the decision, and one form of support will not suit every person."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "098": {
+    "id": "1739a3f4-bc5a-4ec2-b6ba-6db17ab7120d",
+    "title": "095 One Plan for Tuesday - MapKAI - Integrated Health and Welfare - Care Coordination",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "照护协调从共同确认的个人目标开始，写清谁做什么、何时反馈，复述确认责任并更新进度；尊重信息分享意愿，把尚未预订写为待办，计划上的一行不等于服务已经发生。",
+      "en": "Care coordination starts with the person's agreed goal, names who will do what and when they will report, confirms responsibility and updates progress with agreement about sharing details. An unbooked ride stays planned; a written line does not mean a visit happened."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
   }
 };
 
@@ -19138,6 +19223,26 @@ const categorySongSubjectLabels = {
   "088": {
     "zh": "农林渔兽医跨学科",
     "en": "Integrated Agriculture, Forestry, Fisheries & Veterinary"
+  },
+  "089": {
+    "zh": "其他农业、林业、渔业与兽医",
+    "en": "Other Agriculture, Forestry, Fisheries & Veterinary"
+  },
+  "090": {
+    "zh": "一般健康与福利",
+    "en": "General Health and Welfare"
+  },
+  "091": {
+    "zh": "健康",
+    "en": "Health"
+  },
+  "092": {
+    "zh": "福利",
+    "en": "Welfare"
+  },
+  "098": {
+    "zh": "健康与福利跨学科",
+    "en": "Integrated Health and Welfare"
   }
 };
 
@@ -19194,7 +19299,12 @@ const categorySongTopicLabelsZh = {
   "Plot Sampling": "样地抽样",
   "Catch per Unit Effort": "单位努力量渔获量",
   "Ethograms": "行为谱",
-  "One Health": "同一健康"
+  "One Health": "同一健康",
+  "Lot Traceability": "批次追溯",
+  "Teach-Back": "复述确认",
+  "Absolute Risk": "绝对风险",
+  "Supported Decision-Making": "支持性决策",
+  "Care Coordination": "照护协调"
 };
 
 function getCategorySongSubject(song, categoryCode) {
@@ -22311,7 +22421,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.325").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.326").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

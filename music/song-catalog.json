@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 91,
+  "nextNumber": 96,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -1122,6 +1122,71 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "090 Side by Side - MapKAI - Integrated Agriculture, Forestry, Fisheries & Veterinary - One Health"
+    },
+    {
+      "id": "b0bc9407-b3c7-425e-84f2-a1470ac9a1ba",
+      "number": 91,
+      "numberLabel": "091",
+      "songName": "Follow the Little Number",
+      "subjectName": "Other Agriculture, Forestry, Fisheries & Veterinary",
+      "canonicalSubjectName": "Agriculture, forestry, fisheries and veterinary not elsewhere classified",
+      "conceptName": "Lot Traceability",
+      "createdAt": "2026-10-26T20:44:43.121Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "091 Follow the Little Number - MapKAI - Other Agriculture, Forestry, Fisheries & Veterinary - Lot Traceability"
+    },
+    {
+      "id": "a7759fae-040e-4e7b-be67-e507f7df0b61",
+      "number": 92,
+      "numberLabel": "092",
+      "songName": "Say It in Your Own Way",
+      "subjectName": "General Health and Welfare",
+      "canonicalSubjectName": "Health and welfare not further defined",
+      "conceptName": "Teach-Back",
+      "createdAt": "2026-10-26T20:44:43.121Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "092 Say It in Your Own Way - MapKAI - General Health and Welfare - Teach-Back"
+    },
+    {
+      "id": "bb604e2a-8cfe-4ec9-8868-f4a04b642487",
+      "number": 93,
+      "numberLabel": "093",
+      "songName": "Out of How Many",
+      "subjectName": "Health",
+      "canonicalSubjectName": "Health",
+      "conceptName": "Absolute Risk",
+      "createdAt": "2026-10-26T20:44:43.121Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "093 Out of How Many - MapKAI - Health - Absolute Risk"
+    },
+    {
+      "id": "2fc1a9b1-dc33-4649-80cf-1d9c144d83e8",
+      "number": 94,
+      "numberLabel": "094",
+      "songName": "Stay Beside the Choice",
+      "subjectName": "Welfare",
+      "canonicalSubjectName": "Welfare",
+      "conceptName": "Supported Decision-Making",
+      "createdAt": "2026-10-26T20:44:43.121Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "094 Stay Beside the Choice - MapKAI - Welfare - Supported Decision-Making"
+    },
+    {
+      "id": "1739a3f4-bc5a-4ec2-b6ba-6db17ab7120d",
+      "number": 95,
+      "numberLabel": "095",
+      "songName": "One Plan for Tuesday",
+      "subjectName": "Integrated Health and Welfare",
+      "canonicalSubjectName": "Inter-disciplinary programmes and qualifications involving health and welfare",
+      "conceptName": "Care Coordination",
+      "createdAt": "2026-10-26T20:44:43.121Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "095 One Plan for Tuesday - MapKAI - Integrated Health and Welfare - Care Coordination"
     }
   ]
 }
