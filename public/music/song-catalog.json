@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 81,
+  "nextNumber": 86,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -992,6 +992,71 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "080 A Longer Reach - MapKAI - Engineering and engineering trades - Torque"
+    },
+    {
+      "id": "2fdd5250-0a16-4aa9-8c95-585267dafff8",
+      "number": 81,
+      "numberLabel": "081",
+      "songName": "A Little Either Way",
+      "subjectName": "Manufacturing and processing",
+      "canonicalSubjectName": "Manufacturing and processing",
+      "conceptName": "Dimensional Tolerance",
+      "createdAt": "2026-10-26T18:28:24.405Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "081 A Little Either Way - MapKAI - Manufacturing and processing - Dimensional Tolerance"
+    },
+    {
+      "id": "a01ee68e-5082-4bb5-ab0a-88d2b950e101",
+      "number": 82,
+      "numberLabel": "082",
+      "songName": "Room on the Page",
+      "subjectName": "Architecture and construction",
+      "canonicalSubjectName": "Architecture and construction",
+      "conceptName": "Scale Drawings",
+      "createdAt": "2026-10-26T18:28:24.405Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "082 Room on the Page - MapKAI - Architecture and construction - Scale Drawings"
+    },
+    {
+      "id": "28b42b8a-29ac-4de8-8c39-8797dfa13833",
+      "number": 83,
+      "numberLabel": "083",
+      "songName": "Where We Meet",
+      "subjectName": "Integrated Engineering, Manufacturing & Construction",
+      "canonicalSubjectName": "Inter-disciplinary programmes and qualifications involving engineering, manufacturing and construction",
+      "conceptName": "Interface Management",
+      "createdAt": "2026-10-26T18:28:24.405Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "083 Where We Meet - MapKAI - Integrated Engineering, Manufacturing & Construction - Interface Management"
+    },
+    {
+      "id": "f5bc6236-b8d0-4347-9aac-716d8241387a",
+      "number": 84,
+      "numberLabel": "084",
+      "songName": "Leave a Little Note",
+      "subjectName": "Engineering, Manufacturing & Construction (Other)",
+      "canonicalSubjectName": "Engineering, manufacturing and construction not elsewhere classified",
+      "conceptName": "Maintenance Records",
+      "createdAt": "2026-10-26T18:28:24.405Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "084 Leave a Little Note - MapKAI - Engineering, Manufacturing & Construction (Other) - Maintenance Records"
+    },
+    {
+      "id": "9a806f20-44d1-4e87-8844-799f1d0e669d",
+      "number": 85,
+      "numberLabel": "085",
+      "songName": "What Stays",
+      "subjectName": "Agriculture, Forestry, Fisheries and Veterinary",
+      "canonicalSubjectName": "Agriculture, forestry, fisheries and veterinary not further defined",
+      "conceptName": "Soil Water Balance",
+      "createdAt": "2026-10-26T18:28:24.405Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "085 What Stays - MapKAI - Agriculture, Forestry, Fisheries and Veterinary - Soil Water Balance"
     }
   ]
 }

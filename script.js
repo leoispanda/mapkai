@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.320";
+const appVersion = "0.1.321";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -18734,6 +18734,91 @@ const categoryGroupSongTracks = {
       "zh": "原版 · 内容待听审",
       "en": "Original · Content review pending"
     }
+  },
+  "072": {
+    "id": "2fdd5250-0a16-4aa9-8c95-585267dafff8",
+    "title": "081 A Little Either Way - MapKAI - Manufacturing and processing - Dimensional Tolerance",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "工程公差规定可接受的尺寸范围；100±1毫米对应99至101毫米，比较尺寸读数时仍需考虑测量不确定性。",
+      "en": "Dimensional tolerance specifies an acceptable size range.100 plus or minus1millimetre gives99–101; measurement uncertainty still matters near a limit."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "073": {
+    "id": "a01ee68e-5082-4bb5-ab0a-88d2b950e101",
+    "title": "082 Room on the Page - MapKAI - Architecture and construction - Scale Drawings",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "房间与家具采用相同比例，才能在平面图上比较空间；图上放得下，不证明搬运通道或结构承重合适。",
+      "en": "A shared drawing scale lets a room and furniture be compared on one plan. A floor-plan fit does not prove delivery access or structural capacity."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "078": {
+    "id": "28b42b8a-29ac-4de8-8c39-8797dfa13833",
+    "title": "083 Where We Meet - MapKAI - Integrated Engineering, Manufacturing & Construction - Interface Management",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "先共享连接处的尺寸和单位，比较相容性；双方同意修改并更新图纸，再检查模型。纸上适配不证明建筑安全。",
+      "en": "Share the join dimensions and units, compare compatibility, agree changes on both drawings and test the paired model. Paper fit does not establish building safety."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "079": {
+    "id": "f5bc6236-b8d0-4347-9aac-716d8241387a",
+    "title": "084 Leave a Little Note - MapKAI - Engineering, Manufacturing & Construction (Other) - Maintenance Records",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "维护记录保留设备身份、日期、症状、工作和结果，并区分已完成工作与待检查项目；两次报告并不能证明故障原因。",
+      "en": "Maintenance records identify the asset, date, symptom, work and result, separating completed work from pending checks. Two reports do not prove a cause."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "080": {
+    "id": "9a806f20-44d1-4e87-8844-799f1d0e669d",
+    "title": "085 What Stays - MapKAI - Agriculture, Forestry, Fisheries and Veterinary - Soil Water Balance",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "用同一地块和时段的全部输入与损失计算根区储水变化；20加10减5等于25毫米，但储水不全能被根利用，也没有通用浇水量。",
+      "en": "Root-zone water balance counts all inflows and losses for the same patch and interval:20+10−5=25millimetres in the invented model. Stored water is not all available to roots; no dose fits every crop."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
   }
 };
 
@@ -18928,6 +19013,26 @@ const categorySongSubjectLabels = {
   "071": {
     "zh": "工程及工程技术",
     "en": "Engineering and engineering trades"
+  },
+  "072": {
+    "zh": "制造与加工",
+    "en": "Manufacturing and processing"
+  },
+  "073": {
+    "zh": "建筑与建造",
+    "en": "Architecture and construction"
+  },
+  "078": {
+    "zh": "工程制造建筑跨学科",
+    "en": "Integrated Engineering, Manufacturing & Construction"
+  },
+  "079": {
+    "zh": "其他工程、制造与建筑",
+    "en": "Engineering, Manufacturing & Construction (Other)"
+  },
+  "080": {
+    "zh": "农业、林业、渔业与兽医（综合）",
+    "en": "Agriculture, Forestry, Fisheries and Veterinary"
   }
 };
 
@@ -18975,7 +19080,11 @@ const categorySongTopicLabelsZh = {
   "Precision and Accuracy": "精密度与准确度",
   "Survey Coverage": "调查覆盖",
   "Design Constraints": "设计约束",
-  "Torque": "力矩"
+  "Torque": "力矩",
+  "Scale Drawings": "比例图",
+  "Interface Management": "接口管理",
+  "Maintenance Records": "维护记录",
+  "Soil Water Balance": "土壤水分平衡"
 };
 
 function getCategorySongSubject(song, categoryCode) {
@@ -22092,7 +22201,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.320").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.321").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
