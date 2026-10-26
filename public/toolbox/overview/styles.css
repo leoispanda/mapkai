@@ -144,3 +144,32 @@
 .map-lamp-key .resource-dot{width:8px;height:8px;border-width:1px;margin-right:3px}
 .map-lamp-key .resource-dot:not(:first-child){margin-left:4px}
 @media(max-width:700px){.map-lamp-key .resource-dot{width:7px;height:7px;margin-right:2px}.map-lamp-key .resource-dot:not(:first-child){margin-left:2px}}
+/* Three slim progress strips keep the totals above the complete atlas. */
+.overview-hero{gap:24px;padding-block:5px 8px}
+.overview-progress-group{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;width:min(820px,70%);align-items:start}
+.overview-progress{min-width:0;font-variant-numeric:tabular-nums}
+.progress-heading{display:flex;align-items:baseline;justify-content:space-between;gap:6px;line-height:1.5}
+.progress-heading h2{font-size:13px;font-weight:600;color:var(--map-label);margin:0}
+.progress-total{font-size:11px;color:var(--muted)}
+.progress-numbers{display:flex;justify-content:space-between;gap:4px 8px;flex-wrap:wrap;font-size:11px;line-height:1.7;color:var(--muted)}
+.progress-numbers>span{white-space:nowrap}.progress-numbers strong{font-weight:650;color:var(--map-label)}
+.progress-numbers .progress-completed,.progress-completed strong{color:var(--overview-ready)}
+.progress-track{display:flex;align-items:center;gap:7px;height:14px}
+.progress-track progress{display:block;appearance:none;-webkit-appearance:none;border:0;border-radius:3px;height:4px;min-width:0;width:100%;flex:1;background:var(--map-stroke);overflow:hidden}
+.progress-track progress::-webkit-progress-bar{background:var(--map-stroke);border-radius:3px}
+.progress-track progress::-webkit-progress-value{background:var(--overview-ready);border-radius:3px}
+.progress-track progress::-moz-progress-bar{background:var(--overview-ready);border-radius:3px}
+.progress-track progress:not([value])::-webkit-progress-bar{background:var(--map-stroke)}
+.progress-track progress:not([value])::-moz-progress-bar{background:var(--map-stroke)}
+.progress-percent{font-size:10px;color:var(--muted);min-width:36px;text-align:right;white-space:nowrap}
+.collection-counts{justify-content:flex-start;flex-wrap:wrap;width:auto;gap:22px;padding-block:5px 8px}
+@media(max-width:1050px){.overview-progress-group{width:68%;gap:18px}.overview-heading{gap:12px}}
+@media(max-width:700px){
+  .overview-hero{gap:6px;padding-block:3px 7px}
+  .overview-progress-group{width:100%;gap:12px}
+  .progress-heading h2{font-size:12px}.progress-total{font-size:10px;line-height:1.5}
+  .progress-numbers{font-size:10px;gap:0 4px;line-height:1.6}
+  .progress-track{gap:5px;height:13px}.progress-percent{font-size:9px;min-width:31px}
+  .collection-counts{width:auto;justify-content:flex-start;gap:16px}
+}
+@media(max-width:360px){.overview-progress-group{gap:8px}.progress-heading{flex-direction:column;align-items:flex-start;gap:0}.progress-numbers{flex-direction:column;align-items:flex-start}}

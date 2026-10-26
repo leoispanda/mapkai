@@ -176,8 +176,22 @@ function renderTree() {
   const visible=new Set(categories.map(c=>c.item.code));$('overview-subject').querySelectorAll('option[data-category]').forEach(option=>{option.disabled=!visible.has(option.value);});if($('overview-subject').value&&!visible.has($('overview-subject').value))$('overview-subject').value='';
 }
 function renderCounts() {
+  const fields = catalog.categories.flatMap(c => c.fields);
+  const stories = fields.flatMap(f => f.stories);
+  const progress = [
+    {key:'stories', title:t('stories'), total:stories.length, done:stories.filter(s => s.ready && s.newer).length, unit:zh?'篇':'stories', completed:zh?'已转换':'Converted', remaining:zh?'待转换':'To convert', note:zh?'按故事版本转换计数；已备稿不代表正文已开放。':'Counts current story versions. Prepared drafts may not be open for reading.'},
+    {key:'music', title:t('music'), total:fields.length, done:fields.filter(f => songsById.has(f.songId)).length, unit:zh?'科':'fields', completed:zh?'已覆盖':'Covered', remaining:zh?'待补':'Needed', note:zh?`按小学科覆盖计数，含分组共享歌曲${songsCurrent?'':'；当前为目录快照'}。`:`Field coverage, including shared group songs${songsCurrent?'':'; directory snapshot'}.`},
+    {key:'video', title:t('video'), total:fields.length, done:videos === null ? null : fields.filter(f => videoFor(f)).length, unit:zh?'科':'fields', completed:zh?'已覆盖':'Covered', remaining:zh?'待补':'Needed', note:videoFailed?t('noVideos'):t('liveVideos')},
+  ];
+  $('content-counts').innerHTML = progress.map(({key,title,total,done,unit,completed,remaining,note}) => {
+    const known = done !== null, pending = known ? total - done : '—';
+    const percent = known && total ? Math.round(done / total * 1000) / 10 : 0;
+    const totalLabel = zh ? `共 ${total} ${unit}` : `${total} ${unit}`;
+    const valueLabel = known ? `${totalLabel} · ${completed} ${done} · ${remaining} ${pending} · ${percent}%` : `${totalLabel} · ${t('unknown')}`;
+    return `<div class="overview-progress" data-progress="${key}" title="${esc(note)}"><div class="progress-heading"><h2>${esc(title)}</h2><span class="progress-total">${esc(totalLabel)}</span></div><div class="progress-numbers"><span class="progress-completed">${esc(completed)} <strong>${known?done:'—'}</strong></span><span>${esc(remaining)} <strong>${pending}</strong></span></div><div class="progress-track"><progress max="${total}"${known?` value="${done}"`:''} aria-label="${esc(title)}" aria-valuetext="${esc(valueLabel)}"></progress><span class="progress-percent">${known?`${percent}%`:esc(t('unknown'))}</span></div><span class="sr-only">${esc(note)}</span></div>`;
+  }).join('');
   const intros = catalog.categories.filter(c => c.introduction?.public).length;
-  const draftCount = catalog.categories.flatMap(c => c.fields).flatMap(f => f.stories).filter(s => s.ready && !s.public).length;
+  const draftCount = stories.filter(s => s.ready && !s.public).length;
   const workCount = films === null ? '—' : new Set(films.map(f => pick(f.title).replace(/\s*\(Draft \d+\)$/, '').toLowerCase())).size;
   const stats = [
     ['#content-map', intros, t('introCollection'), zh ? `另有 ${draftCount} 篇故事稿已备` : `${draftCount} further story drafts ready`],
@@ -186,7 +200,7 @@ function renderCounts() {
     ['#film-library', workCount, t('films'), films === null ? (filmFailed ? t('failed') : t('loading')) : (zh ? `${films.length} 个创作版本` : `${films.length} creative versions`)],
   ];
   const shortTitles=zh?['导论','视频','歌曲','MV']:['Intros','Videos','Songs','MVs'];
-  $('content-counts').innerHTML = stats.map(([href,n,title,note],i) => `<a class="overview-stat" href="${href}" title="${esc(`${title} · ${note}`)}" aria-label="${esc(`${n} ${title} · ${note}`)}"><strong>${esc(n)}</strong><span>${esc(shortTitles[i])}</span><small>${esc(note)}</small></a>`).join('');
+  $('collection-counts').innerHTML = stats.map(([href,n,title,note],i) => `<a class="overview-stat" href="${href}" title="${esc(`${title} · ${note}`)}" aria-label="${esc(`${n} ${title} · ${note}`)}"><strong>${esc(n)}</strong><span>${esc(shortTitles[i])}</span><small>${esc(note)}</small></a>`).join('');
   $('coverage').textContent = zh ? `${catalog.categories.length} 个学科大类 · ${catalog.categories.flatMap(c => c.fields).length} 个小学科 · 每科 3 个故事` : `${catalog.categories.length} subjects · ${catalog.categories.flatMap(c => c.fields).length} fields · 3 stories per field`;
 }
 function renderCourse() {
@@ -223,7 +237,7 @@ async function initialize() {
     $('map-expand').addEventListener('click',()=>{expandedAll=!(expandedAll||query||filter!=='all');query='';filter='all';$('overview-search').value='';selected='root';expandedFields.clear();renderTree();renderSongs();});
     $('map-selection').addEventListener('click',event=>{if(event.target.closest('#selection-close')){closeSelection();return;}const story=event.target.closest('[data-select-story]');if(story){const item=catalog.categories.flatMap(c=>c.fields).flatMap(f=>f.stories).find(s=>s.id===story.dataset.selectStory);if(item)activateNode(storyNode(item));}});
     document.addEventListener('keydown',event=>{if(event.key==='Escape')closeSelection();});
-    $('content-counts').addEventListener('click', event => { const href = event.target.closest('a')?.getAttribute('href'); if (href === '#music-library' || href === '#film-library') $(href.slice(1)).open = true; });
+    $('collection-counts').addEventListener('click', event => { const href = event.target.closest('a')?.getAttribute('href'); if (href === '#music-library' || href === '#film-library') $(href.slice(1)).open = true; });
     await Promise.allSettled([
       json('/music/song-catalog.json').then(payload => {
         if (!Array.isArray(payload?.songs) || payload.songs.some(s => !/^[a-f0-9-]{36}$/i.test(s.id || '') || typeof s.songName !== 'string' || typeof s.subjectName !== 'string' || typeof s.conceptName !== 'string') || new Set(payload.songs.map(s => s.id)).size !== payload.songs.length) throw new Error('Invalid songs');
