@@ -61,5 +61,9 @@
   "回到全图": "Show all",
   "全屏": "Full screen",
   "全景定位缩略图": "Overview navigation minimap",
-  "点缩略图定位": "Select the minimap to navigate"
+  "点缩略图定位": "Select the minimap to navigate",
+  "清晰阅读": "Read clearly",
+  "图例与资源说明": "Legend and resource notes",
+  "80科已展开 · 拖动查看 · 滚轮或双指缩放": "80 fields open · Drag to pan · Scroll or pinch to zoom",
+  "以MapKAI为中心向四周发散，80个小学科默认全部展开。初始使用清晰阅读比例，拖动查看周围分支；回到全图可看全部脉络。支持滚轮、双指缩放；每科保留三个故事绿灯及逐篇新版、旧版标记。": "A radial map with MapKAI at its centre and all 80 fields expanded. The initial readable scale shows part of the map; drag to explore surrounding branches or choose Show all for the entire atlas. Scroll or pinch to zoom. Each field retains three story lights and individual New or Old labels."
 }

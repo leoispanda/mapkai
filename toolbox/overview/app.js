@@ -161,11 +161,11 @@ function renderTree() {
     categories.push(node);
   }
   if(!allNodes.some(n=>n.id===selected))selected='root';
-  mindMap.render({root,categories,selected,viewKey:`${query}|${filter}|${expandedAll}`,searching:Boolean(query)});renderSelection(allNodes.find(n=>n.id===selected));renderFilters();
+  mindMap.render({root,categories,selected,viewKey:`${query}|${filter}|${expandedAll}`,searching:Boolean(query),filtered:Boolean(query||filter!=='all')});renderSelection(allNodes.find(n=>n.id===selected));renderFilters();
   $('overview-empty').hidden=fieldCount>0;
   const detailed=Boolean(expandedAll||query||filter!=='all');
   $('directory-title').textContent=zh?(query?'搜索结果':filter!=='all'?'筛选结果':detailed?'全部小学科':'学科大类'):(query?'Search results':filter!=='all'?'Filtered fields':detailed?'All fields':'Subject groups');
-  $('map-guidance').textContent=zh?'拖动移动 · 滚轮或双指缩放 · 点击学科放大':'Drag to pan · Scroll or pinch to zoom · Select a subject to focus';
+  $('map-guidance').textContent=zh?`${detailed?fieldCount:categories.length}${detailed?'科':'类'}已展开 · 拖动查看 · 滚轮或双指缩放`:`${detailed?fieldCount:categories.length} ${detailed?'fields':'subjects'} open · Drag to pan · Scroll or pinch to zoom`;
   $('directory-results').textContent=zh?`${fieldCount} / 80 个小学科 · ${categories.length} 个学科分支`:`${fieldCount} / 80 fields · ${categories.length} subject branches`;
   $('map-expand').textContent=zh?(detailed?'只看大类':'展开80小学科'):(detailed?'Subjects only':'Expand 80 fields');$('map-expand').setAttribute('aria-pressed',String(detailed));
   const counts={1:0,2:0,3:0};for(const field of catalog.categories.flatMap(c=>c.fields)){const score=fieldScore(field);if(score!==null)counts[score]=(counts[score]||0)+1;}
@@ -183,7 +183,8 @@ function renderCounts() {
     ['#music-library', catalog.songs.length, t('songCollection'), songsCurrent ? (zh ? '按录音计数 · 含不同版本' : 'Recordings, including alternate versions') : (zh ? '目录快照' : 'Directory snapshot')],
     ['#film-library', workCount, t('films'), films === null ? (filmFailed ? t('failed') : t('loading')) : (zh ? `${films.length} 个创作版本` : `${films.length} creative versions`)],
   ];
-  $('content-counts').innerHTML = stats.map(([href,n,title,note]) => `<a class="overview-stat" href="${href}"><strong>${esc(n)}</strong><span>${esc(title)}</span><small>${esc(note)}</small></a>`).join('');
+  const shortTitles=zh?['导论','视频','歌曲','MV']:['Intros','Videos','Songs','MVs'];
+  $('content-counts').innerHTML = stats.map(([href,n,title,note],i) => `<a class="overview-stat" href="${href}" title="${esc(`${title} · ${note}`)}" aria-label="${esc(`${n} ${title} · ${note}`)}"><strong>${esc(n)}</strong><span>${esc(shortTitles[i])}</span><small>${esc(note)}</small></a>`).join('');
   $('coverage').textContent = zh ? `${catalog.categories.length} 个学科大类 · ${catalog.categories.flatMap(c => c.fields).length} 个小学科 · 每科 3 个故事` : `${catalog.categories.length} subjects · ${catalog.categories.flatMap(c => c.fields).length} fields · 3 stories per field`;
 }
 function renderCourse() {
