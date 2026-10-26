@@ -19,7 +19,7 @@ const words = {
   introCollection: ['可读学科导论', 'Readable introductions'], videoCollection: ['学科视频', 'Subject videos'],
   films: ['MV 作品', 'Music video works'], preview: ['含待审预览', 'Includes previews under review'],
   complete: ['完整课程 · 需课程密码', 'Complete course · Course password required'], openCourse: ['打开课程入口 ↗', 'Open the course entrance ↗'],
-  noVideos: ['视频目录暂时无法核实，相关数量与绿灯保持“待核实”。稍后重新打开此页可再次读取。', 'The video directory could not be verified. Its counts and lights remain unverified. Reopen this page to try again.'],
+  noVideos: ['视频目录暂时无法核实，相关数量与状态灯保持“待核实”。稍后重新打开此页可再次读取。', 'The video directory could not be verified. Its counts and lights remain unverified. Reopen this page to try again.'],
   liveVideos: ['视频状态来自当前公开目录；待审预览并不代表完整审核通过。', 'Video availability follows the current public directory. A preview is not a full review approval.'],
   catalogFailure: ['内容目录暂时无法载入，请稍后重新打开。', 'The content directory could not be loaded. Please reopen this page later.'],
 };
@@ -114,7 +114,7 @@ function renderSelection(node) {
   }else if(node.kind==='field'){
     links=[anchor(`/fields/${item.slug}`,t('openField')),watchAnchor(videoFor(item),t('watchField')),songsById.has(item.songId)?songAnchor(item.songId,t('listenShared')):`<span>${esc(zh?'音乐待补':'Music needed')}</span>`];
     note=zh?'三个故事的版本与阅读状态':'Versions and reading availability of the three stories';
-    stories=`<div class="selection-stories">${item.stories.map((story,i)=>`<button type="button" data-select-story="${esc(story.id)}"><span class="resource-dot small ${story.ready?'on':''}" aria-hidden="true"></span><span><strong>${i+1}. ${esc(pick(story.title))}</strong><small>${esc(t(story.newer?'newer':'older'))} · ${esc(t(story.public?'open':'pending'))}</small></span></button>`).join('')}</div>`;
+    stories=`<div class="selection-stories">${item.stories.map((story,i)=>`<button type="button" data-select-story="${esc(story.id)}"><span class="resource-dot small ${story.ready?'on':'missing'}" aria-hidden="true"></span><span><strong>${i+1}. ${esc(pick(story.title))}</strong><small>${esc(t(story.newer?'newer':'older'))} · ${esc(t(story.public?'open':'pending'))}</small></span></button>`).join('')}</div>`;
   }else{
     links=item.public?[anchor(`/concept-fables/${item.id}`,t('read'))]:[];
     note=`${pick(item.concept)} · ${t(item.newer?'newer':'older')} · ${t(item.public?'open':'pending')}`;

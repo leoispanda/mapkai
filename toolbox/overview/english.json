@@ -30,7 +30,6 @@
   "已有共享歌曲": "With a shared song",
   "含旧版故事": "Includes earlier stories",
   "绿灯：已有资源": "Green: resource exists",
-  "灰灯：待补": "Grey: not yet available",
   "顺序：音乐 / 视频 / 故事": "Order: music / video / stories",
   "共：分组共享歌曲": "Shared: a song for the field group",
   "绿灯包含已备故事稿。尚未开放的正文会单独标明，能打开的内容可直接进入。": "Green includes prepared story drafts. Stories not open for reading are labelled; available content opens directly.",
@@ -49,7 +48,6 @@
   "待补": "Needed",
   "新 / 旧": "New / Earlier",
   "故事版本": "Story versions",
-  "空灯：待补": "Hollow: resource needed",
   "已全部展开，向下浏览；点击小学科查看故事和内容入口。": "All fields are open. Scroll to explore; select a field for its stories and resources.",
   "缩小文字": "Smaller text",
   "放大文字": "Larger text",
@@ -65,5 +63,7 @@
   "清晰阅读": "Read clearly",
   "图例与资源说明": "Legend and resource notes",
   "80科已展开 · 拖动查看 · 滚轮或双指缩放": "80 fields open · Drag to pan · Scroll or pinch to zoom",
-  "以MapKAI为中心向四周发散，80个小学科默认全部展开。初始使用清晰阅读比例，拖动查看周围分支；回到全图可看全部脉络。支持滚轮、双指缩放；每科保留三个故事绿灯及逐篇新版、旧版标记。": "A radial map with MapKAI at its centre and all 80 fields expanded. The initial readable scale shows part of the map; drag to explore surrounding branches or choose Show all for the entire atlas. Scroll or pinch to zoom. Each field retains three story lights and individual New or Old labels."
+  "以MapKAI为中心向四周发散，80个小学科默认全部展开。初始使用清晰阅读比例，拖动查看周围分支；回到全图可看全部脉络。支持滚轮、双指缩放；每科保留三个故事状态灯及逐篇新版、旧版标记。": "A radial map with MapKAI at its centre and all 80 fields expanded. The initial readable scale shows part of the map; drag to explore surrounding branches or choose Show all for the entire atlas. Scroll or pinch to zoom. Each field retains three story lights and individual New or Old labels.",
+  "红灯：待补": "Red: resource needed",
+  "灰色虚线：待核实": "Grey dashed: not yet verified"
 }
