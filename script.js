@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.317";
+const appVersion = "0.1.318";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -18479,6 +18479,261 @@ const categoryGroupSongTracks = {
       "zh": "中国风版 · 英文主唱",
       "en": "Chinese-style edition · English lead"
     }
+  },
+  "041": {
+    "id": "fc7d3cdd-f5c9-4d4b-b3d8-fddd65d2d0dc",
+    "title": "066 Before We Rush - MapKAI - Business and administration - Feedback Control",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "先观察午餐排队，再与目标比较、做一项调整并重新观察；一张订单不能证明调整有效。",
+      "en": "Observe a lunch queue, compare it with a goal, change one action and check again. A single order cannot establish that the change worked."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "042": {
+    "id": "4d248746-5274-47e7-8db5-5ebc7e20dd9e",
+    "title": "067 Who Has to Show - MapKAI - Law - Burden of Proof",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "对争议中的说法先问谁须提出证据，再检查证据能支持到哪里；不同程序的证明责任和标准可能不同。",
+      "en": "Ask who must support a disputed claim, then examine what the evidence establishes. Burdens and standards depend on the procedure."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "048": {
+    "id": "bf37d0a7-a6a7-40ae-ab11-4842f8e4febc",
+    "title": "068 Beyond the Receipt - MapKAI - Interdisciplinary Business and Law - External Costs",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "收据之外还有他人承担的成本；识别受影响的人和未计入价格的影响，再比较应对方式。",
+      "en": "Look beyond a receipt to costs borne by others. Identify who is affected and which effects the transaction price leaves out."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "049": {
+    "id": "bf70a9c9-c006-40d8-8fe7-5b16244f47dc",
+    "title": "069 Under the Shine - MapKAI - Other Business, Administration and Law - Information Asymmetry",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "二手车的光亮不等于买卖双方知道同样多；信息不对称提示我们核对记录并检查实物。",
+      "en": "A shiny used bicycle does not give buyer and seller equal information. Records and inspection can help address information asymmetry."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "050": {
+    "id": "f631fba1-1e6a-4262-a13e-4199f5580944",
+    "title": "070 One Change - MapKAI - General Natural Sciences, Mathematics and Statistics - Controlled Comparison",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "一次改变一个条件，并让其他重要条件尽量相同，再比较结果；一次比较仍需要复核。",
+      "en": "Change one condition, keep other relevant conditions comparable and compare outcomes. One comparison still needs checking."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "051": {
+    "id": "928ac881-4220-49bd-a07f-34502c1760e9",
+    "title": "071 Across the Line - MapKAI - Biological and related sciences - Osmosis",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "隔着选择性透膜观察水的净移动；渗透作用取决于膜及两边的条件，不是盐粒穿过膜。",
+      "en": "Follow the net movement of water across a selectively permeable membrane. Osmosis depends on the membrane and conditions on both sides."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "052": {
+    "id": "5a5797ec-1bc5-4180-a16d-a99df53f88e4",
+    "title": "072 Where the Rain Goes - MapKAI - Environment - Watershed",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "沿坡面追踪雨水去向，用分水岭划出汇入同一出口的区域；地下和管道可能改变实际路径。",
+      "en": "Trace rain downhill and use drainage divides to identify land feeding a common outlet. Underground paths and pipes may alter the route."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "053": {
+    "id": "aa077192-d6be-40c1-9d7e-5e738d50c8b8",
+    "title": "073 Same Room, Different Feel - MapKAI - Physical sciences - Thermal Conduction",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "同室材料摸起来冷热不同，可能来自热传导速率不同；触感不能单独证明材料温度不同。",
+      "en": "Materials in one room can feel different because they conduct heat at different rates. Touch alone does not establish a temperature difference."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "054": {
+    "id": "2a7a93ab-c68b-487e-a87d-a22118d78843",
+    "title": "074 Four in the Middle - MapKAI - Mathematics and statistics - Median",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "先把五个数排序，再取中间值4分钟；中位数的位置能抵抗一个很大的极端值，但不能讲完整个分布。",
+      "en": "Sort five values and locate the middle value of four minutes. A median resists one extreme value but does not describe the whole distribution."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "058": {
+    "id": "60bb0d73-f6c0-4a4d-a259-226edd5b6c40",
+    "title": "075 Same in the Glass - MapKAI - Interdisciplinary Natural Sciences - Dimensional Analysis",
+    "durationSeconds": 110.02775,
+    "meta": {
+      "zh": "英文 · 原版 · 1:50 · 待听审",
+      "en": "English · Original · 1:50 · Listening review pending"
+    },
+    "core": {
+      "zh": "单位要和数值一起参与运算，用换算因子消去单位；结果量纲正确仍不能证明所有假设正确。",
+      "en": "Carry units through a calculation and cancel them using conversion factors. Correct dimensions do not establish that every assumption is right."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "059": {
+    "id": "8de6f005-8b77-4d3e-a677-8a077076e999",
+    "title": "076 Close Again - MapKAI - Other Natural Sciences, Mathematics and Statistics - Precision and Accuracy",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "重复测量很接近是精密，接近参照值是准确；稳定的偏差仍可能让每次测量都偏离。",
+      "en": "Repeated readings can be precise while missing a reference value. A consistent bias can keep them inaccurate."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "061": {
+    "id": "180b1191-bca4-4042-b6d7-6a053b976a89",
+    "title": "077 Half the List - MapKAI - Information and Communication Technologies (ICTs) - Binary Search",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "在排好序的名单中检查中间位置，依据比较结果排除一半，再重复；没有排序就不能照用二分查找。",
+      "en": "Check the middle of a sorted list, discard the impossible half and repeat. Binary search depends on the list being sorted."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "068": {
+    "id": "c97b3c86-1e7a-441d-8a87-a3917fb91e00",
+    "title": "078 Who's on the List - MapKAI - Interdisciplinary ICT - Survey Coverage",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "先确定调查想了解谁，再检查名单覆盖了谁；只用应用内名单，可能漏掉没有使用应用的人。",
+      "en": "Define the population a survey aims to describe, then check whom its list covers. An app-only list can miss people who do not use the app."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "070": {
+    "id": "d9b0dea1-5d10-434b-ba86-cdfedd82ae5c",
+    "title": "079 What Has to Fit - MapKAI - General Engineering, Manufacturing and Construction - Design Constraints",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "先区分必须满足的设计约束和偏好，再在相同条件下比较假想支架；一次测试不代表所有手机和情况。",
+      "en": "Separate mandatory design constraints from preferences, then compare hypothetical phone stands under the same conditions. One test does not establish every use case."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "071": {
+    "id": "49b73ac8-7559-4f52-a457-d08f6df066c4",
+    "title": "080 A Longer Reach - MapKAI - Engineering and engineering trades - Torque",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "同样的力在更远处垂直施加会产生更大力矩；沿指向支点的方向施力时，力矩可为零。",
+      "en": "The same perpendicular force produces more torque at a greater distance from a pivot. Force directed along the line to the pivot can produce zero torque."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
   }
 };
 
@@ -18613,6 +18868,66 @@ const categorySongSubjectLabels = {
   "039": {
     "zh": "其他社会科学、新闻与信息",
     "en": "Other Social Sciences, Journalism and Information"
+  },
+  "041": {
+    "zh": "商业与管理",
+    "en": "Business and administration"
+  },
+  "042": {
+    "zh": "法律",
+    "en": "Law"
+  },
+  "048": {
+    "zh": "商管法跨学科",
+    "en": "Interdisciplinary Business and Law"
+  },
+  "049": {
+    "zh": "其他商业、管理与法律",
+    "en": "Other Business, Administration and Law"
+  },
+  "050": {
+    "zh": "自然科学、数学与统计（综合）",
+    "en": "General Natural Sciences, Mathematics and Statistics"
+  },
+  "051": {
+    "zh": "生物及相关科学",
+    "en": "Biological and related sciences"
+  },
+  "052": {
+    "zh": "环境",
+    "en": "Environment"
+  },
+  "053": {
+    "zh": "物理科学",
+    "en": "Physical sciences"
+  },
+  "054": {
+    "zh": "数学与统计",
+    "en": "Mathematics and statistics"
+  },
+  "058": {
+    "zh": "自然科学跨学科",
+    "en": "Interdisciplinary Natural Sciences"
+  },
+  "059": {
+    "zh": "其他自然科学、数学与统计",
+    "en": "Other Natural Sciences, Mathematics and Statistics"
+  },
+  "061": {
+    "zh": "信息与通信技术",
+    "en": "Information and Communication Technologies (ICTs)"
+  },
+  "068": {
+    "zh": "信息与通信技术跨学科",
+    "en": "Interdisciplinary ICT"
+  },
+  "070": {
+    "zh": "工程、制造与建筑（综合）",
+    "en": "General Engineering, Manufacturing and Construction"
+  },
+  "071": {
+    "zh": "工程及工程技术",
+    "en": "Engineering and engineering trades"
   }
 };
 
@@ -18646,7 +18961,21 @@ const categorySongTopicLabelsZh = {
   "Source Verification": "信源核验",
   "Triangulation": "三角互证",
   "Dutch Cultural Figures": "荷兰文化人物",
-  "Operational Definitions": "操作性定义"
+  "Operational Definitions": "操作性定义",
+  "Feedback Control": "反馈控制",
+  "Burden of Proof": "证明责任",
+  "External Costs": "外部成本",
+  "Information Asymmetry": "信息不对称",
+  "Controlled Comparison": "受控比较",
+  "Osmosis": "渗透作用",
+  "Watershed": "流域",
+  "Thermal Conduction": "热传导",
+  "Median": "中位数",
+  "Dimensional Analysis": "量纲分析",
+  "Precision and Accuracy": "精密度与准确度",
+  "Survey Coverage": "调查覆盖",
+  "Design Constraints": "设计约束",
+  "Torque": "力矩"
 };
 
 function getCategorySongSubject(song, categoryCode) {
@@ -21763,7 +22092,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.317").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.318").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
