@@ -59,6 +59,56 @@ test('seek jumps and replaying the same portion never manufacture a completion',
   f.playing(); f.advance(80, 1); f.pause(); await flush(); assert.equal(f.posts.at(-1).listenedMs, 30000);
 });
 
+test('continuous playback survives hundreds of slightly mismatched clock samples', async () => {
+  for (const offset of [0.000001, 0.001]) {
+    const f = harness(); f.tracker.select(id); f.playing();
+    for (let index = 0; index < 480; index++) {
+      f.advance(0.25, 0.25 + (index % 2 ? offset : -offset));
+      f.audio.emit('timeupdate'); // Browsers may repeat the same position.
+      await flush();
+    }
+    f.audio.ended = true; f.audio.paused = true; f.audio.emit('ended'); await flush();
+    assert.equal(f.posts.at(-1).listenedMs, 120000);
+    const saved = JSON.parse(f.storage.get('mapkaiMusicListeningSession.v1'));
+    assert.equal(saved.ranges.length, 1);
+    assert(f.posts.some(body => body.listenedMs >= body.durationMs * 0.9));
+  }
+});
+
+test('cumulative coverage remains bounded by elapsed time and excludes unannounced jumps', async () => {
+  const f = harness(); f.tracker.select(id); f.playing();
+  for (let index = 0; index < 80; index++) f.advance(1, 0.25);
+  f.pause(); await flush();
+  assert.equal(f.posts.at(-1).listenedMs, 20000);
+  f.seek(0); f.playing();
+  f.advance(20); f.advance(80, 1); f.advance(10); f.pause(); await flush();
+  assert.equal(f.posts.at(-1).listenedMs, 30000);
+});
+
+test('rounded media positions retain elapsed time from zero-progress updates', async () => {
+  const f = harness(); f.tracker.select(id); f.playing();
+  for (let index = 0; index < 480; index++) {
+    f.advance(0, 0.1); f.advance(0.25, 0.15);
+  }
+  f.pause(); await flush();
+  assert.equal(f.posts.at(-1).listenedMs, 120000);
+  assert.equal(JSON.parse(f.storage.get('mapkaiMusicListeningSession.v1')).ranges.length, 1);
+});
+
+test('buffering, pauses and restored jittered coverage do not bridge unheard audio', async () => {
+  const f = harness(); f.tracker.select(id); f.playing();
+  for (let index = 0; index < 160; index++) f.advance(0.25, 0.249999);
+  f.audio.emit('waiting'); f.advance(20, 40); f.playing();
+  for (let index = 0; index < 160; index++) f.advance(0.25, 0.250001);
+  f.pause(); f.window.emit('pagehide'); await flush();
+  assert.equal(f.posts.at(-1).listenedMs, 80000);
+  const next = harness(f.storage); next.tracker.select(id, { restore: true }); next.audio.currentTime = 100;
+  next.playing(); next.advance(20); next.pause(); await flush();
+  assert.equal(next.posts.at(-1).sessionId, f.posts.at(-1).sessionId);
+  assert.equal(next.posts.at(-1).listenedMs, 100000);
+  assert(next.posts.at(-1).listenedMs < next.posts.at(-1).durationMs * 0.9);
+});
+
 test('explicit changes and restarts mark the previous started session; natural endings do not', async () => {
   const f = harness(); f.tracker.select(id); f.playing(); f.advance(5); f.tracker.select(other, { restart: true });
   f.audio.currentTime = 0; f.playing(); f.advance(108); f.audio.ended = true; f.audio.paused = true; f.audio.emit('ended');

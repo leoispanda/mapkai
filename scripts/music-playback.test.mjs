@@ -19,7 +19,7 @@ const flush = async () => { for (let index = 0; index < 30; index++) await Promi
 
 // Execute the production app with a small DOM/media model. Tests drive user and
 // native media events, not extracted copies of the queue implementation.
-function harness({ savedContinuous = null, failPlay = false, songs = catalog, audioSession = null, savedSort = 'rank', votesReady = null, initialScores = [] } = {}) {
+function harness({ savedContinuous = null, failPlay = false, songs = catalog, audioSession = null, savedSort = 'rank', votesReady = null, initialScores = [], listeningTotals = null } = {}) {
   const trace = [], snapshots = [];
   const ids = new Map(), all = [], values = new Map(), scores = new Map(initialScores);
   if (savedContinuous) values.set('mapkaiMusicContinuous.v1', savedContinuous);
@@ -98,6 +98,11 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
     navigator: audioSession ? { audioSession } : {},
     localStorage: { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) },
     MapKAIMusicPreferences: preferences,
+    MapKAIMusicListening: listeningTotals && {
+      createTracker: () => ({ select() {} }), status: () => ({ loaded: true }),
+      get: id => ({ id, starts: 0, listens: 0, completions: 0, skips: 0, earlySkips: 0, listenedMs: 0, ...listeningTotals[id] }),
+      subscribe() {}, refresh() {},
+    },
     matchMedia: () => ({ matches: false, addEventListener() {} }), getComputedStyle: () => ({ paddingLeft: '0', paddingRight: '0' }),
     AbortController, setTimeout, clearTimeout, queueMicrotask,
     fetch: async () => { fetchCalls++; return { ok: true, json: async () => vm.runInContext(`JSON.parse(${JSON.stringify(JSON.stringify({ tracks: currentSongs, nextCursor: null }))})`, context) }; },
@@ -129,6 +134,21 @@ test('loading the library does not start audio and creates only preview plus one
   assert.equal(h.rows().length, 3);
   assert.equal(h.allAudio().length, 2);
   assert.equal(h.allAudio().reduce((sum, audio) => sum + audio.playCalls, 0), 0);
+});
+
+test('positive listening rates below one percent remain visible while true zeroes and ordinary rates retain their meaning', async () => {
+  const h = harness({ listeningTotals: {
+    [catalog[0].id]: { starts: 1000, listens: 10, completions: 1, skips: 9 },
+    [catalog[1].id]: { starts: 1000, listens: 10, completions: 0, skips: 10 },
+    [catalog[2].id]: { starts: 3, listens: 1, completions: 1, skips: 2 },
+  } });
+  await flush();
+  const summaries = h.rows().map(row => row.children.find(element => element.className === 'track-listening').textContent);
+  assert.equal(summaries[0], '收听 10 · 听完 <1% · 切歌 <1%');
+  assert.equal(summaries[1], '收听 10 · 听完 0% · 切歌 1%');
+  assert.equal(summaries[2], '收听 1 · 听完 33% · 切歌 67%');
+  const noStarts = harness({ listeningTotals: {} }); await flush();
+  assert.equal(noStarts.rows()[0].children.find(element => element.className === 'track-listening').textContent, '收听 0 · 听完 — · 切歌 —');
 });
 
 test('opening the library resets a restored sort and play-all starts with the most popular song', async () => {

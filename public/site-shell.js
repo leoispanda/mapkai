@@ -66,7 +66,7 @@
     const launchDock = () => {
       if (!globalThis.MapKAIMusicListening && !document.querySelector('script[src^="/music/listening.js"]')) {
         const helper = document.createElement('script');
-        helper.src = '/music/listening.js?v=listening-20261021';
+        helper.src = '/music/listening.js?v=completion-fix-20261026';
         helper.onload = launchDock; helper.onerror = mountDock; document.head.append(helper); return;
       }
       if (!globalThis.MapKAIMusicListening) {

@@ -633,7 +633,11 @@
     const state = listening?.status();
     const row = listening?.get(card.track.id);
     const known = state?.loaded;
-    const rate = count => known && row.starts ? `${Math.round(count / row.starts * 100)}%` : '—';
+    const rate = count => {
+      if (!known || !row.starts) return '—';
+      const percent = count / row.starts * 100;
+      return percent > 0 && percent < 1 ? '<1%' : `${Math.round(percent)}%`;
+    };
     card.stats.textContent = t('listeningSummary', { listens: known ? row.listens : '—', completion: rate(row?.completions), skip: rate(row?.skips) });
     card.statsDetails.textContent = known ? t('listeningDetails', row) : t(state?.unavailable ? 'listeningUnavailable' : 'listeningLoading');
     card.stats.title = card.statsDetails.textContent;

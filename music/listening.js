@@ -55,7 +55,7 @@
   }
 
   function createTracker(audio) {
-    let session = null, running = false, position = 0, at = performance.now();
+    let session = null, running = false, position = 0, at = performance.now(), segment = null;
     let pendingRestore = null;
     const listened = () => Math.min(session?.durationMs || 0, Math.round((session?.ranges || []).reduce((sum, [start, end]) => sum + end - start, 0) * 1000));
     const complete = () => session?.durationMs && listened() >= session.durationMs * 0.9;
@@ -80,9 +80,14 @@
         const delta = next - position, elapsed = Math.max(0, now - at) / 1000 * (audio.playbackRate || 1);
         // Seeking must never manufacture listening time, even on browsers that
         // omit seeking events. Only media progress supported by elapsed time counts.
-        if (delta > 0 && delta <= elapsed + 1) {
+        if (delta >= 0 && delta <= elapsed + 1) {
+          // Media and wall clocks jitter independently. Bound each continuous
+          // segment by cumulative elapsed time so adjacent samples cannot leave
+          // tiny gaps and exhaust the range limit during ordinary playback.
+          segment ||= { start: position, elapsed: 0 };
+          segment.elapsed += elapsed;
           const wasQualified = qualified(), wasComplete = complete();
-          const ranges = [...session.ranges, [position, position + Math.min(delta, elapsed)]]
+          const ranges = [...session.ranges, [segment.start, Math.min(next, segment.start + segment.elapsed)]]
             .map(([start, end]) => [Math.max(0, start), Math.min(session.durationMs / 1000, end)])
             .filter(([start, end]) => end > start).sort((a, b) => a[0] - b[0]);
           const merged = [];
@@ -93,7 +98,7 @@
           // Bounded navigation state; unusually fragmented listening is undercounted.
           session.ranges = merged.slice(-128);
           if (qualified() !== wasQualified || complete() !== wasComplete || listened() - session.reportedMs >= 30000) checkpoint();
-        }
+        } else segment = null;
       }
       position = Number.isFinite(next) ? next : 0; at = now;
     }
@@ -103,7 +108,7 @@
         if (!globalThis.crypto?.randomUUID) return;
         session.sessionId = crypto.randomUUID(); session.durationMs = Math.round(audio.duration * 1000);
       }
-      running = true; position = audio.currentTime; at = performance.now(); checkpoint();
+      running = true; segment = null; position = audio.currentTime; at = performance.now(); checkpoint();
     }
     function select(id, { restart = false, restore = false } = {}) {
       if (!uuid.test(id)) return;
@@ -129,7 +134,7 @@
           } catch {}
         }
       }
-      running = false; position = 0; at = performance.now();
+      running = false; segment = null; position = 0; at = performance.now();
     }
     audio.addEventListener('playing', () => {
       if (pendingRestore) {
@@ -142,8 +147,8 @@
     });
     audio.addEventListener('timeupdate', sample);
     for (const event of ['pause', 'waiting', 'stalled', 'error']) audio.addEventListener(event, () => { sample(); running = false; checkpoint(); });
-    audio.addEventListener('seeking', () => { running = false; position = audio.currentTime; at = performance.now(); });
-    audio.addEventListener('seeked', () => { position = audio.currentTime; at = performance.now(); running = !audio.paused && !audio.ended && !audio.error; });
+    audio.addEventListener('seeking', () => { running = false; segment = null; position = audio.currentTime; at = performance.now(); });
+    audio.addEventListener('seeked', () => { segment = null; position = audio.currentTime; at = performance.now(); running = !audio.paused && !audio.ended && !audio.error; });
     audio.addEventListener('ended', () => { sample(); running = false; if (session) session.ended = true; checkpoint(); });
     window.addEventListener('pagehide', () => { sample(); checkpoint(true); persist(); running = false; }, { capture: true });
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') { sample(); checkpoint(); persist(); } });
