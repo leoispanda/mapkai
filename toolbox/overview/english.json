@@ -65,5 +65,11 @@
   "80科已展开 · 拖动查看 · 滚轮或双指缩放": "80 fields open · Drag to pan · Scroll or pinch to zoom",
   "以MapKAI为中心向四周发散，80个小学科默认全部展开。初始使用清晰阅读比例，拖动查看周围分支；回到全图可看全部脉络。支持滚轮、双指缩放；每科保留三个故事状态灯及逐篇新版、旧版标记。": "A radial map with MapKAI at its centre and all 80 fields expanded. The initial readable scale shows part of the map; drag to explore surrounding branches or choose Show all for the entire atlas. Scroll or pinch to zoom. Each field retains three story lights and individual New or Old labels.",
   "红灯：待补": "Red: resource needed",
-  "灰色虚线：待核实": "Grey dashed: not yet verified"
+  "灰色虚线：待核实": "Grey dashed: not yet verified",
+  "80科完整全景 · 点击学科放大": "All 80 fields · Select a subject to zoom",
+  "音乐含分组共享歌曲": "Music includes shared group songs",
+  "以MapKAI为中心向四周发散，默认完整显示80个小学科、所有资源灯和三个故事的新旧标记。点击学科放大看细节，回到全图恢复完整脉络。已有资源为绿色，待补为红色；版本用无底框文字标注。支持拖动、滚轮和双指缩放。": "A radial map with MapKAI at its centre. The initial view shows all 80 fields, every resource light and three individual story versions. Select a subject to zoom into its details; Show all restores the complete atlas. Green means available and red means needed. Version labels use plain text without coloured boxes. Drag to pan and scroll or pinch to zoom.",
+  "音乐 / 视频 / 故事": "Music / Video / Stories",
+  "音 / 视 / 故": "M / V / S",
+  "故事：新 / 旧": "Stories: New / Old"
 }

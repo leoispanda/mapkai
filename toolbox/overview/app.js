@@ -165,7 +165,7 @@ function renderTree() {
   $('overview-empty').hidden=fieldCount>0;
   const detailed=Boolean(expandedAll||query||filter!=='all');
   $('directory-title').textContent=zh?(query?'搜索结果':filter!=='all'?'筛选结果':detailed?'全部小学科':'学科大类'):(query?'Search results':filter!=='all'?'Filtered fields':detailed?'All fields':'Subject groups');
-  $('map-guidance').textContent=zh?`${detailed?fieldCount:categories.length}${detailed?'科':'类'}已展开 · 拖动查看 · 滚轮或双指缩放`:`${detailed?fieldCount:categories.length} ${detailed?'fields':'subjects'} open · Drag to pan · Scroll or pinch to zoom`;
+  $('map-guidance').textContent=zh?`${detailed?fieldCount:categories.length}${detailed?'科':'类'}完整全景 · 点击学科放大`:`${detailed?fieldCount:categories.length} ${detailed?'fields':'subjects'} · Select a subject to zoom`;
   $('directory-results').textContent=zh?`${fieldCount} / 80 个小学科 · ${categories.length} 个学科分支`:`${fieldCount} / 80 fields · ${categories.length} subject branches`;
   $('map-expand').textContent=zh?(detailed?'只看大类':'展开80小学科'):(detailed?'Subjects only':'Expand 80 fields');$('map-expand').setAttribute('aria-pressed',String(detailed));
   const counts={1:0,2:0,3:0};for(const field of catalog.categories.flatMap(c=>c.fields)){const score=fieldScore(field);if(score!==null)counts[score]=(counts[score]||0)+1;}
