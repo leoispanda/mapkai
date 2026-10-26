@@ -9,7 +9,7 @@ const words = {
   music: ['音乐', 'Music'], video: ['视频', 'Video'], stories: ['故事', 'Stories'],
   ready: ['已有', 'Available'], missing: ['待补', 'Not yet available'], unknown: ['尚未核实', 'Not yet verified'],
   shared: ['分组共享歌曲', 'Shared group song'], pending: ['已有稿件 · 暂未开放', 'Draft ready · Not open for reading'],
-  newer: ['新版', 'Newer version'], older: ['旧版', 'Earlier version'],
+  newer: ['当前版本', 'Current version'], older: ['较早版本', 'Earlier version'],
   openSubject: ['进入学科', 'Open subject'], readIntro: ['阅读学科导论', 'Read the introduction'],
   watch: ['看总览视频', 'Watch overview'], listen: ['听主题歌', 'Play theme song'],
   openField: ['进入小学科', 'Open field'], watchField: ['观看视频', 'Watch video'],
@@ -100,6 +100,7 @@ function activateNode(node) {
   else if(node.kind==='field')mindMap.focusNode(node.id);
   else if(node.kind==='story'){const field=catalog.categories.flatMap(c=>c.fields).find(f=>f.stories.some(story=>story.id===node.item.id));if(field)mindMap.focusNode(`field-${field.code}`);}
 }
+function storyDotClass(story) { return `resource-dot small ${story.ready ? `on${story.newer?'':' earlier'}` : 'missing'}`; }
 function storyNode(story) {
   const node={id:`story-${story.id}`,kind:'story',item:story,label:pick(story.title),subtitle:`${t(story.newer?'newer':'older')} · ${t(story.public?'open':'prepared')}`,signals:[graphSignal(story.ready,pick(story.title))]};
   node.description=`${node.label}. ${node.subtitle}. ${t(story.public?'open':'pending')}`;
@@ -114,12 +115,13 @@ function renderSelection(node) {
   }else if(node.kind==='field'){
     links=[anchor(`/fields/${item.slug}`,t('openField')),watchAnchor(videoFor(item),t('watchField')),songsById.has(item.songId)?songAnchor(item.songId,t('listenShared')):`<span>${esc(zh?'音乐待补':'Music needed')}</span>`];
     note=zh?'三个故事的版本与阅读状态':'Versions and reading availability of the three stories';
-    stories=`<div class="selection-stories">${item.stories.map((story,i)=>`<button type="button" data-select-story="${esc(story.id)}"><span class="resource-dot small ${story.ready?'on':'missing'}" aria-hidden="true"></span><span><strong>${i+1}. ${esc(pick(story.title))}</strong><small>${esc(t(story.newer?'newer':'older'))} · ${esc(t(story.public?'open':'pending'))}</small></span></button>`).join('')}</div>`;
+    stories=`<div class="selection-stories">${item.stories.map((story,i)=>`<button type="button" data-select-story="${esc(story.id)}" aria-label="${esc(`${i+1}. ${pick(story.title)} · ${t(story.newer?'newer':'older')} · ${t(story.public?'open':'pending')}`)}"><span class="${storyDotClass(story)}" aria-hidden="true"></span><span><strong>${i+1}. ${esc(pick(story.title))}</strong><small>${esc(t(story.public?'open':'pending'))}</small></span></button>`).join('')}</div>`;
   }else{
     links=item.public?[anchor(`/concept-fables/${item.id}`,t('read'))]:[];
-    note=`${pick(item.concept)} · ${t(item.newer?'newer':'older')} · ${t(item.public?'open':'pending')}`;
+    note=`${pick(item.concept)} · ${t(item.public?'open':'pending')}`;
   }
-  $('map-selection').innerHTML=`<button type="button" id="selection-close" class="selection-close" aria-label="${esc(zh?'关闭详情':'Close details')}">×</button><div class="selection-heading"><span>${esc(zh?'当前分支':'Selected branch')}</span><h3>${esc(node.label)}</h3></div><div class="selection-content"><div class="overview-resource-links">${links.filter(Boolean).join('')}</div><p>${esc(note)}</p>${stories}</div>`;
+  const indicator=node.kind==='story'?`<i class="${storyDotClass(item)}" role="img" aria-label="${esc(t(item.newer?'newer':'older'))}"></i> `:'';
+  $('map-selection').innerHTML=`<button type="button" id="selection-close" class="selection-close" aria-label="${esc(zh?'关闭详情':'Close details')}">×</button><div class="selection-heading"><span>${indicator}${esc(zh?'当前分支':'Selected branch')}</span><h3>${esc(node.label)}</h3></div><div class="selection-content"><div class="overview-resource-links">${links.filter(Boolean).join('')}</div><p>${esc(note)}</p>${stories}</div>`;
   $('map-selection').hidden=false;
 }
 function availability(field) {
@@ -135,7 +137,7 @@ function renderFilters() {
   const fields=catalog.categories.flatMap(c=>c.fields);
   const options=[['all',zh?'全部':'All',fields.length,false],['complete',zh?'大满贯':'All three',videos===null?'—':fields.filter(f=>fieldScore(f)===3).length,videos===null],
     ['missing-music',zh?'缺音乐':'Music needed',fields.filter(f=>!songsById.has(f.songId)).length,false],['missing-video',zh?'缺视频':'Video needed',videos===null?'—':fields.filter(f=>videoFor(f)===null).length,videos===null],
-    ['video',zh?'有视频':'With video',videos===null?'—':fields.filter(f=>videoFor(f)).length,videos===null],['music',zh?'有共享歌':'Shared song',fields.filter(f=>songsById.has(f.songId)).length,false],['older',zh?'含旧版':'Earlier stories',fields.filter(f=>f.stories.some(story=>!story.newer)).length,false]];
+    ['video',zh?'有视频':'With video',videos===null?'—':fields.filter(f=>videoFor(f)).length,videos===null],['music',zh?'有共享歌':'Shared song',fields.filter(f=>songsById.has(f.songId)).length,false],['older',zh?'较早故事':'Earlier stories',fields.filter(f=>f.stories.some(story=>!story.newer)).length,false]];
   if(!$('overview-filters').children.length)$('overview-filters').innerHTML=options.map(([value])=>`<button type="button" data-filter="${value}"><span></span><strong></strong></button>`).join('');
   for(const [value,label,count,disabled]of options){const button=$('overview-filters').querySelector(`[data-filter="${value}"]`);button.querySelector('span').textContent=label;button.querySelector('strong').textContent=count;button.disabled=disabled;button.setAttribute('aria-pressed',String(filter===value));}
 }
