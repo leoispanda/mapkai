@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.327";
+const appVersion = "0.1.328";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -18989,6 +18989,91 @@ const categoryGroupSongTracks = {
       "zh": "原版 · 内容待听审",
       "en": "Original · Content review pending"
     }
+  },
+  "099": {
+    "id": "4a267e21-e59e-47cd-bfbf-4238bdd75db6",
+    "title": "096 A Place at the Table - MapKAI - Other Health and Welfare - ICF Participation",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "ICF参与视角把想加入的生活情境、相关任务和环境一起看；虚构的画画小组例子区分进门与坐下共同画画。记录这一次参与及其情境，下一次是否参加仍未知，也不据此诊断或评分。",
+      "en": "The ICF participation lens considers chosen life involvement alongside tasks and environment. In an invented art-group example, entering a room differs from sitting and drawing with others. The map records that occasion; future joining and any diagnosis remain open."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "100": {
+    "id": "de23413a-a616-428f-b1b4-138fe1d35e07",
+    "title": "097 Behind the Counter - MapKAI - General Services - Service Blueprinting",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "服务蓝图从顾客路径连接可见服务和幕后工作；简化的三行取货例子把后台装订、准备好信号与柜台交付相连。草图提出待核对的交接，延误原因和提速效果仍需观察与证据。",
+      "en": "A service blueprint links the customer path to visible and backstage work. A three-row miniature connects unseen binding, a ready signal and visible booklet handover. The sketch proposes a handoff to check; delay cause and faster service still need evidence."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "101": {
+    "id": "5621e480-6d5d-4952-a2db-2102e95fb8bf",
+    "title": "098 What Can We Do Now - MapKAI - Personal services - Service Recovery",
+    "durationSeconds": 108.0424375,
+    "meta": {
+      "zh": "英文 · 原版 · 1:48 · 待听审",
+      "en": "English · Original · 1:48 · Listening review pending"
+    },
+    "core": {
+      "zh": "服务补救先听清承诺落差与顾客需要，再检查可用选择、确认商定安排并询问结果。虚构的旅行团改约保留顾客选择；已失去的时间仍失去，补救也取决于实际可用资源。",
+      "en": "Service recovery hears the missed promise and the customer’s need, checks available options, confirms an agreed next step and follows up. The invented tour-booking repair offers a real choice; lost time stays lost and each repair depends on what is available."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "102": {
+    "id": "910ed1ef-f802-47d1-945d-96a2e638a818",
+    "title": "099 Start at the Source - MapKAI - Hygiene and occupational health services - Hierarchy of Controls",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "控制措施层级从消除、替代、工程控制、管理控制到个人防护逐层考虑；纸面房间例子中，取消电线横穿移除这处绊倒危险，标牌只提醒注意。实际工作场所仍需评估、组合措施并检查持续有效。",
+      "en": "The hierarchy considers elimination, substitution, engineering controls, administrative controls and personal protective equipment. In a paper-room example, removing the cable crossing removes that pictured trip hazard; a sign draws attention. Real workplaces still need assessment and checks that controls keep working."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "103": {
+    "id": "632ef975-0d36-4e91-b6a6-314545ca11a7",
+    "title": "100 What I Saw - MapKAI - Security Services - Factual Incident Reporting",
+    "durationSeconds": 125.570625,
+    "meta": {
+      "zh": "英文 · 原版 · 2:06 · 待听审",
+      "en": "English · Original · 2:06 · Listening review pending"
+    },
+    "core": {
+      "zh": "事实性事件报告把时间、地点、亲眼所见与有来源的陈述分开记录；核对后追加更正并保留原始记录。虚构例子中门开着是观察，Sam的声音与日期是其陈述，门为何打开仍未知。",
+      "en": "Factual incident reporting separates dated, located observations from attributed statements. Check a correction, append it and retain the first account. In the invented example, an open door is observed and Sam’s sound/date account is attributed; the door’s cause remains unknown."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
   }
 };
 
@@ -19243,6 +19328,26 @@ const categorySongSubjectLabels = {
   "098": {
     "zh": "健康与福利跨学科",
     "en": "Integrated Health and Welfare"
+  },
+  "099": {
+    "zh": "其他健康与福利",
+    "en": "Other Health and Welfare"
+  },
+  "100": {
+    "zh": "一般服务",
+    "en": "General Services"
+  },
+  "101": {
+    "zh": "个人服务",
+    "en": "Personal services"
+  },
+  "102": {
+    "zh": "卫生与职业健康服务",
+    "en": "Hygiene and occupational health services"
+  },
+  "103": {
+    "zh": "安全服务",
+    "en": "Security Services"
   }
 };
 
@@ -19304,7 +19409,12 @@ const categorySongTopicLabelsZh = {
   "Teach-Back": "复述确认",
   "Absolute Risk": "绝对风险",
   "Supported Decision-Making": "支持性决策",
-  "Care Coordination": "照护协调"
+  "Care Coordination": "照护协调",
+  "ICF Participation": "ICF参与",
+  "Service Blueprinting": "服务蓝图",
+  "Service Recovery": "服务补救",
+  "Hierarchy of Controls": "控制措施层级",
+  "Factual Incident Reporting": "事实性事件报告"
 };
 
 function getCategorySongSubject(song, categoryCode) {
@@ -22421,7 +22531,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.327").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.328").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

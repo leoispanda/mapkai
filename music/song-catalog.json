@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 96,
+  "nextNumber": 101,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -1187,6 +1187,71 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "095 One Plan for Tuesday - MapKAI - Integrated Health and Welfare - Care Coordination"
+    },
+    {
+      "id": "4a267e21-e59e-47cd-bfbf-4238bdd75db6",
+      "number": 96,
+      "numberLabel": "096",
+      "songName": "A Place at the Table",
+      "subjectName": "Other Health and Welfare",
+      "canonicalSubjectName": "Health and welfare not elsewhere classified",
+      "conceptName": "ICF Participation",
+      "createdAt": "2026-10-26T21:32:24.653Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "096 A Place at the Table - MapKAI - Other Health and Welfare - ICF Participation"
+    },
+    {
+      "id": "de23413a-a616-428f-b1b4-138fe1d35e07",
+      "number": 97,
+      "numberLabel": "097",
+      "songName": "Behind the Counter",
+      "subjectName": "General Services",
+      "canonicalSubjectName": "Services not further defined",
+      "conceptName": "Service Blueprinting",
+      "createdAt": "2026-10-26T21:32:24.653Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "097 Behind the Counter - MapKAI - General Services - Service Blueprinting"
+    },
+    {
+      "id": "5621e480-6d5d-4952-a2db-2102e95fb8bf",
+      "number": 98,
+      "numberLabel": "098",
+      "songName": "What Can We Do Now",
+      "subjectName": "Personal services",
+      "canonicalSubjectName": "Personal services",
+      "conceptName": "Service Recovery",
+      "createdAt": "2026-10-26T21:32:24.653Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "098 What Can We Do Now - MapKAI - Personal services - Service Recovery"
+    },
+    {
+      "id": "910ed1ef-f802-47d1-945d-96a2e638a818",
+      "number": 99,
+      "numberLabel": "099",
+      "songName": "Start at the Source",
+      "subjectName": "Hygiene and occupational health services",
+      "canonicalSubjectName": "Hygiene and occupational health services",
+      "conceptName": "Hierarchy of Controls",
+      "createdAt": "2026-10-26T21:32:24.653Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "099 Start at the Source - MapKAI - Hygiene and occupational health services - Hierarchy of Controls"
+    },
+    {
+      "id": "632ef975-0d36-4e91-b6a6-314545ca11a7",
+      "number": 100,
+      "numberLabel": "100",
+      "songName": "What I Saw",
+      "subjectName": "Security Services",
+      "canonicalSubjectName": "Security services",
+      "conceptName": "Factual Incident Reporting",
+      "createdAt": "2026-10-26T21:32:24.653Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "100 What I Saw - MapKAI - Security Services - Factual Incident Reporting"
     }
   ]
 }
