@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 101,
+  "nextNumber": 106,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -1252,6 +1252,71 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "100 What I Saw - MapKAI - Security Services - Factual Incident Reporting"
+    },
+    {
+      "id": "df873a60-5842-492e-b8ed-cd92f3c5ab40",
+      "number": 101,
+      "numberLabel": "101",
+      "songName": "Room Between the Trains",
+      "subjectName": "Transport Services",
+      "canonicalSubjectName": "Transport services",
+      "conceptName": "Connection Buffer",
+      "createdAt": "2026-10-27T02:25:19.532Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "101 Room Between the Trains - MapKAI - Transport Services - Connection Buffer"
+    },
+    {
+      "id": "5f5c2da3-1f63-4f36-87bf-84359e664e68",
+      "number": 102,
+      "numberLabel": "102",
+      "songName": "Bring the Message Back",
+      "subjectName": "Integrated Services",
+      "canonicalSubjectName": "Inter-disciplinary programmes and qualifications involving services",
+      "conceptName": "Check-Back Communication",
+      "createdAt": "2026-10-27T02:25:19.532Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "102 Bring the Message Back - MapKAI - Integrated Services - Check-Back Communication"
+    },
+    {
+      "id": "e46e11ba-e5d3-4c05-8421-8f21667d22ab",
+      "number": 103,
+      "numberLabel": "103",
+      "songName": "What Counts as Done",
+      "subjectName": "Services not elsewhere classified",
+      "canonicalSubjectName": "Services not elsewhere classified",
+      "conceptName": "Acceptance Criteria",
+      "createdAt": "2026-10-27T02:25:19.532Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "103 What Counts as Done - MapKAI - Services not elsewhere classified - Acceptance Criteria"
+    },
+    {
+      "id": "310d4e89-197c-4f7c-ab3b-22b87e2af5cd",
+      "number": 104,
+      "numberLabel": "104",
+      "songName": "When the Money Arrives",
+      "subjectName": "Business, administration and law not further defined",
+      "canonicalSubjectName": "Business, administration and law not further defined",
+      "conceptName": "Cash Flow Timing",
+      "createdAt": "2026-10-27T02:25:19.532Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "104 When the Money Arrives - MapKAI - Business, administration and law not further defined - Cash Flow Timing"
+    },
+    {
+      "id": "88540d5e-041c-4528-a51a-2f81a2ed9fee",
+      "number": 105,
+      "numberLabel": "105",
+      "songName": "Does the Size Make Sense",
+      "subjectName": "General Foundations",
+      "canonicalSubjectName": "Generic programmes and qualifications not further defined",
+      "conceptName": "Reasonableness Checks",
+      "createdAt": "2026-10-27T02:25:19.532Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "105 Does the Size Make Sense - MapKAI - General Foundations - Reasonableness Checks"
     }
   ]
 }

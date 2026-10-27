@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.328";
+const appVersion = "0.1.329";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -19074,7 +19074,101 @@ const categoryGroupSongTracks = {
       "zh": "原版 · 内容待听审",
       "en": "Original · Content review pending"
     }
+  },
+  "104": {
+    "id": "df873a60-5842-492e-b8ed-cd92f3c5ab40",
+    "title": "101 Room Between the Trains - MapKAI - Transport Services - Connection Buffer",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "换乘余量是计划间隔扣除移动所需时间后留下的空间。虚构的08:10到08:18间隔八分钟，假设步行五分钟，余三分钟；后车照表发出而前车晚四分钟时，只余四分钟，不足五分钟步行。纸面余量不保证实际到达。",
+      "en": "Connection buffer leaves planned space beyond movement time. In an invented eight-minute gap, an assumed five-minute walk leaves three spare. If the second departure stays fixed and the first train is four minutes late, four remain for a five-minute walk. Actual arrival remains unknown."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "108": {
+    "id": "5f5c2da3-1f63-4f36-87bf-84359e664e68",
+    "title": "102 Bring the Message Back - MapKAI - Integrated Services - Check-Back Communication",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "闭环复核沟通让接收方复述关键信息，再由发送方比较、纠正和确认。虚构的六张地图请求将侧门纠正为主服务台，并核对数量、地点与时间；记录的是已核对的回复，地图实际送达仍待另查。",
+      "en": "Check-back returns a message for sender comparison, correction and confirmation. In an invented six-map request, side door is corrected to main desk, then number, place and time are matched. The checked reply is recorded; actual delivery remains a separate open task."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "109": {
+    "id": "e46e11ba-e5d3-4c05-8421-8f21667d22ab",
+    "title": "103 What Counts as Done - MapKAI - Services not elsewhere classified - Acceptance Criteria",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "验收标准在工作前说清可核对的结果。虚构的三排各四座需要十二把椅子，现场十一把加一把后，再核对每排；这个检查确认椅子排列符合计划，其他任务仍需各自检查。",
+      "en": "Acceptance criteria state a checkable result before work begins. In an invented three-rows-of-four plan, eleven chairs need one more, followed by a row check. That check confirms the chair arrangement; other service tasks need checks of their own."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "040": {
+    "id": "310d4e89-197c-4f7c-ab3b-22b87e2af5cd",
+    "title": "104 When the Money Arrives - MapKAI - Business, administration and law not further defined - Cash Flow Timing",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "现金流时点把实际或计划收付款按日期排列，并结转余额。虚构例子现金一百先付八十余二十，下周若收到一百二十且无其他现金流则为一百四十；实际收款仍要核对，利润需要另算。",
+      "en": "Cash flow timing orders receipts and payments by date and carries balances forward. In the invented example, cash of 100 minus 80 leaves 20; a later receipt of 120 would make 140 if no other money moves. Check the actual receipt separately; profit requires another calculation."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
   }
+};
+
+const categoryGroupSongEditions = {
+  "000": [
+    {
+      "id": "88540d5e-041c-4528-a51a-2f81a2ed9fee",
+      "title": "105 Does the Size Make Sense - MapKAI - General Foundations - Reasonableness Checks",
+      "durationSeconds": 120.0326875,
+      "meta": {
+        "zh": "英文 · 原版 · 2:00 · 待听审",
+        "en": "English · Original · 2:00 · Listening review pending"
+      },
+      "core": {
+        "zh": "合理性检验先用取整估算判断数量级，再做精确计算。虚构的四本笔记本每本3.20欧元，约三欧元乘四约十二，能发现128欧元太大；精算为12.80。接近的总额仍可能差几分钱，估算不能代替精算。",
+        "en": "A reasonableness check first estimates size with rounded numbers. Four notebooks at 3.20 euros each are roughly 4 times 3, or 12, so 128 is far too large. Exact calculation gives 12.80. Nearby totals can still differ in cents and require exact checking."
+      },
+      "style": {
+        "zh": "原版 · 内容待听审",
+        "en": "Original · Content review pending"
+      },
+      "subjectLabel": {
+        "zh": "通用基础",
+        "en": "General Foundations"
+      }
+    }
+  ]
 };
 
 function waitForCategorySongPlayer() {
@@ -19348,6 +19442,22 @@ const categorySongSubjectLabels = {
   "103": {
     "zh": "安全服务",
     "en": "Security Services"
+  },
+  "104": {
+    "zh": "交通运输服务",
+    "en": "Transport Services"
+  },
+  "108": {
+    "zh": "服务跨学科",
+    "en": "Integrated Services"
+  },
+  "109": {
+    "zh": "其他服务",
+    "en": "Services not elsewhere classified"
+  },
+  "040": {
+    "zh": "一般商业、行政与法律",
+    "en": "Business, administration and law not further defined"
   }
 };
 
@@ -19414,13 +19524,19 @@ const categorySongTopicLabelsZh = {
   "Service Blueprinting": "服务蓝图",
   "Service Recovery": "服务补救",
   "Hierarchy of Controls": "控制措施层级",
-  "Factual Incident Reporting": "事实性事件报告"
+  "Factual Incident Reporting": "事实性事件报告",
+  "Connection Buffer": "换乘余量",
+  "Check-Back Communication": "闭环复核沟通",
+  "Acceptance Criteria": "验收标准",
+  "Cash Flow Timing": "现金流时点",
+  "Reasonableness Checks": "合理性检验"
 };
 
 function getCategorySongSubject(song, categoryCode) {
   const language = currentLanguage === "zh" ? "zh" : "en";
-  const groupCode = Object.keys(categoryGroupSongTracks).find(code => categoryGroupSongTracks[code].id === song.id);
-  const subject = categorySongSubjectLabels[groupCode]?.[language] || getPublicCategoryTitle(categoryCode);
+  const groupCode = Object.keys(categoryGroupSongTracks).find(code => categoryGroupSongTracks[code].id === song.id)
+    || Object.keys(categoryGroupSongEditions).find(code => categoryGroupSongEditions[code].some(track => track.id === song.id));
+  const subject = song.subjectLabel?.[language] || categorySongSubjectLabels[groupCode]?.[language] || getPublicCategoryTitle(categoryCode);
   const parts = String(song.title || "").split(" - MapKAI - ")[1]?.split(" - ") || [];
   const topicEn = parts.slice(1).join(" - ");
   const topic = language === "zh" ? categorySongTopicLabelsZh[topicEn] || topicEn : topicEn;
@@ -19477,7 +19593,7 @@ async function playCategorySongModule(button) {
   if (button.disabled) return;
   const category = categories.find(item => item.code === button.dataset.songCategory);
   const songs = category ? [categorySongTracks[category.code],
-    ...category.groups.map(group => categoryGroupSongTracks[group.code]),
+    ...category.groups.flatMap(group => [categoryGroupSongTracks[group.code], ...(typeof categoryGroupSongEditions === "undefined" ? [] : categoryGroupSongEditions[group.code] || [])]),
     ...(category.code === "02" ? ownerCulturalSongs : [])].filter(Boolean) : [];
   const song = songs.find(item => item.id === button.dataset.categorySongId);
   if (!song) return;
@@ -19759,8 +19875,8 @@ function renderOwnerCulturalSongs(category) {
 }
 
 function renderCategoryGroupSongs(category) {
-  return category.groups.filter(group => Object.hasOwn(categoryGroupSongTracks, group.code))
-    .map(group => renderCategorySongModule(categoryGroupSongTracks[group.code], category.code)).join("");
+  return category.groups.flatMap(group => [categoryGroupSongTracks[group.code], ...(typeof categoryGroupSongEditions === "undefined" ? [] : categoryGroupSongEditions[group.code] || [])])
+    .filter(Boolean).map(song => renderCategorySongModule(song, category.code)).join("");
 }
 
 function renderCategoryTree(category) {
@@ -22531,7 +22647,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.328").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.329").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
