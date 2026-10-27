@@ -51,6 +51,9 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0716': 'Motor vehicles, ships and aircraft',
   '0721': 'Food processing',
   '0722': 'Materials (glass, paper, plastic and wood)',
+  '0723': 'Textiles (clothes, footwear and leather)',
+  '0724': 'Mining and extraction',
+  '0731': 'Architecture and town planning',
 });
 
 export const PUBLIC_PREVIEW_FIELD_IDS = Object.freeze(
