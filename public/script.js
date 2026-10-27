@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.341";
+const appVersion = "0.1.342";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -16299,6 +16299,7 @@ function renderConceptFableModule(fable) {
 }
 
 function renderConceptFableDetail(fableId) {
+  resetCategorySongModules();
   const target = document.getElementById("conceptFableReader");
   if (!target) return;
   const fable = getConceptFableById(fableId);
@@ -16354,8 +16355,10 @@ function renderConceptFableDetail(fableId) {
       </div>
     </aside>
     ${renderConceptFableModule(fable)}
+    ${renderFieldSongs(getFieldByCode(fable.fieldCode), `/concept-fables/${fable.id}`)}
     ${renderStoryRatingPanel(ratingArticle)}
     ${renderStoryNavigation(ratingArticle)}`;
+  refreshCategorySongModules();
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
 
@@ -16470,6 +16473,7 @@ function renderMapStoryLayer() {
 }
 
 function renderFieldDetail(code) {
+  resetCategorySongModules();
   const target = document.getElementById("fieldDetailCard");
   if (!target) return;
   renderCategoryVideoPreview(null, 'field');
@@ -16520,6 +16524,7 @@ function renderFieldDetail(code) {
         ? `<div class="field-core-fable-grid">${fableCards}</div>`
         : `<p class="field-core-fables-pending">${escapeHtml(t("fieldCoreFablesPending"))}</p>`}
     </section>
+    ${renderFieldSongs(field, `/fields/${field.id}`)}
     <dl class="story-meta founder-only">
       <div><dt>Area</dt><dd>${escapeHtml(area ? getAreaDisplayTitle(area) : "Not available")}</dd></div>
       <div><dt>Narrow field</dt><dd>${escapeHtml(narrowField?.title || "Not available")}</dd></div>
@@ -16532,6 +16537,7 @@ function renderFieldDetail(code) {
       <div><dt>Connected fields</dt><dd>${connectedFields.length ? connectedFields.map(fieldLink).join("") : "No connected fields yet"}</dd></div>
     </dl>`;
   renderCategoryVideoPreview(field, 'field');
+  refreshCategorySongModules();
 }
 
 function fieldLink(field) {
@@ -19655,6 +19661,68 @@ const categorySongTopicLabelsZh = {
   "Worked Examples": "例题示范"
 };
 
+// Topic placements are explicit: sharing a broad category does not make a song
+// relevant to every subject. Unassigned recordings remain in the music library.
+const categorySongFieldCodes = {
+  "00": ["0021"], "01": ["0111"], "02": ["0213"], "03": ["0314"],
+  "04": ["0411"], "05": ["0533"], "06": ["0613"], "07": ["0715"],
+  "08": ["0811", "0812"], "09": ["0913"], "10": ["1013"]
+};
+
+const categoryGroupSongFieldCodes = {
+  "000": ["0011"], "001": ["0011"], "002": ["0021"], "003": ["0031"], "009": ["0021"],
+  "011": ["0111"], "018": ["0111"],
+  "020": ["0213"], "021": ["0215"], "022": ["0222"], "023": ["0232"],
+  "028": ["0211", "0222"], "029": [],
+  "030": [], "031": ["0314"], "032": ["0321", "0322"], "038": ["0314"], "039": ["0314"],
+  "040": ["0411", "0412"], "041": ["0413"], "042": ["0421"], "048": ["0413"], "049": ["0416"],
+  "050": [], "051": ["0511", "0512"], "052": ["0521"], "053": ["0533"],
+  "054": ["0542"], "058": ["0533"], "059": ["0533"],
+  "061": ["0613"], "068": [],
+  "070": ["0715"], "071": ["0715"], "072": ["0715", "0722"], "073": ["0731", "0732"],
+  "078": ["0732"], "079": [],
+  "080": ["0811", "0812"], "081": ["0811", "0812"], "082": ["0821"], "083": ["0831"],
+  "084": ["0841"], "088": ["0841"], "089": ["0811", "0812"],
+  "090": ["0913"], "091": ["0912"], "092": ["0921", "0923"],
+  "098": ["0921", "0923"], "099": ["0915", "0921"],
+  "100": [], "101": ["1015"], "102": ["1022"], "103": ["1032"], "104": ["1041"], "108": [], "109": []
+};
+
+const categorySongEditionFieldCodes = {
+  "88540d5e-041c-4528-a51a-2f81a2ed9fee": ["0021"],
+  "4b851156-1e07-4933-b684-ec35d813e1b5": ["0011"],
+  "25422116-ab16-4dad-b6e6-112be1d30ede": ["0021"],
+  "a8909f9a-7b32-47f2-a4c2-e682a5c54037": ["0031"],
+  "7c17ece8-494a-46c7-b672-24f60be0d730": ["0021"],
+  "f16e9b4a-a60a-4618-bbb0-a87980a2203d": ["0111"]
+};
+
+function getFieldSongs(field) {
+  if (!field) return [];
+  const categoryCode = field.code.slice(0, 2);
+  const songs = [];
+  if (categorySongFieldCodes[categoryCode]?.includes(field.code)) songs.push(categorySongTracks[categoryCode]);
+  for (const [groupCode, song] of Object.entries(categoryGroupSongTracks)) {
+    if (categoryGroupSongFieldCodes[groupCode]?.includes(field.code)) songs.push(song);
+  }
+  for (const editions of Object.values(categoryGroupSongEditions)) {
+    for (const song of editions) {
+      if (categorySongEditionFieldCodes[song.id]?.includes(field.code)) songs.push(song);
+    }
+  }
+  return [...new Map(songs.filter(Boolean).map(song => [song.id, song])).values()];
+}
+
+function renderFieldSongs(field, songRoute) {
+  const songs = getFieldSongs(field);
+  if (!songs.length) return "";
+  const label = currentLanguage === "zh" ? "学科歌曲 · AI 生成" : "Music from this subject · AI-generated";
+  return `<section class="field-music" data-field-music="${escapeHtml(field.code)}" aria-label="${escapeHtml(label)}">
+    <h2>${escapeHtml(label)}</h2>
+    <div class="field-music-grid">${songs.map(song => renderCategorySongModule(song, field.code.slice(0, 2), songRoute)).join("")}</div>
+  </section>`;
+}
+
 function getCategorySongSubject(song, categoryCode) {
   const language = currentLanguage === "zh" ? "zh" : "en";
   const groupCode = Object.keys(categoryGroupSongTracks).find(code => categoryGroupSongTracks[code].id === song.id)
@@ -19666,19 +19734,19 @@ function getCategorySongSubject(song, categoryCode) {
   return [...new Set([subject, topic].filter(Boolean))].join(" · ");
 }
 
-function renderCategorySongButton(song, categoryCode) {
+function renderCategorySongButton(song, categoryCode, songRoute = `/categories/${categoryCode}`) {
   const title = getCategorySongDisplayTitle(song);
   const subject = getCategorySongSubject(song, categoryCode);
   const play = currentLanguage === "zh" ? "播放歌曲" : "Play song";
-  return `<button type="button" class="category-song-trigger" data-category-song-id="${escapeHtml(song.id)}" data-song-category="${escapeHtml(categoryCode)}" data-song-title="${escapeHtml(title)}" data-song-subject="${escapeHtml(subject)}" data-state="idle" aria-pressed="false" aria-label="${escapeHtml([play, title, subject].filter(Boolean).join(" · "))}" aria-describedby="categoryCompanionTitle">
+  return `<button type="button" class="category-song-trigger" data-category-song-id="${escapeHtml(song.id)}" data-song-category="${escapeHtml(categoryCode)}" data-song-route="${escapeHtml(songRoute)}" data-song-title="${escapeHtml(title)}" data-song-subject="${escapeHtml(subject)}" data-state="idle" aria-pressed="false" aria-label="${escapeHtml([play, title, subject].filter(Boolean).join(" · "))}">
     <span class="category-song-note" aria-hidden="true">♫</span>
     <span class="category-song-text"><span class="category-song-name">${escapeHtml(title)}</span><span class="category-song-subject">${escapeHtml(subject)}</span></span>
     <span class="category-song-control" aria-hidden="true"><svg class="category-song-play-icon" viewBox="0 0 20 20"><path d="M7 4.5 15 10l-8 5.5z" fill="currentColor"/></svg><svg class="category-song-pause-icon" viewBox="0 0 20 20"><path d="M7 5v10M13 5v10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
   </button><p class="category-song-module-status" role="status"></p>`;
 }
 
-function renderCategorySongModule(song, categoryCode) {
-  return `<div class="category-song-module">${renderCategorySongButton(song, categoryCode)}</div>`;
+function renderCategorySongModule(song, categoryCode, songRoute) {
+  return `<div class="category-song-module">${renderCategorySongButton(song, categoryCode, songRoute)}</div>`;
 }
 
 function refreshCategorySongModules() {
@@ -19701,15 +19769,10 @@ function refreshCategorySongModules() {
 window.addEventListener("mapkai:music-dock-state", refreshCategorySongModules);
 window.addEventListener("mapkai:music-dock-ready", refreshCategorySongModules);
 
-function renderCategorySong(category) {
+function resetCategorySongModules() {
   ++categorySongRenderToken;
   ++categorySongPlaybackToken;
   categorySongPendingId = null;
-  const card = document.getElementById("categorySong");
-  if (!card) return;
-  const song = Object.hasOwn(categorySongTracks, category.code) ? categorySongTracks[category.code] : null;
-  card.hidden = !song;
-  card.innerHTML = song ? renderCategorySongButton(song, category.code) : "";
 }
 
 async function playCategorySongModule(button) {
@@ -19721,11 +19784,12 @@ async function playCategorySongModule(button) {
   const song = songs.find(item => item.id === button.dataset.categorySongId);
   if (!song) return;
   const language = currentLanguage;
+  const songRoute = button.dataset.songRoute || `/categories/${category.code}`;
   const renderToken = categorySongRenderToken;
   const operation = ++categorySongPlaybackToken;
   const isCurrent = () => operation === categorySongPlaybackToken && renderToken === categorySongRenderToken
     && button.isConnected && currentLanguage === language
-    && normalizeRoute(window.location.pathname) === `/categories/${category.code}`;
+    && normalizeRoute(window.location.pathname) === songRoute;
   if (!isCurrent()) return;
   const status = button.closest(".category-song-module").querySelector(".category-song-module-status");
   document.querySelectorAll(".category-song-module-status").forEach(item => { item.textContent = ""; });
@@ -19771,7 +19835,7 @@ function renderCategoryDetail(code) {
       <span class="category-detail-description">${escapeHtml(cardDisplay.displayDescription || t("categoryCopy", stats.practicalCount))}</span>`;
   }
 
-  renderCategorySong(category);
+  resetCategorySongModules();
   renderCategoryVideoPreview(category);
 
   renderPassport("categoryPassport", {
@@ -19987,20 +20051,7 @@ const ownerCulturalSongs = [
   }
 ];
 
-function renderOwnerCulturalSongs(category) {
-  if (category.code !== "02") return "";
-  const zh = currentLanguage === "zh";
-  return `<a class="category-music-video-link" href="/music/videos/?lang=${zh ? "zh" : "en"}#your-turn-asml">Your Turn · MV</a>
-  <details class="category-extra-songs">
-    <summary>${zh ? "更多主题歌曲 · 8 首" : "More themed songs · 8"}</summary>
-    <div class="category-extra-song-links">${ownerCulturalSongs.map(song => renderCategorySongModule(song, category.code)).join("")}</div>
-  </details>`;
-}
 
-function renderCategoryGroupSongs(category) {
-  return category.groups.flatMap(group => [categoryGroupSongTracks[group.code], ...(typeof categoryGroupSongEditions === "undefined" ? [] : categoryGroupSongEditions[group.code] || [])])
-    .filter(Boolean).map(song => renderCategorySongModule(song, category.code)).join("");
-}
 
 function renderCategoryTree(category) {
   const target = document.getElementById("categoryTree");
@@ -20038,13 +20089,6 @@ function renderCategoryTree(category) {
     articleTarget.hidden = !storyArticle;
   }
   document.getElementById("categoryReadingLayout")?.classList.toggle("is-without-story", !storyArticle);
-  const songTarget = document.getElementById("categoryGroupSongs");
-  if (songTarget) songTarget.innerHTML = renderCategoryGroupSongs(category);
-  const culturalTarget = document.getElementById("categoryCulturalSongs");
-  if (culturalTarget) culturalTarget.innerHTML = renderOwnerCulturalSongs(category);
-  const companionTitle = document.getElementById("categoryCompanionTitle");
-  if (companionTitle) companionTitle.textContent = currentLanguage === "zh" ? "相关歌曲 · AI 生成" : "Music · AI-generated";
-  refreshCategorySongModules();
   const ratingArticle = introStory ? getRatingArticleForLensStory(introStory) : null;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
@@ -22770,7 +22814,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.341").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.342").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

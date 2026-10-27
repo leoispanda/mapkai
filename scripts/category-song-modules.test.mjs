@@ -20,8 +20,8 @@ const flush = async () => { for (let i = 0; i < 8; i++) await Promise.resolve();
 
 // Run the real application handlers against a narrow player contract. Native
 // audio, queueing, cancellation and seek preservation are tested by music-dock.
-function harness({ ready = null } = {}) {
-  let route = '/categories/00';
+function harness({ ready = null, songRoute = null } = {}) {
+  let route = songRoute || '/categories/00';
   let current = { id: null, playing: false, pending: false, failed: false };
   const calls = [];
   const location = {};
@@ -30,7 +30,7 @@ function harness({ ready = null } = {}) {
     const status = { textContent: '' };
     const attributes = new Map();
     return {
-      dataset: { categorySongId: id, songCategory: '00', songTitle: `Song ${index + 1}` },
+      dataset: { categorySongId: id, songCategory: '00', songTitle: `Song ${index + 1}`, ...(songRoute ? { songRoute } : {}) },
       disabled: false, isConnected: true, status, attributes,
       setAttribute: (name, value) => attributes.set(name, value),
       removeAttribute: name => attributes.delete(name),
@@ -146,4 +146,31 @@ test('a late rejected request cannot overwrite a newer successful song status', 
   assert.equal(h.buttons[0].status.textContent, '');
   assert.equal(h.buttons[1].status.textContent, '');
   assert.equal(h.buttons[1].dataset.state, 'playing');
+});
+
+
+test('subject and story modules play, pause and resume without changing their reader address', async () => {
+  for (const songRoute of ['/fields/0011', '/concept-fables/0011-learning-story']) {
+    const h = harness({ songRoute });
+    await h.activate(0); await h.activate(0); await h.activate(0);
+    assert.deepEqual(h.calls, [['play', first], ['pause', first], ['resume', first]]);
+    assert.equal(h.route(), songRoute); assert.equal(h.buttons[0].dataset.state, 'playing');
+  }
+});
+
+test('a delayed subject or story player cannot start after the reader changes route or language', async () => {
+  for (const songRoute of ['/fields/0011', '/concept-fables/0011-learning-story']) {
+    for (const change of [h => h.move('/fields/0021'), h => { h.context.currentLanguage = 'en'; },
+      h => { h.context.categorySongRenderToken++; }]) {
+      const ready = deferred(), h = harness({ ready, songRoute });
+      const attempt = h.activate(0); change(h); ready.resolve(h.dock); await attempt;
+      assert.deepEqual(h.calls, []); assert.equal(h.buttons[0].status.textContent, '');
+      assert.equal(h.buttons[0].disabled, false);
+    }
+  }
+});
+
+test('a hidden module belonging to a different reader route cannot start playback', async () => {
+  const h = harness({ songRoute: '/fields/0011' }); h.move('/fields/0021');
+  await h.activate(0); assert.deepEqual(h.calls, []); assert.equal(h.buttons[0].status.textContent, '');
 });

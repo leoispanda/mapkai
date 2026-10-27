@@ -4598,12 +4598,10 @@ canvas {
 
 .category-reading-layout { width: min(1180px, 100%); margin: 32px auto 0; }
 .category-story-column { min-width: 0; }
-.category-companion-title { margin: 0; color: var(--muted); font-size: 0.75rem; font-weight: 500; }
-.category-group-songs:empty, #categoryCulturalSongs:empty { display: none; }
 .category-page > .mapkai-video-preview { margin-bottom: 24px; }
-.category-music-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); align-items: start; gap: 10px; width: min(1180px, 100%); margin: 24px auto; }
-.category-music-links > .category-companion-title { grid-column: 1 / -1; margin-bottom: 2px; }
-.category-music-links .category-group-songs, .category-music-links #categoryCulturalSongs { display: contents; }
+.field-music { margin: 28px 0; }
+.field-music h2 { margin: 0 0 12px; color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+.field-music-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 10px; }
 .category-song-module { min-width: 0; }
 .category-song-trigger { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 52px; padding: 9px 11px; border: 1px solid rgba(37, 99, 235, 0.16); border-radius: 12px; background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(37, 99, 235, 0.025)); color: var(--ink); font: inherit; font-size: 0.84rem; text-align: left; cursor: pointer; transition: border-color 160ms ease, background 160ms ease; }
 .category-song-trigger:hover { border-color: var(--blue); background: rgba(37, 99, 235, 0.09); }
@@ -4622,12 +4620,6 @@ canvas {
 .category-song-trigger[data-state="pending"] .category-song-control::after { content: ""; width: 12px; height: 12px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: category-song-spin 800ms linear infinite; }
 .category-song-module-status { margin: 5px 0 0; color: var(--muted); font-size: 0.74rem; }
 .category-song-module-status:empty { display: none; }
-.category-music-video-link { align-self: center; color: var(--blue-dark); text-decoration: none; }
-.category-music-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.category-extra-songs { grid-column: 1 / -1; font-size: 0.8rem; }
-.category-extra-songs > summary { color: var(--muted); cursor: pointer; }
-.category-extra-song-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-top: 10px; }
-.category-music-video-link { font-size: 0.85rem; }
 @keyframes category-song-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .category-song-trigger[data-state="pending"] .category-song-control::after { animation: none; } }
 

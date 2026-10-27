@@ -1,38 +1,91 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile} from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
-const source=await readFile(new URL('../script.js',import.meta.url),'utf8');
-const mirrored=await readFile(new URL('../public/script.js',import.meta.url),'utf8');
-const ledger=JSON.parse(await readFile(new URL('../music/song-catalog.json',import.meta.url),'utf8'));
-function literal(name){const marker='const '+name+' = ',a=source.indexOf(marker)+marker.length,z=source.indexOf('\n};',a)+2;assert.ok(a>=marker.length&&z>a,'Missing song data '+name);return JSON.parse(source.slice(a,z))}
-const defaults=literal('categoryGroupSongTracks'),editions=literal('categoryGroupSongEditions');
-const subjects=literal('categorySongSubjectLabels'),topics=literal('categorySongTopicLabelsZh');
-const handlers=['getCategorySongDisplayTitle','getCategorySongSubject','renderCategorySongButton','renderCategorySongModule','renderCategoryGroupSongs','refreshCategorySongModules','playCategorySongModule'].map(name=>{const m=source.match(new RegExp(`^(?:async )?function ${name}\\([^\\n]*\\) \\{[\\s\\S]*?^\\}`,'m'));assert.ok(m,'Missing application handler '+name);return m[0]}).join('\n');
-const categories=[{code:'00',groups:[{code:'000'},{code:'001'},{code:'002'},{code:'003'},{code:'009'}]},{code:'01',groups:[{code:'011'}]},{code:'04',groups:[{code:'040'}]},{code:'10',groups:[{code:'104'},{code:'108'},{code:'109'}]}];
-function harness(language='en'){
- const buttons=[],calls=[];let route='/categories/00',state={id:null,playing:false,pending:false,failed:false};
- const dock={snapshot:()=>({...state}),play:async id=>{calls.push(id);state={id,playing:true,pending:false,failed:false};return true}};
- const document={querySelectorAll:selector=>selector==='[data-category-song-id]'?buttons:buttons.map(b=>b.status)};
- const context=vm.createContext({currentLanguage:language,categoryGroupSongTracks:defaults,categoryGroupSongEditions:editions,categorySongSubjectLabels:subjects,categorySongTopicLabelsZh:topics,categorySongTracks:{},ownerCulturalSongs:[],categories,categorySongRenderToken:1,categorySongPlaybackToken:0,categorySongPendingId:null,document,window:{MapKAIMusicDock:dock,location:{get pathname(){return route},set pathname(_){throw Error('Playback navigated')}}},normalizeRoute:x=>x,waitForCategorySongPlayer:()=>Promise.resolve(dock),getPublicCategoryTitle:code=>'Broad '+code,escapeHtml:value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;')});
- vm.runInContext(handlers,context);
- return{context,calls,render:code=>context.renderCategoryGroupSongs(categories.find(x=>x.code===code)),play:async(id,code)=>{route='/categories/'+code;const attributes=new Map(),status={textContent:''};const button={dataset:{categorySongId:id,songCategory:code,songTitle:id},disabled:false,isConnected:true,status,setAttribute:(k,v)=>attributes.set(k,v),removeAttribute:k=>attributes.delete(k),closest:()=>({querySelector:()=>status})};buttons.push(button);await context.playCategorySongModule(button);assert.equal(route,'/categories/'+code);assert.equal(button.disabled,false);assert.equal(status.textContent,'')}};
+
+const source = await readFile(new URL('../script.js', import.meta.url), 'utf8');
+const mirrored = await readFile(new URL('../public/script.js', import.meta.url), 'utf8');
+const ledger = JSON.parse(await readFile(new URL('../music/song-catalog.json', import.meta.url), 'utf8'));
+function literal(name, array = false) {
+  const marker = `const ${name} = `, start = source.indexOf(marker);
+  const end = source.indexOf(array ? '\n];' : '\n};', start);
+  assert.ok(start >= 0 && end > start, `Missing song data ${name}`);
+  return vm.runInNewContext(`(${source.slice(start + marker.length, end + 2)})`, { readiness: { classified: 'Classified' } });
 }
-const old=ledger.songs.find(x=>x.number===37),extra=ledger.songs.find(x=>x.number===105);
-test('a new concept edition keeps the original default and both are rendered with their own subjects',()=>{
- assert.equal(source,mirrored);assert.equal(defaults['000'].id,old.id);assert.equal(old.conceptName,'Spaced Retrieval Practice');assert.equal(extra.conceptName,'Reasonableness Checks');assert.ok(editions['000'].some(x=>x.id===extra.id));
- const h=harness(),html=h.render('00');assert.ok(html.includes(old.id)&&html.includes(extra.id));assert.ok(html.indexOf(old.id)<html.indexOf(extra.id));assert.equal((html.match(/data-category-song-id=/g)||[]).length,categories.find(c=>c.code==='00').groups.reduce((count,g)=>count+(defaults[g.code]?1:0)+(editions[g.code]||[]).length,0));
- assert.match(h.context.getCategorySongSubject(defaults['000'],'00'),/^General Studies · /);assert.match(h.context.getCategorySongSubject(editions['000'].find(x=>x.id===extra.id),'00'),/^General Foundations · Reasonableness Checks$/);
- const zh=harness('zh');assert.match(zh.context.getCategorySongSubject(defaults['000'],'00'),/^通用学习 · /);assert.match(zh.context.getCategorySongSubject(editions['000'].find(x=>x.id===extra.id),'00'),/^通用基础 · 合理性检验$/);
+const defaults = literal('categoryGroupSongTracks'), editions = literal('categoryGroupSongEditions');
+const categories = literal('categories', true);
+const handlerNames = ['getCategorySongDisplayTitle', 'getCategorySongSubject', 'renderCategorySongButton',
+  'renderCategorySongModule', 'getFieldSongs', 'renderFieldSongs', 'refreshCategorySongModules', 'playCategorySongModule'];
+const handlers = handlerNames.map(name => {
+  const match = source.match(new RegExp(`^(?:async )?function ${name}\\([^\\n]*\\) \\{[\\s\\S]*?^\\}`, 'm'));
+  assert.ok(match, `Missing application handler ${name}`); return match[0];
+}).join('\n');
+function field(code) {
+  for (const category of categories) for (const group of category.groups) {
+    const entry = group.fields.find(([id]) => id === code);
+    if (entry) return { code, id: code, title: entry[1], categoryCode: category.code };
+  }
+  throw Error(`Missing test field ${code}`);
+}
+function harness(language = 'en') {
+  const buttons = [], calls = [];
+  let route = '/fields/0011', state = { id: null, playing: false, pending: false, failed: false };
+  const dock = { snapshot: () => ({ ...state }), play: async id => {
+    calls.push(id); state = { id, playing: true, pending: false, failed: false }; return true;
+  } };
+  const document = { querySelectorAll: selector => selector === '[data-category-song-id]' ? buttons : buttons.map(b => b.status) };
+  const context = vm.createContext({ currentLanguage: language, categoryGroupSongTracks: defaults, categoryGroupSongEditions: editions,
+    categorySongSubjectLabels: literal('categorySongSubjectLabels'), categorySongTopicLabelsZh: literal('categorySongTopicLabelsZh'),
+    categorySongTracks: literal('categorySongTracks'), categorySongFieldCodes: literal('categorySongFieldCodes'),
+    categoryGroupSongFieldCodes: literal('categoryGroupSongFieldCodes'), categorySongEditionFieldCodes: literal('categorySongEditionFieldCodes'),
+    ownerCulturalSongs: [], categories, categorySongRenderToken: 1, categorySongPlaybackToken: 0, categorySongPendingId: null,
+    document, window: { MapKAIMusicDock: dock, location: { get pathname() { return route; }, set pathname(_) { throw Error('Playback navigated'); } } },
+    normalizeRoute: x => x, waitForCategorySongPlayer: () => Promise.resolve(dock),
+    getPublicCategoryTitle: code => `Broad ${code}`, getFieldDisplayTitle: item => item.title,
+    getCategoryGroupForField: item => {
+      const category = categories.find(c => c.groups.some(g => g.fields.some(([code]) => code === item.code)));
+      return { category, group: category?.groups.find(g => g.fields.some(([code]) => code === item.code)) };
+    },
+    escapeHtml: value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;'),
+  });
+  vm.runInContext(handlers, context);
+  return { context, calls, render: code => context.renderFieldSongs(field(code), `/fields/${code}`), play: async (id, category, code = '0011') => {
+    route = `/fields/${code}`;
+    const attributes = new Map(), status = { textContent: '' };
+    const button = { dataset: { categorySongId: id, songCategory: category, songRoute: route, songTitle: id }, disabled: false,
+      isConnected: true, status, setAttribute: (k, v) => attributes.set(k, v), removeAttribute: k => attributes.delete(k),
+      closest: () => ({ querySelector: () => status }) };
+    buttons.push(button); await context.playCategorySongModule(button);
+    assert.equal(route, `/fields/${code}`); assert.equal(button.disabled, false); assert.equal(status.textContent, '');
+  } };
+}
+const old = ledger.songs.find(x => x.number === 37), extra = ledger.songs.find(x => x.number === 105);
+test('foundation editions keep their original recordings and render in their matching learning subjects', () => {
+  assert.equal(source, mirrored); assert.equal(defaults['000'].id, old.id);
+  assert.equal(old.conceptName, 'Spaced Retrieval Practice'); assert.equal(extra.conceptName, 'Reasonableness Checks');
+  assert.ok(editions['000'].some(x => x.id === extra.id));
+  const h = harness();
+  assert.ok(h.render('0011').includes(old.id));
+  assert.ok(h.render('0021').includes(extra.id));
+  assert.ok(!h.render('0031').includes(old.id) && !h.render('0031').includes(extra.id));
+  assert.match(h.context.getCategorySongSubject(defaults['000'], '00'), /^General Studies · /);
+  assert.match(h.context.getCategorySongSubject(editions['000'].find(x => x.id === extra.id), '00'), /^General Foundations · Reasonableness Checks$/);
+  const zh = harness('zh'); assert.match(zh.context.getCategorySongSubject(defaults['000'], '00'), /^通用学习 · /);
+  assert.match(zh.context.getCategorySongSubject(editions['000'].find(x => x.id === extra.id), '00'), /^通用基础 · 合理性检验$/);
 });
-test('both old and new foundation songs activate their exact recording through the existing player',async()=>{
- const h=harness();await h.play(old.id,'00');await h.play(extra.id,'00');assert.deepEqual(h.calls,[old.id,extra.id]);
+test('both old and new foundation songs play their exact recordings inside their subject page', async () => {
+  const h = harness(); await h.play(old.id, '00', '0011'); await h.play(extra.id, '00', '0021'); assert.deepEqual(h.calls, [old.id, extra.id]);
 });
-test('all four new group defaults render and play their allocated recordings without changing the foundation default',async()=>{
- const h=harness();for(const[code,number,category]of [['104',101,'10'],['108',102,'10'],['109',103,'10'],['040',104,'04']]){const song=ledger.songs.find(x=>x.number===number);assert.equal(defaults[code].id,song.id);assert.ok(h.render(category).includes(song.id));await h.play(song.id,category)}assert.deepEqual(h.calls,[101,102,103,104].map(n=>ledger.songs.find(x=>x.number===n).id));assert.equal(defaults['000'].id,old.id);
+test('four added group defaults retain their allocated recordings and exact playback identities', async () => {
+  const h = harness();
+  for (const [code, number, category] of [['104', 101, '10'], ['108', 102, '10'], ['109', 103, '10'], ['040', 104, '04']]) {
+    const song = ledger.songs.find(x => x.number === number); assert.equal(defaults[code].id, song.id); await h.play(song.id, category);
+  }
+  assert.deepEqual(h.calls, [101, 102, 103, 104].map(n => ledger.songs.find(x => x.number === n).id));
+  assert.equal(defaults['000'].id, old.id);
 });
 
-// Permanent B19 regression: all old defaults remain selected while new concepts append.
+// Permanent B19 regression: new concepts append without replacing the 57 defaults.
 const defaultsBeforeB19={
   "000": "1eaa815d-a3ee-4a44-b9b0-0d17f25fe8fb",
   "001": "f371a248-b6c3-4ad9-89c5-467aa2886313",
@@ -92,8 +145,18 @@ const defaultsBeforeB19={
   "109": "e46e11ba-e5d3-4c05-8421-8f21667d22ab",
   "040": "310d4e89-197c-4f7c-ab3b-22b87e2af5cd"
 };
-test('five foundation and education concept editions append, render and play without replacing any of the57defaults',async()=>{
- assert.equal(Object.keys(defaults).length,Object.keys(defaultsBeforeB19).length);for(const[code,id]of Object.entries(defaultsBeforeB19))assert.equal(defaults[code].id,id);
- const h=harness(),expected=[];for(const[code,number,category]of [['001',106,'00'],['002',107,'00'],['003',108,'00'],['009',109,'00'],['011',110,'01']]){const row=ledger.songs.find(x=>x.number===number),track=editions[code]?.find(x=>x.id===row.id);assert.ok(track,'Missing appended edition '+code);assert.notEqual(track.id,defaults[code].id);const html=h.render(category);assert.ok(html.includes(defaults[code].id)&&html.includes(track.id));assert.ok(html.indexOf(defaults[code].id)<html.indexOf(track.id));assert.equal(h.context.getCategorySongSubject(track,category),row.subjectName+' · '+row.conceptName);await h.play(row.id,category);expected.push(row.id)}assert.deepEqual(h.calls,expected);
- const old105=ledger.songs.find(x=>x.number===105);assert.ok(editions['000'].some(x=>x.id===old105.id));
+test('all five appended concept editions remain available in their matching subjects without replacing defaults', async () => {
+  assert.equal(Object.keys(defaults).length, Object.keys(defaultsBeforeB19).length);
+  for (const [code, id] of Object.entries(defaultsBeforeB19)) assert.equal(defaults[code].id, id);
+  const h = harness(), expected = [];
+  for (const [code, number, category, fieldCode] of [['001', 106, '00', '0011'], ['002', 107, '00', '0021'],
+    ['003', 108, '00', '0031'], ['009', 109, '00', '0021'], ['011', 110, '01', '0111']]) {
+    const row = ledger.songs.find(x => x.number === number), track = editions[code]?.find(x => x.id === row.id);
+    assert.ok(track, `Missing appended edition ${code}`); assert.notEqual(track.id, defaults[code].id);
+    assert.ok(h.render(fieldCode).includes(track.id), `Edition ${number} missing from ${fieldCode}`);
+    assert.equal(h.context.getCategorySongSubject(track, category), `${row.subjectName} · ${row.conceptName}`);
+    await h.play(row.id, category, fieldCode); expected.push(row.id);
+  }
+  assert.deepEqual(h.calls, expected);
+  assert.ok(editions['000'].some(x => x.id === extra.id));
 });
