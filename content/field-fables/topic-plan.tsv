@@ -145,19 +145,19 @@ batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	2	0715-fatigu
 batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	3	0715-engineering-tolerance	Engineering tolerance	工程公差	mechanism-explainer	每只齿轮单独合格却无法共同转动的机器	integrated
 batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	1	0716-stability-and-control	Stability and control	稳定性与操纵性	mechanism-explainer	越想装更多货越容易倾覆的窄船	integrated
 batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	2	0716-drag	Drag and transport efficiency	阻力与运输效率	mechanism-explainer	更强发动机输给一条重新修形的船身	integrated
-batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	3	0716-redundancy	Safety redundancy	安全冗余	concept-fable	天空邮船失去一根控制索后仍能返航	integrated
+batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	3	0716-redundancy	Safety redundancy	安全冗余	mechanism-explainer	天空邮船失去一根控制索后仍能返航	integrated
 batch-010	07	0721	Food processing	食品加工	1	0721-thermal-processing	Thermal processing	热加工	mechanism-explainer	温度相同但加热时间不同的两批密封牛奶	integrated
 batch-010	07	0721	Food processing	食品加工	2	0721-water-activity	Water activity	水分活度	mechanism-explainer	看起来更干的果脯反而更快变坏	integrated
-batch-010	07	0721	Food processing	食品加工	3	0721-haccp	Hazard Analysis and Critical Control Points	危害分析与关键控制点	concept-fable	面包坊不再等成品出炉后才寻找危险	integrated
+batch-010	07	0721	Food processing	食品加工	3	0721-haccp	Hazard Analysis and Critical Control Points	危害分析与关键控制点	mechanism-explainer	面包坊不再等成品出炉后才寻找危险	integrated
 batch-011	07	0722	Materials glass paper plastic and wood	材料：玻璃、纸、塑料与木材	1	0722-structure-property-relationship	Structure-property relationship	结构与性能关系	mechanism-explainer	同样成分的玻璃因冷却方式不同承受不同撞击	integrated
 batch-011	07	0722	Materials glass paper plastic and wood	材料：玻璃、纸、塑料与木材	2	0722-anisotropy	Anisotropy	各向异性	mechanism-explainer	沿木纹与横木纹切出的梁像两种材料	integrated
-batch-011	07	0722	Materials glass paper plastic and wood	材料：玻璃、纸、塑料与木材	3	0722-design-for-circularity	Design for circularity	循环设计	concept-fable	无法拆开的精美包装在第二次生命前停住	integrated
+batch-011	07	0722	Materials glass paper plastic and wood	材料：玻璃、纸、塑料与木材	3	0722-design-for-circularity	Design for circularity	循环设计	mechanism-explainer	无法拆开的精美包装在第二次生命前停住	integrated
 batch-011	07	0723	Textiles clothes footwear and leather	纺织：服装、鞋类与皮革	1	0723-fibre-structure-property	Fibre structure and textile properties	纤维结构与织物性能	mechanism-explainer	同样厚度的两块布在雨雪中表现相反	integrated
 batch-011	07	0723	Textiles clothes footwear and leather	纺织：服装、鞋类与皮革	2	0723-grain-and-pattern-alignment	Grain and pattern alignment	纹理与版型对齐	mechanism-explainer	漂亮纸样顺着错误布纹裁出扭转的外套	integrated
-batch-011	07	0723	Textiles clothes footwear and leather	纺织：服装、鞋类与皮革	3	0723-supply-chain-traceability	Supply-chain traceability	供应链可追溯性	concept-fable	一滴红染料追不回经过哪些河流与工坊	integrated
+batch-011	07	0723	Textiles clothes footwear and leather	纺织：服装、鞋类与皮革	3	0723-supply-chain-traceability	Supply-chain traceability	供应链可追溯性	mechanism-explainer	一滴红染料追不回经过哪些河流与工坊	integrated
 batch-011	07	0724	Mining and extraction	采矿与开采	1	0724-cut-off-grade	Cut-off grade	边界品位	mechanism-explainer	矿石并非有或没有而是何时值得开采	integrated
-batch-011	07	0724	Mining and extraction	采矿与开采	2	0724-extraction-externalities	Extraction externalities	开采外部性	concept-fable	山上的金属收入变成下游看不见的泥沙成本	integrated
-batch-011	07	0724	Mining and extraction	采矿与开采	3	0724-geotechnical-risk	Geotechnical risk	岩土工程风险	concept-fable	人人熟悉的小裂纹在雨季连成新的形状	integrated
+batch-011	07	0724	Mining and extraction	采矿与开采	2	0724-extraction-externalities	Extraction externalities	开采外部性	mechanism-explainer	山上的金属收入变成下游看不见的泥沙成本	integrated
+batch-011	07	0724	Mining and extraction	采矿与开采	3	0724-geotechnical-risk	Geotechnical risk	岩土工程风险	mechanism-explainer	人人熟悉的小裂纹在雨季连成新的形状	integrated
 batch-011	07	0731	Architecture and town planning	建筑学与城市规划	1	0731-human-scale	Human scale	人性尺度	concept-fable	宏伟广场让所有人加快脚步离开	integrated
 batch-011	07	0731	Architecture and town planning	建筑学与城市规划	2	0731-mixed-use-development	Mixed-use development	混合功能开发	concept-fable	白天繁忙夜晚空无一人的单一用途新区	integrated
 batch-011	07	0731	Architecture and town planning	建筑学与城市规划	3	0731-adaptive-reuse	Adaptive reuse	适应性再利用	concept-fable	旧仓库的柱距拒绝成为新歌剧院却接住另一种生活	integrated

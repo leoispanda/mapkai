@@ -1413,39 +1413,131 @@
       "fieldCode": "0716",
       "fieldTitle": "Motor vehicles ships and aircraft",
       "fieldTitleZh": "机动车、船舶与航空器",
-      "title": "The Two Pumps That Fell Silent Together",
-      "titleZh": "两台一起沉默的水泵",
-      "summary": "A ferry owner installs two bilge pumps and believes leaks are no longer dangerous, overlooking the low-mounted switchboard they share.",
-      "summaryZh": "渡船装了两台排水泵，船主以为漏水不再可怕，却没有注意它们共用同一块低处配电板。",
-      "storyParagraphs": [
-        "When the strait ferry was refitted, owner Bosun installed two bilge pumps. The safety inspector asked about flooding; Bosun tapped the deck and said, 'If one fails, the other works.' Both pumps were identical, low in adjacent compartments, connected to one switchboard, and serviced by the same mechanic on the same day. The arrangement was cheap, tidy, and allowed the ferry to return before the summer rush. A separate engine-driven option had been removed from the estimate because it cost more and occupied cargo space. Bosun used the saving to refurbish the passenger saloon, where two brass pump symbols were painted above the door.",
-        "One night driftwood opened a cargo-seam. The first pump started, but rising water reached the low switchboard; both pump lamps went dark. The second machine had no broken part and still remained silent. Crew formed a bucket line while wet cargo shifted against the bulkhead. The ferry limped home, losing the entire lower shipment and its next three sailings. Bosun blamed the unused second pump for failing to be a proper spare. The saloon lights died with the pumps. Passengers stood ankle-deep near the stairs while crew passed buckets through the dark. One bucket struck the painted pair of pump symbols and left a muddy crescent across both.",
-        "The inspector laid two powerless cables beside the insurance claim. There were two machines but one electrical fate; one flood, one low location, or one maintenance error could silence the pair. With one night left before the tourist weekend, Bosun refused the third identical unit and ordered power and equipment rerouted into separated spaces. He refunded fares and watched a rival ferry carry the crowd.",
-        "One electric pump moved higher on an independent circuit, another used a separately supported drive, and a manual option remained. High water produced an alarm; valves and isolation were checked; crews periodically disabled the primary path and demonstrated that the remaining arrangement could take the specified duty. Added weight, inspection, switching behaviour, and maintenance burden entered the plan. In the maintenance book, the new pump received no check mark until the crew named a fault, isolated it, and emptied the test tank through the remaining path. In the first disablement drill, the alarm sounded but the alternate path failed to start because a closed valve had been missed. The inspector kept the ferry tied up until the crew found it, repeated the test, and recorded the switching time.",
-        "Before reopening, the inspector pulled the primary fuse without warning. The engine room fell quiet, then a separate turning sound began above the old waterline. Bosun bent over the bilge instead of applauding. The two cables from the flooded switchboard hung on a nail behind him, tied together by one black burn mark."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "灯亮以后，屏幕呢？",
+      "summaryZh": "交通体验馆开馆前，周屿要演练桌面小车的备用定位显示。主输入一断，备用指示灯亮了，屏幕却不再更新。",
       "storyParagraphsZh": [
-        "海峡渡船翻修时，船主博森装了两台舱底泵。验船官问起进水，他拍着甲板说：“坏一台，还有一台。”两台泵型号相同，放在相邻低舱，接同一块配电板，又由同一名技工在同一天保养。这样便宜整齐，也能赶在暑期前复航。报价里原有一套分开驱动方案，因价高又占货位被删掉。博森把省下的钱翻新客舱，还在门上方画了两只黄铜泵标志。",
-        "一次夜航，漂木撞开货舱接缝。第一台泵启动不久，水便淹到低处配电板，两台泵的指示灯全灭；第二台没有任何零件损坏，却一样沉默。船员用桶接力，湿货还在舱壁旁移动。渡船勉强返港，底层货物全毁，接下来三航次也取消。博森责怪没用上的副泵不配叫备用。副泵沉默时，客舱灯也跟着熄灭。乘客在楼梯旁踩进没踝水，船员摸黑传桶；一只桶撞到那对泵标志，留下一道横跨两只标志的泥弧。",
-        "验船官把两根断电电缆放在索赔单旁。机器虽有两台，电力命运只有一条；一场进水、一个低处位置或一次保养错误，就能让它们一同沉默。离旅游周末只剩一夜，博森却退掉第三台同款，命人把电路与设备重铺到分隔舱位。他退还船票，眼看对手渡船载走人群。",
-        "一台电泵移到高处并用独立电路，另一台采用分开支持的驱动，船上仍留人工方案。高水位触发警报，隔离与阀门接受检查；船员定期停掉主路，证明剩余装置能承担规定任务。新增重量、检查、切换表现与保养负担也进入计划。检修本上，新泵直到船员写明一种故障、把它隔开并用余下路径排空试验水箱，才得到勾号。第一次停主路演练中，警报响了，替代路径却因一只遗漏的关闭阀没有启动。验船官继续扣船，直到船员找到原因、重做试验并记录切换时间。",
-        "复航前，验船官忽然拔掉主泵保险。机舱安静一瞬，旧水线以上随即传来另一处稳定转动声。博森没有鼓掌，只弯腰看舱底水位。身后钉着旧配电板的两根电缆，一道黑色烧痕把它们系在一起。"
+        "周末开放前，交通体验馆还差最后一项演练。桌面小车由独立驱动沿预设轨道缓慢前进，两路定位输入只负责把位置送到旁边的屏幕，不控制小车运动。周屿要确认，如果主定位输入突然中断，屏幕还能不能继续显示位置。第一遍模拟刚开始不久，他在一个已知参考位置断开主路，“收到备用输入”的指示灯亮了，屏幕上的位置却停住了。",
+        "实体小车没有停，仍沿轨道向前。它越过下一个已经标定好的参考点时，屏幕还留在断线前的位置。周屿顺着信号往后查，发现备用接收端确实还有输入，面板也知道备用端存在，但真正用于计算和更新位置的处理链仍在等已经断开的主路数据。两套接收端都在，并不等于必要功能已经被备用路径接过去。",
+        "他没有再加第三只接收器，而是和同事把已有备用输入接进故障识别和切换流程。这样一来，指定主路失去数据时，系统可以转到备用输入继续完成同一个位置功能。修改占掉了原本留给界面调试的时间，周末前还得重新跑完整段测试轨道。",
+        "第二次，小车仍从同一起点出发，沿相同轨道运行。到了同一个参考位置，周屿再次断开那条主输入；系统识别中断后转到备用路径。小车继续前进，每经过一个预设参考点，周屿都把轨道上的已知位置与系统最终输出逐一核对，直到整段行程结束。这个演练里，备用路径不只是亮了状态灯，而是在主路断开后继续完成了既定的位置输出功能。",
+        "收台时，周屿发现两路接收端后面仍连着同一块处理单元，便把这一项记进下一轮待查清单。盒盖搭在一边，小车重新接回主路。第二天值班的人来取设备，他把测试轨道也递过去：“交接时把这段一起跑完，看屏幕。”"
       ],
-      "conceptName": "Safety redundancy",
+      "overallZh": "冗余用相对独立的多种手段承担同一必要功能，独立性要针对具体故障核查。本例采用可切换主备：主输入中断后，备用输入须实际进入位置显示，最终输出再与独立参考核对。其他设计也可能并行工作，不都采用先停主路、再切备用的方式。",
       "conceptNameZh": "安全冗余",
-      "explanationParagraphs": [
-        "Safety redundancy adds components, paths, information, or capacity so a system retains a critical function or degrades in a controlled way after specified faults. Copies need sufficient capacity and should avoid common supplies, locations, designs, or maintenance that create common-cause failure. Fault detection, isolation, and reliable transfer are also necessary. Redundancy adds weight, cost, and complexity, so regular testing must show that it will actually work when needed."
-      ],
       "explanationParagraphsZh": [
-        "安全冗余增加组件、路径、信息或能力，使系统在指定故障后仍保留关键功能或受控降级。副本必须具备足够能力，并尽量避免共同电源、位置、设计或维护造成的共因失效；还需检测故障、隔离问题并可靠切换。冗余会增加重量、成本和复杂度，因此必须通过定期试验证明它在需要时真正可用。"
+        "判断备用是否有效，不能只数组件或看状态灯。接收、故障识别、切换、处理和输出等必要环节，在指定故障后仍须履行各自作用；需要切换的环节须完成切换，不需要切换的共用处理器也必须继续正常工作。本例用预设轨道位置核对最终显示，不让主、备用两路读数互相投票决定谁正确。",
+        "一次成功的主路断开演练只说明该指定故障和测试条件下，备用路径完成了接管。两条路径仍可能共享处理器、软件、供电、维护条件或其他资源，从而受到共同原因影响；也不能凭这一次演练估算失效概率或推出完整车辆系统能容忍其他故障。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先指定要容忍的主路故障，再沿完整功能链检查备用路径是否真的接管，并用独立参考核对最终输出。",
+        "diagramTitle": "为什么备用灯已经亮起，仍不能证明定位功能完成了冗余接管",
+        "diagramSteps": [
+          "让桌面小车沿预先标定的测试轨道运行，并记录轨道上的已知位置作为独立参考",
+          "在指定参考位置断开主定位输入，观察备用状态虽然出现但最终位置输出是否继续",
+          "沿接收、故障识别、切换、处理到最终位置输出逐段查找中断点",
+          "修正切换路径后，再断开同一主输入，让系统转到能力足够的备用输入",
+          "在完整测试行程中逐点核对备用路径下的最终位置输出与独立参考是否一致"
+        ],
+        "diagramStepNotes": [
+          "独立参考来自预设测试轨道，不依赖主、备用两路互相比较来决定真值。",
+          "这盏灯只表示收到备用端输入，不表示位置显示已切换或最终输出正确。",
+          "冗余涉及完整功能路径；只有第二个接收器，后续处理却未接入备用输入，仍不能保留本例的位置显示功能。",
+          "本例只模拟一条指定主输入断开，备用路径是否有足够能力也必须在该场景中实际核对。",
+          "一次成功演练不能证明共享处理、共享软件、供电或其他共同原因故障已经被覆盖。"
+        ],
+        "mapping": [
+          "主定位输入 → 正常情况下承担定位功能的主要路径。",
+          "备用接收路径 → 在指定主路故障后候选接管同一定位功能的第二路径。",
+          "预设轨道参考点 → 独立于两条接收路径的已知位置参考。",
+          "最终位置输出继续与参考一致 → 本次指定故障下备用功能实际完成接管的证据。"
+        ],
+        "boundary": "本篇只测试低风险台面演示中的位置显示：驱动独立于被测定位输入，不验证行驶、转向或制动安全。两组件、两图标或两不同读数不能自动证明冗余成立；两路读数矛盾时，仅靠两路本身不能确定谁正确。实际车辆、船舶和航空系统还需按适用标准分析路径独立性、故障检测与隔离、容量、适用切换及共因失效。本例不提供真实接线、运行或认证方法，也不从一次试验推导失效概率。",
+        "reflection": "如果这两路输入共用的处理单元失效，这次主输入断线演练能证明屏幕仍会显示正确位置吗？为什么？"
+      },
+      "referencesZh": [
+        {
+          "id": "nasa-2017-rm-redundancy",
+          "citation": "National Aeronautics and Space Administration. (2017, June 13). NASA Reliability and Maintainability (R&M) Standard for Spaceflight and Support Systems. NASA-STD-8729.1A, definition of redundancy, p. 12.",
+          "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/A/0/nasa-std-87291a.pdf",
+          "use": "支持将冗余理解为同一功能存在多于一种相对独立的实现方式，并要求一条功能路径的故障不应妨碍转移到第二条路径；本篇只借用这一概念定义，不把NASA标准当作其他车辆系统的设计要求、认证或维修程序。"
+        },
+        {
+          "id": "nasa-gsfc-2024-fmea",
+          "citation": "NASA Goddard Space Flight Center. (2024, August 20). Guideline for Failure Modes and Effects Analysis and Risk Assessment. GSFC-HDBK-8004, pp. 13–14.",
+          "url": "https://standards.nasa.gov/sites/default/files/standards/GSFC/Baseline/0/GSFC-HDBK-8004_Approved_1.pdf",
+          "use": "支持关注共同原因敏感性、功能和物理分离路径、故障隔离、检测与恢复，并通过分析和测试核对这些能力；不据此声称本虚构演示的路径已完全独立或给出任何量化失效概率。"
+        }
+      ],
+      "title": "The Light Is On. What About the Screen?",
+      "summary": "Before the transport centre opens, Zhou Yu tests the backup position display for a tabletop vehicle. The primary input is disconnected and a backup indicator lights up, but the screen stops updating.",
+      "storyParagraphs": [
+        "Before the weekend opening, the transport experience centre has one final exercise to complete. A tabletop vehicle moves slowly along a preset track under an independent drive. Its two positioning inputs supply only the nearby display; they do not control its motion. Zhou Yu needs to check whether the screen will keep showing position if the primary input drops out. Early in the first run, he disconnects that input at a known reference position. The “backup input received” indicator lights up, but the displayed position freezes.",
+        "The physical vehicle does not stop. It continues along the track. When it passes the next calibrated reference point, the screen is still showing the position from before the disconnection. Zhou Yu traces the signal downstream and finds that the backup receiver is indeed still receiving input, and the panel knows that the backup endpoint exists, but the processing chain responsible for calculating and updating position is still waiting for data from the disconnected primary path. Having two receiving endpoints does not mean the necessary function has actually transferred to the backup path.",
+        "Instead of adding a third receiver, he and his colleagues connect the existing backup input into the fault-detection and switching process. That way, when the specified primary path loses data, the system can switch to the backup input and continue the same positioning function. The change uses up time that had originally been reserved for interface debugging, and they still need to rerun the full test track before the weekend.",
+        "On the second run, the vehicle starts from the same point and follows the same track. At the same reference position, Zhou Yu disconnects the same primary input again. After detecting the interruption, the system switches to the backup path. As the vehicle continues, Zhou Yu checks the system's final position output against each known reference point on the track until the entire route is complete. In this exercise, the backup path does more than illuminate a status light: after the primary path is disconnected, it continues to perform the specified positioning-output function.",
+        "As they pack up, Zhou Yu notices that both receivers still lead into the same processing unit and adds that dependency to the next review list. The cover rests beside the box, and the vehicle is reconnected to the primary input. When the next day’s staff member collects the equipment, he hands over the test track too. “Run this whole section at handover. Watch the screen.”"
+      ],
+      "overall": "Redundancy uses relatively independent means to perform the same necessary function; independence must be examined against specific failures. This example uses a switchable primary and backup: after primary input is lost, backup input must actually feed the position display, whose output is checked against an independent reference. Other designs may work in parallel rather than switch to standby.",
+      "conceptName": "Safety redundancy",
+      "explanationParagraphs": [
+        "Counting components or watching a status light is not enough to establish that a backup works. Necessary stages such as reception, fault detection, switching, processing and output must keep performing their roles after the specified failure. Stages that need to switch must do so; a shared processor that does not switch must still work correctly. The example checks the final display against preset track positions rather than letting two input readings vote on which is correct.",
+        "One successful primary-path disconnection exercise shows only that, under that specified failure and those test conditions, the backup path completed the takeover. The two paths may still share a processor, software, power supply, maintenance condition, or other resource and therefore remain vulnerable to common causes. The exercise also cannot be used to estimate failure probability or to conclude that the complete vehicle system can tolerate other failures."
+      ],
+      "module": {
+        "intro": "First specify the primary-path failure to be tolerated, then trace the complete functional chain to see whether the backup really takes over, and use an independent reference to check the final output.",
+        "diagramTitle": "Why Doesn't a Lit Backup Indicator Prove That the Positioning Function Has Successfully Switched Over?",
+        "diagramSteps": [
+          "Run the tabletop vehicle along a pre-calibrated test track and use the known track positions as an independent reference",
+          "Disconnect the primary positioning input at a specified reference point and observe whether the final position output continues even though the backup status appears",
+          "Trace the path from reception through fault detection, switching, and processing to the final position output to find where the function stops",
+          "After correcting the switching path, disconnect the same primary input again and let the system transfer to a backup input with sufficient capability",
+          "Across the full test route, check point by point whether the final position output under the backup path remains consistent with the independent reference"
+        ],
+        "diagramStepNotes": [
+          "The independent reference comes from the preset test track and does not depend on comparing the primary and backup paths with each other to decide what is true.",
+          "This indicator means only that backup input is being received; it does not show that the display has switched or that the final output is correct.",
+          "Redundancy involves the complete functional path. A second receiver does not preserve this display function if downstream processing is still not receiving the backup input.",
+          "This example simulates only one specified primary-input disconnection, and the backup path's capability must be checked in that actual scenario.",
+          "One successful exercise does not show that shared processing, shared software, power, or other common-cause failures have been covered."
+        ],
+        "mapping": [
+          "Primary positioning input → the main path that normally performs the positioning function.",
+          "Backup receiving path → the second path intended to take over the same positioning function after the specified primary-path failure.",
+          "Preset track reference points → known position references independent of both receiving paths.",
+          "Final position output remaining consistent with the reference → evidence that the backup function actually took over under the specified failure."
+        ],
+        "boundary": "The tested function is only position display in a low-risk tabletop demonstration. Motion is driven independently of the tested inputs; driving, steering and braking safety are not evaluated. Two components, icons or differing readings do not automatically establish redundancy, and the two paths alone cannot determine which conflicting reading is correct. Real vehicle, marine and aircraft systems require analysis under applicable standards of independence, fault detection and isolation, capacity, switching where applicable, and common-cause failures. This example provides no real wiring, operating or certification procedure and derives no failure probability from one test.",
+        "reflection": "If the processor shared by both inputs fails, does this primary-input disconnection test establish that the screen will still show the correct position? Why?"
+      },
+      "references": [
+        {
+          "id": "nasa-2017-rm-redundancy",
+          "citation": "National Aeronautics and Space Administration. (2017, June 13). NASA Reliability and Maintainability (R&M) Standard for Spaceflight and Support Systems. NASA-STD-8729.1A, definition of redundancy, p. 12.",
+          "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/A/0/nasa-std-87291a.pdf",
+          "use": "Supports understanding redundancy as more than one relatively independent means of performing the same function, with failure in one path not preventing transfer to a second path. This article uses only that conceptual definition and does not treat the NASA standard as a design requirement, certification basis, or repair procedure for other vehicle systems."
+        },
+        {
+          "id": "nasa-gsfc-2024-fmea",
+          "citation": "NASA Goddard Space Flight Center. (2024, August 20). Guideline for Failure Modes and Effects Analysis and Risk Assessment. GSFC-HDBK-8004, pp. 13–14.",
+          "url": "https://standards.nasa.gov/sites/default/files/standards/GSFC/Baseline/0/GSFC-HDBK-8004_Approved_1.pdf",
+          "use": "Supports attention to common-cause susceptibility, functionally and physically separated paths, fault isolation, detection, and recovery, together with analysis and testing of those capabilities. It is not used to claim that the fictional demonstration's paths are fully independent or to derive any quantitative failure probability."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-24-preparation/group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-24-preparation/group1-edit-pass1-evidence.json",
+          "engineering-reader-first-24-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "Main editor applying13 perspectives; two collaborating read-only reviewers; four actual ordinary ChatGPT Extra High stages."
       }
     },
     {
@@ -1711,39 +1803,145 @@
       "fieldCode": "0721",
       "fieldTitle": "Food processing",
       "fieldTitleZh": "食品加工",
-      "title": "The Danger the Final Taste Could Not Find",
-      "titleZh": "最后一口尝不出的危险",
-      "summary": "A pie shop entrusts safety to a final taster, until normal-tasting pies from one oven make customers at the spring fair ill.",
-      "summaryZh": "肉饼坊把安全交给出炉后的试吃者，直到一炉味道正常的饼让春集上的客人接连病倒。",
-      "storyParagraphs": [
-        "Before the spring fair, Chen's meat-pie bakery had to make several thousand pies a day. The owner stationed an experienced taster at the end of packing. One pie from each oven load was sampled; if its colour, smell, and flavour seemed normal, the batch shipped. The method was quick, visible to buyers, and helped Chen promise that no fair order would be late. He believed danger would reveal itself in the final bite.",
-        "On a rushed morning, ice around a meat delivery had melted and one burner in the oven corner failed. The taster received a well-heated pie from near the door and found nothing unusual. Pies from the cooler corner did not achieve the required process condition, yet looked and smelled alike. After the fair, customers became ill and every remaining package was recalled. Chen held up the tasting log; it proved only which pies had been eaten. The recall team worked through the night matching package codes while fair stalls closed. Chen refunded buyers and paid clinic claims. The taster, who had eaten a safe pie, kept asking why his own mouth had reported nothing.",
-        "The next morning, the food-safety team did not begin in the office. They followed one tray from the melting delivery ice, across the raw bench, through the oven and cooling room, to the packing table. Chen carried chalk. Workers hung a red card wherever danger could enter or grow, then removed cards where repaired cleaning, supplier checks, or separation could handle the problem. Two stayed on the wall: the established heating step at the cold oven corner and the cooling clock that no hand could judge by touch. Chen closed the raw bench beside the finished racks and paid carpenters for a partition, even though the work stopped production for another day.",
-        "On the first trial, a worker wrote the cold-corner reading beside the cart number. It missed the accepted condition, so she tied a red seal to the handle and packing stopped. Chen's delivery clerk pointed to the fair buyer waiting outside; the pies looked ready, and the renewal depended on that cart. Chen rolled it behind the hold chain. A mechanic found a partly blocked burner feed, while a second checked instrument confirmed the reading. During record review, one blank line exposed another cart that had passed without a reading. It was sealed too. The fair officer ordered both carts destroyed. Chen cut the seals under witness, tipped the pies into the disposal bin, and lost the renewal contract. He wrote the value of two carts beside their batch numbers. The taster's spoon stayed clean.",
-        "Months later the same corner burner failed. A reading triggered the planned response before the cart reached packing; a red hold tag stopped it while workers followed the bakery's documented process. Chen set down the tasting spoon and signed the tag. The old brass approval stamp hung above the table, clean and unused, while no customer had to become the alarm."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "门口那辆小车",
+      "summaryZh": "调味料正等着装箱，姚琳按计划检查金属检测设备。一只参考试件没有触发预期动作，她把出货小车拉了回来。",
       "storyParagraphsZh": [
-        "春集前，陈记肉饼坊每天要做数千只饼。老板在包装末端安排老练试吃者，每炉抽一只；色、香、味正常便盖章出货。办法快，买家也看得见，还能保证集市订单不迟。陈老板相信，危险总会在最后一口露出破绽。",
-        "忙乱清晨，送肉车周围的冰融了，烤炉角落又有一只火头熄灭。试吃者拿到炉门边加热充分的饼，毫无异常；冷角那批没有达到规定过程条件，外观气味却一样。春集后，多名顾客不适，剩余包装全部召回。陈老板举着试吃记录，它只能证明哪几只被吃过。召回人员整夜核对包装批号，集市摊位陆续关闭。陈老板退还货款，也承担就医索赔。试吃者吃到的是安全肉饼，却一直追问自己的嘴为何什么都没报告。",
-        "第二天，食品安全团队没有先进账房，而是跟着一盘肉饼走：从融冰的送货筐，经过生肉案、烤炉和冷却间，直到包装桌。陈老板拿着粉笔。危险可能进入或增长的地方，工人先挂红牌；靠修好清洁、供应商检查或生熟分隔便能管住的，整改后摘牌。墙上最后只留下两处：必须照规定完成的炉角加热，以及不能凭手感猜测的冷却计时。陈老板封掉成品架旁的生肉案，请木匠加隔板，为此又停产一天。",
-        "第一次试行，工人把炉角读数写在推车编号旁。读数没有达到规定条件，她便在车把上系红色封条，包装桌停了。送货伙计指着门外等候的集市买家：肉饼看着已经好了，续约全靠这车货。陈老板还是把车推进扣货链后。修炉工找到半堵的供火管，另一只经检查的仪器也确认了原读数。复核记录时，一处空白又暴露出另一车未经记录便通过的肉饼，那辆车也被封住。集市官员要求两车全部销毁。陈老板在见证人面前剪开封条，把肉饼倒进处理槽，也丢掉了续约合同。他把两车损失写在各自批号旁。试吃勺一直没有沾到肉饼。",
-        "数月后，同一只角落火头再次熄灭。读数在推车到包装桌前触发预定反应，红色扣货牌让它停下，工人按本坊文件继续处理。陈老板放下试吃勺，在牌后签名。旧黄铜合格章干净地挂在桌上，没有顾客再替它发出警报。"
+        "下午的装箱车已经停到门口，姚琳只差完成一项计划中的设备检查，就能让小袋调味料继续流转。这条线要控制加工中可能混入的金属碎屑，每袋封好后都会经过金属检测设备。她送入验证用参考试件，机器却没有发出应有的报警，也没有作出剔除动作。",
+        "她先把正要送去装箱的产品小车拉回等待区。自上次确认设备按预期工作之后，生产线上已经处理了一段产品；这些包装看起来没有异常，日常监测记录里也没有产品触发报警。但现在参考试件没有引发预期反应，姚琳无法据此确认这段时间设备始终保持着计划要求的控制能力。",
+        "她按厂里既定方案暂停放行，找到上一次设备确认正常的记录，将那之后到这次异常发现之间的相关产品移到待判断区。维护人员接手设备检查原因。门边腾出的地方很快空了出来，那段产品仍留在另一侧，等负责人员进一步评估。",
+        "设备修复后，合格人员按既定计划重新确认其响应，生产线才重新开动。新批次逐袋经过正常监测，并按程序取得放行记录。先前暂扣的产品还留在原处，调查、产品评估和处置决定继续进行；停线耽误了装箱时间，待判断区也占着空间。",
+        "傍晚，门口装车的是设备恢复后新生产、监测并按程序放行的批次。先前暂扣的相关产品仍留在待判断区。姚琳把参考试件收回专用盒，门口的人问：“这一车可以走？”她核对批次标识和放行记录：“都对上了，可以装车。”"
       ],
-      "conceptName": "Hazard Analysis and Critical Control Points",
+      "overallZh": "本篇用虚构调味料包装线说明HACCP的一个入口：先针对具体产品和流程识别显著危害，再在对该危害必要的关键控制点建立经过验证的控制要求、监测、偏离处置、验证和记录。日常产品监测与验证控制措施是否仍按预期工作是不同任务，发生异常时也不能只复位设备后自动放行先前受影响范围的产品。",
       "conceptNameZh": "危害分析与关键控制点",
-      "explanationParagraphs": [
-        "Hazard Analysis and Critical Control Points is a preventive food-safety system. For a specific product and process, it identifies significant hazards, determines points where control is essential, sets validated critical limits, monitors them, and applies corrective action to deviations. Verification, records, and review show whether the system works. Prerequisite programmes such as sanitation support the plan; finished-product sampling can verify performance but cannot replace continuous process control."
-      ],
       "explanationParagraphsZh": [
-        "危害分析与关键控制点是一套预防性食品安全体系：针对具体产品和流程识别重大危害，确定必须控制的关键点，设定经验证的限值并监测，偏离时执行纠正行动，再通过验证、记录和复核确认体系有效。清洁等前提方案支撑整个计划；成品抽检可用于验证，却无法替代过程中的持续控制。"
+        "本例假定专业危害分析已把金属碎屑识别为这一产品和流程的显著物理危害，并把包装后检测设为关键控制点（CCP）。关键限值是为特定CCP确定、用来区分受控与失控的可测量或可观察界限，其控制依据须事先确认。本例已有经验证的检测与剔除要求，不给可照用的操作数值。每袋通过设备及相应运行记录属于监测；按计划用参考试件核查指定条件下的设备响应，属于验证活动。",
+        "参考试件未触发预期反应，只说明此时不能继续确信检测设备保持着既定能力，并不能证明任何一袋产品已经含有金属，也不能确定设备究竟从什么时候开始偏离。本故事因此按虚构厂内既定计划暂扣自上次确认正常以来的相关产品，调查和修复设备，再由合格人员决定先前产品的处置；恢复后的新批次与暂扣旧批次必须分开。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先明确要控制的具体危害和关键控制点，再区分产品监测、验证失败后的暂停隔离，以及恢复后的新生产。",
+        "diagramTitle": "为什么参考试件没有触发报警，会让先前一段产品暂停放行",
+        "diagramSteps": [
+          "危害分析把金属碎屑识别为该产品流程中的显著物理危害，并把包装后金属检测设为关键控制点",
+          "正常生产时，每袋产品经过检测设备并留下相应监测记录",
+          "计划中的验证参考试件未触发既定报警和剔除动作，使设备控制能力进入不确定状态",
+          "暂停放行并暂扣自上次确认设备正常之后至异常发现之间的相关产品，同时调查和修复设备",
+          "设备重新确认后恢复新批次生产和监测，而先前暂扣产品仍按既定方案由合格人员决定处置并记录"
+        ],
+        "diagramStepNotes": [
+          "并非所有卫生或质量检查点天然都是CCP；本例中的CCP来自针对该产品和流程的专业危害分析。",
+          "产品监测记录的是运行中的控制状态，不能由‘没有报警’推导所有异物都不存在。",
+          "参考试件是验证设备在该测试条件下的响应，不是每袋产品的替代检测，也不证明任何产品已含有金属。",
+          "暂扣范围是本虚构计划采取的谨慎控制措施；验证失败本身不能准确告诉人物设备何时开始偏离。",
+          "设备修好和重新验证不自动改变先前暂扣产品的状态；恢复后的新批次和旧的待判断批次必须分开处理。"
+        ],
+        "mapping": [
+          "金属碎屑 → 本虚构产品和流程中事先识别的显著物理危害。",
+          "包装后金属检测 → 针对该危害选定的关键控制点。",
+          "参考试件未触发预期动作 → 控制措施是否仍按计划有效出现不确定性。",
+          "待判断区 → 暂时隔离相关产品，等待调查和处置决定。",
+          "恢复后的新批次 → 设备重新确认后重新生产、监测并按程序放行的产品。"
+        ],
+        "boundary": "HACCP针对具体产品、流程和危害，危害可为生物、化学或物理危害。清洁和人员卫生等前提方案提供基础，并非每个检查点都是CCP。控制措施和关键限值的依据须事先确认；持续监测与计划中的验证活动承担不同任务，一次参考试件响应不能包办整套验证。通过检查也不证明所有异物均可检出或食品绝对安全。本篇不提供真实灵敏度、检查频率、时间温度或法律合规判断；实际计划和产品处置由合格人员按适用要求确定。",
+        "reflection": "参考试件按预期触发了设备，但某批产品的监测与放行记录不完整。能仅凭这次试件通过就断定该批可放行吗？还应核查什么？"
+      },
+      "referencesZh": [
+        {
+          "id": "nacmcf-1997-haccp",
+          "citation": "National Advisory Committee on Microbiological Criteria for Foods. (1997, August 14). HACCP Principles & Application Guidelines. U.S. Food and Drug Administration.",
+          "url": "https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp/haccp-principles-application-guidelines",
+          "use": "支持HACCP通过危害分析识别显著危害和关键控制点，建立临界限值、监测、纠正措施、验证和记录，并区分监测与验证；本篇不把1997历史指南当作任何地区当前直接适用的法规或现成HACCP计划。"
+        },
+        {
+          "id": "fda-2022-food-code-haccp",
+          "citation": "U.S. Food and Drug Administration. (2022). FDA Food Code, Annex 4: Management of Food Safety Practices, pp. 493–494.",
+          "url": "https://www.fda.gov/media/184685/download",
+          "use": "支持前提方案作为食品安全管理基础，并支持七项HACCP原则与具体产品、过程和危害之间的概念关系；不从该模型指南为本虚构调味料流程推导现实操作参数或法律合规结论。"
+        },
+        {
+          "id": "fda-2022-seafood-metal-inclusion",
+          "citation": "U.S. Food and Drug Administration. (2022, June). Fish and Fishery Products Hazards and Controls Guidance, Chapter 20: Metal Inclusion, pp. 388–390.",
+          "url": "https://www.fda.gov/media/80637/download",
+          "use": "FDA海产品指南区分产品连续监测与参考标准的验证，并在检测设备未运行的情形列出从最近确认正常起暂扣产品的措施。本故事在参考试件未通过、性能历史不明时保守暂扣，是虚构厂内计划对该逻辑的应用；不证明整个期间设备未运行或成品含金属。不引用其中的工艺数值，也不将海产品示例当成调味料的现成计划或法规。"
+        }
+      ],
+      "title": "The Cart at the Door",
+      "summary": "The condiment packets are waiting to be packed when Yao Lin performs a planned detector check. A reference piece fails to trigger the expected response, and she pulls the shipping cart back.",
+      "storyParagraphs": [
+        "The packing cart is waiting at the door that afternoon. Yao Lin has one planned equipment check left before the condiment packets can move on. The line controls metal fragments that might enter during processing, and every sealed packet passes through a metal detector. She feeds in the verification reference piece. The expected alarm and rejection action do not occur.",
+        "She first pulls the cart of product that was about to go to packing back into the waiting area. Since the last time the detector was confirmed to be responding as expected, a quantity of product has already passed through the line. Those packages look normal, and routine monitoring records show no product alarms. But because the reference piece has now failed to produce the expected response, Yao Lin cannot use those earlier 'no alarm' records to confirm that the detector maintained the required control capability throughout that entire period.",
+        "Under the established plan, she stops release and finds the last record confirming satisfactory detector operation. Product from then until discovery of the abnormal check is moved to the hold area. Maintenance takes over the equipment. The space by the door is soon clear; that period of product remains on the other side, awaiting further evaluation by the responsible staff.",
+        "After repair, qualified staff reconfirm the detector’s response under the established plan before production resumes. New batches pass through routine monitoring package by package and receive release records under procedure. The earlier held product stays where it is while investigation, product assessment and disposition continue. The stoppage has delayed packing, and the held product still takes up space.",
+        "By evening, the cart at the door holds the new batch produced, monitored and released under procedure after the detector was restored. The earlier held product remains in its designated area. Yao Lin puts the reference piece back in its case. “Can this cart go?” someone asks. She checks its batch identity and release record. “They match. You can load it.”"
+      ],
+      "overall": "This article uses a fictional condiment-packaging line to introduce one aspect of Hazard Analysis and Critical Control Points: a specific product and process first require identification of significant hazards, followed by validated control requirements, monitoring, corrective actions, verification, and records at critical control points that are necessary for those hazards. Routine product monitoring and verification that a control measure is still functioning as intended are different tasks, and an abnormal result cannot be resolved simply by resetting or repairing equipment and then automatically releasing product made during the earlier uncertain period.",
+      "conceptName": "Hazard Analysis and Critical Control Points",
+      "explanationParagraphs": [
+        "The example assumes that professional hazard analysis has identified metal fragments as a significant physical hazard for this product and process and designated post-packaging detection as a critical control point (CCP). A critical limit is a measurable or observable boundary established for that CCP to distinguish control from loss of control; its control basis needs prior validation. Validated detection and rejection requirements are assumed here, without giving usable operating values. Each package passing through the detector and the associated operating records form part of monitoring; a planned reference challenge checks detector response under specified conditions as a verification activity.",
+        "Failure of the reference test piece to trigger the expected response means only that continued confidence in the detector's required capability is no longer justified at that point. It does not prove that any particular package contains metal, nor does it identify exactly when the detector may have begun deviating. The fictional facility therefore follows its established plan by holding relevant product since the last confirmed satisfactory state, investigating and repairing the equipment, and having qualified personnel determine disposition of the earlier product. Newly produced post-restoration batches and previously held product must remain distinct."
+      ],
+      "module": {
+        "intro": "First define the specific hazard and the critical control point, then distinguish routine product monitoring, the hold triggered by failed verification, and production after the control has been restored.",
+        "diagramTitle": "Why Can a Failed Verification Reference Check Put an Earlier Period of Product on Hold?",
+        "diagramSteps": [
+          "Hazard analysis identifies metal fragments as a significant physical hazard for this product and process and designates post-packaging metal detection as a critical control point",
+          "During normal production, each packaged product passes through the detector and corresponding monitoring records are created",
+          "A planned verification reference piece fails to trigger the required alarm and rejection action, making the detector's control capability uncertain",
+          "Stop release and hold the relevant product made since the last confirmed satisfactory detector state while investigating and repairing the equipment",
+          "After reconfirmation, resume production and monitoring for new batches, while qualified personnel separately determine and document disposition of the previously held product"
+        ],
+        "diagramStepNotes": [
+          "Not every hygiene or quality check is automatically a CCP; the CCP in this example comes from professional hazard analysis for this specific product and process.",
+          "Product monitoring records the operating control state and cannot establish that all possible foreign material is absent simply because no alarm occurred.",
+          "The reference piece verifies detector response under the specified test condition; it is not a substitute test for every package and does not prove that any product contains metal.",
+          "The hold period is a cautious control measure defined in the fictional facility plan; the failed verification itself cannot identify the exact moment when detector performance may have deviated.",
+          "Repairing and reconfirming the detector does not automatically change the status of previously held product; new post-restoration batches and the earlier held product must be handled separately."
+        ],
+        "mapping": [
+          "Metal fragments → the significant physical hazard identified in advance for this fictional product and process.",
+          "Post-packaging metal detection → the critical control point selected for that hazard.",
+          "Reference piece fails to trigger the expected action → uncertainty about whether the control measure is still functioning as planned.",
+          "Hold area → temporary segregation of relevant product pending investigation and disposition.",
+          "Post-restoration new batch → product made after reconfirmation, newly monitored and released under the normal procedure."
+        ],
+        "boundary": "HACCP addresses specific products, processes and biological, chemical or physical hazards. Prerequisite programs such as sanitation and hygiene provide a foundation; not every check is a CCP. The basis for control measures and critical limits needs prior validation. Ongoing monitoring and planned verification have different roles, and one reference response cannot stand in for the full verification program. A passed check establishes neither detection of every foreign object nor absolute food safety. No real sensitivity, check frequency, time-temperature requirement or legal compliance judgment is supplied; actual plans and disposition belong to qualified personnel under applicable requirements.",
+        "reflection": "A reference challenge triggers the expected response, but a batch has incomplete monitoring and release records. Is that challenge alone enough to release the batch? What else needs checking?"
+      },
+      "references": [
+        {
+          "id": "nacmcf-1997-haccp",
+          "citation": "National Advisory Committee on Microbiological Criteria for Foods. (1997, August 14). HACCP Principles & Application Guidelines. U.S. Food and Drug Administration.",
+          "url": "https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp/haccp-principles-application-guidelines",
+          "use": "Supports the HACCP structure of identifying significant hazards and critical control points through hazard analysis, establishing critical limits, monitoring, corrective actions, verification, and records, and distinguishing monitoring from verification. This article does not treat the 1997 historical guidance as a directly applicable current regulation or a ready-made HACCP plan for every jurisdiction."
+        },
+        {
+          "id": "fda-2022-food-code-haccp",
+          "citation": "U.S. Food and Drug Administration. (2022). FDA Food Code, Annex 4: Management of Food Safety Practices, pp. 493–494.",
+          "url": "https://www.fda.gov/media/184685/download",
+          "use": "Supports prerequisite programs as a foundation for food-safety management and the conceptual relationship between the seven HACCP principles and specific products, processes, and hazards. It is not used to derive real operating parameters or legal compliance conclusions for the fictional condiment process."
+        },
+        {
+          "id": "fda-2022-seafood-metal-inclusion",
+          "citation": "U.S. Food and Drug Administration. (2022, June). Fish and Fishery Products Hazards and Controls Guidance, Chapter 20: Metal Inclusion, pp. 388–390.",
+          "url": "https://www.fda.gov/media/80637/download",
+          "use": "The seafood guidance distinguishes continuous product monitoring from verification challenges and describes holding product since the last confirmed working state when detection equipment has not been operating. The fictional facility’s cautious hold after a failed challenge and an uncertain performance history applies that logic; it does not prove non-operation throughout the interval or metal in product. No operating values are borrowed, and the seafood example is not treated as a ready-made condiment plan or law."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-24-preparation/group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-24-preparation/group1-edit-pass1-evidence.json",
+          "engineering-reader-first-24-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "Main editor applying13 perspectives; two collaborating read-only reviewers; four actual ordinary ChatGPT Extra High stages."
       }
     }
   ]

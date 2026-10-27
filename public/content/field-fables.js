@@ -20332,45 +20332,137 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0716",
     "fieldTitle": "Motor vehicles ships and aircraft",
     "fieldTitleZh": "机动车、船舶与航空器",
-    "title": "The Two Pumps That Fell Silent Together",
-    "titleZh": "两台一起沉默的水泵",
-    "summary": "A ferry owner installs two bilge pumps and believes leaks are no longer dangerous, overlooking the low-mounted switchboard they share.",
-    "summaryZh": "渡船装了两台排水泵，船主以为漏水不再可怕，却没有注意它们共用同一块低处配电板。",
-    "storyParagraphs": [
-      "When the strait ferry was refitted, owner Bosun installed two bilge pumps. The safety inspector asked about flooding; Bosun tapped the deck and said, 'If one fails, the other works.' Both pumps were identical, low in adjacent compartments, connected to one switchboard, and serviced by the same mechanic on the same day. The arrangement was cheap, tidy, and allowed the ferry to return before the summer rush. A separate engine-driven option had been removed from the estimate because it cost more and occupied cargo space. Bosun used the saving to refurbish the passenger saloon, where two brass pump symbols were painted above the door.",
-      "One night driftwood opened a cargo-seam. The first pump started, but rising water reached the low switchboard; both pump lamps went dark. The second machine had no broken part and still remained silent. Crew formed a bucket line while wet cargo shifted against the bulkhead. The ferry limped home, losing the entire lower shipment and its next three sailings. Bosun blamed the unused second pump for failing to be a proper spare. The saloon lights died with the pumps. Passengers stood ankle-deep near the stairs while crew passed buckets through the dark. One bucket struck the painted pair of pump symbols and left a muddy crescent across both.",
-      "The inspector laid two powerless cables beside the insurance claim. There were two machines but one electrical fate; one flood, one low location, or one maintenance error could silence the pair. With one night left before the tourist weekend, Bosun refused the third identical unit and ordered power and equipment rerouted into separated spaces. He refunded fares and watched a rival ferry carry the crowd.",
-      "One electric pump moved higher on an independent circuit, another used a separately supported drive, and a manual option remained. High water produced an alarm; valves and isolation were checked; crews periodically disabled the primary path and demonstrated that the remaining arrangement could take the specified duty. Added weight, inspection, switching behaviour, and maintenance burden entered the plan. In the maintenance book, the new pump received no check mark until the crew named a fault, isolated it, and emptied the test tank through the remaining path. In the first disablement drill, the alarm sounded but the alternate path failed to start because a closed valve had been missed. The inspector kept the ferry tied up until the crew found it, repeated the test, and recorded the switching time.",
-      "Before reopening, the inspector pulled the primary fuse without warning. The engine room fell quiet, then a separate turning sound began above the old waterline. Bosun bent over the bilge instead of applauding. The two cables from the flooded switchboard hung on a nail behind him, tied together by one black burn mark."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "灯亮以后，屏幕呢？",
+    "summaryZh": "交通体验馆开馆前，周屿要演练桌面小车的备用定位显示。主输入一断，备用指示灯亮了，屏幕却不再更新。",
     "storyParagraphsZh": [
-      "海峡渡船翻修时，船主博森装了两台舱底泵。验船官问起进水，他拍着甲板说：“坏一台，还有一台。”两台泵型号相同，放在相邻低舱，接同一块配电板，又由同一名技工在同一天保养。这样便宜整齐，也能赶在暑期前复航。报价里原有一套分开驱动方案，因价高又占货位被删掉。博森把省下的钱翻新客舱，还在门上方画了两只黄铜泵标志。",
-      "一次夜航，漂木撞开货舱接缝。第一台泵启动不久，水便淹到低处配电板，两台泵的指示灯全灭；第二台没有任何零件损坏，却一样沉默。船员用桶接力，湿货还在舱壁旁移动。渡船勉强返港，底层货物全毁，接下来三航次也取消。博森责怪没用上的副泵不配叫备用。副泵沉默时，客舱灯也跟着熄灭。乘客在楼梯旁踩进没踝水，船员摸黑传桶；一只桶撞到那对泵标志，留下一道横跨两只标志的泥弧。",
-      "验船官把两根断电电缆放在索赔单旁。机器虽有两台，电力命运只有一条；一场进水、一个低处位置或一次保养错误，就能让它们一同沉默。离旅游周末只剩一夜，博森却退掉第三台同款，命人把电路与设备重铺到分隔舱位。他退还船票，眼看对手渡船载走人群。",
-      "一台电泵移到高处并用独立电路，另一台采用分开支持的驱动，船上仍留人工方案。高水位触发警报，隔离与阀门接受检查；船员定期停掉主路，证明剩余装置能承担规定任务。新增重量、检查、切换表现与保养负担也进入计划。检修本上，新泵直到船员写明一种故障、把它隔开并用余下路径排空试验水箱，才得到勾号。第一次停主路演练中，警报响了，替代路径却因一只遗漏的关闭阀没有启动。验船官继续扣船，直到船员找到原因、重做试验并记录切换时间。",
-      "复航前，验船官忽然拔掉主泵保险。机舱安静一瞬，旧水线以上随即传来另一处稳定转动声。博森没有鼓掌，只弯腰看舱底水位。身后钉着旧配电板的两根电缆，一道黑色烧痕把它们系在一起。"
+      "周末开放前，交通体验馆还差最后一项演练。桌面小车由独立驱动沿预设轨道缓慢前进，两路定位输入只负责把位置送到旁边的屏幕，不控制小车运动。周屿要确认，如果主定位输入突然中断，屏幕还能不能继续显示位置。第一遍模拟刚开始不久，他在一个已知参考位置断开主路，“收到备用输入”的指示灯亮了，屏幕上的位置却停住了。",
+      "实体小车没有停，仍沿轨道向前。它越过下一个已经标定好的参考点时，屏幕还留在断线前的位置。周屿顺着信号往后查，发现备用接收端确实还有输入，面板也知道备用端存在，但真正用于计算和更新位置的处理链仍在等已经断开的主路数据。两套接收端都在，并不等于必要功能已经被备用路径接过去。",
+      "他没有再加第三只接收器，而是和同事把已有备用输入接进故障识别和切换流程。这样一来，指定主路失去数据时，系统可以转到备用输入继续完成同一个位置功能。修改占掉了原本留给界面调试的时间，周末前还得重新跑完整段测试轨道。",
+      "第二次，小车仍从同一起点出发，沿相同轨道运行。到了同一个参考位置，周屿再次断开那条主输入；系统识别中断后转到备用路径。小车继续前进，每经过一个预设参考点，周屿都把轨道上的已知位置与系统最终输出逐一核对，直到整段行程结束。这个演练里，备用路径不只是亮了状态灯，而是在主路断开后继续完成了既定的位置输出功能。",
+      "收台时，周屿发现两路接收端后面仍连着同一块处理单元，便把这一项记进下一轮待查清单。盒盖搭在一边，小车重新接回主路。第二天值班的人来取设备，他把测试轨道也递过去：“交接时把这段一起跑完，看屏幕。”"
     ],
-    "conceptName": "Safety redundancy",
+    "overallZh": "冗余用相对独立的多种手段承担同一必要功能，独立性要针对具体故障核查。本例采用可切换主备：主输入中断后，备用输入须实际进入位置显示，最终输出再与独立参考核对。其他设计也可能并行工作，不都采用先停主路、再切备用的方式。",
     "conceptNameZh": "安全冗余",
-    "explanationParagraphs": [
-      "Safety redundancy adds components, paths, information, or capacity so a system retains a critical function or degrades in a controlled way after specified faults. Copies need sufficient capacity and should avoid common supplies, locations, designs, or maintenance that create common-cause failure. Fault detection, isolation, and reliable transfer are also necessary. Redundancy adds weight, cost, and complexity, so regular testing must show that it will actually work when needed."
-    ],
     "explanationParagraphsZh": [
-      "安全冗余增加组件、路径、信息或能力，使系统在指定故障后仍保留关键功能或受控降级。副本必须具备足够能力，并尽量避免共同电源、位置、设计或维护造成的共因失效；还需检测故障、隔离问题并可靠切换。冗余会增加重量、成本和复杂度，因此必须通过定期试验证明它在需要时真正可用。"
+      "判断备用是否有效，不能只数组件或看状态灯。接收、故障识别、切换、处理和输出等必要环节，在指定故障后仍须履行各自作用；需要切换的环节须完成切换，不需要切换的共用处理器也必须继续正常工作。本例用预设轨道位置核对最终显示，不让主、备用两路读数互相投票决定谁正确。",
+      "一次成功的主路断开演练只说明该指定故障和测试条件下，备用路径完成了接管。两条路径仍可能共享处理器、软件、供电、维护条件或其他资源，从而受到共同原因影响；也不能凭这一次演练估算失效概率或推出完整车辆系统能容忍其他故障。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先指定要容忍的主路故障，再沿完整功能链检查备用路径是否真的接管，并用独立参考核对最终输出。",
+      "diagramTitle": "为什么备用灯已经亮起，仍不能证明定位功能完成了冗余接管",
+      "diagramSteps": [
+        "让桌面小车沿预先标定的测试轨道运行，并记录轨道上的已知位置作为独立参考",
+        "在指定参考位置断开主定位输入，观察备用状态虽然出现但最终位置输出是否继续",
+        "沿接收、故障识别、切换、处理到最终位置输出逐段查找中断点",
+        "修正切换路径后，再断开同一主输入，让系统转到能力足够的备用输入",
+        "在完整测试行程中逐点核对备用路径下的最终位置输出与独立参考是否一致"
+      ],
+      "diagramStepNotes": [
+        "独立参考来自预设测试轨道，不依赖主、备用两路互相比较来决定真值。",
+        "这盏灯只表示收到备用端输入，不表示位置显示已切换或最终输出正确。",
+        "冗余涉及完整功能路径；只有第二个接收器，后续处理却未接入备用输入，仍不能保留本例的位置显示功能。",
+        "本例只模拟一条指定主输入断开，备用路径是否有足够能力也必须在该场景中实际核对。",
+        "一次成功演练不能证明共享处理、共享软件、供电或其他共同原因故障已经被覆盖。"
+      ],
+      "mapping": [
+        "主定位输入 → 正常情况下承担定位功能的主要路径。",
+        "备用接收路径 → 在指定主路故障后候选接管同一定位功能的第二路径。",
+        "预设轨道参考点 → 独立于两条接收路径的已知位置参考。",
+        "最终位置输出继续与参考一致 → 本次指定故障下备用功能实际完成接管的证据。"
+      ],
+      "boundary": "本篇只测试低风险台面演示中的位置显示：驱动独立于被测定位输入，不验证行驶、转向或制动安全。两组件、两图标或两不同读数不能自动证明冗余成立；两路读数矛盾时，仅靠两路本身不能确定谁正确。实际车辆、船舶和航空系统还需按适用标准分析路径独立性、故障检测与隔离、容量、适用切换及共因失效。本例不提供真实接线、运行或认证方法，也不从一次试验推导失效概率。",
+      "reflection": "如果这两路输入共用的处理单元失效，这次主输入断线演练能证明屏幕仍会显示正确位置吗？为什么？"
+    },
+    "referencesZh": [
+      {
+        "id": "nasa-2017-rm-redundancy",
+        "citation": "National Aeronautics and Space Administration. (2017, June 13). NASA Reliability and Maintainability (R&M) Standard for Spaceflight and Support Systems. NASA-STD-8729.1A, definition of redundancy, p. 12.",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/A/0/nasa-std-87291a.pdf",
+        "use": "支持将冗余理解为同一功能存在多于一种相对独立的实现方式，并要求一条功能路径的故障不应妨碍转移到第二条路径；本篇只借用这一概念定义，不把NASA标准当作其他车辆系统的设计要求、认证或维修程序。"
+      },
+      {
+        "id": "nasa-gsfc-2024-fmea",
+        "citation": "NASA Goddard Space Flight Center. (2024, August 20). Guideline for Failure Modes and Effects Analysis and Risk Assessment. GSFC-HDBK-8004, pp. 13–14.",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/GSFC/Baseline/0/GSFC-HDBK-8004_Approved_1.pdf",
+        "use": "支持关注共同原因敏感性、功能和物理分离路径、故障隔离、检测与恢复，并通过分析和测试核对这些能力；不据此声称本虚构演示的路径已完全独立或给出任何量化失效概率。"
+      }
+    ],
+    "title": "The Light Is On. What About the Screen?",
+    "summary": "Before the transport centre opens, Zhou Yu tests the backup position display for a tabletop vehicle. The primary input is disconnected and a backup indicator lights up, but the screen stops updating.",
+    "storyParagraphs": [
+      "Before the weekend opening, the transport experience centre has one final exercise to complete. A tabletop vehicle moves slowly along a preset track under an independent drive. Its two positioning inputs supply only the nearby display; they do not control its motion. Zhou Yu needs to check whether the screen will keep showing position if the primary input drops out. Early in the first run, he disconnects that input at a known reference position. The “backup input received” indicator lights up, but the displayed position freezes.",
+      "The physical vehicle does not stop. It continues along the track. When it passes the next calibrated reference point, the screen is still showing the position from before the disconnection. Zhou Yu traces the signal downstream and finds that the backup receiver is indeed still receiving input, and the panel knows that the backup endpoint exists, but the processing chain responsible for calculating and updating position is still waiting for data from the disconnected primary path. Having two receiving endpoints does not mean the necessary function has actually transferred to the backup path.",
+      "Instead of adding a third receiver, he and his colleagues connect the existing backup input into the fault-detection and switching process. That way, when the specified primary path loses data, the system can switch to the backup input and continue the same positioning function. The change uses up time that had originally been reserved for interface debugging, and they still need to rerun the full test track before the weekend.",
+      "On the second run, the vehicle starts from the same point and follows the same track. At the same reference position, Zhou Yu disconnects the same primary input again. After detecting the interruption, the system switches to the backup path. As the vehicle continues, Zhou Yu checks the system's final position output against each known reference point on the track until the entire route is complete. In this exercise, the backup path does more than illuminate a status light: after the primary path is disconnected, it continues to perform the specified positioning-output function.",
+      "As they pack up, Zhou Yu notices that both receivers still lead into the same processing unit and adds that dependency to the next review list. The cover rests beside the box, and the vehicle is reconnected to the primary input. When the next day’s staff member collects the equipment, he hands over the test track too. “Run this whole section at handover. Watch the screen.”"
+    ],
+    "overall": "Redundancy uses relatively independent means to perform the same necessary function; independence must be examined against specific failures. This example uses a switchable primary and backup: after primary input is lost, backup input must actually feed the position display, whose output is checked against an independent reference. Other designs may work in parallel rather than switch to standby.",
+    "conceptName": "Safety redundancy",
+    "explanationParagraphs": [
+      "Counting components or watching a status light is not enough to establish that a backup works. Necessary stages such as reception, fault detection, switching, processing and output must keep performing their roles after the specified failure. Stages that need to switch must do so; a shared processor that does not switch must still work correctly. The example checks the final display against preset track positions rather than letting two input readings vote on which is correct.",
+      "One successful primary-path disconnection exercise shows only that, under that specified failure and those test conditions, the backup path completed the takeover. The two paths may still share a processor, software, power supply, maintenance condition, or other resource and therefore remain vulnerable to common causes. The exercise also cannot be used to estimate failure probability or to conclude that the complete vehicle system can tolerate other failures."
+    ],
+    "module": {
+      "intro": "First specify the primary-path failure to be tolerated, then trace the complete functional chain to see whether the backup really takes over, and use an independent reference to check the final output.",
+      "diagramTitle": "Why Doesn't a Lit Backup Indicator Prove That the Positioning Function Has Successfully Switched Over?",
+      "diagramSteps": [
+        "Run the tabletop vehicle along a pre-calibrated test track and use the known track positions as an independent reference",
+        "Disconnect the primary positioning input at a specified reference point and observe whether the final position output continues even though the backup status appears",
+        "Trace the path from reception through fault detection, switching, and processing to the final position output to find where the function stops",
+        "After correcting the switching path, disconnect the same primary input again and let the system transfer to a backup input with sufficient capability",
+        "Across the full test route, check point by point whether the final position output under the backup path remains consistent with the independent reference"
+      ],
+      "diagramStepNotes": [
+        "The independent reference comes from the preset test track and does not depend on comparing the primary and backup paths with each other to decide what is true.",
+        "This indicator means only that backup input is being received; it does not show that the display has switched or that the final output is correct.",
+        "Redundancy involves the complete functional path. A second receiver does not preserve this display function if downstream processing is still not receiving the backup input.",
+        "This example simulates only one specified primary-input disconnection, and the backup path's capability must be checked in that actual scenario.",
+        "One successful exercise does not show that shared processing, shared software, power, or other common-cause failures have been covered."
+      ],
+      "mapping": [
+        "Primary positioning input → the main path that normally performs the positioning function.",
+        "Backup receiving path → the second path intended to take over the same positioning function after the specified primary-path failure.",
+        "Preset track reference points → known position references independent of both receiving paths.",
+        "Final position output remaining consistent with the reference → evidence that the backup function actually took over under the specified failure."
+      ],
+      "boundary": "The tested function is only position display in a low-risk tabletop demonstration. Motion is driven independently of the tested inputs; driving, steering and braking safety are not evaluated. Two components, icons or differing readings do not automatically establish redundancy, and the two paths alone cannot determine which conflicting reading is correct. Real vehicle, marine and aircraft systems require analysis under applicable standards of independence, fault detection and isolation, capacity, switching where applicable, and common-cause failures. This example provides no real wiring, operating or certification procedure and derives no failure probability from one test.",
+      "reflection": "If the processor shared by both inputs fails, does this primary-input disconnection test establish that the screen will still show the correct position? Why?"
+    },
+    "references": [
+      {
+        "id": "nasa-2017-rm-redundancy",
+        "citation": "National Aeronautics and Space Administration. (2017, June 13). NASA Reliability and Maintainability (R&M) Standard for Spaceflight and Support Systems. NASA-STD-8729.1A, definition of redundancy, p. 12.",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/A/0/nasa-std-87291a.pdf",
+        "use": "Supports understanding redundancy as more than one relatively independent means of performing the same function, with failure in one path not preventing transfer to a second path. This article uses only that conceptual definition and does not treat the NASA standard as a design requirement, certification basis, or repair procedure for other vehicle systems."
+      },
+      {
+        "id": "nasa-gsfc-2024-fmea",
+        "citation": "NASA Goddard Space Flight Center. (2024, August 20). Guideline for Failure Modes and Effects Analysis and Risk Assessment. GSFC-HDBK-8004, pp. 13–14.",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/GSFC/Baseline/0/GSFC-HDBK-8004_Approved_1.pdf",
+        "use": "Supports attention to common-cause susceptibility, functionally and physically separated paths, fault isolation, detection, and recovery, together with analysis and testing of those capabilities. It is not used to claim that the fictional demonstration's paths are fully independent or to derive any quantitative failure probability."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-24-preparation/group1-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-24-preparation/group1-edit-pass1-evidence.json",
+        "engineering-reader-first-24-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "Main editor applying13 perspectives; two collaborating read-only reviewers; four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "When the strait ferry was refitted, owner Bosun installed two bilge pumps. The safety inspector asked about flooding; Bosun tapped the deck and said, 'If one fails, the other works.' Both pumps were identical, low in adjacent compartments, connected to one switchboard, and serviced by the same mechanic on the same day. The arrangement was cheap, tidy, and allowed the ferry to return before the summer rush. A separate engine-driven option had been removed from the estimate because it cost more and occupied cargo space. Bosun used the saving to refurbish the passenger saloon, where two brass pump symbols were painted above the door.\n\nOne night driftwood opened a cargo-seam. The first pump started, but rising water reached the low switchboard; both pump lamps went dark. The second machine had no broken part and still remained silent. Crew formed a bucket line while wet cargo shifted against the bulkhead. The ferry limped home, losing the entire lower shipment and its next three sailings. Bosun blamed the unused second pump for failing to be a proper spare. The saloon lights died with the pumps. Passengers stood ankle-deep near the stairs while crew passed buckets through the dark. One bucket struck the painted pair of pump symbols and left a muddy crescent across both.\n\nThe inspector laid two powerless cables beside the insurance claim. There were two machines but one electrical fate; one flood, one low location, or one maintenance error could silence the pair. With one night left before the tourist weekend, Bosun refused the third identical unit and ordered power and equipment rerouted into separated spaces. He refunded fares and watched a rival ferry carry the crowd.\n\nOne electric pump moved higher on an independent circuit, another used a separately supported drive, and a manual option remained. High water produced an alarm; valves and isolation were checked; crews periodically disabled the primary path and demonstrated that the remaining arrangement could take the specified duty. Added weight, inspection, switching behaviour, and maintenance burden entered the plan. In the maintenance book, the new pump received no check mark until the crew named a fault, isolated it, and emptied the test tank through the remaining path. In the first disablement drill, the alarm sounded but the alternate path failed to start because a closed valve had been missed. The inspector kept the ferry tied up until the crew found it, repeated the test, and recorded the switching time.\n\nBefore reopening, the inspector pulled the primary fuse without warning. The engine room fell quiet, then a separate turning sound began above the old waterline. Bosun bent over the bilge instead of applauding. The two cables from the flooded switchboard hung on a nail behind him, tied together by one black burn mark.",
-    "storyBodyZh": "海峡渡船翻修时，船主博森装了两台舱底泵。验船官问起进水，他拍着甲板说：“坏一台，还有一台。”两台泵型号相同，放在相邻低舱，接同一块配电板，又由同一名技工在同一天保养。这样便宜整齐，也能赶在暑期前复航。报价里原有一套分开驱动方案，因价高又占货位被删掉。博森把省下的钱翻新客舱，还在门上方画了两只黄铜泵标志。\n\n一次夜航，漂木撞开货舱接缝。第一台泵启动不久，水便淹到低处配电板，两台泵的指示灯全灭；第二台没有任何零件损坏，却一样沉默。船员用桶接力，湿货还在舱壁旁移动。渡船勉强返港，底层货物全毁，接下来三航次也取消。博森责怪没用上的副泵不配叫备用。副泵沉默时，客舱灯也跟着熄灭。乘客在楼梯旁踩进没踝水，船员摸黑传桶；一只桶撞到那对泵标志，留下一道横跨两只标志的泥弧。\n\n验船官把两根断电电缆放在索赔单旁。机器虽有两台，电力命运只有一条；一场进水、一个低处位置或一次保养错误，就能让它们一同沉默。离旅游周末只剩一夜，博森却退掉第三台同款，命人把电路与设备重铺到分隔舱位。他退还船票，眼看对手渡船载走人群。\n\n一台电泵移到高处并用独立电路，另一台采用分开支持的驱动，船上仍留人工方案。高水位触发警报，隔离与阀门接受检查；船员定期停掉主路，证明剩余装置能承担规定任务。新增重量、检查、切换表现与保养负担也进入计划。检修本上，新泵直到船员写明一种故障、把它隔开并用余下路径排空试验水箱，才得到勾号。第一次停主路演练中，警报响了，替代路径却因一只遗漏的关闭阀没有启动。验船官继续扣船，直到船员找到原因、重做试验并记录切换时间。\n\n复航前，验船官忽然拔掉主泵保险。机舱安静一瞬，旧水线以上随即传来另一处稳定转动声。博森没有鼓掌，只弯腰看舱底水位。身后钉着旧配电板的两根电缆，一道黑色烧痕把它们系在一起。",
-    "explanation": "Safety redundancy adds components, paths, information, or capacity so a system retains a critical function or degrades in a controlled way after specified faults. Copies need sufficient capacity and should avoid common supplies, locations, designs, or maintenance that create common-cause failure. Fault detection, isolation, and reliable transfer are also necessary. Redundancy adds weight, cost, and complexity, so regular testing must show that it will actually work when needed.",
-    "explanationZh": "安全冗余增加组件、路径、信息或能力，使系统在指定故障后仍保留关键功能或受控降级。副本必须具备足够能力，并尽量避免共同电源、位置、设计或维护造成的共因失效；还需检测故障、隔离问题并可靠切换。冗余会增加重量、成本和复杂度，因此必须通过定期试验证明它在需要时真正可用。"
+    "storyBody": "Before the weekend opening, the transport experience centre has one final exercise to complete. A tabletop vehicle moves slowly along a preset track under an independent drive. Its two positioning inputs supply only the nearby display; they do not control its motion. Zhou Yu needs to check whether the screen will keep showing position if the primary input drops out. Early in the first run, he disconnects that input at a known reference position. The “backup input received” indicator lights up, but the displayed position freezes.\n\nThe physical vehicle does not stop. It continues along the track. When it passes the next calibrated reference point, the screen is still showing the position from before the disconnection. Zhou Yu traces the signal downstream and finds that the backup receiver is indeed still receiving input, and the panel knows that the backup endpoint exists, but the processing chain responsible for calculating and updating position is still waiting for data from the disconnected primary path. Having two receiving endpoints does not mean the necessary function has actually transferred to the backup path.\n\nInstead of adding a third receiver, he and his colleagues connect the existing backup input into the fault-detection and switching process. That way, when the specified primary path loses data, the system can switch to the backup input and continue the same positioning function. The change uses up time that had originally been reserved for interface debugging, and they still need to rerun the full test track before the weekend.\n\nOn the second run, the vehicle starts from the same point and follows the same track. At the same reference position, Zhou Yu disconnects the same primary input again. After detecting the interruption, the system switches to the backup path. As the vehicle continues, Zhou Yu checks the system's final position output against each known reference point on the track until the entire route is complete. In this exercise, the backup path does more than illuminate a status light: after the primary path is disconnected, it continues to perform the specified positioning-output function.\n\nAs they pack up, Zhou Yu notices that both receivers still lead into the same processing unit and adds that dependency to the next review list. The cover rests beside the box, and the vehicle is reconnected to the primary input. When the next day’s staff member collects the equipment, he hands over the test track too. “Run this whole section at handover. Watch the screen.”",
+    "storyBodyZh": "周末开放前，交通体验馆还差最后一项演练。桌面小车由独立驱动沿预设轨道缓慢前进，两路定位输入只负责把位置送到旁边的屏幕，不控制小车运动。周屿要确认，如果主定位输入突然中断，屏幕还能不能继续显示位置。第一遍模拟刚开始不久，他在一个已知参考位置断开主路，“收到备用输入”的指示灯亮了，屏幕上的位置却停住了。\n\n实体小车没有停，仍沿轨道向前。它越过下一个已经标定好的参考点时，屏幕还留在断线前的位置。周屿顺着信号往后查，发现备用接收端确实还有输入，面板也知道备用端存在，但真正用于计算和更新位置的处理链仍在等已经断开的主路数据。两套接收端都在，并不等于必要功能已经被备用路径接过去。\n\n他没有再加第三只接收器，而是和同事把已有备用输入接进故障识别和切换流程。这样一来，指定主路失去数据时，系统可以转到备用输入继续完成同一个位置功能。修改占掉了原本留给界面调试的时间，周末前还得重新跑完整段测试轨道。\n\n第二次，小车仍从同一起点出发，沿相同轨道运行。到了同一个参考位置，周屿再次断开那条主输入；系统识别中断后转到备用路径。小车继续前进，每经过一个预设参考点，周屿都把轨道上的已知位置与系统最终输出逐一核对，直到整段行程结束。这个演练里，备用路径不只是亮了状态灯，而是在主路断开后继续完成了既定的位置输出功能。\n\n收台时，周屿发现两路接收端后面仍连着同一块处理单元，便把这一项记进下一轮待查清单。盒盖搭在一边，小车重新接回主路。第二天值班的人来取设备，他把测试轨道也递过去：“交接时把这段一起跑完，看屏幕。”",
+    "explanation": "Counting components or watching a status light is not enough to establish that a backup works. Necessary stages such as reception, fault detection, switching, processing and output must keep performing their roles after the specified failure. Stages that need to switch must do so; a shared processor that does not switch must still work correctly. The example checks the final display against preset track positions rather than letting two input readings vote on which is correct.\n\nOne successful primary-path disconnection exercise shows only that, under that specified failure and those test conditions, the backup path completed the takeover. The two paths may still share a processor, software, power supply, maintenance condition, or other resource and therefore remain vulnerable to common causes. The exercise also cannot be used to estimate failure probability or to conclude that the complete vehicle system can tolerate other failures.",
+    "explanationZh": "判断备用是否有效，不能只数组件或看状态灯。接收、故障识别、切换、处理和输出等必要环节，在指定故障后仍须履行各自作用；需要切换的环节须完成切换，不需要切换的共用处理器也必须继续正常工作。本例用预设轨道位置核对最终显示，不让主、备用两路读数互相投票决定谁正确。\n\n一次成功的主路断开演练只说明该指定故障和测试条件下，备用路径完成了接管。两条路径仍可能共享处理器、软件、供电、维护条件或其他资源，从而受到共同原因影响；也不能凭这一次演练估算失效概率或推出完整车辆系统能容忍其他故障。"
   },
   {
     "id": "0721-thermal-processing",
@@ -20645,45 +20737,151 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0721",
     "fieldTitle": "Food processing",
     "fieldTitleZh": "食品加工",
-    "title": "The Danger the Final Taste Could Not Find",
-    "titleZh": "最后一口尝不出的危险",
-    "summary": "A pie shop entrusts safety to a final taster, until normal-tasting pies from one oven make customers at the spring fair ill.",
-    "summaryZh": "肉饼坊把安全交给出炉后的试吃者，直到一炉味道正常的饼让春集上的客人接连病倒。",
-    "storyParagraphs": [
-      "Before the spring fair, Chen's meat-pie bakery had to make several thousand pies a day. The owner stationed an experienced taster at the end of packing. One pie from each oven load was sampled; if its colour, smell, and flavour seemed normal, the batch shipped. The method was quick, visible to buyers, and helped Chen promise that no fair order would be late. He believed danger would reveal itself in the final bite.",
-      "On a rushed morning, ice around a meat delivery had melted and one burner in the oven corner failed. The taster received a well-heated pie from near the door and found nothing unusual. Pies from the cooler corner did not achieve the required process condition, yet looked and smelled alike. After the fair, customers became ill and every remaining package was recalled. Chen held up the tasting log; it proved only which pies had been eaten. The recall team worked through the night matching package codes while fair stalls closed. Chen refunded buyers and paid clinic claims. The taster, who had eaten a safe pie, kept asking why his own mouth had reported nothing.",
-      "The next morning, the food-safety team did not begin in the office. They followed one tray from the melting delivery ice, across the raw bench, through the oven and cooling room, to the packing table. Chen carried chalk. Workers hung a red card wherever danger could enter or grow, then removed cards where repaired cleaning, supplier checks, or separation could handle the problem. Two stayed on the wall: the established heating step at the cold oven corner and the cooling clock that no hand could judge by touch. Chen closed the raw bench beside the finished racks and paid carpenters for a partition, even though the work stopped production for another day.",
-      "On the first trial, a worker wrote the cold-corner reading beside the cart number. It missed the accepted condition, so she tied a red seal to the handle and packing stopped. Chen's delivery clerk pointed to the fair buyer waiting outside; the pies looked ready, and the renewal depended on that cart. Chen rolled it behind the hold chain. A mechanic found a partly blocked burner feed, while a second checked instrument confirmed the reading. During record review, one blank line exposed another cart that had passed without a reading. It was sealed too. The fair officer ordered both carts destroyed. Chen cut the seals under witness, tipped the pies into the disposal bin, and lost the renewal contract. He wrote the value of two carts beside their batch numbers. The taster's spoon stayed clean.",
-      "Months later the same corner burner failed. A reading triggered the planned response before the cart reached packing; a red hold tag stopped it while workers followed the bakery's documented process. Chen set down the tasting spoon and signed the tag. The old brass approval stamp hung above the table, clean and unused, while no customer had to become the alarm."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "门口那辆小车",
+    "summaryZh": "调味料正等着装箱，姚琳按计划检查金属检测设备。一只参考试件没有触发预期动作，她把出货小车拉了回来。",
     "storyParagraphsZh": [
-      "春集前，陈记肉饼坊每天要做数千只饼。老板在包装末端安排老练试吃者，每炉抽一只；色、香、味正常便盖章出货。办法快，买家也看得见，还能保证集市订单不迟。陈老板相信，危险总会在最后一口露出破绽。",
-      "忙乱清晨，送肉车周围的冰融了，烤炉角落又有一只火头熄灭。试吃者拿到炉门边加热充分的饼，毫无异常；冷角那批没有达到规定过程条件，外观气味却一样。春集后，多名顾客不适，剩余包装全部召回。陈老板举着试吃记录，它只能证明哪几只被吃过。召回人员整夜核对包装批号，集市摊位陆续关闭。陈老板退还货款，也承担就医索赔。试吃者吃到的是安全肉饼，却一直追问自己的嘴为何什么都没报告。",
-      "第二天，食品安全团队没有先进账房，而是跟着一盘肉饼走：从融冰的送货筐，经过生肉案、烤炉和冷却间，直到包装桌。陈老板拿着粉笔。危险可能进入或增长的地方，工人先挂红牌；靠修好清洁、供应商检查或生熟分隔便能管住的，整改后摘牌。墙上最后只留下两处：必须照规定完成的炉角加热，以及不能凭手感猜测的冷却计时。陈老板封掉成品架旁的生肉案，请木匠加隔板，为此又停产一天。",
-      "第一次试行，工人把炉角读数写在推车编号旁。读数没有达到规定条件，她便在车把上系红色封条，包装桌停了。送货伙计指着门外等候的集市买家：肉饼看着已经好了，续约全靠这车货。陈老板还是把车推进扣货链后。修炉工找到半堵的供火管，另一只经检查的仪器也确认了原读数。复核记录时，一处空白又暴露出另一车未经记录便通过的肉饼，那辆车也被封住。集市官员要求两车全部销毁。陈老板在见证人面前剪开封条，把肉饼倒进处理槽，也丢掉了续约合同。他把两车损失写在各自批号旁。试吃勺一直没有沾到肉饼。",
-      "数月后，同一只角落火头再次熄灭。读数在推车到包装桌前触发预定反应，红色扣货牌让它停下，工人按本坊文件继续处理。陈老板放下试吃勺，在牌后签名。旧黄铜合格章干净地挂在桌上，没有顾客再替它发出警报。"
+      "下午的装箱车已经停到门口，姚琳只差完成一项计划中的设备检查，就能让小袋调味料继续流转。这条线要控制加工中可能混入的金属碎屑，每袋封好后都会经过金属检测设备。她送入验证用参考试件，机器却没有发出应有的报警，也没有作出剔除动作。",
+      "她先把正要送去装箱的产品小车拉回等待区。自上次确认设备按预期工作之后，生产线上已经处理了一段产品；这些包装看起来没有异常，日常监测记录里也没有产品触发报警。但现在参考试件没有引发预期反应，姚琳无法据此确认这段时间设备始终保持着计划要求的控制能力。",
+      "她按厂里既定方案暂停放行，找到上一次设备确认正常的记录，将那之后到这次异常发现之间的相关产品移到待判断区。维护人员接手设备检查原因。门边腾出的地方很快空了出来，那段产品仍留在另一侧，等负责人员进一步评估。",
+      "设备修复后，合格人员按既定计划重新确认其响应，生产线才重新开动。新批次逐袋经过正常监测，并按程序取得放行记录。先前暂扣的产品还留在原处，调查、产品评估和处置决定继续进行；停线耽误了装箱时间，待判断区也占着空间。",
+      "傍晚，门口装车的是设备恢复后新生产、监测并按程序放行的批次。先前暂扣的相关产品仍留在待判断区。姚琳把参考试件收回专用盒，门口的人问：“这一车可以走？”她核对批次标识和放行记录：“都对上了，可以装车。”"
     ],
-    "conceptName": "Hazard Analysis and Critical Control Points",
+    "overallZh": "本篇用虚构调味料包装线说明HACCP的一个入口：先针对具体产品和流程识别显著危害，再在对该危害必要的关键控制点建立经过验证的控制要求、监测、偏离处置、验证和记录。日常产品监测与验证控制措施是否仍按预期工作是不同任务，发生异常时也不能只复位设备后自动放行先前受影响范围的产品。",
     "conceptNameZh": "危害分析与关键控制点",
-    "explanationParagraphs": [
-      "Hazard Analysis and Critical Control Points is a preventive food-safety system. For a specific product and process, it identifies significant hazards, determines points where control is essential, sets validated critical limits, monitors them, and applies corrective action to deviations. Verification, records, and review show whether the system works. Prerequisite programmes such as sanitation support the plan; finished-product sampling can verify performance but cannot replace continuous process control."
-    ],
     "explanationParagraphsZh": [
-      "危害分析与关键控制点是一套预防性食品安全体系：针对具体产品和流程识别重大危害，确定必须控制的关键点，设定经验证的限值并监测，偏离时执行纠正行动，再通过验证、记录和复核确认体系有效。清洁等前提方案支撑整个计划；成品抽检可用于验证，却无法替代过程中的持续控制。"
+      "本例假定专业危害分析已把金属碎屑识别为这一产品和流程的显著物理危害，并把包装后检测设为关键控制点（CCP）。关键限值是为特定CCP确定、用来区分受控与失控的可测量或可观察界限，其控制依据须事先确认。本例已有经验证的检测与剔除要求，不给可照用的操作数值。每袋通过设备及相应运行记录属于监测；按计划用参考试件核查指定条件下的设备响应，属于验证活动。",
+      "参考试件未触发预期反应，只说明此时不能继续确信检测设备保持着既定能力，并不能证明任何一袋产品已经含有金属，也不能确定设备究竟从什么时候开始偏离。本故事因此按虚构厂内既定计划暂扣自上次确认正常以来的相关产品，调查和修复设备，再由合格人员决定先前产品的处置；恢复后的新批次与暂扣旧批次必须分开。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先明确要控制的具体危害和关键控制点，再区分产品监测、验证失败后的暂停隔离，以及恢复后的新生产。",
+      "diagramTitle": "为什么参考试件没有触发报警，会让先前一段产品暂停放行",
+      "diagramSteps": [
+        "危害分析把金属碎屑识别为该产品流程中的显著物理危害，并把包装后金属检测设为关键控制点",
+        "正常生产时，每袋产品经过检测设备并留下相应监测记录",
+        "计划中的验证参考试件未触发既定报警和剔除动作，使设备控制能力进入不确定状态",
+        "暂停放行并暂扣自上次确认设备正常之后至异常发现之间的相关产品，同时调查和修复设备",
+        "设备重新确认后恢复新批次生产和监测，而先前暂扣产品仍按既定方案由合格人员决定处置并记录"
+      ],
+      "diagramStepNotes": [
+        "并非所有卫生或质量检查点天然都是CCP；本例中的CCP来自针对该产品和流程的专业危害分析。",
+        "产品监测记录的是运行中的控制状态，不能由‘没有报警’推导所有异物都不存在。",
+        "参考试件是验证设备在该测试条件下的响应，不是每袋产品的替代检测，也不证明任何产品已含有金属。",
+        "暂扣范围是本虚构计划采取的谨慎控制措施；验证失败本身不能准确告诉人物设备何时开始偏离。",
+        "设备修好和重新验证不自动改变先前暂扣产品的状态；恢复后的新批次和旧的待判断批次必须分开处理。"
+      ],
+      "mapping": [
+        "金属碎屑 → 本虚构产品和流程中事先识别的显著物理危害。",
+        "包装后金属检测 → 针对该危害选定的关键控制点。",
+        "参考试件未触发预期动作 → 控制措施是否仍按计划有效出现不确定性。",
+        "待判断区 → 暂时隔离相关产品，等待调查和处置决定。",
+        "恢复后的新批次 → 设备重新确认后重新生产、监测并按程序放行的产品。"
+      ],
+      "boundary": "HACCP针对具体产品、流程和危害，危害可为生物、化学或物理危害。清洁和人员卫生等前提方案提供基础，并非每个检查点都是CCP。控制措施和关键限值的依据须事先确认；持续监测与计划中的验证活动承担不同任务，一次参考试件响应不能包办整套验证。通过检查也不证明所有异物均可检出或食品绝对安全。本篇不提供真实灵敏度、检查频率、时间温度或法律合规判断；实际计划和产品处置由合格人员按适用要求确定。",
+      "reflection": "参考试件按预期触发了设备，但某批产品的监测与放行记录不完整。能仅凭这次试件通过就断定该批可放行吗？还应核查什么？"
+    },
+    "referencesZh": [
+      {
+        "id": "nacmcf-1997-haccp",
+        "citation": "National Advisory Committee on Microbiological Criteria for Foods. (1997, August 14). HACCP Principles & Application Guidelines. U.S. Food and Drug Administration.",
+        "url": "https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp/haccp-principles-application-guidelines",
+        "use": "支持HACCP通过危害分析识别显著危害和关键控制点，建立临界限值、监测、纠正措施、验证和记录，并区分监测与验证；本篇不把1997历史指南当作任何地区当前直接适用的法规或现成HACCP计划。"
+      },
+      {
+        "id": "fda-2022-food-code-haccp",
+        "citation": "U.S. Food and Drug Administration. (2022). FDA Food Code, Annex 4: Management of Food Safety Practices, pp. 493–494.",
+        "url": "https://www.fda.gov/media/184685/download",
+        "use": "支持前提方案作为食品安全管理基础，并支持七项HACCP原则与具体产品、过程和危害之间的概念关系；不从该模型指南为本虚构调味料流程推导现实操作参数或法律合规结论。"
+      },
+      {
+        "id": "fda-2022-seafood-metal-inclusion",
+        "citation": "U.S. Food and Drug Administration. (2022, June). Fish and Fishery Products Hazards and Controls Guidance, Chapter 20: Metal Inclusion, pp. 388–390.",
+        "url": "https://www.fda.gov/media/80637/download",
+        "use": "FDA海产品指南区分产品连续监测与参考标准的验证，并在检测设备未运行的情形列出从最近确认正常起暂扣产品的措施。本故事在参考试件未通过、性能历史不明时保守暂扣，是虚构厂内计划对该逻辑的应用；不证明整个期间设备未运行或成品含金属。不引用其中的工艺数值，也不将海产品示例当成调味料的现成计划或法规。"
+      }
+    ],
+    "title": "The Cart at the Door",
+    "summary": "The condiment packets are waiting to be packed when Yao Lin performs a planned detector check. A reference piece fails to trigger the expected response, and she pulls the shipping cart back.",
+    "storyParagraphs": [
+      "The packing cart is waiting at the door that afternoon. Yao Lin has one planned equipment check left before the condiment packets can move on. The line controls metal fragments that might enter during processing, and every sealed packet passes through a metal detector. She feeds in the verification reference piece. The expected alarm and rejection action do not occur.",
+      "She first pulls the cart of product that was about to go to packing back into the waiting area. Since the last time the detector was confirmed to be responding as expected, a quantity of product has already passed through the line. Those packages look normal, and routine monitoring records show no product alarms. But because the reference piece has now failed to produce the expected response, Yao Lin cannot use those earlier 'no alarm' records to confirm that the detector maintained the required control capability throughout that entire period.",
+      "Under the established plan, she stops release and finds the last record confirming satisfactory detector operation. Product from then until discovery of the abnormal check is moved to the hold area. Maintenance takes over the equipment. The space by the door is soon clear; that period of product remains on the other side, awaiting further evaluation by the responsible staff.",
+      "After repair, qualified staff reconfirm the detector’s response under the established plan before production resumes. New batches pass through routine monitoring package by package and receive release records under procedure. The earlier held product stays where it is while investigation, product assessment and disposition continue. The stoppage has delayed packing, and the held product still takes up space.",
+      "By evening, the cart at the door holds the new batch produced, monitored and released under procedure after the detector was restored. The earlier held product remains in its designated area. Yao Lin puts the reference piece back in its case. “Can this cart go?” someone asks. She checks its batch identity and release record. “They match. You can load it.”"
+    ],
+    "overall": "This article uses a fictional condiment-packaging line to introduce one aspect of Hazard Analysis and Critical Control Points: a specific product and process first require identification of significant hazards, followed by validated control requirements, monitoring, corrective actions, verification, and records at critical control points that are necessary for those hazards. Routine product monitoring and verification that a control measure is still functioning as intended are different tasks, and an abnormal result cannot be resolved simply by resetting or repairing equipment and then automatically releasing product made during the earlier uncertain period.",
+    "conceptName": "Hazard Analysis and Critical Control Points",
+    "explanationParagraphs": [
+      "The example assumes that professional hazard analysis has identified metal fragments as a significant physical hazard for this product and process and designated post-packaging detection as a critical control point (CCP). A critical limit is a measurable or observable boundary established for that CCP to distinguish control from loss of control; its control basis needs prior validation. Validated detection and rejection requirements are assumed here, without giving usable operating values. Each package passing through the detector and the associated operating records form part of monitoring; a planned reference challenge checks detector response under specified conditions as a verification activity.",
+      "Failure of the reference test piece to trigger the expected response means only that continued confidence in the detector's required capability is no longer justified at that point. It does not prove that any particular package contains metal, nor does it identify exactly when the detector may have begun deviating. The fictional facility therefore follows its established plan by holding relevant product since the last confirmed satisfactory state, investigating and repairing the equipment, and having qualified personnel determine disposition of the earlier product. Newly produced post-restoration batches and previously held product must remain distinct."
+    ],
+    "module": {
+      "intro": "First define the specific hazard and the critical control point, then distinguish routine product monitoring, the hold triggered by failed verification, and production after the control has been restored.",
+      "diagramTitle": "Why Can a Failed Verification Reference Check Put an Earlier Period of Product on Hold?",
+      "diagramSteps": [
+        "Hazard analysis identifies metal fragments as a significant physical hazard for this product and process and designates post-packaging metal detection as a critical control point",
+        "During normal production, each packaged product passes through the detector and corresponding monitoring records are created",
+        "A planned verification reference piece fails to trigger the required alarm and rejection action, making the detector's control capability uncertain",
+        "Stop release and hold the relevant product made since the last confirmed satisfactory detector state while investigating and repairing the equipment",
+        "After reconfirmation, resume production and monitoring for new batches, while qualified personnel separately determine and document disposition of the previously held product"
+      ],
+      "diagramStepNotes": [
+        "Not every hygiene or quality check is automatically a CCP; the CCP in this example comes from professional hazard analysis for this specific product and process.",
+        "Product monitoring records the operating control state and cannot establish that all possible foreign material is absent simply because no alarm occurred.",
+        "The reference piece verifies detector response under the specified test condition; it is not a substitute test for every package and does not prove that any product contains metal.",
+        "The hold period is a cautious control measure defined in the fictional facility plan; the failed verification itself cannot identify the exact moment when detector performance may have deviated.",
+        "Repairing and reconfirming the detector does not automatically change the status of previously held product; new post-restoration batches and the earlier held product must be handled separately."
+      ],
+      "mapping": [
+        "Metal fragments → the significant physical hazard identified in advance for this fictional product and process.",
+        "Post-packaging metal detection → the critical control point selected for that hazard.",
+        "Reference piece fails to trigger the expected action → uncertainty about whether the control measure is still functioning as planned.",
+        "Hold area → temporary segregation of relevant product pending investigation and disposition.",
+        "Post-restoration new batch → product made after reconfirmation, newly monitored and released under the normal procedure."
+      ],
+      "boundary": "HACCP addresses specific products, processes and biological, chemical or physical hazards. Prerequisite programs such as sanitation and hygiene provide a foundation; not every check is a CCP. The basis for control measures and critical limits needs prior validation. Ongoing monitoring and planned verification have different roles, and one reference response cannot stand in for the full verification program. A passed check establishes neither detection of every foreign object nor absolute food safety. No real sensitivity, check frequency, time-temperature requirement or legal compliance judgment is supplied; actual plans and disposition belong to qualified personnel under applicable requirements.",
+      "reflection": "A reference challenge triggers the expected response, but a batch has incomplete monitoring and release records. Is that challenge alone enough to release the batch? What else needs checking?"
+    },
+    "references": [
+      {
+        "id": "nacmcf-1997-haccp",
+        "citation": "National Advisory Committee on Microbiological Criteria for Foods. (1997, August 14). HACCP Principles & Application Guidelines. U.S. Food and Drug Administration.",
+        "url": "https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp/haccp-principles-application-guidelines",
+        "use": "Supports the HACCP structure of identifying significant hazards and critical control points through hazard analysis, establishing critical limits, monitoring, corrective actions, verification, and records, and distinguishing monitoring from verification. This article does not treat the 1997 historical guidance as a directly applicable current regulation or a ready-made HACCP plan for every jurisdiction."
+      },
+      {
+        "id": "fda-2022-food-code-haccp",
+        "citation": "U.S. Food and Drug Administration. (2022). FDA Food Code, Annex 4: Management of Food Safety Practices, pp. 493–494.",
+        "url": "https://www.fda.gov/media/184685/download",
+        "use": "Supports prerequisite programs as a foundation for food-safety management and the conceptual relationship between the seven HACCP principles and specific products, processes, and hazards. It is not used to derive real operating parameters or legal compliance conclusions for the fictional condiment process."
+      },
+      {
+        "id": "fda-2022-seafood-metal-inclusion",
+        "citation": "U.S. Food and Drug Administration. (2022, June). Fish and Fishery Products Hazards and Controls Guidance, Chapter 20: Metal Inclusion, pp. 388–390.",
+        "url": "https://www.fda.gov/media/80637/download",
+        "use": "The seafood guidance distinguishes continuous product monitoring from verification challenges and describes holding product since the last confirmed working state when detection equipment has not been operating. The fictional facility’s cautious hold after a failed challenge and an uncertain performance history applies that logic; it does not prove non-operation throughout the interval or metal in product. No operating values are borrowed, and the seafood example is not treated as a ready-made condiment plan or law."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-24-preparation/group1-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-24-preparation/group1-edit-pass1-evidence.json",
+        "engineering-reader-first-24-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "Main editor applying13 perspectives; two collaborating read-only reviewers; four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Before the spring fair, Chen's meat-pie bakery had to make several thousand pies a day. The owner stationed an experienced taster at the end of packing. One pie from each oven load was sampled; if its colour, smell, and flavour seemed normal, the batch shipped. The method was quick, visible to buyers, and helped Chen promise that no fair order would be late. He believed danger would reveal itself in the final bite.\n\nOn a rushed morning, ice around a meat delivery had melted and one burner in the oven corner failed. The taster received a well-heated pie from near the door and found nothing unusual. Pies from the cooler corner did not achieve the required process condition, yet looked and smelled alike. After the fair, customers became ill and every remaining package was recalled. Chen held up the tasting log; it proved only which pies had been eaten. The recall team worked through the night matching package codes while fair stalls closed. Chen refunded buyers and paid clinic claims. The taster, who had eaten a safe pie, kept asking why his own mouth had reported nothing.\n\nThe next morning, the food-safety team did not begin in the office. They followed one tray from the melting delivery ice, across the raw bench, through the oven and cooling room, to the packing table. Chen carried chalk. Workers hung a red card wherever danger could enter or grow, then removed cards where repaired cleaning, supplier checks, or separation could handle the problem. Two stayed on the wall: the established heating step at the cold oven corner and the cooling clock that no hand could judge by touch. Chen closed the raw bench beside the finished racks and paid carpenters for a partition, even though the work stopped production for another day.\n\nOn the first trial, a worker wrote the cold-corner reading beside the cart number. It missed the accepted condition, so she tied a red seal to the handle and packing stopped. Chen's delivery clerk pointed to the fair buyer waiting outside; the pies looked ready, and the renewal depended on that cart. Chen rolled it behind the hold chain. A mechanic found a partly blocked burner feed, while a second checked instrument confirmed the reading. During record review, one blank line exposed another cart that had passed without a reading. It was sealed too. The fair officer ordered both carts destroyed. Chen cut the seals under witness, tipped the pies into the disposal bin, and lost the renewal contract. He wrote the value of two carts beside their batch numbers. The taster's spoon stayed clean.\n\nMonths later the same corner burner failed. A reading triggered the planned response before the cart reached packing; a red hold tag stopped it while workers followed the bakery's documented process. Chen set down the tasting spoon and signed the tag. The old brass approval stamp hung above the table, clean and unused, while no customer had to become the alarm.",
-    "storyBodyZh": "春集前，陈记肉饼坊每天要做数千只饼。老板在包装末端安排老练试吃者，每炉抽一只；色、香、味正常便盖章出货。办法快，买家也看得见，还能保证集市订单不迟。陈老板相信，危险总会在最后一口露出破绽。\n\n忙乱清晨，送肉车周围的冰融了，烤炉角落又有一只火头熄灭。试吃者拿到炉门边加热充分的饼，毫无异常；冷角那批没有达到规定过程条件，外观气味却一样。春集后，多名顾客不适，剩余包装全部召回。陈老板举着试吃记录，它只能证明哪几只被吃过。召回人员整夜核对包装批号，集市摊位陆续关闭。陈老板退还货款，也承担就医索赔。试吃者吃到的是安全肉饼，却一直追问自己的嘴为何什么都没报告。\n\n第二天，食品安全团队没有先进账房，而是跟着一盘肉饼走：从融冰的送货筐，经过生肉案、烤炉和冷却间，直到包装桌。陈老板拿着粉笔。危险可能进入或增长的地方，工人先挂红牌；靠修好清洁、供应商检查或生熟分隔便能管住的，整改后摘牌。墙上最后只留下两处：必须照规定完成的炉角加热，以及不能凭手感猜测的冷却计时。陈老板封掉成品架旁的生肉案，请木匠加隔板，为此又停产一天。\n\n第一次试行，工人把炉角读数写在推车编号旁。读数没有达到规定条件，她便在车把上系红色封条，包装桌停了。送货伙计指着门外等候的集市买家：肉饼看着已经好了，续约全靠这车货。陈老板还是把车推进扣货链后。修炉工找到半堵的供火管，另一只经检查的仪器也确认了原读数。复核记录时，一处空白又暴露出另一车未经记录便通过的肉饼，那辆车也被封住。集市官员要求两车全部销毁。陈老板在见证人面前剪开封条，把肉饼倒进处理槽，也丢掉了续约合同。他把两车损失写在各自批号旁。试吃勺一直没有沾到肉饼。\n\n数月后，同一只角落火头再次熄灭。读数在推车到包装桌前触发预定反应，红色扣货牌让它停下，工人按本坊文件继续处理。陈老板放下试吃勺，在牌后签名。旧黄铜合格章干净地挂在桌上，没有顾客再替它发出警报。",
-    "explanation": "Hazard Analysis and Critical Control Points is a preventive food-safety system. For a specific product and process, it identifies significant hazards, determines points where control is essential, sets validated critical limits, monitors them, and applies corrective action to deviations. Verification, records, and review show whether the system works. Prerequisite programmes such as sanitation support the plan; finished-product sampling can verify performance but cannot replace continuous process control.",
-    "explanationZh": "危害分析与关键控制点是一套预防性食品安全体系：针对具体产品和流程识别重大危害，确定必须控制的关键点，设定经验证的限值并监测，偏离时执行纠正行动，再通过验证、记录和复核确认体系有效。清洁等前提方案支撑整个计划；成品抽检可用于验证，却无法替代过程中的持续控制。"
+    "storyBody": "The packing cart is waiting at the door that afternoon. Yao Lin has one planned equipment check left before the condiment packets can move on. The line controls metal fragments that might enter during processing, and every sealed packet passes through a metal detector. She feeds in the verification reference piece. The expected alarm and rejection action do not occur.\n\nShe first pulls the cart of product that was about to go to packing back into the waiting area. Since the last time the detector was confirmed to be responding as expected, a quantity of product has already passed through the line. Those packages look normal, and routine monitoring records show no product alarms. But because the reference piece has now failed to produce the expected response, Yao Lin cannot use those earlier 'no alarm' records to confirm that the detector maintained the required control capability throughout that entire period.\n\nUnder the established plan, she stops release and finds the last record confirming satisfactory detector operation. Product from then until discovery of the abnormal check is moved to the hold area. Maintenance takes over the equipment. The space by the door is soon clear; that period of product remains on the other side, awaiting further evaluation by the responsible staff.\n\nAfter repair, qualified staff reconfirm the detector’s response under the established plan before production resumes. New batches pass through routine monitoring package by package and receive release records under procedure. The earlier held product stays where it is while investigation, product assessment and disposition continue. The stoppage has delayed packing, and the held product still takes up space.\n\nBy evening, the cart at the door holds the new batch produced, monitored and released under procedure after the detector was restored. The earlier held product remains in its designated area. Yao Lin puts the reference piece back in its case. “Can this cart go?” someone asks. She checks its batch identity and release record. “They match. You can load it.”",
+    "storyBodyZh": "下午的装箱车已经停到门口，姚琳只差完成一项计划中的设备检查，就能让小袋调味料继续流转。这条线要控制加工中可能混入的金属碎屑，每袋封好后都会经过金属检测设备。她送入验证用参考试件，机器却没有发出应有的报警，也没有作出剔除动作。\n\n她先把正要送去装箱的产品小车拉回等待区。自上次确认设备按预期工作之后，生产线上已经处理了一段产品；这些包装看起来没有异常，日常监测记录里也没有产品触发报警。但现在参考试件没有引发预期反应，姚琳无法据此确认这段时间设备始终保持着计划要求的控制能力。\n\n她按厂里既定方案暂停放行，找到上一次设备确认正常的记录，将那之后到这次异常发现之间的相关产品移到待判断区。维护人员接手设备检查原因。门边腾出的地方很快空了出来，那段产品仍留在另一侧，等负责人员进一步评估。\n\n设备修复后，合格人员按既定计划重新确认其响应，生产线才重新开动。新批次逐袋经过正常监测，并按程序取得放行记录。先前暂扣的产品还留在原处，调查、产品评估和处置决定继续进行；停线耽误了装箱时间，待判断区也占着空间。\n\n傍晚，门口装车的是设备恢复后新生产、监测并按程序放行的批次。先前暂扣的相关产品仍留在待判断区。姚琳把参考试件收回专用盒，门口的人问：“这一车可以走？”她核对批次标识和放行记录：“都对上了，可以装车。”",
+    "explanation": "The example assumes that professional hazard analysis has identified metal fragments as a significant physical hazard for this product and process and designated post-packaging detection as a critical control point (CCP). A critical limit is a measurable or observable boundary established for that CCP to distinguish control from loss of control; its control basis needs prior validation. Validated detection and rejection requirements are assumed here, without giving usable operating values. Each package passing through the detector and the associated operating records form part of monitoring; a planned reference challenge checks detector response under specified conditions as a verification activity.\n\nFailure of the reference test piece to trigger the expected response means only that continued confidence in the detector's required capability is no longer justified at that point. It does not prove that any particular package contains metal, nor does it identify exactly when the detector may have begun deviating. The fictional facility therefore follows its established plan by holding relevant product since the last confirmed satisfactory state, investigating and repairing the equipment, and having qualified personnel determine disposition of the earlier product. Newly produced post-restoration batches and previously held product must remain distinct.",
+    "explanationZh": "本例假定专业危害分析已把金属碎屑识别为这一产品和流程的显著物理危害，并把包装后检测设为关键控制点（CCP）。关键限值是为特定CCP确定、用来区分受控与失控的可测量或可观察界限，其控制依据须事先确认。本例已有经验证的检测与剔除要求，不给可照用的操作数值。每袋通过设备及相应运行记录属于监测；按计划用参考试件核查指定条件下的设备响应，属于验证活动。\n\n参考试件未触发预期反应，只说明此时不能继续确信检测设备保持着既定能力，并不能证明任何一袋产品已经含有金属，也不能确定设备究竟从什么时候开始偏离。本故事因此按虚构厂内既定计划暂扣自上次确认正常以来的相关产品，调查和修复设备，再由合格人员决定先前产品的处置；恢复后的新批次与暂扣旧批次必须分开。"
   },
   {
     "id": "0722-structure-property-relationship",
@@ -20946,45 +21144,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0722",
     "fieldTitle": "Materials glass paper plastic and wood",
     "fieldTitleZh": "材料：玻璃、纸、塑料与木材",
-    "title": "The Lamp Marked Recyclable",
-    "titleZh": "写着“可回收”的灯",
-    "summary": "A street-lamp maker stamps Recyclable on every casing, yet one failed switch sends the whole lamp to the waste yard.",
-    "summaryZh": "街灯厂把“可回收”刻在每只灯壳上，一个坏掉的小开关却让整盏灯只能进入废料场。",
-    "storyParagraphs": [
-      "When a new street lamp appeared, its maker stamped RECYCLABLE on the casing in letters larger than his company name. The shell was aluminium, the cover glass, and the wire copper; each material could be used again in isolation. The city bought three thousand lamps because the owner promised low waste over ten years. He spent the advance on an automated gluing line, whose speed made the quarterly accounts look excellent.",
-      "Two years later, a batch of small switches failed and left two streets dark. Repair shops could not open the lamps. Strong adhesive joined glass to aluminium, the battery was sealed at the deepest point, proprietary screws had no available tool, and parts carried no identification. A two-coin switch had disabled a sixty-coin lamp. Crushing mixed glass, glue, and metal into material worth less than the labour of separation. Three thousand lamps contained recyclable substances but no workable journey back.",
-      "An apprentice cut open one lamp and fitted an external switch; it lit immediately. She timed the electrical repair at four minutes and the destructive opening at nearly an hour. The owner proposed another sorting notice at the yard, but the city threatened to cancel the remaining order unless he took responsibility for the dark streets. Repair first, refurbishment next, and material recovery last would preserve progressively less of the work already inside each lamp.",
-      "A truck waited to carry the pile away while the profitable gluing line rattled behind the owner. He peeled the green label from one lamp, pulled the line's red stop, repaid the city for temporary lights, and lost the year's dividend while the product was redesigned. The next lamp used common screws and reversible joints. Battery, light source, and switch could be replaced separately; parts and instructions were identified. A deposit, return points, spare parts, testing, cleaning, and remanufacture created an actual return route before unusable material entered facilities that really existed nearby.",
-      "The first returned lamp left the factory after its switch was changed, while old sealed models occupied two waste-yard cages. The redesign cost more and did not guarantee return, so the factory tracked deposits, repair yield, recovered quality, and destinations. At year's end, 82 of every 100 retired lamps came back; eighteen remained missing. Some returned parts lacked a compatible outlet and were not called recovered merely because they had been collected. The owner published both numbers and unresolved destinations beside the original claim, including the cost of the return route. Scratches stayed on the repaired casing; before final inspection, the apprentice engraved a tiny number two beside them in silence."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "展架的下一站",
+    "summaryZh": "纪岑要为三个社区安排展览。三个场地规格相同，却各有一副新框架的采购计划；她试着让同一副框架走到下一场。",
     "storyParagraphsZh": [
-      "新街灯上市时，厂主把“可回收”刻得比商号还大。灯壳是铝，罩子是玻璃，电线里有铜，每样材料单独看都能重新利用。城里因他承诺十年少废弃而买了三千盏。厂主用预付款添置自动涂胶线，机器越快，季度账越漂亮。",
-      "两年后，一批小开关失灵，两条街同时熄灯。维修铺拆不开灯：玻璃与铝壳被强胶粘死，电池封在最深处，专用螺钉没有工具，零件也无编号。两枚铜钱的开关拖垮六十枚铜钱的整灯；强行粉碎后，玻璃、胶和金属混在一起，分离所得不够工钱。三千盏灯有可回收材料，却没有可走的回程。",
-      "学徒切开一盏，换上外接开关，灯立刻又亮。她计时：电路修理四分钟，破坏性拆壳却近一小时。厂主本想在废料场再挂“请分类”，市府却警告若不处理黑暗街道便取消余单。先修理、再翻新整机、最后才拆材料，每往后一步，能保住的既有劳动与价值都更少。",
-      "货车等着把废灯运走，身后最赚钱的涂胶线还在响。厂主从一盏灯上撕下绿色标签，按下红色停机钮，赔偿临时照明，并在重做产品的这一年失去全部分红。新灯改用常见螺钉和可逆连接，电池、光源与开关分别更换；押金、回收点、备件、检测和再制造构成真实回路，不能再用的材料才进入本地确有能力处理的渠道。",
-      "第一盏返厂灯换过开关后重新出库，旧密封型号仍占着废料场两只铁笼。新设计购置价更高，也不能保证每盏都会送回，工厂因此记录押金、修复收率、回收品质和实际去向。年末每一百盏退役灯有八十二盏返厂，失踪十八盏仍留在账上；有些收回部件在本地仍无相容去处，也不能因“已收集”就算完成循环。厂主把返回率、失踪数、未解决去向和回程费用一起贴在旧口号旁，不再只展示好看的分子。维修墙还并排写着拆旧灯与换开关的时间，检查台的灯一直亮着。返修外壳划痕仍在，学徒在最终检查前，才在旁边刻下一个很小的“二”。"
+      "城市阅读计划要在三个社区连续办三场同规格的小型展览。纪岑拿到的第一份执行方案很直接：第一场做一副新框架和一套信息板，第二场再做一副，第三场再做一副，三场合计三副框架、三套内容不同的信息板。板材上还标着可回收，她最开始并没有觉得这个安排有什么明显问题。",
+      "直到她把三个场地的尺寸图叠在一起，才发现展位规格相同，真正每场变化的主要是文字和图片。她把方案改成一副可拆装框架配三套信息板，但很快发现图纸画得出来，并不代表第二场真的会再用上。第一场结束以后谁拆、谁运回去、仓库放哪里、谁在第二场前检查，都得先安排好。",
+      "第一场结束当晚，工作人员把框架拆进周转箱，没有送去废料处理。第二天，它被运回仓库清洁和检查，随后带着新信息板进入下一个社区。第二场展览结束时，纪岑摸了摸框架边缘留下的一处小擦痕。这还是第一场那一副框架，已经完成了一次实际再用。",
+      "第二场结束后，框架再次被收回。检查时发现一只脚垫磨损，团队更换了这个小部件，重新清洁框架，再送去第三个社区。返运、仓储、清洁、检查和脚垫更换都增加了实际工作和费用；三套信息板也仍然各自制作。第三场使用的不是一副凭空“零成本”的框架，而是经过维护后继续保留下来的同一副。",
+      "第三场开门前，工作人员把最后一套信息板装上已经有使用痕迹的框架。纪岑确认脚垫和连接状态后站到一旁。等这场活动也结束，团队才把三场账合到一起：实际制作一副框架，而非原计划的三副；首次使用后，又实际再用了两次。三套信息板、换掉的脚垫和运输清洁等投入仍各有去向和账目。"
     ],
-    "conceptName": "Design for circularity",
+    "overallZh": "本篇用三场同规格展览说明循环设计的一个入口：在方案开始时，不仅考虑材料报废后是否理论可回收，还要把产品如何维护、收回、运输、检查并实际再次使用一起设计进去。产品真正保持使用和价值，比单独贴上“可回收”标签更能说明循环路径是否发生。",
     "conceptNameZh": "循环设计",
-    "explanationParagraphs": [
-      "Design for circularity preserves value through a product and its supporting system: durability, maintenance, repair, reuse, and remanufacture extend service before suitable recovery of materials that cannot remain in use. It depends on compatible materials, reversible connections, disassembly information, spare parts, collection, reverse logistics, economics, and real infrastructure. Theoretical recyclability does not mean a product will actually return or be recovered at high quality."
-    ],
     "explanationParagraphsZh": [
-      "循环设计在产品和配套系统中优先保存价值，通过耐用、维护、修理、复用和再制造延长使用，再对无法保留的材料进行适当回收。它取决于相容材料、可逆连接、拆解信息、备件、收集、逆向物流、经济性和真实设施。材料理论上可回收，并不代表产品实际会被收回或高质量利用。"
+      "本例只比较框架这一部分。原方案三场分别制作三副新框架；修改后只制作一副框架，并在第一场后收回用于第二场、第二场后再次收回用于第三场，因此框架制作数量由3副变为1副，并发生两次实际再使用。三套不同内容的信息板仍分别制作，不计入这个“框架3→1”的数量比较。",
+      "实际再用还依赖拆装、返运、仓储、清洁、检查、配件和再次安装等配套条件。如果这些环节不可行，理论上可拆或可回收也不保证产品真的继续使用。框架数量下降本身也不能证明总重量、总费用、碳排放或其他环境影响一定下降；若要回答这些问题，还需要相应的数据和进一步比较。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先固定三场相同规格的使用任务，再检查一副框架能否通过真实的收回、维护和再安装路径跨场继续使用。",
+      "diagramTitle": "为什么一副可拆框架只有真正回来并再次使用，才算形成了再用路径",
+      "diagramSteps": [
+        "原方案为三场活动分别制作三副新框架，并分别配置三套信息板",
+        "修改方案只制作一副可拆装框架，但三套不同内容的信息板仍分别制作",
+        "第一场结束后实际拆卸、返运、清洁和检查同一副框架，并用于第二场",
+        "第二场结束后再次收回框架，更换磨损脚垫并维护后用于第三场",
+        "最终记录三场共使用一副框架、发生两次实际再使用，同时把信息板、配件和物流维护另行记录"
+      ],
+      "diagramStepNotes": [
+        "三场规格相同是本例能够共用同一副框架的重要条件；场地或功能不同可能改变结果。",
+        "框架数量3→1只描述框架制作数量，不包括三套信息板。",
+        "第一次实际再用需要真实发生的返运、检查和再次安装，而不是图纸上写着‘可重复使用’。",
+        "脚垫更换说明维护和可获得配件可能是继续使用路径的一部分。",
+        "运输、清洁、仓储、人工和其他材料投入仍需另记，不能从框架数量下降直接推出总体环境或经济优势。"
+      ],
+      "mapping": [
+        "原方案三副新框架 → 每场活动重新制作完整框架的线性方案。",
+        "一副跨三场框架 → 通过两次实际收回和再使用保持产品价值。",
+        "磨损脚垫的更换 → 维护和配件支持使产品继续使用的一个具体环节。",
+        "三套信息板 → 随内容变化仍需单独制作、不属于框架3→1数量节省的部分。",
+        "返运、清洁和仓储 → 让理论可再用变成实际再用所需的运营系统。"
+      ],
+      "boundary": "循环设计并不等于任何情况下都优先重复使用或回收，也不保证可拆产品一定耐用、安全、经济或真正被收回。本例只证明在三场相同规格任务中，同一副框架被实际使用三次、发生两次再使用。信息板、小部件、运输、清洁、仓储和人工仍有额外投入；没有进一步生命周期或成本分析时，不能声称方案必然碳排更低、总成本更低、无污染或实现100%回收。循环经济还包括减少废物和污染、循环产品与材料以及再生自然等更广原则，本篇只取“保持产品继续使用”这一入口。",
+      "reflection": "假如同一副框架已经用过两场，第三个场地却换了尺寸。能凭“已经再用过”就确定它适用第三场、总体环境影响也更低吗？还缺哪些信息？"
+    },
+    "referencesZh": [
+      {
+        "id": "emf2024-circular-economy-principles",
+        "citation": "Ellen MacArthur Foundation. (2024, August 21). Circular economy principles.",
+        "url": "https://www.ellenmacarthurfoundation.org/circular-economy-principles",
+        "use": "支持循环经济由设计驱动，包括消除废物和污染、循环产品与材料以及再生自然，并讨论维护、重复使用和翻新等保持产品价值的路径；本篇只聚焦实际再使用这一入口，不据此声称虚构展架已实现更低总影响或成本。"
+      },
+      {
+        "id": "ec2020-investing-circular-economy",
+        "citation": "European Commission. (2020). Investing in the Circular Economy: A Blueprint for a Green Recovery. Publications Office of the European Union.",
+        "url": "https://environment.ec.europa.eu/system/files/2020-11/Circular%20economy%20and%20recovery%20factsheet%20-%20EN.pdf",
+        "use": "支持通过更耐用、可维修的设计以及回收物流来维持产品和材料价值，并支持重复使用和翻新等路径需要配套系统；该政策资料不作为本虚构展架的成本、材料、能耗或环境表现实证。"
+      }
+    ],
+    "title": "The Frame’s Next Stop",
+    "summary": "Ji Cen is planning exhibitions in three communities. The spaces match, yet each event is set to buy a new frame. She tries to give the same frame a place at the next event.",
+    "storyParagraphs": [
+      "The city reading programme is preparing three small exhibitions in three communities, all with the same spatial requirements. Ji Cen's first implementation plan is straightforward: make one new frame and one information-panel set for the first event, another frame for the second, and another for the third. Across the three events, that means three frames and three information-panel sets with different content. The board material is also labelled recyclable, so at first she sees no obvious problem with the arrangement.",
+      "Only after she overlays the dimension drawings for the three venues does she notice that the exhibition spaces are the same size and that what mainly changes from event to event is the text and imagery. She changes the plan to one demountable frame with three information-panel sets, but quickly realizes that being able to draw a reusable frame does not mean the second event will actually use it. Who dismantles it after the first event, who transports it back, where the warehouse stores it, and who inspects it before the second event all have to be arranged in advance.",
+      "On the evening after the first event, staff dismantle the frame into a transit case instead of sending it for waste handling. The next day it returns to the warehouse for cleaning and inspection, then goes with new information panels to the next community. After the second exhibition ends, Ji Cen runs her hand over a scuff on the frame edge. It is the same frame from the first event, now with one completed reuse.",
+      "After the second event, the frame is recovered again. During inspection, the team finds that one foot pad is worn, replaces that small part, cleans the frame again, and sends it to the third community. Return transport, storage, cleaning, inspection, and replacement of the foot pad all add real work and cost; the three sets of information panels are also still produced separately. The third event is not using a magically 'zero-cost' frame, but the same frame retained in service through maintenance.",
+      "Before the third event opens, staff fit the final panel set to the visibly used frame. Ji Cen checks the foot pad and connections, then steps aside. Only after this event also ends does the team total the three-event record: one frame was actually made, rather than the three originally planned, and it was reused twice after its first use. The three panel sets, replaced foot pad, transport and cleaning still have their own material flows and costs."
+    ],
+    "overall": "This article uses three same-specification exhibitions to introduce one aspect of design for circularity: at the beginning of a design, it is not enough to consider whether material might theoretically be recyclable at end of life. The product and its supporting system also need to be designed for maintenance, return, transport, inspection, and actual reuse. Keeping a product in use and retaining its value in practice is more concrete evidence of a circular pathway than a recyclability label alone.",
+    "conceptName": "Design for circularity",
+    "explanationParagraphs": [
+      "This example compares only the frame portion of the task. Under the original plan, three new frames would be made separately for the three events. Under the revised plan, only one frame is made, then recovered after the first event and used for the second, and recovered again after the second event and used for the third. Frame production therefore changes from 3 frames to 1, with two actual reuse events. The three information-panel sets with different content are still made separately and are not included in the frame-count comparison.",
+      "Actual reuse also depends on supporting conditions such as dismantling, return transport, storage, cleaning, inspection, spare parts, and reinstallation. If those steps are not workable, being theoretically demountable or recyclable does not guarantee continued use. A lower frame count also does not by itself prove lower total mass, total cost, carbon emissions, or other environmental impacts. Those questions require additional data and separate comparison."
+    ],
+    "module": {
+      "intro": "Hold the three same-specification events constant, then check whether one frame can actually continue in use across events through a real return, maintenance, and reinstallation pathway.",
+      "diagramTitle": "Why Does a Demountable Frame Count as Reuse Only After It Actually Comes Back and Is Used Again?",
+      "diagramSteps": [
+        "The original plan makes three new frames for three events and separately provides three information-panel sets",
+        "The revised plan makes only one demountable frame, while the three different information-panel sets are still made separately",
+        "After the first event, actually dismantle, return, clean, and inspect the same frame and use it at the second event",
+        "After the second event, recover the frame again, replace the worn foot pad, maintain it, and use it at the third event",
+        "Finally record one frame used across all three events and two actual reuse events, while accounting separately for information panels, parts, transport, and maintenance"
+      ],
+      "diagramStepNotes": [
+        "The same event specifications are an important condition for sharing the frame in this example; different venues or functions could change the result.",
+        "The frame-count change from 3 to 1 describes only the number of frames produced and does not include the three information-panel sets.",
+        "The first actual reuse requires real return transport, inspection, and reinstallation rather than simply labelling the design 'reusable.'",
+        "Replacement of the foot pad shows that maintenance and available spare parts can be part of keeping a product in use.",
+        "Transport, cleaning, storage, labour, and other material inputs still need separate accounting; a lower frame count alone cannot establish an overall environmental or economic advantage."
+      ],
+      "mapping": [
+        "Three new frames in the original plan → a linear approach in which each event begins with a newly made frame.",
+        "One frame used across three events → retention of product value through two actual return-and-reuse cycles.",
+        "Replacement of the worn foot pad → a specific maintenance and spare-parts action that enables continued use.",
+        "Three information-panel sets → content-specific components that are still produced separately and are not part of the frame 3→1 count change.",
+        "Return transport, cleaning, and storage → the operating system required to turn theoretical reusability into actual reuse."
+      ],
+      "boundary": "Design for circularity does not mean reuse or recycling is always the preferred option in every situation, nor does a demountable product automatically become durable, safe, economical, or actually recovered. This example shows only that, across three same-specification events, one frame is actually used three times, including two reuse events after the initial use. Information panels, replacement parts, transport, cleaning, storage, and labour still require additional inputs. Without further life-cycle or cost analysis, the example cannot establish lower carbon emissions, lower total cost, zero pollution, or 100% recycling. Circular-economy principles are broader and also include eliminating waste and pollution, circulating products and materials, and regenerating nature; this article focuses only on the entry point of keeping a product in use.",
+      "reflection": "Suppose the same frame has served two events, but the third venue changes its dimensions. Does previous reuse establish that it will fit the third event or have lower total environmental impact? What information is missing?"
+    },
+    "references": [
+      {
+        "id": "emf2024-circular-economy-principles",
+        "citation": "Ellen MacArthur Foundation. (2024, August 21). Circular economy principles.",
+        "url": "https://www.ellenmacarthurfoundation.org/circular-economy-principles",
+        "use": "Supports the design-driven circular-economy principles of eliminating waste and pollution, circulating products and materials, and regenerating nature, and discusses maintaining, reusing, and refurbishing as ways to preserve product value. This article focuses only on actual reuse as an entry point and does not use the source to claim that the fictional display system achieves lower total impacts or lower cost."
+      },
+      {
+        "id": "ec2020-investing-circular-economy",
+        "citation": "European Commission. (2020). Investing in the Circular Economy: A Blueprint for a Green Recovery. Publications Office of the European Union.",
+        "url": "https://environment.ec.europa.eu/system/files/2020-11/Circular%20economy%20and%20recovery%20factsheet%20-%20EN.pdf",
+        "use": "Supports maintaining product and material value through longer-lasting and repairable design and through reverse-logistics pathways for reuse and refurbishment. This policy factsheet is not used as empirical evidence for the fictional frame's costs, material quantities, energy use, or environmental performance."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-24-preparation/group1-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-24-preparation/group1-edit-pass1-evidence.json",
+        "engineering-reader-first-24-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "Main editor applying13 perspectives; two collaborating read-only reviewers; four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "When a new street lamp appeared, its maker stamped RECYCLABLE on the casing in letters larger than his company name. The shell was aluminium, the cover glass, and the wire copper; each material could be used again in isolation. The city bought three thousand lamps because the owner promised low waste over ten years. He spent the advance on an automated gluing line, whose speed made the quarterly accounts look excellent.\n\nTwo years later, a batch of small switches failed and left two streets dark. Repair shops could not open the lamps. Strong adhesive joined glass to aluminium, the battery was sealed at the deepest point, proprietary screws had no available tool, and parts carried no identification. A two-coin switch had disabled a sixty-coin lamp. Crushing mixed glass, glue, and metal into material worth less than the labour of separation. Three thousand lamps contained recyclable substances but no workable journey back.\n\nAn apprentice cut open one lamp and fitted an external switch; it lit immediately. She timed the electrical repair at four minutes and the destructive opening at nearly an hour. The owner proposed another sorting notice at the yard, but the city threatened to cancel the remaining order unless he took responsibility for the dark streets. Repair first, refurbishment next, and material recovery last would preserve progressively less of the work already inside each lamp.\n\nA truck waited to carry the pile away while the profitable gluing line rattled behind the owner. He peeled the green label from one lamp, pulled the line's red stop, repaid the city for temporary lights, and lost the year's dividend while the product was redesigned. The next lamp used common screws and reversible joints. Battery, light source, and switch could be replaced separately; parts and instructions were identified. A deposit, return points, spare parts, testing, cleaning, and remanufacture created an actual return route before unusable material entered facilities that really existed nearby.\n\nThe first returned lamp left the factory after its switch was changed, while old sealed models occupied two waste-yard cages. The redesign cost more and did not guarantee return, so the factory tracked deposits, repair yield, recovered quality, and destinations. At year's end, 82 of every 100 retired lamps came back; eighteen remained missing. Some returned parts lacked a compatible outlet and were not called recovered merely because they had been collected. The owner published both numbers and unresolved destinations beside the original claim, including the cost of the return route. Scratches stayed on the repaired casing; before final inspection, the apprentice engraved a tiny number two beside them in silence.",
-    "storyBodyZh": "新街灯上市时，厂主把“可回收”刻得比商号还大。灯壳是铝，罩子是玻璃，电线里有铜，每样材料单独看都能重新利用。城里因他承诺十年少废弃而买了三千盏。厂主用预付款添置自动涂胶线，机器越快，季度账越漂亮。\n\n两年后，一批小开关失灵，两条街同时熄灯。维修铺拆不开灯：玻璃与铝壳被强胶粘死，电池封在最深处，专用螺钉没有工具，零件也无编号。两枚铜钱的开关拖垮六十枚铜钱的整灯；强行粉碎后，玻璃、胶和金属混在一起，分离所得不够工钱。三千盏灯有可回收材料，却没有可走的回程。\n\n学徒切开一盏，换上外接开关，灯立刻又亮。她计时：电路修理四分钟，破坏性拆壳却近一小时。厂主本想在废料场再挂“请分类”，市府却警告若不处理黑暗街道便取消余单。先修理、再翻新整机、最后才拆材料，每往后一步，能保住的既有劳动与价值都更少。\n\n货车等着把废灯运走，身后最赚钱的涂胶线还在响。厂主从一盏灯上撕下绿色标签，按下红色停机钮，赔偿临时照明，并在重做产品的这一年失去全部分红。新灯改用常见螺钉和可逆连接，电池、光源与开关分别更换；押金、回收点、备件、检测和再制造构成真实回路，不能再用的材料才进入本地确有能力处理的渠道。\n\n第一盏返厂灯换过开关后重新出库，旧密封型号仍占着废料场两只铁笼。新设计购置价更高，也不能保证每盏都会送回，工厂因此记录押金、修复收率、回收品质和实际去向。年末每一百盏退役灯有八十二盏返厂，失踪十八盏仍留在账上；有些收回部件在本地仍无相容去处，也不能因“已收集”就算完成循环。厂主把返回率、失踪数、未解决去向和回程费用一起贴在旧口号旁，不再只展示好看的分子。维修墙还并排写着拆旧灯与换开关的时间，检查台的灯一直亮着。返修外壳划痕仍在，学徒在最终检查前，才在旁边刻下一个很小的“二”。",
-    "explanation": "Design for circularity preserves value through a product and its supporting system: durability, maintenance, repair, reuse, and remanufacture extend service before suitable recovery of materials that cannot remain in use. It depends on compatible materials, reversible connections, disassembly information, spare parts, collection, reverse logistics, economics, and real infrastructure. Theoretical recyclability does not mean a product will actually return or be recovered at high quality.",
-    "explanationZh": "循环设计在产品和配套系统中优先保存价值，通过耐用、维护、修理、复用和再制造延长使用，再对无法保留的材料进行适当回收。它取决于相容材料、可逆连接、拆解信息、备件、收集、逆向物流、经济性和真实设施。材料理论上可回收，并不代表产品实际会被收回或高质量利用。"
+    "storyBody": "The city reading programme is preparing three small exhibitions in three communities, all with the same spatial requirements. Ji Cen's first implementation plan is straightforward: make one new frame and one information-panel set for the first event, another frame for the second, and another for the third. Across the three events, that means three frames and three information-panel sets with different content. The board material is also labelled recyclable, so at first she sees no obvious problem with the arrangement.\n\nOnly after she overlays the dimension drawings for the three venues does she notice that the exhibition spaces are the same size and that what mainly changes from event to event is the text and imagery. She changes the plan to one demountable frame with three information-panel sets, but quickly realizes that being able to draw a reusable frame does not mean the second event will actually use it. Who dismantles it after the first event, who transports it back, where the warehouse stores it, and who inspects it before the second event all have to be arranged in advance.\n\nOn the evening after the first event, staff dismantle the frame into a transit case instead of sending it for waste handling. The next day it returns to the warehouse for cleaning and inspection, then goes with new information panels to the next community. After the second exhibition ends, Ji Cen runs her hand over a scuff on the frame edge. It is the same frame from the first event, now with one completed reuse.\n\nAfter the second event, the frame is recovered again. During inspection, the team finds that one foot pad is worn, replaces that small part, cleans the frame again, and sends it to the third community. Return transport, storage, cleaning, inspection, and replacement of the foot pad all add real work and cost; the three sets of information panels are also still produced separately. The third event is not using a magically 'zero-cost' frame, but the same frame retained in service through maintenance.\n\nBefore the third event opens, staff fit the final panel set to the visibly used frame. Ji Cen checks the foot pad and connections, then steps aside. Only after this event also ends does the team total the three-event record: one frame was actually made, rather than the three originally planned, and it was reused twice after its first use. The three panel sets, replaced foot pad, transport and cleaning still have their own material flows and costs.",
+    "storyBodyZh": "城市阅读计划要在三个社区连续办三场同规格的小型展览。纪岑拿到的第一份执行方案很直接：第一场做一副新框架和一套信息板，第二场再做一副，第三场再做一副，三场合计三副框架、三套内容不同的信息板。板材上还标着可回收，她最开始并没有觉得这个安排有什么明显问题。\n\n直到她把三个场地的尺寸图叠在一起，才发现展位规格相同，真正每场变化的主要是文字和图片。她把方案改成一副可拆装框架配三套信息板，但很快发现图纸画得出来，并不代表第二场真的会再用上。第一场结束以后谁拆、谁运回去、仓库放哪里、谁在第二场前检查，都得先安排好。\n\n第一场结束当晚，工作人员把框架拆进周转箱，没有送去废料处理。第二天，它被运回仓库清洁和检查，随后带着新信息板进入下一个社区。第二场展览结束时，纪岑摸了摸框架边缘留下的一处小擦痕。这还是第一场那一副框架，已经完成了一次实际再用。\n\n第二场结束后，框架再次被收回。检查时发现一只脚垫磨损，团队更换了这个小部件，重新清洁框架，再送去第三个社区。返运、仓储、清洁、检查和脚垫更换都增加了实际工作和费用；三套信息板也仍然各自制作。第三场使用的不是一副凭空“零成本”的框架，而是经过维护后继续保留下来的同一副。\n\n第三场开门前，工作人员把最后一套信息板装上已经有使用痕迹的框架。纪岑确认脚垫和连接状态后站到一旁。等这场活动也结束，团队才把三场账合到一起：实际制作一副框架，而非原计划的三副；首次使用后，又实际再用了两次。三套信息板、换掉的脚垫和运输清洁等投入仍各有去向和账目。",
+    "explanation": "This example compares only the frame portion of the task. Under the original plan, three new frames would be made separately for the three events. Under the revised plan, only one frame is made, then recovered after the first event and used for the second, and recovered again after the second event and used for the third. Frame production therefore changes from 3 frames to 1, with two actual reuse events. The three information-panel sets with different content are still made separately and are not included in the frame-count comparison.\n\nActual reuse also depends on supporting conditions such as dismantling, return transport, storage, cleaning, inspection, spare parts, and reinstallation. If those steps are not workable, being theoretically demountable or recyclable does not guarantee continued use. A lower frame count also does not by itself prove lower total mass, total cost, carbon emissions, or other environmental impacts. Those questions require additional data and separate comparison.",
+    "explanationZh": "本例只比较框架这一部分。原方案三场分别制作三副新框架；修改后只制作一副框架，并在第一场后收回用于第二场、第二场后再次收回用于第三场，因此框架制作数量由3副变为1副，并发生两次实际再使用。三套不同内容的信息板仍分别制作，不计入这个“框架3→1”的数量比较。\n\n实际再用还依赖拆装、返运、仓储、清洁、检查、配件和再次安装等配套条件。如果这些环节不可行，理论上可拆或可回收也不保证产品真的继续使用。框架数量下降本身也不能证明总重量、总费用、碳排放或其他环境影响一定下降；若要回答这些问题，还需要相应的数据和进一步比较。"
   },
   {
     "id": "0723-fibre-structure-property",
@@ -21259,47 +21551,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0723",
     "fieldTitle": "Textiles clothes footwear and leather",
     "fieldTitleZh": "纺织：服装、鞋类与皮革",
-    "title": "Cotton Thread Without a Family Name",
-    "titleZh": "没有姓氏的棉线",
-    "summary": "A batch of school uniforms contains a banned dye; the merchant has certificates for every supplier but cannot say which garments received the affected thread.",
-    "summaryZh": "一批校服被发现使用禁用染料，店主手里证书齐全，却说不出问题棉线进了哪一件衣服。",
-    "storyParagraphs": [
-      "Wancheng Clothiers won the contract for every school uniform in the city. Its owner checked certificates from each supplier but considered batch identities too burdensome. Cotton from different farms was mixed into large bales at the spinning mill. Dyed thread changed reels at the weaving shed, and the sewing workshop placed only Wancheng's own label in each collar.",
-      "After school opened, white shirts at one school released sharp-smelling blue water in the wash. Testing found that one dye house had used a prohibited chemical. That week it had served six spinning mills, and its reels had passed through two warehouses and been divided again. Wancheng could neither identify affected shirts nor demonstrate that the rest were safe, so all thirty thousand uniforms in the city were recalled.",
-      "The owner slapped a stack of supplier certificates onto the table. The investigator asked when each cotton lot became which reel and cloth roll, and where it had been mixed with other material. Certificates showed that someone had made a claim. Broken identity records could not lead backward from a shirt to its origin or forward from the faulty dye vat to its destinations.",
-      "The schools' deadline expired at sunset. Wancheng placed the supplier certificates beside the first child's shirt, then stamped a warehouse mortgage and ordered the full recall. The red stamp bled through to the shirt below. Thirty thousand collars were cut open, transport carts filled three streets, and the contract profit vanished into replacement cloth. When two unaffected mills demanded payment, he could not separate their good thread from the suspect flow either. The missing links harmed innocent suppliers as well as customers.",
-      "The new records kept connected identities for material lots, transformations, and transfers. Mixing recorded inputs, outputs, and loss, while warehouse splitting created its own event. Important claims received independent verification, and access controls protected workers' and small farmers' privacy. Records supported recalls and due diligence but were no longer treated as proof of ethical performance by themselves.",
-      "The following year, another reel failed inspection. The owner scanned its core number, followed splits and transformations, reconciled quantities, and circled 420 shirts within half an hour. Verification still had to decide whether the claim was true; the record only showed where to look. He removed 'the whole city' from the recall and left twelve shop names, then sealed the reel and linked documents. Every handoff had a time and custodian, while privacy fields stayed restricted by role and purpose. A warehouse mortgage stamp remained on the notice's reverse that winter."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "陈列卡上的那一行",
+    "summaryZh": "门店明早要摆出新帆布袋，程璐今晚得确认陈列卡上的材料批次。供应商证书就在手边，却没说清这60只袋子怎样到了北店。",
     "storyParagraphsZh": [
-      "万成衣行接下全城校服订单。老板收货时会看每家供货商的证书，却嫌逐批编号太费事。不同棉田的棉在纺纱厂混成大包，染过的线又在织布时换了卷，裁衣坊只在成衣领口缝上万成自己的商标。",
-      "开学后，一所学校的白衬衫洗出刺鼻蓝水。查验发现某家染坊误用了禁用染料，但染坊那周同时替六家纺纱厂加工，线卷经过两处仓库又被拆分。万成既找不出受影响的衬衫，也不能证明其他货安全，只得召回全城三万件校服。",
-      "老板把一摞供应商证书拍在桌上，调查员却问每一包棉何时变成哪卷线、哪匹布，又在何处同别的批次混合。证书说明有人作过声明，断掉的身份记录却无法让人沿衣服向后找到来源，也无法从问题染缸向前找到去处。",
-      "学校给出的期限在日落时结束。万成把供货证书放到第一件问题校服旁，在仓库抵押书上盖章，下令全部召回。红印洇到了下面的衬衫。三万只衣领被拆开，运输车排满三条街，合同利润全变成替换布料。两家未受影响的纺厂来讨货款时，他也无法把它们的好线从可疑物流中分开。断链同样伤害无辜供货商。",
-      "新的记录为原料批次、转化和交接保留相连编号；混合时写明投入、产出和损耗，仓库分包也留下事件。重要声明由独立证据核验，工人和小农的隐私则按权限保护。记录能支持召回和尽职调查，却不再被当作道德表现本身的证明。",
-      "第二年又有一卷染线不合格。老板扫过卷芯编号，沿拆分与转化记录核对数量，半小时圈出四百二十件衬衫；仍需查验声明是否属实，记录只告诉人该去哪里找。他封存线卷与文件，给每次接触留下时间与保管人，隐私字段按角色与目的限权，避免追踪变成无边界监视。十二家店逐一确认库存与去向后，他才撕下召回告示上的“全城”，召回结束当天，权限随即关闭。纸背还盖着抵押仓库的红章，边缘已被反复折白。"
+      "第二天一早，两家门店都要把新到的帆布袋摆上主题陈列台。北店已经收到了60只，只差把材料批次写进旁边的小卡片，店员却在下班前发来一句：“这60只按我们的记录，真的能追到纱线批A吗？”程璐负责今晚给出答案，否则那张卡先不印。",
+      "材料档案里确实有供应商交来的证书，纱线批号A也写得清楚。程璐原本已经准备回复，却在发送前停住：那份证书说明上游提交了什么材料证据，却没有告诉她北店面前这60只后来经过哪一卷布、在哪一次裁剪中被拆分出来，又经过哪次交接到了门店。",
+      "她先找到北店收货单，这60只的成品组号是G2。夹在出库记录后的裁剪单写着布卷R1，织造记录又把R1接到纱线批A。程璐把单据按时间铺开，手边终于不再只有一张上游证书。她接着翻出同一布卷的拆分记录，看看剩下的货去了哪里。",
+      "同一卷布还形成G1的40只，交给东店；G2的60只交北店。两次交接和两家签收都对得上，40加60也与这次记录的100只相符。程璐把原来共用的材料说明分成两张，北店那张写：“按现有记录，本组成品G2关联布卷R1、纱线批A。”东店那张换成G1。打印晚了半小时，但两张卡终于各自跟上了自己的货。",
+      "关库前，打印机吐出最后两张陈列卡。程璐把北店那张夹在G2出库单上，东店那张放进第二天的文件袋。供应商证书仍留在材料档案里；只是这一次，卡片上写的是记录真正支持到哪一步，而不是把一张证书扩写成它没有回答的问题。"
     ],
-    "conceptName": "Supply-chain traceability",
+    "overallZh": "本篇用一组完整的虚构批次记录说明供应链可追溯性的一个入口：给材料、半成品和成品设置可关联身份，并记录转化、拆分、交接和去向后，可以沿记录从成品向后查输入，也可以从材料向前查可能去向。追溯回答的是记录链覆盖到哪里，不等同于对记录真实性、材料物理来源、环境或劳工表现的独立验证。",
     "conceptNameZh": "供应链可追溯性",
-    "explanationParagraphs": [
-      "Supply-chain traceability uses connected identities and event records to follow origins backward and destinations forward through a defined chain, including transformations, mixing, splitting, transfers, and claims. Implementation must manage yields, inventories, chain-of-custody models, verification, access, and breaks. It can narrow recalls and support due diligence, but the existence of records does not make claims true or independently prove ethical or environmental performance."
-    ],
     "explanationParagraphsZh": [
-      "供应链可追溯性通过相连的身份与事件记录，在规定链条内向后追来源、向前查去向，覆盖材料转化、混合、拆分、交接和相关声明。实施时要管理收率、库存、监管链模型、验证、权限与断链。它能缩小召回范围并支持尽职调查，但记录存在不等于声明真实，更不能单独证明伦理或环境绩效。"
+      "本例只追踪记录所覆盖的R1分支，并假定R1只用纱线批A、拆分与交接记录完整。向后：北店60只属于G2，G2接到R1，再接到A。向前：在这条分支中，R1形成G1的40只和G2的60只，分别交东店和北店，共100只。这不穷尽A批可能的其他去向；成品数量相符有助于检查记录自洽，也不自行证明记录真实。",
+      "混合、身份保存和质量平衡监管链模型需要区分。若A、B两批混合且投入、转化和去向都有记录，仍可追到可能输入与输出集合；不能据此确定某件成品中每根纤维来自哪批。缺少交接、未记录混合或记录粒度不足时，应标明具体缺口及不能支持的归属，不把整条已知链一概抹去，也不自动补上未知部分。证书和编号须配合适当核验，才可支持更广的实质声明。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "从一批具体成品向后追输入，再从材料批次向前追去向，并把每一步限制在实际存在的身份、拆分和交接记录上。",
+      "diagramTitle": "为什么一张供应商证书还不足以回答北店这60只具体来自哪一批",
+      "diagramSteps": [
+        "从北店收货记录确认60只成品属于批次G2",
+        "沿G2的裁剪记录向后找到布卷R1，再由R1记录关联到纱线批A",
+        "从纱线批A向前查看本例覆盖的布卷R1分支及其后续拆分",
+        "核对R1形成G1共40只交东店、G2共60只交北店，合计100只且交接记录连续",
+        "只在记录支持的范围内表达批次关联，并把材料真实性或环境劳工声明留给独立核验"
+      ],
+      "diagramStepNotes": [
+        "追溯起点是具体门店收到的具体成品组，而不是泛化的供应商名单。",
+        "本例明确R1只用A，因此可以建立R1与A之间的记录身份关联。",
+        "向前追溯回答材料批次可能去了哪里，与从成品向后查来源方向相反。",
+        "40+60=100只是这次虚构成品拆分的数量核对，不是物料质量平衡，也不验证记录真假。",
+        "交接缺失、未记录混合或数据不可靠时，只将受影响环节或归属留为未知；保留已有证据支持的链路，不由系统自动补齐缺口。"
+      ],
+      "mapping": [
+        "G2的60只 → 从北店向后追溯的具体成品批次。",
+        "R1 → 把上游纱线批与下游两组成品连接起来的布卷身份。",
+        "G1的40只与G2的60只 → R1拆分后的两个已记录去向。",
+        "供应商证书 → 可作为其他证据，但不能代替具体批次转化与交接链。",
+        "两张门店陈列卡 → 把对外表达限制在现有记录真正支持的范围。"
+      ],
+      "boundary": "可追溯性只覆盖被记录并能够可靠关联的范围。记录可能缺失、错误或被伪造；数量核对也不等于物理身份保存。混合批次、质量平衡或其他链条模型需要明确各自粒度，不能由账面数量推断某件产品中每根纤维的精确来源。追溯、供应链透明度、证书和对环境、劳工或地点表现的独立验证是互补但不同的工作。隐私和商业信息应按目的与角色管理，本篇也不要求全部供应链档案公开。",
+      "reflection": "如果北店的60只、东店的40只在数量上正好合计100只，但中间缺少R1到G2的一次交接记录，为什么不能仅凭数量闭合就把那一段来源自动补上？"
+    },
+    "referencesZh": [
+      {
+        "id": "oecd2025-garment-certification-due-diligence",
+        "citation": "OECD. (2025, February 11). The role of sustainability certifications in due diligence in the garment and footwear sector. OECD Business and Finance Policy Papers, No. 77. OECD Publishing. https://doi.org/10.1787/ac8179f2-en",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/the-role-of-sustainability-certifications-in-due-diligence-in-the-garment-and-footwear-sector_77940397/ac8179f2-en.pdf",
+        "use": "支持服装与鞋类供应链中不同认证具有不同范围与可靠性，并不应仅依赖认证完成尽职调查；本篇因此保留供应商证书作为一种证据，但不让它替代具体批次追溯或独立验证实质声明。"
+      },
+      {
+        "id": "oecd-iea2025-traceability-chain-custody",
+        "citation": "OECD/IEA. (2025, February 28). The role of traceability in critical mineral supply chains. OECD Publishing. https://doi.org/10.1787/edb0a451-en",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/the-role-of-traceability-in-critical-mineral-supply-chains_4e5cc44a/edb0a451-en.pdf",
+        "use": "支持区分追溯、供应链映射、披露和不同监管链模型，并强调数据质量与验证；本篇借用这些跨行业概念说明身份保存与质量平衡不能混同，不把该矿产报告当作纺织材料性能数据。"
+      }
+    ],
+    "title": "The Line on the Display Card",
+    "summary": "The store will display its new canvas bags tomorrow, and Cheng Lu must confirm the material-batch line tonight. The supplier certificate is at hand, but it does not show how these 60 bags reached the North Store.",
+    "storyParagraphs": [
+      "Both stores are due to put their newly arrived canvas bags on themed display tables early the next morning. The North Store has already received 60 bags and only needs the material batch added to the small card beside them, but before closing the shop assistant sends one question: “According to our records, can these 60 really be traced back to yarn batch A?” Cheng Lu is responsible for giving an answer that evening; otherwise, the card will not be printed yet.",
+      "The material file does contain a certificate supplied by the vendor, and yarn batch A is clearly listed. Cheng Lu has almost finished drafting her reply when she stops before sending it. The certificate shows what evidence was submitted upstream, but it does not tell her which fabric roll these 60 bags in the North Store later came through, in which cutting split they were separated, or through which handover they reached the store.",
+      "She first finds the North Store’s receipt: these 60 bags carry finished-group number G2. The cutting sheet behind the dispatch record names fabric roll R1, and its weaving record links R1 to yarn batch A. Cheng Lu lays the documents out in time order. She now has more than an upstream certificate. Next she finds the split record for the same roll to see where the other goods went.",
+      "The same roll also yields 40 bags in G1 for the East Store; the 60 in G2 go north. Both handovers and receipts match, and 40 plus 60 matches the 100 finished bags in this record. Cheng Lu replaces the shared material statement with two cards. The North Store’s reads, “According to existing records, this finished group G2 links to fabric roll R1 and yarn batch A.” The East Store’s names G1 instead. Printing is half an hour late, but each card now follows its own goods.",
+      "Before the warehouse closes, the printer produces the final two display cards. Cheng Lu clips the North Store's card to the G2 dispatch record and puts the East Store's card into the next morning's document pouch. The supplier certificate remains in the material file; the difference is that this time, the cards state only what the records actually support rather than expanding one certificate into answers it never provided."
+    ],
+    "overall": "This article uses a complete fictional set of batch records to introduce one aspect of supply-chain traceability: when materials, intermediates, and finished goods have linkable identities and records of transformation, splitting, handover, and destination, records can be followed backward from finished goods to inputs and forward from a material batch to its possible destinations. Traceability answers how far the record chain reaches; it is not the same as independent verification of record truthfulness, physical material origin, or environmental or labour performance.",
+    "conceptName": "Supply-chain traceability",
+    "explanationParagraphs": [
+      "This example follows only the R1 branch covered by the records and assumes that R1 uses only yarn batch A, with complete split and handover records. Backward: the North Store’s 60 bags belong to G2, which links to R1 and then A. Forward within this branch, R1 yields 40 bags in G1 and 60 in G2 for the East and North Stores, totaling 100. This does not exhaust other possible destinations of batch A. Matching finished-product counts helps check internal consistency but does not prove that the records are true.",
+      "Mixing, identity preservation and mass-balance chain-of-custody models are distinct. When batches A and B are mixed and their inputs, transformation and destinations are recorded, possible input and output sets can still be traced. That does not identify the source batch of every fibre in an individual item. A missing handover, unrecorded mixing or insufficient granularity calls for identifying the specific gap and unsupported attribution, rather than erasing known links or automatically filling unknown ones. Certificates and identifiers need appropriate verification to support broader substantive claims."
+    ],
+    "module": {
+      "intro": "Trace backward from a specific finished batch to its inputs, then trace forward from the material batch to its destinations, keeping every step within the identities, splits, and handover records that actually exist.",
+      "diagramTitle": "Why Is One Supplier Certificate Still Not Enough to Answer Which Batch These 60 North Store Bags Came From?",
+      "diagramSteps": [
+        "Use the North Store receiving record to confirm that the 60 finished bags belong to batch G2",
+        "Follow G2's cutting record backward to fabric roll R1, then use the R1 record to link to yarn batch A",
+        "Trace forward from yarn batch A along the R1 branch covered by this example and examine its later split",
+        "Confirm that R1 produced G1 with 40 bags for the East Store and G2 with 60 bags for the North Store, for 100 bags in total with continuous handover records",
+        "State batch relationships only within the scope supported by the records, and leave material authenticity or environmental and labour claims to independent verification"
+      ],
+      "diagramStepNotes": [
+        "The traceability starting point is a specific finished-goods group received by a specific store, not a general supplier list.",
+        "This example explicitly states that R1 uses only A, allowing a record-level identity link between R1 and A.",
+        "Forward tracing asks where a material batch may have gone and runs in the opposite direction from tracing finished goods backward to their source.",
+        "40+60=100 bags reconciles the finished-product count in this fictional split record. It is not a material mass balance or proof that the records are truthful.",
+        "When handovers are missing, mixing is unrecorded or data is unreliable, leave the affected link or attribution unknown while retaining supported links; do not fill gaps automatically."
+      ],
+      "mapping": [
+        "G2's 60 bags → the specific finished batch used as the backward-tracing starting point at the North Store.",
+        "R1 → the fabric-roll identity linking the upstream yarn batch to the two downstream finished-goods groups.",
+        "G1's 40 bags and G2's 60 bags → the two recorded destinations created when R1 was split.",
+        "Supplier certificate → evidence that may support other claims but cannot replace the specific batch-transformation and handover chain.",
+        "Two store display cards → outward-facing statements limited to what the existing records actually support."
+      ],
+      "boundary": "Traceability covers only the scope that is recorded and can be reliably linked. Records may be missing, incorrect, or falsified, and quantity reconciliation is not the same as physical identity preservation. Mixed batches, mass-balance systems, and other chain-of-custody models require their own stated granularity and cannot use accounting quantities to infer the exact origin of every fibre in an individual product. Traceability, supply-chain transparency, certification, and independent verification of environmental, labour, or site performance are complementary but distinct activities. Privacy and commercial information should be managed according to purpose and role; this article does not require all supply-chain records to be public.",
+      "reflection": "If the North Store's 60 bags and the East Store's 40 bags add up to exactly 100, but one handover record between R1 and G2 is missing, why can the missing provenance link not be filled in automatically from the quantity balance alone?"
+    },
+    "references": [
+      {
+        "id": "oecd2025-garment-certification-due-diligence",
+        "citation": "OECD. (2025, February 11). The role of sustainability certifications in due diligence in the garment and footwear sector. OECD Business and Finance Policy Papers, No. 77. OECD Publishing. https://doi.org/10.1787/ac8179f2-en",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/the-role-of-sustainability-certifications-in-due-diligence-in-the-garment-and-footwear-sector_77940397/ac8179f2-en.pdf",
+        "use": "Supports that certifications in garment and footwear supply chains differ in scope and reliability and should not be relied upon alone for due diligence. This article therefore keeps the supplier certificate as one form of evidence without letting it replace specific batch traceability or independent verification of substantive claims."
+      },
+      {
+        "id": "oecd-iea2025-traceability-chain-custody",
+        "citation": "OECD/IEA. (2025, February 28). The role of traceability in critical mineral supply chains. OECD Publishing. https://doi.org/10.1787/edb0a451-en",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/02/the-role-of-traceability-in-critical-mineral-supply-chains_4e5cc44a/edb0a451-en.pdf",
+        "use": "Supports distinguishing traceability, supply-chain mapping, disclosure, and different chain-of-custody models, while emphasizing data quality and verification. This article borrows those cross-sector concepts to distinguish identity preservation from mass balance and does not treat the mineral-sector report as textile performance data."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-24-preparation/group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-24-preparation/group2-edit-pass1-evidence.json",
+        "engineering-reader-first-24-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "Main editor applying13 perspectives; two collaborating read-only reviewers; four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Wancheng Clothiers won the contract for every school uniform in the city. Its owner checked certificates from each supplier but considered batch identities too burdensome. Cotton from different farms was mixed into large bales at the spinning mill. Dyed thread changed reels at the weaving shed, and the sewing workshop placed only Wancheng's own label in each collar.\n\nAfter school opened, white shirts at one school released sharp-smelling blue water in the wash. Testing found that one dye house had used a prohibited chemical. That week it had served six spinning mills, and its reels had passed through two warehouses and been divided again. Wancheng could neither identify affected shirts nor demonstrate that the rest were safe, so all thirty thousand uniforms in the city were recalled.\n\nThe owner slapped a stack of supplier certificates onto the table. The investigator asked when each cotton lot became which reel and cloth roll, and where it had been mixed with other material. Certificates showed that someone had made a claim. Broken identity records could not lead backward from a shirt to its origin or forward from the faulty dye vat to its destinations.\n\nThe schools' deadline expired at sunset. Wancheng placed the supplier certificates beside the first child's shirt, then stamped a warehouse mortgage and ordered the full recall. The red stamp bled through to the shirt below. Thirty thousand collars were cut open, transport carts filled three streets, and the contract profit vanished into replacement cloth. When two unaffected mills demanded payment, he could not separate their good thread from the suspect flow either. The missing links harmed innocent suppliers as well as customers.\n\nThe new records kept connected identities for material lots, transformations, and transfers. Mixing recorded inputs, outputs, and loss, while warehouse splitting created its own event. Important claims received independent verification, and access controls protected workers' and small farmers' privacy. Records supported recalls and due diligence but were no longer treated as proof of ethical performance by themselves.\n\nThe following year, another reel failed inspection. The owner scanned its core number, followed splits and transformations, reconciled quantities, and circled 420 shirts within half an hour. Verification still had to decide whether the claim was true; the record only showed where to look. He removed 'the whole city' from the recall and left twelve shop names, then sealed the reel and linked documents. Every handoff had a time and custodian, while privacy fields stayed restricted by role and purpose. A warehouse mortgage stamp remained on the notice's reverse that winter.",
-    "storyBodyZh": "万成衣行接下全城校服订单。老板收货时会看每家供货商的证书，却嫌逐批编号太费事。不同棉田的棉在纺纱厂混成大包，染过的线又在织布时换了卷，裁衣坊只在成衣领口缝上万成自己的商标。\n\n开学后，一所学校的白衬衫洗出刺鼻蓝水。查验发现某家染坊误用了禁用染料，但染坊那周同时替六家纺纱厂加工，线卷经过两处仓库又被拆分。万成既找不出受影响的衬衫，也不能证明其他货安全，只得召回全城三万件校服。\n\n老板把一摞供应商证书拍在桌上，调查员却问每一包棉何时变成哪卷线、哪匹布，又在何处同别的批次混合。证书说明有人作过声明，断掉的身份记录却无法让人沿衣服向后找到来源，也无法从问题染缸向前找到去处。\n\n学校给出的期限在日落时结束。万成把供货证书放到第一件问题校服旁，在仓库抵押书上盖章，下令全部召回。红印洇到了下面的衬衫。三万只衣领被拆开，运输车排满三条街，合同利润全变成替换布料。两家未受影响的纺厂来讨货款时，他也无法把它们的好线从可疑物流中分开。断链同样伤害无辜供货商。\n\n新的记录为原料批次、转化和交接保留相连编号；混合时写明投入、产出和损耗，仓库分包也留下事件。重要声明由独立证据核验，工人和小农的隐私则按权限保护。记录能支持召回和尽职调查，却不再被当作道德表现本身的证明。\n\n第二年又有一卷染线不合格。老板扫过卷芯编号，沿拆分与转化记录核对数量，半小时圈出四百二十件衬衫；仍需查验声明是否属实，记录只告诉人该去哪里找。他封存线卷与文件，给每次接触留下时间与保管人，隐私字段按角色与目的限权，避免追踪变成无边界监视。十二家店逐一确认库存与去向后，他才撕下召回告示上的“全城”，召回结束当天，权限随即关闭。纸背还盖着抵押仓库的红章，边缘已被反复折白。",
-    "explanation": "Supply-chain traceability uses connected identities and event records to follow origins backward and destinations forward through a defined chain, including transformations, mixing, splitting, transfers, and claims. Implementation must manage yields, inventories, chain-of-custody models, verification, access, and breaks. It can narrow recalls and support due diligence, but the existence of records does not make claims true or independently prove ethical or environmental performance.",
-    "explanationZh": "供应链可追溯性通过相连的身份与事件记录，在规定链条内向后追来源、向前查去向，覆盖材料转化、混合、拆分、交接和相关声明。实施时要管理收率、库存、监管链模型、验证、权限与断链。它能缩小召回范围并支持尽职调查，但记录存在不等于声明真实，更不能单独证明伦理或环境绩效。"
+    "storyBody": "Both stores are due to put their newly arrived canvas bags on themed display tables early the next morning. The North Store has already received 60 bags and only needs the material batch added to the small card beside them, but before closing the shop assistant sends one question: “According to our records, can these 60 really be traced back to yarn batch A?” Cheng Lu is responsible for giving an answer that evening; otherwise, the card will not be printed yet.\n\nThe material file does contain a certificate supplied by the vendor, and yarn batch A is clearly listed. Cheng Lu has almost finished drafting her reply when she stops before sending it. The certificate shows what evidence was submitted upstream, but it does not tell her which fabric roll these 60 bags in the North Store later came through, in which cutting split they were separated, or through which handover they reached the store.\n\nShe first finds the North Store’s receipt: these 60 bags carry finished-group number G2. The cutting sheet behind the dispatch record names fabric roll R1, and its weaving record links R1 to yarn batch A. Cheng Lu lays the documents out in time order. She now has more than an upstream certificate. Next she finds the split record for the same roll to see where the other goods went.\n\nThe same roll also yields 40 bags in G1 for the East Store; the 60 in G2 go north. Both handovers and receipts match, and 40 plus 60 matches the 100 finished bags in this record. Cheng Lu replaces the shared material statement with two cards. The North Store’s reads, “According to existing records, this finished group G2 links to fabric roll R1 and yarn batch A.” The East Store’s names G1 instead. Printing is half an hour late, but each card now follows its own goods.\n\nBefore the warehouse closes, the printer produces the final two display cards. Cheng Lu clips the North Store's card to the G2 dispatch record and puts the East Store's card into the next morning's document pouch. The supplier certificate remains in the material file; the difference is that this time, the cards state only what the records actually support rather than expanding one certificate into answers it never provided.",
+    "storyBodyZh": "第二天一早，两家门店都要把新到的帆布袋摆上主题陈列台。北店已经收到了60只，只差把材料批次写进旁边的小卡片，店员却在下班前发来一句：“这60只按我们的记录，真的能追到纱线批A吗？”程璐负责今晚给出答案，否则那张卡先不印。\n\n材料档案里确实有供应商交来的证书，纱线批号A也写得清楚。程璐原本已经准备回复，却在发送前停住：那份证书说明上游提交了什么材料证据，却没有告诉她北店面前这60只后来经过哪一卷布、在哪一次裁剪中被拆分出来，又经过哪次交接到了门店。\n\n她先找到北店收货单，这60只的成品组号是G2。夹在出库记录后的裁剪单写着布卷R1，织造记录又把R1接到纱线批A。程璐把单据按时间铺开，手边终于不再只有一张上游证书。她接着翻出同一布卷的拆分记录，看看剩下的货去了哪里。\n\n同一卷布还形成G1的40只，交给东店；G2的60只交北店。两次交接和两家签收都对得上，40加60也与这次记录的100只相符。程璐把原来共用的材料说明分成两张，北店那张写：“按现有记录，本组成品G2关联布卷R1、纱线批A。”东店那张换成G1。打印晚了半小时，但两张卡终于各自跟上了自己的货。\n\n关库前，打印机吐出最后两张陈列卡。程璐把北店那张夹在G2出库单上，东店那张放进第二天的文件袋。供应商证书仍留在材料档案里；只是这一次，卡片上写的是记录真正支持到哪一步，而不是把一张证书扩写成它没有回答的问题。",
+    "explanation": "This example follows only the R1 branch covered by the records and assumes that R1 uses only yarn batch A, with complete split and handover records. Backward: the North Store’s 60 bags belong to G2, which links to R1 and then A. Forward within this branch, R1 yields 40 bags in G1 and 60 in G2 for the East and North Stores, totaling 100. This does not exhaust other possible destinations of batch A. Matching finished-product counts helps check internal consistency but does not prove that the records are true.\n\nMixing, identity preservation and mass-balance chain-of-custody models are distinct. When batches A and B are mixed and their inputs, transformation and destinations are recorded, possible input and output sets can still be traced. That does not identify the source batch of every fibre in an individual item. A missing handover, unrecorded mixing or insufficient granularity calls for identifying the specific gap and unsupported attribution, rather than erasing known links or automatically filling unknown ones. Certificates and identifiers need appropriate verification to support broader substantive claims.",
+    "explanationZh": "本例只追踪记录所覆盖的R1分支，并假定R1只用纱线批A、拆分与交接记录完整。向后：北店60只属于G2，G2接到R1，再接到A。向前：在这条分支中，R1形成G1的40只和G2的60只，分别交东店和北店，共100只。这不穷尽A批可能的其他去向；成品数量相符有助于检查记录自洽，也不自行证明记录真实。\n\n混合、身份保存和质量平衡监管链模型需要区分。若A、B两批混合且投入、转化和去向都有记录，仍可追到可能输入与输出集合；不能据此确定某件成品中每根纤维来自哪批。缺少交接、未记录混合或记录粒度不足时，应标明具体缺口及不能支持的归属，不把整条已知链一概抹去，也不自动补上未知部分。证书和编号须配合适当核验，才可支持更广的实质声明。"
   },
   {
     "id": "0724-cut-off-grade",
@@ -21435,47 +21819,137 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0724",
     "fieldTitle": "Mining and extraction",
     "fieldTitleZh": "采矿与开采",
-    "title": "The Cheapest Stone",
-    "titleZh": "最便宜的石头",
-    "summary": "The city selects the lowest-priced quarry, then spends the savings again through road repairs, damaged orchards, and a silted downstream canal.",
-    "summaryZh": "市府选中了报价最低的采石场，桥梁省下的钱却从公路、果园和下游水渠的账上重新花了出去。",
-    "storyParagraphs": [
-      "When the city built a new bridge, Black Cliff Quarry offered the lowest price. Its owner counted explosives, wages, machinery, and stone trucks, and the city entered a large saving in its ledger. After the contract was signed, the quarry worked day and night and bridge piers quickly rose from the water.",
-      "In the first year, heavy trucks damaged the village road and the city's roads department paid for repairs. Dust settled on nearby orchards and growers bore the lost crop. Storms washed soil from exposed slopes into a downstream canal, which the water department paid to clear. Each item entered a different ledger, so the bridge official continued to call the stone cheap.",
-      "An accountant placed the ledgers on one table and asked residents, workers, and downstream water users to describe losses without invoices. The quarry provided jobs and bridge material, but transferred part of its cost to people outside the transaction. Some damage could be repaired or compensated; if a spring stopped flowing, money might not buy back the same thing.",
-      "At renewal, the bridge official arrived with his celebrated saving already written into the speech. Orchard families covered it with dust-coated leaves; the clinic added breathing complaints; quarry workers laid wage books across the last clear line before anyone spoke. He struck the saving from the speech. The council rejected both an instant shutdown and an unchanged contract. It locked the gate to one expansion area while evidence and responsibilities were reviewed. The bridge approach slipped behind schedule, and the official lost his completion bonus.",
-      "Before renewal, the city recorded baseline conditions for water, roads, and air. It required dust suppression, drainage, designated truck routes, and staged rehabilitation. The owner posted financial assurance so closure obligations could not disappear with the company. Affected residents joined monitoring and complaints, while remaining damage was assigned by responsibility instead of assuming the quoted price contained everything.",
-      "The new stone price was higher, and some harms remained uncertain or impossible to turn into money. The city published who received jobs, who bore traffic and dust, and what would be monitored after extraction ended. Complaints with no agreed price stayed in the record instead of becoming zero, and residents could challenge the baseline through an independent review open to workers and downstream users, with every finding kept beside the records for later permit renewals. Before signing, the official attached road repairs, canal clearing, orchard losses, health monitoring, assurance, and the delayed bridge bonus. The former 'lowest price' had a second page, thick enough that its brass staple would not close."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "谁付了那四十？",
+    "summaryZh": "林珂准备提交矿料采购意见，一份合作社已经支付的清理费用记录送进了会议室。原来的采购表上没有这一行。",
     "storyParagraphsZh": [
-      "城里修新桥，黑崖采石场的报价最低。场主只计算炸药、工钱、机器和运石车，市府账上立刻多出一笔可观的节省。合同签下后，采石场昼夜开工，桥墩也很快升出水面。",
-      "第一年，重车压坏村道，市府道路科出钱修补；粉尘落在邻近果园，果农自己减产；暴雨把裸露坡面的泥带进下游水渠，水利科又派人清淤。每一项都记在不同账本上，所以桥务官仍说石头很便宜。",
-      "一名会计把几本账摊在同一张桌上，又请村民、工人和下游用水者说出没有发票的损失。采石场带来了就业和桥梁材料，却也把一部分成本交给了没有参与交易的人。有些可以修复或补偿，有些泉眼一旦断流，钱也未必能把它原样买回。",
-      "续约会上，桥务官已把那笔“节省”写进讲稿。还没人开口，果农先用蒙尘叶片压住它，诊所铺上呼吸病记录，采石工又把停工工资账摊到最后一行。他划掉讲稿里的节省。议会既未立即关场，也未照旧续约，而是锁上一片扩区的铁门，复查证据和责任。桥头工程的工期被推后，桥务官也失去完工奖金。",
-      "续约前，市府先记录开采前的水、路和空气状况，要求抑尘、排水、限定车路并逐段复垦。场主缴纳保证金，若关闭后仍有修复责任，资金不能随公司离开。受影响居民参与监测和申诉，剩余损害再按责任处理，而不是假装报价已经包含一切。",
-      "新合同石价确实高了，仍有些损害无法确定或换算成钱。市府公开谁得到工作、谁承受车流与粉尘，以及停采后继续监测什么；对尚无共同价格的投诉，也保留在案，而非直接写成零。签字前，桥务官把修路、清渠、果园损失、健康监测和保证金收据订在报价后，又在首页标出费用由谁承担、何时复核。合同还留出居民申诉和独立复查位置，不把一次签字当作问题结束，复查意见也随续约公开。那份“最低价”有了第二页，厚得黄铜订钉合不上，只得用棉绳捆住。"
+      "材料工作室要为下一季样品订矿物原料，林珂负责交采购意见。这批材料对工作室最多值100个计价单位，供应方报价也正好是100；生产者已为它耗用了70单位的劳动、设备和其他资源。会议开始时，大家准备继续谈合同条件。",
+      "林珂正要合上采购表，一份新记录被送进会议室。附近用水合作社已经为清理受影响的取水设施付了40单位。报告把这项损害与同一次开采联系起来，费用没有得到补偿，也不在生产者那70单位资源成本里。",
+      "她把两项成本分开写在纸上。70是生产者自己为了取得这批材料耗用的资源；40却由没有参加这笔矿料买卖的合作社承担。如果只盯着100的报价，这40根本不会自动出现在买卖双方的账上。林珂于是把原先准备直接进入议价的下一步停下来，让团队先把第三方损害也放进同一张比较表。",
+      "采购讨论没有按原计划结束。林珂先注明：这批矿料已经生产，清理费也已经付出，现在不买并不能让那70和40消失。这一页记录要补齐的是该批开采影响的回顾性账目；若继续订下一批，团队还得另查未来会增加或可以避免的成本。她把这两项待核查内容留在采购表旁，交期因此往后推。",
+      "散会后，林珂把原来的采购表从打印机旁拿回来，在70下面另加一行“第三方未补偿清理损害：40”。100的报价仍写在最上面。她没有在表角写“必须买”或“必须停”，只是把更新后的版本夹回文件夹，让下一轮讨论从一张更完整的账开始。"
     ],
-    "conceptName": "Extraction externalities",
+    "overallZh": "本篇用一笔简化矿物交易说明开采外部性的一个入口：开采活动可能给未直接参与相关交易的第三方带来影响，而这些影响没有充分进入买卖双方承担的成本或收益时，就会形成交易价格之外的重要成本。负外部性只是外部性的一种，个案是否存在以及大小仍需要证据支持。",
     "conceptNameZh": "开采外部性",
-    "explanationParagraphs": [
-      "Extraction externalities are costs or benefits imposed by extraction on other people, ecosystems, places, or future periods without being fully reflected in the transaction price. Baselines, participation, prevention, regulation, liability, compensation, financial assurance, and long-term management can make some impacts count in decisions. Distribution, rights, irreversibility, uncertainty, and non-monetary values still cannot be resolved by a single price alone."
-    ],
     "explanationParagraphsZh": [
-      "开采外部性是开采活动给未充分参与交易的他人、生态、地点或未来时期带来的成本或收益，因未被价格完整反映而影响决策。基线调查、参与、预防措施、监管、责任、补偿、财务保障和长期管理可使部分影响被承担。分布公平、权利、不可逆性、不确定性与非货币价值仍不能只靠一个价格解决。"
+      "对这批已生产矿料设一个完整情景：假设最终完成交换，并实现买方支付意愿所代表的100单位价值，成交价也恰为100。已发生的生产资源成本70不含第三方清理损害40，且假定没有其他效应。价值减生产资源耗用为100−70=30；计入不重合的损害后为100−(70+40)=−10。这是该假设完成情景的净额，不是尚未成交时已经实现的历史收益，也不是说现在不买就能收回已发生的70和40。",
+      "如果按100成交，这笔支付是在买卖双方之间转移，不应再加成另一项社会资源成本。社会账比较的是假设实现的价值、真实资源耗用与第三方损害；未来订单则需另评估可避免的增量影响。100、70、40及损害归因都是教学设定，不是现实矿址数据，也不代表40已经包括全部生态价值。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先把交易参与方自己承担的资源成本与交易外第三方承担的损害分开，再看后者是否已经进入原来的交易判断。",
+      "diagramTitle": "为什么报价仍是100，第三方的40单位损害却会改变整体比较",
+      "diagramSteps": [
+        "假设已产出矿料最终成交，并实现买方100单位价值，成交价也为100",
+        "记录生产者实际耗用资源成本70，并明确其中不含第三方损害",
+        "识别案例中已建立因果关联、由交易外用水合作社承担且未获补偿的40单位清理损害",
+        "把生产资源成本与第三方损害合计为70+40=110，而不是把价格100再作为额外资源成本加入",
+        "在这一假设完成情景中计算100−110=−10；当前或未来决策另查可避免的增量影响"
+      ],
+      "diagramStepNotes": [
+        "100是本例假设完成交易并实现的买方价值，不是尚未成交时已实现的收益，也不是任何价格都等于社会价值。",
+        "70包括生产者耗用的劳动、设备等资源，但明确排除同一项40单位第三方损害。",
+        "40只有在案例证据已支持与该开采活动存在因果关联的前提下才能这样计入；现实个案不能仅凭空间邻近归因。",
+        "价格100是买方支付给卖方的转移，不应在社会资源成本中与70和40重复相加。",
+        "−10以实现100价值且没有其他效应为条件；已发生的成本与未来可避免成本须分开，不据此决定关矿或最优政策。"
+      ],
+      "mapping": [
+        "买方价值100 → 假设交易最终完成并实现的价值，不是已成交事实。",
+        "生产资源成本70 → 生产者为取得该批材料实际耗用的资源，不含第三方40。",
+        "合作社清理损害40 → 未参与交易的第三方承担且未获补偿的外部成本。",
+        "采购表新增一行 → 将原先遗漏在交易双方账外的已识别成本带回决策比较。"
+      ],
+      "boundary": "现实中的水质或设施损害可能来自自然背景、历史遗留污染、其他设施或时间变化，因此必须有合适的源头、时间、对照和其他证据才能进行个案归因。矿山酸性排水等机制也依矿物、氧气、水和场址条件而异，并非所有矿山必然发生。本篇的100、70和40及其因果关系均为虚构已知条件；不能据此判断任何真实矿址的责任、赔偿、最优税率、关闭决策或全部生态价值。某项影响暂时无法可靠货币化，也不意味着它的价值必然为零。",
+      "reflection": "假如只新增一笔生产者给合作社的20单位补偿，其他真实资源耗用和损害均不变，社会账中70+40的合计会因此减少20吗？为什么？"
+    },
+    "referencesZh": [
+      {
+        "id": "imf-helbling-2017",
+        "citation": "Helbling, T. (2017, May 10). Externalities: Prices Do Not Capture All Costs. Finance & Development, International Monetary Fund.",
+        "url": "https://www.imf.org/en/publications/fandd/issues/series/back-to-basics/externalities",
+        "use": "支持生产或消费活动可能对交易外第三方产生未由价格充分反映的影响，并支持区分私人成本与社会成本；本篇的100、70和40均为虚构教学数字，不来自该IMF资料。"
+      },
+      {
+        "id": "epa-hardrock-1997",
+        "citation": "U.S. Environmental Protection Agency, Office of Water. (1997). EPA’s National Hardrock Mining Framework, Appendix B, pp. B-3–B-5.",
+        "url": "https://www.epa.gov/sites/default/files/2015-10/documents/hardrock_mining_framework_0.pdf",
+        "use": "支持矿山酸性排水和污染物释放与矿物、氧气、水及具体场址条件相关，并可能影响地表水和地下水；本篇仅用作机制背景，不把该1997框架当作任何真实场址污染归因、现行法规或必然因果证明。"
+      }
+    ],
+    "title": "Who Paid the Forty?",
+    "summary": "Lin Ke is about to submit a mineral-procurement recommendation when a record of a water cooperative’s already-paid cleanup bill reaches the meeting. Her procurement sheet has no line for it.",
+    "storyParagraphs": [
+      "A materials studio needs mineral inputs for next season’s samples, and Lin Ke has to submit a procurement recommendation. The batch is worth at most 100 accounting units to the studio, matching the supplier’s quote. The producer has already used 70 units of labour, equipment and other resources to obtain it. The meeting is ready to move on to contract terms.",
+      "Lin Ke is about to close the procurement sheet when a new record arrives. A nearby water cooperative has already spent 40 units cleaning an affected intake facility. The report links that damage to the same extraction activity. The bill has not been compensated and is not part of the producer’s 70 units of resource cost.",
+      "She writes the two costs separately on the page. The 70 is the resource use borne by the producer in obtaining the batch; the 40 falls on a cooperative that did not participate in the mineral transaction. If the team looks only at the quoted price of 100, the 40 will never automatically appear in the buyer's or seller's accounts. Lin Ke therefore pauses the planned move directly into price negotiation and asks the team to place the third-party damage into the same comparison.",
+      "The procurement discussion does not end on schedule. Lin Ke first notes that this batch has already been produced and the cleanup bill paid: declining to buy now would not make the 70 or 40 disappear. This page completes a retrospective account of the batch’s extraction impacts. For another order, the team would need separate evidence about future additional or avoidable costs. She leaves both questions beside the procurement sheet, delaying the timetable.",
+      "After the meeting, Lin Ke picks up the original procurement sheet from beside the printer and adds a separate line beneath the 70: “Uncompensated third-party cleanup damage: 40.” The quoted price of 100 remains at the top. She does not write “must buy” or “must stop” in the corner; she simply returns the updated version to the folder so that the next discussion begins from a more complete account."
+    ],
+    "overall": "This article uses a simplified mineral transaction to introduce one aspect of extraction externalities: extraction activity may impose effects on third parties who do not directly participate in the transaction, and when those effects are not adequately reflected in the costs or benefits considered by the buyer and seller, they become important costs outside the transaction price. Negative externalities are only one form of externality, and whether a particular case exists and how large it is still requires evidence.",
+    "conceptName": "Extraction externalities",
+    "explanationParagraphs": [
+      "Consider a complete scenario for the already-produced batch: suppose exchange is eventually completed and the value represented by willingness to pay is realized at 100 units, with a transaction price also of 100. Incurred production resource cost is 70, excluding the third-party cleanup damage of 40, and no other effects are assumed. Value less production resources is 100−70=30; including the non-overlapping damage gives 100−(70+40)=−10. This is the net amount in that hypothetical completed scenario, not historical benefit already realized before sale, nor an amount of incurred cost recoverable by refusing to buy now.",
+      "If the batch sells for 100, that payment transfers between buyer and seller; it is not another social resource cost. The social account compares assumed realized value, real resource use and third-party damage. Future orders require a separate assessment of avoidable incremental impacts. The figures 100, 70 and 40 and causal attribution are teaching assumptions, not real mine data, and 40 does not represent every ecological value."
+    ],
+    "module": {
+      "intro": "Separate the resource costs borne by the trading parties from damage borne by third parties outside the transaction, then check whether that outside cost was already included in the original decision.",
+      "diagramTitle": "Why Can the Quoted Price Stay at 100 While 40 Units of Third-Party Damage Still Change the Overall Comparison?",
+      "diagramSteps": [
+        "Assume the already-produced batch is eventually exchanged, realizing buyer value of 100 units at a price also of 100",
+        "Record the producer's actual resource cost of 70 and state explicitly that it excludes the third-party damage",
+        "Identify the 40 units of uncompensated cleanup damage that the case links causally to the extraction activity and that are borne by a water cooperative outside the transaction",
+        "Add production resource cost and third-party damage as 70+40=110, without adding the transaction price of 100 again as another resource cost",
+        "For that hypothetical completed scenario, calculate 100−110=−10; current or future decisions need separate avoidable incremental impacts"
+      ],
+      "diagramStepNotes": [
+        "The 100 is buyer value assumed realized in a completed transaction, not benefit already realized before sale or a claim that all prices equal social value.",
+        "The 70 includes labour, equipment, and other resources used by the producer but explicitly excludes the same 40 units of third-party damage.",
+        "The 40 can be included this way only because the case assumes evidence has established a causal relationship with the extraction activity; real cases cannot be attributed solely from geographic proximity.",
+        "The price of 100 is a transfer from buyer to seller and should not be double-counted as a social resource cost alongside 70 and 40.",
+        "The −10 is conditional on realizing 100 in value with no other effects. Incurred costs and future avoidable costs must be separated; this does not determine closure or optimal policy."
+      ],
+      "mapping": [
+        "Buyer value 100 → value assumed realized if exchange is completed, not a claim that sale has already occurred.",
+        "Producer resource cost of 70 → the resources actually used by the producer to obtain the batch, excluding the third-party 40.",
+        "Water cooperative cleanup damage of 40 → an uncompensated external cost borne by a third party outside the transaction.",
+        "New line on the procurement sheet → bringing an identified cost that had been outside the buyer-seller accounts back into the decision comparison."
+      ],
+      "boundary": "In real cases, water-quality or infrastructure damage may result from natural background conditions, legacy pollution, other facilities, or changes over time, so appropriate source, timing, comparison, and other evidence are needed for case-specific attribution. Mechanisms such as acid mine drainage also depend on minerals, oxygen, water, and site conditions and do not occur at every mine. The values 100, 70, and 40 and their causal relationship are fictional known conditions in this article. They cannot be used to determine responsibility, compensation, optimal tax rates, closure decisions, or the full ecological value of any real mine. An effect that cannot yet be reliably monetized does not therefore have a value of zero.",
+      "reflection": "Suppose the producer pays the cooperative 20 units in compensation, with real resource use and damage otherwise unchanged. Does the 70+40 total in the social account fall by 20? Why?"
+    },
+    "references": [
+      {
+        "id": "imf-helbling-2017",
+        "citation": "Helbling, T. (2017, May 10). Externalities: Prices Do Not Capture All Costs. Finance & Development, International Monetary Fund.",
+        "url": "https://www.imf.org/en/publications/fandd/issues/series/back-to-basics/externalities",
+        "use": "Supports that production or consumption can impose effects on third parties outside a transaction that are not fully reflected in prices, and supports distinguishing private costs from social costs. The values 100, 70, and 40 in this article are fictional teaching values and do not come from the IMF source."
+      },
+      {
+        "id": "epa-hardrock-1997",
+        "citation": "U.S. Environmental Protection Agency, Office of Water. (1997). EPA’s National Hardrock Mining Framework, Appendix B, pp. B-3–B-5.",
+        "url": "https://www.epa.gov/sites/default/files/2015-10/documents/hardrock_mining_framework_0.pdf",
+        "use": "Supports that acid mine drainage and pollutant release depend on minerals, oxygen, water, and site-specific conditions and can affect surface water and groundwater. This article uses the source only for mechanism background and does not treat the 1997 framework as current regulation, site-specific pollution attribution, or proof of inevitable causation."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-24-preparation/group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-24-preparation/group2-edit-pass1-evidence.json",
+        "engineering-reader-first-24-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "Main editor applying13 perspectives; two collaborating read-only reviewers; four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "When the city built a new bridge, Black Cliff Quarry offered the lowest price. Its owner counted explosives, wages, machinery, and stone trucks, and the city entered a large saving in its ledger. After the contract was signed, the quarry worked day and night and bridge piers quickly rose from the water.\n\nIn the first year, heavy trucks damaged the village road and the city's roads department paid for repairs. Dust settled on nearby orchards and growers bore the lost crop. Storms washed soil from exposed slopes into a downstream canal, which the water department paid to clear. Each item entered a different ledger, so the bridge official continued to call the stone cheap.\n\nAn accountant placed the ledgers on one table and asked residents, workers, and downstream water users to describe losses without invoices. The quarry provided jobs and bridge material, but transferred part of its cost to people outside the transaction. Some damage could be repaired or compensated; if a spring stopped flowing, money might not buy back the same thing.\n\nAt renewal, the bridge official arrived with his celebrated saving already written into the speech. Orchard families covered it with dust-coated leaves; the clinic added breathing complaints; quarry workers laid wage books across the last clear line before anyone spoke. He struck the saving from the speech. The council rejected both an instant shutdown and an unchanged contract. It locked the gate to one expansion area while evidence and responsibilities were reviewed. The bridge approach slipped behind schedule, and the official lost his completion bonus.\n\nBefore renewal, the city recorded baseline conditions for water, roads, and air. It required dust suppression, drainage, designated truck routes, and staged rehabilitation. The owner posted financial assurance so closure obligations could not disappear with the company. Affected residents joined monitoring and complaints, while remaining damage was assigned by responsibility instead of assuming the quoted price contained everything.\n\nThe new stone price was higher, and some harms remained uncertain or impossible to turn into money. The city published who received jobs, who bore traffic and dust, and what would be monitored after extraction ended. Complaints with no agreed price stayed in the record instead of becoming zero, and residents could challenge the baseline through an independent review open to workers and downstream users, with every finding kept beside the records for later permit renewals. Before signing, the official attached road repairs, canal clearing, orchard losses, health monitoring, assurance, and the delayed bridge bonus. The former 'lowest price' had a second page, thick enough that its brass staple would not close.",
-    "storyBodyZh": "城里修新桥，黑崖采石场的报价最低。场主只计算炸药、工钱、机器和运石车，市府账上立刻多出一笔可观的节省。合同签下后，采石场昼夜开工，桥墩也很快升出水面。\n\n第一年，重车压坏村道，市府道路科出钱修补；粉尘落在邻近果园，果农自己减产；暴雨把裸露坡面的泥带进下游水渠，水利科又派人清淤。每一项都记在不同账本上，所以桥务官仍说石头很便宜。\n\n一名会计把几本账摊在同一张桌上，又请村民、工人和下游用水者说出没有发票的损失。采石场带来了就业和桥梁材料，却也把一部分成本交给了没有参与交易的人。有些可以修复或补偿，有些泉眼一旦断流，钱也未必能把它原样买回。\n\n续约会上，桥务官已把那笔“节省”写进讲稿。还没人开口，果农先用蒙尘叶片压住它，诊所铺上呼吸病记录，采石工又把停工工资账摊到最后一行。他划掉讲稿里的节省。议会既未立即关场，也未照旧续约，而是锁上一片扩区的铁门，复查证据和责任。桥头工程的工期被推后，桥务官也失去完工奖金。\n\n续约前，市府先记录开采前的水、路和空气状况，要求抑尘、排水、限定车路并逐段复垦。场主缴纳保证金，若关闭后仍有修复责任，资金不能随公司离开。受影响居民参与监测和申诉，剩余损害再按责任处理，而不是假装报价已经包含一切。\n\n新合同石价确实高了，仍有些损害无法确定或换算成钱。市府公开谁得到工作、谁承受车流与粉尘，以及停采后继续监测什么；对尚无共同价格的投诉，也保留在案，而非直接写成零。签字前，桥务官把修路、清渠、果园损失、健康监测和保证金收据订在报价后，又在首页标出费用由谁承担、何时复核。合同还留出居民申诉和独立复查位置，不把一次签字当作问题结束，复查意见也随续约公开。那份“最低价”有了第二页，厚得黄铜订钉合不上，只得用棉绳捆住。",
-    "explanation": "Extraction externalities are costs or benefits imposed by extraction on other people, ecosystems, places, or future periods without being fully reflected in the transaction price. Baselines, participation, prevention, regulation, liability, compensation, financial assurance, and long-term management can make some impacts count in decisions. Distribution, rights, irreversibility, uncertainty, and non-monetary values still cannot be resolved by a single price alone.",
-    "explanationZh": "开采外部性是开采活动给未充分参与交易的他人、生态、地点或未来时期带来的成本或收益，因未被价格完整反映而影响决策。基线调查、参与、预防措施、监管、责任、补偿、财务保障和长期管理可使部分影响被承担。分布公平、权利、不可逆性、不确定性与非货币价值仍不能只靠一个价格解决。"
+    "storyBody": "A materials studio needs mineral inputs for next season’s samples, and Lin Ke has to submit a procurement recommendation. The batch is worth at most 100 accounting units to the studio, matching the supplier’s quote. The producer has already used 70 units of labour, equipment and other resources to obtain it. The meeting is ready to move on to contract terms.\n\nLin Ke is about to close the procurement sheet when a new record arrives. A nearby water cooperative has already spent 40 units cleaning an affected intake facility. The report links that damage to the same extraction activity. The bill has not been compensated and is not part of the producer’s 70 units of resource cost.\n\nShe writes the two costs separately on the page. The 70 is the resource use borne by the producer in obtaining the batch; the 40 falls on a cooperative that did not participate in the mineral transaction. If the team looks only at the quoted price of 100, the 40 will never automatically appear in the buyer's or seller's accounts. Lin Ke therefore pauses the planned move directly into price negotiation and asks the team to place the third-party damage into the same comparison.\n\nThe procurement discussion does not end on schedule. Lin Ke first notes that this batch has already been produced and the cleanup bill paid: declining to buy now would not make the 70 or 40 disappear. This page completes a retrospective account of the batch’s extraction impacts. For another order, the team would need separate evidence about future additional or avoidable costs. She leaves both questions beside the procurement sheet, delaying the timetable.\n\nAfter the meeting, Lin Ke picks up the original procurement sheet from beside the printer and adds a separate line beneath the 70: “Uncompensated third-party cleanup damage: 40.” The quoted price of 100 remains at the top. She does not write “must buy” or “must stop” in the corner; she simply returns the updated version to the folder so that the next discussion begins from a more complete account.",
+    "storyBodyZh": "材料工作室要为下一季样品订矿物原料，林珂负责交采购意见。这批材料对工作室最多值100个计价单位，供应方报价也正好是100；生产者已为它耗用了70单位的劳动、设备和其他资源。会议开始时，大家准备继续谈合同条件。\n\n林珂正要合上采购表，一份新记录被送进会议室。附近用水合作社已经为清理受影响的取水设施付了40单位。报告把这项损害与同一次开采联系起来，费用没有得到补偿，也不在生产者那70单位资源成本里。\n\n她把两项成本分开写在纸上。70是生产者自己为了取得这批材料耗用的资源；40却由没有参加这笔矿料买卖的合作社承担。如果只盯着100的报价，这40根本不会自动出现在买卖双方的账上。林珂于是把原先准备直接进入议价的下一步停下来，让团队先把第三方损害也放进同一张比较表。\n\n采购讨论没有按原计划结束。林珂先注明：这批矿料已经生产，清理费也已经付出，现在不买并不能让那70和40消失。这一页记录要补齐的是该批开采影响的回顾性账目；若继续订下一批，团队还得另查未来会增加或可以避免的成本。她把这两项待核查内容留在采购表旁，交期因此往后推。\n\n散会后，林珂把原来的采购表从打印机旁拿回来，在70下面另加一行“第三方未补偿清理损害：40”。100的报价仍写在最上面。她没有在表角写“必须买”或“必须停”，只是把更新后的版本夹回文件夹，让下一轮讨论从一张更完整的账开始。",
+    "explanation": "Consider a complete scenario for the already-produced batch: suppose exchange is eventually completed and the value represented by willingness to pay is realized at 100 units, with a transaction price also of 100. Incurred production resource cost is 70, excluding the third-party cleanup damage of 40, and no other effects are assumed. Value less production resources is 100−70=30; including the non-overlapping damage gives 100−(70+40)=−10. This is the net amount in that hypothetical completed scenario, not historical benefit already realized before sale, nor an amount of incurred cost recoverable by refusing to buy now.\n\nIf the batch sells for 100, that payment transfers between buyer and seller; it is not another social resource cost. The social account compares assumed realized value, real resource use and third-party damage. Future orders require a separate assessment of avoidable incremental impacts. The figures 100, 70 and 40 and causal attribution are teaching assumptions, not real mine data, and 40 does not represent every ecological value.",
+    "explanationZh": "对这批已生产矿料设一个完整情景：假设最终完成交换，并实现买方支付意愿所代表的100单位价值，成交价也恰为100。已发生的生产资源成本70不含第三方清理损害40，且假定没有其他效应。价值减生产资源耗用为100−70=30；计入不重合的损害后为100−(70+40)=−10。这是该假设完成情景的净额，不是尚未成交时已经实现的历史收益，也不是说现在不买就能收回已发生的70和40。\n\n如果按100成交，这笔支付是在买卖双方之间转移，不应再加成另一项社会资源成本。社会账比较的是假设实现的价值、真实资源耗用与第三方损害；未来订单则需另评估可避免的增量影响。100、70、40及损害归因都是教学设定，不是现实矿址数据，也不代表40已经包括全部生态价值。"
   },
   {
     "id": "0724-geotechnical-risk",
@@ -21484,47 +21958,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0724",
     "fieldTitle": "Mining and extraction",
     "fieldTitleZh": "采矿与开采",
-    "title": "The Survey Pin That Did Not Move",
-    "titleZh": "没有移动的那根标杆",
-    "summary": "Muddy water begins seeping from an open-pit slope, but the manager points to one unmoved survey pin and declares the entire wall safe.",
-    "summaryZh": "露天矿坡脚开始渗出浑水，经理仍指着一根没有移动的标杆，坚持整面山坡都很安全。",
-    "storyParagraphs": [
-      "A high wall rose above Red Stone open pit, with the haul road directly below it. The manager had one survey pin at the crest read each day. If it had not moved, heavy trucks continued. After two stable years, that pin became the final sentence in every safety meeting.",
-      "Following a week of heavy rain, drivers found muddy water at the toe and a fine crack halfway up the slope. The manager checked the pin. Its reading had not changed, so he called the signs surface erosion and kept the night haul running. Before dawn, a small section slid across the road just after a truck passed, trapping three vehicles on the far side of the pit.",
-      "A geotechnical engineer found that the moving block followed an inclined weak layer and the survey pin stood just outside it. Rain had also raised water pressure in fractures. The reading was not false, but it observed one location and one type of movement. It could not replace understanding of strata, groundwater, excavation changes, possible failure mechanisms, and consequences.",
-      "The trapped trucks carried the month's richest load, and headquarters demanded that the road reopen before the next shift. The manager tapped the stable pin on the report until the engineer drew its narrow field of view on the map. With the radio still shouting, he stopped tapping, lowered the road barrier, and signed a closure whose end time remained blank. The mine lost three days of output and paid stranded drivers, but no crew was sent beneath the cracked slope to prove a forecast.",
-      "The mine added drilling and drainage, repositioned movement and water-pressure instruments, and obtained an independent review of the slope model. Rainfall, crack growth, and instrument changes each received trigger levels linked to load reduction, road closure, or evacuation. Monitoring no longer merely recorded; it called for predefined action. The road also moved away from the most exposed fall zone.",
-      "During the next storm, the old pin still did not move, but another pressure gauge crossed its yellow line while muddy flow increased. Following the reviewed plan rather than improvising at the slope, the manager lowered the barrier. Two hours later, rocks landed on the empty road. The event did not prove the trigger would predict every failure; it showed the cost of acting under uncertainty. At review, false alarms, missed signs, model limits, instrument health, and changing ground conditions remained open rather than erased afterward. The unchanged pin stayed in the report beside a full red closure-loss column."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "夜班单上的空格",
+    "summaryZh": "扫描车的夜班任务原本已经排好，顾川准备签字时，新地质记录送到了桌上。挪一个停放符号很快，重新核清位置却没那么快。",
     "storyParagraphsZh": [
-      "红石矿坑上方立着一面高坡，坡下正好是运矿公路。经理每天让人读一根坡顶标杆，只要它没有移动，重车便照常通行。那根标杆连续两年稳定，渐渐成了所有安全会议的最后一句话。",
-      "一周暴雨后，司机发现坡脚流出浑水，半坡还出现一条细裂缝。经理查看标杆，读数仍旧不变，便认为只是表土被雨冲开。夜班继续走车。凌晨，一小片边坡滑下，埋住刚刚驶过的公路，三辆车被困在矿坑另一侧。",
-      "岩土工程师检查后发现，可能滑动的岩块沿着一层倾斜软弱面移动，标杆恰好钉在那块范围之外。雨水又抬高了裂隙中的压力。一个读数没有错，却只看见一个地点和一种运动；它无法替代对地层、地下水、开挖变化、失效方式和后果的判断。",
-      "被困车辆装着当月最富的一批矿石，总部要求下个班次前开路。经理用手指反复敲那份稳定读数，直到工程师在图上圈出标杆狭窄的观察范围。无线电仍在催，他停下手，落下路障，在结束时间仍空白的封路单上签字。矿区损失三天产量并照付受困司机工资，却没有派人走到裂坡下面替预测作证。",
-      "矿区补做钻探和排水，重新布置位移与水压监测，并请独立人员复核坡面模型。暴雨量、裂缝扩展和读数变化各有触发线：越过不同线就减载、封路或撤人。监测不再只是记录，而同预先写好的行动相连。公路也移离最危险的落石范围。",
-      "下一场暴雨中，原标杆仍没动，另一只水压表却越过黄线，坡脚浑水也增多。经理依照复核计划拉下栏杆，没有到坡边临时试探。两小时后，几块岩石落在空路上。这次结果不能证明触发线会预言每次失效，只显示在不确定中行动也有代价。复盘会上，工程师检查误报、漏报、模型限制和设备状态，下一次仍可能因新证据修改计划，而非把黄线奉成护符。旧标杆继续写进日报；那个零仍清楚。不变读数旁边，封路损失占满一列红格。"
+      "夜班开始前，规划室只差把一台无人扫描车的任务表发出去。原计划是让它完成一段数据采集后，停在离第二天第二段扫描最近的位置，这样早班接手时不用多绕路，完整数据包也能赶在上午交给建模同事。顾川正准备签下任务表，地质组在交班前送来一页刚整理完成的新记录。",
+      "新记录在原计划区域附近标出一条弱带，具体位置和巷道结构之间的关系还没有核清。顾川把透明图层压上任务图：如果局部岩体脱落影响到车的路线或停放处，设备可能受损，采集工作也可能中断。但这条记录尚不能说明会发生何种失稳、可能性多大。原来安排扫描和停放的区域，正是需要重新核查的地方。",
+      "负责排程的同事指着另一个候选停放点：“要不要先挪到这里，今晚照跑？”顾川没有批准。那个候选位置和改后的路线也还没有经过这次新增信息下的专业核查，把图上的设备符号挪过去并不能证明实物已经处在更低风险的位置。他把受影响的夜间扫描段从任务单上暂时划掉，让设备继续留在原有已安排的等待位置，等地质和岩土专业人员先核对位置、结构和作业条件。",
+      "受影响任务一划掉，早班就拿不到那段原定数据，建模同事只能先处理已经完成的资料。顾川取消上午交齐完整数据包的安排，等核查结果出来再排新的交付时间。他把候选路线和停放点保留在图上，只标待核查，没有让无人车当晚沿它们去试。",
+      "夜班单重新打印时，受影响的扫描段已经移到待办栏。顾川把新地质记录钉在任务图右上角，给建模同事发去数据延期消息。候选路线仍留在待核查栏，这一段没有出现在今晚发出的任务单上。"
     ],
-    "conceptName": "Geotechnical risk",
+    "overallZh": "本篇用地下矿山的纸面任务规划说明岩土工程风险的一个入口：地层或岩体危险信息本身不等于风险结论，风险还与人员、设备或设施是否暴露在所考虑位置，以及潜在后果有关。新的地质证据可以改变原有认识；在信息不足时暂停受影响任务，是对不确定性的管理，并不是宣布危险必然发生或某个替代位置已经安全。",
     "conceptNameZh": "岩土工程风险",
-    "explanationParagraphs": [
-      "Geotechnical risk combines possible soil or rock failure mechanisms and their likelihood with exposure and consequences, changing with water, excavation, load, and deterioration. Site investigation, models, complementary monitoring, independent review, and controls such as drainage reduce uncertainty. Trigger action plans connect observations with load reduction, closure, or evacuation. One stable instrument cannot demonstrate that an entire slope is safe."
-    ],
     "explanationParagraphsZh": [
-      "岩土工程风险把土体或岩体可能的失效机制、发生可能性、暴露对象和后果结合起来，并随水、开挖、荷载与劣化变化。场地调查、模型、多个互补监测、独立复核和排水等控制用于降低不确定性；触发行动计划把观测与减载、封闭或撤离相连。单一稳定读数不能证明整个边坡安全。"
+      "本例中的新弱带记录属于危险信息：它提示原计划区域的地层或结构认识需要更新，但单独一条记录不能证明一定会发生局部地层坠落。原计划若执行，会把无人设备带入正在重新评价的位置，因此设备的计划暴露与潜在后果需要和危险信息一起考虑。",
+      "本轮实际决策不是把设备从一个已证实危险点移动到一个已证实安全点，而是暂缓受影响任务，让设备不进入尚待核查的计划区域，同时把候选位置和路线保留给专业人员进一步评价。纸上移动符号、没有发生事故或等待一晚，都不能证明危险已经消失。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "当新地质证据改变对计划位置的认识时，先分开看潜在危险、计划暴露对象和可能后果，再决定是否需要暂缓任务等待专业核查。",
+      "diagramTitle": "为什么一条弱带新记录不足以预言坠落，却仍可能让夜班任务暂缓",
+      "diagramSteps": [
+        "原计划让无人扫描车完成夜间扫描并进入靠近下一任务的停放区域",
+        "交班前新增地质记录提示原计划区域附近存在需要进一步核查的弱带信息",
+        "确认新记录尚不能单独证明具体失稳，也不能直接证明另一个候选位置更安全",
+        "暂缓受影响扫描任务，让设备不进入尚待核查的计划区域，并把候选路线和位置交专业人员继续评价",
+        "记录由此造成的数据与排程延迟，等待位置、结构和工况证据更新后再决定任务"
+      ],
+      "diagramStepNotes": [
+        "原位置之所以重要，是因为任务若执行，无人设备会实际进入这次需要重新评价的区域。",
+        "弱带线索可能与失稳机制有关，但记录完整性、具体位置关系和现场结构仍需专业评价。",
+        "不确定不是‘安全’判定，也不是‘必然失稳’判定；两个相反结论都不能由一条线索直接推出。",
+        "本例没有让设备沿未经核查的新路线或候选位置运行，因此不会把纸面方案变化误写成已经改变实际现场暴露。",
+        "延期和待核查是管理新证据下不确定性的选择，不是现场进入许可、稳定性计算或专业安全结论。"
+      ],
+      "mapping": [
+        "新增弱带记录 → 改变原有地质认识、需要进一步评价的危险线索。",
+        "原夜班扫描和停放计划 → 若执行会使无人设备进入所讨论区域的计划暴露。",
+        "暂缓受影响任务 → 在新证据未核清前避免执行该计划暴露，而不是宣称危险消失。",
+        "完整数据包延期 → 因改变任务安排而产生的具体运营后果。",
+        "候选位置标为待核查 → 替代方案仍需证据，不能由纸面移动直接获得安全结论。"
+      ],
+      "boundary": "地下巷道与露天坡体的失稳机制、调查和监测方法并不相同，本篇不把露天坡体方法移植到地下场景，也不给出任何现场阈值、稳定性计算、支护设计或进入许可。弱带、地质结构和其他信息需要由专业人员结合具体位置、工况和更多证据评价。本故事没有人员进入示例危险区，也没有给出真实失稳概率。风险还可能涉及多种事件、暴露和后果；暂停一段任务不表示整个矿山风险为零。",
+      "reflection": "假如这一晚没有收到地层坠落报告，能否在新记录与路线关系仍未核清时，直接恢复原扫描段？还缺少什么证据？"
+    },
+    "referencesZh": [
+      {
+        "id": "cdc-niosh-ground-falls-2024",
+        "citation": "National Institute for Occupational Safety and Health. (2024, October 9). Mining and Ground Falls. Centers for Disease Control and Prevention.",
+        "url": "https://www.cdc.gov/niosh/mining/topics/ground-falls.html",
+        "use": "支持矿山地层坠落与地质条件、岩体结构和地下开采因素有关，不同地层和结构会影响失稳危险；本篇只借用这一风险背景，不从该页面推导虚构地点的失稳概率、支护要求或现场安全结论。"
+      },
+      {
+        "id": "usgs-landslides-glossary",
+        "citation": "U.S. Geological Survey. (n.d.). Landslides Glossary.",
+        "url": "https://www.usgs.gov/glossary/landslides-glossary",
+        "use": "支持一般风险概念中需要把危险可能性与潜在损失、社会经济后果区分考虑；该来源针对滑坡，本篇只借用危险与后果区分这一一般概念，不将其用于地下巷道的具体参数、监测方法或概率判断。"
+      }
+    ],
+    "title": "The Gap on the Night-Shift Sheet",
+    "summary": "The scanner’s night task is already scheduled when a new geological record reaches Gu Chuan’s desk before he signs. Moving a parking symbol is quick; checking what that new position means will take longer.",
+    "storyParagraphs": [
+      "Before the night shift begins, the planning office has only one task sheet left to release for an unmanned scanning unit. The original plan is for it to complete one section of data collection and then park close to the second scanning segment scheduled for the next day. That would let the early shift continue without an extra detour and allow the full data package to reach the modelling team in the morning. Gu Chuan is about to sign the task sheet when the geology team delivers a newly compiled record just before handover.",
+      "The new record marks a weak zone near the planned area, but its precise relationship to the underground structure has not been clarified. Gu Chuan overlays the transparent layer on the task map. If a local ground fall reached the vehicle’s route or parking place, the equipment could be damaged and data collection interrupted. The record does not yet establish a failure mechanism or its likelihood. The planned scanning and parking area is exactly where renewed review is needed.",
+      "The scheduling colleague points to another candidate parking location. “Why don't we move it here and keep tonight's run?” Gu Chuan does not approve it. That candidate location and the revised route have not yet been professionally reviewed under the newly added information either. Moving the equipment symbol on the map would not prove that the real equipment had been placed in a lower-risk position. He removes the affected night scan segment from the task sheet for the time being, keeps the equipment at its already assigned waiting location, and waits for geological and geotechnical specialists to review the location, structure, and operating conditions first.",
+      "With that task removed, the early shift will not receive the planned scan segment, and the modelling team can begin only with data already completed. Gu Chuan cancels the morning commitment for the full package and leaves a new delivery time to be set after review. Candidate routes and parking points stay on the map as pending review; the unit will not be sent along them that night as a test.",
+      "When the night-shift sheet is reprinted, the affected scan segment is on the pending list. Gu Chuan pins the new geological record to the upper-right corner of the task map and sends the modelling team a data-delay notice. Candidate routes remain marked for review; this segment is absent from tonight’s issued task sheet."
+    ],
+    "overall": "This article uses an underground-mine planning exercise to introduce one aspect of geotechnical risk: information about a ground or rock-mass hazard is not itself a complete risk conclusion. Risk also depends on whether people, equipment, or facilities would be exposed at the location under consideration and what the potential consequences could be. New geological evidence can change previous understanding; deferring an affected task when information is incomplete is a way of managing uncertainty, not a declaration that failure is inevitable or that an alternative location is already safe.",
+    "conceptName": "Geotechnical risk",
+    "explanationParagraphs": [
+      "The new weak-zone record in this example is hazard information: it indicates that understanding of the geology or structure around the originally planned area needs to be updated, but one record alone does not prove that a local ground fall will definitely occur. If the original plan were executed, the unmanned equipment would enter a location now under renewed evaluation, so the planned exposure of the equipment and the possible consequences have to be considered alongside the hazard information.",
+      "The actual decision in this round is not to move the equipment from a proven dangerous location to a proven safe one. It is to defer the affected task so that the equipment does not enter the still-unreviewed planned area, while leaving candidate locations and routes for professional assessment. Moving a symbol on paper, having no accident, or waiting overnight cannot prove that the hazard has disappeared."
+    ],
+    "module": {
+      "intro": "When new geological evidence changes understanding of a planned location, separate the potential hazard, the planned exposed object, and the possible consequence before deciding whether to defer the task pending professional review.",
+      "diagramTitle": "Why Can a New Weak-Zone Record Be Insufficient to Predict a Ground Fall Yet Still Be Enough to Pause the Night Task?",
+      "diagramSteps": [
+        "The original plan sends the unmanned scanner through the night scan and into a parking area close to the next task",
+        "Just before handover, a new geological record identifies weak-zone information near the planned area that requires further review",
+        "Confirm that the new record alone does not prove a specific failure and does not directly prove that another candidate location is safer",
+        "Defer the affected scan task so that the equipment does not enter the unreviewed planned area, and leave candidate routes and locations for professional evaluation",
+        "Record the resulting data and scheduling delay, then wait for updated evidence on location, structure, and operating conditions before deciding the task"
+      ],
+      "diagramStepNotes": [
+        "The original location matters because, if the plan were executed, the unmanned equipment would physically enter the area now requiring renewed evaluation.",
+        "Weak-zone information may relate to an instability mechanism, but record completeness, precise positional relationships, and underground structure still require professional assessment.",
+        "Uncertainty is neither a finding of 'safe' nor a finding of 'failure is inevitable'; neither opposite conclusion can be drawn directly from one clue.",
+        "This example does not send the equipment along an unreviewed new route or into an unreviewed candidate location, so a paper-plan change is not misrepresented as an actual change in field exposure.",
+        "Delay and pending review are choices for managing uncertainty under new evidence, not entry authorization, stability calculation, or a professional safety conclusion."
+      ],
+      "mapping": [
+        "New weak-zone record → hazard information that changes prior geological understanding and requires further evaluation.",
+        "Original night scanning and parking plan → planned exposure that would place the unmanned equipment in the area under discussion if executed.",
+        "Deferring the affected task → avoiding execution of the planned exposure while the new evidence remains unresolved, not declaring that the hazard has disappeared.",
+        "Delayed full data package → the concrete operational consequence of changing the task plan.",
+        "Candidate location marked pending review → an alternative still requiring evidence rather than becoming safe merely because it was moved on paper."
+      ],
+      "boundary": "Underground workings and open-pit slopes have different failure mechanisms, investigation methods, and monitoring approaches. This article does not transfer open-slope monitoring methods into an underground setting and does not provide field thresholds, stability calculations, support design, construction guidance, or entry authorization. Weak zones, geological structures, and other evidence require professional evaluation together with the specific location, operating conditions, and additional information. No personnel enter the example hazard area, and no real failure probability is provided. Risk can also involve multiple events, exposures, and consequences; deferring one task does not mean overall mine risk is zero.",
+      "reflection": "Suppose no ground fall is reported that night. Can the original scan segment simply resume while the new record’s relationship to the route remains unresolved? What evidence is still missing?"
+    },
+    "references": [
+      {
+        "id": "cdc-niosh-ground-falls-2024",
+        "citation": "National Institute for Occupational Safety and Health. (2024, October 9). Mining and Ground Falls. Centers for Disease Control and Prevention.",
+        "url": "https://www.cdc.gov/niosh/mining/topics/ground-falls.html",
+        "use": "Supports that mining ground falls are related to geological conditions, rock-mass structure, and underground mining factors, and that different ground and structural conditions affect instability hazards. This article uses only that risk background and does not derive a failure probability, support requirement, or field safety conclusion for the fictional location."
+      },
+      {
+        "id": "usgs-landslides-glossary",
+        "citation": "U.S. Geological Survey. (n.d.). Landslides Glossary.",
+        "url": "https://www.usgs.gov/glossary/landslides-glossary",
+        "use": "Supports the general risk distinction between hazard likelihood and potential losses or socioeconomic consequences. Because the source concerns landslides, this article borrows only the general distinction between hazard and consequence and does not use it for underground-workings parameters, monitoring methods, or probability judgments."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-24-preparation/group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-24-preparation/group2-edit-pass1-evidence.json",
+        "engineering-reader-first-24-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "Main editor applying13 perspectives; two collaborating read-only reviewers; four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "A high wall rose above Red Stone open pit, with the haul road directly below it. The manager had one survey pin at the crest read each day. If it had not moved, heavy trucks continued. After two stable years, that pin became the final sentence in every safety meeting.\n\nFollowing a week of heavy rain, drivers found muddy water at the toe and a fine crack halfway up the slope. The manager checked the pin. Its reading had not changed, so he called the signs surface erosion and kept the night haul running. Before dawn, a small section slid across the road just after a truck passed, trapping three vehicles on the far side of the pit.\n\nA geotechnical engineer found that the moving block followed an inclined weak layer and the survey pin stood just outside it. Rain had also raised water pressure in fractures. The reading was not false, but it observed one location and one type of movement. It could not replace understanding of strata, groundwater, excavation changes, possible failure mechanisms, and consequences.\n\nThe trapped trucks carried the month's richest load, and headquarters demanded that the road reopen before the next shift. The manager tapped the stable pin on the report until the engineer drew its narrow field of view on the map. With the radio still shouting, he stopped tapping, lowered the road barrier, and signed a closure whose end time remained blank. The mine lost three days of output and paid stranded drivers, but no crew was sent beneath the cracked slope to prove a forecast.\n\nThe mine added drilling and drainage, repositioned movement and water-pressure instruments, and obtained an independent review of the slope model. Rainfall, crack growth, and instrument changes each received trigger levels linked to load reduction, road closure, or evacuation. Monitoring no longer merely recorded; it called for predefined action. The road also moved away from the most exposed fall zone.\n\nDuring the next storm, the old pin still did not move, but another pressure gauge crossed its yellow line while muddy flow increased. Following the reviewed plan rather than improvising at the slope, the manager lowered the barrier. Two hours later, rocks landed on the empty road. The event did not prove the trigger would predict every failure; it showed the cost of acting under uncertainty. At review, false alarms, missed signs, model limits, instrument health, and changing ground conditions remained open rather than erased afterward. The unchanged pin stayed in the report beside a full red closure-loss column.",
-    "storyBodyZh": "红石矿坑上方立着一面高坡，坡下正好是运矿公路。经理每天让人读一根坡顶标杆，只要它没有移动，重车便照常通行。那根标杆连续两年稳定，渐渐成了所有安全会议的最后一句话。\n\n一周暴雨后，司机发现坡脚流出浑水，半坡还出现一条细裂缝。经理查看标杆，读数仍旧不变，便认为只是表土被雨冲开。夜班继续走车。凌晨，一小片边坡滑下，埋住刚刚驶过的公路，三辆车被困在矿坑另一侧。\n\n岩土工程师检查后发现，可能滑动的岩块沿着一层倾斜软弱面移动，标杆恰好钉在那块范围之外。雨水又抬高了裂隙中的压力。一个读数没有错，却只看见一个地点和一种运动；它无法替代对地层、地下水、开挖变化、失效方式和后果的判断。\n\n被困车辆装着当月最富的一批矿石，总部要求下个班次前开路。经理用手指反复敲那份稳定读数，直到工程师在图上圈出标杆狭窄的观察范围。无线电仍在催，他停下手，落下路障，在结束时间仍空白的封路单上签字。矿区损失三天产量并照付受困司机工资，却没有派人走到裂坡下面替预测作证。\n\n矿区补做钻探和排水，重新布置位移与水压监测，并请独立人员复核坡面模型。暴雨量、裂缝扩展和读数变化各有触发线：越过不同线就减载、封路或撤人。监测不再只是记录，而同预先写好的行动相连。公路也移离最危险的落石范围。\n\n下一场暴雨中，原标杆仍没动，另一只水压表却越过黄线，坡脚浑水也增多。经理依照复核计划拉下栏杆，没有到坡边临时试探。两小时后，几块岩石落在空路上。这次结果不能证明触发线会预言每次失效，只显示在不确定中行动也有代价。复盘会上，工程师检查误报、漏报、模型限制和设备状态，下一次仍可能因新证据修改计划，而非把黄线奉成护符。旧标杆继续写进日报；那个零仍清楚。不变读数旁边，封路损失占满一列红格。",
-    "explanation": "Geotechnical risk combines possible soil or rock failure mechanisms and their likelihood with exposure and consequences, changing with water, excavation, load, and deterioration. Site investigation, models, complementary monitoring, independent review, and controls such as drainage reduce uncertainty. Trigger action plans connect observations with load reduction, closure, or evacuation. One stable instrument cannot demonstrate that an entire slope is safe.",
-    "explanationZh": "岩土工程风险把土体或岩体可能的失效机制、发生可能性、暴露对象和后果结合起来，并随水、开挖、荷载与劣化变化。场地调查、模型、多个互补监测、独立复核和排水等控制用于降低不确定性；触发行动计划把观测与减载、封闭或撤离相连。单一稳定读数不能证明整个边坡安全。"
+    "storyBody": "Before the night shift begins, the planning office has only one task sheet left to release for an unmanned scanning unit. The original plan is for it to complete one section of data collection and then park close to the second scanning segment scheduled for the next day. That would let the early shift continue without an extra detour and allow the full data package to reach the modelling team in the morning. Gu Chuan is about to sign the task sheet when the geology team delivers a newly compiled record just before handover.\n\nThe new record marks a weak zone near the planned area, but its precise relationship to the underground structure has not been clarified. Gu Chuan overlays the transparent layer on the task map. If a local ground fall reached the vehicle’s route or parking place, the equipment could be damaged and data collection interrupted. The record does not yet establish a failure mechanism or its likelihood. The planned scanning and parking area is exactly where renewed review is needed.\n\nThe scheduling colleague points to another candidate parking location. “Why don't we move it here and keep tonight's run?” Gu Chuan does not approve it. That candidate location and the revised route have not yet been professionally reviewed under the newly added information either. Moving the equipment symbol on the map would not prove that the real equipment had been placed in a lower-risk position. He removes the affected night scan segment from the task sheet for the time being, keeps the equipment at its already assigned waiting location, and waits for geological and geotechnical specialists to review the location, structure, and operating conditions first.\n\nWith that task removed, the early shift will not receive the planned scan segment, and the modelling team can begin only with data already completed. Gu Chuan cancels the morning commitment for the full package and leaves a new delivery time to be set after review. Candidate routes and parking points stay on the map as pending review; the unit will not be sent along them that night as a test.\n\nWhen the night-shift sheet is reprinted, the affected scan segment is on the pending list. Gu Chuan pins the new geological record to the upper-right corner of the task map and sends the modelling team a data-delay notice. Candidate routes remain marked for review; this segment is absent from tonight’s issued task sheet.",
+    "storyBodyZh": "夜班开始前，规划室只差把一台无人扫描车的任务表发出去。原计划是让它完成一段数据采集后，停在离第二天第二段扫描最近的位置，这样早班接手时不用多绕路，完整数据包也能赶在上午交给建模同事。顾川正准备签下任务表，地质组在交班前送来一页刚整理完成的新记录。\n\n新记录在原计划区域附近标出一条弱带，具体位置和巷道结构之间的关系还没有核清。顾川把透明图层压上任务图：如果局部岩体脱落影响到车的路线或停放处，设备可能受损，采集工作也可能中断。但这条记录尚不能说明会发生何种失稳、可能性多大。原来安排扫描和停放的区域，正是需要重新核查的地方。\n\n负责排程的同事指着另一个候选停放点：“要不要先挪到这里，今晚照跑？”顾川没有批准。那个候选位置和改后的路线也还没有经过这次新增信息下的专业核查，把图上的设备符号挪过去并不能证明实物已经处在更低风险的位置。他把受影响的夜间扫描段从任务单上暂时划掉，让设备继续留在原有已安排的等待位置，等地质和岩土专业人员先核对位置、结构和作业条件。\n\n受影响任务一划掉，早班就拿不到那段原定数据，建模同事只能先处理已经完成的资料。顾川取消上午交齐完整数据包的安排，等核查结果出来再排新的交付时间。他把候选路线和停放点保留在图上，只标待核查，没有让无人车当晚沿它们去试。\n\n夜班单重新打印时，受影响的扫描段已经移到待办栏。顾川把新地质记录钉在任务图右上角，给建模同事发去数据延期消息。候选路线仍留在待核查栏，这一段没有出现在今晚发出的任务单上。",
+    "explanation": "The new weak-zone record in this example is hazard information: it indicates that understanding of the geology or structure around the originally planned area needs to be updated, but one record alone does not prove that a local ground fall will definitely occur. If the original plan were executed, the unmanned equipment would enter a location now under renewed evaluation, so the planned exposure of the equipment and the possible consequences have to be considered alongside the hazard information.\n\nThe actual decision in this round is not to move the equipment from a proven dangerous location to a proven safe one. It is to defer the affected task so that the equipment does not enter the still-unreviewed planned area, while leaving candidate locations and routes for professional assessment. Moving a symbol on paper, having no accident, or waiting overnight cannot prove that the hazard has disappeared.",
+    "explanationZh": "本例中的新弱带记录属于危险信息：它提示原计划区域的地层或结构认识需要更新，但单独一条记录不能证明一定会发生局部地层坠落。原计划若执行，会把无人设备带入正在重新评价的位置，因此设备的计划暴露与潜在后果需要和危险信息一起考虑。\n\n本轮实际决策不是把设备从一个已证实危险点移动到一个已证实安全点，而是暂缓受影响任务，让设备不进入尚待核查的计划区域，同时把候选位置和路线保留给专业人员进一步评价。纸上移动符号、没有发生事故或等待一晚，都不能证明危险已经消失。"
   },
   {
     "id": "0731-human-scale",
