@@ -107,7 +107,7 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
     }
     return all.map(n=>({...n,...positions.get(n.id)}));
   }
-  function light(group,x,y,signal,size='main'){const g=group.append('g').attr('role','img').attr('aria-label',signal.label),r=config.light*(size==='story'?.7:1.55);g.append('title').text(signal.label);g.append('circle').attr('class',`map-light ${size}${signal.ready===undefined?' unknown':signal.ready?' on':' missing'}`).attr('cx',x).attr('cy',y).attr('r',r);return g;}
+  function light(group,x,y,signal,size='main'){const g=group.append('g').attr('role','img').attr('aria-label',signal.label),r=config.light*1.55*(size==='story'?2/3:1);g.append('title').text(signal.label);g.append('circle').attr('class',`map-light ${size}${signal.ready===undefined?' unknown':signal.ready?' on':' missing'}`).attr('cx',x).attr('cy',y).attr('r',r);return g;}
   function drawNode(element,node){
     const g=d3.select(element),c=config;g.selectAll('*').remove();g.append('title').text(node.description||node.label);
     if(node.kind==='root'){
@@ -131,7 +131,7 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
     const radius=c.light*1.55,mainStep=c.name*1.6,mainWidth=radius*2+mainStep*2,y=top+c.pad+m.resourceY;
     const resources=g.append('g').attr('class','map-resource-lights');
     node.signals.forEach((signal,i)=>light(resources,left+radius+i*mainStep,y,signal));
-    const storyRadius=c.light*.7,step=storyRadius*3.1,divider=left+mainWidth+c.small*.55,storyLeft=divider+c.small*.55+storyRadius;
+    const storyRadius=radius*2/3,step=storyRadius*3.1,divider=left+mainWidth+c.small*.55,storyLeft=divider+c.small*.55+storyRadius;
     g.append('line').attr('class','map-lamp-divider').attr('x1',divider).attr('x2',divider).attr('y1',y-radius).attr('y2',y+radius);
     const stories=g.append('g').attr('class','map-story-lights');
     node.storySignals.forEach((signal,i)=>{

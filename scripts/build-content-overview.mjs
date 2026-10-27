@@ -65,6 +65,7 @@ const revision = revisionHash.digest('hex').slice(0, 12);
 const assetVersion = JSON.parse(await readFile(new URL('version.json', root), 'utf8')).version;
 const target = new URL('public/toolbox/overview/', root);
 await mkdir(new URL('en/', target), { recursive: true });
+await mkdir(new URL('zh/', target), { recursive: true });
 await mkdir(new URL('vendor/', target), { recursive: true });
 for (const name of ['d3.v7.9.0.min.js', 'D3-LICENSE.txt']) await cp(new URL(`toolbox/overview/vendor/${name}`, root), new URL(`vendor/${name}`, target));
 await writeFile(new URL('catalog.json', target), json + '\n');
@@ -80,6 +81,7 @@ const localized = (html, language) => {
   }
   return html.replaceAll('__CATALOG_REVISION__', revision).replace(/(\/(?:site-shell\.(?:css|js)|toolbox\/styles\.css))\?v=[^"']*/g, `$1?v=${assetVersion}`);
 };
-await writeFile(new URL('index.html', target), localized(template, 'zh'));
+await writeFile(new URL('index.html', target), localized(template, 'en'));
 await writeFile(new URL('en/index.html', target), localized(template, 'en'));
+await writeFile(new URL('zh/index.html', target), localized(template, 'zh'));
 console.log(`Built content overview: ${built.length} subjects, ${fields.length} fields, ${stories.length} stories and ${songs.length} songs.`);

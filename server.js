@@ -356,6 +356,14 @@ async function serveStatic(pathname, response) {
     sendJson(response, 404, { error: "Not found" });
     return;
   }
+  // Preview the generated language pages, as Pages does, rather than the Chinese build template.
+  const overviewPage = pathname.match(/^\/toolbox\/overview(?:\/(en|zh))?(?:\/index\.html|\/)?$/);
+  if (overviewPage) {
+    const content = await readFile(join(root, 'public/toolbox/overview', overviewPage[1] || '', 'index.html'));
+    response.writeHead(200, { 'Content-Type': mimeTypes['.html'] });
+    response.end(content);
+    return;
+  }
   const requested = pathname === "/" ? "/index.html" : pathname;
   const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");
   const filePath = join(root, safePath);
