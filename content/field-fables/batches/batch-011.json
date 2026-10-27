@@ -8,39 +8,119 @@
       "fieldCode": "0722",
       "fieldTitle": "Materials glass paper plastic and wood",
       "fieldTitleZh": "材料：玻璃、纸、塑料与木材",
-      "title": "Two Panes from the Same Recipe",
-      "titleZh": "同一张配方的两块玻璃",
-      "summary": "Two glassworks follow the same recipe for a winter garden; the panes look identical until the first cold rain breaks only one side.",
-      "summaryZh": "两家玻璃坊照着同一张配方烧窗，成品看起来毫无区别，第一场寒雨却只击碎了其中一边。",
-      "storyParagraphs": [
-        "For the city's new winter garden, two glassworks received the east and west windows. The contractor specified sand, soda, and lime in exact amounts, believing identical recipes would make identical glass. The eastern works let formed panes cool slowly in a long furnace. To meet the opening feast, the western owner carried still-hot panes into the cold yard before nightfall. Each early day earned a bonus, and he had already borrowed against it to buy a second cutting table.",
-        "Once installed, both sides looked equally transparent and passed the thickness gauge. The western owner collected his final payment with the recipe and inspection sheet in hand. The first cold rain arrived while the garden furnace was still burning. One western pane made a sharp sound, then more than a dozen cracked from their edges. Falling shards cut the citrus netting and ruined six young trees; the eastern panes merely gathered condensation. The city closed the garden and froze payment on the owner's next contract.",
-        "The western owner insisted that not a grain of material was missing. An old glassmaker placed samples under polarized light, and rings of colour appeared inside the western pane. She compared two strips from the same melt: the slowly cooled strip showed little colour pattern, while the rushed strip carried bright stress bands toward its chipped edge. Rapid, uneven cooling had left invisible stresses, and cutting damage supplied a starting point. Equal composition and thickness had not erased the route from melt to installed pane.",
-        "The feast bell began while the owner held the installer's invoice in one hand and the key to the unopened crates in the other. He set down the key, returned the bonus, sold the new cutting table, and missed the feast while the west wall was remade. The replacement contract specified forming, controlled cooling, edge finishing, and sample tests as well as ingredients. Broad windows were properly annealed, and the frames allowed for thermal movement. The garden did not demand glass that could never break, only glass whose internal condition, geometry, edges, and supports matched the temperatures it would meet.",
-        "When cold rain returned the next year, the western owner waited beneath the windows until the caretaker sent him home. No pane cracked, though the frames clicked as they cooled. His debt outlasted the winter, and the second table never returned to the shop. After the storm, he took the old recipe from his pocket and pinned it beside a broken fragment and its coloured stress image. Beneath them he added the cooling log and edge-test sheet. The paper still listed every ingredient correctly. It no longer testified for the glass by itself."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "手柄变沉的那一盒铜",
+      "title": "The Box of Copper That Made the Handle Harder to Press",
+      "summaryZh": "同牌号、同尺寸的铜卡扣，换一盒就突然难压。秦岚翻开加工记录，发现两盒在到达这道工序之前，走过了不同的路。",
+      "summary": "A new box of copper clips suddenly makes the press harder to operate, although the grade and dimensions match. Qin Lan checks what happened to each box before it reached this step.",
       "storyParagraphsZh": [
-        "城里建冬园，东西两面窗分别交给两家玻璃坊。承包人把砂、碱和石灰的用量写得极细，认为配方相同，玻璃就会相同。东坊让成形玻璃在长炉里缓慢冷却；西坊主为了赶上开园宴，天黑前便把热玻璃搬进冷院。每提前一天都有奖金，他已经拿预期奖金作抵押，买了第二张切割台。",
-        "装好以后，两面的玻璃一样透明，厚度也通过量尺。西坊主拿着配方和验收单领走尾款。入冬第一场寒雨落下时，冬园内仍烧着暖炉。西窗先响了一声，随后十几块从边角裂开，落下的碎片割破柑橘网，毁了六棵幼树；东窗只蒙上一层水汽。市府封闭冬园，也冻结了西坊下一份合同的钱。",
-        "西坊主坚称原料一钱不少。老玻璃师把同炉两根样条放在偏振光下：缓冷的一根颜色很淡，赶工的一根从缺口向内布满明亮彩带。快速而不均的冷却把残余应力留在内部，切边损伤又给裂纹开了头。成分和厚度相同，没有抹掉玻璃从熔体走到窗框的经历。",
-        "开园宴的钟响起时，坊主一手捏着安装工的账单，一手拿着未开木箱的钥匙。他放下钥匙，退还奖金，卖掉新切割台，在错过宴席的日子里重做整面西窗。新承包书除原料外，还规定成形、受控冷却、切边和抽样试验；大窗充分退火，安装槽留出热胀空间。要求不再是永不破，而是内部状态、边缘、尺寸和支承能承受实际温差。",
-        "第二年寒雨来时，西坊主在窗下站到看守催他离开。玻璃没有裂，框槽受冷时仍发出细小咔声。他的债拖过整个冬天，那张切割台也没能买回。雨停后，他把旧配方贴到裂片和应力彩图旁，又补上每炉冷却时间与切边抽检。新学徒问哪张纸才是真相，他让对方把四张一起带到窗前，对照玻璃方向、框槽与炉内位置。后来每次改厚度、尺寸或安装方式，他都重新取样，不把上次通过直接借给下一扇窗。旧裂片一直留着。配方上的原料仍一项不错，却不能再单独替整扇窗作证。"
+        "秦岚正在给一组桌灯装最后的铜卡扣。前面几十片都顺利压出圆角，换到下一盒时，手柄却明显更沉，卡扣还没到她要的形状。盒子上写着同一个铜牌号，零件的宽度、厚度和进入这道工序前的弯形也相同。她没有继续硬压，因为再加力之前，得先弄清这一盒为什么变得不一样。",
+        "她把两盒的加工经历重新对上。较难弯的那盒为了修正前一道外形，曾在室温下反复弯折、整形；另一盒来自同批铜材，在主要成形之后做过退火，也就是按既定工艺进行的受控加热处理，之后只裁切到需要的尺寸，没有再做明显的冷态塑性整形。平时大家只看铜牌号就能拿料，是因为加工经历大致一致；这一次，材料名称相同，状态却不再相同。",
+        "秦岚找出两条尺寸和起始弯形相同的余片，一条来自反复冷态整形的那盒，一条来自退火后仅裁切的那盒。她把两条依次放进同一只带测力表的压具，让压头走到同一个既定位置。到达那里时，反复冷态整形过的余片需要更大的力；卸载后，两条都留下了新的弯曲。",
+        "秦岚把退火后未再明显冷作的那盒搬到这道弯曲工位，另一盒先撤回待用盘，等下一批只需轻微修整的用途再核对。原来两盒可以顺手交替拿，现在得重新分拣，装配同事每次取料也要多确认一步。她保住了这一批继续成形的安排，却失去了混拿库存的便利。",
+        "做到这一排灯的最后一个卡扣时，秦岚先松开压具手柄，取下刚弯好的铜件，再把它按进灯罩边缘。卡扣发出一声清脆的“咔”。她把装好的灯推到同事手边，待用盘里那盒反复整形过的铜件则留在另一张工作台上。"
       ],
-      "conceptName": "Structure-property relationship",
+      "storyParagraphs": [
+        "Qin Lan is fitting the final copper clips to a set of table lamps. The first several dozen form smoothly into their rounded shape, but when she switches to the next box, the handle becomes noticeably harder to press and the clips still have not reached the shape she needs. The box carries the same copper grade, and the parts have the same width, thickness, and starting bend before this step. She does not keep forcing the handle down. Before applying more force, she needs to know why this box is behaving differently.",
+        "She retraces the processing history of the two boxes. The harder-to-bend parts had been bent back and reshaped several times at room temperature to correct an earlier shape. The other box came from the same copper batch, but after its main forming step it underwent annealing—a controlled heating treatment—and was then only cut to size, without further substantial cold plastic forming. The team usually picks parts by grade because their processing histories are similar. This time, the name is the same, but the state is different.",
+        "Qin Lan finds two offcuts with the same dimensions and starting bend, one from the repeatedly cold-formed box and one from the annealed-then-cut box. She places them in turn in the same small press with a force gauge and moves the press head to the same specified position. At that position, the repeatedly cold-formed piece requires more force. After unloading, both pieces retain a new bend.",
+        "Qin Lan moves the box that was annealed without substantial later cold working to the bending station. The other box goes back to a holding tray, to be checked for a later use requiring only light adjustment. The team had routinely taken parts from either box; now the boxes have to be sorted, and the assembly workers must check one more detail when taking a part. She keeps this batch’s forming work moving, at the cost of the old convenience.",
+        "For the last clip in this row of lamps, Qin Lan first releases the press handle, removes the newly bent part, and then presses it into the edge of the lampshade. It snaps into place with a crisp click. She slides the completed lamp toward her colleague. The box of repeatedly reshaped copper parts remains in its holding tray on another workbench."
+      ],
+      "overallZh": "铜的成分相同，加工历史却可能不同。冷态塑性加工会改变内部结构，通常使后续永久成形更费力；适当退火可让铜更容易继续成形。因此，判断材料的加工表现，还要看它目前处在哪种状态。",
+      "overall": "Copper parts with the same composition can have different processing histories. Cold plastic working changes their internal structure and generally raises resistance to further permanent forming; appropriate annealing can make forming easier again. Understanding their processing behavior therefore also requires knowing their current state.",
       "conceptNameZh": "结构与性能关系",
-      "explanationParagraphs": [
-        "The structure-property relationship connects composition and processing history with internal structure across scales, measured properties, and final performance. The same recipe can produce different phases, interfaces, defects, and residual stresses after different cooling, forming, or loading histories. Property tests require stated conditions, while component geometry, environment, and assembly also affect service behaviour. An ingredient list alone cannot predict the result."
-      ],
+      "conceptName": "Structure-property relationship",
       "explanationParagraphsZh": [
-        "结构与性能关系把材料成分和加工历史，同从微观到宏观的内部结构、测得性质及最终表现联系起来。相同配方经不同冷却、成形或受力过程后，晶相、界面、缺陷和残余应力可能不同。性质测试必须说明条件，成品表现还受几何、环境和装配影响，因此原料清单不能单独预测使用结果。"
+        "位错是金属晶体中的线状缺陷，它们的运动参与塑性变形，也就是留下永久形状的变化。铜经过冷态塑性加工后，位错数量和相互阻碍会增加，继续变形通常需要更高应力。适当退火可通过回复、再结晶等内部结构变化，使铜重新更容易塑性成形，化学成分却不必改变。",
+        "最小核对：两条同成分、同尺寸、同起始弯形的铜试样，在同一压具中达到同一位置时，可以需要不同的力。这里比较的是各自加工状态下的继续成形表现，不能据此推断弹性模量也变了。"
       ],
-      "mode": "mechanism-fable",
+      "explanationParagraphs": [
+        "Dislocations are line defects in a metal crystal. Their motion contributes to plastic deformation—a change that leaves a permanent shape. Cold plastic working of copper increases dislocations and their interference with one another, so further deformation generally requires higher stress. Appropriate annealing can make copper easier to form again through internal changes such as recovery and recrystallization, without changing its chemical composition.",
+        "Minimal check: two copper specimens with the same composition, dimensions, and starting bend can require different forces to reach the same position in the same press. This compares their resistance to further forming in their respective processing states; it does not establish that elastic modulus has changed."
+      ],
+      "moduleZh": {
+        "intro": "把材料牌号和加工状态分开看：先确认几何可比，再观察不同加工经历如何改变继续塑性成形的难易。",
+        "diagramTitle": "铜牌号相同，为什么继续弯曲时所需力仍可能不同",
+        "diagramSteps": [
+          "进入最后工序时，两组同批铜件的尺寸和起始弯形相同",
+          "一组此前反复经历冷态塑性整形，另一组主要成形后退火且随后只裁切",
+          "将可比余片放入同一带测力表的压具，并让压头达到同一既定位移",
+          "反复冷态整形的余片在该位移下需要更大的力",
+          "据此把后续明显塑性成形任务优先分配给更适合继续成形的加工状态"
+        ],
+        "diagramStepNotes": [
+          "比较前要控制尺寸和起始几何，否则弯曲阻力也会因几何不同而变化。",
+          "退火之后若再次进行大量冷态塑性整形，材料状态仍可能再次改变，因此故事明确后续只有裁切。",
+          "同一位移下比较所需力，不等于两条试样承受同一载荷。",
+          "这里关注继续塑性变形抗力，不把它等同于弹性模量。",
+          "虚构余片对照只帮助理解机制，不证明所有铜材或所有工艺都会表现成同一数值差异。"
+        ],
+        "mapping": [
+          "同一个铜牌号 → 化学成分信息相近，但不能独自说明当前加工状态。",
+          "反复冷态整形 → 改变内部位错结构并提高继续塑性变形的阻力。",
+          "退火后仅裁切 → 保留一个较适合继续塑性成形的状态入口。",
+          "同位移下更高测力读数 → 当前继续变形阻力不同的教学观察。"
+        ],
+        "boundary": "本篇只讨论同成分铜在不同加工状态下继续发生塑性变形的差异。弯曲力还受厚度、宽度、初始曲率、支承和加载方式影响，因此比较必须保持几何和条件可比。加工硬化或更高屈服抗力不等于弹性模量必然提高；退火也不意味着消除所有内部缺陷。本文不提供通用退火参数、材料安全等级或完整选材依据。",
+        "reflection": "如果一盒铜件标着“已退火”，后来又反复冷态整形，下一次拿来成形还能只凭这个旧标签判断吗？为什么？"
+      },
+      "module": {
+        "intro": "Separate material grade from processing state: first make the geometry comparable, then observe how different processing histories can change the difficulty of further plastic forming.",
+        "diagramTitle": "If the Copper Grade Is the Same, Why Can the Force Needed for Further Bending Still Differ?",
+        "diagramSteps": [
+          "At entry to the final step, the two groups from the same copper batch have matching dimensions and starting bends",
+          "One group has undergone repeated cold plastic forming, while the other was annealed after main forming and then only cut",
+          "Place comparable offcuts in the same force-instrumented press and move the press head to the same specified displacement",
+          "The repeatedly cold-formed offcut requires more force at that displacement",
+          "Assign further substantial plastic forming preferentially to the processing state better suited to continued forming"
+        ],
+        "diagramStepNotes": [
+          "Dimensions and starting geometry must be comparable, because bending resistance can also change with geometry.",
+          "If substantial cold plastic forming occurs again after annealing, the material state can change again, so the story specifies that only cutting follows annealing.",
+          "The comparison is force required at the same displacement, not two specimens carrying the same load.",
+          "The focus is resistance to further plastic deformation, not elastic modulus.",
+          "The fictional offcut comparison helps explain the mechanism but does not prove that all copper or all processing routes will show the same numerical difference."
+        ],
+        "mapping": [
+          "The same copper grade → similar composition information, but not enough to specify the current processing state.",
+          "Repeated cold forming → a change in dislocation structure that raises resistance to further plastic deformation.",
+          "Annealed and then only cut → a processing state that remains more suitable for further plastic forming in this teaching example.",
+          "Higher force at the same displacement → a teaching observation of different resistance to continued deformation."
+        ],
+        "boundary": "This article only discusses differences in further plastic deformation of copper with the same composition but different processing states. Bending force is also affected by thickness, width, initial curvature, support, and loading method, so geometry and test conditions must be comparable. Work hardening or higher yield resistance does not mean elastic modulus must increase; annealing also does not mean every internal defect has been removed. This article provides no universal annealing parameters, material safety rating, or complete basis for material selection.",
+        "reflection": "If a box of copper parts is labelled “annealed” but is then repeatedly cold-formed, is the old label enough to judge how it will form next? Why or why not?"
+      },
+      "referencesZh": [
+        {
+          "id": "stoebe-work-hardening",
+          "citation": "Stoebe, T. Work Hardening and Annealing of Copper. MatEd materials-education module, University of Washington; copyright Edmonds Community College 2007.",
+          "url": "https://materialseducation.org/educators/matedu-modules/docs/Work_Hardening_and_Annealing_of_Copper.pdf",
+          "use": "支持铜在塑性加工过程中因位错结构变化而提高继续变形阻力，以及退火可使材料恢复到更易继续塑性变形的状态；不用于提供通用热处理配方、声称清除全部缺陷或推断弹性模量必然增加。"
+        }
+      ],
+      "references": [
+        {
+          "id": "stoebe-work-hardening",
+          "citation": "Stoebe, T. Work Hardening and Annealing of Copper. MatEd materials-education module, University of Washington; copyright Edmonds Community College 2007.",
+          "url": "https://materialseducation.org/educators/matedu-modules/docs/Work_Hardening_and_Annealing_of_Copper.pdf",
+          "use": "Supports the increase in resistance to further deformation caused by changes in dislocation structure during plastic working of copper, and the ability of annealing to return copper to a state that is easier to plastically deform. It is not used to provide a universal heat-treatment recipe, claim that every defect is removed, or infer that elastic modulus necessarily increases."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-22-preparation/group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-22-preparation/group1-edit-pass1-evidence.json",
+          "engineering-reader-first-22-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13 perspectives; four actual ordinary ChatGPT Extra High stages."
       }
     },
     {
@@ -50,39 +130,119 @@
       "fieldCode": "0722",
       "fieldTitle": "Materials glass paper plastic and wood",
       "fieldTitleZh": "材料：玻璃、纸、塑料与木材",
-      "title": "The Door That Grew in One Direction",
-      "titleZh": "只朝一个方向长大的门",
-      "summary": "A carpenter builds a storehouse door from his strongest long boards; in the wet season they barely lengthen, yet swell sideways until the frame is trapped.",
-      "summaryZh": "木匠用最结实的长板做仓门，雨季里它没有变长多少，却横着挤死了整副门框。",
-      "storyParagraphs": [
-        "When the granary needed a new door, carpenter Zhou He chose long oak boards with straight grain. Grain prices were rising, and the steward promised a bonus if no stored wheat was lost to rain. Zhou pulled, pressed, and struck the boards along their length and found them strong. Proud of the close fit, he left no coin's width at the frame. In dry autumn the door moved lightly, and he used the leftover oak to make a bed for his daughter.",
-        "With the rainy season, the door first grew heavy and then would not move for two people. Zhou measured its height and found barely two millimetres of change, so he blamed the stone frame and shaved its top. The next storm made the jam worse. Each of twenty boards had widened roughly two millimetres across the grain, adding about forty millimetres across the door. Rain entered while workers pried it open; six sacks of wheat spoiled, and a peg near one end opened a long split along the fibres.",
-        "An old carpenter cut three strips from one board: one along the grain, one across it, and one diagonally. Zhou marked equal lengths, soaked them, and hung the same small weight from each. The cross-grain strip widened most and failed first around its hole; the lengthwise strip carried the pull but changed little in length. His first test had been honest and still incomplete. It had answered how the wood behaved in one direction while the door's failure developed in another.",
-        "The steward laid the spoiled-grain bill across Zhou's plane. Zhou ran his thumb over the newly swollen edge, then carried in the oak reserved for his daughter's bed and began dismantling the door. The replacement used joints that permitted sideways movement and seasonal clearance at the edges. Supports and fasteners avoided concentrating load across the weak direction, and samples were checked in the orientation they would serve. Rain still changed the boards, but the frame no longer trapped that movement into damage.",
-        "Zhou worked three months without profit to repay the granary. On the wettest day of the following year, he carried the same coin to the doorway and placed it in the narrow edge gap. The boards had widened, and the grain stood dark with moisture, but the coin still slid slowly to the bottom. He marked the wet width and dry width on the inner frame for the next carpenter. At home, his daughter's mattress remained on the floor; one unused oak rail leaned beside it."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "同一块板，两个方向",
+      "title": "One Board, Two Directions",
+      "summaryZh": "何玥想让三本推荐书摆在一个轻薄的小架子上，细横条却弯得太明显。她不愿先把架子加厚，目光转向了余料上的木纹。",
+      "summary": "He Yue wants a slim display shelf for three recommended books, but its narrow rail bends too much. Before making the shelf thicker, she takes another look at the grain in the remaining board.",
       "storyParagraphsZh": [
-        "粮仓要换大门，木匠周禾挑了纹路笔直的橡木长板。粮价正在上涨，管事答应只要雨季不损一袋麦子就给奖金。周禾顺着木纹拉、压、敲，板子都很结实，便紧密拼进门框，连一枚铜钱的缝也没留。干燥秋日里门开合轻巧，他还用余木给女儿做了一张床。",
-        "梅雨一来，门先变沉，后来两个人也推不开。周禾量到高度只多约两毫米，便怪石框走形，刨掉上边。下一场雨反而卡得更死：二十块板横纹方向各涨约两毫米，合起来把门宽推大约四十毫米。工人撬门时雨水灌进仓里，六袋麦子发霉，端头木钉还顺纤维劈出长缝。",
-        "老木工从同一块板锯下顺纹、横纹和斜向三条样片。周禾标好等长刻线，泡水后在孔中挂同样砝码。横纹片涨得最明显，也最先从孔边裂开；顺纹片承住拉力，长度变化却很小。他最初的试验没有作假，只回答了一个方向，而门的麻烦恰在另一个方向发生。",
-        "管事把坏麦子的赔款单压在周禾的刨子上。周禾摸过刚刨平又鼓起的门边，转身搬来原本留给女儿床架的橡木，开始拆门。新门用可容许横向移动的连接，边缘留季节缝，固定处避开横纹劈裂，来料也按实际方向检验。雨仍使木板变化，框架却不再把变化锁成破坏。",
-        "周禾三个月没有利润，才赔清粮仓。下一年梅雨最重的一天，他把同一枚铜钱放进门边细缝。门板已经涨宽，湿木纹发黑，铜钱仍缓缓滑到底。他在门框内侧刻下干季和雨季宽度，又把顺纹、横纹样片钉在旁边，让下一名木工先看方向再看木种。新学徒仍问“这木头到底强不强”，周禾便让他先指明是顺纹受拉、横纹固定，还是湿气从哪边进入；问不清方向，强弱就没有完整答案。仓门每季复测一次，若连接卡住便在粮食进仓前处理，不再等两个人推不开才量。铜钱也一直留在门边。回到家，女儿床垫还铺在地上，墙边靠着一根橡木床栏，她已在上面刻了身高。"
+        "书店想在收银台旁摆一个轻薄的小书架，只放三本当月推荐的精装书。何玥做出的第一版外形很好看，可书一放上去，中间那根细木条就弯得比她预想的明显。她不想简单把横条做厚，因为那会把整套架子的轻巧感一起丢掉。",
+        "拆下横条后，她才认真看清切料方向：这块直纹实木板上切出的旧条，主要木纹沿着短边的方向横过条宽。余料还有足够位置，她从相邻区域重新切出一根同样长、宽、厚的样条，这一次让主要木纹沿着木条的长边走。她改变的是从板上取料的方向，不是把旧木条翻个面。",
+        "何玥把两根样条分别跨在相同间距的支点上，在中间放同一个小砝码。横纹样条下弯得更明显，纹路沿条长的样条只微微下沉。她把砝码拿下，又交换测试顺序重复了一次，差别仍看得出来。她把沿条长取纹的那根放到样架旁，决定先拿这个方向试下一版。",
+        "她照这个取向重做了中间横条，把完整书架放回收银台，重新摆上原来的三本精装书继续观察。为了让关键横条顺着这个方向取料，木板的切料布局没有以前自由，边角余料多了一些。",
+        "第二天下午，何玥从书架最下面抽出一本，又把它塞回去。新的中间横条没有像第一版那样明显下垂。旧横条没有被扔掉，她把它截短，装到了书架背面一个只起装饰作用的小位置；工作台上则留下了几块因为取向受限而不好再利用的木料边角。"
       ],
-      "conceptName": "Anisotropy",
+      "storyParagraphs": [
+        "The bookstore wants a slim, lightweight display shelf beside the checkout counter for just three hardcover books from the month's recommendations. He Yue's first version looks good, but once the books are placed on it, the narrow center rail bends more than she expected. She does not want to solve the problem simply by making the rail thicker, because that would also take away the light appearance of the whole shelf.",
+        "After removing the rail, she looks carefully at its cutting direction. In the old strip cut from this straight-grained solid board, the main grain runs in the short-edge direction, across the strip’s width. There is enough material left for another specimen of the same length, width, and thickness from a neighboring area, this time with the grain along the long edge. She changes the direction in which she cuts from the board, rather than turning the old strip over.",
+        "He Yue places the two specimens on supports with the same spacing and puts the same small weight at the center. The cross-grain specimen bends more, while the one with grain along its length deflects only slightly. She removes the weight and repeats the comparison in the opposite order. The difference remains visible. She sets the along-grain specimen beside the prototype shelf and chooses that cutting direction for the next version.",
+        "She remakes the center rail in that orientation, returns the complete shelf to the checkout counter, and puts the same three hardcover books back on it to continue observing. Cutting the critical rail in that direction makes the layout on the board less flexible and leaves more offcuts.",
+        "The next afternoon, He Yue pulls the bottom book from the shelf and slides it back in. The new center rail does not sag as noticeably as the first version. She does not throw away the old, more flexible rail. Instead, she shortens it and uses it as a small decorative strip on the back of the shelf, where it does not perform the same bending task. Several awkwardly shaped offcuts remain on the workbench because the cutting direction is now constrained."
+      ],
+      "overallZh": "各向异性指材料性质会随方向变化。木材内部的纤维和组织有方向性，因此比较同一种木材的变形表现，除了尺寸和受力条件，还要问它是沿哪个方向取出的。",
+      "overall": "Anisotropy means that a material’s properties depend on direction. Wood’s fibres and internal structure are directional, so comparing deformation in the same kind of wood requires knowing the specimen’s orientation as well as its dimensions and loading conditions.",
       "conceptNameZh": "各向异性",
-      "explanationParagraphs": [
-        "Anisotropy means that material properties depend on direction. Wood fibres, metal grains, composite layers, pores, and manufacturing processes can create preferred axes, making strength, stiffness, fracture, moisture swelling, thermal expansion, or permeability differ by direction. Testing and design must state sampling and loading orientation and account for environment, variability, and real connections."
-      ],
+      "conceptName": "Anisotropy",
       "explanationParagraphsZh": [
-        "各向异性指材料性质随方向而变。木材纤维、金属晶粒、复合材料层片、孔隙或制造过程都可能建立优选方向，使强度、刚度、断裂、湿胀、热膨胀或渗透在不同轴上表现不同。试验与设计必须说明取样和加载方向，并结合环境、变异与实际连接方式。"
+        "木材不是各个方向都表现相同的材料。其内部纤维和组织具有方向性，所以沿纤维方向与横向于纤维的弹性响应可以不同；工程上还会进一步区分纵向、径向和弦向。",
+        "最小核对：从同板相邻区域取两根等长、等宽、等厚的样条，在相同支承间距和同一个小载荷下，比较它们的下弯距离，也就是挠度。不同取向可以有不同结果；天然差异仍然存在，一对样条不能给出所有木材的固定性能比。"
       ],
-      "mode": "mechanism-fable",
+      "explanationParagraphs": [
+        "Wood does not behave identically in every direction. Its fibres and internal structure are directional, so elastic response along the fibre direction can differ from response across the fibres. Engineering descriptions further distinguish longitudinal, radial, and tangential directions.",
+        "Minimal check: take two specimens of equal length, width, and thickness from neighboring parts of the same board. With the same support span and small load, compare how far they bend—their deflection. Different orientations can give different results, but natural variation remains, and one pair cannot establish a fixed property ratio for all wood."
+      ],
+      "moduleZh": {
+        "intro": "先让样条尺寸、支承和小载荷可比，再把取向作为需要检查的一个条件，观察它如何影响变形判断。",
+        "diagramTitle": "同一块木板，为什么换一个取样方向就可能弯得不同",
+        "diagramSteps": [
+          "第一版横条的主要木纹横过条宽，放上三本书后下弯明显",
+          "从同一块板相邻区域重新切出相同长、宽、厚的样条，让主要木纹沿条长",
+          "将两根样条放在相同支承间距上并施加同一个小载荷",
+          "纹路沿条长的样条在这次教学比较中下弯更少",
+          "下一版书架改用该取向的横条，再回到完整三本书展示任务中继续检查"
+        ],
+        "diagramStepNotes": [
+          "旧横条的木纹沿短边方向，横过条宽。",
+          "新样条的木纹沿条长；这是重新取样，不是翻面。",
+          "尺寸、支承间距和载荷保持可比；不能拿长短厚薄不同的条直接判取向。",
+          "本次结果还可能受局部含水率、密度和天然特征影响，不能给出通用刚度比例。",
+          "再看完整书架在原任务中的表现，仍不把小样观察当成真实结构设计值。"
+        ],
+        "mapping": [
+          "第一版横纹横条 → 一个在该使用方向下弯曲较明显的取向。",
+          "纹路沿条长的新样条 → 改变材料方向后的可比试片。",
+          "相同支点与小砝码 → 为了缩小几何和加载替代解释的教学条件。",
+          "增加的边角余料 → 为指定取料方向付出的材料利用率代价。"
+        ],
+        "boundary": "木材的机械性能受纵向、径向、弦向方向以及含水率、密度和天然缺陷等多种因素影响。本篇只用两根相邻样条说明“方向可能改变变形表现”，不提供真实结构设计值，也不建立所有方向的普遍优劣排序。不同几何、支承或载荷条件下的弯曲不能直接归因于各向异性。",
+        "reflection": "有人拿一根较短木条和一根较长木条比较下弯，即使两者是同种木材，能只把差异归因于取向吗？还应先让哪些条件可比？"
+      },
+      "module": {
+        "intro": "Make specimen dimensions, support, and the small load comparable, then examine orientation as one condition that matters when interpreting deformation.",
+        "diagramTitle": "Why Can a Different Cutting Direction Change Bending Even Within the Same Board?",
+        "diagramSteps": [
+          "The first center rail has its main grain running across the strip width and bends noticeably under the three books",
+          "Cut another specimen from a neighboring area of the same board with the same length, width, and thickness, but with the main grain running along the strip length",
+          "Place both specimens on supports with the same spacing and apply the same small load",
+          "In this teaching comparison, the specimen with grain along the strip length bends less",
+          "Use that orientation for the next center rail and then return to the complete three-book display task"
+        ],
+        "diagramStepNotes": [
+          "The old rail’s grain runs in the short-edge direction, across its width.",
+          "The new specimen’s grain runs along its length. This requires a new cut, not merely flipping the old strip.",
+          "Keep dimensions, support span, and load comparable; strips of different lengths or thicknesses do not isolate orientation.",
+          "Local moisture, density, and natural features can also affect the result, which does not give a universal stiffness ratio.",
+          "Return to the complete shelf’s original task without treating a small-specimen observation as a structural design value."
+        ],
+        "mapping": [
+          "First center rail with grain across the width → an orientation that bends more noticeably in this use direction.",
+          "New specimen with grain along the strip length → a comparable specimen with a different material orientation.",
+          "Same supports and small weight → teaching conditions used to reduce geometric and loading alternatives.",
+          "Extra awkward offcuts → the material-utilization cost of specifying cutting direction."
+        ],
+        "boundary": "Wood mechanical properties are influenced by longitudinal, radial, and tangential direction as well as moisture content, density, and natural features. This article uses only two neighboring specimens to show that direction can change deformation behavior; it does not provide structural design values or establish a universal ranking of all directions. Bending tests with different geometry, support, or loading conditions cannot be attributed directly to anisotropy.",
+        "reflection": "Someone compares bending in a short strip and a longer strip of the same wood species. Can the difference be attributed to orientation alone? Which conditions should first be made comparable?"
+      },
+      "referencesZh": [
+        {
+          "id": "fpl2021-mechanical-wood",
+          "citation": "Senalik, C. A., & Farber, B. (2021). Chapter 5: Mechanical properties of wood. In Wood handbook—wood as an engineering material. General Technical Report FPL-GTR-282. U.S. Department of Agriculture, Forest Service, Forest Products Laboratory.",
+          "url": "https://research.fs.usda.gov/download/treesearch/62244.pdf",
+          "use": "支持木材具有纵向、径向和弦向等材料方向，弹性性质随方向而异，并会受到含水率、密度和天然特征影响；不用于把一对教学样条的结果外推为真实结构设计值或所有木材的固定比例。"
+        }
+      ],
+      "references": [
+        {
+          "id": "fpl2021-mechanical-wood",
+          "citation": "Senalik, C. A., & Farber, B. (2021). Chapter 5: Mechanical properties of wood. In Wood handbook—wood as an engineering material. General Technical Report FPL-GTR-282. U.S. Department of Agriculture, Forest Service, Forest Products Laboratory.",
+          "url": "https://research.fs.usda.gov/download/treesearch/62244.pdf",
+          "use": "Supports the existence of longitudinal, radial, and tangential material directions in wood, differences in elastic properties by direction, and the influence of moisture content, density, and natural features. It is not used to extrapolate one teaching pair of specimens into structural design values or fixed ratios for all wood."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-22-preparation/group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-22-preparation/group1-edit-pass1-evidence.json",
+          "engineering-reader-first-22-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13 perspectives; four actual ordinary ChatGPT Extra High stages."
       }
     },
     {
@@ -134,39 +294,119 @@
       "fieldCode": "0723",
       "fieldTitle": "Textiles clothes footwear and leather",
       "fieldTitleZh": "纺织：服装、鞋类与皮革",
-      "title": "The Thickest Raincoat",
-      "titleZh": "最厚的雨衣",
-      "summary": "Mountain couriers choose the thickest wool raincoat; after the first long storm it holds the most water and slows its wearer most.",
-      "summaryZh": "邮队为山路挑了最厚的羊毛雨衣，第一场长雨后，它吸饱了水，也把穿衣的人拖得最慢。",
-      "storyParagraphs": [
-        "A mountain postal service needed new raincoats before the winter pass opened. Its captain handled ten fabrics and chose the thickest, heaviest pure wool. Wool had a good name and the cloth felt substantial, so he assumed it must be best at rain protection, warmth, and wear. To claim an early-delivery bonus, he ordered twenty coats from the old pattern without treating hood and shoulder seams separately, then sold the service's spare pack mules.",
-        "During the first long storm, drops initially rested on the surface but entered through stitches after half a day. Lofty yarn held water while the dense coat released little body moisture. A dry coat weighed 1.8 kilograms; at the relay hut one wet coat weighed 4.6. Couriers missed the evening transfer, medicine arrived a day late, and repeated rubbing opened one cuff. With no spare mules, the wearers carried both mail and water uphill.",
-        "A textile specialist brought samples all labelled wool. Some fibres and yarns trapped more air or water; twist, weave density, finish, layers, and seams changed the result again. She rained on, flexed, rubbed, and washed complete sample assemblies instead of measuring thickness alone. One layered trial coat began at 1.5 kilograms and finished the same rain test at 2.2. It was not the best at every isolated property, but its levels worked together under movement, sweat, repeated wetting, and wear.",
-        "The storm report arrived beneath the captain's bonus form before dawn. Water still dripped from the twenty expensive coats when he crossed out his own bonus and sent his ceremonial saddle to auction for replacement funds. The new coat used a tighter outer construction with treated seams, an inner layer for warmth and moisture movement, and reinforcement where packs rubbed shoulders and elbows. Care instructions mattered because harsh washing could damage the finish. The heavy wool coats remained useful only on cold, dry routes.",
-        "After another storm, every medicine pouch reached the relay before dark. The captain's ledger still showed lost bonus, replacements, and mule sale, so he kept dry and wet weight, leakage, abrasion, warmth, and moisture results beside samples. Couriers recorded movement and care after each route, because a strip could not reproduce every seam and shoulder. The service repeated whole-garment tests after washing, folding, seam repair, and pack abrasion instead of treating the first pass as permanent. He dated each retest, because repairs and laundering could change the garment that mattered. One courier hung the new coat; water soon finished dripping. The old thick coat sagged, its 4.6-kilogram tag knocking against the wall."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "卡住换装的袖口",
+      "title": "The Cuff That Stalled the Costume Change",
+      "summaryZh": "演员要在几十秒内换好衣服，袖口却总卡在手掌上。方宁不想换掉已经定好的纱线，针织台边另一块同批纱线的试片，让她有了新的选择。",
+      "summary": "The actor has only a few dozen seconds to change costumes, but a cuff keeps catching on the hand. Fang Ning wants to keep the chosen yarn. Another swatch beside the knitting table suggests a different option.",
       "storyParagraphsZh": [
-        "山路邮队要在冬季山口开放前换雨衣。队长摸过十种布，只挑最厚最重的纯羊毛，认定名声好、手感厚，挡雨、保暖和耐磨自然都最好。为了领提前交货奖，他让裁缝照旧版做二十件，帽缝与肩缝也未另处理，还卖掉邮队备用驮骡。",
-        "第一次长雨里，水珠起初停在表面，半日后沿针脚渗入。蓬松纱线吸住水，紧实外衣又难散汗。干衣重一点八公斤，到驿站时一件湿衣重四点六公斤。邮差错过晚间交接，药包迟到一天，一只袖口也被反复摩擦磨开。备用骡已卖，他们只能同时背邮件与雨水上坡。",
-        "织物师拿来几块都叫羊毛的样布。纤维与纱线吸水、蓄气不同，捻度、织密、整理、层次和接缝又继续改变结果。她对完整样衣反复淋雨、弯折、摩擦和清洗。一件分层试衣干重一点五公斤，同样雨试后为二点二公斤。它并非每项都最高，却能在动作、出汗、反复湿润和磨损中配合。",
-        "天亮前，暴雨报告压在队长的奖金表下面，二十件昂贵外衣还在往地上滴水。他划掉自己的奖金，把礼仪马鞍送去拍卖，用所得筹钱重做。新衣外层更紧并处理接缝，内层兼顾保温与排湿，肩肘按背包摩擦加固；清洗方法也写进交接，因为粗暴护理会毁掉整理。旧厚羊毛衣只留在干冷路线使用。",
-        "又一场雨后，所有药包都在天黑前抵达。队长账上仍留着奖金、重做费与卖骡损失，往后选布时把干湿重、接缝渗水、磨耗、保温和排湿结果都压在样品旁，也让邮差记录闷汗、抬臂、背包摩擦和清洗后的变化。实验室小布条不能替每道肩缝与整件衣服发言，更不能替整个冬季；邮队在清洗、修补、反复折叠和背包磨擦后还要对整衣复测，不把第一次合格当永久保证。木钩旁又添了一本按路线记录的薄册，第一页记着卖骡日期。邮差挂上新衣，水很快滴尽；旧厚衣仍沉沉坠着，四点六公斤标签轻敲墙面。队长取下被拉弯的旧木钩，钉在测试板最上方。"
+        "剧团正在改一件舞台上衣。演员只有几十秒换装，第一版袖口却刚好卡在手掌最宽的地方，每次都要停下来把布一点点往下拽。方宁已经和舞美确认过纱线的颜色与表面效果，不想为了这一处袖口把整件衣服的材料都换掉。",
+        "针织台边还留着用同一批纱线织出的另一种组织。方宁剪下两块宽度相同的试片，在两块布上各做两个原本相距100 mm的标记，再沿袖口实际会被撑开的同一方向比较。她把每块试片分别接到同一只小弹簧秤上，拉到同一个较小读数：第一块两标记间变成约112 mm，第二块到了约140 mm。",
+        "她把第二块布放到灯下，再慢慢拉一次。原本弯曲相连的线圈先转动、张开，彼此位置也在变化，布面就在这些几何变化中被拉长。100 mm到140 mm意味着这段布面的长度增加约40%，但这并不等于组成它的每根纱线本身都各自伸长了40%。方宁把刚翻开的纱线册合上，转而问针织师：“袖口能不能只换这个组织？”",
+        "新的小袖口装到试衣样衣上，演员把手掌顺利穿了过去。松手后，袖口回到当次试穿可用的尺寸。方宁看了看灯下更明显的织纹，把新组织只留在袖口，衣身仍保持原来平整的织面。",
+        "正式排练时，演员从上一套服装出来，抬手穿进新袖口，另一只手已经伸去拿下一件外套，没有再低头和袖口较劲。方宁站在侧幕边看见那只手顺利穿过去，便把原来那对卡手的旧袖口塞回工具篮，转身去管下一场换装。"
       ],
-      "conceptName": "Fibre structure and textile properties",
+      "storyParagraphs": [
+        "The theatre company is altering a stage top. The actor has only a few dozen seconds to change costumes, but the first cuff catches at the widest part of the hand and has to be worked down little by little every time. Fang Ning has already agreed with the stage-design team on the yarn's colour and surface appearance, and she does not want to change the material for the entire garment just to solve one cuff.",
+        "Another knitted structure made from the same batch of yarn is still sitting beside the knitting table. Fang Ning cuts two specimens of the same width and places two marks on each, initially 100 mm apart. She compares them along the same direction in which the cuff would actually be stretched. Each specimen is connected in turn to the same small spring scale and pulled until the scale reaches the same low reading. The distance between the marks on the first specimen becomes about 112 mm; on the second, about 140 mm.",
+        "She places the second fabric under the light and slowly stretches it again. The curved, connected loops first rotate and open, while their relative positions also change, allowing the fabric surface to lengthen through these geometric changes. An increase from 100 mm to 140 mm means this measured length of fabric has increased by about 40%, but it does not mean that every yarn in the fabric has itself elongated by 40%. Fang Ning closes the yarn catalogue she has just opened and asks the knitter, “Can we change only the cuff to this structure?”",
+        "With the new cuff attached to the fitting garment, the actor’s hand passes through smoothly. After release, the cuff returns to a size usable for that fitting. Fang Ning looks at its more visible texture under the light and keeps the new structure at the cuff, leaving the garment’s body in the flatter original fabric.",
+        "During the full rehearsal, the actor comes out of the previous costume and pushes a hand through the new cuff while the other hand is already reaching for the next jacket. There is no need to stop and wrestle with the sleeve. Fang Ning, standing in the wings, has just enough time to see the hand pass through cleanly before she drops the old, tight cuffs back into the tool basket and turns to the next costume change."
+      ],
+      "overallZh": "同样的纱线可以织成不同的线圈连接和排列方式，形成伸展表现不同的织物。受拉时，保持原有连接的线圈可以转动、张开、改变形状，使布面拉长。纱线自身的性质与织物的组织结构，是需要一起考虑的两个层次。",
+      "overall": "The same yarn can be knitted into different loop connections and arrangements, producing fabrics with different stretch behavior. Under a pull, loops can rotate, open, and change shape while retaining their connections, allowing the fabric to lengthen. Yarn properties and fabric structure are two levels that need to be considered together.",
       "conceptNameZh": "纤维结构与织物性能",
-      "explanationParagraphs": [
-        "Fibre structure and textile properties emerge across nested levels. Fibre chemistry and form affect yarn; yarn construction and fabric geometry then interact with finishes, seams, garment layers, care, and use to determine heat and moisture transfer, strength, protection, and durability. Fibre name or thickness alone cannot predict a finished garment. Testing should reproduce the relevant loads, environment, and use cycles."
-      ],
+      "conceptName": "Fibre structure and textile properties",
       "explanationParagraphsZh": [
-        "纤维结构与织物性能来自多个嵌套层次：纤维化学和形态影响纱线，纱线构造与织物几何再同整理、接缝、成衣层次、护理和使用共同决定传热传湿、强度、防护与耐久。纤维名称或厚度不能单独预测成品表现，测试应重现相关载荷、环境和使用循环。"
+        "针织物的表现不仅取决于纤维和纱线本身，也取决于线圈怎样连接和排列。不同织法形成不同的组织；受拉时，既定连接下的线圈可以改变几何形状，增加布面长度。因此，织物伸长不等于每根纱线都按同样比例拉长。",
+        "最小核对：同一小拉力下，两块试片的原始标距都是100 mm；变成112 mm时增加12%，变成140 mm时增加40%。这两个比例描述布面两标记之间的变化，不是每根纱线的应变。数值是教学示意，不是论文数据或某类织物的通用伸长率。"
       ],
-      "mode": "mechanism-fable",
+      "explanationParagraphs": [
+        "A knitted fabric’s behavior depends on the fibres and yarn, and also on how the loops connect and are arranged. Different stitch patterns create different structures. Under tension, loops within a given connected pattern can change geometry and increase fabric length. Fabric extension therefore does not mean that every yarn lengthens by the same proportion.",
+        "Minimal check: under the same small force, both specimens start with 100 mm between marks. Reaching 112 mm is a 12% increase; reaching 140 mm is a 40% increase. These percentages describe the marked fabric length, not the strain of every yarn. The values are teaching examples, not reported paper data or universal stretch values for a fabric type."
+      ],
+      "moduleZh": {
+        "intro": "固定纱线来源、初始标距、拉伸方向和小拉力，只改变针织组织，观察布面长度如何不同。",
+        "diagramTitle": "纱线相同，为什么两种针织组织还能伸得不一样",
+        "diagramSteps": [
+          "用同批纱线准备两种不同针织组织的同宽试片",
+          "在两块试片上分别设置原始相距100 mm的标记",
+          "沿同一方向用同一弹簧秤拉到同一个较小读数",
+          "两标记间分别变为约112 mm和140 mm",
+          "观察线圈转动与张开后，把袖口方案从换纱线改为换组织"
+        ],
+        "diagramStepNotes": [
+          "同批纱线提供相同的原料来源信息；织物组织仍是另一层条件。",
+          "100 mm是两个标记之间的原始测量长度，不是整块试片总长。",
+          "弹簧秤读到相同的小拉力，方向也对应；这里并未要求两块拉到同一长度。",
+          "两段布面分别伸长12%和40%，不代表其中每根纱线也伸长相同比例。",
+          "新袖口通过当次试穿，纹路也更明显；长期回复性和耐久仍需另外判断。"
+        ],
+        "mapping": [
+          "同一个纱线名称 → 相同原料层信息，但不足以决定织物层表现。",
+          "两种针织组织 → 不同的线圈连接方式和几何布置。",
+          "112 mm与140 mm → 同一小拉力下不同布面伸展的虚构教学结果。",
+          "更明显的袖口纹路 → 改变组织后付出的外观代价。"
+        ],
+        "boundary": "本篇只说明同一纱线可以因针织组织和线圈几何不同而表现出不同伸展。实际织物还受纱线性质、线圈密度、整理、方向、载荷大小和循环历史等因素影响。织物伸长不能直接等同为纤维或每根纱线同等比例伸长；一次伸展也不能建立长期回复性、耐久性或其他成衣性能结论。",
+        "reflection": "另一块布的两标记原距80 mm，受拉后为100 mm，布面长度增加了多少百分比？能据此认定每根纱线也伸长相同比例吗？"
+      },
+      "module": {
+        "intro": "Hold yarn source, original gauge length, pulling direction, and small force constant, change the knitted structure, and observe how the fabric length responds differently.",
+        "diagramTitle": "If the Yarn Is the Same, Why Can Two Knitted Structures Stretch Differently?",
+        "diagramSteps": [
+          "Prepare two same-width specimens with different knitted structures using yarn from the same batch",
+          "Set two marks 100 mm apart on each specimen as the original measured length",
+          "Pull both in the same direction using the same spring scale to the same low reading",
+          "The marked distances become about 112 mm and 140 mm respectively",
+          "After observing loop rotation and opening, change the cuff solution from different yarn to different knitted structure"
+        ],
+        "diagramStepNotes": [
+          "The same yarn batch provides the same source-material information; fabric structure is another level of conditions.",
+          "The 100 mm is the original distance between two marks, not the specimen’s total length.",
+          "The spring scale reads the same small force in the corresponding direction. The specimens are not required to reach the same length.",
+          "The marked fabric lengths increase by 12% and 40%, not necessarily by the same proportions as every yarn within them.",
+          "The cuff works for this fitting and has a more visible texture; long-term recovery and durability need separate assessment."
+        ],
+        "mapping": [
+          "Same yarn name → the same raw-material-level information, but not enough to determine fabric-level performance.",
+          "Two knitted structures → different loop connections and geometric arrangements.",
+          "112 mm and 140 mm → fictional teaching outcomes showing different fabric extension under the same small force.",
+          "More visible cuff texture → the appearance trade-off introduced by changing the structure."
+        ],
+        "boundary": "This article only shows that the same yarn can produce different stretch behavior when knitted structure and loop geometry differ. Real fabrics are also affected by yarn properties, stitch density, finishing, direction, load magnitude, and loading history. Fabric extension cannot be equated directly with the same proportional extension of fibres or every yarn, and one stretch test does not establish long-term recovery, durability, or other garment properties.",
+        "reflection": "Another fabric has 80 mm between two marks before loading and 100 mm afterward. What is the percentage increase in that fabric length? Does it establish that every yarn has extended by the same percentage?"
+      },
+      "referencesZh": [
+        {
+          "id": "singal2024-knitted-mechanics",
+          "citation": "Singal, K., Dimitriyev, M. S., Gonzalez, S. E., Cachine, A. P., Quinn, S., & Matsumoto, E. A. (2024). Programming mechanics in knitted materials, stitch by stitch. Nature Communications, 15, 2622. https://doi.org/10.1038/s41467-024-46498-z",
+          "url": "https://www.nature.com/articles/s41467-024-46498-z",
+          "use": "支持相同组成纱线通过改变针织线圈拓扑和几何可形成不同力学响应，并支持区分纱线层与织物结构层；不用于声称所有针织物都能完全回复、纱线从不伸长或其他成衣性能由组织单独决定。"
+        }
+      ],
+      "references": [
+        {
+          "id": "singal2024-knitted-mechanics",
+          "citation": "Singal, K., Dimitriyev, M. S., Gonzalez, S. E., Cachine, A. P., Quinn, S., & Matsumoto, E. A. (2024). Programming mechanics in knitted materials, stitch by stitch. Nature Communications, 15, 2622. https://doi.org/10.1038/s41467-024-46498-z",
+          "url": "https://www.nature.com/articles/s41467-024-46498-z",
+          "use": "Supports the idea that the same constituent yarn can produce different mechanical responses when knitted-loop topology and geometry change, and supports distinguishing yarn-level behavior from fabric-structure-level behavior. It is not used to claim that all knitted fabrics recover perfectly, that yarn never stretches, or that stitch structure alone determines other garment properties."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-22-preparation/group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-22-preparation/group1-edit-pass1-evidence.json",
+          "engineering-reader-first-22-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13 perspectives; four actual ordinary ChatGPT Extra High stages."
       }
     },
     {
@@ -176,39 +416,131 @@
       "fieldCode": "0723",
       "fieldTitle": "Textiles clothes footwear and leather",
       "fieldTitleZh": "纺织：服装、鞋类与皮革",
-      "title": "The Uniform That Saved One Yard of Cloth",
-      "titleZh": "省下一尺布的制服",
-      "summary": "To save costly checked cloth, a workshop rotates sleeves and fronts into empty spaces; once worn, the uniforms begin twisting too.",
-      "summaryZh": "裁衣坊为了省下昂贵格纹布，把袖片和前襟转着塞进空处，制服穿上身后也跟着转了起来。",
-      "storyParagraphs": [
-        "The city guard ordered two hundred checked winter uniforms when imported cloth cost half again as much as the year before. To preserve his margin, workshop owner Feng Sheng packed paper patterns across the cloth like a puzzle. One sleeve lay crosswise, a front panel diagonally, and pieces faced whichever direction left space. Saving one yard per uniform meant two hundred yards and enough profit to keep every apprentice through winter. Each garment looked respectable while flat on the table.",
-        "On the first patrol, one right sleeve climbed continually and a trouser seam turned toward the calf. Check lines failed to meet at buttons, while reversed nap made one side look lighter in the sun. After snow and drying, diagonal pieces twisted further; a mounted guard could not raise his arm cleanly to signal. The commander rejected eighty finished uniforms and withheld payment on the rest. Feng first ordered tailors to pull the seams straight, but the cloth turned again overnight.",
-        "An old tailor opened one uniform and redrew the selvage, warp, weft, grain lines, and pattern references. She cut equal strips lengthwise, crosswise, and diagonally, washed them, and laid them back over the marks. The diagonal strip distorted most; the checked lines and nap exposed every rotation. Stitching could not permanently correct pieces cut against the direction required by their load, drape, shrinkage, and neighbouring pattern. The saved yard had been borrowed from the garment during wear.",
-        "Feng lifted the form that blamed the soldiers' bodies, tore it through the signature line, and unlocked the cloth reserve meant for spring orders. He paid apprentices through the recutting delay and lost the season's profit. Cloth was relaxed and pre-shrunk; main panels followed their required direction, and checks, nap, and joining marks met across pieces. A deliberately bias-cut collar remained diagonal but received support and allowance. Empty spaces returned to the cutting layout, while twisting disappeared.",
-        "The corrected uniforms arrived after the first snow. No apprentice was dismissed, but Feng sold his fur coat to cover wages and walked home patched. He nailed a saved strip beside the table, its checks skewed, and wrote eighty rejected uniforms beneath it. For every cloth he recorded nap, grain, relaxation, pre-shrinkage, pattern matches, and intended bias pieces before chasing yield. Apprentices reported wearing, laundering, twisting, rework, matched-check waste, and usable offcuts beside yards saved. Empty spaces remained an honest cost rather than hidden failure. The saved strip stayed there through every later winter, beside the altered cutting plan. Its selvage met the table line first again."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "落剪之前",
+      "summaryZh": "一块大叶印花布只够做一件衬衫。林遥转动纸样，终于省出了余料，纸样上的箭头和侧缝上的叶子，却让她迟迟没有落剪。",
       "storyParagraphsZh": [
-        "卫队订做两百套冬季格纹制服，进口布比往年贵一半。坊主冯笙为守住利润，把纸样像拼图排满布面：袖子横放，前襟斜插，绒面哪里有空放哪里。每套省一尺，两百套便是两百尺，足够让所有学徒熬过冬天。衣服平铺时仍像模像样。",
-        "第一次巡城，右袖不断上爬，裤缝绕到小腿前；扣子处格线错开，逆绒一侧在阳光下发白。雪后烘干，斜裁片扭得更厉害，一名骑卫抬臂示意都受阻。卫队退回八十套，并扣住余款。冯笙先叫人硬拉缝线，布料一夜后又转回去。",
-        "老裁缝拆开一件，画出布边、经纬、裁片纹向和图案基准。她剪下等长的顺向、横向与斜向布条，洗后放回刻线，斜条变形最大；格纹与绒向又把每次旋转显出来。缝线不能永久补救裁片在受力、垂坠、缩水和相邻图案上放错方向。省下的一尺，是从穿着形状里借来的。",
-        "冯笙拿起那张怪罪士兵身材的记录，从签名处撕开，又打开留给春单的布库。重裁误期期间，他照付学徒工钱，整季利润归零。布先松弛预缩，主片按所需方向，格线、绒向和接合记号彼此对齐；有意斜裁的领片则加支撑与余量。排料空白重新出现，扭转却消失。",
-        "改好的制服在初雪后送到。学徒没有失业，冯笙却卖掉皮袄付工资，穿补丁夹衣回家。他把省下的窄布钉在裁床边，格线歪得清楚，下面写着被退回的八十套。从此每批布先记录绒向、经纬纹向、松弛与预缩，标明相邻格纹怎样相接、哪些裁片有意斜裁，再讨论利用率。学徒若只报“每套省多少”，必须同时报穿着、洗后扭转、格纹配对损耗、可用余料和返工数。新纸样之间仍有空白，冯笙把空白与重新裁掉整件制服的损失放在一张账上，不再让裁床看起来满就等于省钱。那根歪布条一直钉到下一场雪后，边角渐渐卷起，也记录了第一场雪的日期，墨线已褪成灰色。铺布时，旧布边总先同桌上长线对齐。"
+        "林遥要给服装画册做一件大叶印花衬衫，摄影师连背景颜色都已经按这块布定好了。主布展开后，她发现余量只够稳妥地裁这一套正式裁片，不能靠“先剪一版看看”再补救。最难摆的是一块细长侧片：按纸样原来的方向放，会剩下几条不好利用的窄边；转九十度，版面立刻宽松许多。",
+        "主布还是完整的，林遥只在上面移动纸样。这是一块机织印花布，已经铺平，经纬方向和直布边也事先核过。旋转后的侧片上，大叶图案看着没有倒置，可纸样中央那支标出材料取向的长箭头，已经不再与直布边平行。她量了箭头两端到同一条直布边的距离，一头近、一头远，于是把纸样转回规定取向，直到两端距离相同。",
+        "准备继续排其余纸样时，摄影助理指了指侧缝位置：“这两片叶子最后能接上吗？”林遥把相邻纸样按接合记号靠在一起。若只看纸样外侧的裁剪轮廓，叶尖像是正好相接；可真正缝合时，两边都会有一段布被收进缝份。她改看纸样标出的缝合位置，叶柄在那里反而错开了。",
+        "这一次，她没有再旋转纸样。侧片的纹向箭头继续保持与布边平行，只把整片纸样在布面上平移，旁边尚未裁下的纸样也跟着重新腾挪。林遥把相邻接合记号重新对上，再检查这条侧缝真正形成的位置，直到叶片在那里自然衔接。新的排法更费布，原本能留下的一大块整余料也被挤成了几块零碎区域。",
+        "林遥沿这一侧最后核对了纹向箭头、接合记号和缝合线，才落下剪刀。正式裁片只有这一套。缝好后到了拍摄日，模特转身，侧缝上的大叶从前片接到了后片。摄影师从取景器后说：“侧面这一张也留。”林遥把形状古怪的余布拢进材料袋，原本想顺手做的小配饰只好取消。"
       ],
-      "conceptName": "Grain and pattern alignment",
+      "overallZh": "排纸样时，材料方向和接缝图案要用不同参照核对。纹向箭头按设计要求对应布料方向；印花能否跨过接缝连续，则要看真正的缝合线和接合记号。裁剪边上的叶子碰在一起，并不能代替这两项检查。",
       "conceptNameZh": "纹理与版型对齐",
-      "explanationParagraphs": [
-        "Grain and pattern alignment positions garment pieces correctly relative to warp, weft, bias, stretch, drape, nap, visual pattern, and assembly references. Direction affects twisting, shrinkage, loading, and appearance. Fabric relaxation, pre-shrinking, sewing feed, and care also matter. Bias cutting can be intentional, but its directional deformation requires suitable support and allowance."
-      ],
       "explanationParagraphsZh": [
-        "纹理与版型对齐使裁片相对于经纬、斜向、伸展方向、垂坠、绒向、图案和装配基准正确定位。方向会影响成衣的扭转、缩水、受力和外观；织物松弛、预缩、缝制送布与护理同样重要。斜裁可以是有意设计，但应为方向性变形提供支撑和余量。"
+        "纸样上的纹向箭头（grainline）标示这块裁片应按哪个材料方向摆放。在平整、直布边可用且经纬已核实的机织布上，若纸样要求直纹放置，箭头通常与布边平行。量箭头两端到同一条直布边的距离，两端相同，就能核对这个平行关系。",
+        "图案匹配是另一个问题。裁剪边会包含之后进入缝份的部分，所以两块裁边上的花纹看似相接，并不保证缝好后仍相接。应把相邻纸样按接合记号定位，并检查真正的缝合线附近图案。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "先按纸样设计要求确定裁片的材料取向，再保持这个取向平移纸样，核对真正接缝处的印花。",
+        "diagramTitle": "纸样方向对了以后，为什么图案还要在另一处重新核对",
+        "diagramSteps": [
+          "在经纬和直布边已核实的机织印花布上预排纸样，暂不下剪",
+          "按本例直纹设计要求，使纹向箭头两端到同一直布边的距离相同",
+          "保持这个取向，将相邻纸样按接合记号定位",
+          "检查实际缝合线附近的印花，而不只看裁剪边",
+          "必要时平移纸样并复查整体排料，再裁出这一套正式裁片"
+        ],
+        "diagramStepNotes": [
+          "本例只针对已经确认经纬方向的机织布；印花朝向本身不能替代纱线方向判断。",
+          "纸样是否必须与布边平行应服从纸样设计意图；有意的斜裁或横纹布局并不是错误。",
+          "平移纸样不会改变grainline的方向，只改变纸样在布面上的位置。",
+          "图案匹配要看缝合线和相邻接合记号，因为裁剪边的一部分会进入缝份。",
+          "一条侧缝匹配成功不代表整件衣服所有花纹、合身、缩率或垂坠问题都自动解决。"
+        ],
+        "mapping": [
+          "纸样长箭头 → 纸样规定的材料方向参照。",
+          "直布边 → 本例中检查grainline平行关系的稳定参照。",
+          "接合记号与缝合线 → 判断相邻裁片最终图案是否连续的位置。",
+          "减少的整块余料 → 同时满足材料方向和接缝图案要求所付出的排料代价。"
+        ],
+        "boundary": "本篇只处理已核实经纬方向的机织印花布。grainline的具体方向应遵循纸样本身的设计要求，并非所有衣片都必须按同一种顺纹放置；斜裁和横纹布局可以是有意设计。印花方向也不等于经纬方向。正确的纹向和一条接缝上的图案匹配都不能单独保证整件成衣的合身、缩率、绒向或全部视觉连续性。",
+        "reflection": "另一张纸样明确要求斜裁，但转成箭头平行布边会让印花更好接。能只为拼图案就改变它的设计取向吗？材料方向与接缝图案应分别在哪里核对？"
+      },
+      "referencesZh": [
+        {
+          "id": "sca-pattern-markings",
+          "citation": "SEWING.org. Understanding Pattern Markings, Part 1. Sewing Guideline 3.110 (document marked 5/07).",
+          "url": "https://www.sewing.org/files/guidelines/3_110_pattern_markings_part1.pdf",
+          "use": "支持grainline箭头用于纸样定位，并在纸样未另作指示时通常与布边平行；也支持图案匹配应依据缝合线和相邻接合记号，而不能只看裁剪边。"
+        },
+        {
+          "id": "sca-preparing-to-sew",
+          "citation": "SEWING.org. Preparing to Sew: What to Know Before You Sew—Fabric & Pattern Preparation. Sewing Guideline 4.104 (document marked 3/06).",
+          "url": "https://www.sewing.org/files/guidelines/4_104_preparing_to_sew.pdf",
+          "use": "支持机织布经纬、布边和斜纹方向的基本区分，以及裁剪前核对布料纹向的重要性；本篇不采用其中关于针织或家庭处理的广泛说法。"
+        }
+      ],
+      "title": "Before the First Cut",
+      "summary": "There is just enough large-leaf printed fabric for one shirt. Rotating a pattern piece frees up a useful remnant, but its arrow and the leaves at the side seam make Lin Yao hesitate before cutting.",
+      "storyParagraphs": [
+        "Lin Yao is making a large-leaf printed shirt for a fashion catalogue, and the photographer has already chosen the background colour around this fabric. Once the main fabric is spread out, she realizes there is only enough material to cut one reliable final set of pieces; she cannot afford to “cut one version and see” before trying again. The hardest piece to place is a long, narrow side panel. In the pattern's original orientation it leaves several narrow strips that are difficult to use, but rotating it ninety degrees immediately makes the layout much easier.",
+        "The main fabric is still uncut; Lin Yao is only moving the paper patterns. This is a woven printed fabric, laid flat, with its warp, weft and straight selvage already checked. The large leaves on the rotated side panel do not look upside down, but the long arrow marking the pattern’s intended material direction is no longer parallel to the selvage. She measures from both ends of the arrow to that same edge. One end is closer, so she rotates the pattern back to its specified orientation until the distances are equal.",
+        "As she prepares to place the remaining pattern pieces, the photography assistant points toward the side seam. “Will these two leaves actually meet?” Lin Yao brings the adjoining paper pieces together using their matching notches. If she looks only at the outer cutting outlines, the leaf tips seem to meet perfectly. But when the garment is sewn, part of the fabric on both sides will disappear into the seam allowance. She looks instead at the seamlines marked on the patterns, and there the leaf stems are offset.",
+        "This time she does not rotate the pattern again. The side panel's grainline arrow stays parallel to the selvage; she only slides the entire pattern piece across the fabric, while the neighboring pieces that have not yet been cut are shifted around to make room. Lin Yao realigns the adjoining notches and checks the position where this side seam will actually form until the leaves connect naturally there. The new layout uses more fabric, and the large continuous remnant she could have saved earlier is squeezed into several smaller irregular areas.",
+        "Lin Yao checks the grainline arrow, matching notches and seamline along this side one last time, then lowers the scissors. This is the only final set of pieces she cuts. Once the shirt is sewn and the photography day arrives, the model turns and a large leaf continues across the side seam from front to back. “Keep this side shot too,” the photographer says from behind the viewfinder. Lin Yao gathers the oddly shaped scraps into the material bag. The small accessory she had hoped to make has to be dropped."
+      ],
+      "overall": "Laying out a pattern requires two different reference checks. The grainline arrow follows the design’s intended material direction; print continuity across adjoining pieces is checked at the actual seamline and matching notches. Leaf tips meeting at the cut edges cannot replace those checks.",
+      "conceptName": "Grain and pattern alignment",
+      "explanationParagraphs": [
+        "The grainline arrow on a paper pattern indicates the intended material direction of that piece. On flat woven fabric with a usable straight selvage and verified warp and weft, a piece intended for straight-grain placement normally has its arrow parallel to the selvage. Measuring equal distances from both ends of the arrow to that same edge checks this parallel relationship.",
+        "Pattern matching is a separate issue. Cut edges include material that will later disappear into seam allowances, so prints that seem to meet at the cutting edges may not meet after sewing. Adjoining pattern pieces should be positioned using their matching notches, and the print should be checked around the actual seamline."
+      ],
+      "module": {
+        "intro": "First establish the material orientation required by the pattern, then slide pieces without rotating them to check the print at the actual seam.",
+        "diagramTitle": "Once the Pattern Orientation Is Correct, Why Must the Print Still Be Checked Somewhere Else?",
+        "diagramSteps": [
+          "Lay out paper patterns on woven printed fabric with checked warp, weft and straight selvage, without cutting yet",
+          "For this straight-grain design, place both ends of the grainline arrow the same distance from the same straight selvage",
+          "Keep that orientation and position adjoining pieces using their matching notches",
+          "Check the print around the actual seamline rather than only at cut edges",
+          "Slide pieces if needed, recheck the full layout, then cut the one final set of pieces"
+        ],
+        "diagramStepNotes": [
+          "This example applies only to woven fabric whose warp and weft directions have already been verified; print direction itself cannot substitute for yarn-direction information.",
+          "Whether a pattern piece should run parallel to the selvage depends on the pattern's design intent; deliberate bias or cross-grain layouts are not errors.",
+          "Sliding the pattern piece changes its position on the fabric without changing its grainline orientation.",
+          "Pattern matching should be checked at the seamline and adjoining notches because part of the cut edge will disappear into the seam allowance.",
+          "Successfully matching one side seam does not guarantee that every print, fit, shrinkage, nap, or drape issue in the whole garment is automatically resolved."
+        ],
+        "mapping": [
+          "Long arrow on the paper pattern → the material-direction reference specified by the pattern.",
+          "Straight selvage → the stable reference used in this example to check grainline parallelism.",
+          "Matching notches and seamline → the locations used to judge whether adjoining pieces will produce continuous print at the finished seam.",
+          "Loss of a large usable remnant → the material-layout cost of satisfying both grain orientation and seam-pattern requirements."
+        ],
+        "boundary": "This article applies only to woven printed fabric whose warp and weft directions have been verified. The specific grainline direction should follow the pattern's design intent; not every pattern piece must be placed on the same straight grain, and bias or cross-grain layouts can be intentional. Print direction is also not the same as warp/weft direction. Correct grain orientation and successful print matching at one seam do not by themselves guarantee overall garment fit, shrinkage behavior, nap handling, or complete visual continuity.",
+        "reflection": "Another pattern explicitly calls for bias cutting, but rotating it parallel to the selvage would make the print easier to match. Is print matching alone a reason to change the intended orientation? Where should material direction and seam-print continuity each be checked?"
+      },
+      "references": [
+        {
+          "id": "sca-pattern-markings",
+          "citation": "SEWING.org. Understanding Pattern Markings, Part 1. Sewing Guideline 3.110 (document marked 5/07).",
+          "url": "https://www.sewing.org/files/guidelines/3_110_pattern_markings_part1.pdf",
+          "use": "Supports using the grainline arrow to position pattern pieces and, unless the pattern directs otherwise, keeping it parallel to the selvage. It also supports matching patterns by seamlines and adjoining notches rather than relying only on cut edges."
+        },
+        {
+          "id": "sca-preparing-to-sew",
+          "citation": "SEWING.org. Preparing to Sew: What to Know Before You Sew—Fabric & Pattern Preparation. Sewing Guideline 4.104 (document marked 3/06).",
+          "url": "https://www.sewing.org/files/guidelines/4_104_preparing_to_sew.pdf",
+          "use": "Supports the basic distinction among warp, weft, selvage, and bias directions in woven fabric, as well as the importance of checking fabric grain before cutting. This article does not use the guide's broader claims about knits or household fabric-treatment practices."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-22-preparation/group2-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-22-preparation/group2-edit-pass1-evidence.json",
+          "engineering-reader-first-22-preparation/group2-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13 perspectives; four actual ordinary ChatGPT Extra High stages."
       }
     },
     {
@@ -262,41 +594,119 @@
       "fieldCode": "0724",
       "fieldTitle": "Mining and extraction",
       "fieldTitleZh": "采矿与开采",
-      "title": "Yesterday's Waste Rock",
-      "titleZh": "昨天的废石",
-      "summary": "A mine manager calls every rock below a red copper line waste; years later, a new process sends the same pile back to the mill gate.",
-      "summaryZh": "矿长把铜含量低于红线的石头称作废物，几年后，新工艺却让同一堆石头重新排在选矿厂门口。",
-      "storyParagraphs": [
-        "The assay room at Green Ridge Copper Mine displayed a wooden sign: rock below the red copper line was waste; rock above it went to the mill. Manager Luo Feng treated the line as a natural boundary within the stone and forbade argument. At the road junction, trucks therefore turned either toward the plant or toward the valley stockpile.",
-        "Later, copper prices rose and new equipment recovered more metal from complex ore. A new calculation showed that much of the old stockpile was worth processing. Luo felt embarrassed: if the rock was ore today, how could it have been waste yesterday? At the same time, newly discovered rich material filled the plant. Processing poorer old rock first would displace something more valuable.",
-        "The engineer wrote the assumptions beside the red line before the shift bell: metal price, recovery, processing cost, plant capacity, dilution, transport, environmental obligations, and future opportunities. The copper in the rock had not changed. What changed was the best route for it under a particular set of conditions. Some material should be processed now, some stored, and some still left unmined.",
-        "To test the argument, the finance clerk used fictional ledger units rather than a permanent rule. One tonne grading 0.7 percent contained seven kilograms of copper; at 80 percent recovery, about 5.6 kilograms reached saleable output before charges. A richer tonne could yield twice as much while occupying the same hour of a full plant. When price, recovery, costs, or capacity changed, the comparison changed. Luo had to decide whether to process the old pile now or preserve scarce plant time for richer feed.",
-        "The mine stopped giving permanent labels of only ore or waste. Each decision carried a date, destination, and assumptions, and was reviewed when price, technology, regulation, or capacity changed materially. The valley stockpile was also divided for possible future use and environmental risk instead of being dumped without order.",
-        "Luo postponed the old pile, lost his bonus, and paid to survey and manage it rather than pretending it had no future obligation. He removed the sign but kept the red line, adding a holder for each calculation's date, assumptions, destination, and competing plant feed. The cards required review rather than automatic processing; safety, permission, environmental duties, uncertainty, and future closure liability remained separate gates. No threshold turned mineral presence into a command to mine or process immediately under every future condition, price, or obligation. A richer shipment entered the mill as the first card curled in rain, while the copper inside yesterday's waste rock remained unchanged."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "进料仓前的一次改道",
+      "summaryZh": "化验单还是0.8%，铲车也已等在进料仓前。沈舟本想让这批料直接上皮带，下午送来的回收测试却让他重新拿起计算器。",
       "storyParagraphsZh": [
-        "青岭铜矿的化验室挂着一块木牌：铜低于红线就是废石，高于红线便送进选矿厂。矿长罗峰把它当成石头天生的界限，要求工人不得争论。运矿车因此在岔路口一边去厂房，一边去山谷堆场。",
-        "后来铜价上涨，新设备又能从复杂矿石里多回收一部分金属。工程师重新计算后，发现堆场里不少旧石值得处理。罗峰觉得难堪：若它们今天是矿，昨天怎会是废物？与此同时，新发现的富矿让选矿厂满负荷运转，若先处理较贫的旧石，又会挤掉更有价值的材料。",
-        "换班铃响前，工程师把红线旁边的假设逐项写出：金属价格、回收率、处理成本、厂房能力、贫化、运输、环境义务和未来机会。石头的铜含量没有改变，改变的是在特定时刻把它送往哪条路线更合适。有些材料应立即处理，有些应暂存，另一些在现有条件下仍不值得开采。",
-        "为检验说法，财务员只用虚构账面单位作比较，不把数字当永久规则。一吨含铜零点七个百分点，便含七公斤铜；若回收率八成，扣除其他因素前约有五点六公斤进入可售产物。较富的一吨可能在占用同样厂时的情况下产出两倍。价格、回收、成本或产能一变，比较就变。罗峰必须决定旧堆现在进厂，还是把稀缺厂时留给富矿。",
-        "矿区从此不再只贴‘矿’或‘废’两个永久标签。决定会注明日期、目的地和所用条件，并在价格、技术、法规或能力明显变化时复核。山谷堆场也按可能再利用和环境风险分区管理，而不是随意倾倒。",
-        "罗峰决定暂缓处理旧堆，失去季度产量奖金，又出钱勘查和管理堆场，不再假装它没有未来责任。他把木牌从岔路口取下，红线没有擦掉，只在下面加一只铁槽，放入每次计算的日期、条件、去向和与之争用厂时的材料。卡片只触发复核，不会自动命令开采；安全、许可、环境责任和不确定性仍是另外几道关口。当天一批富矿驶入厂房，第一张卡在雨里卷边，旧堆道路被围栏封住，昨日废石里的铜仍没有改变。"
+        "夜班交接时，处理厂还有一段空余能力。沈舟要决定一批已经从矿下运到厂里的含铜物料今晚要不要直接上皮带；铲车停在进料仓前，司机等他一个手势。化验单仍是0.8%，和最近几批顺利处理的物料差不多，本来这应该是个很快的决定。",
+        "此前相似物料的回收率估计约为80%，下午这次测试却只有约50%。品位没变，每吨里原本含有的铜量仍一样，估计能回收到的铜却少了。材料已经采出，今晚处理线又有闲置能力。沈舟拿出计算器，要先看这一吨进流程所增加的净回收价值，能不能抵上相关处理费用。",
+        "一吨是1000 kg，0.8%含铜就是8 kg。沈舟先按80%回收，在纸上写下6.4 kg；再按每公斤10个账面单位的净回收价值，得到64。与处理这一吨直接相关的增量费用是50，64减50，还剩14。按此前这组条件，0.8%在账面上还能越过处理门槛。",
+        "沈舟把回收率换成刚拿到的约50%。同样8 kg含铜，现在估计只能回收4 kg，净回收价值变成40；再减去50的相关增量费用，就是负10。司机从驾驶室探出头：“进仓吗？”沈舟摇手：“先去待处理区。等这批的回收情况再确认。”化验单上的0.8%没变，车头却换了方向。",
+        "铲车沿黄线绕过进料仓，把物料卸到旁边的指定区域。沈舟转身去看下一批夜班调度。处理线那段空余能力暂时还空着，这一车物料也仍留在厂里；等新的回收信息出来，它还可以重新进入判断。"
       ],
-      "conceptName": "Cut-off grade",
+      "overallZh": "边界品位是在给定条件下用来作取舍判断的品位门槛。本例只问：已经采出的物料，在处理线有闲置能力时，含铜量至少多少，才能让净回收价值抵上本次相关增量费用？回收率、净价值或费用改变，这个处理门槛也会改变。",
       "conceptNameZh": "边界品位",
-      "explanationParagraphs": [
-        "Cut-off grade is a decision threshold that routes material to processing, stockpiling, another process, or non-extraction under stated assumptions; it is not a natural geological boundary. Price, recovery, mineralogy, cost, plant capacity, opportunity cost, sequence, dilution, regulation, and environmental obligations affect it. The presence of a mineral does not mean material should be processed now, and the decision may change with context."
-      ],
       "explanationParagraphsZh": [
-        "边界品位是在给定假设下决定材料进入处理、暂存、其他工艺或不采路线的阈值，不是天然地质分界。价格、回收率、矿物学、成本、处理能力、机会成本、开采顺序、贫化、法规和环境责任都会影响它。资源中含有矿物不等于当下就应处理，决策也可能随情境变化而更新。"
+        "本模型的处理阈值，是每吨物料的净回收价值刚好抵上相关增量费用时的含铜品位。计算时，品位用小数表示：0.8%代入0.008。每吨含铜量为品位×1000 kg/t，再乘回收率和每公斤的净回收价值，最后减去每吨相关增量费用。物料已采出，模型不重计已经发生的采矿成本；处理能力闲置，也不计挤走其他物料的产能机会成本。",
+        "固定每公斤净回收价值为10个账面单位、每吨相关增量费用为50个单位。80%回收时，阈值为50÷(1000×0.80×10)=0.00625，即0.625%；50%回收时为50÷(1000×0.50×10)=0.01，即1.0%。0.8%因而在前者之上、后者之下。两种费用口径不得重复：50是尚未计入每公斤净价值的本次相关增量处理费用。这些数字均为教学虚构。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "先把化验品位换成每吨含有的金属量，再乘回收率得到可回收量，最后与本次决策相关的增量价值和费用比较。",
+        "diagramTitle": "同样0.8%的物料，为什么回收率改变后会跨过处理门槛",
+        "diagramSteps": [
+          "已采物料1 t=1000 kg，0.8%品位对应8 kg含铜量",
+          "按80%回收，6.4 kg×10个账面单位/kg=64个单位净回收价值",
+          "扣除50个单位/t的相关增量处理费用，边际结果为+14",
+          "若当前回收估计降到50%，4 kg×10=40，扣50后变为-10",
+          "在同一固定假设下反推，80%回收时阈值为0.625%，50%回收时阈值为1.0%"
+        ],
+        "diagramStepNotes": [
+          "0.8%先写成0.008；0.008×1000 kg得到每吨物料含铜8 kg。本例物料已采出。",
+          "8 kg×80%=6.4 kg，再乘净价值10个单位/kg。10是教学假设，不是真实铜价。",
+          "每吨只比较尚未计入净价值的相关增量处理费用50；闲置产能下，本模型未加挤走其他物料的机会成本。",
+          "新回收估计令可回收量降到4 kg，40-50=-10；测试代表性仍需确认，50%不是永久性质。",
+          "用费用除以每单位小数品位对应的回收价值；0.00625=0.625%，0.01=1.0%。"
+        ],
+        "mapping": [
+          "0.8%化验品位 → 每吨原始物料中约8 kg含铜量。",
+          "80%与50%回收率 → 把相同含铜量转换成不同可回收量。",
+          "+14与-10 → 在同一净价值和相关增量费用假设下的不同边际处理结果。",
+          "铲车转向待处理区 → 当前条件下暂不处理，而非对物料永久分类。"
+        ],
+        "boundary": "这是已采材料、存在闲置处理能力、单金属、固定净回收价值和固定相关增量费用下的简化边际处理模型。若存在处理能力瓶颈、其他物料的机会成本、额外运输或重新开采费用、多个有价元素、价格变化或其他约束，阈值会不同。这里的边际处理结果不是全矿利润、项目估值、储量认证或投资建议，所有数字均为教学虚构。",
+        "reflection": "仍按回收率50%、每公斤净价值10个账面单位、每吨相关增量费用50计算，若品位为1.2%，每吨边际余量是多少？这个结果为什么仍不能当作全矿利润？"
+      },
+      "referencesZh": [
+        {
+          "id": "cim2019-cutoff",
+          "citation": "CIM Mineral Resource and Mineral Reserve Committee. (2019, November 29). CIM Estimation of Mineral Resources and Mineral Reserves Best Practice Guidelines. Canadian Institute of Mining, Metallurgy and Petroleum.",
+          "url": "https://mrmr.cim.org/media/1113/cim-estimation-of-mineral-resources-nov-29-19.pdf",
+          "use": "支持边界品位需要在明确条件和时间下定义，并区分盈亏平衡、弃置及运营/边际阈值；也支持把成本、回收率和价格等作为阈值输入。本篇只采用已采物料、闲置产能和相关增量费用的简化处理决策，不把它扩展为完整项目盈利或储量认证。"
+        }
+      ],
+      "title": "A Different Turn at the Feed Bin",
+      "summary": "The assay still reads 0.8%, and the loader is waiting at the feed bin. Shen Zhou is about to send the batch onto the conveyor when an afternoon recovery test makes him reach for the calculator again.",
+      "storyParagraphs": [
+        "At the night-shift handover, the processing plant still has some spare capacity. Shen Zhou must decide whether a batch of copper-bearing material that has already been mined and delivered to the plant should go directly onto the conveyor tonight. The loader is waiting in front of the feed bin for his signal. The assay still reads 0.8%, similar to several recent batches that were processed without hesitation, so this would normally be a quick decision.",
+        "Similar material had previously been estimated at about 80% recovery, but the afternoon test gives only about 50%. The grade is unchanged, so each tonne still contains the same amount of copper; less of it is now expected to be recovered. The material is already mined, and the processing line has spare capacity tonight. Shen Zhou takes out his calculator to see whether the net recoverable value added by processing this tonne will cover the relevant cost.",
+        "One tonne is 1000 kg, so 0.8% means 8 kg of contained copper. Shen Zhou first uses 80% recovery and writes down 6.4 kg. At a net recoverable value of 10 accounting units per kilogram, that gives 64. The incremental cost directly associated with processing this tonne is 50, leaving 14. Under those earlier conditions, 0.8% still sits above the processing threshold.",
+        "Shen Zhou replaces the recovery estimate with the new figure of about 50%. The same 8 kg of contained copper would now yield an estimated 4 kg recovered, giving 40 accounting units of net value. Subtract the 50 units of relevant incremental cost and the result is -10. The driver leans out of the cab. “Into the bin?” Shen Zhou waves him off. “Take it to the holding area for now. We’ll wait until the recovery picture for this batch is clearer.” The assay still says 0.8%, but the loader turns the other way.",
+        "The loader follows the yellow line around the feed bin and unloads the material in the designated area nearby. Shen Zhou turns to the next item on the night-shift schedule. That section of processing capacity remains unused for the moment, and the material is still at the plant; when new recovery information arrives, it can be evaluated again."
+      ],
+      "overall": "Cut-off grade is a grade threshold used to make a decision under specified conditions. This example asks only how much copper already mined material must contain for its net recoverable value to cover the relevant incremental cost when the processing plant has spare capacity. Change recovery, net value or cost, and that processing threshold changes too.",
+      "conceptName": "Cut-off grade",
+      "explanationParagraphs": [
+        "In this model, the processing threshold is the copper grade at which net recoverable value per tonne just covers the relevant incremental cost. Enter grade as a decimal: 0.8% becomes 0.008. Multiply grade by 1000 kg/t to obtain contained copper per tonne, then by recovery and net value per kilogram. Subtract the relevant incremental cost per tonne. The material is already mined, so mining costs already incurred are not counted again. Spare capacity also means the model includes no capacity opportunity cost for displacing other material.",
+        "Fix net recoverable value at 10 accounting units per kilogram and relevant incremental cost at 50 units per tonne. At 80% recovery, the threshold is 50÷(1000×0.80×10)=0.00625, or 0.625%. At 50% recovery it is 50÷(1000×0.50×10)=0.01, or 1.0%. The grade of 0.8% therefore lies above the first threshold and below the second. The cost categories must not overlap: the 50 units are relevant incremental processing costs not already included in the net value per kilogram. All values are fictional teaching assumptions."
+      ],
+      "module": {
+        "intro": "Convert assay grade into contained metal per tonne, apply recovery to obtain recoverable metal, and then compare the resulting incremental value with the incremental cost relevant to this processing decision.",
+        "diagramTitle": "Why Can the Same 0.8% Material Cross the Processing Threshold When Recovery Changes?",
+        "diagramSteps": [
+          "For already mined material, 1 t=1000 kg and a grade of 0.8% corresponds to 8 kg of contained copper",
+          "At 80% recovery, 6.4 kg×10 accounting units/kg=64 units of net recoverable value",
+          "Subtract 50 units/t of relevant incremental processing cost to obtain a marginal result of +14",
+          "If the current recovery estimate falls to 50%, 4 kg×10=40 and subtracting 50 gives -10",
+          "Under the same fixed assumptions, the threshold is 0.625% at 80% recovery and 1.0% at 50% recovery"
+        ],
+        "diagramStepNotes": [
+          "Write 0.8% as 0.008: 0.008×1000 kg gives 8 kg of contained copper per tonne. This material is already mined.",
+          "8 kg×80%=6.4 kg, then multiply by 10 units/kg of net value. The 10 is a teaching assumption, not a real copper price.",
+          "Compare the 50 units/t of relevant incremental processing cost not already included in net value. With spare capacity, this model adds no opportunity cost for displacing other material.",
+          "The new recovery estimate gives 4 kg recovered and 40-50=-10. Test representativeness still matters; 50% is not a permanent property.",
+          "Divide cost by the recoverable value per unit of decimal grade: 0.00625=0.625% and 0.01=1.0%."
+        ],
+        "mapping": [
+          "0.8% assay grade → about 8 kg of contained copper per tonne of original material.",
+          "80% versus 50% recovery → conversion of the same contained metal into different recoverable amounts.",
+          "+14 versus -10 → different marginal processing results under the same net-value and incremental-cost assumptions.",
+          "Loader sent to the holding area → a decision not to process under current conditions, not a permanent classification of the material."
+        ],
+        "boundary": "This is a simplified marginal processing model for already mined material, spare processing capacity, a single metal, fixed net recoverable value, and fixed relevant incremental cost. If processing capacity is constrained, other material has an opportunity cost, extra transport or remine costs arise, multiple valuable elements are present, prices change, or other constraints apply, the threshold will change. The marginal processing result here is not whole-mine profit, project valuation, reserve certification, or investment advice. All numerical values are fictional teaching assumptions.",
+        "reflection": "Keeping 50% recovery, 10 accounting units/kg of net value and 50 units/t of relevant incremental cost, what is the marginal result per tonne at a grade of 1.2%? Why is that result still not whole-mine profit?"
+      },
+      "references": [
+        {
+          "id": "cim2019-cutoff",
+          "citation": "CIM Mineral Resource and Mineral Reserve Committee. (2019, November 29). CIM Estimation of Mineral Resources and Mineral Reserves Best Practice Guidelines. Canadian Institute of Mining, Metallurgy and Petroleum.",
+          "url": "https://mrmr.cim.org/media/1113/cim-estimation-of-mineral-resources-nov-29-19.pdf",
+          "use": "Supports defining cut-off grade under specified conditions and at a specified time, distinguishing break-even, discard, and operational or marginal thresholds, and using inputs such as cost, recovery, and price. This article uses only a simplified processing decision for already mined material with spare capacity and relevant incremental costs; it does not extend the example into complete project profitability or reserve certification."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-22-preparation/group2-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-22-preparation/group2-edit-pass1-evidence.json",
+          "engineering-reader-first-22-preparation/group2-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13 perspectives; four actual ordinary ChatGPT Extra High stages."
       }
     },
     {
@@ -530,43 +940,119 @@
       "fieldCode": "0732",
       "fieldTitle": "Building and civil engineering",
       "fieldTitleZh": "建筑与土木工程",
-      "title": "The Roof with Strong Beams Everywhere",
-      "titleZh": "每根梁都很结实的屋顶",
-      "summary": "Every beam, column, and footing in a banquet hall passes inspection, but the first heavy snow finds the broken route between them at a decorative bracket.",
-      "summaryZh": "宴会厅的梁、柱和地基各自都通过检验，第一场大雪却在一只装饰托架上找到了它们之间断掉的路。",
-      "storyParagraphs": [
-        "The new banquet hall used the best timber beams and stone columns. Every beam had been proof-loaded, every column checked, and the foundations were deeper than those of the old hall. During construction, the east doorway was widened and one column moved several feet sideways. Rather than redesign the roof, the carpenter rested the end of a main beam on a handsome carved bracket.",
-        "When the first heavy snow covered the roof, no beam broke and no column cracked. The bracket slowly crushed beneath the beam end. One corner of the roof sank and tiles slid into the empty hall. The banquet had not begun, so no one was hurt. Holding certificates for every component, the owner could not understand why a group of strong pieces had failed to make a strong building.",
-        "The owner ordered workers to add a second bracket before the royal banquet. Engineer Mira instead placed ten sandbags on a small roof model. Each bag's weight moved through tiles and purlins into the main beam, but at the widened doorway the supporting line ended. A nearby certified column received none of that model load. Doubling decoration at the dead end did not connect it to the foundation.",
-        "A structural engineer snapped a red chalk line downward from the snow. Snow pressed the tiles, tiles the purlins, and purlins the main beam. The beam's force should have passed through a connection into a column, foundation, and ground. Above the east door, the red line stopped at the carved bracket with no reliable member beyond it. Force would not cross several feet of empty space merely because a strong column stood nearby.",
-        "Guests' carts were already turning into the lane when the hall owner carried the first invitation to the brazier. He cancelled the banquet and reported the unauthorized column move. Caterers were paid, the remaining invitations burned, and the carpenter lost his bonus while the altered roof was redesigned. During repair, temporary supports received their own checked route; a safe final arrangement could still be unsafe halfway through construction if loads had nowhere continuous to go.",
-        "The repair added beams, columns, and connections that transferred force clearly around the doorway, with lateral bracing continuous to the foundations. Review considered how gravity, wind, and accidental actions crossed every joint during construction as well as use. The carved bracket returned to its place but carried only its own weight.",
-        "When snow fell again, the owner followed the red chalk route from roof to basement, checking each connection named on the repair drawing. Above the east doorway he pushed the bracket with one hand. It moved slightly, while the beam did not. The cancelled banquet date remained carved on its back. In the cellar, the red line ended on the foundation rather than in empty air."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "粗柱旁的那条空隙",
+      "summaryZh": "三枚硬币一放，平台模型的一角就沉了下去。顾言望着旁边那根粗柱，不明白它为什么一点也没帮上忙。",
       "storyParagraphsZh": [
-        "新宴会厅用了最好的木梁和石柱。每根梁单独压过重物，每根柱也验过强度，地基比旧厅更深。施工中，东门被临时加宽，一根柱子向旁边挪了半丈；为了不改屋顶，木匠让主梁末端落在一只漂亮的雕花托架上。",
-        "第一场大雪压住屋顶时，梁没有折，柱也没有裂。那只托架却被梁端慢慢压碎，屋顶一角下沉，瓦片滑进空厅。宴会尚未开始，无人受伤。厅主拿着所有构件的合格单，不明白一群足够强的东西为何没有组成一座足够强的房子。",
-        "厅主命人在王宴前再加一只托架。结构师米拉却先在小屋模上放十袋砂。每袋重量经瓦和檩条走到主梁，到了加宽门洞，承接路线便中断；旁边那根合格石柱一点模型荷载也没收到。把死路尽头的装饰加倍，仍没有把它接到地基。",
-        "结构师用红粉线从雪面一路往下弹：雪压瓦，瓦传给檩条，檩条传给主梁，主梁本应经过连接落到柱、基础和土中。红线走到东门上方时停在雕花托架，没有可靠构件继续接住。力量不会因为下一根柱子很强，就自己跨过半丈空隙。",
-        "宾客车马已经拐进巷口，厅主却把第一张请帖送进火盆，取消宴会并上报未经复核的挪柱。他赔付酒席，烧掉其余请帖，木匠也失去奖金。修复时，临时支撑同样画出传力路线；最终布置可靠，不代表施工中途就可靠，任何阶段的重量都必须有连续去处。",
-        "修复时，东门增加了能明确传力的梁柱和连接，侧向支撑也连续到基础。设计复核同时检查重力、风和偶然作用在施工阶段及使用阶段怎样经过每一次接头。雕花托架仍装回原位，却只承担自身重量。",
-        "再次下雪时，厅主沿红粉线从屋顶走到地下室，逐一核对修复图上的连接。东门上方，他伸手推那只托架；它轻轻晃动，主梁没有随它动。托架背面仍刻着被取消的宴会日期，提醒人空厅也曾付出代价。地下室里，红线穿过新柱脚与底板，终于落在基础上，不再停在半丈空处。厅主把那截旧粉线装进构件合格单的木盒。"
+        "社区建筑展要摆一座巴掌大的平台模型，参观者可以把三枚硬币叠在平台角上的黄色圆点处，看模型怎样把重量传到底下。顾言第一次按这个摆法试演时，平台一角往下沉，三枚硬币随着斜面滑到桌上。最奇怪的是，下沉位置旁边明明立着一根比其他柱子还粗的小柱。",
+        "顾言把模型举起来看底面。横梁托着面板，端部却只从粗柱柱顶旁边经过，并没有真正落上去。两个部件靠得很近，中间仍有一条空隙。他没有换一根更粗的柱子，而是去找能放进这个位置的小托座。",
+        "那块透明说明牌恰好挡着梁端与柱顶之间的位置，顾言先把它移到模型外侧，才放进小托座。原来的面板、横梁、柱子、底座和其他支承都保留。他把同样三枚硬币按原叠法放回黄色圆点，平台这次保持住了。他顺着新增支路看过去：面板压着横梁，横梁经过托座压到立柱，立柱再把一部分重量传到底座和桌面。",
+        "顾言取走硬币，拆下托座，再按相同位置和叠法放回三枚，平台角又往下沉。他再次取走硬币，把托座装回。移到外面的说明牌让展示台显得零碎了些，他仍把它留在那里，让托座完整地露出来。",
+        "展览开始后，一位参观者拿起那三枚演示硬币，照黄色圆点重新叠好。平台没有再往下歪。她弯腰看见横梁下面露出的托座，先指了指它，又指向底座：“这里真的接上以后，才有路走下去？”顾言把模型轻轻转向她：“对，这一条现在接上了。”三枚硬币还停在圆点上。"
       ],
-      "conceptName": "Load path",
+      "overallZh": "本篇用低风险桌面重力模型说明荷载路径的一个入口：荷载需要通过实际构件以及方向合适的接触或连接，连续传到支承和最终基础。附近存在强构件并不足够，如果中间缺少真实传力环节，那根构件就不会自动加入所讨论的荷载路径。",
       "conceptNameZh": "荷载路径",
-      "explanationParagraphs": [
-        "A load path is the continuous route by which gravity, wind, use, and accidental actions pass through members and connections to supports and the ground. Every transfer must satisfy strength, stiffness, stability, direction, ductility, and durability requirements, including construction stages and load combinations. Strong individual components cannot compensate for missing, eccentric, or incompatible connections; force must actually reach the next element."
-      ],
       "explanationParagraphsZh": [
-        "荷载路径是重力、风、使用和偶然作用经构件与连接连续传到支座和大地的路线。路径中的每次传递都要满足强度、刚度、稳定、方向、延性和耐久要求，并考虑施工阶段及荷载组合。单个构件足够强，不能补偿缺失、偏心或不相容的连接；系统必须把力真正送到下一处。"
+        "向下的重力荷载可以沿面板、横梁、实际承压支承、立柱和底座逐步传递。判断路径时要逐段问：这个构件的作用怎样真正交给下一个构件，而不能因为两个部件在图上或空间上靠得很近，就假定力可以跨过空隙。",
+        "本模型只追踪新增托座形成的一条支路，并不假设三枚硬币的全部重量都只经过这一根柱。没有托座时，模型仍通过其他接触、支承和变形重新分配作用；装上托座后，只是多了一条实际连续的向下传递路线。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "固定硬币位置、模型主体和其他支承，只拆装一个托座，观察附近的粗柱何时真正加入向下传力路线。",
+        "diagramTitle": "粗柱一直都在，为什么只有加上托座后它才真正参与传力",
+        "diagramSteps": [
+          "三枚硬币按固定叠法放在角落黄色圆点上，平台角下沉",
+          "检查底面：横梁端部没有落到旁边的粗柱上",
+          "先移开挡位说明牌，再装托座；面板、梁、柱、底座和其他支承不换",
+          "同样硬币、位置和叠法下，装上托座平台保持，拆掉后下沉复现",
+          "取走硬币，重新装回托座，保留移开的说明牌，再用于展示"
+        ],
+        "diagramStepNotes": [
+          "固定数量、位置和叠法，避免把荷载摆法变化当成托座效果。",
+          "梁和柱靠得近不等于已接通；没有托座时，重量仍经其余接触、支承和变形重新分配。",
+          "说明牌先腾位置，托座才真正承在梁端和柱顶之间；这只是桌面模型构造。",
+          "拆装支承前先取走硬币，再复放比较；新增托座只是一条支路，不独自承担全部重量。",
+          "承压接触与抗上拔连接不同。保留展示空间代价，不把本模型当成真实结构验收。"
+        ],
+        "mapping": [
+          "三枚硬币 → 固定位置上的教学重力荷载。",
+          "未接上的粗柱 → 附近很强但尚未进入该传力路线的构件。",
+          "小托座 → 让横梁向下作用真实进入立柱的承压支承。",
+          "移开的透明说明牌 → 为连续实际支承让出空间所付出的展示代价。"
+        ],
+        "boundary": "这是只处理向下重力的桌面模型，不提供真实建筑承载、抗风抗震、改造或安全验收依据。承压接触能在压缩方向传力，并不自动意味着在上拔、侧向或反向作用下仍具有所需连接能力。真实结构还需检查各构件、连接和基础在具体方向上的能力以及完整连续路径。",
+        "reflection": "如果作用方向改成向上拉，这只靠承压接触放置的托座能自动沿用吗？应怎样检查各环节在新方向上是否真的能传力？"
+      },
+      "referencesZh": [
+        {
+          "id": "fema2010-p804-load-path",
+          "citation": "Federal Emergency Management Agency. (2010, December). Wind Retrofit Guide for Residential Buildings. FEMA P-804, sections 3.1.2 and 4.3.1, pp. 3-4–3-5 and 4-21–4-23.",
+          "url": "https://www.govinfo.gov/content/pkg/GOVPUB-HS5_100-PURL-gpo19741/pdf/GOVPUB-HS5_100-PURL-gpo19741.pdf",
+          "use": "支持连续荷载路径需要通过真实结构构件和连接把作用传至基础与地面，以及缺失连接会中断预期传力；也支持连接能力与受力方向有关。本篇只借用该连接原则解释低风险桌面重力模型，不作为真实建筑规范合规或改造依据。"
+        }
+      ],
+      "title": "The Gap Beside the Thick Column",
+      "summary": "Three coins make one corner of the platform model drop. Gu Yan looks at the thick column beside it and wonders why it has done nothing to help.",
+      "storyParagraphs": [
+        "A community building exhibition is preparing a palm-sized platform model. Visitors will be able to stack three coins on a yellow dot at one corner and watch how the model carries the weight downward. When Gu Yan rehearses the demonstration, the platform corner drops and the three coins slide down the tilted surface onto the table. The strange part is that a small column thicker than the others is standing right beside the spot that moves.",
+        "Gu Yan lifts the model and looks underneath. The beam supports the deck, but its end passes beside the thick column’s top instead of actually bearing on it. The two parts are close, yet a gap remains. He leaves the column in place and looks for a small bracket that will fit between them.",
+        "A transparent information card blocks the space between the beam end and the column top. Gu Yan moves it outside the model before fitting the small bracket. He keeps the original deck, beam, column, base and other supports. He returns the same three coins to the yellow dot in the same arrangement, and this time the platform stays up. He traces the new branch: deck to beam, through the bracket to the column, then part of the weight through the base to the table.",
+        "Gu Yan removes the coins, takes out the bracket, then returns the three coins in the same position and arrangement. The corner drops again. He removes the coins once more and reinstalls the bracket. The relocated information card makes the display look more cluttered, but he leaves it outside the model so the bracket remains fully visible.",
+        "Once the exhibition opens, a visitor picks up the three demonstration coins and stacks them again on the yellow dot. The platform no longer tilts down. She bends to look underneath, sees the bracket exposed below the beam, points first to it and then to the base, and asks, “So only after this is really connected is there a route downward?” Gu Yan turns the model slightly toward her. “Yes. This branch is connected now.” The three coins remain on the yellow dot."
+      ],
+      "overall": "This article uses a low-risk tabletop gravity model to introduce one aspect of a load path: a load must pass continuously through actual structural members and direction-appropriate contacts or connections to supports and ultimately to the foundation or ground. The mere presence of a strong member nearby is not enough; if a real transfer step is missing, that member does not automatically join the load path being considered.",
+      "conceptName": "Load path",
+      "explanationParagraphs": [
+        "A downward gravity load can pass through a deck, beam, actual bearing support, column, and base in sequence. To trace the path, ask at every step how one member actually transfers its action to the next; two components being close together in a drawing or in space does not allow force to jump across a gap.",
+        "This model follows only the additional branch created by the new bracket and does not assume that all the weight of the three coins passes exclusively through this one column. Without the bracket, the model still redistributes action through its other contacts, supports, and deformation. Adding the bracket simply creates another physically continuous downward transfer route."
+      ],
+      "module": {
+        "intro": "Keep the coin location, main model components, and other supports fixed, change only whether one bracket is present, and observe when the nearby thick column actually joins the downward load-transfer route.",
+        "diagramTitle": "The Thick Column Was Always There—Why Does It Participate Only After the Bracket Is Added?",
+        "diagramSteps": [
+          "Stack three coins in the fixed arrangement on the yellow corner dot; the corner drops",
+          "Inspect underneath: the beam end does not bear on the nearby thick column",
+          "Move the obstructing card before fitting the bracket; keep the deck, beam, column, base and other supports",
+          "With the same coins, location and arrangement, the platform stays up with the bracket and drops again without it",
+          "Remove the coins, reinstall the bracket, leave the card relocated and return the model to the exhibition"
+        ],
+        "diagramStepNotes": [
+          "Fix quantity, position and stacking arrangement so a changed load placement is not mistaken for a bracket effect.",
+          "Closeness is not a connection. Without the bracket, weight is still redistributed through other contacts, supports and deformation.",
+          "Clear the card first so the bracket can actually bear between beam end and column top. This is only a tabletop-model detail.",
+          "Remove coins before changing support, then replace them for comparison. The new bracket is one branch, not the sole carrier of all weight.",
+          "Bearing contact differs from an uplift connection. Keep the display-space trade-off without treating the model as real structural approval."
+        ],
+        "mapping": [
+          "Three coins → the teaching gravity load at a fixed position.",
+          "Thick but unconnected column → a nearby strong member that has not yet entered the intended load-transfer route.",
+          "Small bracket → the bearing support that allows downward action from the beam to enter the column.",
+          "Relocated transparent information card → the display-space cost of making room for a real continuous support."
+        ],
+        "boundary": "This is a tabletop model dealing only with downward gravity. It provides no basis for real-building capacity, wind or earthquake design, retrofit work, or safety approval. Bearing contact can transfer compression in the direction for which it is engaged, but it does not automatically provide the connection required for uplift, lateral action, or reversed loading. Real structures require checking the capacity of every member, connection, and foundation in the relevant direction and verifying the complete continuous load path.",
+        "reflection": "If the applied load pulls upward instead, can this bracket, engaged only through bearing contact, automatically be used in the same way? What must be checked at each transfer step in the new direction?"
+      },
+      "references": [
+        {
+          "id": "fema2010-p804-load-path",
+          "citation": "Federal Emergency Management Agency. (2010, December). Wind Retrofit Guide for Residential Buildings. FEMA P-804, sections 3.1.2 and 4.3.1, pp. 3-4–3-5 and 4-21–4-23.",
+          "url": "https://www.govinfo.gov/content/pkg/GOVPUB-HS5_100-PURL-gpo19741/pdf/GOVPUB-HS5_100-PURL-gpo19741.pdf",
+          "use": "Supports the principle that a continuous load path transfers applied loads through actual structural members and connections to foundations and ground, that missing connections interrupt intended load transfer, and that connection requirements depend on load direction. This article uses that connection principle only for a low-risk tabletop gravity model and not as a claim of real-building code compliance or retrofit adequacy."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-22-preparation/group2-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-22-preparation/group2-edit-pass1-evidence.json",
+          "engineering-reader-first-22-preparation/group2-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13 perspectives; four actual ordinary ChatGPT Extra High stages."
       }
     },
     {
