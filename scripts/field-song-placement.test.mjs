@@ -92,3 +92,48 @@ test('every displayed subject song has a catalog recording and appears only once
   }
   assert.equal(h.context.renderFieldSongs(null, '/fields/missing'), '');
 });
+
+test('a real field with a slug id plays on both its short code route and full slug route', async () => {
+  const h = harness(), context = h.context, target = { innerHTML: '' }, buttons = [], played = [];
+  let route = '', state = { id: null, playing: false, pending: false, failed: false };
+  Object.assign(context, {
+    categorySongRenderToken: 0, categorySongPlaybackToken: 0, categorySongPendingId: null, ownerCulturalSongs: [],
+    document: { getElementById: id => id === 'fieldDetailCard' ? target : null, querySelector: () => null,
+      querySelectorAll: selector => selector === '[data-category-song-id]' ? buttons : buttons.map(button => button.status) },
+    getStoriesForField: () => [], getConnectedFields: () => [], getAreaById: () => null, getNarrowFieldById: () => null,
+    getLitFieldCodes: () => new Set(), getFieldCoreConceptFables: () => [], t: key => key,
+    renderCategoryVideoPreview: () => {}, normalizeRoute: value => value,
+  });
+  const dock = { snapshot: () => ({ ...state }), play: async id => {
+    played.push(id); state = { id, playing: true, pending: false, failed: false }; return true;
+  } };
+  context.window = { location: { get pathname() { return route; } }, MapKAIMusicDock: dock };
+  context.waitForCategorySongPlayer = () => Promise.resolve(dock);
+  vm.runInContext(['makeCoordinateId', 'getFieldById', 'resetCategorySongModules', 'refreshCategorySongModules',
+    'playCategorySongModule', 'renderFieldDetail'].map(handler).join('\n'), context);
+  const field = { ...fields.find(item => item.code === '0021') };
+  field.id = context.makeCoordinateId(field.code, field.title);
+  assert.equal(field.id, '0021-literacy-and-numeracy');
+  context.knowledgeFields = [field];
+  for (const routeKey of [field.code, field.id]) {
+    route = `/fields/${routeKey}`;
+    state = { id: null, playing: false, pending: false, failed: false };
+    buttons.length = 0;
+    context.renderFieldDetail(routeKey);
+    const markup = target.innerHTML.match(/<button[^>]*data-category-song-id="[^"]+"[^>]*>/)?.[0];
+    assert.ok(markup, 'Subject reader should contain a song control');
+    const attr = name => markup.match(new RegExp(`${name}="([^"]*)"`))?.[1];
+    assert.equal(attr('data-song-route'), route);
+    const status = { textContent: '' }, attributes = new Map();
+    const button = { dataset: { categorySongId: attr('data-category-song-id'), songCategory: attr('data-song-category'),
+      songRoute: attr('data-song-route'), songTitle: attr('data-song-title') }, disabled: false, isConnected: true, status,
+      setAttribute: (name, value) => attributes.set(name, value), removeAttribute: name => attributes.delete(name),
+      closest: () => ({ querySelector: () => status }) };
+    buttons.push(button);
+    await context.playCategorySongModule(button);
+    assert.equal(played.at(-1), button.dataset.categorySongId);
+    assert.equal(played.length, routeKey === field.code ? 1 : 2);
+    assert.equal(button.dataset.state, 'playing');
+    assert.equal(route, `/fields/${routeKey}`);
+  }
+});
