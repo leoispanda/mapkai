@@ -132,6 +132,8 @@
 }
 .map-frame:fullscreen,.map-frame.is-expanded{height:100dvh;min-height:100dvh}
 .map-read-key{color:var(--muted);background:var(--map-paper);padding:3px 6px;line-height:1.4}
+.map-category .map-label{font-weight:700}
+.map-field .map-label{font-weight:500}
 .map-read-key>p{font-size:11px;margin:0 0 2px}
 .map-lamp-key{display:flex;gap:10px;align-items:center;font-size:10px;color:var(--map-label)}
 .map-key-compact{display:none}.map-lamp-key>span:last-child{padding-left:10px;border-left:1px solid var(--line)}

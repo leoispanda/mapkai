@@ -23,8 +23,8 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
     if(event.sourceEvent){focusMode=null;setViewMode('custom');}updateMini();
   });
   surface.call(zoom).on('dblclick.zoom',null);
-  function wrap(label,size,maxWidth){
-    measure.font=`600 ${size}px ${family}`;
+  function wrap(label,size,maxWidth,weight=500){
+    measure.font=`${weight} ${size}px ${family}`;
     const raw=String(label).match(/\p{Script=Han}|[^\s\p{Script=Han}]+|\s+/gu)||[];
     const tokens=raw.flatMap(token=>measure.measureText(token).width>maxWidth?[...token]:[token]);const lines=[];let line='';
     for(const token of tokens){if(line&&measure.measureText(line+token).width>maxWidth){lines.push(line.trim());line=token.trimStart();}else line+=token;}
@@ -36,14 +36,14 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
     const name=(large?15:phone?8.2:tablet?11:width<1350?12.5:14)*scale;
     return {scale,phone,name,small:name*.85,resource:name*.75,line:name*1.16,pad:2*scale,light:name*.235,gap:(phone?2:tablet?4:6)*scale,
       fieldWidth:(large?(zh?160:176):phone?(zh?70:78):tablet?(zh?110:124):width<1350?(zh?132:148):(zh?144:160))*scale,
-      categoryWidth:(phone?32:tablet?60:96)*scale,categorySize:name*(phone ? .85 : tablet ? .92 : 1.02),categoryRadius:(phone?2.7:6.5)*scale,rootRadius:(phone?21:32)*scale};
+      categoryWidth:(phone?42:tablet?78:120)*scale,categorySize:name*1.3,categoryRadius:(phone?2.7:6.5)*scale,rootRadius:(phone?21:32)*scale};
   }
   function metrics(item,c){
     if(item.kind==='root')return{w:c.rootRadius*2+8*c.scale,h:c.rootRadius*2+8*c.scale};
     if(item.kind==='category'){
       const short=zh?['通用','教育','艺术人文','社会科学','商业法律','自然科学','信息技术','工程建筑','农林渔牧','健康福利','服务']:['General','Edu','Arts','Society','Biz','Science','ICT','Eng','Agri','Health','Services'];
       const label=c.phone?(short[Number(item.item.code)]||item.label):item.label;
-      const lines=wrap(label,c.categorySize,c.categoryWidth-3*c.scale),line=c.categorySize*1.12;
+      const lines=wrap(label,c.categorySize,c.categoryWidth-3*c.scale,700),line=c.categorySize*1.12;
       return {w:c.categoryWidth,h:c.categoryRadius*2+lines.length*line+7*c.scale,lines,line};
     }
     const lines=wrap(item.label,c.name,c.fieldWidth-2*c.pad),nameHeight=lines.length*c.line;
@@ -70,7 +70,7 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
     for(const n of categories){const span=(.65/categories.length+.35*(n.children?.length||0)/total)*Math.PI*2;angles.set(n.id,{angle:start+span/2,span});start+=span;}
     const fixed=[];
     for(const n of all.filter(n=>n.kind!=='field')){
-      const m=metrics(n,c),t=angles.get(n.id),x=t?Math.cos(t.angle)*a.w*(c.phone ? .23 : .19):0,y=t?Math.sin(t.angle)*a.h*(c.phone ? .17 : .22):0;
+      const m=metrics(n,c),t=angles.get(n.id),x=t?Math.cos(t.angle)*a.w*(c.phone ? .23 : .22):0,y=t?Math.sin(t.angle)*a.h*(c.phone ? .17 : .26):0;
       const box={x:x-m.w/2-gap/2,y:y-m.h/2-gap/2,w:m.w+gap,h:m.h+gap};
       if(box.x<bounds.x||box.y<bounds.y||box.x+box.w>bounds.x+bounds.w||box.y+box.h>bounds.y+bounds.h||fixed.some(b=>intersects(b,box)))return null;
       fixed.push(box);placed.set(n.id,{x,y,m});occupy(box);
