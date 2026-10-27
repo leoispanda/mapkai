@@ -100,7 +100,7 @@ function activateNode(node) {
   else if(node.kind==='field')mindMap.focusNode(node.id);
   else if(node.kind==='story'){const field=catalog.categories.flatMap(c=>c.fields).find(f=>f.stories.some(story=>story.id===node.item.id));if(field)mindMap.focusNode(`field-${field.code}`);}
 }
-function storyDotClass(story) { return `resource-dot small ${story.ready ? 'on' : 'missing'}`; }
+function storyDotClass(story) { return `resource-dot small ${story.ready ? `on${story.newer?'':' earlier'}` : 'missing'}`; }
 function storyNode(story) {
   const node={id:`story-${story.id}`,kind:'story',item:story,label:pick(story.title),subtitle:`${t(story.newer?'newer':'older')} · ${t(story.public?'open':'prepared')}`,signals:[graphSignal(story.ready,pick(story.title))]};
   node.description=`${node.label}. ${node.subtitle}. ${t(story.public?'open':'pending')}`;
@@ -137,7 +137,7 @@ function renderFilters() {
   const fields=catalog.categories.flatMap(c=>c.fields);
   const options=[['all',zh?'全部':'All',fields.length,false],['complete',zh?'大满贯':'All three',videos===null?'—':fields.filter(f=>fieldScore(f)===3).length,videos===null],
     ['missing-music',zh?'缺音乐':'Music needed',fields.filter(f=>!songsById.has(f.songId)).length,false],['missing-video',zh?'缺视频':'Video needed',videos===null?'—':fields.filter(f=>videoFor(f)===null).length,videos===null],
-    ['video',zh?'有视频':'With video',videos===null?'—':fields.filter(f=>videoFor(f)).length,videos===null],['music',zh?'有共享歌':'Shared song',fields.filter(f=>songsById.has(f.songId)).length,false],['older',zh?'较早故事':'Earlier stories',fields.filter(f=>f.stories.some(story=>!story.newer)).length,false]];
+    ['video',zh?'有视频':'With video',videos===null?'—':fields.filter(f=>videoFor(f)).length,videos===null],['music',zh?'有共享歌':'Shared song',fields.filter(f=>songsById.has(f.songId)).length,false],['older',zh?'含较早故事的学科':'Fields with earlier stories',fields.filter(f=>f.stories.some(story=>!story.newer)).length,false]];
   if(!$('overview-filters').children.length)$('overview-filters').innerHTML=options.map(([value])=>`<button type="button" data-filter="${value}"><span></span><strong></strong></button>`).join('');
   for(const [value,label,count,disabled]of options){const button=$('overview-filters').querySelector(`[data-filter="${value}"]`);button.querySelector('span').textContent=label;button.querySelector('strong').textContent=count;button.disabled=disabled;button.setAttribute('aria-pressed',String(filter===value));}
 }
@@ -228,6 +228,9 @@ async function initialize() {
     const graphUrl=new URL('./graph.js',import.meta.url); graphUrl.search=new URL(import.meta.url).search;
     const {createMindMap}=await import(graphUrl.href);
     mindMap=createMindMap({svg:$('content-map'),frame:$('map-frame'),language,onActivate:activateNode,onDismiss:closeSelection});
+    const navigation=$('map-navigation'),navigationToggle=$('map-nav-toggle');
+    navigationToggle.addEventListener('click',()=>{navigation.open=!navigation.open;navigationToggle.setAttribute('aria-expanded',String(navigation.open));});
+    navigation.addEventListener('toggle',()=>navigationToggle.setAttribute('aria-expanded',String(navigation.open)));
     renderCounts(); renderCourse(); renderTree(true); renderSongs();
     $('overview-search').addEventListener('input',event=>{query=event.target.value.trim().toLocaleLowerCase();selected='root';expandedFields.clear();renderTree();renderSongs();});
     $('overview-filters').addEventListener('click',event=>{const button=event.target.closest('[data-filter]');if(!button||button.disabled)return;filter=button.dataset.filter;selected='root';expandedFields.clear();renderTree();});

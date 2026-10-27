@@ -58,7 +58,7 @@ const catalog = { schema: 'mapkai-content-overview.v1', categories: built, songs
   lessons: course.learningModules.map((l, i) => ({ day: i + 1, title: { zh: l.title, en: l.titleEn } })),
 } };
 const json = JSON.stringify(catalog);
-const inputs = await Promise.all(['app.js', 'graph.js', 'styles.css', 'index.html', 'english.json'].map(name => readFile(new URL(`toolbox/overview/${name}`, root))));
+const inputs = await Promise.all(['app.js', 'graph.js', 'layout.js', 'link-routing.js', 'styles.css', 'index.html', 'english.json'].map(name => readFile(new URL(`toolbox/overview/${name}`, root))));
 const revisionHash = createHash('sha256').update(json);
 for (const input of inputs) revisionHash.update(input);
 const revision = revisionHash.digest('hex').slice(0, 12);
@@ -70,7 +70,7 @@ await mkdir(new URL('vendor/', target), { recursive: true });
 for (const name of ['d3.v7.9.0.min.js', 'D3-LICENSE.txt']) await cp(new URL(`toolbox/overview/vendor/${name}`, root), new URL(`vendor/${name}`, target));
 await writeFile(new URL('catalog.json', target), json + '\n');
 await writeFile(new URL('toolbox/overview/catalog.json', root), json + '\n');
-for (const name of ['app.js', 'graph.js', 'styles.css']) await cp(new URL(`toolbox/overview/${name}`, root), new URL(name, target));
+for (const name of ['app.js', 'graph.js', 'layout.js', 'link-routing.js', 'styles.css']) await cp(new URL(`toolbox/overview/${name}`, root), new URL(name, target));
 const template = await readFile(new URL('toolbox/overview/index.html', root), 'utf8');
 const translations = JSON.parse(await readFile(new URL('toolbox/overview/english.json', root), 'utf8'));
 const localized = (html, language) => {
