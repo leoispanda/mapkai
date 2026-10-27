@@ -141,9 +141,10 @@
 .resource-dot.square{border-radius:0}
 .resource-dot.on.earlier{background:var(--map-earlier);border-color:var(--map-earlier-stroke)}
 .map-story-tag:hover .map-light,.map-story-tag:focus-visible .map-light,.map-story-tag.is-selected .map-light{stroke:var(--map-label);stroke-width:2}
-.map-lamp-key .resource-dot{width:8px;height:8px;border-width:1px;margin-right:3px}
+.map-lamp-key .resource-dot{width:10px;height:10px;border-width:1px;margin-right:3px}
 .map-lamp-key .resource-dot:not(:first-child){margin-left:4px}
-@media(max-width:700px){.map-lamp-key .resource-dot{width:7px;height:7px;margin-right:2px}.map-lamp-key .resource-dot:not(:first-child){margin-left:2px}}
+.map-lamp-key .resource-dot.small{width:5px;height:5px;margin-right:1px;margin-left:0}
+@media(max-width:700px){.map-lamp-key .resource-dot{width:8px;height:8px;margin-right:2px}.map-lamp-key .resource-dot:not(:first-child){margin-left:2px}.map-lamp-key .resource-dot.small{width:4px;height:4px;margin-right:1px;margin-left:0}}
 /* Three slim progress strips keep the totals above the complete atlas. */
 .overview-hero{gap:24px;padding-block:5px 8px}
 .overview-progress-group{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;width:min(820px,70%);align-items:start}

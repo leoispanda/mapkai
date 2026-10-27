@@ -86,5 +86,11 @@
   "黄色：较早故事": "Yellow: earlier story",
   "红色：待补": "Red: resource needed",
   "三个圆点：三个故事": "Three circles: three stories",
-  "状态标记包含已备故事稿。尚未开放的正文会单独标明，能打开的内容可直接进入。": "Status markers include prepared story drafts. Stories not open for reading are labelled; available content opens directly."
+  "状态标记包含已备故事稿。尚未开放的正文会单独标明，能打开的内容可直接进入。": "Status markers include prepared story drafts. Stories not open for reading are labelled; available content opens directly.",
+  "以MapKAI为中心向四周发散，默认完整显示80个小学科及全部状态标记。音乐、视频和故事资源使用间距较大的大圆圈，三篇小故事使用紧凑排列的小圆圈。绿色表示已有资源，红色表示待补，灰色虚线表示尚未核实；故事版本与开放状态见详情。点击学科放大看细节，回到全图恢复完整脉络；支持拖动、滚轮和双指缩放。": "A radial map with MapKAI at its centre shows all 80 fields. Music, video and story resources use larger, spaced circles; the three individual stories use smaller, closely grouped circles. Green means available, red means needed, and grey dashed circles mean unverified. Story versions and reading availability appear in the details. Select a subject to zoom in; Show all restores the complete map. Drag to pan and scroll or pinch to zoom.",
+  "前三个大圆圈依次表示音乐、视频和故事资源，后面三个小圆圈紧凑表示三篇故事。": "The three larger circles represent music, video and story resources. The three smaller circles form a compact group for the individual stories.",
+  "大圆圈：音乐、视频和故事": "Large circles: music, video and stories",
+  "小圆圈：单篇故事": "Small circles: individual stories",
+  "绿色：已有资源": "Green: available resource",
+  "故事版本与开放状态见详情": "See details for story versions and reading availability"
 }

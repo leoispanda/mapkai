@@ -101,13 +101,13 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
     const key=`${width}|${height}|${Math.round(area().h)}|${language}`;
     if(layoutKey!==key){
       let result;
-      for(const scale of [1,.97,.94,.91,.88,.85,.82,.79,.76,.73,.7,.67,.64,.61,.58,.55]){const c=settings(scale);result=pack(canonical,c);if(result){config=c;break;}}
+      for(const scale of [1,.97,.94,.91,.88,.85,.82,.79,.76,.73,.7,.67,.64,.61,.58,.55,.52,.49,.46,.43,.4]){const c=settings(scale);result=pack(canonical,c);if(result){config=c;break;}}
       if(!result)throw new Error('Unable to fit the complete atlas');
       positions=result;layoutKey=key;svg.dataset.labelSize=config.name.toFixed(2);
     }
     return all.map(n=>({...n,...positions.get(n.id)}));
   }
-  function light(group,x,y,signal,shape='circle'){const g=group.append('g').attr('role','img').attr('aria-label',signal.label),r=config.light*1.2;g.append('title').text(signal.label);const mark=g.append(shape==='square'?'rect':'circle').attr('class',`map-light${signal.ready===undefined?' unknown':signal.ready?` on${signal.newer===false?' earlier':''}`:' missing'}`);if(shape==='square')mark.attr('x',x-r).attr('y',y-r).attr('width',r*2).attr('height',r*2);else mark.attr('cx',x).attr('cy',y).attr('r',r);return g;}
+  function light(group,x,y,signal,size='main'){const g=group.append('g').attr('role','img').attr('aria-label',signal.label),r=config.light*(size==='story'?.7:1.55);g.append('title').text(signal.label);g.append('circle').attr('class',`map-light ${size}${signal.ready===undefined?' unknown':signal.ready?' on':' missing'}`).attr('cx',x).attr('cy',y).attr('r',r);return g;}
   function drawNode(element,node){
     const g=d3.select(element),c=config;g.selectAll('*').remove();g.append('title').text(node.description||node.label);
     if(node.kind==='root'){
@@ -128,18 +128,18 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
     const label=g.append('text').attr('class','map-label').attr('font-size',c.name);
     m.lines.forEach((line,i)=>label.append('tspan').attr('x',left).attr('y',top+c.pad+c.name+i*c.line).text(line));
     g.append('path').attr('class','map-underline').attr('d',`M${-m.w/2},${top+c.pad+m.nameHeight+1}H${m.w/2}`);
-    const radius=c.light*1.2,mainWidth=radius*6+c.small*.4,mainStep=(mainWidth-radius*2)/2,y=top+c.pad+m.resourceY;
+    const radius=c.light*1.55,mainStep=c.name*1.6,mainWidth=radius*2+mainStep*2,y=top+c.pad+m.resourceY;
     const resources=g.append('g').attr('class','map-resource-lights');
-    node.signals.forEach((signal,i)=>light(resources,left+radius+i*mainStep,y,signal,i<2?'square':'circle'));
-    const divider=left+mainWidth+c.small*.375,storyLeft=left+mainWidth+c.small*.75,step=(m.w-c.pad*2-mainWidth-c.small*.75)/3;
-    g.append('line').attr('class','map-lamp-divider').attr('x1',divider).attr('x2',divider).attr('y1',y-c.light*1.2).attr('y2',y+c.light*1.2);
+    node.signals.forEach((signal,i)=>light(resources,left+radius+i*mainStep,y,signal));
+    const storyRadius=c.light*.7,step=storyRadius*3.1,divider=left+mainWidth+c.small*.55,storyLeft=divider+c.small*.55+storyRadius;
+    g.append('line').attr('class','map-lamp-divider').attr('x1',divider).attr('x2',divider).attr('y1',y-radius).attr('y2',y+radius);
     const stories=g.append('g').attr('class','map-story-lights');
     node.storySignals.forEach((signal,i)=>{
-      const x=storyLeft+(i+.5)*step,y=top+c.pad+m.versionY;
+      const x=storyLeft+i*step,y=top+c.pad+m.versionY;
       const tag=stories.append('g').attr('class',`map-story-tag ${signal.newer?'newer':'older'}${model.selected===signal.node.id?' is-selected':''}`).attr('data-story-id',signal.id).attr('role','button').attr('tabindex',0).attr('aria-label',`${i+1}. ${signal.label}`).attr('aria-pressed',String(model.selected===signal.node.id))
         .on('click',event=>{event.stopPropagation();onActivate(signal.node);}).on('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();onActivate(signal.node);}}).on('focus',function(){if(this.matches(':focus-visible'))ensureVisible(node);});
-      tag.append('rect').attr('class','map-story-hit').attr('x',storyLeft+i*step-1).attr('y',y-c.small*.76).attr('width',step).attr('height',c.small*1.5);
-      light(tag,x,y,signal);
+      tag.append('rect').attr('class','map-story-hit').attr('x',x-step/2).attr('y',y-c.small*.76).attr('width',step).attr('height',c.small*1.5);
+      light(tag,x,y,signal,'story');
     });
   }
   function linkPath(n){
