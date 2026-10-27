@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 106,
+  "nextNumber": 111,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -1317,6 +1317,71 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "105 Does the Size Make Sense - MapKAI - General Foundations - Reasonableness Checks"
+    },
+    {
+      "id": "4b851156-1e07-4933-b684-ec35d813e1b5",
+      "number": 106,
+      "numberLabel": "106",
+      "songName": "Ten Held Together",
+      "subjectName": "Basic Programmes and Qualifications",
+      "canonicalSubjectName": "Basic programmes and qualifications",
+      "conceptName": "Place Value",
+      "createdAt": "2026-10-27T03:27:43.007Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "106 Ten Held Together - MapKAI - Basic Programmes and Qualifications - Place Value"
+    },
+    {
+      "id": "25422116-ab16-4dad-b6e6-112be1d30ede",
+      "number": 107,
+      "numberLabel": "107",
+      "songName": "Keep the Whole Line",
+      "subjectName": "Literacy and Numeracy",
+      "canonicalSubjectName": "Literacy and numeracy",
+      "conceptName": "Finding Relevant Information",
+      "createdAt": "2026-10-27T03:27:43.007Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "107 Keep the Whole Line - MapKAI - Literacy and Numeracy - Finding Relevant Information"
+    },
+    {
+      "id": "a8909f9a-7b32-47f2-a4c2-e682a5c54037",
+      "number": 108,
+      "numberLabel": "108",
+      "songName": "A Piece I Can Finish",
+      "subjectName": "Personal skills and development",
+      "canonicalSubjectName": "Personal skills and development",
+      "conceptName": "Task Decomposition",
+      "createdAt": "2026-10-27T03:27:43.007Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "108 A Piece I Can Finish - MapKAI - Personal skills and development - Task Decomposition"
+    },
+    {
+      "id": "7c17ece8-494a-46c7-b672-24f60be0d730",
+      "number": 109,
+      "numberLabel": "109",
+      "songName": "Whose Words",
+      "subjectName": "Generic programmes and qualifications not elsewhere classified",
+      "canonicalSubjectName": "Generic programmes and qualifications not elsewhere classified",
+      "conceptName": "Source Attribution",
+      "createdAt": "2026-10-27T03:27:43.007Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "109 Whose Words - MapKAI - Generic programmes and qualifications not elsewhere classified - Source Attribution"
+    },
+    {
+      "id": "f16e9b4a-a60a-4618-bbb0-a87980a2203d",
+      "number": 110,
+      "numberLabel": "110",
+      "songName": "Watch, Then Try",
+      "subjectName": "Education",
+      "canonicalSubjectName": "Education",
+      "conceptName": "Worked Examples",
+      "createdAt": "2026-10-27T03:27:43.007Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "110 Watch, Then Try - MapKAI - Education - Worked Examples"
     }
   ]
 }

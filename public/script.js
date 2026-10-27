@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.329";
+const appVersion = "0.1.330";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -19168,6 +19168,121 @@ const categoryGroupSongEditions = {
         "en": "General Foundations"
       }
     }
+  ],
+  "001": [
+    {
+      "id": "4b851156-1e07-4933-b684-ec35d813e1b5",
+      "title": "106 Ten Held Together - MapKAI - Basic Programmes and Qualifications - Place Value",
+      "durationSeconds": 120.0326875,
+      "meta": {
+        "zh": "英文 · 原版 · 2:00 · 待听审",
+        "en": "English · Original · 2:00 · Listening review pending"
+      },
+      "core": {
+        "zh": "位值把十进制23的2看作两十、3看作三一。加九个一得到两十十二一，再把十个一重组为一十，成为三十二；重组保持加法后的总数，例子限定十进制。",
+        "en": "In base ten, the digits of 23 represent two tens and three ones. Add nine ones to get two tens and twelve ones, then regroup ten ones as one ten: three tens and two ones, or 32. Regrouping preserves the post-addition quantity; this example is base ten."
+      },
+      "style": {
+        "zh": "原版 · 内容待听审",
+        "en": "Original · Content review pending"
+      },
+      "subjectLabel": {
+        "zh": "基础课程与资格",
+        "en": "Basic Programmes and Qualifications"
+      }
+    }
+  ],
+  "002": [
+    {
+      "id": "25422116-ab16-4dad-b6e6-112be1d30ede",
+      "title": "107 Keep the Whole Line - MapKAI - Literacy and Numeracy - Finding Relevant Information",
+      "durationSeconds": 120.0326875,
+      "meta": {
+        "zh": "英文 · 原版 · 2:00 · 待听审",
+        "en": "English · Original · 2:00 · Listening review pending"
+      },
+      "core": {
+        "zh": "查找相关信息先明确问题，再匹配条件并保留整条适用信息。虚构公告的普通周四六点A厅，被每月第一个周四七点B厅的条件替代；把条件写在答案旁，真实聚会是否变动仍需另查。",
+        "en": "Finding relevant information starts with a question, matches the applicable condition and keeps it with the answer. In an invented notice, first Thursday each month means seven in Hall B rather than the ordinary six in Hall A. The entry reports the notice; actual meeting arrangements need a separate check."
+      },
+      "style": {
+        "zh": "原版 · 内容待听审",
+        "en": "Original · Content review pending"
+      },
+      "subjectLabel": {
+        "zh": "读写与计算能力",
+        "en": "Literacy and Numeracy"
+      }
+    }
+  ],
+  "003": [
+    {
+      "id": "a8909f9a-7b32-47f2-a4c2-e682a5c54037",
+      "title": "108 A Piece I Can Finish - MapKAI - Personal skills and development - Task Decomposition",
+      "durationSeconds": 120.0326875,
+      "meta": {
+        "zh": "英文 · 原版 · 2:00 · 待听审",
+        "en": "English · Original · 2:00 · Listening review pending"
+      },
+      "core": {
+        "zh": "任务分解把大目标分成具体可完成的部分，并识别前后依赖。虚构画画工作坊先写出纸、铅笔、橡皮三项清单，这一部分完成不代表收集、排练、房间与时间已安排好；仍要回看整体目标。",
+        "en": "Task decomposition breaks a larger goal into concrete parts and notices dependencies. In an invented drawing-workshop plan, a complete three-item materials list finishes that part. Gathering, rehearsal, room and time remain to be handled; the whole goal still needs review."
+      },
+      "style": {
+        "zh": "原版 · 内容待听审",
+        "en": "Original · Content review pending"
+      },
+      "subjectLabel": {
+        "zh": "个人技能与发展",
+        "en": "Personal skills and development"
+      }
+    }
+  ],
+  "009": [
+    {
+      "id": "7c17ece8-494a-46c7-b672-24f60be0d730",
+      "title": "109 Whose Words - MapKAI - Generic programmes and qualifications not elsewhere classified - Source Attribution",
+      "durationSeconds": 120.0326875,
+      "meta": {
+        "zh": "英文 · 原版 · 2:00 · 待听审",
+        "en": "English · Original · 2:00 · Listening review pending"
+      },
+      "core": {
+        "zh": "来源归属把陈述与出处连接，也区分原文和自己的推断。虚构指南第2页只说大厅十点开放，不能据此当作演讲十点开始；保留书名页码能回到出处，准确性仍需另查。",
+        "en": "Source attribution links a statement to its origin and separates it from an inference. The invented River Hall Guide, page two, gives a ten o’clock hall opening; talk time remains unknown. A title/page trail identifies the source, while accuracy needs its own check."
+      },
+      "style": {
+        "zh": "原版 · 内容待听审",
+        "en": "Original · Content review pending"
+      },
+      "subjectLabel": {
+        "zh": "其他通用课程与资格",
+        "en": "Generic programmes and qualifications not elsewhere classified"
+      }
+    }
+  ],
+  "011": [
+    {
+      "id": "f16e9b4a-a60a-4618-bbb0-a87980a2203d",
+      "title": "110 Watch, Then Try - MapKAI - Education - Worked Examples",
+      "durationSeconds": 120.0326875,
+      "meta": {
+        "zh": "英文 · 原版 · 2:00 · 待听审",
+        "en": "English · Original · 2:00 · Listening review pending"
+      },
+      "core": {
+        "zh": "例题示范展示步骤与理由，再让学习者尝试相关新题。虚构加法把8拆成3和5，7加3成10再加5得15；尝试7加9时拆成3和6得16。一次成功不等于掌握，仍需更多任务检验。",
+        "en": "Worked examples show a method and its reasons before a related attempt. Split 8 into 3 and 5: 7 plus 3 makes 10, then 5 makes 15. In the new 7 plus 9 attempt, split 9 into 3 and 6 to get 16. Mastery still needs checks across more problems."
+      },
+      "style": {
+        "zh": "原版 · 内容待听审",
+        "en": "Original · Content review pending"
+      },
+      "subjectLabel": {
+        "zh": "教育",
+        "en": "Education"
+      }
+    }
   ]
 };
 
@@ -19529,7 +19644,12 @@ const categorySongTopicLabelsZh = {
   "Check-Back Communication": "闭环复核沟通",
   "Acceptance Criteria": "验收标准",
   "Cash Flow Timing": "现金流时点",
-  "Reasonableness Checks": "合理性检验"
+  "Reasonableness Checks": "合理性检验",
+  "Place Value": "位值",
+  "Finding Relevant Information": "查找相关信息",
+  "Task Decomposition": "任务分解",
+  "Source Attribution": "来源归属",
+  "Worked Examples": "例题示范"
 };
 
 function getCategorySongSubject(song, categoryCode) {
@@ -22647,7 +22767,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.329").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.330").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
