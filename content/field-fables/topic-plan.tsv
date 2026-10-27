@@ -140,14 +140,14 @@ batch-010	07	0713	Electricity and energy	电力与能源	3	0713-energy-storage	E
 batch-010	07	0714	Electronics and automation	电子与自动化	1	0714-feedback-control	Feedback control	反馈控制	mechanism-explainer	烤炉根据刚测得的温度不断修正火门	integrated
 batch-010	07	0714	Electronics and automation	电子与自动化	2	0714-signal-to-noise-ratio	Signal-to-noise ratio	信噪比	mechanism-explainer	暴风雨里港口接收员分辨一声真正求救信号	integrated
 batch-010	07	0714	Electronics and automation	电子与自动化	3	0714-fail-safe-design	Fail-safe design	故障安全设计	concept-fable	断电时自动落下还是升起的水闸引发争论	integrated
-batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	1	0715-stress-strain	Stress and strain	应力与应变	mechanism-fable	两根外形相同的桥索在载荷下伸长不同	integrated
+batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	1	0715-stress-strain	Stress and strain	应力与应变	mechanism-explainer	两根外形相同的桥索在载荷下伸长不同	integrated
 batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	2	0715-fatigue	Material fatigue	材料疲劳	concept-fable	从未超载却在第一万次转动后断裂的车轴	integrated
-batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	3	0715-engineering-tolerance	Engineering tolerance	工程公差	mechanism-fable	每只齿轮单独合格却无法共同转动的机器	integrated
-batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	1	0716-stability-and-control	Stability and control	稳定性与操纵性	mechanism-fable	越想装更多货越容易倾覆的窄船	integrated
-batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	2	0716-drag	Drag and transport efficiency	阻力与运输效率	mechanism-fable	更强发动机输给一条重新修形的船身	integrated
+batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	3	0715-engineering-tolerance	Engineering tolerance	工程公差	mechanism-explainer	每只齿轮单独合格却无法共同转动的机器	integrated
+batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	1	0716-stability-and-control	Stability and control	稳定性与操纵性	mechanism-explainer	越想装更多货越容易倾覆的窄船	integrated
+batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	2	0716-drag	Drag and transport efficiency	阻力与运输效率	mechanism-explainer	更强发动机输给一条重新修形的船身	integrated
 batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	3	0716-redundancy	Safety redundancy	安全冗余	concept-fable	天空邮船失去一根控制索后仍能返航	integrated
-batch-010	07	0721	Food processing	食品加工	1	0721-thermal-processing	Thermal processing	热加工	mechanism-fable	温度相同但加热时间不同的两批密封牛奶	integrated
-batch-010	07	0721	Food processing	食品加工	2	0721-water-activity	Water activity	水分活度	mechanism-fable	看起来更干的果脯反而更快变坏	integrated
+batch-010	07	0721	Food processing	食品加工	1	0721-thermal-processing	Thermal processing	热加工	mechanism-explainer	温度相同但加热时间不同的两批密封牛奶	integrated
+batch-010	07	0721	Food processing	食品加工	2	0721-water-activity	Water activity	水分活度	mechanism-explainer	看起来更干的果脯反而更快变坏	integrated
 batch-010	07	0721	Food processing	食品加工	3	0721-haccp	Hazard Analysis and Critical Control Points	危害分析与关键控制点	concept-fable	面包坊不再等成品出炉后才寻找危险	integrated
 batch-011	07	0722	Materials glass paper plastic and wood	材料：玻璃、纸、塑料与木材	1	0722-structure-property-relationship	Structure-property relationship	结构与性能关系	mechanism-fable	同样成分的玻璃因冷却方式不同承受不同撞击	integrated
 batch-011	07	0722	Materials glass paper plastic and wood	材料：玻璃、纸、塑料与木材	2	0722-anisotropy	Anisotropy	各向异性	mechanism-fable	沿木纹与横木纹切出的梁像两种材料	integrated

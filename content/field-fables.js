@@ -19292,49 +19292,126 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0715",
     "fieldTitle": "Mechanics and metal trades",
     "fieldTitleZh": "机械与金属工艺",
-    "title": "The Axle That Refused to Bend",
-    "titleZh": "最不肯弯的车轴",
-    "summary": "A cartwright chooses the axle that stays straightest under load, then learns at the first deep rut that stiffness, strength, and resistance to breaking are not the same.",
-    "summaryZh": "车匠为庆典挑中一根受压时最直的车轴，却在第一处深坑前发现，直、强与不易断并不是一回事。",
-    "storyParagraphs": [
-      "The county had to carry a bronze statue to the jubilee, and cartwright Ishihara would lose the royal order if the wagon was late. He placed three axle samples on supports and loaded each with the same stone. The polished black bar barely bent. An older smith warned that it returned no information before breaking, but Ishihara chose it. 'If it refuses to bend,' he said, 'it must be strongest.'",
-      "Empty-road trials rewarded him. The wheels ran straight and the measuring line stayed exact. On parade morning, one wheel dropped into a deep rut while the opposite side remained on stone. The axle gave a short crack and separated cleanly. The statue rolled into mud, losing the tip of its nose. The other two samples, rejected as soft, still lay in the shop and had returned straight after their test loads were removed. The parade crowd scattered from the leaning load, and four horses strained against the tilted wagon until workers freed them. Ishihara paid for a crane to lift the statue and spent the night washing mud from its face, unable to replace the missing bronze tip.",
-      "The smith made strips of equal length and area and hung weights in steps. Ishihara marked the load against the extension. Under small loads, one strip lengthened little and returned; another lengthened more but also returned. Beyond a point, a strip stayed bent after unloading. At the end, the black sample snapped with little additional stretch, while another drew out before breaking.",
-      "Ishihara had used one part of the curve—the initial slope—to answer several different questions. The board separated resistance to elastic deformation, the point where permanent change began, the highest load reached, and the deformation absorbed before fracture. A stiff bar was not automatically the most ductile or toughest. The broken axle's sharp shoulder had also concentrated the wheel load into a narrow region.",
-      "The county demanded an identical black replacement before the rescheduled parade. Ishihara instead admitted the mistake and lost half his fee. The smith selected material and diameter for the actual loads, rounded the abrupt shoulder, and marked likely damage sites for inspection. Geometry, temperature, loading rate, and previous damage joined the material sample in the decision; the bench strip alone did not become the whole wagon.",
-      "The statue's nose could not be recast in time. Workers turned the chipped side toward the rear and used the saved bronze to make a reference mark on the new axle. Ishihara drove the wagon loaded with sand through the rut, then checked whether the mark returned before agreeing to carry the statue.",
-      "During the second parade, the axle bent slightly in the same hollow and straightened as the wheel climbed out. Ishihara knelt, ran one finger over the bronze mark, and waved the wagon forward. The statue passed with its missing nose facing the cheering crowd behind it."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "先别退那箱拉带",
+    "summaryZh": "第二批试条比旧批多拉长了一倍，退货单已经打印。顾岚却在两张测试单上看见了不同的原长、截面积和拉力。",
     "storyParagraphsZh": [
-      "县里要用四轮大车运铜像参加庆典，若误期，车匠石原就会失去王室订单。他把三根同长车轴架起，各压同样石块。黑亮钢轴几乎不弯。老铁匠提醒，它断前不会给多少迹象，石原仍选了它：“连弯都不弯，当然最结实。”",
-      "空车试跑像在奖励他。车轮笔直，轴上测量线毫无变化。游行清晨，一只轮陷入深坑，另一侧仍压在石面。车轴发出短促脆响，齐齐断开；铜像滚进泥里，鼻尖磕掉一块。另两根被嫌软的样品仍在工棚，卸掉试验石块后早已恢复直线。人群从倾斜铜像旁散开，四匹马被歪车拖住，直到工人解套。石原付钱雇吊机扶正铜像，又整夜洗去脸上泥水，缺失的铜鼻尖却再也找不到。",
-      "老铁匠把同长同粗的金属条逐步挂重，石原把载荷与伸长画在木板上。小重量下，一根伸得少并能复原，另一根伸得多也能复原；超过某点，有的卸载后仍弯。最后，黑色样品没再伸长多少便断了，另一根却先拉长很远。",
-      "石原原先只用曲线开头的斜率回答了好几个不同问题。木板把弹性变形有多难、何时开始永久改变、最高承受载荷和断前吸收多少变形分开。很硬的杆不自动拥有更好的延展与抗断能力；旧轴上突兀的肩部，还把车轮力量挤在一小段。",
-      "县令要求在延期游行前复制同样黑轴。石原承认选错，失去一半工钱。铁匠按实际载荷选择材料与直径，磨圆尖锐肩部，并标出需要检查的易损处。结构形状、温度、加载速度和旧伤同材料样品一起进入决定，台架细条不再替整辆车作保证。",
-      "铜像鼻尖来不及重铸，工人把缺口转向车后，又用省下的铜在新轴刻一道基准。石原先装满沙袋驶过深坑，确认刻线能否回位，才同意让铜像上车。",
-      "第二次游行，新轴在同一凹坑里微微弯曲，车轮爬出后又恢复。石原跪下摸过铜色基准，挥手放行。铜像经过街口时，缺失的鼻尖正朝向身后欢呼的人群。"
+      "下午四点前，金属工作室要回复供应商：第二批薄拉带到底收下，还是让来取货的司机原车带回去。顾岚桌上摊着两张测试单，新批那张写着“伸长0.2 mm”，旧批只有0.1 mm。同事已经把退货单打印出来一半——如果新材料真的更容易被拉长，后面的下料就得停。",
+      "平时工作室拿到的是相同尺寸的试样，直接比较伸长多少毫米很方便。这次实验室用了两条大小不同的直试条。每条都沿长度方向受拉，两道标记之间那一段粗细均匀，记录的原长就是两道标记的初始距离。旧批原长100 mm、原截面积10 mm²，在100 N拉力下伸长0.1 mm；新批原长200 mm、原截面积20 mm²，在200 N下伸长0.2 mm。顾岚把两条记录并排放好，第二条两道标记之间的原长，是第一条的两倍。",
+      "她没有继续只盯着0.1和0.2。旧批的100 N分到原来的10 mm²上，是10 MPa；新批200 N分到原来的20 mm²上，也是10 MPa。再看伸长占原长的比例：0.1/100=0.001，0.2/200也等于0.001。原来看起来翻倍的伸长，在把原始尺寸一起算进去后，这一个测试点并没有拉开差别。",
+      "顾岚把退货单从打印机旁拿回来，却没有在新批上盖“没问题”。这一点的结果相同，还不能回答更大载荷下会怎样。她让第二批留在待检架上，要求后续用可比尺寸的试样继续测试，下料因此推迟了半天。",
+      "供应商司机到门口时问：“这箱还带走吗？”顾岚把封箱胶带放回桌上：“先留着，别急着退。”那张写着0.2 mm的测试单仍压在箱子上，旁边多了一行手写字：原长200 mm。"
     ],
-    "conceptName": "Stress and strain",
+    "overallZh": "比较两条不同尺寸的试样时，拉力要结合原截面积，伸长要结合原长。把记录换成这两个比值，才能比较故事中的同一个测试点；结果相同并不证明两批材料的强度或断裂表现也相同。",
     "conceptNameZh": "应力与应变",
-    "explanationParagraphs": [
-      "Stress describes internal force per unit area, while strain describes relative deformation. Their relationship reveals elastic stiffness, yielding, plastic deformation, hardening, and fracture. High stiffness means less deformation under a given stress; it does not guarantee high yield strength, ultimate strength, ductility, or toughness. Geometry, notch concentrations, temperature, loading rate, and material history also affect structural behaviour."
-    ],
     "explanationParagraphsZh": [
-      "应力表示材料内部单位面积承受的内力，应变表示相对变形；两者关系揭示弹性刚度、屈服、塑性变形、硬化和断裂。刚度高只代表同一应力下变形较小，不等于屈服强度、极限强度、延性或韧性都高。结构行为还受几何、缺口造成的集中、温度、加载速度和材料历史影响。"
+      "工程应力在这个简单轴向拉伸例子中写作F/A0，其中A0是测试前的原截面积；工程应变写作ΔL/L0，其中L0是原标距长度。这两个比值让力和伸长都按试样测试前的尺寸来比较。",
+      "最小例子：100 N作用在原截面积10 mm²上，工程应力为10 N/mm²=10 MPa；原长100 mm、伸长0.1 mm，工程应变为0.1/100=0.001=0.1%。这些只是教学数字，不是现实选材或安全参数。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "先看为什么“多伸了多少毫米”可能被试样尺寸误导，再把力和伸长分别除以对应的初始几何量。",
+      "diagramTitle": "同样的相对受力与变形，为什么原始毫米数可以不同",
+      "diagramSteps": [
+        "旧批试样原长100 mm、原截面积10 mm²，在100 N下伸长0.1 mm",
+        "新批试样原长200 mm、原截面积20 mm²，在200 N下伸长0.2 mm",
+        "用测试前原截面积计算，两者工程应力都是10 MPa",
+        "用原长计算，两者工程应变都是0.001",
+        "因此这个测试点不能仅凭0.2 mm大于0.1 mm判定第二批材料更差"
+      ],
+      "diagramStepNotes": [
+        "先保留旧批试样测试前的尺寸、拉力和伸长记录。",
+        "新批也保留同样几类记录，不单凭伸长毫米数比较。",
+        "100/10=200/20=10 N/mm²，在本例中都是10 MPa。",
+        "0.1/100=0.2/200=0.001，也就是原长的0.1%。",
+        "一个测试点相同，不代表完整曲线、屈服或断裂表现相同。"
+      ],
+      "mapping": [
+        "0.1 mm与0.2 mm → 尚未按原长归一化的绝对伸长。",
+        "10 mm²与20 mm² → 计算本例工程应力时使用的原截面积。",
+        "10 MPa与0.001 → 两条试样在这个教学测试点上的归一化比较结果。",
+        "暂缓的退货单 → 重新理解测量记录后改变的决定。"
+      ],
+      "boundary": "本篇只处理均匀标距段、轴向拉伸下的工程应力F/A0和工程应变ΔL/L0，并用小变形教学数字说明几何归一化。它不提供完整应力—应变曲线，也不能由一个点推断屈服、强度、断裂、疲劳、结构安全或现实选材结论。",
+      "reflection": "如果一条原长200 mm的试样伸长0.2 mm，另一条原长100 mm的试样伸长0.15 mm，哪一条相对原长的变形更大？"
+    },
+    "referencesZh": [
+      {
+        "id": "mit-roylance-stress-strain-2001",
+        "citation": "Roylance, D. (2001, August 23). Stress-Strain Curves. Massachusetts Institute of Technology, Department of Materials Science and Engineering.",
+        "url": "https://web.mit.edu/course/3/3.11/www/modules/ss.pdf",
+        "use": "支持工程应力使用原截面积、工程应变使用原长度，以及初始弹性响应与永久变形属于不同判断；本篇只取其入门定义，不用于结构选材或安全认证。"
+      }
+    ],
+    "title": "Hold That Box of Metal Strips",
+    "summary": "The new-batch specimen stretches twice as far, and the return form is already being printed. But Gu Lan notices that the two test sheets also list different original lengths, cross-sectional areas, and forces.",
+    "storyParagraphs": [
+      "Before 16:00, the metalworking shop has to tell the supplier whether to keep the second batch of thin metal strips or send it back on the same truck that is coming for collection. Two test sheets are spread across Gu Lan's desk. The new-batch sheet says “elongation 0.2 mm,” while the old batch shows only 0.1 mm. A colleague has already printed half of the return form—if the new material really does stretch more easily, the downstream cutting work has to stop.",
+      "Normally, the shop receives specimens of the same dimensions, so comparing their elongation in millimeters is convenient. This time the lab used two straight specimens of different sizes. Each was pulled along its length, and the section between two marks had a uniform cross-section; the recorded original length was the initial distance between those marks. The old-batch specimen started at 100 mm with an original cross-sectional area of 10 mm² and elongated 0.1 mm under 100 N. The new-batch specimen started at 200 mm with an original cross-sectional area of 20 mm² and elongated 0.2 mm under 200 N. Gu Lan places the two records side by side. The original distance between the marks on the second specimen was twice that on the first.",
+      "She stops looking only at 0.1 and 0.2. For the old batch, 100 N divided by the original 10 mm² gives 10 MPa; for the new batch, 200 N divided by the original 20 mm² also gives 10 MPa. Then she compares elongation with original length: 0.1/100=0.001, and 0.2/200 also equals 0.001. Once the initial dimensions are included, the apparently doubled elongation does not separate the two records at this test point.",
+      "Gu Lan takes the return form back from beside the printer, but she does not stamp the new batch “no problem.” Matching at this point still does not tell her what happens at higher loads. She leaves the second batch on the inspection rack and requests further tests using specimens with comparable dimensions, delaying cutting by half a day.",
+      "When the supplier's driver reaches the door, he asks, “Is this box coming back with me?” Gu Lan puts the packing tape back on the table. “Leave it here for now. Don't send it back yet.” The test sheet marked 0.2 mm still lies on top of the box, with one handwritten line added beside it: original length 200 mm."
+    ],
+    "overall": "When comparing two specimens of different sizes, force must be considered alongside original cross-sectional area, and elongation alongside original length. These two ratios make the story’s test point comparable; matching there does not establish matching strength or fracture behavior.",
+    "conceptName": "Stress and strain",
+    "explanationParagraphs": [
+      "In this simple axial-tension example, engineering stress is written as F/A0, where A0 is the original cross-sectional area before testing. Engineering strain is written as ΔL/L0, where L0 is the original gauge length. These ratios compare force and elongation in relation to the specimen’s dimensions before testing.",
+      "Minimal example: 100 N acting on an original cross-sectional area of 10 mm² gives an engineering stress of 10 N/mm²=10 MPa. With an original length of 100 mm and an elongation of 0.1 mm, engineering strain is 0.1/100=0.001=0.1%. These are teaching values, not real-world material-selection or safety parameters."
+    ],
+    "module": {
+      "intro": "First see why “how many millimeters longer” can be misleading when specimen size changes, then divide force and elongation by the corresponding original geometric quantities.",
+      "diagramTitle": "Why Raw Elongation Can Differ Even When Relative Loading and Deformation Are the Same",
+      "diagramSteps": [
+        "The old-batch specimen starts at 100 mm with an original cross-sectional area of 10 mm² and elongates 0.1 mm under 100 N",
+        "The new-batch specimen starts at 200 mm with an original cross-sectional area of 20 mm² and elongates 0.2 mm under 200 N",
+        "Using the original cross-sectional areas, both engineering stresses are 10 MPa",
+        "Using the original lengths, both engineering strains are 0.001",
+        "Therefore this test point does not justify calling the second batch worse merely because 0.2 mm is greater than 0.1 mm"
+      ],
+      "diagramStepNotes": [
+        "Keep the old specimen’s dimensions before testing, force, and elongation together.",
+        "Keep the same kinds of records for the new specimen rather than comparing elongation alone.",
+        "100/10=200/20=10 N/mm², giving 10 MPa in both cases.",
+        "0.1/100=0.2/200=0.001, or 0.1% of original length.",
+        "Matching at one point does not establish matching complete curves, yielding, or fracture behavior."
+      ],
+      "mapping": [
+        "0.1 mm and 0.2 mm → absolute elongations not yet normalized by original length.",
+        "10 mm² and 20 mm² → original cross-sectional areas used to calculate engineering stress in this example.",
+        "10 MPa and 0.001 → normalized comparison values for the two specimens at this teaching test point.",
+        "Return form put on hold → a decision changed after the measurements were reinterpreted."
+      ],
+      "boundary": "This article covers only engineering stress F/A0 and engineering strain ΔL/L0 for axial tension in a uniform gauge section, using small-deformation teaching values to illustrate geometric normalization. It does not provide a complete stress-strain curve, and one point cannot be used to infer yield, strength, fracture, fatigue, structural safety, or real-world material-selection conclusions.",
+      "reflection": "If a specimen with an original length of 200 mm elongates by 0.2 mm while a specimen with an original length of 100 mm elongates by 0.15 mm, which one changes more relative to its original length?"
+    },
+    "references": [
+      {
+        "id": "mit-roylance-stress-strain-2001",
+        "citation": "Roylance, D. (2001, August 23). Stress-Strain Curves. Massachusetts Institute of Technology, Department of Materials Science and Engineering.",
+        "url": "https://web.mit.edu/course/3/3.11/www/modules/ss.pdf",
+        "use": "Supports the use of original cross-sectional area for engineering stress, original length for engineering strain, and the distinction between initial elastic response and permanent deformation. This article uses only the introductory definitions and does not use the source for structural selection or safety certification."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
-      "reviewRounds": 3,
-      "rewriteRounds": 2,
+      "reviewRounds": 4,
+      "rewriteRounds": 3,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-21-preparation/group1-pdc-round4.json",
+      "edits": [
+        "engineering-reader-first-21-preparation/group1-edit-pass1-evidence.json",
+        "engineering-reader-first-21-preparation/group1-edit-pass2-evidence.json",
+        "engineering-reader-first-21-preparation/group1-edit-pass3-evidence.json"
+      ],
+      "execution": "One editor using 13 perspectives; four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "The county had to carry a bronze statue to the jubilee, and cartwright Ishihara would lose the royal order if the wagon was late. He placed three axle samples on supports and loaded each with the same stone. The polished black bar barely bent. An older smith warned that it returned no information before breaking, but Ishihara chose it. 'If it refuses to bend,' he said, 'it must be strongest.'\n\nEmpty-road trials rewarded him. The wheels ran straight and the measuring line stayed exact. On parade morning, one wheel dropped into a deep rut while the opposite side remained on stone. The axle gave a short crack and separated cleanly. The statue rolled into mud, losing the tip of its nose. The other two samples, rejected as soft, still lay in the shop and had returned straight after their test loads were removed. The parade crowd scattered from the leaning load, and four horses strained against the tilted wagon until workers freed them. Ishihara paid for a crane to lift the statue and spent the night washing mud from its face, unable to replace the missing bronze tip.\n\nThe smith made strips of equal length and area and hung weights in steps. Ishihara marked the load against the extension. Under small loads, one strip lengthened little and returned; another lengthened more but also returned. Beyond a point, a strip stayed bent after unloading. At the end, the black sample snapped with little additional stretch, while another drew out before breaking.\n\nIshihara had used one part of the curve—the initial slope—to answer several different questions. The board separated resistance to elastic deformation, the point where permanent change began, the highest load reached, and the deformation absorbed before fracture. A stiff bar was not automatically the most ductile or toughest. The broken axle's sharp shoulder had also concentrated the wheel load into a narrow region.\n\nThe county demanded an identical black replacement before the rescheduled parade. Ishihara instead admitted the mistake and lost half his fee. The smith selected material and diameter for the actual loads, rounded the abrupt shoulder, and marked likely damage sites for inspection. Geometry, temperature, loading rate, and previous damage joined the material sample in the decision; the bench strip alone did not become the whole wagon.\n\nThe statue's nose could not be recast in time. Workers turned the chipped side toward the rear and used the saved bronze to make a reference mark on the new axle. Ishihara drove the wagon loaded with sand through the rut, then checked whether the mark returned before agreeing to carry the statue.\n\nDuring the second parade, the axle bent slightly in the same hollow and straightened as the wheel climbed out. Ishihara knelt, ran one finger over the bronze mark, and waved the wagon forward. The statue passed with its missing nose facing the cheering crowd behind it.",
-    "storyBodyZh": "县里要用四轮大车运铜像参加庆典，若误期，车匠石原就会失去王室订单。他把三根同长车轴架起，各压同样石块。黑亮钢轴几乎不弯。老铁匠提醒，它断前不会给多少迹象，石原仍选了它：“连弯都不弯，当然最结实。”\n\n空车试跑像在奖励他。车轮笔直，轴上测量线毫无变化。游行清晨，一只轮陷入深坑，另一侧仍压在石面。车轴发出短促脆响，齐齐断开；铜像滚进泥里，鼻尖磕掉一块。另两根被嫌软的样品仍在工棚，卸掉试验石块后早已恢复直线。人群从倾斜铜像旁散开，四匹马被歪车拖住，直到工人解套。石原付钱雇吊机扶正铜像，又整夜洗去脸上泥水，缺失的铜鼻尖却再也找不到。\n\n老铁匠把同长同粗的金属条逐步挂重，石原把载荷与伸长画在木板上。小重量下，一根伸得少并能复原，另一根伸得多也能复原；超过某点，有的卸载后仍弯。最后，黑色样品没再伸长多少便断了，另一根却先拉长很远。\n\n石原原先只用曲线开头的斜率回答了好几个不同问题。木板把弹性变形有多难、何时开始永久改变、最高承受载荷和断前吸收多少变形分开。很硬的杆不自动拥有更好的延展与抗断能力；旧轴上突兀的肩部，还把车轮力量挤在一小段。\n\n县令要求在延期游行前复制同样黑轴。石原承认选错，失去一半工钱。铁匠按实际载荷选择材料与直径，磨圆尖锐肩部，并标出需要检查的易损处。结构形状、温度、加载速度和旧伤同材料样品一起进入决定，台架细条不再替整辆车作保证。\n\n铜像鼻尖来不及重铸，工人把缺口转向车后，又用省下的铜在新轴刻一道基准。石原先装满沙袋驶过深坑，确认刻线能否回位，才同意让铜像上车。\n\n第二次游行，新轴在同一凹坑里微微弯曲，车轮爬出后又恢复。石原跪下摸过铜色基准，挥手放行。铜像经过街口时，缺失的鼻尖正朝向身后欢呼的人群。",
-    "explanation": "Stress describes internal force per unit area, while strain describes relative deformation. Their relationship reveals elastic stiffness, yielding, plastic deformation, hardening, and fracture. High stiffness means less deformation under a given stress; it does not guarantee high yield strength, ultimate strength, ductility, or toughness. Geometry, notch concentrations, temperature, loading rate, and material history also affect structural behaviour.",
-    "explanationZh": "应力表示材料内部单位面积承受的内力，应变表示相对变形；两者关系揭示弹性刚度、屈服、塑性变形、硬化和断裂。刚度高只代表同一应力下变形较小，不等于屈服强度、极限强度、延性或韧性都高。结构行为还受几何、缺口造成的集中、温度、加载速度和材料历史影响。"
+    "storyBody": "Before 16:00, the metalworking shop has to tell the supplier whether to keep the second batch of thin metal strips or send it back on the same truck that is coming for collection. Two test sheets are spread across Gu Lan's desk. The new-batch sheet says “elongation 0.2 mm,” while the old batch shows only 0.1 mm. A colleague has already printed half of the return form—if the new material really does stretch more easily, the downstream cutting work has to stop.\n\nNormally, the shop receives specimens of the same dimensions, so comparing their elongation in millimeters is convenient. This time the lab used two straight specimens of different sizes. Each was pulled along its length, and the section between two marks had a uniform cross-section; the recorded original length was the initial distance between those marks. The old-batch specimen started at 100 mm with an original cross-sectional area of 10 mm² and elongated 0.1 mm under 100 N. The new-batch specimen started at 200 mm with an original cross-sectional area of 20 mm² and elongated 0.2 mm under 200 N. Gu Lan places the two records side by side. The original distance between the marks on the second specimen was twice that on the first.\n\nShe stops looking only at 0.1 and 0.2. For the old batch, 100 N divided by the original 10 mm² gives 10 MPa; for the new batch, 200 N divided by the original 20 mm² also gives 10 MPa. Then she compares elongation with original length: 0.1/100=0.001, and 0.2/200 also equals 0.001. Once the initial dimensions are included, the apparently doubled elongation does not separate the two records at this test point.\n\nGu Lan takes the return form back from beside the printer, but she does not stamp the new batch “no problem.” Matching at this point still does not tell her what happens at higher loads. She leaves the second batch on the inspection rack and requests further tests using specimens with comparable dimensions, delaying cutting by half a day.\n\nWhen the supplier's driver reaches the door, he asks, “Is this box coming back with me?” Gu Lan puts the packing tape back on the table. “Leave it here for now. Don't send it back yet.” The test sheet marked 0.2 mm still lies on top of the box, with one handwritten line added beside it: original length 200 mm.",
+    "storyBodyZh": "下午四点前，金属工作室要回复供应商：第二批薄拉带到底收下，还是让来取货的司机原车带回去。顾岚桌上摊着两张测试单，新批那张写着“伸长0.2 mm”，旧批只有0.1 mm。同事已经把退货单打印出来一半——如果新材料真的更容易被拉长，后面的下料就得停。\n\n平时工作室拿到的是相同尺寸的试样，直接比较伸长多少毫米很方便。这次实验室用了两条大小不同的直试条。每条都沿长度方向受拉，两道标记之间那一段粗细均匀，记录的原长就是两道标记的初始距离。旧批原长100 mm、原截面积10 mm²，在100 N拉力下伸长0.1 mm；新批原长200 mm、原截面积20 mm²，在200 N下伸长0.2 mm。顾岚把两条记录并排放好，第二条两道标记之间的原长，是第一条的两倍。\n\n她没有继续只盯着0.1和0.2。旧批的100 N分到原来的10 mm²上，是10 MPa；新批200 N分到原来的20 mm²上，也是10 MPa。再看伸长占原长的比例：0.1/100=0.001，0.2/200也等于0.001。原来看起来翻倍的伸长，在把原始尺寸一起算进去后，这一个测试点并没有拉开差别。\n\n顾岚把退货单从打印机旁拿回来，却没有在新批上盖“没问题”。这一点的结果相同，还不能回答更大载荷下会怎样。她让第二批留在待检架上，要求后续用可比尺寸的试样继续测试，下料因此推迟了半天。\n\n供应商司机到门口时问：“这箱还带走吗？”顾岚把封箱胶带放回桌上：“先留着，别急着退。”那张写着0.2 mm的测试单仍压在箱子上，旁边多了一行手写字：原长200 mm。",
+    "explanation": "In this simple axial-tension example, engineering stress is written as F/A0, where A0 is the original cross-sectional area before testing. Engineering strain is written as ΔL/L0, where L0 is the original gauge length. These ratios compare force and elongation in relation to the specimen’s dimensions before testing.\n\nMinimal example: 100 N acting on an original cross-sectional area of 10 mm² gives an engineering stress of 10 N/mm²=10 MPa. With an original length of 100 mm and an elongation of 0.1 mm, engineering strain is 0.1/100=0.001=0.1%. These are teaching values, not real-world material-selection or safety parameters.",
+    "explanationZh": "工程应力在这个简单轴向拉伸例子中写作F/A0，其中A0是测试前的原截面积；工程应变写作ΔL/L0，其中L0是原标距长度。这两个比值让力和伸长都按试样测试前的尺寸来比较。\n\n最小例子：100 N作用在原截面积10 mm²上，工程应力为10 N/mm²=10 MPa；原长100 mm、伸长0.1 mm，工程应变为0.1/100=0.001=0.1%。这些只是教学数字，不是现实选材或安全参数。"
   },
   {
     "id": "0715-fatigue",
@@ -19392,45 +19469,126 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0715",
     "fieldTitle": "Mechanics and metal trades",
     "fieldTitleZh": "机械与金属工艺",
-    "title": "The Arch Whose Every Stone Passed",
-    "titleZh": "每一块都合格的拱门",
-    "summary": "Every arch stone from twenty workshops passes its wooden gauge, yet the final stone will not fit when the pieces meet.",
-    "summaryZh": "二十家石坊交来的拱石全都通过木尺检验，合在一起时，最后一块却怎么也放不进去。",
-    "storyParagraphs": [
-      "The new market arch had to stand before the autumn fair. Twenty quarries each cut one voussoir from a drawing that allowed a narrow variation in length. Inspector Ma checked every stone between two marks on one wooden rule and stamped all twenty. Each supplier was paid by accepted piece, so cutters sensibly worked near the generous side of the allowed range to avoid making a stone too short. Ma's rule had been copied from a master kept in town, but each quarry used its copy through rain, dust, and repeated planing. Nobody compared the copies before work began. The identical acceptance stamp made their small drift invisible.",
-      "At the crown, the final key stone was a finger too wide. Every quarry owner raised a valid acceptance stamp. Their local rules had worn differently, the central reference had not travelled with the drawing, and nineteen small high-side choices had accumulated around the ring. Workers hammered until one edge chipped, but the stone still would not enter. The fair committee began hanging banners from scaffolding to hide the open arch. Two more blows opened a hairline crack along the crown stone. Workers lowered it by rope, and the scaffold remained across the market road. Traders who had paid for arch-side stalls demanded their fees back.",
-      "An angry magistrate ordered every future dimension made exact. The senior mason placed the chipped key stone on his desk. Stone, tools, measurement, temperature, and moisture all varied; demanding equal precision on hidden backs, carved flowers, and closing faces would miss the fair and multiply cost. The mason left the impossible promise unsigned, marked the faces that truly governed closure, and forfeited his on-time bonus. To prove the cost, he timed one flower carving and one mating face. Tightening both equally multiplied hours without improving the fit. The magistrate crossed out his exactness order when the revised schedule showed winter.",
-      "The team checked wooden rules against one metal reference, centred production instead of clustering at one edge, tightened dimensions that accumulated toward closure, and performed intermediate trial assemblies. Non-mating backs and decoration kept wider allowances. The final gap included enough clearance to install the key without leaving the arch loose. These choices followed function, fit, process capability, measurement uncertainty, and consequence, not a universal number.",
-      "Opening morning arrived one day late. The key stone slid into place when the mason withdrew a thin wooden shim; no hammer struck it. A line of sun remained in the designed joint. Inspector Ma hung the twenty old acceptance stamps from the scaffold rope, where their small differences clicked together in the wind."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "两块都合格，合起来却宽了0.1毫米",
+    "summaryZh": "三十套灯等着发货，两个各自合格的垫片却在第三个铰链里卡住。林悦先量单件，再量两块合在一起占去的空间。",
     "storyParagraphsZh": [
-      "新市场拱门必须在秋集前立起。二十家石坊各按图纸制作一块拱石，长度允许有一线出入。验收人马师傅用同一把木尺检查，每块都落在两道刻痕之间，便逐一盖章。石坊按合格件收钱，为免石头太短，工匠自然都靠允许范围偏大一侧加工。马师傅的木尺原本照城里母尺复制，各石坊却在雨水、石粉与反复刨磨中使用自己的副尺，开工前无人再核对。同一枚合格印，把细小漂移全遮住。",
-      "合到顶部时，最后楔石宽了整整一指。每位石坊主都举着有效合格印；各地木尺磨损不同，共同基准也没随图纸送到，十九次偏大选择又沿拱圈累积。工人敲缺一角，石头仍进不去。秋集委员会只好先在脚手架挂彩旗，遮住拱顶空口。再敲两锤，冠石沿边出现细裂。工人用绳把它放下，脚手架继续横在市场路上；预付拱门边摊位费的商贩纷纷要求退款。",
-      "县令大怒，命令以后每个尺寸一丝不差。老石匠把缺角楔石放到桌上：石材、工具、测量、温湿度都会变化，若背面、花纹和闭合面都追求同样精度，不仅赶不上秋集，费用也会翻倍。老石匠没有在那份完美承诺上签名，只圈出真正决定闭合的配合面，并放弃按期奖金。他分别给花纹和配合面计时，证明两处同样收紧只会增加工时，不会改善闭合。修订工期排到冬天，县令才划掉“一丝不差”的命令。",
-      "团队把木尺同金属母尺核对，不再把尺寸总做在范围一侧；会沿闭合方向累积的尺寸收紧，并增加中途整体试装。与配合无关的背面和装饰继续放宽，最终接缝既留出安装余量，又不让拱门松动。功能、配合、过程能力、测量不确定和后果共同决定这些范围，不靠一个万能数字。",
-      "开门日比计划晚了一天。老石匠抽走底下一片薄木垫，楔石自行落定，没有锤子碰它；设计好的缝里仍留一线日光。马师傅把二十枚旧合格印挂在脚手绳上，风吹时，细小差异一起碰响。"
+      "傍晚五点，快递要来取三十套折叠阅读灯。林悦装到第三套时，铰链忽然推不进去。她把两块铝垫片取出来，边缘没有毛刺，卡尺量过也都落在图纸允许的50±0.2 mm范围里。单件都合格，为什么两块放在一起反而卡住了？",
+      "上一款灯每个位置只用一块这种垫片，所以只要单件尺寸在范围内，装配通常就不会出问题。新款第一次改成两块并排放进同一条槽里。林悦把刚才那一对重新量了一遍：一块接近50.2 mm，另一块也接近50.2 mm；她又量了槽宽，读数是100.3 mm。",
+      "两块单独都没越界，可50.2+50.2=100.4 mm，比槽宽多0.1 mm。她从零件盘里拿了一块49.9 mm的合格垫片，和其中一块50.2 mm搭在一起，总长100.1 mm，这一对实际装入后顺利推进。她把两块的尺寸写在同一行，末尾加上合长，再把这张纸放在原来的单件检验记录旁。",
+      "当天还剩二十多套没装，林悦不能假定每一对都会碰巧有合适搭档。仓库里这一批共有八十多块已验收垫片，三十套灯总共需要六十块。她和同事把整盘重新量过、分格摆放，再逐对试装，实际凑出了足够的三十对；那些单独合格、但暂时不好与现有库存配成这一槽位组合的零件被留在盒里。",
+      "这办法救了当天的交货，却让原先准备随手拿取的零件变成了先量、再配、再试装，整批多花了四十多分钟。设计人员把100.3 mm槽宽和两件50±0.2 mm的组合记进下一版图纸讨论，没有简单要求所有尺寸都无限收紧。快递到门口时，三十套灯已经合上；检验桌上那两块50.2 mm的垫片仍各自合格，只是被装进同一个小袋，袋上写着“合长100.4 mm”。"
     ],
-    "conceptName": "Engineering tolerance",
+    "overallZh": "本篇用一个理想化的一维装配说明工程公差的入门问题：单个零件都落在各自允许范围内，并不自动保证多个尺寸组合后仍满足装配空间。最坏情况下，各项偏差可以在同一方向叠加；临时选配可以解决特定批次，却不等于实现任意合格件互换。",
     "conceptNameZh": "工程公差",
-    "explanationParagraphs": [
-      "Engineering tolerance permits controlled variation in dimensions, geometry, or performance while preserving function and manufacturability. Individually conforming parts do not guarantee a successful assembly because deviations can accumulate; process bias, gauge error, and environment also affect outcomes. Tolerances should follow functional sensitivity, fit, process capability, measurement uncertainty, and risk. Critical features may need tighter limits, while unnecessary precision elsewhere only raises cost."
-    ],
     "explanationParagraphsZh": [
-      "工程公差允许尺寸、几何或性能在受控范围内变化，同时保证功能和可制造性。单件都合格，不代表装配一定成功，因为多个偏差可能叠加；过程偏向、量具误差和环境也会改变结果。公差应按功能敏感度、配合、过程能力、测量不确定性与风险分配，关键处收紧、非关键处无谓收紧只会增加成本。"
+      "公差允许实际尺寸在规定范围内变化。当多个尺寸沿同一装配方向相加时，每个零件都合格，组合后的总尺寸仍可能超过功能允许范围。",
+      "最小例子：两件各为50±0.2 mm，则单件范围是49.8–50.2 mm，两件合长的理想一维范围是99.6–100.4 mm。若固定槽宽为100.3 mm，最大组合100.4 mm会多出0.1 mm。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "先看为什么两件各自合格仍可能组合失败，再用一个一维极值核对偏差怎样累积。",
+      "diagramTitle": "每块都合格，为什么两块一起仍可能超过100.3毫米",
+      "diagramSteps": [
+        "每块垫片允许尺寸为50±0.2 mm，即49.8–50.2 mm",
+        "两块沿同一方向并排时，最小理想合长为49.8+49.8=99.6 mm",
+        "最大理想合长为50.2+50.2=100.4 mm",
+        "本篇固定理想槽宽为100.3 mm，因此最大组合超出0.1 mm",
+        "当天通过实际量测和逐对试装从库存中选出足够组合，但这不恢复任意互换性"
+      ],
+      "diagramStepNotes": [
+        "这个例子只处理一维尺寸相加，不涉及完整几何公差。",
+        "100.3 mm在本篇中被当作理想固定槽宽，不讨论槽本身的制造变化。",
+        "最坏情况把允许范围的极端值组合在一起，不假设误差会自然抵消。",
+        "合长不超过槽宽只是本篇简化装入条件，不能单独保证完整铰链性能。",
+        "选配增加测量、分组和试装。已经核对的是选定的配对，改换搭配后仍需检查。"
+      ],
+      "mapping": [
+        "两块50.2 mm垫片 → 各自合格但组合达到最大100.4 mm。",
+        "100.3 mm固定槽 → 这一维教学例子的功能空间限制。",
+        "49.9 mm与50.2 mm配对 → 一个实际合长100.1 mm并成功装入的组合。",
+        "分格摆放的库存 → 为当天选配付出的额外工作。"
+      ],
+      "boundary": "本篇只使用明确的一维尺寸范围和理想固定槽宽，展示最坏情况下尺寸偏差如何累积。真实装配还可能涉及槽本身公差、形位误差、间隙、表面状态和其他功能要求，因此“合长不大于槽宽”不能单独证明铰链整体合格。临时选配也不等于设计上保证任意合格件互换，更不意味着所有公差都应一律收紧。",
+      "reflection": "如果两块零件仍各允许50±0.2 mm，但固定槽改成100.5 mm，这个一维最坏组合还能因为长度本身而超过槽宽吗？"
+    },
+    "referencesZh": [
+      {
+        "id": "nist-ir6524",
+        "citation": "Sudarsan, R., Roy, U., Narahari, Y., Sriram, R. D., Lyons, K. W., & Pramanik, N. (2000, May). Information Models for Design Tolerancing: From Conceptual to the Detail Design. NISTIR6524.",
+        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir6524.pdf",
+        "use": "支持装配功能会受到多个零件尺寸变化累积影响，以及一维最坏情况分析可通过组合允许范围的极端值检查功能约束；不引入概率分布或现代标准合规结论。"
+      }
+    ],
+    "title": "Both Spacers Passed, but Together They Were 0.1 Millimeter Too Wide",
+    "summary": "Thirty lamps are waiting to be shipped, but two individually acceptable spacers jam in the third hinge. Lin Yue measures each piece, then the space they take up together.",
+    "storyParagraphs": [
+      "At 17:00, the courier is due to collect thirty folding reading lamps. Lin Yue is assembling the third lamp when the hinge suddenly refuses to slide into place. She removes the two aluminum spacers. There are no burrs on their edges, and caliper measurements show that both fall within the drawing's allowed range of 50±0.2 mm. Each part is acceptable on its own, so why do the two jam when placed together?",
+      "The previous lamp design used only one of these spacers at each location, so keeping each individual part within range was usually enough for assembly. The new version is the first to place two side by side in the same slot. Lin Yue measures the troublesome pair again: one is close to 50.2 mm and the other is also close to 50.2 mm. She measures the slot width as well: 100.3 mm.",
+      "Neither spacer is individually outside its limit, but 50.2+50.2=100.4 mm, which is 0.1 mm wider than the slot. She takes a compliant 49.9 mm spacer from the parts tray and pairs it with one of the 50.2 mm pieces, giving a total of 100.1 mm. That pair slides into the assembly successfully. She writes the two dimensions on one line, adds their combined length at the end, and puts the sheet beside the original individual inspection records.",
+      "More than twenty lamps are still waiting, and Lin Yue cannot assume that every piece will happen to find a suitable partner. This batch contains more than eighty already accepted spacers in stock, while thirty lamps require only sixty. She and a colleague remeasure the whole tray, sort the pieces into compartments, and then trial-fit them pair by pair. They actually find enough combinations for all thirty lamps; individually acceptable pieces that cannot easily be paired with the remaining stock for this slot are left in a separate box.",
+      "The workaround saves the day's shipment, but parts meant to be picked freely now have to be measured, paired, and trial-fitted, adding more than forty minutes to the batch. The design team records the 100.3 mm slot and the two 50±0.2 mm spacers for discussion in the next drawing revision rather than simply demanding that every dimension be tightened indefinitely. When the courier arrives, all thirty lamps are closed. The two 50.2 mm spacers on the inspection table are still individually compliant, but they sit together in a small bag labeled “combined length 100.4 mm.”"
+    ],
+    "overall": "This article uses an idealized one-dimensional assembly to introduce engineering tolerance: individual parts can each lie within their allowed ranges without guaranteeing that the combined dimensions will fit the available assembly space. In a worst-case combination, deviations can accumulate in the same direction. Selective pairing can rescue a particular batch, but it does not create unrestricted interchangeability among all compliant parts.",
+    "conceptName": "Engineering tolerance",
+    "explanationParagraphs": [
+      "A tolerance allows an actual dimension to vary within a specified range. When several dimensions add along the same assembly direction, every individual part can be compliant while the combined dimension still exceeds the functional limit.",
+      "Minimal example: if each of two parts is 50±0.2 mm, each can range from 49.8 to 50.2 mm, so the ideal one-dimensional combined range is 99.6–100.4 mm. If the fixed slot width is 100.3 mm, the maximum combination of 100.4 mm exceeds it by 0.1 mm."
+    ],
+    "module": {
+      "intro": "First see why two individually compliant parts can still fail together, then check how their allowed variations accumulate in a one-dimensional extreme case.",
+      "diagramTitle": "If Each Spacer Is Acceptable, Why Can Two Together Still Exceed 100.3 Millimeters?",
+      "diagramSteps": [
+        "Each spacer is allowed to be 50±0.2 mm, giving an individual range of 49.8–50.2 mm",
+        "With two spacers side by side along the same direction, the minimum ideal combined length is 49.8+49.8=99.6 mm",
+        "The maximum ideal combined length is 50.2+50.2=100.4 mm",
+        "The ideal fixed slot width in this article is 100.3 mm, so the maximum combination exceeds it by 0.1 mm",
+        "For the day's batch, actual measurement and pair-by-pair trial fitting produce enough combinations, but do not restore unrestricted interchangeability"
+      ],
+      "diagramStepNotes": [
+        "This example covers only one-dimensional addition of dimensions, not complete geometric tolerancing.",
+        "The 100.3 mm value is treated as an ideal fixed slot width in this article; variation in the slot itself is not modeled.",
+        "The worst case combines allowed extreme values and does not assume that errors naturally cancel.",
+        "Combined length not exceeding slot width is only the simplified fit condition in this article and does not by itself guarantee complete hinge performance.",
+        "Selective pairing adds measurement, sorting, and trial fitting. Only the selected combinations have been checked; new pairings need another fit check."
+      ],
+      "mapping": [
+        "Two 50.2 mm spacers → individually compliant pieces whose combined length reaches the 100.4 mm maximum.",
+        "100.3 mm fixed slot → the functional space limit in this one-dimensional teaching example.",
+        "49.9 mm paired with 50.2 mm → an actual 100.1 mm combination that fits successfully.",
+        "Sorted stock compartments → the extra work required for selective pairing that day."
+      ],
+      "boundary": "This article uses a clearly defined one-dimensional dimension range and an ideal fixed slot width to show how dimensional variation can accumulate in a worst-case combination. Real assemblies can also involve slot tolerances, geometric error, clearance, surface condition, and other functional requirements, so “combined length no greater than slot width” does not by itself establish that the complete hinge is acceptable. Selective pairing is also not the same as designing for unrestricted interchangeability, and the example does not imply that all tolerances should simply be tightened.",
+      "reflection": "If the two parts are still each allowed to be 50±0.2 mm but the fixed slot is changed to 100.5 mm, can the one-dimensional worst-case combination still exceed the slot because of length alone?"
+    },
+    "references": [
+      {
+        "id": "nist-ir6524",
+        "citation": "Sudarsan, R., Roy, U., Narahari, Y., Sriram, R. D., Lyons, K. W., & Pramanik, N. (2000, May). Information Models for Design Tolerancing: From Conceptual to the Detail Design. NISTIR6524.",
+        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir6524.pdf",
+        "use": "Supports the idea that assembly function can depend on accumulated dimensional variation across multiple components and that one-dimensional worst-case analysis can test functional constraints by combining allowed extreme values. No probability distribution or current standards-compliance claim is introduced."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
-      "reviewRounds": 3,
-      "rewriteRounds": 2,
+      "reviewRounds": 4,
+      "rewriteRounds": 3,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-21-preparation/group1-pdc-round4.json",
+      "edits": [
+        "engineering-reader-first-21-preparation/group1-edit-pass1-evidence.json",
+        "engineering-reader-first-21-preparation/group1-edit-pass2-evidence.json",
+        "engineering-reader-first-21-preparation/group1-edit-pass3-evidence.json"
+      ],
+      "execution": "One editor using 13 perspectives; four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "The new market arch had to stand before the autumn fair. Twenty quarries each cut one voussoir from a drawing that allowed a narrow variation in length. Inspector Ma checked every stone between two marks on one wooden rule and stamped all twenty. Each supplier was paid by accepted piece, so cutters sensibly worked near the generous side of the allowed range to avoid making a stone too short. Ma's rule had been copied from a master kept in town, but each quarry used its copy through rain, dust, and repeated planing. Nobody compared the copies before work began. The identical acceptance stamp made their small drift invisible.\n\nAt the crown, the final key stone was a finger too wide. Every quarry owner raised a valid acceptance stamp. Their local rules had worn differently, the central reference had not travelled with the drawing, and nineteen small high-side choices had accumulated around the ring. Workers hammered until one edge chipped, but the stone still would not enter. The fair committee began hanging banners from scaffolding to hide the open arch. Two more blows opened a hairline crack along the crown stone. Workers lowered it by rope, and the scaffold remained across the market road. Traders who had paid for arch-side stalls demanded their fees back.\n\nAn angry magistrate ordered every future dimension made exact. The senior mason placed the chipped key stone on his desk. Stone, tools, measurement, temperature, and moisture all varied; demanding equal precision on hidden backs, carved flowers, and closing faces would miss the fair and multiply cost. The mason left the impossible promise unsigned, marked the faces that truly governed closure, and forfeited his on-time bonus. To prove the cost, he timed one flower carving and one mating face. Tightening both equally multiplied hours without improving the fit. The magistrate crossed out his exactness order when the revised schedule showed winter.\n\nThe team checked wooden rules against one metal reference, centred production instead of clustering at one edge, tightened dimensions that accumulated toward closure, and performed intermediate trial assemblies. Non-mating backs and decoration kept wider allowances. The final gap included enough clearance to install the key without leaving the arch loose. These choices followed function, fit, process capability, measurement uncertainty, and consequence, not a universal number.\n\nOpening morning arrived one day late. The key stone slid into place when the mason withdrew a thin wooden shim; no hammer struck it. A line of sun remained in the designed joint. Inspector Ma hung the twenty old acceptance stamps from the scaffold rope, where their small differences clicked together in the wind.",
-    "storyBodyZh": "新市场拱门必须在秋集前立起。二十家石坊各按图纸制作一块拱石，长度允许有一线出入。验收人马师傅用同一把木尺检查，每块都落在两道刻痕之间，便逐一盖章。石坊按合格件收钱，为免石头太短，工匠自然都靠允许范围偏大一侧加工。马师傅的木尺原本照城里母尺复制，各石坊却在雨水、石粉与反复刨磨中使用自己的副尺，开工前无人再核对。同一枚合格印，把细小漂移全遮住。\n\n合到顶部时，最后楔石宽了整整一指。每位石坊主都举着有效合格印；各地木尺磨损不同，共同基准也没随图纸送到，十九次偏大选择又沿拱圈累积。工人敲缺一角，石头仍进不去。秋集委员会只好先在脚手架挂彩旗，遮住拱顶空口。再敲两锤，冠石沿边出现细裂。工人用绳把它放下，脚手架继续横在市场路上；预付拱门边摊位费的商贩纷纷要求退款。\n\n县令大怒，命令以后每个尺寸一丝不差。老石匠把缺角楔石放到桌上：石材、工具、测量、温湿度都会变化，若背面、花纹和闭合面都追求同样精度，不仅赶不上秋集，费用也会翻倍。老石匠没有在那份完美承诺上签名，只圈出真正决定闭合的配合面，并放弃按期奖金。他分别给花纹和配合面计时，证明两处同样收紧只会增加工时，不会改善闭合。修订工期排到冬天，县令才划掉“一丝不差”的命令。\n\n团队把木尺同金属母尺核对，不再把尺寸总做在范围一侧；会沿闭合方向累积的尺寸收紧，并增加中途整体试装。与配合无关的背面和装饰继续放宽，最终接缝既留出安装余量，又不让拱门松动。功能、配合、过程能力、测量不确定和后果共同决定这些范围，不靠一个万能数字。\n\n开门日比计划晚了一天。老石匠抽走底下一片薄木垫，楔石自行落定，没有锤子碰它；设计好的缝里仍留一线日光。马师傅把二十枚旧合格印挂在脚手绳上，风吹时，细小差异一起碰响。",
-    "explanation": "Engineering tolerance permits controlled variation in dimensions, geometry, or performance while preserving function and manufacturability. Individually conforming parts do not guarantee a successful assembly because deviations can accumulate; process bias, gauge error, and environment also affect outcomes. Tolerances should follow functional sensitivity, fit, process capability, measurement uncertainty, and risk. Critical features may need tighter limits, while unnecessary precision elsewhere only raises cost.",
-    "explanationZh": "工程公差允许尺寸、几何或性能在受控范围内变化，同时保证功能和可制造性。单件都合格，不代表装配一定成功，因为多个偏差可能叠加；过程偏向、量具误差和环境也会改变结果。公差应按功能敏感度、配合、过程能力、测量不确定性与风险分配，关键处收紧、非关键处无谓收紧只会增加成本。"
+    "storyBody": "At 17:00, the courier is due to collect thirty folding reading lamps. Lin Yue is assembling the third lamp when the hinge suddenly refuses to slide into place. She removes the two aluminum spacers. There are no burrs on their edges, and caliper measurements show that both fall within the drawing's allowed range of 50±0.2 mm. Each part is acceptable on its own, so why do the two jam when placed together?\n\nThe previous lamp design used only one of these spacers at each location, so keeping each individual part within range was usually enough for assembly. The new version is the first to place two side by side in the same slot. Lin Yue measures the troublesome pair again: one is close to 50.2 mm and the other is also close to 50.2 mm. She measures the slot width as well: 100.3 mm.\n\nNeither spacer is individually outside its limit, but 50.2+50.2=100.4 mm, which is 0.1 mm wider than the slot. She takes a compliant 49.9 mm spacer from the parts tray and pairs it with one of the 50.2 mm pieces, giving a total of 100.1 mm. That pair slides into the assembly successfully. She writes the two dimensions on one line, adds their combined length at the end, and puts the sheet beside the original individual inspection records.\n\nMore than twenty lamps are still waiting, and Lin Yue cannot assume that every piece will happen to find a suitable partner. This batch contains more than eighty already accepted spacers in stock, while thirty lamps require only sixty. She and a colleague remeasure the whole tray, sort the pieces into compartments, and then trial-fit them pair by pair. They actually find enough combinations for all thirty lamps; individually acceptable pieces that cannot easily be paired with the remaining stock for this slot are left in a separate box.\n\nThe workaround saves the day's shipment, but parts meant to be picked freely now have to be measured, paired, and trial-fitted, adding more than forty minutes to the batch. The design team records the 100.3 mm slot and the two 50±0.2 mm spacers for discussion in the next drawing revision rather than simply demanding that every dimension be tightened indefinitely. When the courier arrives, all thirty lamps are closed. The two 50.2 mm spacers on the inspection table are still individually compliant, but they sit together in a small bag labeled “combined length 100.4 mm.”",
+    "storyBodyZh": "傍晚五点，快递要来取三十套折叠阅读灯。林悦装到第三套时，铰链忽然推不进去。她把两块铝垫片取出来，边缘没有毛刺，卡尺量过也都落在图纸允许的50±0.2 mm范围里。单件都合格，为什么两块放在一起反而卡住了？\n\n上一款灯每个位置只用一块这种垫片，所以只要单件尺寸在范围内，装配通常就不会出问题。新款第一次改成两块并排放进同一条槽里。林悦把刚才那一对重新量了一遍：一块接近50.2 mm，另一块也接近50.2 mm；她又量了槽宽，读数是100.3 mm。\n\n两块单独都没越界，可50.2+50.2=100.4 mm，比槽宽多0.1 mm。她从零件盘里拿了一块49.9 mm的合格垫片，和其中一块50.2 mm搭在一起，总长100.1 mm，这一对实际装入后顺利推进。她把两块的尺寸写在同一行，末尾加上合长，再把这张纸放在原来的单件检验记录旁。\n\n当天还剩二十多套没装，林悦不能假定每一对都会碰巧有合适搭档。仓库里这一批共有八十多块已验收垫片，三十套灯总共需要六十块。她和同事把整盘重新量过、分格摆放，再逐对试装，实际凑出了足够的三十对；那些单独合格、但暂时不好与现有库存配成这一槽位组合的零件被留在盒里。\n\n这办法救了当天的交货，却让原先准备随手拿取的零件变成了先量、再配、再试装，整批多花了四十多分钟。设计人员把100.3 mm槽宽和两件50±0.2 mm的组合记进下一版图纸讨论，没有简单要求所有尺寸都无限收紧。快递到门口时，三十套灯已经合上；检验桌上那两块50.2 mm的垫片仍各自合格，只是被装进同一个小袋，袋上写着“合长100.4 mm”。",
+    "explanation": "A tolerance allows an actual dimension to vary within a specified range. When several dimensions add along the same assembly direction, every individual part can be compliant while the combined dimension still exceeds the functional limit.\n\nMinimal example: if each of two parts is 50±0.2 mm, each can range from 49.8 to 50.2 mm, so the ideal one-dimensional combined range is 99.6–100.4 mm. If the fixed slot width is 100.3 mm, the maximum combination of 100.4 mm exceeds it by 0.1 mm.",
+    "explanationZh": "公差允许实际尺寸在规定范围内变化。当多个尺寸沿同一装配方向相加时，每个零件都合格，组合后的总尺寸仍可能超过功能允许范围。\n\n最小例子：两件各为50±0.2 mm，则单件范围是49.8–50.2 mm，两件合长的理想一维范围是99.6–100.4 mm。若固定槽宽为100.3 mm，最大组合100.4 mm会多出0.1 mm。"
   },
   {
     "id": "0716-stability-and-control",
@@ -19439,49 +19597,126 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0716",
     "fieldTitle": "Motor vehicles ships and aircraft",
     "fieldTitleZh": "机动车、船舶与航空器",
-    "title": "The Steadiest Ship Missed the Harbour",
-    "titleZh": "最稳的船错过了港口",
-    "summary": "An owner deepens a ferry's keel and widens its hull until it resists every roll, then finds that it also resists its helmsman.",
-    "summaryZh": "船主为了让渡船再也不倾斜，不断加深龙骨、加宽船身，最后它顶住了侧风，也拒绝听从舵手。",
-    "storyParagraphs": [
-      "Passengers had once gone pale when ferry owner Du Cheng's boat rolled in cross-seas. To win the harbour licence, he promised the next vessel would be 'steady as the quay'. He widened the hull, lowered weights, and fitted a deep fixed fin. The designer warned that the existing rudder might lack authority at low speed, but redesign would miss the tender. Du submitted the calm-water trial: a teacup had not moved on the table.",
-      "On the first licensed trip, a side wind pushed the loaded boat toward the channel edge. The deck stayed nearly level, yet the bow would not turn toward the entrance. The deep fin and broad hull resisted yaw while the small rudder produced little effect at low speed. The harbour slid past to starboard. Passengers cheered the lack of rolling until they learned the boat needed another hour outside to turn around.",
-      "On the second approach, the helmsman applied full rudder early. Nothing happened at first. As speed rose, the turn arrived too strongly and the ferry struck the wooden fender. No one was hurt, but cargo shifted and passengers spent two more hours aboard. Du nailed the unspilled teacup photograph over the damage report and blamed the helmsman.",
-      "The designer brought two small models to the basin. One returned rapidly after a sideways disturbance but traced a wide circle under the same rudder command; the other rolled more, yet changed heading within the harbour width. Du timed both instead of judging only their return to upright. The ability to settle after disturbance and the ability to follow a commanded change demanded separate evidence and could trade against each other.",
-      "The licence inspector required trials under empty and full load, low and higher speed, crosswind, and specified damage conditions. With the festival permit lying unsigned, Du sent the boat into the yard, returned the booked fares, and lost the licence bonus. Hull, weight location, fin area, and rudder authority were adjusted together. Festival families collected refunds at the ticket shed while the vessel sat on blocks. Du sold the decorative salon furniture to pay the yard and left the teacup photograph pinned to the bare wall.",
-      "The modified vessel still arrested its motion after a wave, but it also had enough control to turn before the breakwater. Limits remained for weather and load; the crew did not promise every manoeuvre in every sea. The chipped fender was mounted near the helm so a calm teacup could no longer serve as the only acceptance test.",
-      "On the next crosswind approach, the helmsman moved the tiller gently. The bow crossed the wind and aligned with the harbour; when he eased his hand, the motion settled. Du lifted the same cup from the table. A small ring travelled across the tea while the chipped fender hung steady above him."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "机头第一次回来了，摄影师却继续拍",
+    "summaryZh": "摄影师想在模型机第一次回正时停机。李乔让镜头多留了几秒，拍到了第一下看不出的后续摆动。",
     "storyParagraphsZh": [
-      "乘客曾在横浪里被旧渡船晃得脸白。船主杜成要争取港口执照，承诺新船“稳得像码头”，于是加宽船身、压低重物，又装上很深的固定鳍。设计师提醒，旧小舵在低速可能没有足够作用；改造却会错过投标。杜成提交了静水试航照片：桌上茶碗纹丝不动。",
-      "第一次持照载客，侧风把满载渡船推向航道边。甲板几乎不斜，船头却转不进港口。深鳍和宽船身强烈抗拒偏航，小舵在低速又没有足够效果。入口从右舷滑过去，乘客起初还庆幸船不晃，随后才知道必须在外湾多绕一小时。",
-      "第二次进港，舵手提前打满舵。船最初仍不转，速度起来后，迟到的转向突然过强，船身擦坏码头护木。无人受伤，货物却移位，乘客又被困两小时。杜成把那张茶水未洒的照片钉在事故报告上方，责怪舵手。",
-      "设计师把两只小模型放进水槽。一只受侧扰后很快回正，同样舵令下却画出大圈；另一只摆动稍多，却能在港池宽度内转向。杜成这次给两者计时，不再只看回正。受扰后能否收住运动，与能否按命令及时改变方向，需要分别验证，也可能彼此牵制。",
-      "执照官要求在空载、满载、低速、较高速度、横风和规定受损情形下试航。节庆许可迟迟没有签字，杜成便把船送进坞里，退还预订船票，也失去执照奖金。船身、载重位置、鳍面与舵的作用一起调整。节庆家庭在票房排队退款，渡船则架在坞墩上。杜成卖掉客舱装饰家具支付船厂费用，只把茶碗照片钉在空墙。",
-      "改好后的船仍能在浪后收住摆动，也有足够作用在防波堤前转弯；天气与载荷限制继续保留，船员不承诺每种海况都能完成每个动作。破损护木被挂在驾驶位附近，一只平静茶碗不再独自充当验收。",
-      "下一次横风进港，舵手轻推舵柄，船头越过风向对准入口；他松手时，运动慢慢定住。杜成端起同一只碗，茶面荡过一圈小纹，头顶缺角护木一动不动。"
+      "航空展馆下午要补拍一段展屏短片，摄制组只剩四十分钟。李乔面前有A、B两架外形相近的泡沫模型，摄影师喜欢A，因为它一松手就很快把机头转回来，画面干脆。要是这架就够用，他们还能提前收掉灯架。",
+      "模型装在透明演示箱里的同一套支承上，机头可以上下转动，这种运动叫俯仰。风扇持续提供稳定气流。尾部操纵面保持中立。工作人员把A的机头从原来的位置轻轻抬起，停稳后再松手，A马上朝原位置转回。摄影师刚想停机，机头已经越过中间，摆向另一边。",
+      "镜头继续拍。A又摆回来，再越过去，在这段示意观察时间里幅度没有明显收小。李乔换上B，保持同样的支承方式和气流条件，把机头抬到相同的小偏离角，停稳后再松手。B也最初朝原位置转回，也会越过中间，但随后的摆动一次比一次小。她把B的这一段留作成片，因为镜头现在既拍到了最初往哪边转，也拍到了后面的运动怎样发展。",
+      "第二段拍摄时，B仍放在同一装置和气流中，并重新回到中间附近。李乔不再用手推，而是用控制杆给出一个短促的抬头指令。镜头先拍到尾部操纵面明确转过一个小角度，随后机头向上转动；指令结束后，操纵面回到中立。她让摄影师把这段从操纵面动作开始保留，和前面的松手镜头分开剪。",
+      "分成两次拍摄多花了十几分钟，摄影师还重新调了一次机位，提前收灯的计划没实现。收工时，场记板上留下两行字：“轻推—松手”和“拨杆—响应”。李乔把它夹在B模型的演示架上，摄影师看了一眼时间：“还够下一条。”"
     ],
-    "conceptName": "Stability and control",
+    "overallZh": "本篇用受控模型演示区分稳定性与操纵性的三个入门观察：受小扰动后最初是否有恢复趋势，后续运动幅度随时间如何发展，以及在明确操纵输入后模型怎样响应。三者相关但不是同一个问题；本演示不代表真实飞机的完整飞行稳定性、操纵品质或认证结果。",
     "conceptNameZh": "稳定性与操纵性",
-    "explanationParagraphs": [
-      "Stability describes whether a vehicle's motion after disturbance remains bounded, decays, or returns toward an operating state. Control describes whether its actuators have enough authority and response to achieve commanded changes. Stronger passive stability can improve disturbance resistance while also increasing resistance to turning or reducing manoeuvrability. Design must examine both recovery behaviour and control authority across speeds, loads, environments, delays, and failures."
-    ],
     "explanationParagraphsZh": [
-      "稳定性描述车辆或船舶受扰后的运动是否有界、衰减或回到运行状态；操纵性描述执行器能否以足够权限和速度实现命令变化。更强的被动稳定可能提高抗扰，也可能增加转向阻力或降低机动。设计需在不同速度、载荷、环境、延迟和故障下，同时检查恢复特性与控制能力。"
+      "在航空入门语境中，静稳定关注模型受扰后最初的趋势，例如是否先朝原平衡状态方向恢复；动稳定还要继续看运动随时间是衰减、保持还是增大。第一次回正因此不能单独证明长期运动会收敛。",
+      "操纵性则关注明确控制输入后飞行器的响应。本故事另拍尾部操纵面偏转后的俯仰响应，目的只是把“没有持续指令时的扰动后运动”与“有意输入后的响应”分开观察，并不声称稳定性越强就一定越难操纵。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "把同一个模型场景拆成两个问题：松手以后它自己怎样运动，以及给出明确操纵指令后它怎样响应。",
+      "diagramTitle": "第一次朝原位回来，为什么还不能说明后面一定会稳定下来",
+      "diagramSteps": [
+        "在稳定气流和相同俯仰支承条件下，让操纵面保持中立",
+        "把模型轻微偏离原位置并停稳后松手，观察最初运动方向",
+        "继续观察后续摆动幅度是减小、保持还是增大",
+        "重新回到中间附近后，给尾部操纵面一个明确的短指令",
+        "把扰动后的自行运动记录与操纵面指令后的响应分别保留"
+      ],
+      "diagramStepNotes": [
+        "气流与可俯仰支承为这个气动教学演示提供必要条件。",
+        "先在偏离位置停稳，避免手施加的初始转动混入判断；松手后的初始趋势才是这里要观察的对象。",
+        "后续幅度发展属于随时间的动态表现，不能由第一次回正直接推出。",
+        "主动指令时操纵面实际发生偏转，响应不依赖操作者暗中继续推模型。",
+        "本例是虚构模型观察，不是FAA实测数据或真实整机飞行认证。"
+      ],
+      "mapping": [
+        "A第一次回正 → 有初始恢复趋势，但观察期内摆动没有明显衰减。",
+        "B在这段记录里逐渐减小的摆动 → 本次观察中的衰减示意。",
+        "尾部操纵面转动 → 明确可见的主动控制输入。",
+        "两行场记板 → 把扰动试验和指令响应分开的拍摄记录。"
+      ],
+      "boundary": "这是稳定气流中、受限俯仰自由度的模型教学演示，只用于区分初始恢复趋势、后续动态发展和明确控制输入后的响应。它不能代表真实飞机的全部纵向或横侧向运动，也不能作为飞行安全、操纵品质、稳定裕度或认证结论。稳定性与操纵性也不存在本篇可以普遍推出的“一个越强另一个必然越弱”关系。",
+      "reflection": "如果一个模型受扰后第一次朝原位置转回，但随后每次摆动都比前一次更大，只看第一次回正能否判断它最终会自行安定下来？"
+    },
+    "referencesZh": [
+      {
+        "id": "faa-phak-25c-ch5",
+        "citation": "Federal Aviation Administration. (2023). Pilot’s Handbook of Aeronautical Knowledge, FAA-H-8083-25C, Chapter 5: Aerodynamics of Flight, pp. 5-14–5-15.",
+        "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+        "use": "支持将受扰后的初始恢复趋势与运动随时间的发展区分开，并将明确操纵输入后的响应作为与稳定性不同的观察问题；不用于把模型演示外推成真实飞机认证。"
+      }
+    ],
+    "title": "The Nose Came Back the First Time, but the Camera Kept Rolling",
+    "summary": "The camera operator wants to stop when the model’s nose first turns back. Li Qiao keeps the camera rolling for a few more seconds and captures motion the first return did not reveal.",
+    "storyParagraphs": [
+      "The aviation museum needs to reshoot a short clip for an exhibition screen that afternoon, and the crew has only forty minutes left. Two similar-looking foam models, A and B, sit in front of Li Qiao. The camera operator prefers A because as soon as it is released, its nose quickly turns back, making for a crisp shot. If that model is good enough, they can even start taking down the lighting rig early.",
+      "The model is mounted on the same support inside a transparent demonstration box. Its nose can rotate up and down, a motion called pitch, while a fan provides steady airflow. The tail control surface remains neutral. A staff member gently raises A's nose away from its original position, holds it still, and then releases it. A immediately turns back toward the original position. The camera operator is just about to stop recording when the nose passes through the middle and swings to the other side.",
+      "The camera keeps rolling. A swings back again, then crosses through once more, and during this demonstration observation period its amplitude does not noticeably decrease. Li Qiao replaces it with B, keeps the same support arrangement and airflow conditions, and raises the nose to the same small displaced angle, holds it still, and releases it. B also initially turns toward the original position and also passes through the middle, but each later oscillation becomes smaller. She keeps B's sequence for the final clip because the camera now shows both the initial direction of motion and how the motion develops afterward.",
+      "For the second sequence, B remains in the same apparatus and airflow and is returned near the middle position. Li Qiao no longer pushes it by hand. Instead, she uses the control stick to give a brief nose-up command. The camera first captures the tail control surface visibly deflecting through a small angle, followed by the model’s nose rotating upward; when the command ends, the control surface returns to neutral. She asks the camera operator to keep this sequence from the moment the control surface begins moving and to edit it separately from the earlier release shot.",
+      "Filming the two sequences separately costs more than ten extra minutes, and the camera operator has to reset the framing once, so the plan to take down the lights early is abandoned. At wrap, the slate carries two lines: “gentle push—release” and “control input—response.” Li Qiao clips it to B's demonstration stand. The camera operator checks the time. “Still enough for the next shot.”"
+    ],
+    "overall": "This article uses a controlled model demonstration to separate three introductory observations about stability and control: whether a model initially tends to return after a small disturbance, how the amplitude of its motion develops over time, and how it responds after a deliberate control input. These are related but not identical questions. The demonstration does not represent the complete stability, handling qualities, or certification of a real aircraft.",
+    "conceptName": "Stability and control",
+    "explanationParagraphs": [
+      "In an introductory aviation context, static stability concerns the initial tendency after a disturbance, such as whether the model first moves back toward its original equilibrium. Dynamic stability requires continuing to observe whether the motion decreases, remains constant, or grows over time. An initial return therefore does not by itself prove that the longer-term motion will converge.",
+      "Controllability concerns the response to an explicit control input. The story separately films the pitch response following a tail-control-surface deflection so that uncommanded motion after a disturbance can be observed separately from deliberate commanded response. It does not claim that greater stability necessarily means poorer controllability."
+    ],
+    "module": {
+      "intro": "Split the same model scene into two questions: what it does on its own after release, and how it responds after an explicit control command.",
+      "diagramTitle": "Why Turning Back Once Does Not Yet Show That the Later Motion Will Settle",
+      "diagramSteps": [
+        "With steady airflow and the same pitch-support conditions, keep the control surface neutral",
+        "Displace the model slightly, hold it still, then release it and observe the initial direction of motion",
+        "Continue watching whether subsequent oscillation amplitudes decrease, stay similar, or grow",
+        "Return the model near the middle position and give the tail control surface an explicit short command",
+        "Keep the post-disturbance free-motion record separate from the response following the control-surface command"
+      ],
+      "diagramStepNotes": [
+        "Steady airflow and a support that permits pitch motion provide the necessary conditions for this aerodynamic teaching demonstration.",
+        "Hold the model still at the displaced position so a turn imparted by hand does not determine its first movement; observe the tendency after release.",
+        "How amplitude develops afterward is a time-dependent dynamic behavior and cannot be inferred from the first return alone.",
+        "During the commanded test, the control surface visibly deflects, so the response does not depend on an operator secretly continuing to push the model.",
+        "This is a fictional model observation, not FAA measured data or certification of a real aircraft."
+      ],
+      "mapping": [
+        "A's first return → an initial restoring tendency while its oscillation does not noticeably decay during the observation period.",
+        "B's oscillations shrinking during this recording → an illustration of decay within the observation period.",
+        "Tail control-surface movement → an explicit, visible control input.",
+        "Two lines on the slate → a filming record that separates the disturbance test from the commanded-response sequence."
+      ],
+      "boundary": "This is a teaching demonstration using steady airflow and a model with constrained pitch freedom. It is only intended to distinguish initial restoring tendency, subsequent dynamic development, and response to an explicit control input. It does not represent all longitudinal or lateral-directional motion of a real aircraft and cannot establish flight safety, handling qualities, stability margins, or certification. The article also does not support any universal claim that stronger stability must imply weaker controllability.",
+      "reflection": "If a model first turns back toward its original position after a disturbance but each later oscillation becomes larger than the previous one, can the first return alone show that it will eventually settle on its own?"
+    },
+    "references": [
+      {
+        "id": "faa-phak-25c-ch5",
+        "citation": "Federal Aviation Administration. (2023). Pilot’s Handbook of Aeronautical Knowledge, FAA-H-8083-25C, Chapter 5: Aerodynamics of Flight, pp. 5-14–5-15.",
+        "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+        "use": "Supports distinguishing the initial restoring tendency after a disturbance from the way motion develops over time, and treating response to an explicit control input as a separate observation from stability. It is not used to extend the model demonstration into a real-aircraft certification claim."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
-      "reviewRounds": 3,
-      "rewriteRounds": 2,
+      "reviewRounds": 4,
+      "rewriteRounds": 3,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-21-preparation/group1-pdc-round4.json",
+      "edits": [
+        "engineering-reader-first-21-preparation/group1-edit-pass1-evidence.json",
+        "engineering-reader-first-21-preparation/group1-edit-pass2-evidence.json",
+        "engineering-reader-first-21-preparation/group1-edit-pass3-evidence.json"
+      ],
+      "execution": "One editor using 13 perspectives; four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Passengers had once gone pale when ferry owner Du Cheng's boat rolled in cross-seas. To win the harbour licence, he promised the next vessel would be 'steady as the quay'. He widened the hull, lowered weights, and fitted a deep fixed fin. The designer warned that the existing rudder might lack authority at low speed, but redesign would miss the tender. Du submitted the calm-water trial: a teacup had not moved on the table.\n\nOn the first licensed trip, a side wind pushed the loaded boat toward the channel edge. The deck stayed nearly level, yet the bow would not turn toward the entrance. The deep fin and broad hull resisted yaw while the small rudder produced little effect at low speed. The harbour slid past to starboard. Passengers cheered the lack of rolling until they learned the boat needed another hour outside to turn around.\n\nOn the second approach, the helmsman applied full rudder early. Nothing happened at first. As speed rose, the turn arrived too strongly and the ferry struck the wooden fender. No one was hurt, but cargo shifted and passengers spent two more hours aboard. Du nailed the unspilled teacup photograph over the damage report and blamed the helmsman.\n\nThe designer brought two small models to the basin. One returned rapidly after a sideways disturbance but traced a wide circle under the same rudder command; the other rolled more, yet changed heading within the harbour width. Du timed both instead of judging only their return to upright. The ability to settle after disturbance and the ability to follow a commanded change demanded separate evidence and could trade against each other.\n\nThe licence inspector required trials under empty and full load, low and higher speed, crosswind, and specified damage conditions. With the festival permit lying unsigned, Du sent the boat into the yard, returned the booked fares, and lost the licence bonus. Hull, weight location, fin area, and rudder authority were adjusted together. Festival families collected refunds at the ticket shed while the vessel sat on blocks. Du sold the decorative salon furniture to pay the yard and left the teacup photograph pinned to the bare wall.\n\nThe modified vessel still arrested its motion after a wave, but it also had enough control to turn before the breakwater. Limits remained for weather and load; the crew did not promise every manoeuvre in every sea. The chipped fender was mounted near the helm so a calm teacup could no longer serve as the only acceptance test.\n\nOn the next crosswind approach, the helmsman moved the tiller gently. The bow crossed the wind and aligned with the harbour; when he eased his hand, the motion settled. Du lifted the same cup from the table. A small ring travelled across the tea while the chipped fender hung steady above him.",
-    "storyBodyZh": "乘客曾在横浪里被旧渡船晃得脸白。船主杜成要争取港口执照，承诺新船“稳得像码头”，于是加宽船身、压低重物，又装上很深的固定鳍。设计师提醒，旧小舵在低速可能没有足够作用；改造却会错过投标。杜成提交了静水试航照片：桌上茶碗纹丝不动。\n\n第一次持照载客，侧风把满载渡船推向航道边。甲板几乎不斜，船头却转不进港口。深鳍和宽船身强烈抗拒偏航，小舵在低速又没有足够效果。入口从右舷滑过去，乘客起初还庆幸船不晃，随后才知道必须在外湾多绕一小时。\n\n第二次进港，舵手提前打满舵。船最初仍不转，速度起来后，迟到的转向突然过强，船身擦坏码头护木。无人受伤，货物却移位，乘客又被困两小时。杜成把那张茶水未洒的照片钉在事故报告上方，责怪舵手。\n\n设计师把两只小模型放进水槽。一只受侧扰后很快回正，同样舵令下却画出大圈；另一只摆动稍多，却能在港池宽度内转向。杜成这次给两者计时，不再只看回正。受扰后能否收住运动，与能否按命令及时改变方向，需要分别验证，也可能彼此牵制。\n\n执照官要求在空载、满载、低速、较高速度、横风和规定受损情形下试航。节庆许可迟迟没有签字，杜成便把船送进坞里，退还预订船票，也失去执照奖金。船身、载重位置、鳍面与舵的作用一起调整。节庆家庭在票房排队退款，渡船则架在坞墩上。杜成卖掉客舱装饰家具支付船厂费用，只把茶碗照片钉在空墙。\n\n改好后的船仍能在浪后收住摆动，也有足够作用在防波堤前转弯；天气与载荷限制继续保留，船员不承诺每种海况都能完成每个动作。破损护木被挂在驾驶位附近，一只平静茶碗不再独自充当验收。\n\n下一次横风进港，舵手轻推舵柄，船头越过风向对准入口；他松手时，运动慢慢定住。杜成端起同一只碗，茶面荡过一圈小纹，头顶缺角护木一动不动。",
-    "explanation": "Stability describes whether a vehicle's motion after disturbance remains bounded, decays, or returns toward an operating state. Control describes whether its actuators have enough authority and response to achieve commanded changes. Stronger passive stability can improve disturbance resistance while also increasing resistance to turning or reducing manoeuvrability. Design must examine both recovery behaviour and control authority across speeds, loads, environments, delays, and failures.",
-    "explanationZh": "稳定性描述车辆或船舶受扰后的运动是否有界、衰减或回到运行状态；操纵性描述执行器能否以足够权限和速度实现命令变化。更强的被动稳定可能提高抗扰，也可能增加转向阻力或降低机动。设计需在不同速度、载荷、环境、延迟和故障下，同时检查恢复特性与控制能力。"
+    "storyBody": "The aviation museum needs to reshoot a short clip for an exhibition screen that afternoon, and the crew has only forty minutes left. Two similar-looking foam models, A and B, sit in front of Li Qiao. The camera operator prefers A because as soon as it is released, its nose quickly turns back, making for a crisp shot. If that model is good enough, they can even start taking down the lighting rig early.\n\nThe model is mounted on the same support inside a transparent demonstration box. Its nose can rotate up and down, a motion called pitch, while a fan provides steady airflow. The tail control surface remains neutral. A staff member gently raises A's nose away from its original position, holds it still, and then releases it. A immediately turns back toward the original position. The camera operator is just about to stop recording when the nose passes through the middle and swings to the other side.\n\nThe camera keeps rolling. A swings back again, then crosses through once more, and during this demonstration observation period its amplitude does not noticeably decrease. Li Qiao replaces it with B, keeps the same support arrangement and airflow conditions, and raises the nose to the same small displaced angle, holds it still, and releases it. B also initially turns toward the original position and also passes through the middle, but each later oscillation becomes smaller. She keeps B's sequence for the final clip because the camera now shows both the initial direction of motion and how the motion develops afterward.\n\nFor the second sequence, B remains in the same apparatus and airflow and is returned near the middle position. Li Qiao no longer pushes it by hand. Instead, she uses the control stick to give a brief nose-up command. The camera first captures the tail control surface visibly deflecting through a small angle, followed by the model’s nose rotating upward; when the command ends, the control surface returns to neutral. She asks the camera operator to keep this sequence from the moment the control surface begins moving and to edit it separately from the earlier release shot.\n\nFilming the two sequences separately costs more than ten extra minutes, and the camera operator has to reset the framing once, so the plan to take down the lights early is abandoned. At wrap, the slate carries two lines: “gentle push—release” and “control input—response.” Li Qiao clips it to B's demonstration stand. The camera operator checks the time. “Still enough for the next shot.”",
+    "storyBodyZh": "航空展馆下午要补拍一段展屏短片，摄制组只剩四十分钟。李乔面前有A、B两架外形相近的泡沫模型，摄影师喜欢A，因为它一松手就很快把机头转回来，画面干脆。要是这架就够用，他们还能提前收掉灯架。\n\n模型装在透明演示箱里的同一套支承上，机头可以上下转动，这种运动叫俯仰。风扇持续提供稳定气流。尾部操纵面保持中立。工作人员把A的机头从原来的位置轻轻抬起，停稳后再松手，A马上朝原位置转回。摄影师刚想停机，机头已经越过中间，摆向另一边。\n\n镜头继续拍。A又摆回来，再越过去，在这段示意观察时间里幅度没有明显收小。李乔换上B，保持同样的支承方式和气流条件，把机头抬到相同的小偏离角，停稳后再松手。B也最初朝原位置转回，也会越过中间，但随后的摆动一次比一次小。她把B的这一段留作成片，因为镜头现在既拍到了最初往哪边转，也拍到了后面的运动怎样发展。\n\n第二段拍摄时，B仍放在同一装置和气流中，并重新回到中间附近。李乔不再用手推，而是用控制杆给出一个短促的抬头指令。镜头先拍到尾部操纵面明确转过一个小角度，随后机头向上转动；指令结束后，操纵面回到中立。她让摄影师把这段从操纵面动作开始保留，和前面的松手镜头分开剪。\n\n分成两次拍摄多花了十几分钟，摄影师还重新调了一次机位，提前收灯的计划没实现。收工时，场记板上留下两行字：“轻推—松手”和“拨杆—响应”。李乔把它夹在B模型的演示架上，摄影师看了一眼时间：“还够下一条。”",
+    "explanation": "In an introductory aviation context, static stability concerns the initial tendency after a disturbance, such as whether the model first moves back toward its original equilibrium. Dynamic stability requires continuing to observe whether the motion decreases, remains constant, or grows over time. An initial return therefore does not by itself prove that the longer-term motion will converge.\n\nControllability concerns the response to an explicit control input. The story separately films the pitch response following a tail-control-surface deflection so that uncommanded motion after a disturbance can be observed separately from deliberate commanded response. It does not claim that greater stability necessarily means poorer controllability.",
+    "explanationZh": "在航空入门语境中，静稳定关注模型受扰后最初的趋势，例如是否先朝原平衡状态方向恢复；动稳定还要继续看运动随时间是衰减、保持还是增大。第一次回正因此不能单独证明长期运动会收敛。\n\n操纵性则关注明确控制输入后飞行器的响应。本故事另拍尾部操纵面偏转后的俯仰响应，目的只是把“没有持续指令时的扰动后运动”与“有意输入后的响应”分开观察，并不声称稳定性越强就一定越难操纵。"
   },
   {
     "id": "0716-drag",
@@ -19490,47 +19725,125 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0716",
     "fieldTitle": "Motor vehicles ships and aircraft",
     "fieldTitleZh": "机动车、船舶与航空器",
-    "title": "The Cargo Boat That Won the Race",
-    "titleZh": "赢了赛船的货船",
-    "summary": "A new cargo boat outruns every vessel in the harbour while empty, then needs two extra voyages to deliver the same grain.",
-    "summaryZh": "一艘新货船在空载试航中快过全港，却为了送完同一批粮食，多跑了两趟。",
-    "storyParagraphs": [
-      "Merchant Xu An needed the royal grain contract to save his yard. He commissioned a long narrow vessel with a knife-shaped bow and polished boards. Empty, it crossed the harbour faster than every old cargo boat and used little fuel for the trial. Xu painted the winning time across its sail. The shipwright asked how many sacks the contract required per week; Xu answered that the fastest boat would simply make more trips.",
-      "Loaded with grain, the narrow hull reached its draft and stability limit at sixty percent of an older boat's cargo. Xu ordered the captain to hold trial speed so the painted promise remained true. Fuel flow rose sharply, the bow struck on waves, and one wet crossing required another reduction in sacks. The first delivery arrived on time, but only because the crew sailed twice through the night.",
-      "On the third trip an engine bearing overheated and the crew missed the tide. Xu could reduce speed or hire another boat and expose his claim. He insisted on speed. By week-end the new vessel had made three extra voyages, burned more fuel, paid more crew hours, and still left eighty sacks at the quay. The royal clerk measured delivered grain, not the first arrival time, and withheld the contract payment. The overheated bearing needed replacement before the vessel could sail again. Grain waited under rented canvas, and rain spoiled the outer row. Xu paid the farmers before receiving a coin from the palace.",
-      "The captain put two rows on a slate. The old boat moved more slowly but carried more; when both boats reduced speed slightly in the same current, resistance and fuel demand fell enough that sacks delivered per barrel improved. Xu added full-load fuel, cargo, number of trips, waiting for weather, and crew time. The empty-race number had described one condition, not the useful transport service.",
-      "The shipwright kept smooth lines but reshaped the stern and propeller around common loads, adjusted width and operating speed, and scheduled hull cleaning. Routes avoided the strongest opposing current where timing allowed. Xu sold the polished racing mast to pay the redesign and accepted a smaller seasonal contract. Safety, stability, engine limits, weather, and cargo delivery remained in the comparison; no one chased a low resistance number by removing needed capacity. The captain then repeated a loaded route at two permitted speeds and posted delivered sacks and fuel side by side. The slower run arrived later but completed the weekly quantity with one fewer voyage.",
-      "Before the next tender, Xu cut the old record from the sail. A tailor made it into a small flag reading: one barrel, four hundred and twenty sacks delivered. The flag was shorter than the missing royal pennant, and it flew above a hold filled to its marked line."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "草图上的“×2”被划掉了",
+    "title": "The “×2” on the Sketch Was Crossed Out",
+    "summaryZh": "园区接驳车想加快一段路线，车顶展示牌的支架也要重新考虑。有人估计速度翻倍，受风也只翻倍，周恺于是把小模型放上测试架。",
+    "summary": "The shuttle team wants to speed up part of its route, which means reconsidering the roof-sign support. Someone expects twice the speed to mean twice the air load, so Zhou Kai puts a small model on the test rig.",
     "storyParagraphsZh": [
-      "船商许安必须拿到王城粮运合约，才能救回船厂。他订造一艘细长新船，船头像刀，船板能照出人影。空载试航时，它轻易超过所有旧货船，耗油也少。许安把最快时间写上船帆。造船师问每周要送多少袋粮，他说最快的船多跑几趟就行。",
-      "装粮后，细船为保持吃水和稳定，只能装旧船六成。许安仍命船长维持试航速度，好让帆上的承诺不落空。燃料流量猛增，船头不断拍浪，一次湿冷航程还得再减货。首批准时抵达，只因船员连夜跑了两次。",
-      "第三趟，发动机轴承过热，船又错过潮水。许安可以降速，也可以租船、承认宣传失实；他仍坚持速度。一周结束，新船多跑三航次，烧掉更多油，付出更多工时，码头却还剩八十袋。王室书记只数交付粮袋，不看第一船多快，因而扣住合约款。过热轴承必须更换，船才能再开。粮袋只能罩着租来的帆布等待，雨水仍毁掉最外一排。王宫一枚钱都没付，许安先赔给农户。",
-      "船长在石板列两行。旧船虽慢，却装得多；两船在同一水流里稍微降速后，水的阻碍与燃料需求都明显下降，每桶油送达的粮袋反而增加。许安这才把满载油耗、载货量、航次数、候天气时间和船员工时放到一起。空船竞速只描述一种条件，没有描述完整运输。",
-      "造船师保留流畅外形，却按常用载荷重做船尾、螺旋桨、船宽与工作速度，并安排清理船底；条件允许时避开最强逆流。许安卖掉光亮竞速桅杆支付改造，只接到较小季节合同。安全、稳定、发动机限制、天气和送达货物都留在比较里，没有人靠删掉必要能力来追求漂亮数字。船长又在两种允许速度下重跑满载航线，把送达袋数与油耗并列张贴。较慢一趟虽晚到，却让全周少跑一次便完成数量。",
-      "下一次投标前，许安剪下帆上的旧纪录。裁缝把它做成小旗，写着“一桶油，送达四百二十袋”。小旗比缺席的王室长旗短得多，却飘在一座装到标线的货舱上方。"
+      "周末活动要用电动接驳车在园区里来回接送来宾。运营同事想把一段空旷直路的速度提高一点，好让每圈少等几分钟，可车顶刚装上新的展示牌。周恺正在改支架图，听见“速度差不多翻倍”时停了笔：牌子没变，但迎面空气的作用会不会也只是多一倍？",
+      "旧路线一直较慢，原支架在那种使用条件下没有给他们添过麻烦，所以按原经验往上估并不奇怪。工作台上正好有一块同形状的小模型，周恺把它以同一姿态固定在简化风流测试架上。第一档稳定气流相对模型约10 m/s时，测力指针停在约5 N。",
+      "有人顺口说：“那20 m/s，大概10 N吧。”第二档把相对空气速度调到约20 m/s，模型的位置和姿态没有改变，指针却慢慢停在约20 N。周恺又回到第一档，读数仍在约5 N附近。速度只是变成两倍，眼前这个空气阻力却接近原来的四倍。草图上的“×2”被他划掉了。",
+      "这组小模型读数没有替他决定实车支架尺寸，却已经足够推翻今天那条线性估算。周恺把提速方案在运营表上圈出来，先保留原来的较慢路线，再把车顶展示牌的高速使用条件交回设计端核算。运营少省几分钟，但支架方案不再建立在“速度翻倍、空气作用也只翻倍”的猜测上。",
+      "散会时，运营同事拿走了修改后的路线表。周恺收起模型，盒盖上贴着两张纸：“约10 m/s—约5 N”“约20 m/s—约20 N”。刚才那行“10 N”的铅笔字还留在草图上，只是被一道横线穿了过去。"
     ],
-    "conceptName": "Drag and transport efficiency",
+    "storyParagraphs": [
+      "A weekend event will use an electric shuttle to carry visitors around the site. The operations team wants to raise the speed on one open stretch so each circuit takes a few minutes less, but a new display sign has just been mounted on the roof. Zhou Kai is revising the support drawing when he hears that the speed would “roughly double” and stops writing: the sign is unchanged, but will the force from the oncoming air simply double too?",
+      "The old route has always been slower, and the original support has not caused trouble under those conditions, so extrapolating from past experience does not seem unreasonable. There happens to be a small model of the same shape on the workbench. Zhou Kai fixes it at the same attitude on a simplified airflow test rig. With the first steady airflow setting at a relative airspeed of about 10 m/s, the force indicator settles at about 5 N.",
+      "Someone says casually, “Then at 20 m/s, maybe around 10 N.” The second setting raises the relative airspeed to about 20 m/s. The model stays in the same position and attitude, but the indicator slowly settles near 20 N. Zhou Kai returns to the first setting and again sees about 5 N. The speed has only doubled, yet this air-drag force is close to four times as large. He crosses out the “×2” on the sketch.",
+      "Those small-model readings do not tell him what dimensions the full-size vehicle support should have, but they are enough to overturn today's linear estimate. Zhou Kai circles the speed-up proposal on the operations sheet, keeps the original slower route for now, and sends the high-speed operating condition for the roof sign back to the design team for calculation. Operations gives up a few minutes of potential time savings, but the support plan is no longer based on the guess that doubling speed merely doubles the air load.",
+      "At the end of the meeting, the operations colleague takes the revised route sheet. Zhou Kai packs away the model and sticks two labels on the box: “about 10 m/s—about 5 N” and “about 20 m/s—about 20 N.” The penciled “10 N” is still visible on the sketch, with a single line drawn through it."
+    ],
+    "overallZh": "本篇用一个教学风流比较说明阻力与运输效率中的一个入口：在空气密度、阻力系数和匹配参考面积保持不变时，空气阻力与相对空气速度的平方成正比。这个平方关系只描述空气阻力分量，不能直接变成实车支架载荷、整车总阻力或总能耗结论。",
+    "overall": "This article uses a teaching airflow comparison to introduce one aspect of drag and transport efficiency: when air density, drag coefficient, and the matching reference area remain unchanged, aerodynamic drag is proportional to the square of relative airspeed. This squared relationship describes only the aerodynamic-drag component and cannot be converted directly into a full-size support load, total vehicle resistance, or total energy-use conclusion.",
     "conceptNameZh": "阻力与运输效率",
-    "explanationParagraphs": [
-      "Drag is resistance to motion through a fluid, arising from surface friction, pressure differences, flow separation, wave making, and lift-related effects. It changes with speed, shape, roughness, scale, and flow regime. Transport efficiency must be defined by useful service over a complete journey. Low empty drag or high maximum speed does not guarantee the least energy per unit of cargo because load, propulsion efficiency, stability, safety, weather, and trip count alter the result."
-    ],
+    "conceptName": "Drag and transport efficiency",
     "explanationParagraphsZh": [
-      "阻力是物体穿过流体时受到的运动抵抗，来源包括表面摩擦、压差、流动分离、造波与升力相关作用，并随速度、形状、粗糙度、尺度和流态变化。运输效率必须以有用服务和完整航程定义；低空载阻力或最高速度不保证单位货物最省，因为载荷、推进效率、稳定、安全、天气与航次都会改变结果。"
+      "常见空气阻力表达式为D=CdρV²A/2：D是阻力，ρ是空气密度，V是物体相对空气的速度，A是参考面积，Cd是与所选参考面积配套使用的阻力系数。若ρ、Cd和A保持不变，速度翻倍会使空气阻力变为四倍。",
+      "最小示例：同一物体在相同条件下，若15 m/s时空气阻力为8 N，那么30 m/s时按平方关系为8×(30/15)²=32 N。这个计算只针对阻力分量，不表示总功率、行程能量或整车能耗也必然四倍。"
     ],
-    "mode": "mechanism-fable",
+    "explanationParagraphs": [
+      "A common aerodynamic-drag expression is D=CdρV²A/2. D is drag, ρ is air density, V is speed relative to the air, A is the reference area, and Cd is the drag coefficient defined using that reference area. If ρ, Cd, and A remain unchanged, doubling speed makes aerodynamic drag four times as large.",
+      "Minimal example: for the same object under the same conditions, if drag is 8 N at 15 m/s, then at 30 m/s the squared relationship gives 8×(30/15)²=32 N. This calculation applies only to the drag component; it does not mean total power, trip energy, or whole-vehicle energy use must also quadruple."
+    ],
+    "moduleZh": {
+      "intro": "固定物体和气流比较条件，只改变相对空气速度，观察为什么阻力不能按速度线性放大。",
+      "diagramTitle": "速度翻倍时，为什么5牛不会只变成10牛",
+      "diagramSteps": [
+        "同一展示牌模型以固定姿态面对约10 m/s相对空气速度",
+        "教学测力读数约为5 N",
+        "保持模型、姿态和比较条件不变，把相对空气速度提高到约20 m/s",
+        "教学测力读数变为约20 N，约为原来的四倍",
+        "据此取消线性外推，并把真实高速支架方案留给独立工程评估"
+      ],
+      "diagramStepNotes": [
+        "这里的速度是模型相对空气的速度；模型的形状和姿态固定。",
+        "5 N是本故事的教学虚构读数，不是实车测量。",
+        "平方比较保持空气密度ρ、阻力系数Cd与匹配参考面积A不变；现实Cd可能随流动状态变化。",
+        "20/10=2，平方是4；5×4=20 N，和示意读数一致。",
+        "这次比较能否定简单的×2估算，不能直接确定实车支架载荷或整车能耗。"
+      ],
+      "mapping": [
+        "路线提速建议 → 让相对空气速度发生变化的实际决策。",
+        "约5 N与约20 N → 同一教学模型在可比条件下的阻力变化。",
+        "被划掉的“×2” → 线性直觉被平方关系取代。",
+        "保留较慢路线 → 在完整设计核算前付出的运营时间代价。"
+      ],
+      "boundary": "本篇只讨论空气阻力。平方比例成立的比较要求ρ、Cd和匹配的参考面积A保持不变，并以物体相对空气的速度V计算。现实流动条件变化可能改变Cd；缩比模型读数不能直接外推为全尺寸支架载荷，也不能由空气阻力四倍推出整车总阻力、总功率、油耗或行程能量必然四倍。",
+      "reflection": "同一物体在15 m/s相对空气速度下的阻力为8 N。若ρ、Cd、A不变，速度提高到22.5 m/s，阻力应是多少？为什么不能只把8 N乘以1.5？"
+    },
+    "module": {
+      "intro": "Hold the object and airflow comparison conditions fixed, change only relative airspeed, and observe why drag cannot be scaled linearly with speed.",
+      "diagramTitle": "When Speed Doubles, Why Doesn't 5 Newtons Simply Become 10?",
+      "diagramSteps": [
+        "Expose the same display-sign model at a fixed attitude to a relative airspeed of about 10 m/s",
+        "The teaching force reading is about 5 N",
+        "Keep the model, attitude, and comparison conditions unchanged and raise relative airspeed to about 20 m/s",
+        "The teaching force reading becomes about 20 N, roughly four times the original value",
+        "Cancel the linear extrapolation and leave the real high-speed support design to a separate engineering assessment"
+      ],
+      "diagramStepNotes": [
+        "The speed is relative to the air; the model’s shape and attitude are fixed.",
+        "The 5 N value is a fictional teaching reading, not a full-size vehicle measurement.",
+        "The squared comparison holds air density ρ, drag coefficient Cd, and matching reference area A fixed. In reality, Cd may change with flow conditions.",
+        "20/10=2, whose square is 4; 5×4=20 N, matching the illustrative reading.",
+        "The comparison rejects the simple ×2 estimate; it does not determine the full-size support load or whole-vehicle energy use."
+      ],
+      "mapping": [
+        "Route speed-up proposal → the real decision that changes relative airspeed.",
+        "About 5 N and about 20 N → the change in drag for the same teaching model under comparable conditions.",
+        "Crossed-out “×2” → the linear intuition replaced by the squared relationship.",
+        "Keeping the slower route → the operational time cost paid while the complete design is reassessed."
+      ],
+      "boundary": "This article discusses aerodynamic drag only. The squared scaling comparison requires ρ, Cd, and the matching reference area A to remain unchanged and uses the object's speed V relative to the air. Changes in real flow conditions can change Cd. Small-scale model readings cannot be directly extrapolated into full-size support loads, and a fourfold increase in aerodynamic drag does not imply that total vehicle resistance, total power, fuel use, or trip energy must also increase fourfold.",
+      "reflection": "The same object has 8 N of drag at a relative airspeed of 15 m/s. If ρ, Cd, and A remain unchanged, what is its drag at 22.5 m/s, and why is multiplying 8 N by 1.5 insufficient?"
+    },
+    "referencesZh": [
+      {
+        "id": "nasa-drag-equation",
+        "citation": "NASA Glenn Research Center. Drag Equation. Beginner’s Guide to Aeronautics.",
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+        "use": "支持阻力方程D=CdρV²A/2、速度应取相对流体速度，以及平方速度比较需要密度、阻力系数和匹配参考面积保持一致；不用于把阻力变化直接外推为总能耗或实际支架载荷。"
+      }
+    ],
+    "references": [
+      {
+        "id": "nasa-drag-equation",
+        "citation": "NASA Glenn Research Center. Drag Equation. Beginner’s Guide to Aeronautics.",
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-equation/",
+        "use": "Supports the drag equation D=CdρV²A/2, the use of speed relative to the fluid, and the requirement that density, drag coefficient, and the matching reference area remain consistent for a squared-speed comparison. It is not used to extrapolate drag changes directly into total energy use or an actual support load."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-21-preparation/group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-21-preparation/group2-edit-pass1-evidence.json",
+        "engineering-reader-first-21-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13 perspectives;four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Merchant Xu An needed the royal grain contract to save his yard. He commissioned a long narrow vessel with a knife-shaped bow and polished boards. Empty, it crossed the harbour faster than every old cargo boat and used little fuel for the trial. Xu painted the winning time across its sail. The shipwright asked how many sacks the contract required per week; Xu answered that the fastest boat would simply make more trips.\n\nLoaded with grain, the narrow hull reached its draft and stability limit at sixty percent of an older boat's cargo. Xu ordered the captain to hold trial speed so the painted promise remained true. Fuel flow rose sharply, the bow struck on waves, and one wet crossing required another reduction in sacks. The first delivery arrived on time, but only because the crew sailed twice through the night.\n\nOn the third trip an engine bearing overheated and the crew missed the tide. Xu could reduce speed or hire another boat and expose his claim. He insisted on speed. By week-end the new vessel had made three extra voyages, burned more fuel, paid more crew hours, and still left eighty sacks at the quay. The royal clerk measured delivered grain, not the first arrival time, and withheld the contract payment. The overheated bearing needed replacement before the vessel could sail again. Grain waited under rented canvas, and rain spoiled the outer row. Xu paid the farmers before receiving a coin from the palace.\n\nThe captain put two rows on a slate. The old boat moved more slowly but carried more; when both boats reduced speed slightly in the same current, resistance and fuel demand fell enough that sacks delivered per barrel improved. Xu added full-load fuel, cargo, number of trips, waiting for weather, and crew time. The empty-race number had described one condition, not the useful transport service.\n\nThe shipwright kept smooth lines but reshaped the stern and propeller around common loads, adjusted width and operating speed, and scheduled hull cleaning. Routes avoided the strongest opposing current where timing allowed. Xu sold the polished racing mast to pay the redesign and accepted a smaller seasonal contract. Safety, stability, engine limits, weather, and cargo delivery remained in the comparison; no one chased a low resistance number by removing needed capacity. The captain then repeated a loaded route at two permitted speeds and posted delivered sacks and fuel side by side. The slower run arrived later but completed the weekly quantity with one fewer voyage.\n\nBefore the next tender, Xu cut the old record from the sail. A tailor made it into a small flag reading: one barrel, four hundred and twenty sacks delivered. The flag was shorter than the missing royal pennant, and it flew above a hold filled to its marked line.",
-    "storyBodyZh": "船商许安必须拿到王城粮运合约，才能救回船厂。他订造一艘细长新船，船头像刀，船板能照出人影。空载试航时，它轻易超过所有旧货船，耗油也少。许安把最快时间写上船帆。造船师问每周要送多少袋粮，他说最快的船多跑几趟就行。\n\n装粮后，细船为保持吃水和稳定，只能装旧船六成。许安仍命船长维持试航速度，好让帆上的承诺不落空。燃料流量猛增，船头不断拍浪，一次湿冷航程还得再减货。首批准时抵达，只因船员连夜跑了两次。\n\n第三趟，发动机轴承过热，船又错过潮水。许安可以降速，也可以租船、承认宣传失实；他仍坚持速度。一周结束，新船多跑三航次，烧掉更多油，付出更多工时，码头却还剩八十袋。王室书记只数交付粮袋，不看第一船多快，因而扣住合约款。过热轴承必须更换，船才能再开。粮袋只能罩着租来的帆布等待，雨水仍毁掉最外一排。王宫一枚钱都没付，许安先赔给农户。\n\n船长在石板列两行。旧船虽慢，却装得多；两船在同一水流里稍微降速后，水的阻碍与燃料需求都明显下降，每桶油送达的粮袋反而增加。许安这才把满载油耗、载货量、航次数、候天气时间和船员工时放到一起。空船竞速只描述一种条件，没有描述完整运输。\n\n造船师保留流畅外形，却按常用载荷重做船尾、螺旋桨、船宽与工作速度，并安排清理船底；条件允许时避开最强逆流。许安卖掉光亮竞速桅杆支付改造，只接到较小季节合同。安全、稳定、发动机限制、天气和送达货物都留在比较里，没有人靠删掉必要能力来追求漂亮数字。船长又在两种允许速度下重跑满载航线，把送达袋数与油耗并列张贴。较慢一趟虽晚到，却让全周少跑一次便完成数量。\n\n下一次投标前，许安剪下帆上的旧纪录。裁缝把它做成小旗，写着“一桶油，送达四百二十袋”。小旗比缺席的王室长旗短得多，却飘在一座装到标线的货舱上方。",
-    "explanation": "Drag is resistance to motion through a fluid, arising from surface friction, pressure differences, flow separation, wave making, and lift-related effects. It changes with speed, shape, roughness, scale, and flow regime. Transport efficiency must be defined by useful service over a complete journey. Low empty drag or high maximum speed does not guarantee the least energy per unit of cargo because load, propulsion efficiency, stability, safety, weather, and trip count alter the result.",
-    "explanationZh": "阻力是物体穿过流体时受到的运动抵抗，来源包括表面摩擦、压差、流动分离、造波与升力相关作用，并随速度、形状、粗糙度、尺度和流态变化。运输效率必须以有用服务和完整航程定义；低空载阻力或最高速度不保证单位货物最省，因为载荷、推进效率、稳定、安全、天气与航次都会改变结果。"
+    "storyBody": "A weekend event will use an electric shuttle to carry visitors around the site. The operations team wants to raise the speed on one open stretch so each circuit takes a few minutes less, but a new display sign has just been mounted on the roof. Zhou Kai is revising the support drawing when he hears that the speed would “roughly double” and stops writing: the sign is unchanged, but will the force from the oncoming air simply double too?\n\nThe old route has always been slower, and the original support has not caused trouble under those conditions, so extrapolating from past experience does not seem unreasonable. There happens to be a small model of the same shape on the workbench. Zhou Kai fixes it at the same attitude on a simplified airflow test rig. With the first steady airflow setting at a relative airspeed of about 10 m/s, the force indicator settles at about 5 N.\n\nSomeone says casually, “Then at 20 m/s, maybe around 10 N.” The second setting raises the relative airspeed to about 20 m/s. The model stays in the same position and attitude, but the indicator slowly settles near 20 N. Zhou Kai returns to the first setting and again sees about 5 N. The speed has only doubled, yet this air-drag force is close to four times as large. He crosses out the “×2” on the sketch.\n\nThose small-model readings do not tell him what dimensions the full-size vehicle support should have, but they are enough to overturn today's linear estimate. Zhou Kai circles the speed-up proposal on the operations sheet, keeps the original slower route for now, and sends the high-speed operating condition for the roof sign back to the design team for calculation. Operations gives up a few minutes of potential time savings, but the support plan is no longer based on the guess that doubling speed merely doubles the air load.\n\nAt the end of the meeting, the operations colleague takes the revised route sheet. Zhou Kai packs away the model and sticks two labels on the box: “about 10 m/s—about 5 N” and “about 20 m/s—about 20 N.” The penciled “10 N” is still visible on the sketch, with a single line drawn through it.",
+    "storyBodyZh": "周末活动要用电动接驳车在园区里来回接送来宾。运营同事想把一段空旷直路的速度提高一点，好让每圈少等几分钟，可车顶刚装上新的展示牌。周恺正在改支架图，听见“速度差不多翻倍”时停了笔：牌子没变，但迎面空气的作用会不会也只是多一倍？\n\n旧路线一直较慢，原支架在那种使用条件下没有给他们添过麻烦，所以按原经验往上估并不奇怪。工作台上正好有一块同形状的小模型，周恺把它以同一姿态固定在简化风流测试架上。第一档稳定气流相对模型约10 m/s时，测力指针停在约5 N。\n\n有人顺口说：“那20 m/s，大概10 N吧。”第二档把相对空气速度调到约20 m/s，模型的位置和姿态没有改变，指针却慢慢停在约20 N。周恺又回到第一档，读数仍在约5 N附近。速度只是变成两倍，眼前这个空气阻力却接近原来的四倍。草图上的“×2”被他划掉了。\n\n这组小模型读数没有替他决定实车支架尺寸，却已经足够推翻今天那条线性估算。周恺把提速方案在运营表上圈出来，先保留原来的较慢路线，再把车顶展示牌的高速使用条件交回设计端核算。运营少省几分钟，但支架方案不再建立在“速度翻倍、空气作用也只翻倍”的猜测上。\n\n散会时，运营同事拿走了修改后的路线表。周恺收起模型，盒盖上贴着两张纸：“约10 m/s—约5 N”“约20 m/s—约20 N”。刚才那行“10 N”的铅笔字还留在草图上，只是被一道横线穿了过去。",
+    "explanation": "A common aerodynamic-drag expression is D=CdρV²A/2. D is drag, ρ is air density, V is speed relative to the air, A is the reference area, and Cd is the drag coefficient defined using that reference area. If ρ, Cd, and A remain unchanged, doubling speed makes aerodynamic drag four times as large.\n\nMinimal example: for the same object under the same conditions, if drag is 8 N at 15 m/s, then at 30 m/s the squared relationship gives 8×(30/15)²=32 N. This calculation applies only to the drag component; it does not mean total power, trip energy, or whole-vehicle energy use must also quadruple.",
+    "explanationZh": "常见空气阻力表达式为D=CdρV²A/2：D是阻力，ρ是空气密度，V是物体相对空气的速度，A是参考面积，Cd是与所选参考面积配套使用的阻力系数。若ρ、Cd和A保持不变，速度翻倍会使空气阻力变为四倍。\n\n最小示例：同一物体在相同条件下，若15 m/s时空气阻力为8 N，那么30 m/s时按平方关系为8×(30/15)²=32 N。这个计算只针对阻力分量，不表示总功率、行程能量或整车能耗也必然四倍。"
   },
   {
     "id": "0716-redundancy",
@@ -19586,49 +19899,137 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0721",
     "fieldTitle": "Food processing",
     "fieldTitleZh": "食品加工",
-    "title": "The Jar That Heated Last",
-    "titleZh": "最慢热的那一罐",
-    "summary": "The cannery's steam gauge passes its target mark, yet a row of lids later swells because the innermost jar never heated through.",
-    "summaryZh": "罐头房的蒸汽表已经越过目标刻线，仓库里却还是鼓起了一排罐盖，因为最里面那罐从未热透。",
-    "storyParagraphs": [
-      "During the tomato harvest, the Luo cannery had ten kettles to process each day or lose a supermarket order. The owner watched the steam cabinet's top gauge. As soon as it reached the red mark, he counted a short hold and opened the door, saving fifteen minutes per batch. Every lid sealed beautifully, and the faster line earned a bonus for three weeks. The coldest loads simply waited longer in the warehouse before anyone noticed.",
-      "A faint pop sounded from the back row. Several lids had swollen, all from a densely packed batch filled on a cold morning. The owner isolated only the visibly changed cans and proposed shipping the rest. The top gauge had never left its required mark. A qualified process specialist asked where that instrument measured and which part of the product warmed most slowly. Nobody could answer.",
-      "She placed calibrated data loggers in test containers at several positions and observed trials under the defined product and equipment conditions. Near the door, thinner product heated quickly. In the dense centre, the coldest, thickest container lagged. She compared a half load, a full load, and different initial temperatures, recording the whole heating and cooling history rather than one peak reading. The red top gauge told the truth about its own location only.",
-      "The owner faced the supermarket deadline, with its delivery truck waiting outside. He paid workers to stretch a rope across the storeroom and stack the entire affected lot behind it while specialists assessed the deviation. The order was lost. More lids swelled over the next two days, and their delayed popping carried through the closed storeroom.",
-      "A validated scheduled process was then established for the specific product, container, equipment, loading pattern, and required effect. Routine monitoring used the identified critical parameters, instruments were calibrated, and deviations triggered isolation and evaluation under predetermined qualified procedures. The cannery also controlled cooling and records. This was not a recipe transferable to another food or line; the specialist signed only the studied conditions.",
-      "Production slowed. The owner removed the piece-rate sign from above the cabinet and used its frame to hold the first full time-history chart. Workers could see the slowest curve reaching its required point after the top gauge had already crossed red. The chart stayed there through the season, gathering red pencil notes at every approved changeover.",
-      "At the next harvest peak, the top needle passed the red mark while trucks waited outside. The owner's hand rested on the door latch but did not pull. He waited until the approved record for the slow location completed, then signed the batch sheet with the pen once used to mark his fifteen-minute bonus."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "水已经热了，杯子里面还没跟上",
+    "title": "The Water Was Already Hot, but the Inside of the Cup Had Not Caught Up",
+    "summaryZh": "摄影师等着莓果泥从勺边流下一道红色纹路，水浴已经到温，杯里较深处却仍然很稠。许宁需要重新判断什么时候开拍。",
+    "summary": "The photographer is waiting for a red ribbon of berry purée to flow from the spoon. The bath is already at temperature, but the purée deeper in the cup is still thick. Xu Ning needs another way to decide when to shoot.",
     "storyParagraphsZh": [
-      "番茄丰收期，罗家罐头房每天必须完成十锅，否则就失去超市订单。老板只看蒸汽柜顶部温度表，指针到红线便计一小段时间后开门，每锅省下十五分钟。罐盖全都封得漂亮，快线也连续三周拿到奖金；最冷的产品只是在仓库多等了一阵，才让问题露面。",
-      "仓库后排传来轻响，几只罐盖鼓起，都来自一个寒冷清晨、装得很密的批次。老板只隔离外观异常的罐，打算其余照发，因为顶部表从未离开规定刻线。合格食品工艺人员问，那支表测的是哪里，产品哪处升温最慢。没有人答得出。",
-      "她在规定产品与设备条件下，把校准记录器放进不同位置的试验容器。门边较稀的产品很快升温，中央最冷、最稠的一罐却明显落后。她比较半柜、满柜和不同初温，记录整段加热与冷却过程，而非只抄峰值。顶部红表没有撒谎，它只报告自己的位置。",
-      "超市期限就在眼前，送货卡车正等在门外。老板付工钱让大家拉起粗麻隔离绳，把所有罐逐只搬到绳后，等待专业人员评估偏差。订单丢了。接下来两天，又有罐盖陆续鼓起，迟来的轻响穿过紧闭的库门。",
-      "此后，专业人员针对特定产品、容器、设备、装载方式和所需效果建立经验证程序。日常监测使用已确定的关键参数，仪器接受校准，偏离便按预定专业程序隔离并评估，冷却与记录也纳入。它不是能搬去另一种食品或生产线的配方，签字只覆盖实际验证过的条件。",
-      "生产速度下降了。老板拆掉柜门上方的计件奖牌，用那只框装起第一张完整时间曲线。工人都能看见：顶部表早已越过红线，最慢那条曲线仍在爬升。那张图挂了整季，每次获准转换都在曲线上多一道红铅笔记号。",
-      "下一次丰收高峰，卡车在门外等待，顶部指针又先过红线。老板把手放在门闩上，没有拉动；直到获批记录显示慢热位置完成，他才用过去登记十五分钟奖金的笔，在批次表上签名。"
+      "甜点研发厨房下午要拍新品照片，摄影师想要莓果泥从勺边缓慢流下来，形成一条完整的红色纹路。果泥刚从冷藏柜拿出来，太稠，许宁便按平时做法把杯子放进温水浴里。水浴很快到了熟悉的设定温度，可轮到试倒时，从杯里较深位置舀出的果泥还是僵在勺上。",
+      "以前拍小份样品时，这个水浴安排一直够用，所以许宁先确认设备温度表，又摸了摸杯壁。表的读数稳定，杯壁也已经明显变暖。她再从较深处舀了一勺，质地仍和表层不同。现在她需要知道的不是水浴有没有到温，而是杯内某个位置有没有跟着升温。",
+      "她用同批冷藏果泥另装了两只相同的杯子，装量一致：一只留作拍摄，一只固定细探头，测量杯内一个选定位置。两杯同时放进水浴。水浴读数已经稳定时，探头所在位置仍明显更冷；继续放置后，内部读数才逐渐上升。许宁看了看两处读数，把原本写着“水浴到温就开始拍”的便签撕了下来。",
+      "下午的拍摄顺序随之换了。摄影师先去拍不需要加热的饼干和包装，许宁继续观察测量样杯，同时仍用研发厨房原有的质地标准检查真正用于拍摄的另一杯果泥。她没有只凭探头数字决定成片状态。多等这一段时间打乱了原来的布景顺序，却比反复把还没准备好的果泥端到镜头前更省事。",
+      "轮到莓果泥时，拍摄样品通过了原来的质地检查，勺边也拉出了摄影师想要的连续纹路。许宁把插着探头的样杯留在实验台上，杯盖贴着“测量样”。记录纸上原来只有“水浴温度”一栏，现在旁边多了一格：“杯内测点”。"
     ],
-    "conceptName": "Thermal processing",
+    "storyParagraphs": [
+      "The dessert development kitchen is photographing a new product that afternoon, and the photographer wants the berry purée to flow slowly from the edge of a spoon in one continuous red ribbon. The purée has just come out of refrigeration and is too thick, so Xu Ning follows the usual practice and places the cup in a warm-water bath. The bath quickly reaches its familiar set temperature, but when they try the pour, purée scooped from a deeper part of the cup still sits stiffly on the spoon.",
+      "This bath arrangement had always been sufficient for smaller samples, so Xu Ning first checks the equipment temperature display and then feels the side of the cup. The reading is stable, and the cup wall is clearly warmer. She scoops another spoonful from deeper inside, and its texture is still different from the surface layer. What she needs to know now is not whether the bath has reached temperature, but whether a point inside the cup has warmed along with it.",
+      "She fills two fresh, identical cups with equal amounts of purée from the same refrigerated batch: one for photography, the other with a fine probe fixed at one selected internal point. Both go into the bath at the same time. When the bath reading has stabilized, the point at the probe is still clearly cooler; after more time, the internal reading gradually rises. Xu Ning looks at the two readings and tears up the note that says, “Start shooting when the bath reaches temperature.”",
+      "The afternoon shooting order changes. The photographer moves on to biscuits and packaging that do not need warming, while Xu Ning keeps watching the measurement cup and still uses the development kitchen's existing texture standard to check the separate cup actually intended for photography. She does not use the probe reading alone to decide whether the sample is ready for the final shot. The extra waiting disrupts the planned set order, but it is easier than repeatedly carrying purée to the camera before it is ready.",
+      "When it is finally time for the berry purée, the photography sample passes the usual texture check, and the spoon produces the continuous ribbon the photographer wanted. Xu Ning leaves the cup with the probe on the workbench, its lid labeled “measurement sample.” The record sheet used to have only one field for “water-bath temperature”; beside it there is now another: “internal measurement point.”"
+    ],
+    "overallZh": "设备环境达到某个温度，不表示产品内部各处同时达到相同温度。热量传入需要时间，测量位置也决定读数能告诉我们什么；一个内部测点不能代表整杯或整批的温度历史。",
+    "overall": "An equipment environment reaching a particular temperature does not mean every point inside a product reaches it at the same time. Heat transfer takes time, and the measurement location determines what the reading tells us. One internal point does not represent the temperature history of a whole cup or batch.",
     "conceptNameZh": "热加工",
-    "explanationParagraphs": [
-      "Thermal processing applies a controlled time-temperature history to achieve a specified microbial, physical, or chemical effect. Lethality accumulates across the full curve rather than depending only on peak temperature. Product viscosity, starting temperature, container, and loading pattern alter heat transfer and the cold spot. A safe schedule requires validation, routine monitoring of critical parameters, calibrated instruments, controlled cooling, and defined handling of deviating batches."
-    ],
+    "conceptName": "Thermal processing",
     "explanationParagraphsZh": [
-      "热加工通过受控的时间—温度历程取得规定的微生物、物理或化学效果，致死作用会沿完整曲线累积，并非只看峰值。产品黏度、初温、容器和装载方式会改变传热与冷点。安全程序需经验证，日常还要监测关键参数、校准仪器、控制冷却，并对偏差批次执行隔离和处置。"
+      "加热设备的环境温度和产品内部温度是不同位置的状态。即使设备读数已经稳定，热量仍需要时间传入产品，因此某个内部测点可以在同一时刻保持更低的温度。",
+      "教学示例：同一时刻水浴可读40°C，而某内部测点只有28°C；继续加热后内部读数才上升。这说明热量传入需要时间，并不证明该测点就是升温最慢的位置，也不能据此建立杀菌时间或食用安全结论。"
     ],
-    "mode": "mechanism-fable",
+    "explanationParagraphs": [
+      "The temperature of a heating environment and the temperature inside a product describe different locations. Even after the equipment reading has stabilized, heat can still be moving into the product, so an internal measurement point can remain at a lower temperature at the same moment.",
+      "Teaching example: at the same moment, the bath might read 40°C while one internal point reads 28°C; with continued heating, the internal reading later rises. This shows that heat transfer takes time. It does not establish that this point is the slowest-heating location or define a sterilization time or food-safety condition."
+    ],
+    "moduleZh": {
+      "intro": "把设备环境温度与产品内部一个明确测点分开记录，看同一时刻两处为什么可以同时给出正确但不同的读数。",
+      "diagramTitle": "水浴已经到温，为什么杯内测点还能更冷",
+      "diagramSteps": [
+        "同批冷藏果泥装入两只相同、装量一致的新样杯，一只测量、一只拍摄，同时放入温水浴",
+        "水浴环境读数先达到并稳定在设定值",
+        "独立测量样杯中的固定内部测点此时仍显示更低温度",
+        "继续等待后，内部测点温度逐渐上升",
+        "许宁停止用设备到温作为唯一拍摄起点，并继续用实际质地标准检查拍摄样品"
+      ],
+      "diagramStepNotes": [
+        "两杯起始条件明确；探头杯与拍摄杯各有用途。",
+        "设备温度表测量的是水浴环境。",
+        "内部探头只测选定位置，不自动代表升温最慢的位置；不同位置的仪表可以同时都正常。",
+        "继续等待体现热传入需要时间，不据此给出杀菌、保存或食品安全参数。",
+        "拍摄样品仍按原有质地标准判断，不把另一个杯子的单点温度当成整杯状态。"
+      ],
+      "mapping": [
+        "水浴温度表 → 设备环境的测量。",
+        "测量样杯内部探头 → 产品内部一个特定位置的测量。",
+        "被撕掉的便签 → 人物放弃“设备到温即产品已到位”的旧判断。",
+        "先拍饼干和包装 → 等待内部状态变化所付出的排程代价。"
+      ],
+      "boundary": "本篇只说明热传入需要时间以及监测位置的重要性。单个内部测点不是自动成立的通用冷点，也不能代表整杯、整批或所有包装的温度历史。真正的慢热区域需针对产品、包装、设备和工艺确定。本篇不给出可照做的杀菌时间温度、家庭加工步骤或食用安全保证。",
+      "reflection": "如果烘箱空气已经达到40°C，而一块厚样品内部某测点仍是28°C，这两个读数是否一定有一个仪表出了故障？"
+    },
+    "module": {
+      "intro": "Record the equipment environment temperature separately from one clearly defined internal product measurement point and observe why both can be valid yet different at the same time.",
+      "diagramTitle": "If the Water Bath Has Reached Temperature, Why Can an Internal Point Still Be Cooler?",
+      "diagramSteps": [
+        "Fill two fresh, identical cups equally from the same refrigerated batch—one for measurement, one for photography—and place both in the bath at the same time",
+        "The bath environment reading reaches and stabilizes at its set value first",
+        "A fixed internal point in a separate measurement cup still shows a lower temperature at that time",
+        "With additional waiting, the internal measurement-point temperature gradually rises",
+        "Xu Ning stops using bath temperature alone as the shooting trigger and continues to check the photography sample against the existing texture standard"
+      ],
+      "diagramStepNotes": [
+        "The two cups have matched starting conditions and separate measurement and photography roles.",
+        "The equipment display measures the water-bath environment.",
+        "The probe measures only its selected location, not automatically the slowest-heating point. Instruments at different locations can both be correct.",
+        "The additional wait illustrates that heat transfer takes time; it supplies no sterilization, preservation, or food-safety parameters.",
+        "The photography sample is still judged by the existing texture standard, not by one temperature in the other cup."
+      ],
+      "mapping": [
+        "Water-bath temperature display → measurement of the equipment environment.",
+        "Probe inside the measurement cup → measurement at one specific location inside the product.",
+        "Torn-up note → the character abandons the rule that equipment temperature alone means the product is ready.",
+        "Photographing biscuits and packaging first → the scheduling cost of waiting for the internal state to change."
+      ],
+      "boundary": "This article only illustrates that heat transfer takes time and that measurement location matters. A single internal measurement point does not automatically identify the universal cold spot or represent the temperature history of the whole cup, batch, or every package. The true slow-heating region must be established for the specific product, package, equipment, and process. This article provides no usable sterilization time-temperature schedule, household processing procedure, or food-safety guarantee.",
+      "reflection": "If oven air is already at 40°C while one internal point in a thick sample is still at 28°C, must one of the instruments be faulty?"
+    },
+    "referencesZh": [
+      {
+        "id": "fda-lacf-guide22",
+        "citation": "U.S. Food and Drug Administration. Guide to Inspections of Low Acid Canned Food 22, Manufacturers—2, Process Establishment.",
+        "url": "https://www.fda.gov/guide-inspections-low-acid-canned-food-22",
+        "use": "支持热穿透研究需要识别慢热容器和区域，并且产品、设备与工艺变量会影响加热结果；不用于指定通用冷点或虚构安全时间温度。"
+      },
+      {
+        "id": "cfia-heat-penetration",
+        "citation": "Canadian Food Inspection Agency. (2018, June 13, page modification). Heat-penetration studies. Prepared by the IFTPS Committee on Heat Penetration; approved for publication November 10, 1995.",
+        "url": "https://inspection.canada.ca/en/food-safety-industry/packing-food/heat-penetration-studies",
+        "use": "支持产品、包装与工艺组合及时间—温度记录的重要性，并支持冷点需要实验确定且可能随条件改变；不作为消费者操作计划或虚构食品认证。"
+      }
+    ],
+    "references": [
+      {
+        "id": "fda-lacf-guide22",
+        "citation": "U.S. Food and Drug Administration. Guide to Inspections of Low Acid Canned Food 22, Manufacturers—2, Process Establishment.",
+        "url": "https://www.fda.gov/guide-inspections-low-acid-canned-food-22",
+        "use": "Supports the need for heat-penetration studies to identify slow-heating containers and regions, and the influence of product, equipment, and process variables on heating behavior. It is not used to specify a universal cold spot or an invented safe time-temperature schedule."
+      },
+      {
+        "id": "cfia-heat-penetration",
+        "citation": "Canadian Food Inspection Agency. (2018, June 13, page modification). Heat-penetration studies. Prepared by the IFTPS Committee on Heat Penetration; approved for publication November 10, 1995.",
+        "url": "https://inspection.canada.ca/en/food-safety-industry/packing-food/heat-penetration-studies",
+        "use": "Supports the importance of the product-package-process combination and time-temperature records, and supports determining cold spots experimentally because they may change with conditions. It is not used as a consumer operating schedule or as certification of the fictional food."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-21-preparation/group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-21-preparation/group2-edit-pass1-evidence.json",
+        "engineering-reader-first-21-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13 perspectives;four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "During the tomato harvest, the Luo cannery had ten kettles to process each day or lose a supermarket order. The owner watched the steam cabinet's top gauge. As soon as it reached the red mark, he counted a short hold and opened the door, saving fifteen minutes per batch. Every lid sealed beautifully, and the faster line earned a bonus for three weeks. The coldest loads simply waited longer in the warehouse before anyone noticed.\n\nA faint pop sounded from the back row. Several lids had swollen, all from a densely packed batch filled on a cold morning. The owner isolated only the visibly changed cans and proposed shipping the rest. The top gauge had never left its required mark. A qualified process specialist asked where that instrument measured and which part of the product warmed most slowly. Nobody could answer.\n\nShe placed calibrated data loggers in test containers at several positions and observed trials under the defined product and equipment conditions. Near the door, thinner product heated quickly. In the dense centre, the coldest, thickest container lagged. She compared a half load, a full load, and different initial temperatures, recording the whole heating and cooling history rather than one peak reading. The red top gauge told the truth about its own location only.\n\nThe owner faced the supermarket deadline, with its delivery truck waiting outside. He paid workers to stretch a rope across the storeroom and stack the entire affected lot behind it while specialists assessed the deviation. The order was lost. More lids swelled over the next two days, and their delayed popping carried through the closed storeroom.\n\nA validated scheduled process was then established for the specific product, container, equipment, loading pattern, and required effect. Routine monitoring used the identified critical parameters, instruments were calibrated, and deviations triggered isolation and evaluation under predetermined qualified procedures. The cannery also controlled cooling and records. This was not a recipe transferable to another food or line; the specialist signed only the studied conditions.\n\nProduction slowed. The owner removed the piece-rate sign from above the cabinet and used its frame to hold the first full time-history chart. Workers could see the slowest curve reaching its required point after the top gauge had already crossed red. The chart stayed there through the season, gathering red pencil notes at every approved changeover.\n\nAt the next harvest peak, the top needle passed the red mark while trucks waited outside. The owner's hand rested on the door latch but did not pull. He waited until the approved record for the slow location completed, then signed the batch sheet with the pen once used to mark his fifteen-minute bonus.",
-    "storyBodyZh": "番茄丰收期，罗家罐头房每天必须完成十锅，否则就失去超市订单。老板只看蒸汽柜顶部温度表，指针到红线便计一小段时间后开门，每锅省下十五分钟。罐盖全都封得漂亮，快线也连续三周拿到奖金；最冷的产品只是在仓库多等了一阵，才让问题露面。\n\n仓库后排传来轻响，几只罐盖鼓起，都来自一个寒冷清晨、装得很密的批次。老板只隔离外观异常的罐，打算其余照发，因为顶部表从未离开规定刻线。合格食品工艺人员问，那支表测的是哪里，产品哪处升温最慢。没有人答得出。\n\n她在规定产品与设备条件下，把校准记录器放进不同位置的试验容器。门边较稀的产品很快升温，中央最冷、最稠的一罐却明显落后。她比较半柜、满柜和不同初温，记录整段加热与冷却过程，而非只抄峰值。顶部红表没有撒谎，它只报告自己的位置。\n\n超市期限就在眼前，送货卡车正等在门外。老板付工钱让大家拉起粗麻隔离绳，把所有罐逐只搬到绳后，等待专业人员评估偏差。订单丢了。接下来两天，又有罐盖陆续鼓起，迟来的轻响穿过紧闭的库门。\n\n此后，专业人员针对特定产品、容器、设备、装载方式和所需效果建立经验证程序。日常监测使用已确定的关键参数，仪器接受校准，偏离便按预定专业程序隔离并评估，冷却与记录也纳入。它不是能搬去另一种食品或生产线的配方，签字只覆盖实际验证过的条件。\n\n生产速度下降了。老板拆掉柜门上方的计件奖牌，用那只框装起第一张完整时间曲线。工人都能看见：顶部表早已越过红线，最慢那条曲线仍在爬升。那张图挂了整季，每次获准转换都在曲线上多一道红铅笔记号。\n\n下一次丰收高峰，卡车在门外等待，顶部指针又先过红线。老板把手放在门闩上，没有拉动；直到获批记录显示慢热位置完成，他才用过去登记十五分钟奖金的笔，在批次表上签名。",
-    "explanation": "Thermal processing applies a controlled time-temperature history to achieve a specified microbial, physical, or chemical effect. Lethality accumulates across the full curve rather than depending only on peak temperature. Product viscosity, starting temperature, container, and loading pattern alter heat transfer and the cold spot. A safe schedule requires validation, routine monitoring of critical parameters, calibrated instruments, controlled cooling, and defined handling of deviating batches.",
-    "explanationZh": "热加工通过受控的时间—温度历程取得规定的微生物、物理或化学效果，致死作用会沿完整曲线累积，并非只看峰值。产品黏度、初温、容器和装载方式会改变传热与冷点。安全程序需经验证，日常还要监测关键参数、校准仪器、控制冷却，并对偏差批次执行隔离和处置。"
+    "storyBody": "The dessert development kitchen is photographing a new product that afternoon, and the photographer wants the berry purée to flow slowly from the edge of a spoon in one continuous red ribbon. The purée has just come out of refrigeration and is too thick, so Xu Ning follows the usual practice and places the cup in a warm-water bath. The bath quickly reaches its familiar set temperature, but when they try the pour, purée scooped from a deeper part of the cup still sits stiffly on the spoon.\n\nThis bath arrangement had always been sufficient for smaller samples, so Xu Ning first checks the equipment temperature display and then feels the side of the cup. The reading is stable, and the cup wall is clearly warmer. She scoops another spoonful from deeper inside, and its texture is still different from the surface layer. What she needs to know now is not whether the bath has reached temperature, but whether a point inside the cup has warmed along with it.\n\nShe fills two fresh, identical cups with equal amounts of purée from the same refrigerated batch: one for photography, the other with a fine probe fixed at one selected internal point. Both go into the bath at the same time. When the bath reading has stabilized, the point at the probe is still clearly cooler; after more time, the internal reading gradually rises. Xu Ning looks at the two readings and tears up the note that says, “Start shooting when the bath reaches temperature.”\n\nThe afternoon shooting order changes. The photographer moves on to biscuits and packaging that do not need warming, while Xu Ning keeps watching the measurement cup and still uses the development kitchen's existing texture standard to check the separate cup actually intended for photography. She does not use the probe reading alone to decide whether the sample is ready for the final shot. The extra waiting disrupts the planned set order, but it is easier than repeatedly carrying purée to the camera before it is ready.\n\nWhen it is finally time for the berry purée, the photography sample passes the usual texture check, and the spoon produces the continuous ribbon the photographer wanted. Xu Ning leaves the cup with the probe on the workbench, its lid labeled “measurement sample.” The record sheet used to have only one field for “water-bath temperature”; beside it there is now another: “internal measurement point.”",
+    "storyBodyZh": "甜点研发厨房下午要拍新品照片，摄影师想要莓果泥从勺边缓慢流下来，形成一条完整的红色纹路。果泥刚从冷藏柜拿出来，太稠，许宁便按平时做法把杯子放进温水浴里。水浴很快到了熟悉的设定温度，可轮到试倒时，从杯里较深位置舀出的果泥还是僵在勺上。\n\n以前拍小份样品时，这个水浴安排一直够用，所以许宁先确认设备温度表，又摸了摸杯壁。表的读数稳定，杯壁也已经明显变暖。她再从较深处舀了一勺，质地仍和表层不同。现在她需要知道的不是水浴有没有到温，而是杯内某个位置有没有跟着升温。\n\n她用同批冷藏果泥另装了两只相同的杯子，装量一致：一只留作拍摄，一只固定细探头，测量杯内一个选定位置。两杯同时放进水浴。水浴读数已经稳定时，探头所在位置仍明显更冷；继续放置后，内部读数才逐渐上升。许宁看了看两处读数，把原本写着“水浴到温就开始拍”的便签撕了下来。\n\n下午的拍摄顺序随之换了。摄影师先去拍不需要加热的饼干和包装，许宁继续观察测量样杯，同时仍用研发厨房原有的质地标准检查真正用于拍摄的另一杯果泥。她没有只凭探头数字决定成片状态。多等这一段时间打乱了原来的布景顺序，却比反复把还没准备好的果泥端到镜头前更省事。\n\n轮到莓果泥时，拍摄样品通过了原来的质地检查，勺边也拉出了摄影师想要的连续纹路。许宁把插着探头的样杯留在实验台上，杯盖贴着“测量样”。记录纸上原来只有“水浴温度”一栏，现在旁边多了一格：“杯内测点”。",
+    "explanation": "The temperature of a heating environment and the temperature inside a product describe different locations. Even after the equipment reading has stabilized, heat can still be moving into the product, so an internal measurement point can remain at a lower temperature at the same moment.\n\nTeaching example: at the same moment, the bath might read 40°C while one internal point reads 28°C; with continued heating, the internal reading later rises. This shows that heat transfer takes time. It does not establish that this point is the slowest-heating location or define a sterilization time or food-safety condition.",
+    "explanationZh": "加热设备的环境温度和产品内部温度是不同位置的状态。即使设备读数已经稳定，热量仍需要时间传入产品，因此某个内部测点可以在同一时刻保持更低的温度。\n\n教学示例：同一时刻水浴可读40°C，而某内部测点只有28°C；继续加热后内部读数才上升。这说明热量传入需要时间，并不证明该测点就是升温最慢的位置，也不能据此建立杀菌时间或食用安全结论。"
   },
   {
     "id": "0721-water-activity",
@@ -19637,47 +20038,125 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0721",
     "fieldTitle": "Food processing",
     "fieldTitleZh": "食品加工",
-    "title": "The Box That Looked Drier",
-    "titleZh": "看起来更干的那一盒",
-    "summary": "A confectioner chooses travel goods by total moisture alone; the drier-looking cake moulds while glossy preserve remains sound in its jar.",
-    "summaryZh": "点心商只按总水分挑选远行货物，外表较干的糕先长了霉，亮晶晶的果酱却仍安稳地封在罐里。",
-    "storyParagraphs": [
-      "A confectioner won a contract to ship cakes across a humid strait. He compared two samples: glossy jam and a soft cake that felt dry. A moisture test also showed less total water in the cake. The ship sailed in two days, and a laboratory delay would forfeit the buyer's deposit. He left the jam behind, loaded the entire cake order, and stamped the boxes 'dry enough'.",
-      "By day ten, white growth appeared in several cake boxes while the retained jam still looked unchanged. The confectioner blamed the moisture test and demanded a lower number for the next batch. A food scientist sealed portions in small chambers until the surrounding air reached equilibrium with each food. The cake's chamber settled at a higher relative humidity; dissolved sugar had not removed the jam's water, but it changed how available that water was. The buyer opened the moulded box during inspection and rejected the whole shipment before unloading. Dock fees continued while the confectioner argued that the cakes had tested drier than jam.",
-      "She opened a filled pastry from the same shipment. Moisture had moved from the fruit centre into the crisp shell. The shell softened first, and change appeared near the seam. A whole-product moisture total hid both the difference between components and the direction of migration. Warmer storage accelerated several changes. The confectioner's dry fingertips had measured a surface at one moment, not the condition governing the package over its journey.",
-      "He returned the buyer's deposit and ordered the lot destroyed, even though the seasonal market would close without him. Workers emptied boxes while he recorded which recipes, components, package positions, and storage conditions had failed. The visible loss filled two carts; the retained glossy jam occupied one undamaged jar on his desk. A shorter route crossed the same humid harbour, so a new label could not repair the unknown shelf life. The confectioner broke his old stamp before the disposal carts left.",
-      "Qualified specialists then adjusted the product and barriers, selected packaging that limited external moisture exchange, and evaluated the intended shelf life under defined conditions. Each product was considered alongside acidity, ingredients, temperature, atmosphere, and relevant hazards. One food's number did not guarantee another, and the measurement was not used as a complete safety decision by itself.",
-      "Before the next voyage, the confectioner still touched a cake. He did not stamp the box. He waited until the chamber indicator stopped, checked the signed study for that product, and sealed the first carton. The old 'dry enough' stamp remained beneath the glass jar of jam, its ink swollen by the damp return voyage."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "都写着22%，脆片却有软有脆",
+    "title": "Both Fillings Said 22%, but the Crisps Felt Different",
+    "summaryZh": "安琪为零食盒试选两种水果夹心。两份总水分记录都约22%，装盒后的脆片却表现不同；这个熟悉的数字，没能告诉她下一轮该改什么。",
+    "summary": "An Qi is testing two fruit fillings for a snack box. Both have total-moisture records of about 22%, yet the crisps behave differently after packaging. The familiar number does not tell her what to change in the next test.",
     "storyParagraphsZh": [
-      "点心商拿到一份穿越潮湿海峡的糕点合约。他比较两种样品：果酱黏亮，软糕摸起来更干；水分检测也显示软糕总水量较少。船两天后出发，若等实验室就会失去买家订金。他把果酱留在店里，整批装上软糕，并给箱子盖“足够干”。",
-      "航行第十天，几盒软糕出现白色霉变，留店果酱仍无明显变化。点心商责怪水分检测，要求下批把数字做得更低。食品人员把样品分别封进小室，等周围空气同食品达到平衡。软糕小室停在更高相对湿度；糖没有让果酱里的水消失，却改变了那些水有多容易参与变化。买家验货时打开霉变盒，整批尚未卸船便遭拒收。点心商仍拿“比果酱干”的数字争辩，码头费用却按时辰继续增加。",
-      "她又拆开同批夹心酥。水从水果馅逐渐移向脆皮，外皮先变软，接缝处也最早变化。整盒总水量既藏住不同部分的差别，也看不见迁移方向；较高温度还会加快多种变化。商人干燥的指尖只碰到某一刻的表面，没有测到包装在整段航程里的条件。",
-      "他退还订金，下令销毁整批货，即使当季市场会在他缺席时收摊。工人倒空箱子时，他逐项记录失败的配方、部位、包装位置与储存条件。看得见的损失装满两车，桌上那罐光亮果酱却仍完好。所谓短途也要穿过同一座潮湿港口，新标签补不了未知货架期。两辆销毁车还没离开，点心商先把旧印章木柄折断。",
-      "随后由合格人员调整产品与阻隔，选择限制外界湿气交换的包装，并在明确条件下评估预定货架期。每种产品还要同酸度、配料、温度、气氛与相关危险一起考虑；另一种食物的数字不能直接担保，这项测量本身也不承担完整安全决定。",
-      "再次装船前，点心商仍摸了摸软糕，却没有落印。他等小室指针停稳，核对该产品签字研究，才封上第一箱。旧“足够干”印章压在果酱玻璃罐下，印泥已被退货航程的潮气泡胀。"
+      "安琪正在给一款办公室零食盒选水果夹心。开盒时，A旁边的薄脆片明显软了一些，B旁边的还比较脆。两组用的是同一批脆片和相同分格盒，在同一间恒温室里放了相同时间；夹心与脆片不直接接触，两格上方的空气却相通。偏偏两种夹心的常规总水分记录都约是22%，她最熟悉的那个数字没有帮她决定下一步。",
+      "22%并不是没用。过去同一配方的批次若突然偏离，它常能提醒团队加料或干燥出了变化。可这次是两种不同配方，即使包装和短期储存条件相同，脆片表现不同也还不能告诉她唯一原因。安琪没有急着删掉A里的某种原料，而是等包装比较结束后，从两种夹心各自未装盒的同批留样中取样，去做另一项测量。",
+      "两份样品分别放进同温的密闭测量小室，让样品和小室里的空气慢慢达到平衡。这个过程不能马上读数：安琪先处理别的工作，回来时数字仍在变化，直到下一次检查时才稳定。A样品上方的平衡相对湿度停在70%。她在记录纸上写下70/100=0.70；B稳定后的读数更低。两瓶仍都写着“总水分约22%”，下面却出现了不同的平衡记录。",
+      "安琪把下一轮试验单上“继续降低A的总水分”划掉，保留现有夹心，再加一组把两格上方空气空间隔得更完整的包装，与原来的相通空气包装并排测试。她想先看改变隔离程度后，脆片的质地是否也跟着改变。新包装多一道材料，还要再等一轮测试，而且结果仍可能牵涉其他配方或包装因素。",
+      "下班前，她把两只样品瓶放回架子。A瓶上仍写着“总水分约22%”，下面新添“平衡RH 70%”。那盒已经变软的脆片也没有被丢掉，而是和新包装样件一起放进同一个托盘。托盘标签写着：“下一轮：先看隔开以后会怎样。”"
     ],
-    "conceptName": "Water activity",
+    "storyParagraphs": [
+      "An Qi is choosing a fruit filling for an office snack box. When she opens the boxes, the crisps beside A are noticeably softer, while those beside B remain crisper. Both tests use crisps from the same batch and identical divided boxes, kept in the same temperature-controlled room for the same time. The filling and crisps do not touch directly, but the air space above their compartments is connected. Yet both fillings have routine total-moisture records of about 22%, so her most familiar number does not tell her what to do next.",
+      "The 22% figure is not useless. In the past, if batches of the same formulation suddenly moved away from their normal value, it could alert the team to changes in ingredients or drying. But these are two different formulations, and even with the same packaging and short-term storage conditions, different crisp textures still do not reveal a single cause. An Qi does not immediately remove one ingredient from A. Instead, after the packaging comparison is finished, she takes portions from unexposed retained samples of the same two filling batches for another measurement.",
+      "The two samples are placed in separate sealed measurement chambers at the same temperature and left until each sample and the air in its chamber gradually reach equilibrium. The measurement cannot be read immediately: An Qi handles other work first, and when she returns the number is still changing. Only at the next check has it stabilized. The equilibrium relative humidity above sample A settles at 70%. She writes 70/100=0.70 on the record sheet; B stabilizes at a lower reading. Both bottles still say “total moisture about 22%,” but now different equilibrium records appear beneath those labels.",
+      "An Qi crosses out “keep reducing A's total moisture” on the next-round test sheet. She keeps the existing filling and adds a package in which the air spaces above the two compartments are separated more completely, to be tested side by side with the original package whose air spaces are connected. She wants to see whether changing the degree of isolation also changes the crisp texture. The new package uses an additional layer of material and requires another round of waiting, and the result may still involve other formulation or packaging factors.",
+      "Before leaving, she puts the two sample bottles back on the shelf. Bottle A still says “total moisture about 22%,” with a new line underneath: “equilibrium RH 70%.” The box containing the softened crisps is not thrown away either; it goes onto the same tray as the new packaging samples. The tray label reads: “Next round: see what changes when the spaces are separated.”"
+    ],
+    "overallZh": "本篇用包装研发场景说明水分活度与总水分不是同一个量。总水分描述样品中水的总量比例，而水分活度反映在规定条件下水的热力学状态；在同温并达到平衡后，可由平衡相对湿度ERH换算aw=ERH/100。单独的aw不能证明脆片变化的唯一原因，也不能独立给出食品安全或完整货架期结论。",
+    "overall": "This article uses a packaging-development scenario to show that water activity and total moisture are not the same quantity. Total moisture describes the overall proportion of water in a sample, while water activity reflects the thermodynamic state of water under specified conditions. At the same temperature and after equilibrium is reached, water activity can be related to equilibrium relative humidity by aw=ERH/100. Water activity alone does not prove the unique cause of crisp-texture change and cannot independently determine food safety or complete shelf life.",
     "conceptNameZh": "水分活度",
-    "explanationParagraphs": [
-      "Water activity expresses how available water in a food is for microbial growth, chemical reaction, and migration relative to pure water at the same temperature, and is related to equilibrium relative humidity. It differs from total moisture content. Sugar, salt, food structure, and temperature change water availability. Practical safety limits also depend on the organism, acidity, preservatives, atmosphere, packaging, and validated storage conditions."
-    ],
+    "conceptName": "Water activity",
     "explanationParagraphsZh": [
-      "水分活度表示食品中的水相对同温纯水有多容易参与微生物生长、化学反应和迁移，常与平衡相对湿度相联系；它不同于总水分含量。糖、盐、食品结构和温度会改变水的可利用程度。实际安全界限还取决于微生物、酸度、防腐剂、气氛、包装与经验证的储存条件。"
+      "总水分含量回答“样品中总共有多少水”。水分活度比较的是：在同一温度下，样品上方的平衡水蒸气压，是纯水上方平衡水蒸气压的多少。不同成分与水的相互作用不同，因此总水分相近的配方，水分活度仍可能不同。它不是一部分能单独称出来的水；达到平衡后，可用空气的平衡相对湿度换算：aw=ERH/100。",
+      "最小例子：某样品在同一温度下与密闭空气达到平衡后，ERH=70%，则aw=70/100=0.70。这里的70%是空气的平衡相对湿度，不是样品含水量70%，而0.70本身也不是食品安全或保质期结论。"
     ],
-    "mode": "mechanism-fable",
+    "explanationParagraphs": [
+      "Total moisture content answers “how much water is present in the sample overall.” Water activity compares the equilibrium water-vapor pressure above the sample with that above pure water at the same temperature. Ingredients interact with water differently, so formulations with similar total moisture can still have different water activities. It is not a separately weighable portion of water. After equilibrium is reached, it can be calculated from the air’s equilibrium relative humidity: aw=ERH/100.",
+      "Minimal example: if a sample reaches equilibrium with sealed air at the same temperature and ERH=70%, then aw=70/100=0.70. The 70% here is the equilibrium relative humidity of the air, not 70% moisture content in the sample, and 0.70 by itself is not a food-safety or shelf-life conclusion."
+    ],
+    "moduleZh": {
+      "intro": "把“样品里总共有多少水”和“达到平衡后水蒸气状态怎样”分开测量，理解为什么相近总水分可以对应不同平衡状态。",
+      "diagramTitle": "都写着约22%总水分，为什么平衡记录还能不同",
+      "diagramSteps": [
+        "两种夹心分别与同款脆片放在条件相同、空气空间相通的分格包装中进行短期比较",
+        "两种夹心的常规总水分都约为22%，但相邻脆片质地表现不同",
+        "包装比较结束后，从两种夹心各自未装盒的同批留样取样，在同温密闭小室中等待达到平衡",
+        "A的平衡相对湿度稳定在70%，因此在该条件下aw=0.70",
+        "下一轮增加更完整的空气隔离包装，与原包装并排测试这个新假设"
+      ],
+      "diagramStepNotes": [
+        "夹心与脆片没有直接接触，但原盒的两格共享上方空气。",
+        "约22%描述原夹心样品的总水分，脆片质地差异仍不能证明唯一原因。",
+        "测量用未装盒留样，避免把共享空气后可能发生的变化混进原样比较。",
+        "70%是空气的平衡相对湿度；70/100=0.70，不等于样品含水量70%。",
+        "隔离层仍需下一轮检验，不是已证实的解决方案。"
+      ],
+      "mapping": [
+        "约22%总水分 → 样品整体含水量的常规记录。",
+        "平衡RH 70% → A样品在指定同温平衡条件下对应的空气相对湿度。",
+        "aw=0.70 → 由ERH/100得到的水分活度。",
+        "新增隔离包装 → 根据测量差异提出、但尚待验证的下一步假设。"
+      ],
+      "boundary": "水分活度应在规定温度和达到平衡的条件下解释，aw=ERH/100。它不是可以从样品中单独称出的“可利用水”质量，也不能与总水分百分数直接互换。本故事中的脆片质地差异可能受多种配方、包装和环境因素影响；单独的aw不能证明唯一因果，也不能独立判断食品安全、法规合规或完整货架期。",
+      "reflection": "某样品在规定温度下达到平衡后，ERH为60%，它的aw是多少？如果另一食品也测得同样的aw，能据此认定两者总水分一样吗？"
+    },
+    "module": {
+      "intro": "Measure “how much water the sample contains overall” separately from “the vapor state after equilibrium” to see why similar total moisture can correspond to different equilibrium conditions.",
+      "diagramTitle": "If Both Say About 22% Total Moisture, Why Can Their Equilibrium Records Still Differ?",
+      "diagramSteps": [
+        "Place the two fillings separately with the same crisps in divided packages under the same conditions, with the air space above the compartments connected",
+        "Both fillings have about 22% total moisture, but the neighboring crisps show different texture changes",
+        "After the packaging comparison, take portions from unexposed retained samples of both filling batches and wait for equilibrium in sealed chambers at the same temperature",
+        "Sample A stabilizes at an equilibrium relative humidity of 70%, so under those conditions aw=0.70",
+        "For the next round, add a package with more complete air-space isolation and test that new hypothesis against the original package"
+      ],
+      "diagramStepNotes": [
+        "The filling and crisps do not touch, but the original box’s compartments share the air above them.",
+        "About 22% describes the original filling samples’ total moisture; the crisp-texture difference still does not establish a unique cause.",
+        "Use unexposed retained samples so possible changes after sharing air do not enter the comparison of the original fillings.",
+        "The 70% is the air’s equilibrium relative humidity; 70/100=0.70 does not mean 70% moisture content in the sample.",
+        "The isolation layer still needs testing in the next round; it is not a proven solution."
+      ],
+      "mapping": [
+        "About 22% total moisture → the routine record of overall water content in the sample.",
+        "Equilibrium RH 70% → the relative humidity of the air associated with sample A under the specified same-temperature equilibrium condition.",
+        "aw=0.70 → the water activity obtained from ERH/100.",
+        "New isolation package → a next-step hypothesis suggested by the measurements but not yet validated."
+      ],
+      "boundary": "Water activity should be interpreted at a specified temperature and after equilibrium is reached, using aw=ERH/100. It is not a mass of “available water” that can be separately weighed from the sample, and it cannot be directly interchanged with a total-moisture percentage. The crisp-texture difference in this story may involve multiple formulation, packaging, and environmental factors. Water activity alone cannot establish a unique cause, determine food safety, demonstrate regulatory compliance, or fully predict shelf life.",
+      "reflection": "A sample reaches equilibrium at a specified temperature with an ERH of 60%. What is its aw? If another food has the same aw, does that establish that both foods have the same total moisture content?"
+    },
+    "referencesZh": [
+      {
+        "id": "fda-aw1984",
+        "citation": "U.S. Food and Drug Administration. (1984, April16). Water Activity (aw) in Foods. Inspection Technical Guide39.",
+        "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-technical-guides/water-activity-aw-foods",
+        "use": "支持在可比平衡条件下水分活度与水蒸气状态及ERH/100的关系，并支持区分总水分与水分活度；不把历史指南当作当前法律建议、通用安全阈值或温度变化方向的普遍规律。"
+      }
+    ],
+    "references": [
+      {
+        "id": "fda-aw1984",
+        "citation": "U.S. Food and Drug Administration. (1984, April16). Water Activity (aw) in Foods. Inspection Technical Guide39.",
+        "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-technical-guides/water-activity-aw-foods",
+        "use": "Supports the relationship between water activity, vapor state, and ERH/100 under comparable equilibrium conditions, and supports distinguishing total moisture from water activity. The historical guide is not used as current legal advice, a universal safety threshold, or a universal rule for the direction of temperature effects."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-21-preparation/group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-21-preparation/group2-edit-pass1-evidence.json",
+        "engineering-reader-first-21-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13 perspectives;four actual ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "A confectioner won a contract to ship cakes across a humid strait. He compared two samples: glossy jam and a soft cake that felt dry. A moisture test also showed less total water in the cake. The ship sailed in two days, and a laboratory delay would forfeit the buyer's deposit. He left the jam behind, loaded the entire cake order, and stamped the boxes 'dry enough'.\n\nBy day ten, white growth appeared in several cake boxes while the retained jam still looked unchanged. The confectioner blamed the moisture test and demanded a lower number for the next batch. A food scientist sealed portions in small chambers until the surrounding air reached equilibrium with each food. The cake's chamber settled at a higher relative humidity; dissolved sugar had not removed the jam's water, but it changed how available that water was. The buyer opened the moulded box during inspection and rejected the whole shipment before unloading. Dock fees continued while the confectioner argued that the cakes had tested drier than jam.\n\nShe opened a filled pastry from the same shipment. Moisture had moved from the fruit centre into the crisp shell. The shell softened first, and change appeared near the seam. A whole-product moisture total hid both the difference between components and the direction of migration. Warmer storage accelerated several changes. The confectioner's dry fingertips had measured a surface at one moment, not the condition governing the package over its journey.\n\nHe returned the buyer's deposit and ordered the lot destroyed, even though the seasonal market would close without him. Workers emptied boxes while he recorded which recipes, components, package positions, and storage conditions had failed. The visible loss filled two carts; the retained glossy jam occupied one undamaged jar on his desk. A shorter route crossed the same humid harbour, so a new label could not repair the unknown shelf life. The confectioner broke his old stamp before the disposal carts left.\n\nQualified specialists then adjusted the product and barriers, selected packaging that limited external moisture exchange, and evaluated the intended shelf life under defined conditions. Each product was considered alongside acidity, ingredients, temperature, atmosphere, and relevant hazards. One food's number did not guarantee another, and the measurement was not used as a complete safety decision by itself.\n\nBefore the next voyage, the confectioner still touched a cake. He did not stamp the box. He waited until the chamber indicator stopped, checked the signed study for that product, and sealed the first carton. The old 'dry enough' stamp remained beneath the glass jar of jam, its ink swollen by the damp return voyage.",
-    "storyBodyZh": "点心商拿到一份穿越潮湿海峡的糕点合约。他比较两种样品：果酱黏亮，软糕摸起来更干；水分检测也显示软糕总水量较少。船两天后出发，若等实验室就会失去买家订金。他把果酱留在店里，整批装上软糕，并给箱子盖“足够干”。\n\n航行第十天，几盒软糕出现白色霉变，留店果酱仍无明显变化。点心商责怪水分检测，要求下批把数字做得更低。食品人员把样品分别封进小室，等周围空气同食品达到平衡。软糕小室停在更高相对湿度；糖没有让果酱里的水消失，却改变了那些水有多容易参与变化。买家验货时打开霉变盒，整批尚未卸船便遭拒收。点心商仍拿“比果酱干”的数字争辩，码头费用却按时辰继续增加。\n\n她又拆开同批夹心酥。水从水果馅逐渐移向脆皮，外皮先变软，接缝处也最早变化。整盒总水量既藏住不同部分的差别，也看不见迁移方向；较高温度还会加快多种变化。商人干燥的指尖只碰到某一刻的表面，没有测到包装在整段航程里的条件。\n\n他退还订金，下令销毁整批货，即使当季市场会在他缺席时收摊。工人倒空箱子时，他逐项记录失败的配方、部位、包装位置与储存条件。看得见的损失装满两车，桌上那罐光亮果酱却仍完好。所谓短途也要穿过同一座潮湿港口，新标签补不了未知货架期。两辆销毁车还没离开，点心商先把旧印章木柄折断。\n\n随后由合格人员调整产品与阻隔，选择限制外界湿气交换的包装，并在明确条件下评估预定货架期。每种产品还要同酸度、配料、温度、气氛与相关危险一起考虑；另一种食物的数字不能直接担保，这项测量本身也不承担完整安全决定。\n\n再次装船前，点心商仍摸了摸软糕，却没有落印。他等小室指针停稳，核对该产品签字研究，才封上第一箱。旧“足够干”印章压在果酱玻璃罐下，印泥已被退货航程的潮气泡胀。",
-    "explanation": "Water activity expresses how available water in a food is for microbial growth, chemical reaction, and migration relative to pure water at the same temperature, and is related to equilibrium relative humidity. It differs from total moisture content. Sugar, salt, food structure, and temperature change water availability. Practical safety limits also depend on the organism, acidity, preservatives, atmosphere, packaging, and validated storage conditions.",
-    "explanationZh": "水分活度表示食品中的水相对同温纯水有多容易参与微生物生长、化学反应和迁移，常与平衡相对湿度相联系；它不同于总水分含量。糖、盐、食品结构和温度会改变水的可利用程度。实际安全界限还取决于微生物、酸度、防腐剂、气氛、包装与经验证的储存条件。"
+    "storyBody": "An Qi is choosing a fruit filling for an office snack box. When she opens the boxes, the crisps beside A are noticeably softer, while those beside B remain crisper. Both tests use crisps from the same batch and identical divided boxes, kept in the same temperature-controlled room for the same time. The filling and crisps do not touch directly, but the air space above their compartments is connected. Yet both fillings have routine total-moisture records of about 22%, so her most familiar number does not tell her what to do next.\n\nThe 22% figure is not useless. In the past, if batches of the same formulation suddenly moved away from their normal value, it could alert the team to changes in ingredients or drying. But these are two different formulations, and even with the same packaging and short-term storage conditions, different crisp textures still do not reveal a single cause. An Qi does not immediately remove one ingredient from A. Instead, after the packaging comparison is finished, she takes portions from unexposed retained samples of the same two filling batches for another measurement.\n\nThe two samples are placed in separate sealed measurement chambers at the same temperature and left until each sample and the air in its chamber gradually reach equilibrium. The measurement cannot be read immediately: An Qi handles other work first, and when she returns the number is still changing. Only at the next check has it stabilized. The equilibrium relative humidity above sample A settles at 70%. She writes 70/100=0.70 on the record sheet; B stabilizes at a lower reading. Both bottles still say “total moisture about 22%,” but now different equilibrium records appear beneath those labels.\n\nAn Qi crosses out “keep reducing A's total moisture” on the next-round test sheet. She keeps the existing filling and adds a package in which the air spaces above the two compartments are separated more completely, to be tested side by side with the original package whose air spaces are connected. She wants to see whether changing the degree of isolation also changes the crisp texture. The new package uses an additional layer of material and requires another round of waiting, and the result may still involve other formulation or packaging factors.\n\nBefore leaving, she puts the two sample bottles back on the shelf. Bottle A still says “total moisture about 22%,” with a new line underneath: “equilibrium RH 70%.” The box containing the softened crisps is not thrown away either; it goes onto the same tray as the new packaging samples. The tray label reads: “Next round: see what changes when the spaces are separated.”",
+    "storyBodyZh": "安琪正在给一款办公室零食盒选水果夹心。开盒时，A旁边的薄脆片明显软了一些，B旁边的还比较脆。两组用的是同一批脆片和相同分格盒，在同一间恒温室里放了相同时间；夹心与脆片不直接接触，两格上方的空气却相通。偏偏两种夹心的常规总水分记录都约是22%，她最熟悉的那个数字没有帮她决定下一步。\n\n22%并不是没用。过去同一配方的批次若突然偏离，它常能提醒团队加料或干燥出了变化。可这次是两种不同配方，即使包装和短期储存条件相同，脆片表现不同也还不能告诉她唯一原因。安琪没有急着删掉A里的某种原料，而是等包装比较结束后，从两种夹心各自未装盒的同批留样中取样，去做另一项测量。\n\n两份样品分别放进同温的密闭测量小室，让样品和小室里的空气慢慢达到平衡。这个过程不能马上读数：安琪先处理别的工作，回来时数字仍在变化，直到下一次检查时才稳定。A样品上方的平衡相对湿度停在70%。她在记录纸上写下70/100=0.70；B稳定后的读数更低。两瓶仍都写着“总水分约22%”，下面却出现了不同的平衡记录。\n\n安琪把下一轮试验单上“继续降低A的总水分”划掉，保留现有夹心，再加一组把两格上方空气空间隔得更完整的包装，与原来的相通空气包装并排测试。她想先看改变隔离程度后，脆片的质地是否也跟着改变。新包装多一道材料，还要再等一轮测试，而且结果仍可能牵涉其他配方或包装因素。\n\n下班前，她把两只样品瓶放回架子。A瓶上仍写着“总水分约22%”，下面新添“平衡RH 70%”。那盒已经变软的脆片也没有被丢掉，而是和新包装样件一起放进同一个托盘。托盘标签写着：“下一轮：先看隔开以后会怎样。”",
+    "explanation": "Total moisture content answers “how much water is present in the sample overall.” Water activity compares the equilibrium water-vapor pressure above the sample with that above pure water at the same temperature. Ingredients interact with water differently, so formulations with similar total moisture can still have different water activities. It is not a separately weighable portion of water. After equilibrium is reached, it can be calculated from the air’s equilibrium relative humidity: aw=ERH/100.\n\nMinimal example: if a sample reaches equilibrium with sealed air at the same temperature and ERH=70%, then aw=70/100=0.70. The 70% here is the equilibrium relative humidity of the air, not 70% moisture content in the sample, and 0.70 by itself is not a food-safety or shelf-life conclusion.",
+    "explanationZh": "总水分含量回答“样品中总共有多少水”。水分活度比较的是：在同一温度下，样品上方的平衡水蒸气压，是纯水上方平衡水蒸气压的多少。不同成分与水的相互作用不同，因此总水分相近的配方，水分活度仍可能不同。它不是一部分能单独称出来的水；达到平衡后，可用空气的平衡相对湿度换算：aw=ERH/100。\n\n最小例子：某样品在同一温度下与密闭空气达到平衡后，ERH=70%，则aw=70/100=0.70。这里的70%是空气的平衡相对湿度，不是样品含水量70%，而0.70本身也不是食品安全或保质期结论。"
   },
   {
     "id": "0721-haccp",
