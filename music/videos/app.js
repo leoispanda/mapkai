@@ -20,14 +20,14 @@
   const cards = new Map();
   const $ = id => document.getElementById(id);
   const label = (value, fallback = '') => value?.[language] || value?.en || value?.zh || fallback;
-  let language = 'zh';
+  const requestedLanguage = new URL(location.href).searchParams.get('lang');
+  let language = ['en', 'zh'].includes(requestedLanguage) ? requestedLanguage : 'en';
   let loading = false;
   let loadState = 'loading';
   let visibleCount = 0;
   try {
-    const requested = new URLSearchParams(location.search).get('lang');
-    const saved = localStorage.getItem('mapkaiMusicLanguage') || localStorage.getItem('mapkaiLanguageV2');
-    language = ['en','zh'].includes(requested) ? requested : ['en','zh'].includes(saved) ? saved : 'zh';
+    const saved = localStorage.getItem('mapkaiLanguageV3');
+    if (!['en', 'zh'].includes(requestedLanguage) && ['en', 'zh'].includes(saved)) language = saved;
   } catch {}
   const t = key => copy[language][key] || key;
   const bilingual = value => value && typeof value === 'object' && ['zh','en'].every(key => typeof value[key] === 'string' && value[key].trim().length > 0 && value[key].length <= 1200);
@@ -143,7 +143,12 @@
     updateCard(card); return card;
   }
 
-  function applyLanguage(next) {
+  function applyLanguage(next, updateUrl = false) {
+    if (updateUrl) {
+      const url = new URL(location.href);
+      url.searchParams.set('lang', next);
+      history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+    }
     if (!['zh','en'].includes(next)) return;
     language = next; document.documentElement.lang = next === 'zh' ? 'zh-CN' : 'en';
     document.title = t('pageTitle'); document.querySelector('meta[name="description"]').content = t('pageDescription');
@@ -155,7 +160,7 @@
     if (loadState === 'loaded') $('gallery-status').textContent = t('count').replace('{count}',String(visibleCount));
     else if (loadState === 'empty') $('gallery-status').textContent = t('empty');
     for (const card of cards.values()) updateCard(card);
-    try { localStorage.setItem('mapkaiMusicLanguage',next); } catch {}
+    try { localStorage.setItem('mapkaiLanguageV3',next); } catch {}
   }
 
   function revealHash() {
@@ -190,10 +195,10 @@
     } finally { loading = false; $('retry-gallery').disabled = false; }
   }
 
-  document.querySelectorAll('[data-language]').forEach(button => { button.addEventListener('click',() => applyLanguage(button.dataset.language)); });
+  document.querySelectorAll('[data-language]').forEach(button => { button.addEventListener('click',() => applyLanguage(button.dataset.language, true)); });
   $('retry-gallery').addEventListener('click',loadGallery);
   window.addEventListener('hashchange',revealHash);
-  window.addEventListener('storage',event => { if (event.key === 'mapkaiMusicLanguage' && ['en','zh'].includes(event.newValue)) applyLanguage(event.newValue); });
+  window.addEventListener('storage',event => { if (event.key === 'mapkaiLanguageV3' && ['en','zh'].includes(event.newValue)) applyLanguage(event.newValue); });
   window.addEventListener('pagehide',() => { for (const card of cards.values()) card.video.pause(); });
   applyLanguage(language); loadGallery();
 })();

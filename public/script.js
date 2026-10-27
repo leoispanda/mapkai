@@ -11,11 +11,11 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.334";
+const appVersion = "0.1.335";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
-const languageKey = "mapkaiLanguageV2";
+const languageKey = "mapkaiLanguageV3";
 const themeKey = "mapkaiTheme";
 const founderModeKey = "mapkaiFounderMode";
 const founderStoriesKey = "mapkaiFounderStories";
@@ -15356,6 +15356,9 @@ function setLanguage(language) {
   if (!supportedLanguages.includes(language)) return;
   currentLanguage = language;
   localStorage.setItem(languageKey, language);
+  const url = new URL(location.href);
+  url.searchParams.set('lang', language);
+  history.replaceState(history.state, '', url.pathname + url.search + url.hash);
   applyLanguage();
   drawKnowledgeMap();
 }
@@ -22767,7 +22770,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.334").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.335").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

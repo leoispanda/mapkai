@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="description" content="MapKAI Music。按编号、歌名或学科找歌，连续播放。">
+  <meta name="description" content="MapKAI Music. Find songs by number, title, or subject and keep listening.">
   <meta name="theme-color" content="#fffdf8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; media-src 'self' blob:; base-uri 'self'; form-action 'self'; object-src 'none'">
   <title>MapKAI Music</title>
@@ -21,16 +21,16 @@
 </head>
 <body data-mapkai-page="music">
   <header class="topbar">
-    <a class="brand" href="/" aria-label="MapKAI 首页"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a>
-    <nav aria-label="主导航"><a href="/toolbox/">MapKAI Toolbox</a></nav>
-    <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" lang="en" aria-pressed="false">EN</button><span>/</span><button type="button" data-language="zh" lang="zh" aria-pressed="true">中文</button></div>
+    <a class="brand" href="/" aria-label="MapKAI home"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a>
+    <nav aria-label="Site"><a href="/toolbox/en/">MapKAI Toolbox</a></nav>
+    <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-language="zh" lang="zh" aria-pressed="false">中文</button></div>
   </header>
   <main class="music-page">
-    <a class="back-link" href="/toolbox/" data-i18n="back">← 返回 Toolbox</a>
+    <a class="back-link" href="/toolbox/en/" data-i18n="back">← Back to Toolbox</a>
     <section class="music-heading" aria-labelledby="page-title">
       <h1 id="page-title">MapKAI <span>Music</span></h1>
-      <p class="music-intro" data-i18n="intro">选一首，接着听。按编号、歌名或学科找歌。</p>
-      <p class="music-ai-notice" data-i18n="aiNotice">所有 AI 创作的歌曲均保留标识；完整歌词与介绍可按需展开。</p>
+      <p class="music-intro" data-i18n="intro">Pick a song and keep listening. Find it by number, title, or subject.</p>
+      <p class="music-ai-notice" data-i18n="aiNotice">AI-created songs remain labelled. Open a song’s details for its full lyrics and introduction.</p>
     </section>
     <a class="music-video-entry" href="/music/videos/#your-turn-asml">
       <span class="music-video-thumbnail"><img src="/music/videos/posters/your-turn-asml.jpg" width="320" height="180" alt="" loading="lazy" decoding="async"><span aria-hidden="true">▶</span></span>
@@ -40,22 +40,22 @@
     <p class="bluetooth-test-entry"><a href="/music/bluetooth/"><span class="entry-zh">车载蓝牙文字显示测试 ↗</span><span class="entry-en" lang="en">Test your car's Bluetooth text display ↗</span></a></p>
     <section id="playlist-player" class="playlist-player" aria-labelledby="playlist-heading">
       <div class="playlist-top">
-        <div><h2 id="playlist-heading" data-i18n="playlistHeading">一起听歌</h2><p id="playlist-intro" class="playlist-intro" data-i18n="playlistIntro">默认连续播放，到歌单末尾自动从头继续。</p></div>
+        <div><h2 id="playlist-heading" data-i18n="playlistHeading">Listen with MapKAI</h2><p id="playlist-intro" class="playlist-intro" data-i18n="playlistIntro">Continuous play is on: the queue repeats after its last song.</p></div>
         <div class="playlist-controls">
-          <button id="playlist-prev" type="button" class="button secondary" data-i18n="previousSong" disabled>上一首</button>
-          <button id="play-all" type="button" class="button primary" disabled>播放全部</button>
-          <button id="playlist-next" type="button" class="button secondary" data-i18n="nextSong" disabled>下一首</button>
+          <button id="playlist-prev" type="button" class="button secondary" data-i18n="previousSong" disabled>Previous</button>
+          <button id="play-all" type="button" class="button primary" disabled>Play all</button>
+          <button id="playlist-next" type="button" class="button secondary" data-i18n="nextSong" disabled>Next</button>
         </div>
       </div>
-      <div class="playlist-now"><h3 id="playlist-title" data-i18n="playlistReady" aria-live="polite">准备播放</h3><p id="playlist-position" class="playlist-position">—</p><span id="playlist-disclosure" class="track-disclosure" hidden></span><span id="playlist-tempo" class="track-tempo" hidden></span></div>
+      <div class="playlist-now"><h3 id="playlist-title" data-i18n="playlistReady" aria-live="polite">Choose a song, or play them all</h3><p id="playlist-position" class="playlist-position">—</p><span id="playlist-disclosure" class="track-disclosure" hidden></span><span id="playlist-tempo" class="track-tempo" hidden></span></div>
       <div class="playlist-progress-row">
         <div class="playback-progress">
-          <input id="playlist-seek" class="playback-seek" type="range" min="0" max="1000" step="1" value="0" disabled aria-label="当前歌曲进度" data-aria="playlistSeekLabel">
+          <input id="playlist-seek" class="playback-seek" type="range" min="0" max="1000" step="1" value="0" disabled aria-label="Current song playback progress" data-aria="playlistSeekLabel">
           <div class="playback-times"><span id="playlist-elapsed">0:00</span><span id="playlist-duration">—:—</span></div>
         </div>
 
       </div>
-      <div class="playlist-options-row"><label class="continuous-control"><input id="continuous-play" type="checkbox" checked><span data-i18n="continuousPlay">连续播放</span></label><label class="continuous-control car-lyrics-control"><input id="car-lyrics" type="checkbox" disabled aria-describedby="car-lyrics-status"><span data-i18n="carLyrics">车载歌词（试用）</span></label><details id="playlist-options" class="playlist-options"><summary data-i18n="playlistOptions">歌词与设置</summary><div class="playlist-options-body"><div id="playlist-reactions" class="playlist-reactions"></div><label class="playback-volume"><span data-i18n="volumeLabel">音量</span><input id="playlist-volume" type="range" min="0" max="100" step="1" value="100" aria-label="音量" data-aria="volumeLabel"></label>
+      <div class="playlist-options-row"><label class="continuous-control"><input id="continuous-play" type="checkbox" checked><span data-i18n="continuousPlay">Continuous play</span></label><label class="continuous-control car-lyrics-control"><input id="car-lyrics" type="checkbox" disabled aria-describedby="car-lyrics-status"><span data-i18n="carLyrics">Car lyrics (trial)</span></label><details id="playlist-options" class="playlist-options"><summary data-i18n="playlistOptions">Lyrics &amp; settings</summary><div class="playlist-options-body"><div id="playlist-reactions" class="playlist-reactions"></div><label class="playback-volume"><span data-i18n="volumeLabel">Volume</span><input id="playlist-volume" type="range" min="0" max="100" step="1" value="100" aria-label="Volume" data-aria="volumeLabel"></label>
       <p id="playlist-lyrics" class="lyrics-text" role="region" tabindex="0" aria-labelledby="playlist-title"><span id="playlist-lyric-span" class="lyrics-current"></span></p>
       <p id="playlist-caption-note" class="lyrics-unavailable" hidden></p>
       <p id="playlist-lyrics-unavailable" class="lyrics-unavailable" hidden></p>
@@ -65,72 +65,72 @@
     </section>
     <section id="library" class="library" aria-labelledby="library-title">
       <div class="library-heading">
-        <div><h2 id="library-title" data-i18n="library">歌曲列表</h2><p id="track-count" class="library-count" aria-live="polite">正在载入歌曲…</p></div>
-        <details class="library-tools"><summary data-i18n="libraryTools">创作与管理</summary><div><button id="create-music" type="button" class="button secondary" data-i18n="createSong">制作歌曲</button><button id="manage-music" type="button" class="button secondary" data-i18n="manage">管理歌曲</button></div></details>
+        <div><h2 id="library-title" data-i18n="library">Song list</h2><p id="track-count" class="library-count" aria-live="polite">正在载入歌曲…</p></div>
+        <details class="library-tools"><summary data-i18n="libraryTools">Create &amp; manage</summary><div><button id="create-music" type="button" class="button secondary" data-i18n="createSong">Create a song</button><button id="manage-music" type="button" class="button secondary" data-i18n="manage">Manage songs</button></div></details>
       </div>
       <div class="library-actions">
-        <label class="search"><span class="sr-only" data-i18n="searchLabel">搜索歌曲</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="song-search" type="search" maxlength="150" placeholder="编号、歌名、学科或概念…" data-placeholder="search"></label>
-        <label class="library-filter"><span class="sr-only" data-i18n="subjectFilter">学科</span><select id="subject-filter" aria-label="学科" data-aria="subjectFilter"><option value="" data-i18n="allSubjects">全部学科</option></select></label>
-        <label class="library-filter"><span class="sr-only" data-i18n="tempoFilter">节奏筛选</span><select id="tempo-filter" aria-label="节奏筛选" data-aria="tempoFilter" aria-describedby="tempo-hint"><option value="" data-i18n="allTempos">全部节奏</option><option value="near180" data-i18n="near180">接近 180 步频</option></select></label>
-        <label class="library-sort"><span class="sr-only" data-i18n="sortSongs">排序</span><select id="song-sort" aria-label="排序" data-aria="sortSongs"><option value="rank" selected data-i18n="sortRank">最受欢迎</option><option value="listens" data-i18n="sortListens">收听最多</option><option value="completion" data-i18n="sortCompletion">听完率最高</option><option value="skips" data-i18n="sortSkips">切歌最多</option><option value="number" data-i18n="sortNumber">编号顺序</option><option value="newest" data-i18n="sortNewest">最新编号</option></select></label>
+        <label class="search"><span class="sr-only" data-i18n="searchLabel">Search songs</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="song-search" type="search" maxlength="150" placeholder="Number, title, subject, or concept…" data-placeholder="Number, title, subject, or concept…"></label>
+        <label class="library-filter"><span class="sr-only" data-i18n="subjectFilter">Subject</span><select id="subject-filter" aria-label="Subject" data-aria="subjectFilter"><option value="" data-i18n="allSubjects">All subjects</option></select></label>
+        <label class="library-filter"><span class="sr-only" data-i18n="tempoFilter">Tempo filter</span><select id="tempo-filter" aria-label="Tempo filter" data-aria="tempoFilter" aria-describedby="tempo-hint"><option value="" data-i18n="allTempos">All tempos</option><option value="near180" data-i18n="near180">Near 180 steps/min</option></select></label>
+        <label class="library-sort"><span class="sr-only" data-i18n="sortSongs">Sort</span><select id="song-sort" aria-label="Sort" data-aria="sortSongs"><option value="rank" selected data-i18n="sortRank">Most popular</option><option value="listens" data-i18n="sortListens">Most listened</option><option value="completion" data-i18n="sortCompletion">Highest completion rate</option><option value="skips" data-i18n="sortSkips">Most skipped</option><option value="number" data-i18n="sortNumber">Number order</option><option value="newest" data-i18n="sortNewest">Newest number</option></select></label>
       </div>
-      <p id="tempo-hint" class="tempo-hint" data-i18n="tempoHint">≈ 表示检测估计；90/180 是半/倍速候选。筛选含约 90 BPM 的双倍脉冲，尚未实跑验证。</p>
+      <p id="tempo-hint" class="tempo-hint" data-i18n="tempoHint">≈ means an estimate; 90/180 are half/double-time candidates. The filter includes doubled pulses near 90 BPM; running suitability is untested.</p>
       <p id="preferences-notice" class="preferences-notice" role="status">默认按受欢迎程度排序：赞 − 不喜欢，得分越高越靠前。每次点击记一票，跨浏览器共享。</p>
       <p id="listening-notice" class="preferences-notice"></p>
       <p id="library-status" class="library-status" role="status" hidden></p>
-      <div id="library-error" class="library-error" hidden><p data-i18n="libraryError">暂时无法载入歌单，请再试一次。</p><button id="retry-library" class="text-button" type="button" data-i18n="retry">重新载入</button></div>
+      <div id="library-error" class="library-error" hidden><p data-i18n="libraryError">The song list could not be loaded. Please try again.</p><button id="retry-library" class="text-button" type="button" data-i18n="retry">Try again</button></div>
       <ul id="tracks" class="track-list" role="list" aria-label="歌曲列表"></ul>
-      <div id="empty-library" class="empty-library" hidden><h3 data-i18n="emptyTitle">还没有歌曲。</h3><p data-i18n="emptyCopy">歌曲上传后，会在这里展示。</p></div>
-      <div id="empty-search" class="empty-search" hidden><h3 data-i18n="noResults">没有找到这首歌。</h3><p data-i18n="noResultsCopy">试试其他关键词，或看看完整歌单。</p><button id="clear-search" class="text-button" type="button" data-i18n="clearSearch">查看全部歌曲</button></div>
+      <div id="empty-library" class="empty-library" hidden><h3 data-i18n="emptyTitle">No songs yet.</h3><p data-i18n="emptyCopy">Songs will appear here once uploaded.</p></div>
+      <div id="empty-search" class="empty-search" hidden><h3 data-i18n="noResults">No songs found.</h3><p data-i18n="noResultsCopy">Try another keyword, or see the full list.</p><button id="clear-search" class="text-button" type="button" data-i18n="clearSearch">See all songs</button></div>
     </section>
     <noscript><p class="library-error">请启用 JavaScript 以载入歌曲。 / Enable JavaScript to load the collection.</p></noscript>
-    <footer class="music-footer"><div><span>MapKAI Music</span></div><a href="/" data-i18n="home">回到 MapKAI ↗</a></footer>
+    <footer class="music-footer"><div><span>MapKAI Music</span></div><a href="/" data-i18n="home">Back to MapKAI ↗</a></footer>
   </main>
   <dialog id="music-composer" class="composer-dialog" aria-labelledby="composer-title" aria-describedby="composer-intro">
-    <div class="dialog-heading"><div><p class="eyebrow">MAPKAI MUSIC / CREATE</p><h2 id="composer-title" data-i18n="createSong">制作歌曲</h2></div><button id="close-composer" class="close-button" type="button" aria-label="关闭" data-aria="close">×</button></div>
-    <p id="composer-intro" class="form-note" data-i18n="composerIntro">先在这里准备创作说明，复制后粘贴到 ElevenLabs。歌曲会在你自己的音乐账号中制作，并使用该账号的点数。</p>
-    <p class="form-note composer-privacy" data-i18n="composerPrivacy">你的主题和歌词只保留在当前页面；由你复制并粘贴到音乐工具。</p>
+    <div class="dialog-heading"><div><p class="eyebrow">MAPKAI MUSIC / CREATE</p><h2 id="composer-title" data-i18n="createSong">Create a song</h2></div><button id="close-composer" class="close-button" type="button" aria-label="Close" data-aria="close">×</button></div>
+    <p id="composer-intro" class="form-note" data-i18n="composerIntro">Prepare a prompt here, then copy and paste it into ElevenLabs. The song is generated in your own music account and uses that account’s credits.</p>
+    <p class="form-note composer-privacy" data-i18n="composerPrivacy">Your theme and lyrics stay on this page. You choose when to copy and paste them into the music tool.</p>
     <form id="composer-form" novalidate>
-      <label for="composer-song-title" data-i18n="songTitle">歌名</label><input id="composer-song-title" maxlength="120" required value="MapKAI — Look Again">
-      <label for="composer-theme" data-i18n="composerTheme">想法或主题</label><textarea id="composer-theme" maxlength="1000" rows="3" required>A warm, inviting, catchy brand song introducing MapKAI. Celebrate curiosity, connect ideas through knowledge maps, learn through stories, find next steps with learning paths, and explore practical tools in the Toolbox. Build the chorus around 'MapKAI' and 'look again'. Focus the lyrics on MapKAI and learning; use the upbeat groove as inspiration without a city-name roll call.</textarea>
+      <label for="composer-song-title" data-i18n="songTitle">Song title</label><input id="composer-song-title" maxlength="120" required value="MapKAI — Look Again">
+      <label for="composer-theme" data-i18n="composerTheme">Idea or theme</label><textarea id="composer-theme" maxlength="1000" rows="3" required>A warm, inviting, catchy brand song introducing MapKAI. Celebrate curiosity, connect ideas through knowledge maps, learn through stories, find next steps with learning paths, and explore practical tools in the Toolbox. Build the chorus around 'MapKAI' and 'look again'. Focus the lyrics on MapKAI and learning; use the upbeat groove as inspiration without a city-name roll call.</textarea>
       <div class="composer-fields">
-        <div><label for="composer-language" data-i18n="songLanguage">歌曲语言</label><select id="composer-language"><option value="en" selected>English (EN)</option><option value="nl">Nederlands (NL)</option><option value="zh">中文 (ZH)</option></select></div>
-        <div><label for="composer-style" data-i18n="composerStyle">音乐风格</label><select id="composer-style"><option value="memphis-hip-hop" selected data-i18n="styleMemphisHipHop">孟菲斯 Hip-hop</option><option value="rock" data-i18n="styleRock">摇滚</option><option value="symphonic" data-i18n="styleSymphonic">交响</option><option value="folk-rap" data-i18n="styleFolkRap">民谣说唱</option><option value="acoustic" data-i18n="styleAcoustic">原声</option></select></div>
-        <div><label for="composer-duration" data-i18n="composerDuration">时长</label><select id="composer-duration"><option value="60" data-i18n="durationOne">1 分钟</option><option value="120" selected data-i18n="durationTwo">2 分钟</option></select></div>
+        <div><label for="composer-language" data-i18n="songLanguage">Song language</label><select id="composer-language"><option value="en" selected>English (EN)</option><option value="nl">Nederlands (NL)</option><option value="zh">中文 (ZH)</option></select></div>
+        <div><label for="composer-style" data-i18n="composerStyle">Music style</label><select id="composer-style"><option value="memphis-hip-hop" selected data-i18n="styleMemphisHipHop">Memphis hip-hop</option><option value="rock" data-i18n="styleRock">Rock</option><option value="symphonic" data-i18n="styleSymphonic">Symphonic</option><option value="folk-rap" data-i18n="styleFolkRap">Folk rap</option><option value="acoustic" data-i18n="styleAcoustic">Acoustic</option></select></div>
+        <div><label for="composer-duration" data-i18n="composerDuration">Duration</label><select id="composer-duration"><option value="60" data-i18n="durationOne">1 minute</option><option value="120" selected data-i18n="durationTwo">2 minutes</option></select></div>
       </div>
-      <label for="composer-lyrics" data-i18n="composerLyrics">原创歌词（可选）</label><textarea id="composer-lyrics" maxlength="2400" rows="4" placeholder="留空即可按主题创作原创歌词。" data-placeholder="composerLyricsPlaceholder"></textarea>
-      <button id="prepare-prompt" type="submit" class="button primary" data-i18n="preparePrompt">生成创作说明</button>
+      <label for="composer-lyrics" data-i18n="composerLyrics">Original lyrics (optional)</label><textarea id="composer-lyrics" maxlength="2400" rows="4" placeholder="Leave blank to create original lyrics from your theme." data-placeholder="Leave blank to create original lyrics from your theme."></textarea>
+      <button id="prepare-prompt" type="submit" class="button primary" data-i18n="preparePrompt">Prepare prompt</button>
     </form>
     <p id="composer-status" class="form-status" role="status" hidden></p>
     <div id="composer-output" class="composer-output" hidden>
-      <label for="composer-prompt" data-i18n="composerPrompt">创作说明</label><textarea id="composer-prompt" rows="9" readonly aria-label="创作说明" data-aria="composerPrompt"></textarea>
+      <label for="composer-prompt" data-i18n="composerPrompt">Your creation prompt</label><textarea id="composer-prompt" rows="9" readonly aria-label="Your creation prompt" data-aria="composerPrompt"></textarea>
       <p id="composer-count" class="form-note"></p>
-      <div class="composer-actions"><button id="copy-prompt" type="button" class="button secondary" data-i18n="copyPrompt" disabled>复制创作说明</button><a class="button primary" href="https://elevenlabs.io/app/music/history" target="_blank" rel="noopener noreferrer" data-i18n="openCreator">打开音乐制作工具 ↗</a></div>
-      <p class="form-note composer-return" data-i18n="composerReturn">先复制说明，再打开音乐工具粘贴并制作。下载完成的歌曲后，回到这里通过“管理歌曲”上传成品。</p>
+      <div class="composer-actions"><button id="copy-prompt" type="button" class="button secondary" data-i18n="copyPrompt" disabled>Copy prompt</button><a class="button primary" href="https://elevenlabs.io/app/music/history" target="_blank" rel="noopener noreferrer" data-i18n="openCreator">Open music creator ↗</a></div>
+      <p class="form-note composer-return" data-i18n="composerReturn">Copy the prompt first, then open the music tool, paste it, and create your song. Download the finished song and return here to upload it through Manage songs.</p>
     </div>
   </dialog>
   <dialog id="music-studio" aria-labelledby="studio-title">
-    <div class="dialog-heading"><div><p class="eyebrow">MAPKAI MUSIC / STUDIO</p><h2 id="studio-title" data-i18n="studioTitle">上传歌曲</h2></div><button id="close-studio" class="close-button" type="button" aria-label="关闭" data-aria="close">×</button></div>
-    <p id="studio-checking" class="form-note" role="status" data-i18n="checking">正在打开歌曲工作室…</p>
+    <div class="dialog-heading"><div><p class="eyebrow">MAPKAI MUSIC / STUDIO</p><h2 id="studio-title" data-i18n="studioTitle">Upload a song</h2></div><button id="close-studio" class="close-button" type="button" aria-label="Close" data-aria="close">×</button></div>
+    <p id="studio-checking" class="form-note" role="status" data-i18n="checking">Opening the music studio…</p>
     <form id="owner-form" hidden>
-      <p class="form-note" data-i18n="ownerIntro">输入 MapKAI 管理密码，开始上传歌曲。</p>
-      <label for="owner-code" data-i18n="ownerCode">管理密码</label><input id="owner-code" type="password" autocomplete="current-password" maxlength="200" required>
+      <p class="form-note" data-i18n="ownerIntro">Enter the MapKAI owner password to upload songs.</p>
+      <label for="owner-code" data-i18n="ownerCode">Owner password</label><input id="owner-code" type="password" autocomplete="current-password" maxlength="200" required>
       <p id="owner-status" class="form-status" role="status" hidden></p>
-      <button id="owner-login" class="button primary" type="submit" data-i18n="login">打开工作室</button>
+      <button id="owner-login" class="button primary" type="submit" data-i18n="login">Open the studio</button>
     </form>
-    <div id="upload-unavailable" class="studio-unavailable" hidden><p data-i18n="unavailable">暂时无法上传歌曲，请稍后再试。</p><button id="retry-studio" class="text-button" type="button" data-i18n="retry">重新载入</button></div>
+    <div id="upload-unavailable" class="studio-unavailable" hidden><p data-i18n="unavailable">Uploads are temporarily unavailable. Please try again later.</p><button id="retry-studio" class="text-button" type="button" data-i18n="retry">Try again</button></div>
     <form id="upload-form" hidden>
-      <p class="form-note" data-i18n="uploadIntro">下载你使用 AI 创作的歌曲，在这里上传，即可加入公开歌曲列表。</p>
-      <label for="song-file" class="file-label"><span class="upload-symbol" aria-hidden="true">↑</span><strong data-i18n="chooseFile">选择歌曲文件</strong><span data-i18n="fileFormats">MP3 / M4A / WAV · 每首最多 25 MB</span><input id="song-file" type="file" accept=".mp3,.m4a,.wav,audio/mpeg,audio/mp4,audio/x-m4a,audio/wav,audio/x-wav" required></label>
-      <div id="file-preview" class="file-preview" hidden><p id="selected-file"></p><span class="preview-label" data-i18n="preview">上传前试听</span><audio id="preview-audio" controls preload="metadata"></audio></div>
-      <label for="song-title" data-i18n="songTitle">歌名</label><input id="song-title" maxlength="120" required placeholder="给这首歌一个名字" data-placeholder="titlePlaceholder">
-      <label for="song-language" data-i18n="songLanguage">歌曲语言</label><select id="song-language" name="language" required><option value="en" selected>English (EN)</option><option value="nl">Nederlands (NL)</option><option value="zh">中文 (ZH)</option></select>
-      <label for="song-description" data-i18n="songDescription">一句介绍（可选）</label><textarea id="song-description" maxlength="500" rows="3" placeholder="这首歌的灵感，或你想说的话…" data-placeholder="descriptionPlaceholder"></textarea>
-      <label for="song-lyrics" data-i18n="songLyrics">原始歌词（可选）</label><textarea id="song-lyrics" maxlength="12000" rows="5" placeholder="粘贴这首歌实际使用的歌词，保留段落和换行。" data-placeholder="lyricsPlaceholder"></textarea>
-      <p class="form-note publish-note" data-i18n="publishNote">上传的歌曲和 AI 生成标识会公开展示。请确认你有权分享这首作品。</p>
-      <div id="upload-progress" class="upload-progress" hidden><progress id="progress-bar" max="100" value="0" aria-label="上传进度" data-aria="progress"></progress><span id="progress-label"></span></div>
+      <p class="form-note" data-i18n="uploadIntro">Download the song you created with AI, then upload it here to join the public song list.</p>
+      <label for="song-file" class="file-label"><span class="upload-symbol" aria-hidden="true">↑</span><strong data-i18n="chooseFile">Choose a song file</strong><span data-i18n="fileFormats">MP3 / M4A / WAV · Up to 25 MB per song</span><input id="song-file" type="file" accept=".mp3,.m4a,.wav,audio/mpeg,audio/mp4,audio/x-m4a,audio/wav,audio/x-wav" required></label>
+      <div id="file-preview" class="file-preview" hidden><p id="selected-file"></p><span class="preview-label" data-i18n="preview">Listen before uploading</span><audio id="preview-audio" controls preload="metadata"></audio></div>
+      <label for="song-title" data-i18n="songTitle">Song title</label><input id="song-title" maxlength="120" required placeholder="Give your song a name" data-placeholder="Give your song a name">
+      <label for="song-language" data-i18n="songLanguage">Song language</label><select id="song-language" name="language" required><option value="en" selected>English (EN)</option><option value="nl">Nederlands (NL)</option><option value="zh">中文 (ZH)</option></select>
+      <label for="song-description" data-i18n="songDescription">A few words (optional)</label><textarea id="song-description" maxlength="500" rows="3" placeholder="The inspiration behind this song, or something you want to share…" data-placeholder="The inspiration behind this song, or something you want to share…"></textarea>
+      <label for="song-lyrics" data-i18n="songLyrics">Original song lyrics (optional)</label><textarea id="song-lyrics" maxlength="12000" rows="5" placeholder="Paste the lyrics actually used in this song, keeping verse breaks and line breaks." data-placeholder="Paste the lyrics actually used in this song, keeping verse breaks and line breaks."></textarea>
+      <p class="form-note publish-note" data-i18n="publishNote">Uploaded songs and their AI-generated labels are public. Please make sure you have the right to share this work.</p>
+      <div id="upload-progress" class="upload-progress" hidden><progress id="progress-bar" max="100" value="0" aria-label="Upload progress" data-aria="progress"></progress><span id="progress-label"></span></div>
       <p id="upload-status" class="form-status" role="status" hidden></p>
-      <button id="publish-song" class="button primary" type="submit" data-i18n="publish">上传并加入列表</button>
+      <button id="publish-song" class="button primary" type="submit" data-i18n="publish">Upload to the list</button>
     </form>
   </dialog>
 </body>

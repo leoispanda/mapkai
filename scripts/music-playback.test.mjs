@@ -19,10 +19,16 @@ const flush = async () => { for (let index = 0; index < 30; index++) await Promi
 
 // Execute the production app with a small DOM/media model. Tests drive user and
 // native media events, not extracted copies of the queue implementation.
-function harness({ savedContinuous = null, failPlay = false, songs = catalog, audioSession = null, savedSort = 'rank', votesReady = null, initialScores = [], listeningTotals = null } = {}) {
+function harness({ savedContinuous = null, savedLanguage = 'zh', legacyLanguage = null, url = 'https://www.mapkai.com/music/', failPlay = false, songs = catalog, audioSession = null, savedSort = 'rank', votesReady = null, initialScores = [], listeningTotals = null } = {}) {
   const trace = [], snapshots = [];
   const ids = new Map(), all = [], values = new Map(), scores = new Map(initialScores);
   if (savedContinuous) values.set('mapkaiMusicContinuous.v1', savedContinuous);
+  // Media-copy tests choose Chinese explicitly; language-default tests pass null.
+  if (savedLanguage !== null) values.set('mapkaiLanguageV3', savedLanguage);
+  if (legacyLanguage !== null) {
+    values.set('mapkaiLanguageV2', legacyLanguage);
+    values.set('mapkaiMusicLanguage', legacyLanguage);
+  }
   class Target {
     addEventListener(type, callback) { const callbacks = this.listeners?.get(type) || []; callbacks.push(callback); (this.listeners ||= new Map()).set(type, callbacks); }
     dispatchEvent(event) { trace.push(['event', event.type]); event.target ||= this; for (const callback of [...(this.listeners?.get(event.type) || [])]) callback(event); return true; }
@@ -81,11 +87,14 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
   }
   ids.get('song-sort').value = savedSort;
   const allSubjects = new Element('option'); allSubjects.value = ''; ids.get('subject-filter').append(allSubjects);
-  const brand = new Element('a'), description = new Element('meta');
-  document.querySelector = selector => selector === '.brand' ? brand : selector === 'meta[name=description]' ? description : null;
-  document.querySelectorAll = () => [];
+  const brand = new Element('a'), description = new Element('meta'), backLink = new Element('a');
+  const languageButtons = ['en', 'zh'].map(language => { const button = new Element('button'); button.dataset.language = language; return button; });
+  document.querySelector = selector => selector === '.brand' ? brand : selector === 'meta[name=description]' ? description : selector === '.back-link' ? backLink : null;
+  document.querySelectorAll = selector => selector === '[data-language]' ? languageButtons : [];
   document.getElementById = id => ids.get(id) || null;
   const window = new Target();
+  const location = { href: url, origin: new URL(url).origin };
+  const history = { state: { route: '/music/' }, replaceState(state, title, target) { this.state = state; location.href = new URL(target, location.href).href; } };
   let preferenceListener, currentSongs = songs, fetchCalls = 0;
   const preferences = {
     get: id => ({ known: true, likes: Math.max(0, scores.get(id) || 0), dislikes: Math.max(0, -(scores.get(id) || 0)), score: scores.get(id) || 0, pending: false }),
@@ -94,7 +103,7 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
     subscribe: callback => { preferenceListener = callback; }, refresh: () => votesReady, vote() {},
   };
   const context = vm.createContext({ window, document, URL, Event: class { constructor(type) { this.type = type; } },
-    location: { href: 'https://www.mapkai.com/music/', origin: 'https://www.mapkai.com' },
+    location, history,
     navigator: audioSession ? { audioSession } : {},
     localStorage: { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) },
     MapKAIMusicPreferences: preferences,
@@ -112,7 +121,9 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
   vm.runInContext(appSource, context, { filename: 'music/app.js' });
   window.addEventListener('mapkai:music-update', () => snapshots.push(window.MapKAIMusicPage.snapshot()));
   return {
-    trace, snapshots,
+    trace, snapshots, location, history, backLink,
+    language: () => document.documentElement.lang,
+    chooseLanguage: language => languageButtons.find(button => button.dataset.language === language).dispatchEvent({ type: 'click' }),
     delayNext: () => { let resolve, reject; const gate = { promise: new Promise((done, fail) => { resolve = done; reject = fail; }), resolve: value => resolve(value), reject: value => reject(value) }; window.MapKAIMusicPage.snapshot().audio.nextPlay = gate; return gate; },
     visibility: value => { document.visibilityState = value; document.dispatchEvent({ type: 'visibilitychange' }); },
     foreignPlay: () => { const audio = new Audio(); audio.paused = false; document.dispatchEvent({ type: 'play', target: audio }); return audio; },
@@ -127,6 +138,36 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
     original: row => row.children.find(element => element.className === 'track-details').children[1].children.find(element => element.className === 'track-original-lyrics').children[1],
   };
 }
+
+test('music defaults to English for new visitors and ignores legacy Chinese preferences', async () => {
+  for (const legacyLanguage of [null, 'zh']) {
+    const h = harness({ savedLanguage: null, legacyLanguage }); await flush();
+    assert.equal(h.language(), 'en');
+    assert.equal(h.values.get('mapkaiLanguageV3'), 'en');
+    assert.equal(h.backLink.href, '/toolbox/en/');
+  }
+});
+
+test('music honors current language preferences and explicit URL language wins', async () => {
+  const saved = harness({ savedLanguage: 'zh' }); await flush();
+  assert.equal(saved.language(), 'zh-CN');
+  assert.equal(saved.backLink.href, '/toolbox/');
+  for (const [savedLanguage, requestedLanguage, expected] of [['zh', 'en', 'en'], ['en', 'zh', 'zh-CN']]) {
+    const h = harness({ savedLanguage, url: `https://www.mapkai.com/music/?lang=${requestedLanguage}` }); await flush();
+    assert.equal(h.language(), expected);
+    assert.equal(h.values.get('mapkaiLanguageV3'), requestedLanguage);
+  }
+});
+
+test('music language switching preserves other URL parameters, fragment, and history state', async () => {
+  const h = harness({ url: 'https://www.mapkai.com/music/?lang=en&filter=running#songs' }); await flush();
+  const previousState = h.history.state;
+  h.chooseLanguage('zh');
+  assert.equal(h.language(), 'zh-CN');
+  assert.equal(h.location.href, 'https://www.mapkai.com/music/?lang=zh&filter=running#songs');
+  assert.equal(h.values.get('mapkaiLanguageV3'), 'zh');
+  assert.equal(h.history.state, previousState);
+});
 
 test('loading the library does not start audio and creates only preview plus one queue player', async () => {
   const h = harness(); await flush();

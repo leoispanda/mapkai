@@ -31,7 +31,7 @@ export function translatePage(from) {
     for (const attr of ['placeholder','aria-label']) if (element.hasAttribute(attr)) element.setAttribute(attr, convert(element.getAttribute(attr), from, language));
   }
   document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
-  try { localStorage.setItem('mapkaiLanguageV2', language); } catch {}
+  try { localStorage.setItem('mapkaiLanguageV3', language); } catch {}
   document.querySelectorAll('.toolbox-link').forEach(link => { link.href = language === 'en' ? '/toolbox/en/' : '/toolbox/'; });
   document.querySelectorAll('.brand').forEach(link => { link.href = language === 'en' ? '/?lang=en' : '/?lang=zh'; });
   document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));

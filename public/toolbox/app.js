@@ -1,4 +1,4 @@
-try { localStorage.setItem('mapkaiLanguageV2', document.documentElement.lang === 'en' ? 'en' : 'zh'); } catch {}
+try { localStorage.setItem('mapkaiLanguageV3', document.documentElement.lang === 'en' ? 'en' : 'zh'); } catch {}
 const $ = id => document.getElementById(id);
 const key = 'mapkai-toolbox:v1';
 const categories = { speak: '表达与对话', learn: '学习与探索', think: '思考与创作', other: '其他工具' };

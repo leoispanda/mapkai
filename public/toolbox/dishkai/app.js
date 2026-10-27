@@ -25,7 +25,7 @@ let loginRetryAt = 0;
 let loginRetryTimer = null;
 let selectedDemo = 'carbonara';
 let demoLanguage = zh ? 'zh' : 'en';
-try { localStorage.setItem('mapkaiLanguageV2', zh ? 'zh' : 'en'); } catch {}
+try { localStorage.setItem('mapkaiLanguageV3', zh ? 'zh' : 'en'); } catch {}
 $('output-language').value = zh ? 'zh' : 'en';
 $('demo-language').value = demoLanguage;
 function status(text, failure = false) { $('status').textContent = text; $('status').dataset.error = String(failure); }

@@ -1,6 +1,6 @@
 const zh = document.documentElement.lang.startsWith('zh');
 const language = zh ? 'zh' : 'en';
-try { localStorage.setItem('mapkaiLanguageV2', language); } catch {}
+try { localStorage.setItem('mapkaiLanguageV3', language); } catch {}
 const $ = id => document.getElementById(id);
 const pick = value => value?.[language] || value?.en || value?.zh || '';
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));

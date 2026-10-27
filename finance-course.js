@@ -121,7 +121,7 @@ function initCaptions() {
 
 function initChrome() {
   // A course's explicit language route also becomes the preference on return to the main site.
-  try { localStorage.setItem("mapkaiLanguageV2", language); } catch {}
+  try { localStorage.setItem("mapkaiLanguageV3", language); } catch {}
   const menuButton = document.querySelector(".nav-toggle");
   const panel = document.querySelector(".nav-panel");
   const setMenu = (open) => {

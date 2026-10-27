@@ -14,7 +14,7 @@ const copy = zh ? {
   use: 'When to use it', source: 'Sources & references', expand: 'Explore diagram', open: 'Explore', count: n => `${n} diagrams · 5 categories`, results: (n, total) => `${n} of ${total} diagrams`, back: 'Related diagrams', original: 'Source link',
   groupCount: n => `${n} frameworks`, fiction: 'Everyday fable · Fictional story', readStory: 'Read framework story', readCategoryStory: 'Read category story', closeStory: 'Close the story', storyConcept: 'After the story: explore the idea', mapping: 'The story and the framework', boundary: 'Where the analogy ends', reflection: 'A question to take away', toDiagram: 'See the framework diagram', storySource: 'Concept sources · References below', calculation: 'Work through the numbers',
 };
-try { localStorage.setItem('mapkaiLanguageV2', language); } catch {}
+try { localStorage.setItem('mapkaiLanguageV3', language); } catch {}
 const node = (tag, className, text) => {
   const element = document.createElement(tag);
   if (className) element.className = className;

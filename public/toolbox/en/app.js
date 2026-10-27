@@ -1,4 +1,4 @@
-try { localStorage.setItem('mapkaiLanguageV2', document.documentElement.lang === 'en' ? 'en' : 'zh'); } catch {}
+try { localStorage.setItem('mapkaiLanguageV3', document.documentElement.lang === 'en' ? 'en' : 'zh'); } catch {}
 const $ = id => document.getElementById(id);
 const key = 'mapkai-toolbox:v1';
 const categories = { speak: 'Speaking & conversation', learn: 'Learning & discovery', think: 'Thinking & creating', other: 'Other tools' };

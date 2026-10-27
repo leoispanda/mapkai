@@ -55,7 +55,8 @@
     ['e4363fdb-2354-4e5c-98f0-9549b689b5c3', 1],
     ['bb5957e7-9e91-45e1-a978-5643451d7820', 2],
   ]);
-  let language = 'zh';
+  const requestedLanguage = new URL(location.href).searchParams.get('lang');
+  let language = ['en', 'zh'].includes(requestedLanguage) ? requestedLanguage : 'en';
   let tracks = [];
   let loaded = false;
   let libraryPromise = null;
@@ -99,8 +100,8 @@
   })();
 
   try {
-    const saved = localStorage.getItem('mapkaiMusicLanguage');
-    if (saved === 'en' || saved === 'zh') language = saved;
+    const saved = localStorage.getItem('mapkaiLanguageV3');
+    if (!['en', 'zh'].includes(requestedLanguage) && ['en', 'zh'].includes(saved)) language = saved;
     continuousPlay = localStorage.getItem('mapkaiMusicContinuous.v1') !== 'off';
   } catch {}
 
@@ -209,7 +210,12 @@
     }
   }
 
-  function applyLanguage(next) {
+  function applyLanguage(next, updateUrl = false) {
+    if (updateUrl) {
+      const url = new URL(location.href);
+      url.searchParams.set('lang', next);
+      history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+    }
     language = next;
     document.documentElement.lang = next === 'zh' ? 'zh-CN' : 'en';
     document.querySelectorAll('[data-i18n]').forEach(element => { element.textContent = t(element.dataset.i18n); });
@@ -218,6 +224,7 @@
     document.querySelectorAll('[data-language]').forEach(button => { button.setAttribute('aria-pressed', String(button.dataset.language === next)); });
     document.querySelector('.brand').setAttribute('aria-label', next === 'zh' ? 'MapKAI 首页' : 'MapKAI home');
     $('tracks').setAttribute('aria-label', next === 'zh' ? '歌曲列表' : 'Songs');
+    document.querySelector('.back-link').href = next === 'en' ? '/toolbox/en/' : '/toolbox/';
     preview.setAttribute('aria-label', t('previewAudio'));
     document.querySelector('meta[name=description]').content = next === 'zh' ? 'MapKAI Music。按编号、歌名或学科找歌，连续播放。' : 'MapKAI Music. Find songs by number, title, or subject and keep listening.';
     updateLibrary();
@@ -230,7 +237,7 @@
     updateProgress();
     if (authenticating) $('owner-login').textContent = t('authenticating');
     if (uploading) $('publish-song').textContent = t(uploadSent ? 'publishing' : 'uploading');
-    try { localStorage.setItem('mapkaiMusicLanguage', next); } catch {}
+    try { localStorage.setItem('mapkaiLanguageV3', next); } catch {}
   }
 
   function safeTrack(raw) {
@@ -1105,7 +1112,7 @@
     });
   }
 
-  document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => applyLanguage(button.dataset.language)));
+  document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => applyLanguage(button.dataset.language, true)));
   function renderCarLyrics() {
     const state = window.MapKAIMusicDock?.carLyricsState?.();
     $('car-lyrics').disabled = !state?.supported;

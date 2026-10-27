@@ -10,7 +10,7 @@ const bilingual = (value, lang) => value?.[lang] || value?.en || value?.zh || ''
 
 export async function workShareResponse({ request, env = {}, kind, id }) {
   if (!['GET', 'HEAD'].includes(request.method)) return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET, HEAD' } });
-  const lang = new URL(request.url).searchParams.get('lang') === 'en' ? 'en' : 'zh', zh = lang === 'zh';
+  const lang = new URL(request.url).searchParams.get('lang') === 'zh' ? 'zh' : 'en', zh = lang === 'zh';
   let title, description, body, back = '/music/', image = '/assets/mapkai-og-image.png';
   try {
     if (kind === 'song' && TRACK_ID_PATTERN.test(id)) {
