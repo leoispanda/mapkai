@@ -264,39 +264,143 @@
       "fieldCode": "0713",
       "fieldTitle": "Electricity and energy",
       "fieldTitleZh": "电力与能源",
-      "title": "The Full Reservoir That Could Not Light the Town",
-      "titleZh": "装满水却点不亮灯的水库",
-      "summary": "An island reservoir stores a whole night of wind, yet one narrow pipe cannot carry the town through the instant its festival begins.",
-      "summaryZh": "岛上的高水库存够了一夜的风，却因一根太窄的水管，没能撑过庆典开始的那一刻。",
-      "storyParagraphs": [
-        "Wind Island used night gales to pump seawater into a mountaintop reservoir and released it through turbines in the evening. Before the Lantern Festival, the island chief saw the water at its highest mark and promised that one bell stroke would start every street light, oven, and concert stage. Cancelling the mass lighting would cost him the festival contract. By ordinary daily consumption, the stored water lasted until dawn. Vendors had prepaid for the broadcast and bakers timed every oven to the bell. The chief treated the highest water mark as a public promise and had it painted on festival posters.",
-        "When the bell rang, thousands of lamp switches rose across the island. The reservoir remained full, yet voltage in town fell. The pipe and turbine could pass only a fixed flow; extra water could not squeeze through the same narrow throat. The music stage failed first, ovens went dark next, and a cable near the square overheated as people reconnected portable heaters. The chief ordered operators to open the valve farther, but it was already against its stop. A technician smelled hot insulation and pulled the square cable before it failed. One baker opened his oven to trays of pale dough, while the reservoir above reflected every dark street lamp.",
-        "Engineer Sora watched the island frequency sink while the chief waited for more output. She cut power to the illuminated arch bearing his name, started a flywheel for the fastest seconds, and paid the harbour cold store to pause ice making. Crowds were admitted by district, so lighting restarted in sections. The reservoir surface had barely moved, but the expensive stage broadcast was lost. Sora refunded the stage vendor from the festival guarantee and faced the crowd herself. The chief's arch went dark first, making the cut visible to the same cameras he had invited. The square clock stopped at 8:17, when the waiting dough began to collapse.",
-        "She set two vessels before the council: a large jar with a pinhole and a small cup that could empty at once. The first held more but delivered slowly; the second delivered little but quickly. The next plan added fast devices for short peaks, widened part of the water path, and retained enough reservoir volume for long windless periods. Forecasts, flexible demand, and the undersea cable covered other gaps; each resource was tested for the duration and output it could actually provide.",
-        "At the following festival, the chief did not inspect only the waterline. He touched the vibrating outlet valve, read the flywheel display, and ordered the first district lit. The old illuminated arch remained in a storehouse, its power cable cut cleanly through the letter of his name."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "明早还要再来吗",
+      "summaryZh": "许清想用白天存下来的太阳能，撑过学习室的晚间活动。开始前，清洁人员推来一台设备，也想趁这段时间一起用电。",
       "storyParagraphsZh": [
-        "风岛用夜间大风把海水抽进山顶水库，傍晚再放水发电。丰灯节前，岛长看见水位到达最高刻线，便承诺钟声一响，全岛彩灯、烤炉和乐台一齐启动；若取消齐亮，他会失去庆典合同。按平日每日用量计算，库里的水确实足够撑到天亮。商贩预付了直播费，面包师也把每只烤炉排在钟响后点火。岛长把最高水位当成公开承诺，甚至画在节庆海报上。",
-        "钟声一响，各街区数千只灯闸都被推了上去。水库仍然满着，城里电压却迅速下降。管道与水轮机只能通过固定流量，再多水也挤不过同一只窄口。乐台先失声，烤炉随后熄火；人们重新接上便携加热器，广场旁一根电缆开始过热。岛长命令继续开阀，手轮却早已抵住尽头。技术员闻到绝缘层焦味，在电缆烧断前拔掉广场线路。面包师打开烤炉，只见一盘盘苍白面团；山顶水库仍映着街灯熄灭后的黑影。",
-        "工程师索拉看着全岛频率继续下坠，岛长还在等不存在的额外输出。她先断掉写着岛长名字的发光拱门，启动飞轮撑过最急的几秒，再付钱让码头冷库暂停制冰。人群按街区入场，灯光分段恢复。水面几乎没降，昂贵的舞台直播却已中断。索拉从庆典保证金退还舞台商费用，又亲自面对人群。岛长的拱门最先熄灭，恰好被他请来的镜头完整拍下。广场钟停在八点十七分，面团就在那个时刻开始回缩。",
-        "她在议会桌上放两只容器：大罐只有针眼小孔，小杯却能一下倒空。前者存得多却给得慢，后者给得快却撑不久。下一年，岛上为短峰增加快速装置，拓宽部分出水能力，并保留够长时间无风使用的库水；预测、灵活需求与海底电缆补其他缺口。每项资源都按实际可输出的大小和持续时间测试。",
-        "下一届节日前，岛长没有只看水位。他先摸过微微震动的出水阀，读完飞轮显示，才下令点亮第一街区。旧发光拱门仍放在仓库，电缆正从他名字中间齐齐剪断。"
+        "社区学习室晚上有一场两小时的语言交换活动。许清准备让具备独立供电能力的储能系统承担这两个小时的灯光和屏幕：太阳已经落下，晚上也没有其他并供电源。活动开始前，清洁人员推来一台功率为1千瓦（kW）、需要连续运行一小时的设备：“能不能顺便开着？这样明早不用再跑一趟。”",
+        "白天，屋顶太阳能满足当时用电后，在同一交流侧计量点还有6千瓦时（kWh）的可利用电量。储能的可用电量当时已到允许下限，充电时间和功率都足够。许清把其中5 kWh交流电充入储能；按这次设定的80%往返效率，之后整次放电可向交流负载交付4 kWh。另有1 kWh白天富余电没有充进储能。",
+        "许清再看逆变器参数：持续额定输出是2 kW。灯光和屏幕本身就持续需要2 kW；清洁设备若同时运行，持续需求会变成3 kW，超过这次已知的持续额定能力。她不能按这套额定能力把两项任务同时安排进去，便把清洁设备的插头卷回机器旁：“今晚先不接它。”",
+        "活动开始后，储能稳定承担2 kW基本负载。许清这次把全部4 kWh可交付电量都安排给活动，没有另留备用量。一小时后用掉2 kWh，还剩2 kWh；第二小时再用掉余下的电，散场时这次可交付电量刚好用完。",
+        "活动散场后，屏幕熄灭，清洁设备仍停在墙边。许清给第二天的清洁重新排了时段，锁上学习室的门。次日早晨，场地方确认正常电网供电已经恢复，清洁人员回来，用这段供电时间完成了工作；为了这一小时，他们多跑了一趟。"
       ],
-      "conceptName": "Energy storage and intermittency",
+      "overallZh": "储能可以把白天富余电移到夜晚，但可交付能量和持续输出功率是不同约束。本例的4 kWh刚好供2 kW基本负载运行两小时；若另加1 kW清洁设备运行一小时，即使持续输出能力足够，所需总电量也会增至5 kWh。",
       "conceptNameZh": "储能与间歇性",
-      "explanationParagraphs": [
-        "Energy storage moves energy from one time to another to address mismatches between variable supply and demand. Energy capacity determines how much can be stored and for how long it can serve, while power determines the rate of charging or discharge. Efficiency, response, degradation, safety, and location also constrain value. Storage works alongside forecasting, transmission, flexible demand, and dependable supply; a large stored quantity alone does not guarantee that a peak can be met."
-      ],
       "explanationParagraphsZh": [
-        "储能把能量从一个时刻转移到另一个时刻，用来缓解可变供给与需求的错位。容量决定可储存的能量和可支撑时长，功率决定某一时刻可充放多快；效率、响应、衰减、安全与位置也会限制价值。储能通常与预测、输电、灵活需求和可靠电源配合，不能仅凭‘存得很多’判断能否应对峰值。"
+        "本例的6 kWh富余量和5 kWh充电量都在交流侧计量。储能从允许的可用下限开始充电，输入5 kWh；假定交流输入到交流输出的往返效率为80%，之后整次可交付5×0.80=4 kWh。白天另有1 kWh富余电未充入；从5变4所损失的1 kWh是另一笔能量，不能混为一谈。4 kWh已计入该往返损失，放电时不再重复乘80%。",
+        "4 kWh是可交付的能量总量，2 kW是本例给出的持续额定输出能力。假定这次充电后的4 kWh全部可交付、额定工况稳定输出且不另留余量，2 kW运行两小时用去4 kWh；再让1 kW设备运行一小时，合计需5 kWh。若同时运行，连续需求3 kW也超过2 kW的持续额定能力。短时过载能力要另查设备规格，不能仅由持续额定值推断。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先区分白天充入与夜间可交付的交流电量，再分别核对持续输出能力和整段任务需要的能量。",
+        "diagramTitle": "为什么电量刚够基本活动，额外的清洁任务仍不能一起安排",
+        "diagramSteps": [
+          "白天交流侧有6 kWh富余，储能从允许下限开始充入其中5 kWh",
+          "按80%往返效率，整次放电可向交流负载交付4 kWh",
+          "晚间基本负载需2 kW持续两小时；清洁设备另需1 kW运行一小时",
+          "若同时运行，持续需求3 kW超过逆变器2 kW持续额定能力",
+          "推迟清洁后，基本任务用完4 kWh；清洁改在次日可用电网时完成"
+        ],
+        "diagramStepNotes": [
+          "这6和5 kWh都在交流侧；另外1 kWh富余电没有进入储能，后续用途不在本例中假定。",
+          "5 kWh输入和4 kWh可交付的差额是1 kWh往返损耗，与未充入的那1 kWh不同；4无需再乘效率。",
+          "kW描述功率；kWh是功率随时间累计的能量。清洁的一小时是本教学例的任务条件。",
+          "这里比较持续额定能力，不根据它推断短时过载能力；该能力须另查实际设备规格。",
+          "基本任务2×2=4 kWh；若额外清洁1×1=1 kWh，合计5 kWh。4÷2=2小时还假设这次充电后的4 kWh全部可交付、稳定输出且无额外备用余量。"
+        ],
+        "mapping": [
+          "白天6 kWh交流侧富余光伏 → 与夜间负荷时间错开的可利用发电。",
+          "5 kWh充入、4 kWh可交付 → 计入往返损耗后的跨时间能量转移。",
+          "逆变器2 kW持续额定输出 → 持续运行负载的功率能力约束。",
+          "推迟1 kW、持续一小时的清洁 → 为持续功率和总电量约束改变任务时间。"
+        ],
+        "boundary": "这是统一到交流侧的简化教学模型，不提供真实离网系统设计、布线、安全操作或设备选型。实际可用容量、充放电效率、逆变器功率、温度、寿命、剩余荷电状态和保护策略都会影响结果。若夜间存在可用电网或其他允许并供的电源，3 kW总负载可以有不同的供能组合；本故事特意选择储能独立承担基本负载，以突出能量容量与功率容量的区别。",
+        "reflection": "如果把逆变器持续额定输出提高到3 kW，但仍只有4 kWh可交付电量，能否同时完成2 kW基本负载两小时和1 kW清洁任务一小时？为什么？"
+      },
+      "referencesZh": [
+        {
+          "id": "doe-solar-storage-basics",
+          "citation": "U.S. Department of Energy, Solar Energy Technologies Office. Solar Integration: Solar Energy and Storage Basics.",
+          "url": "https://www.energy.gov/cmei/systems/solar-integration-solar-energy-and-storage-basics",
+          "use": "支持太阳能发电与负荷在时间上的错位、储能将能量从一个时段移到另一个时段，以及能量容量、功率容量和转换损失属于不同约束；不作为本虚构学习室或具体储能设备的性能保证。"
+        },
+        {
+          "id": "eia-grid-battery-2018",
+          "citation": "U.S. Energy Information Administration. (2018, January 8). Batteries perform many different functions on the power grid. Today in Energy.",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=34432",
+          "use": "支持区分功率容量与能量容量，并支持在额定功率下用能量容量除以功率容量理解理论持续时间；不把历史设备统计或示例当成本故事设备的真实参数。"
+        },
+        {
+          "id": "eia-storage-efficiency-2021",
+          "citation": "U.S. Energy Information Administration. (2021, February 12). Utility-scale batteries and pumped storage return about 80% of the electricity they store. Today in Energy.",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=46756",
+          "use": "支持将往返效率理解为储能输出电量与充入电量的比值以及充放电存在能量损失；本故事采用的80%只是虚构教学假设，并不代表所有现实储能设备。"
+        }
+      ],
+      "title": "Another Trip Tomorrow?",
+      "summary": "Xu Qing wants stored daytime solar energy to power an evening event at the study room. Just before it starts, the cleaning staff wheel in a machine they hope to run at the same time.",
+      "storyParagraphs": [
+        "The community study room has a two-hour language-exchange event that evening. Xu Qing plans to use a storage system capable of standalone operation for the lights and screens: the sun has set and no other power source is available in parallel. Just before the event, the cleaning staff wheel over a 1-kilowatt (kW) machine that needs to run continuously for an hour. “Can we run it at the same time? Then we won’t have to come back tomorrow morning.”",
+        "During the day, after meeting the current load, rooftop solar has 6 kilowatt-hours (kWh) of usable surplus measured at the same AC-side point. The storage system has reached its permitted usable lower limit, and charging time and power are sufficient. Xu Qing sends 5 kWh of AC electricity into storage. At the assumed 80% round-trip efficiency, the complete later discharge can deliver 4 kWh to AC loads. Another 1 kWh of daytime surplus does not enter storage.",
+        "Xu Qing checks the inverter rating: its continuous rated output is 2 kW. The lights and screens already need a continuous 2 kW; running the cleaner alongside them would require a continuous 3 kW, beyond the specified continuous rating. She cannot schedule both tasks together on that rated capability, so she coils the cleaner’s plug beside the machine. “Not tonight.”",
+        "The event begins with storage steadily supplying the 2 kW basic load. Xu Qing allocates the full 4 kWh deliverable amount to the event, with no separate reserve. After one hour it has delivered 2 kWh and has 2 kWh left; the second hour uses the remainder, exhausting this deliverable amount as the event ends.",
+        "After the event, the screen goes dark and the cleaning machine remains by the wall. Xu Qing schedules the work for the following day and locks the study room. The next morning, the venue confirms that normal grid power is available again, and the cleaners return to finish the job during that supply period. The one-hour task has cost them an extra trip."
+      ],
+      "overall": "Storage can shift surplus electricity from day to evening, but deliverable energy and continuous output power are separate constraints. Here 4 kWh is just enough for the 2 kW basic load for two hours. Adding a 1 kW cleaner for one hour would raise total energy demand to 5 kWh even if sufficient continuous output power were available.",
+      "conceptName": "Energy storage and intermittency",
+      "explanationParagraphs": [
+        "The 6 kWh surplus and 5 kWh charging input are measured on the AC side. Storage starts charging from its permitted usable lower limit. At an assumed 80% round-trip efficiency from AC input to AC output, the 5 kWh input yields 5×0.80=4 kWh for the complete later discharge. Another 1 kWh of daytime surplus was not charged; the 1 kWh lost between the 5 kWh input and 4 kWh output is a different quantity. The deliverable 4 kWh already includes this loss and is not multiplied by 80% again during discharge.",
+        "The 4 kWh is total deliverable energy; 2 kW is the continuous rated output specified here. Assuming the 4 kWh from this charge is fully deliverable, steady rated output and no separate reserve, 2 kW for two hours uses 4 kWh. A 1 kW machine for another hour raises total demand to 5 kWh. If run alongside the basic load, the continuous demand of 3 kW also exceeds the 2 kW continuous rating. Short-duration overload capability requires separate specifications and cannot be inferred from that rating alone."
+      ],
+      "module": {
+        "intro": "Distinguish AC energy charged in the daytime from deliverable energy at night, then check continuous rated output and total task energy separately.",
+        "diagramTitle": "Why Is Energy Just Sufficient for the Basic Event but Not for an Additional Cleaning Task?",
+        "diagramSteps": [
+          "From 6 kWh AC-side daytime surplus, charge 5 kWh into storage starting at its permitted lower limit",
+          "At 80% round-trip efficiency, the complete discharge can deliver 4 kWh to AC loads",
+          "The evening basic load requires 2 kW for two hours; the cleaner would need another 1 kW for one hour",
+          "Running them together would require a continuous 3 kW, above the inverter’s 2 kW continuous rating",
+          "Defer cleaning: the basic task uses the 4 kWh, and the cleaner returns when grid power is available next morning"
+        ],
+        "diagramStepNotes": [
+          "The 6 and 5 kWh are both AC-side quantities. The other 1 kWh surplus was not charged; its later use is not assumed.",
+          "The difference between 5 kWh input and 4 kWh deliverable is 1 kWh of round-trip loss, distinct from the uncharged 1 kWh; do not multiply the 4 by efficiency again.",
+          "kW describes power, while kWh is energy accumulated over time. The one-hour cleaning duration is an assumption in this teaching case.",
+          "This compares continuous ratings; short-duration overload capability is not inferred and requires actual equipment specifications.",
+          "The basic task uses 2×2=4 kWh. Adding cleaning uses 1×1=1 kWh, totaling 5 kWh. The 4÷2=2 h duration also assumes the 4 kWh from this charge is fully deliverable, steady output and no separate reserve."
+        ],
+        "mapping": [
+          "6 kWh of AC-side daytime surplus solar → usable generation occurring at a different time from the evening load.",
+          "5 kWh charged and 4 kWh deliverable → energy shifted across time after round-trip loss.",
+          "2 kW continuous inverter rating → a power constraint on loads running continuously.",
+          "Deferring the 1 kW, one-hour cleaning task → changing timing in response to both continuous power and total energy constraints."
+        ],
+        "boundary": "This is a simplified teaching model using an AC-side accounting basis. It is not a guide to real standalone-system design, wiring, safety operation, or equipment selection. Actual usable capacity, charging and discharging efficiency, inverter power, temperature, ageing, remaining state of charge, and protection strategies can all change real performance. If a usable grid connection or another permitted parallel source were available at night, the 3 kW total load could be supplied in a different combination. This story deliberately has storage independently support the basic load in order to isolate the distinction between energy capacity and power capacity.",
+        "reflection": "If the inverter’s continuous rating rose to 3 kW but only 4 kWh remained deliverable, could it power the 2 kW basic task for two hours and a 1 kW cleaner for one hour? Why or why not?"
+      },
+      "references": [
+        {
+          "id": "doe-solar-storage-basics",
+          "citation": "U.S. Department of Energy, Solar Energy Technologies Office. Solar Integration: Solar Energy and Storage Basics.",
+          "url": "https://www.energy.gov/cmei/systems/solar-integration-solar-energy-and-storage-basics",
+          "use": "Supports the time mismatch between solar generation and electricity demand, the use of storage to shift energy from one period to another, and the distinction among energy capacity, power capacity, and conversion losses. It is not used as a performance guarantee for the fictional study room or any specific storage device."
+        },
+        {
+          "id": "eia-grid-battery-2018",
+          "citation": "U.S. Energy Information Administration. (2018, January 8). Batteries perform many different functions on the power grid. Today in Energy.",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=34432",
+          "use": "Supports distinguishing power capacity from energy capacity and using energy capacity divided by rated power to understand theoretical duration at that output. Historical equipment statistics and examples are not treated as real parameters for the fictional system in this story."
+        },
+        {
+          "id": "eia-storage-efficiency-2021",
+          "citation": "U.S. Energy Information Administration. (2021, February 12). Utility-scale batteries and pumped storage return about 80% of the electricity they store. Today in Energy.",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=46756",
+          "use": "Supports understanding round-trip efficiency as the ratio of electricity delivered from storage to electricity put into storage, and supports the principle that charging and discharging involve energy losses. The 80% value in this story is a fictional teaching assumption and does not represent all real storage systems."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-23-preparation/group2-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-23-preparation/group2-edit-pass1-evidence.json",
+          "engineering-reader-first-23-preparation/group2-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
       }
     },
     {
@@ -550,39 +654,131 @@
       "fieldCode": "0714",
       "fieldTitle": "Electronics and automation",
       "fieldTitleZh": "电子与自动化",
-      "title": "The Brake That Fell When the Air Was Lost",
-      "titleZh": "断气以后落下的刹车",
-      "summary": "A mine cage relies on air pressure to apply its brake, until a ruptured pipe reveals which way the machine chooses when it fails.",
-      "summaryZh": "矿场升降笼原本靠气压推住刹车，一根管子破裂后，众人才发现故障发生时机器会选择哪一边。",
-      "storyParagraphs": [
-        "Mountain Mine replaced its hoist cage before the winter contract. In the old arrangement, air pressure held a long lever against the winding-drum brake; losing pressure released it. Mechanic Liang Qiu asked what would happen if a hose split. The owner pointed to ore carts waiting at the shaft and offered her a completion bonus. Reversing the mechanism meant three days without lifting, so he approved only stronger joints and a new pressure gauge. Liang had already sketched the reversed arrangement, but the owner rolled the drawing around the new gauge and locked it in his desk. The bonus envelope carried her name; three days of delay would cancel it.",
-        "For six weeks the gauge stayed green and output rose. Operators grew used to releasing the cage as soon as pressure returned. During a rainstorm, a falling stone cut a hose between two perfect joints. Pressure vanished, the lever relaxed, and the loaded cage slid two levels before striking an empty platform. Nobody was inside, but the platform folded, ore blocked the shaft, and the promised shipment missed its train. The undamaged gauge still pointed at zero. Early-shift workers spent three days shovelling ore from the bent platform. One cart wheel remained trapped under it, and the railway charged storage for every missed wagon. The damage had begun with a hose no stronger joint could protect.",
-        "The owner wanted the hose patched before morning. Liang locked the control handle and refused to sign. She redirected springs and a suspended weight so their natural force applied the brake; normal pressure and a valid command were now needed to lift it. Loss of air, electricity, or the control line sent the cage toward a stopped condition. Restart required inspection and deliberate reset instead of returning automatically when pressure flickered back.",
-        "The change cost another contract week. Separate cases—people aboard, ore aboard, maintenance, sensor error, and a jammed cage—were reviewed because stopping was not harmless in every situation. Position sensing, inspection, and test stops supported the chosen response. The owner signed the lost-shipment invoice beside each review. Liang never claimed the cage would keep serving after a fault; she required the identified fault to move first toward the less dangerous state. During the first test, the new brake stopped on a simulated power loss but one position signal disagreed. Liang kept the shaft closed another day until the discrepancy was found, refusing to turn a successful stop into proof that every part was ready.",
-        "Half a year later another hose burst between levels. The cage stopped hard and miners waited forty minutes for a controlled rescue, cursing the delay but walking out. Liang hung the split hose above the brake handle. Beneath it lay the old completion-bonus envelope, still unopened and grey with dust."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "运行灯灭了以后",
+      "summaryZh": "科普馆要演示一个自动注水装置。罗文切断控制电源，运行灯灭了，透明杯里的水却还在流；他得找到真正让水停下来的方式。",
       "storyParagraphsZh": [
-        "山矿赶在冬季合同前更换升降笼。旧装置依靠气压把长杆压在卷轮刹车上，失压便松开。修械师梁秋问，气管若破会怎样。矿主指着井口等待的矿车，答应按期完成便发奖金；反转机构要停运三天，他只批准加固接头、增装压力表。梁秋早画好反向机构，矿主却把图纸卷在新压力表外，锁进抽屉。奖金信封上写着她的名字，只要延误三天就会取消。",
-        "六周里，指针一直在绿色区，出矿量也上升。操作员习惯气压一恢复便放行。一个雨夜，落石割破两只完好接头之间的气管。压力消失，长杆松开，满载矿笼下滑两层，撞上空装卸台才停。笼内无人，平台却折叠，矿石堵住井筒，约定货物错过火车。没损坏的表仍指着零。早班工人花三天从折弯平台下铲矿，一只矿车轮仍卡在里面；铁路还对每节误期车厢收取堆存费。事故从接头以外的气管开始，再牢的接头也护不到那里。",
-        "矿主要梁秋补管后天亮前复工。她锁住控制柄，拒绝签字，改用弹簧和悬重的自然力量压紧刹车；只有气压正常、命令有效时，刹车才被提起。失去气源、电力或控制线，矿笼先朝停止状态移动；压力忽明忽灭后，也不能自动重启，必须检查并手动复位。",
-        "改造又损失一周合同。载人、载矿、检修、传感器错误和卡笼分别复核，因为停下本身并非每种情形都无害；位置检测、检查和试刹共同支持预定反应。矿主把误期账单逐张签在复核表旁。梁秋没有承诺故障后仍能照常工作，只要求已识别故障先把机器带向伤害较小处。第一次试验中，新刹车在模拟断电时确实停住，一只位置讯号却不一致。梁秋继续封井一天，直到找到差异，没有把一次成功停车当成所有部分都已妥当的证明。",
-        "半年后，另一根气管在半空爆裂。升降笼猛地停住，矿工等了四十分钟才按程序获救，骂着延误却都走了出来。梁秋把破管挂在刹车手柄上方，下面压着那只从未打开、已经落灰的完工奖金信封。"
+        "科普馆准备一个桌面清水演示：按下按钮后，高处的小水箱靠重力把水送过阀门，流进透明杯。第一版通电时，执行机构打开阀门。罗文要验证一个具体情形：如果控制盒突然失去供电，这套演示能不能停止继续往杯里加水？",
+        "第一版运行时绿色灯亮着，水稳定流进杯里。罗文切断控制盒电源，灯灭了，可高位水箱仍提供重力压头，水位继续上涨。他从灯旁转向阀门：执行件失去驱动后仍停在开启位置。他先关上水箱另设的手动总阀，结束这一轮。",
+        "下一版在阀门上加入预置回位机构：正常时通电保持开启；失电时，回位动作不依赖失去的电源，把阀门推向这次演示选定的关闭位置。检查水箱仍有足够水后，罗文恢复控制盒供电，打开手动总阀并按运行键，让阀门开启、水重新流起来，然后再次切断控制电源。",
+        "阀门回到关闭位置后，罗文等管路里可能剩下的水流尽，再确认杯中不再进水。他保持装置停止并检查，再由讲解员按这次演示规程重新启动。这样会中断展示几分钟，也多一道人工确认；这一次，他们看到的不只是灯的变化，还有阀位回转和水流停止。",
+        "开放前最后一次排练，讲解员让水流起来，再切断控制盒电源。绿色运行灯灭了，阀门回位，透明杯的水面停止上涨。罗文等了一会儿，确认没有继续流入后，把杯里的水倒进回收桶，再放回托盘。下一场正式演示前，系统仍要按他们约定的步骤重新检查和启动。"
       ],
-      "conceptName": "Fail-safe design",
+      "overallZh": "本篇用低风险清水演示说明故障安全设计的一个入口：针对明确识别的故障和危险，需要先选定较低风险状态，并让系统在该故障发生时能够实际向这个状态移动。报警或运行指示变化本身不等于执行安全动作；最终还要确认执行件位置和过程结果。",
       "conceptNameZh": "故障安全设计",
-      "explanationParagraphs": [
-        "Fail-safe design begins with specific hazards and failure modes, then defines a lower-risk state for loss of energy, broken connections, or erroneous action. In the story, springs apply the brake and air pressure releases it, so loss of energy defaults to stopping. This is not the same as continuing normal service after a fault, which is fault tolerance. Diagnostics, independent channels, interlocks, tests, and manual reset help ensure the intended safe response actually occurs."
-      ],
       "explanationParagraphsZh": [
-        "故障安全设计先依据具体危害和故障模式，规定失能、断线、误动作等情况应进入何种较低风险状态。故事中的弹簧施加制动、气压释放制动，使失去能源时默认停车。它不等于系统在故障后仍正常服务；后者属于容错。诊断、独立通道、联锁、试验与人工复位常用于保证预定安全行为确实发生。"
+        "高位水箱的重力供水独立于控制盒电源。第一版通电时执行机构打开阀门，失去驱动后却可能停在开启位置；新版则在正常运行时用电保持开启，并在失电时由预置机构回位。针对控制供电丢失这一已识别故障，演示把关闭阀门选为较低风险状态。",
+        "核对时不能只看指示灯：切断控制供电后，先观察阀门是否实际移到关闭位置，再等可能的下游余水流尽，确认不再进水。灯不亮本身也不能排除灯具或线路故障。一次演示只覆盖这次失电情况，不能证明阀门卡滞、回位机构损坏或其他失效都已控制。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先定义本场景在失电时希望系统到达的状态，再区分‘知道失电了’和‘执行件真的完成保护动作’。",
+        "diagramTitle": "为什么运行灯熄灭，还不能证明水已经停了",
+        "diagramSteps": [
+          "第一版通电时由执行机构打开阀门，高位水箱靠重力供水",
+          "切断第一版控制电源：运行灯熄灭，执行件仍停在开启位置",
+          "水仍流入杯中；关闭另设的手动总阀结束这一轮",
+          "新版通电保持阀门开启；失电后由预置回位机构推动关闭",
+          "确认阀位，等下游余水流尽并确认停止，再按演示规程检查重启"
+        ],
+        "diagramStepNotes": [
+          "高位水箱的重力供水独立于控制盒电源；第一版未说明有失电回位。",
+          "绿色灯是运行指示，灯不亮本身不能排除灯具或线路故障，也不能证明阀位。",
+          "另设手动总阀只用来结束这一轮，并不替代新版对失电的自动回位动作。",
+          "关闭仅是此清水演示针对控制失电选择的较低风险状态，不是所有过程的通用安全状态。",
+          "一次测试只覆盖这一失电情形；卡滞或回位机构损坏需另行分析，人工重启是本例规程。"
+        ],
+        "mapping": [
+          "高位小水箱 → 与控制电源独立的重力供水来源。",
+          "绿色运行灯 → 正常供电状态的显示，而不是保护动作本身。",
+          "失电回位机构 → 在指定失电情形下推动阀门向关闭位置移动的机制。",
+          "透明杯水面停止上涨 → 实际过程结果已随阀位改变的可见证据。"
+        ],
+        "boundary": "所谓较低风险状态取决于具体过程与故障。某些真实系统在失电后仍需持续冷却、搅拌、抑制剂供应或其他主动功能，因此‘断电、关闭或停止’并非普遍安全答案。本故事只讨论一个低风险清水注杯演示中的控制供电丢失；不能据此提供真实设备改装、测试、认证或风险分析方法。保护动作也不意味着服务不中断，恢复供电后不一定应自动重启。",
+        "reflection": "这次断电试验成功后，若回位机构本身卡住，能否仅凭这一次结果断定阀门仍会关闭？还需另行考虑什么故障？"
+      },
+      "referencesZh": [
+        {
+          "id": "hse-control-systems",
+          "citation": "Health and Safety Executive. Control systems. Technical Measure Document, COMAH Safety Report Assessment Manual.",
+          "url": "https://www.hse.gov.uk/comah/sragtech/techmeascontsyst.htm",
+          "use": "支持安全功能针对特定危险寻求定义好的安全状态，并支持失去信号或动力时由弹簧回位执行机构进入预定跳闸状态的原则；同时支持考虑公用工程依赖和保护系统测试。该资料也说明某些过程需要持续冷却等功能，因此关闭或断电并非通用安全状态。"
+        },
+        {
+          "id": "cnsc-reactor-failsafe-v21",
+          "citation": "Canadian Nuclear Safety Commission. REGDOC-2.5.2: Design of Reactor Facilities, Version 2.1, section 5.6.6, Fail-safe design.",
+          "url": "https://www.cnsc.gc.ca/eng/acts-and-regulations/regulatory-documents/published/html/regdoc2-5-2-v2-1/index.cfm?pedisable=true",
+          "use": "支持在适用情况下，故障安全设计应考虑部件或系统失效时无需额外操作即可趋向指定安全状态，并考虑失效模式和可检测故障；本篇只借用这一一般原则解释清水教学演示，不把核设施要求当成其他设备的设计认证。"
+        }
+      ],
+      "title": "After the Running Light Went Dark",
+      "summary": "A science museum is preparing an automatic water-filling demonstration. Luo Wen cuts the control power and the running light goes dark, but water still enters the clear cup. He needs a way to make it stop.",
+      "storyParagraphs": [
+        "The science museum is preparing a tabletop water demonstration. When a button is pressed, a small elevated tank sends water by gravity through a valve and into a clear cup. In the first version, the powered actuator opens the valve. Luo Wen wants to check one situation: if the control box suddenly loses power, can the demonstration stop adding water to the cup?",
+        "In the first version, the green running light is on and water flows steadily into the cup. Luo Wen cuts power to the control box. The light goes out, but the elevated tank still provides gravitational head and the level continues to rise. He turns from the lamp to the valve: the actuator has lost its drive yet remains in its open position, leaving the valve open. He closes a separate manual tank shutoff to end the first trial.",
+        "The next version adds a preset return mechanism: power holds the valve open during normal operation; on power loss, the return action uses no lost electrical supply and moves the valve toward the closed position selected for this demonstration. After checking that the tank still contains enough water, Luo Wen restores control power, opens the manual tank shutoff and presses the run button. With the valve open and water flowing again, he cuts control power once more.",
+        "After the valve returns to the closed position, Luo Wen waits for any water remaining downstream to drain, then confirms that no more enters the cup. He keeps the apparatus stopped and checks it before the presenter restarts it under this demonstration’s procedure. That interrupts the display for several minutes and adds a manual check. This time they have observed more than a change in the light: the valve moved and the water stopped.",
+        "During the final rehearsal before opening, the presenter starts the water and then cuts power to the control box. The green running light goes out, the valve returns, and the water level in the clear cup stops rising. Luo Wen waits for a moment to confirm that no more water is entering, pours the cup into the recovery container, and puts it back on the tray. Before the next public demonstration, the system will still be checked and restarted according to their agreed procedure."
+      ],
+      "overall": "This article uses a low-risk water demonstration to introduce one aspect of fail-safe design: for a specifically identified failure and hazard, a lower-risk state must first be selected, and the system should actually move toward that state when the failure occurs. An alarm or change in operating indication is not itself the protective action; the actuator position and the resulting process state also need to be verified.",
+      "conceptName": "Fail-safe design",
+      "explanationParagraphs": [
+        "The elevated tank’s gravity-driven water supply is independent of the control-box power. In the first version, the powered actuator opens the valve but may remain open after losing drive. In the new version, power holds it open during normal operation and a preset mechanism returns it on power loss. For the identified control-power failure, the demonstration selects valve closure as the lower-risk state.",
+        "The check cannot rely on the indicator light alone. After control power is cut, observe whether the valve actually moves closed, then allow any downstream residual water to drain and confirm that inflow stops. A dark light alone cannot rule out a failed bulb or wiring. One demonstration covers only this power-loss case; it does not prove that valve sticking, return-mechanism damage or other faults have been controlled."
+      ],
+      "module": {
+        "intro": "First define the state this scenario should reach after loss of power, then separate 'knowing that power is gone' from 'the actuator actually completing the protective action.'",
+        "diagramTitle": "Why Doesn't the Running Light Going Out Prove That the Water Has Stopped?",
+        "diagramSteps": [
+          "In the first powered version, the actuator opens the valve and the elevated tank supplies water by gravity",
+          "Cut first-version control power: the running light goes dark while the actuator remains in its open position, leaving the valve open",
+          "Water continues into the cup; close the separate manual tank shutoff to end the trial",
+          "In the new version, power holds the valve open; loss of power triggers the preset return toward closed",
+          "Check the valve, let downstream residual water drain and confirm flow stops, then check and restart under the demonstration procedure"
+        ],
+        "diagramStepNotes": [
+          "The elevated tank supplies water by gravity independently of the control box; the first version has no specified loss-of-power return.",
+          "The green lamp is a running indicator. Darkness alone cannot rule out bulb or wiring failure and does not prove valve position.",
+          "The separate manual shutoff ends this trial; it is not a substitute for the new version’s automatic return on loss of power.",
+          "Closure is the lower-risk state selected for this water demonstration and control-power failure, not a universal safe state.",
+          "One test covers only this power-loss case; sticking or return-mechanism damage needs separate analysis, and manual restart is this demonstration’s procedure."
+        ],
+        "mapping": [
+          "Elevated small water tank → the gravity-driven water source independent of control power.",
+          "Green running light → indication of normal powered operation, not the protective action itself.",
+          "Loss-of-power return mechanism → the mechanism that moves the valve toward the closed position for the specified failure.",
+          "Water level in the clear cup stops rising → visible evidence that the process result has changed with the valve position."
+        ],
+        "boundary": "The lower-risk state depends on the specific process and failure. Some real systems still require active cooling, mixing, inhibitor addition, or other functions after loss of power, so 'power off, close, or stop' is not a universal safe answer. This story covers only loss of control power in a low-risk tabletop water-filling demonstration. It does not provide a method for modifying, testing, certifying, or performing risk analysis on real equipment. A protective action also does not mean service remains uninterrupted, and restoration of power does not necessarily justify automatic restart.",
+        "reflection": "After this power-loss test succeeds, suppose the return mechanism itself sticks. Does this one result establish that the valve will still close? What failure would need separate consideration?"
+      },
+      "references": [
+        {
+          "id": "hse-control-systems",
+          "citation": "Health and Safety Executive. Control systems. Technical Measure Document, COMAH Safety Report Assessment Manual.",
+          "url": "https://www.hse.gov.uk/comah/sragtech/techmeascontsyst.htm",
+          "use": "Supports the principle that safety functions seek a defined safe state for specified hazards, including the example of a spring-return actuator taking its tripped state on loss of signal or power, and supports considering dependence on utilities and testing of protection systems. The source also notes that some processes require continued functions such as active cooling, so closure or power-off is not a universal safe state."
+        },
+        {
+          "id": "cnsc-reactor-failsafe-v21",
+          "citation": "Canadian Nuclear Safety Commission. REGDOC-2.5.2: Design of Reactor Facilities, Version 2.1, section 5.6.6, Fail-safe design.",
+          "url": "https://www.cnsc.gc.ca/eng/acts-and-regulations/regulatory-documents/published/html/regdoc2-5-2-v2-1/index.cfm?pedisable=true",
+          "use": "Supports the general principle that, where applicable, fail-safe design aims for a specified safe state following component or system failure without requiring additional action, while considering failure modes and detectable failures. This article uses only that general principle for a water teaching demonstration and does not treat reactor-facility requirements as design certification for other equipment."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-23-preparation/group2-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-23-preparation/group2-edit-pass1-evidence.json",
+          "engineering-reader-first-23-preparation/group2-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
       }
     },
     {
@@ -715,41 +911,131 @@
       "fieldCode": "0715",
       "fieldTitle": "Mechanics and metal trades",
       "fieldTitleZh": "机械与金属工艺",
-      "title": "The Hook That Was Never Overloaded",
-      "titleZh": "从未超载的吊钩",
-      "summary": "A dock hook lifts only half its rated load each time, yet cracks from an old scratch after more than eight thousand lifts.",
-      "summaryZh": "码头吊钩每次都只提额定重量的一半，却在第八千多次起吊时，从一道旧划痕处突然裂开。",
-      "storyParagraphs": [
-        "River Port's great lifting hook passed an annual proof load heavier than any timber crate. Foreman Du needed every crane working through the export rush, and the hook had survived five years. When a chain cut a shallow notch near its curve, he painted over it rather than lose a shift. The next proof test still held, so he used the stamped certificate to silence the crane operator's concern.",
-        "Months later, during roughly the eight-thousandth ordinary lift, a crate had barely left the deck when the hook broke at the painted notch. It fell into the hold and crushed a shipment of porcelain. No recorded lift exceeded the limit. Du accused the test weight of being false and ordered a new, heavier one, intending to prove the remaining hooks safe before the insurer arrived. Crane work stopped while sailors counted broken plates in the hold. The insurer photographed the painted notch and suspended coverage for every hook with an undocumented repair. Du's quick coat of paint now idled the whole quay.",
-        "A surveyor washed away the paint and applied an inspection dye. A thin red line entered from the old notch. Curved bands across the fracture showed a crack advancing by small amounts under repeated changes in load; only the final remaining section had separated under the ordinary crate. One heavy survival event had not represented thousands of smaller cycles, their order, or the surface damage where they concentrated.",
-        "Du turned the reopening board face down and stopped all three cranes for inspections suited to hidden cracks. Two ships left for another port while his crew opened every painted repair. A second hook showed a short line at its shoulder. It had never exceeded its permitted load either. Merchants shouted from the gate as inspection tents went up. Du paid idle crews and storage for cargo left on shore. When the second red line appeared, he placed it beside the first fracture on the insurer's table rather than asking for another proof load.",
-        "Hooks were thereafter tracked by lifts and load history, not only by their single heaviest crate. Damaged surfaces and sharp transitions received attention, higher-risk regions were examined at defined intervals using appropriate qualified methods, and components retired under a life-management plan. Important loads gained a secondary catch. The details depended on material, geometry, environment, and validated engineering practice rather than the foreman's new favourite number.",
-        "After each hundred lifts, Du cut a notch into a wooden counter board. The old hook's painted fracture was bolted above it, its red inspection line still visible. When the next shipmaster offered a bonus to skip an overdue check, Du placed the bonus coin into the lowest notch and stopped the crane."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "弹片还要再等几天",
+      "summaryZh": "产品实验室要决定下一版展示架是否继续使用一枚小金属弹片。一次加载检查原本通过就能推进，乔宁却想知道，反复开合会留下什么。",
       "storyParagraphsZh": [
-        "河港大吊钩每年都通过一次重载检验，试铁比任何木箱都重。出口旺季里，领班杜成需要每台吊机不停运，那只钩也已连续五年合格。铁链在弯处划出浅痕时，他用油漆盖住，免得损失一个班次。下一次试铁仍吊得住，他便用合格章压下操作员的担心。",
-        "几个月后，大约第八千次普通起吊，木箱刚离甲板，吊钩就在油漆痕处断开，落进船舱砸碎一批瓷器。记录里没有一次超重。杜成认定试铁重量有假，命人准备更重的一块，打算在保险员到港前证明其余吊钩安全。吊机停下，水手在舱底清点碎瓷。保险员拍下涂漆缺口，暂停承保所有有未记录修补的吊钩。杜成当初省下一个班次的油漆，如今让整座码头停工。",
-        "验船师洗去油漆，使用适当检测显示断口。细红线从旧划痕向里伸，一圈圈弧纹记录裂缝在反复载荷变化下逐次前进；只剩最后一小段金属，才在普通木箱下断开。一次扛住重物的结果，没有代表几千次循环、先后顺序和表面缺口的作用。",
-        "杜成把复工牌翻到背面，停掉三台吊机，改用适合隐裂的检查。两艘货船驶向别港，他的班组则把所有涂漆修补逐一打开。第二只吊钩的肩部也显出短线，它同样从未超过允许载荷。检查帐篷搭起时，商人在门外叫骂。杜成照付停工班组和岸上货物仓租。第二条红线出现后，他把它放到保险员桌上的旧断口旁，没有再要求吊一次更重试铁。",
-        "此后吊钩按起吊次数和载荷历史管理，不只记最重木箱。受损表面与尖锐过渡得到处理，高风险部位由合格人员按既定间隔和适当方法检查，零件依寿命方案退役，重要货物还有第二道承接。具体做法仍须按材料、形状、环境与经验证工程要求决定，不靠领班新喜欢的一个数字。",
-        "每完成一百次起吊，杜成就在木牌刻一道短线。旧钩涂过漆的断口钉在最上方，红色检测线仍看得见。下一位船主拿奖金求他跳过到期检查，他把金币塞进木牌最低一道刻痕，停下吊机。"
+        "产品实验室正在改一款折叠展示架，里面有一枚小金属弹片，每次展开和收起都会经历一次加载变化。乔宁要决定下一轮样件是否继续沿用这个结构。团队原本准备只做一次峰值加载检查：如果试片承受设定峰值力后卸载，表面检查没有新发现，就继续推进下一版。",
+        "乔宁却把真实使用动作又想了一遍：展示架不会只开合一次。她从同一批材料里准备两枚同材质、名义几何相同的独立试片，测试前用同一方法检查关注区域的表面，两枚都没有记录到可见裂纹。",
+        "两枚试片在同一台仪器和同样环境中，使用同一工装、加载方向和设定峰值力。第一枚只完成一次从低载荷升到峰值力再卸载的过程，随后被取下。第二枚留在仪器上，反复经历同样的加载—卸载循环。乔宁把两片的测试记录放在一起，等着下一次检查。",
+        "第一枚单次加载后，用同一检查方法仍没有记录到新的可见表面裂纹。第二枚在循环初期也没有新发现。实验人员按既定间隔暂停循环，用同样方法观察同一关注区域；经过一段循环历史后，发现了一条此前没有记录到的细裂纹，后续检查中这条裂纹又比前一次更长了一些。",
+        "乔宁把下一轮样机计划往后移了几天，并增加更多同几何试片，用于受控循环加载和后续观察。原定送去装配的下一版弹片因此暂时留在实验室周转架上。负责样机的人来取件时，她没有交出那盒零件：“再等几天。一次加载告诉我们的，还不够回答反复开合。”"
       ],
-      "conceptName": "Material fatigue",
+      "overallZh": "本篇用低风险教学试片说明材料疲劳的一个入口：金属在反复变化的载荷下，裂纹可能逐渐萌生并扩展，因此一次峰值加载后没有发现问题，并不能代表相同构件能够承受完整的循环载荷历史。疲劳判断需要关注载荷循环、裂纹发展和相关检查，而不仅是一次峰值。",
       "conceptNameZh": "材料疲劳",
-      "explanationParagraphs": [
-        "Material fatigue is progressive damage caused by repeated or fluctuating loads. Cracks can initiate and grow at stresses far below those required for a single static failure. Life depends on stress amplitude, mean stress, cycle count, load sequence, surface defects, geometric concentrations, environment, and residual stress. A static proof test cannot replace cyclic testing, inspection, life management, and damage-tolerant design."
-      ],
       "explanationParagraphsZh": [
-        "材料疲劳是反复或波动载荷造成的渐进损伤，裂纹可在远低于一次静载破坏水平的应力下萌生并扩展。寿命受应力幅、平均应力、循环次数、载荷顺序、表面缺陷、几何集中、环境与残余应力影响。静态强度试验不能替代循环试验、定期检查、寿命管理和损伤容限设计。"
+        "疲劳与重复或波动载荷有关。在某些金属和条件下，裂纹可以在循环历史中萌生并逐渐扩展，最终导致性能下降甚至断裂。单次加载没有出现可见问题，只说明那一次观察的结果，不能替代对循环历史的判断。",
+        "本例的对照让两枚独立试片的批次、名义几何、峰值力、工装、加载方向、仪器和环境尽量可比；一枚只加载一次，另一枚反复循环。循环试片后来首次被记录到细裂纹，后续检查又看到它变长，说明这一加载历史值得继续研究。首次发现不等于证明裂纹当时才萌生；两片试样也不能排除未检微缺陷、材料离散或确定通用寿命。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "让试片批次、名义几何、峰值力、工装方向、仪器和环境尽量可比，再比较一次与反复加载的观察。",
+        "diagramTitle": "为什么一次峰值加载后未发现可见裂纹，仍不能代表反复开合也没问题",
+        "diagramSteps": [
+          "准备两枚同批、同材质、名义几何相同的独立试片，并用同一方法做初始表面检查",
+          "在同一仪器和环境下，用同一工装、方向、设定峰值力和加载—卸载方式测试两片",
+          "第一片只完成一次加载后卸载，随后停止测试",
+          "第二片反复循环，并按既定间隔用同一方法检查同一关注区域",
+          "若循环试片后来首次被记录到细裂纹且后续观察变长，则下一轮开发增加循环验证"
+        ],
+        "diagramStepNotes": [
+          "初始检查没有发现可见裂纹，不代表排除了所有微小缺陷或材料离散。",
+          "峰值力、工装、加载方向和方式尽量一致，降低已记录条件差异；未检微缺陷仍可能不同。",
+          "单次试片在一次卸载后不再参与循环，因此不会发生时间顺序上的重复加载混淆。",
+          "定期检查只能在所用方法的能力范围内观察裂纹，不意味着每个循环都产生可见增长。",
+          "一对教学试片不能确定真实构件寿命、唯一根因或所有材料在所有应力水平下的疲劳表现。"
+        ],
+        "mapping": [
+          "一次加载试片 → 单次峰值条件下的有限观察。",
+          "重复循环试片 → 具有累积加载历史的教学对照。",
+          "后来首次被记录且后续变长的细裂纹 → 检出与扩展的观察，不能单凭首次发现确定萌生时间。",
+          "推迟下一版样机 → 为加入循环验证付出的开发时间和样件成本。"
+        ],
+        "boundary": "疲劳寿命受应力范围、平均应力、频率、几何、材料、加工、缺陷和环境等影响。早期裂纹可能低于表面检查的检测能力；初始微缺陷、腐蚀、磨损或未记录超载等也可能影响结果。两片教学试样不能确定唯一根因或真实构件寿命。本例没有足够应力资料判断是否屈服，也不提供检修方法、循环次数、载荷阈值或通用疲劳极限。",
+        "reflection": "某零件出厂时肉眼没有发现裂纹，使用一段时间后显微检查发现一道细纹。能断定裂纹一定是在使用之后才萌生吗？还需要知道哪些检查条件？"
+      },
+      "referencesZh": [
+        {
+          "id": "deschanel-2017-fatigue",
+          "citation": "Deschanel, S., Ben Rhouma, W., & Weiss, J. (2017). Acoustic emission multiplets as early warnings of fatigue failure in metallic materials. Scientific Reports, 7, 13680. https://doi.org/10.1038/s41598-017-13226-1",
+          "url": "https://www.nature.com/articles/s41598-017-13226-1",
+          "use": "支持循环疲劳中裂纹萌生、逐步扩展以及最终失效可能与单调加载失效不同的基本机制，并支持特定金属样品中增量裂纹传播的研究；不把论文中的具体试样、循环次数、载荷或低周实验条件改写成本故事数据或通用安全阈值。"
+        },
+        {
+          "id": "faa-fatigue-damage-tolerance",
+          "citation": "Federal Aviation Administration. Technical Discipline: Fatigue and Damage Tolerance. Updated April 9, 2026.",
+          "url": "https://www.faa.gov/aircraft/air_cert/step/disciplines/fatigue_damage_tolerance",
+          "use": "支持疲劳与反复或波动载荷、环境因素、断裂力学和寿命管理有关的广泛范围；该航空资料不用于提供本虚构金属试片的通用检查间隔、寿命或疲劳强度。"
+        }
+      ],
+      "title": "A Few More Days for the Spring Element",
+      "summary": "A product laboratory must decide whether its next folding display stand will keep a small metal spring element. A single load check was meant to clear the way, but Qiao Ning wants to know what repeated opening and closing might leave behind.",
+      "storyParagraphs": [
+        "The product laboratory is revising a folding display stand. Inside it is a small metal spring element that experiences a load change each time the stand is opened and closed. Qiao Ning has to decide whether the next prototype should keep this structure. The team had originally planned only a one-time peak-force check: if a specimen was loaded to the specified peak force, unloaded, and showed no newly recorded visible surface crack, they would move on to the next prototype.",
+        "Qiao Ning thinks again about how the product is actually used: the stand will not be opened and closed only once. She prepares two independent specimens from the same material batch with the same material and nominal geometry. Before testing, the same method records no visible surface cracks in the area of interest on either specimen.",
+        "The two specimens are tested in the same machine and environment with the same fixture, loading direction and specified peak force. The first makes one rise from a low load to that peak and is unloaded, then removed. The second remains in the machine for repeated cycles of the same loading and unloading. Qiao Ning puts the two test records side by side and waits for the next inspection.",
+        "After its single loading event, the first specimen is inspected again using the same method, and no newly recorded visible surface crack is found. The cyclic specimen also shows no new finding early in the test. At predetermined intervals, the laboratory pauses the cycling and examines the same region using the same method. After some cyclic history has accumulated, a fine crack that had not previously been recorded is found. In a later inspection, that crack is longer than it was before.",
+        "Qiao Ning moves the next prototype schedule back by several days and adds more specimens of the same geometry for controlled cyclic loading and follow-up observation. The next batch of spring elements that had been scheduled for assembly therefore remains on the laboratory transfer rack. When the prototype colleague comes to collect them, she does not hand over the box. “Give me a few more days. One load doesn't tell us enough about repeated opening and closing.”"
+      ],
+      "overall": "This article uses low-risk teaching specimens to introduce one aspect of material fatigue: under repeated or fluctuating loading, cracks can initiate and gradually grow, so a specimen showing no problem after a single peak load does not establish its ability to withstand an entire cyclic loading history. Fatigue reasoning therefore requires attention to load cycles, crack development, and relevant inspection rather than only to one peak event.",
+      "conceptName": "Material fatigue",
+      "explanationParagraphs": [
+        "Fatigue is associated with repeated or fluctuating loads. In some metals and conditions, cracks can initiate during cyclic loading and grow progressively, eventually reducing performance or leading to fracture. A one-time load with no visible problem reports only the result of that particular observation; it cannot replace consideration of cyclic history.",
+        "The comparison makes the two independent specimens’ batch, nominal geometry, peak force, fixture, loading direction, machine and environment as comparable as possible. One is loaded once and the other cycled repeatedly. A fine crack is first recorded later in the cyclic specimen and is observed to grow in a subsequent inspection, making that loading history worth further study. First detection does not prove when the crack initiated; two specimens cannot rule out undetected microscopic defects or material variability, or establish a universal life."
+      ],
+      "module": {
+        "intro": "Make batch, nominal geometry, peak force, fixture and direction, machine and environment as comparable as possible, then compare observations after one versus repeated loading.",
+        "diagramTitle": "Why Does Finding No Visible Crack After One Peak Load Not Prove Repeated Opening and Closing Will Be Fine?",
+        "diagramSteps": [
+          "Prepare two independent specimens from the same batch with the same material and nominal geometry, and inspect both initially using the same surface method",
+          "Test both in the same machine and environment, using the same fixture, direction, peak force and loading-unloading pattern",
+          "Load the first specimen once to the peak force, unload it, and then remove it from further cyclic testing",
+          "Cycle the second specimen repeatedly and inspect the same region at predetermined intervals using the same method",
+          "If a previously unrecorded fine crack is later found in the cyclic specimen and observed to grow, add cyclic validation to the next development round"
+        ],
+        "diagramStepNotes": [
+          "No visible crack recorded during the initial inspection does not mean all microscopic defects or material variability have been excluded.",
+          "Match peak force, fixture, direction and loading pattern to reduce known differences; undetected microscopic defects may still differ.",
+          "The single-load specimen does not enter the later cyclic sequence, preventing confusion about its time history.",
+          "Periodic inspection can observe cracks only within the capability of the chosen method and does not mean every cycle produces visible crack growth.",
+          "A pair of teaching specimens cannot establish the fatigue life, unique cause, or cyclic behavior of all real components or all materials."
+        ],
+        "mapping": [
+          "Single-load specimen → a limited observation under one peak-force event.",
+          "Repeated-cycle specimen → a teaching comparison containing accumulated loading history.",
+          "A fine crack first recorded later and then observed to grow → an observation of detection and propagation, not proof of when initiation occurred.",
+          "Delayed next prototype → the development-time and specimen cost of adding cyclic validation."
+        ],
+        "boundary": "Fatigue life depends on stress range, mean stress, frequency, geometry, material, processing, defects, environment and other factors. Early cracks can be below the detection capability of surface inspection; initial microscopic defects, corrosion, wear or unrecorded overload may also affect results. Two teaching specimens cannot establish a unique cause or a real component’s life. This example lacks enough stress information to determine whether yielding occurred, and it provides no inspection procedure, cycle count, load threshold or universal fatigue limit.",
+        "reflection": "A component leaves the factory with no crack seen by eye. After some use, microscopic inspection finds a fine crack. Does that establish that it must have initiated during use? What inspection conditions would you need to know?"
+      },
+      "references": [
+        {
+          "id": "deschanel-2017-fatigue",
+          "citation": "Deschanel, S., Ben Rhouma, W., & Weiss, J. (2017). Acoustic emission multiplets as early warnings of fatigue failure in metallic materials. Scientific Reports, 7, 13680. https://doi.org/10.1038/s41598-017-13226-1",
+          "url": "https://www.nature.com/articles/s41598-017-13226-1",
+          "use": "Supports the basic mechanism of crack initiation, incremental crack growth, and eventual failure under cyclic fatigue, and supports research into incremental crack propagation in particular metallic specimens. The paper's specific specimen dimensions, cycle counts, loads, and low-cycle experimental conditions are not used as fictional story data or universal safety thresholds."
+        },
+        {
+          "id": "faa-fatigue-damage-tolerance",
+          "citation": "Federal Aviation Administration. Technical Discipline: Fatigue and Damage Tolerance. Updated April 9, 2026.",
+          "url": "https://www.faa.gov/aircraft/air_cert/step/disciplines/fatigue_damage_tolerance",
+          "use": "Supports the broad scope of fatigue involving repeated or fluctuating loads, environmental factors, fracture mechanics, and life management. This aviation source is not used to provide a universal inspection interval, service life, or fatigue strength for the fictional metal specimens."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-23-preparation/group2-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-23-preparation/group2-edit-pass1-evidence.json",
+          "engineering-reader-first-23-preparation/group2-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
       }
     },
     {

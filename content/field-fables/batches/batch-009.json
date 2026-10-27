@@ -1771,41 +1771,131 @@
       "fieldCode": "0712",
       "fieldTitle": "Environmental protection technology",
       "fieldTitleZh": "环境保护技术",
-      "title": "The Chimney That Kept Growing",
-      "titleZh": "越修越高的烟囱",
-      "summary": "A kiln yard answers every smoke complaint by raising its chimney, until soot falling on a distant reservoir returns in the whole city's drinking water.",
-      "summaryZh": "窑场每收到一次烟尘投诉就把烟囱加高，直到落在远处水库上的黑灰又被全城喝了回来。",
-      "storyParagraphs": [
-        "While the imperial kiln rushed to make roof tiles for a new palace, black smoke settled on nearby washing lines. Stopping the furnaces would miss the deadline, so the kiln master raised the chimney by thirty feet. The air beside the yard became clean, and he pointed to the blue sky and said the problem had travelled away with the wind. The taller stack let the kiln meet the palace deadline and moved complaints beyond the workers' own street.",
-        "Two weeks later, orchard growers from the eastern fields arrived with soot-marked pears. The master raised the chimney another thirty feet. Smoke crossed the orchards and fell on villages beyond the hill. Later, a north wind carried fine ash into the reservoir, and the next morning every water jar in the city had a black rim. The chimney was now visible from outside the city; no one could claim the ash belonged elsewhere. Each extension reduced local concentration under one wind yet left total emissions unchanged and shifted exposure elsewhere.",
-        "The kiln chief wanted another extension because stopping production would trigger a contract penalty. The young kiln worker accepted responsibility for three lost days and opened the process instead. She measured coal moisture, air leakage, and powder loss at charging. The largest plume coincided with wet fuel and sudden feeding, not with a shortage of chimney height. Trial burns recorded fuel per tile, visible smoke, recovered powder, and stack samples, so a pale plume could not substitute for measured reduction.",
-        "A young kiln engineer stopped one furnace and opened its feed system and doors. She found damp, smoky coal, cracks drawing unwanted air, and glaze powder swept away whenever material was charged. The master urged her to add one more section to the chimney. Instead, she put three days of delay under her own name, changed to dry coal, sealed the doors, altered the charging chute, and collected the remaining dust at the outlet. The kiln missed its bonus, but fuel use and recoverable glaze loss also fell. Workers monitored the remaining stack emissions instead of declaring prevention perfect. Dry-fuel storage and a slower feed gate required capital and reduced peak output, costs the chief had avoided by extending the chimney.",
-        "When firing resumed three days later, the same number of tiles used less coal and produced lighter smoke. The outlet equipment remained because some residue was unavoidable, but it was no longer being asked to handle the dense stream previously created by the process itself. They ranked actions: avoid generation, reduce it, recover material, then treat and safely dispose of what remained.",
-        "The master ordered the newest bricks removed from the top of the chimney. They were not discarded. Workers carried them to the furnaces and built them into the door frames that had once leaked air. When the final brick was laid, the mason's palms were still red."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "印刷机旁的空架子",
+      "summaryZh": "周静每周都要交付一百张活动标签，印刷机旁的废纸箱却总是装得很快。她原本打算扩大回收区，开机前的一次调整让她重新安排了时间。",
       "storyParagraphsZh": [
-        "官窑赶制新宫瓦时，黑烟落满附近晾衣绳。停窑会误了限期，窑长便把烟囱加高三丈。窑边的空气果然干净了，他指着蓝天说，问题已经随风走远。高烟囱让窑场按时交宫瓦，也把投诉移出工人自己居住的街区。",
-        "半个月后，东郊果农带着沾灰的梨来告状。窑长又加高三丈，烟越过果园，落到山后的村子。再后来，一场北风把细灰送进水库，第二天城里的水缸都浮着一圈黑边。烟囱已经高得能从城外看见，谁也不能再说那些灰不属于官窑。每次加高只在一种风向下降低近处浓度，总排放不变，暴露地点却继续转移。",
-        "窑长因停产会触发罚款，坚持继续接高。年轻窑师愿承担停工三日，转而打开生产过程。她测煤的含水、炉门漏风和投料粉损，发现最大烟团总同湿煤与突然投料同时出现，并非烟囱还不够高。试烧同时记录每片瓦耗煤、可见烟、回收粉与烟道样本，不能让颜色变淡代替总量测量。",
-        "年轻窑师停下一座窑，拆开进料和炉门。她找到受潮冒烟的煤、漏风的裂缝，以及每次投料时被气流卷走的釉粉。窑长催她先把烟囱再接一段，她却把三天工期写在自己名下，换干煤、封炉门、改投料槽，并在出口收集剩下的粉尘。窑场失去按期奖金，耗煤与可回收釉粉损失也一同下降。工人仍监测烟囱残余排放，不把源头减量说成彻底消失。干煤仓和缓慢投料闸需要投资，也降低峰值产量；这些正是窑长此前靠接高烟囱躲开的成本。",
-        "三天后复烧，同样数量的瓦用了更少的煤，烟也淡了。出口装置仍然保留，因为不可能一点残余都没有；可它处理的已不再是原先那股不断被制造出来的浓烟。众人把行动排成次序：先避免产生，再减量与回收，最后处理并安全处置无法避免的残余。",
-        "窑长命人拆下烟囱最上面的新砖。那些砖没有丢掉，而是被运到炉前，砌进了原本漏风的门框。最后一块砖落下时，砌砖人的手掌仍是红的。"
+        "社区印刷室每周都要给活动中心交100张整版活动标签，每张合格标签用一张同规格纸印制，不拼版。周静最近最常搬的却是机器旁的废纸箱。旧工艺每批领130张纸，100张印成合格标签，另外30张成为废纸，包括试印错位、套印调整和收尾清理用掉的纸。",
+        "多领一些纸并不是谁做错了。机器状态每天都会有小变化，过去边走纸边调整很直接，前面即使废掉几张，后面还有足够纸把100张合格标签做出来。周静原本想把外部回收区再腾大一点，直到有一次开机前，她先多花了一段准备时间，把两组印版的位置校到更接近目标，再开始正式走纸。",
+        "这一轮仍要交同样100张合格标签。结束时，记录上领用115张纸：100张各印成一张合格标签，另外15张是试印和收尾清理产生的废纸。操作员把最后一张废纸放进箱里，顺手掂了掂：“这次确实轻多了。”",
+        "周静没有撤掉废纸箱。那15张废纸照旧送去外部回收。她改了下周的开机安排：先给校准留出时间，再开始印那100张标签。准备会慢一些，操作员要更仔细；机器状态每天不同，下周领纸仍得看实际记录。",
+        "下午，活动中心的人把装着100张标签的纸盒抱走。清洁人员随后拎走废纸箱，原本准备扩回收区用的空架子则被周静推回机器旁，放上了校准工具。她在下周的排班表上，给开机前的准备多留了一格。"
       ],
-      "conceptName": "Source control",
+      "overallZh": "本篇用相同合格产出下的纸张平衡说明源头控制的一个入口：通过改变材料、设备或生产步骤，在废物进入废物流之前减少其产生，与对已经产生的残余物进行回收或末端处理是不同阶段的动作。两者可以同时存在。",
       "conceptNameZh": "源头控制",
-      "explanationParagraphs": [
-        "Source control changes materials, equipment, or operations before pollution or waste is created, preventing or reducing its formation. A taller chimney changes where pollutants disperse without reducing their total amount. End-of-pipe treatment remains useful for unavoidable residual emissions. In practice, prevention and reduction generally come first, followed by recovery or reuse, then treatment and safe disposal of what remains."
-      ],
       "explanationParagraphsZh": [
-        "源头控制优先在污染或废物产生之前改变材料、设备与操作，以避免或减少其形成。加高烟囱只改变污染物的扩散位置，并未减少总量；末端治理则适合处理无法避免的剩余排放。实践中通常先预防和减量，再回收利用，最后对残余进行处理与安全处置。"
+        "比较是否真正减少废物，需要保持产出和统计边界可比。本例每张整版合格标签用一张同规格纸印制，两次都交付100张，并把试印、调整和清理纸计入同一口径。旧工艺130张纸=100张合格成品纸+30张废纸；新工艺115=100+15。教学设定中没有其他纸张进出或库存变化。",
+        "因此在这个边界内，每100张合格标签对应的纸张废物由30张降到15张，减少(30-15)/30=50%。这个50%只描述本例纸张废物，不表示化学污染、毒性、生命周期影响或工人暴露也下降50%；剩余15张仍需适当管理。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先固定相同合格产出和纸张统计口径，再区分‘少产生废纸’与‘已经产生后怎么处理’。",
+        "diagramTitle": "同样交付100张标签，为什么先校准能把废纸从30张降到15张",
+        "diagramSteps": [
+          "旧工艺每批领用130张同规格纸，交付100张合格标签；每张合格纸对应一张标签",
+          "其余30张全部进入废纸口径，其中已经包括试印、套印调整和收尾清理用纸",
+          "新工艺先增加一次印版校准，再开始正式走纸",
+          "新工艺领用115张：100张各印一张合格标签，15张进入同一废纸口径",
+          "残余15张继续外送回收，同时下一轮排班保留前置校准时间"
+        ],
+        "diagramStepNotes": [
+          "两次都交付100张合格标签；每张合格纸是一张整版标签，避免把不同单位直接相加。",
+          "30张已经完整包含本批所有计入范围的试印和清理纸，不能再额外加一遍。",
+          "前置校准会增加准备时间和操作要求，因此源头减量并非没有成本。",
+          "115张纸=100张合格成品纸+15张废纸；本批假定没有其他纸张进出或库存变化。",
+          "这里明确讨论的是产生后的外部回收；其他工艺内循环是否计入源头预防需按具体定义和边界判断，不能一概而论。"
+        ],
+        "mapping": [
+          "130张与115张领用量 → 同样100张整版合格标签所需的两种纸张投入，每张成品纸印一张标签。",
+          "30张与15张废纸 → 同一统计边界中的纸张废物流。",
+          "开机前校准 → 废物产生之前改变生产步骤的动作。",
+          "保留的回收箱 → 已产生残余废纸仍需要后续管理。"
+        ],
+        "boundary": "本篇只证明虚构印刷边界内的纸张废物在一次可比教学对照中减少。源头减量不能用减产、漏记、稀释、转移废物或只改变排放位置来冒充。更少纸张废物也不能自动证明其他污染物、危害、生命周期影响或工人暴露下降。EPA提出的预防层级还受法律、技术可行性、风险和成本等条件影响，并非任何情况下的绝对排序。",
+        "reflection": "如果下一次仍只产生15张废纸，但原因是只交付了50张合格标签，为什么不能直接说过程相对于本篇又实现了同样的源头减量？"
+      },
+      "referencesZh": [
+        {
+          "id": "epa1992-pollution-prevention-definition",
+          "citation": "Habicht, F. H., II. (1992, May 28). EPA Definition of “Pollution Prevention.” Memorandum to EPA Personnel. U.S. Environmental Protection Agency.",
+          "url": "https://www.epa.gov/sites/default/files/2014-09/documents/pollprev.pdf",
+          "use": "支持源头减量通过材料、设备或生产步骤改变，在污染物或废物进入废物流之前减少其产生，并区分其与后续回收、处理和处置；同时保留法律、可行性、风险和成本等条件。本篇纸张示例只说明材料废物预防，不声称有毒排放同步下降。"
+        },
+        {
+          "id": "epa1997-production-adjusted-p2",
+          "citation": "Malkin, M., Baskir, J., & Greiner, T. J. (1997, September). Developing and Using Production-Adjusted Measurements of Pollution Prevention. EPA/600/R-97/048. U.S. Environmental Protection Agency.",
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30003JQ6.txt",
+          "use": "支持使用按单位产品调整的指标区分工艺改进与产量变化，并强调测量假设和边界。本篇因此固定100张合格标签作为共同产出；示例数字为虚构教学值，不来自该EPA文件。"
+        }
+      ],
+      "title": "The Empty Rack Beside the Press",
+      "summary": "Zhou Jing must deliver one hundred event labels each week, but the waste-paper bin beside the press fills quickly. She plans to expand the recycling area until an adjustment before printing changes how she schedules the work.",
+      "storyParagraphs": [
+        "Every week, the community print room must deliver 100 full-sheet event labels to the activity centre. Each acceptable label is printed on one whole sheet of the same paper, with no multiple labels on a sheet. Lately Zhou Jing moves the waste-paper bin beside the press more often than the finished box. The old process issues 130 sheets per batch: 100 become acceptable labels and 30 become waste, including misregistered test prints, registration adjustment and cleanup sheets.",
+        "Taking extra paper was not evidence that someone had done something wrong. The machine changes slightly from day to day, and adjusting while feeding sheets through was direct and convenient. Even if several early sheets were lost, enough remained to complete the 100 acceptable labels. Zhou Jing had originally planned to free up more space in the external recycling area, until one startup when she spent extra preparation time aligning the two printing plates closer to their target positions before feeding the production sheets.",
+        "This run must still deliver 100 acceptable labels. The record shows 115 sheets issued: 100 each become one acceptable label, and the other 15 are waste from test printing and final cleanup. The operator drops the last waste sheet into the bin and lifts it slightly. “This one really is lighter today.”",
+        "Zhou Jing keeps the waste bin, and the 15 discarded sheets still go to external recycling. She changes next week’s startup schedule instead: allow time for calibration first, then print the 100 labels. Preparation will be slower and the operator must check more carefully. The machine changes from day to day, so next week’s paper needs still have to be recorded.",
+        "That afternoon, the activity centre collects the box of 100 labels, and the cleaner carries away the waste-paper bin. Zhou Jing pushes the empty rack she had planned to use for the recycling area back beside the press and puts the calibration tools on it. On next week’s schedule, she gives startup preparation an extra slot."
+      ],
+      "overall": "This article uses a paper balance at the same acceptable output to introduce one aspect of source control: changing materials, equipment, or production steps to reduce waste before it enters the waste stream is a different stage of action from recycling or treating residual material after it has already been generated. Both can still be necessary at the same time.",
+      "conceptName": "Source control",
+      "explanationParagraphs": [
+        "To compare waste fairly, keep output and the accounting boundary comparable. Here each full-sheet acceptable label uses one sheet of the same paper, and both runs deliver 100. Test-print, adjustment and cleanup sheets are counted in the same boundary. The old process balances 130 sheets = 100 acceptable finished sheets + 30 waste sheets; the new one balances 115=100+15. The teaching example assumes no other paper flows or inventory changes.",
+        "Within this boundary, paper waste per 100 acceptable labels falls from 30 sheets to 15 sheets, a reduction of (30-15)/30=50%. That 50% describes only paper waste in this example; it does not mean chemical pollution, toxicity, life-cycle impacts, or worker exposure also fell by 50%. The remaining 15 waste sheets still require appropriate management."
+      ],
+      "module": {
+        "intro": "Hold acceptable output and the paper-accounting boundary constant, then distinguish between generating less waste and managing waste after it has already been created.",
+        "diagramTitle": "With the Same 100 Acceptable Labels, Why Can Pre-Calibration Reduce Waste Paper from 30 Sheets to 15?",
+        "diagramSteps": [
+          "Issue 130 sheets under the old process and deliver 100 acceptable labels, with one label per acceptable sheet",
+          "The remaining 30 sheets all enter the waste-paper boundary, already including test prints, registration adjustment, and final cleanup paper",
+          "Under the new process, add a printing-plate calibration step before feeding production sheets",
+          "Issue 115 sheets: 100 each make an acceptable label and 15 enter the same waste-paper boundary",
+          "Continue external recycling for the residual 15 sheets while reserving calibration time in the next production schedule"
+        ],
+        "diagramStepNotes": [
+          "Both runs deliver 100 acceptable labels, with one full-sheet label per acceptable sheet, so the paper balance uses consistent units.",
+          "The 30 sheets already include every setup and cleanup sheet counted within this batch boundary and must not be added again.",
+          "Pre-calibration requires additional preparation time and operator attention, so source reduction is not cost-free.",
+          "115 sheets = 100 acceptable finished sheets + 15 waste sheets; the batch assumes no other paper flows or inventory changes.",
+          "This story explicitly describes external recycling after waste generation. Whether an internal process loop counts as prevention depends on the specific definition and boundary and cannot be generalized from this example."
+        ],
+        "mapping": [
+          "130 and 115 input sheets → two paper inputs for the same 100 full-sheet acceptable labels, one per finished sheet.",
+          "30-sheet and 15-sheet waste amounts → paper waste streams measured within the same accounting boundary.",
+          "Pre-start calibration → a production-step change made before waste is generated.",
+          "Retained recycling bin → residual waste that has already been generated still requires downstream management."
+        ],
+        "boundary": "This article demonstrates only that paper waste falls within one fictional print-process boundary in one comparable teaching example. Source reduction cannot be established merely by reducing output, omitting records, diluting or transferring waste, or moving the discharge point. Less paper waste also does not automatically prove lower levels of other pollutants, hazards, life-cycle impacts, or worker exposure. EPA's prevention hierarchy is also conditioned by law, technical feasibility, risk, and cost rather than being an absolute ranking in every circumstance.",
+        "reflection": "If a later run also produces only 15 waste sheets but delivers only 50 acceptable labels, why can that result not be used directly to claim the same source reduction achieved in this article?"
+      },
+      "references": [
+        {
+          "id": "epa1992-pollution-prevention-definition",
+          "citation": "Habicht, F. H., II. (1992, May 28). EPA Definition of “Pollution Prevention.” Memorandum to EPA Personnel. U.S. Environmental Protection Agency.",
+          "url": "https://www.epa.gov/sites/default/files/2014-09/documents/pollprev.pdf",
+          "use": "Supports source reduction through changes to materials, equipment, or production steps that reduce pollutants or waste before they enter waste streams, and distinguishes this from subsequent recycling, treatment, and disposal while retaining legal, feasibility, risk, and cost qualifications. The fictional paper example demonstrates material-waste prevention only and does not claim that toxic releases also decline."
+        },
+        {
+          "id": "epa1997-production-adjusted-p2",
+          "citation": "Malkin, M., Baskir, J., & Greiner, T. J. (1997, September). Developing and Using Production-Adjusted Measurements of Pollution Prevention. EPA/600/R-97/048. U.S. Environmental Protection Agency.",
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30003JQ6.txt",
+          "use": "Supports using unit-of-product or production-adjusted measures to distinguish process improvements from changes in production output, while making measurement assumptions and boundaries explicit. This article therefore fixes 100 acceptable labels as the common output; its numerical example is fictional and does not come from the EPA document."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-23-preparation/group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-23-preparation/group1-edit-pass1-evidence.json",
+          "engineering-reader-first-23-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
       }
     },
     {
@@ -1815,41 +1905,145 @@
       "fieldCode": "0712",
       "fieldTitle": "Environmental protection technology",
       "fieldTitleZh": "环境保护技术",
-      "title": "Before the Cup Held Tea",
-      "titleZh": "杯子在装茶以前",
-      "summary": "An innkeeper seeks the cleanest cup for serving tea and discovers that a cup's story begins before the tea and continues after the guest leaves.",
-      "summaryZh": "客栈老板想选出最清洁的茶杯，却发现一只杯子的故事早在装茶之前开始，也不会在客人喝完时结束。",
-      "storyParagraphs": [
-        "After the spring fair, the inn yard was piled with paper cups discarded after one use. The owner, Madam Qin, called them wasteful and immediately ordered five hundred thick ceramic cups from another province, each stamped 'the lasting choice' underneath. Their delivery required three heavy carts, and forty broke on the journey. She had not counted the firing of the cups or the wood and water needed to wash them each day. The purchase won public praise and a tax rebate, giving the owner little reason to question the label on the base.",
-        "The first month was worse. Travellers carried cups away without thinking, servers broke a batch, and the washroom heated water all day. The paper merchant said ceramic used more resources; the potter pointed to the rubbish pile and said paper had to be remade every day. They argued at the counter, each describing only the part of the journey that favoured his own goods. Washing shifted burdens to water and fuel; breakage and theft shortened the reuse count on which the choice depended.",
-        "The bookkeeper placed a pot of tea on the table. 'Are we comparing one cup,' he asked, 'or the serving of one hundred pots of tea?' Beginning with clay digging and tree cutting, he recorded manufacture, transport, use, washing, number of returns, and final destination. He kept fuel, water, breakage, and recovery in separate columns.",
-        "The inn could keep advertising one material as virtuous or fund a comparison across the full service. Qin surrendered the rebate until the claim was checked. The accountant chose a functional unit—serving one hundred pots of tea—then fixed system boundaries and gathered transport distance, kiln fuel, washing, loss rate, and end-of-life data. Missing values were shown as ranges, not convenient zeros. The supplier's data and the inn's measurements used the same units, preventing a light cup from winning only because one stage was omitted.",
-        "No cup won by its nature alone. If a ceramic cup was used twice, the burden of firing and transport was difficult to recover. With a small deposit, efficient shared washing, and dozens of uses, its cost per serving fell. Madam Qin used ceramic for guests staying at the inn. At the takeaway stall, where returns were uncertain, she kept light paper cups and required the supplier to collect them. They compared climate, water use, material demand, and waste rather than collapsing unlike impacts into one flattering score. Sensitivity tests showed the reuse count and washing method changed the result most.",
-        "At the end of summer, a traveller returned a ceramic cup and reclaimed his deposit. Madam Qin turned the cup over, carved one more mark beside the thirty-six fine scratches already on its base, and placed it back in the basin of hot water. The deposit system cost a clerk's time and a new wash rack, a practical price for reaching the reuse level assumed in the comparison."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "两盏灯的账",
+      "summaryZh": "阅读室要为新桌位选灯。程澜看到一款灯制造和运输阶段的气候影响较低，还要确认它亮满同样时长后，两款灯的比较会不会改变。",
       "storyParagraphsZh": [
-        "春市过后，客栈后院堆满用过即丢的纸杯。老板秦娘嫌它们浪费，立刻从外省订来五百只厚陶杯，还在杯底印上‘长久之选’。陶杯运到时用了三辆重车，途中碎了四十只；开窑烧杯和每日洗杯的柴水，她原先都没算。这笔采购赢得称赞和税款减免，杯底标签也让老板几乎没有理由继续追问。",
-        "头一个月更糟。赶路的客人顺手带走杯子，伙计摔破了一批，洗杯房整日烧水。纸杯商说陶杯反而更费，陶匠则指着垃圾堆说纸杯每天都要重做。两人争到柜台前，谁都只拿对自己有利的一段路说话。清洗把负担转向水与柴，破损和带走又缩短了选择所依赖的重复次数。",
-        "账房在桌上放了一壶茶，问：‘我们究竟比较一只杯子，还是比较把一百壶茶送到客人手里？’他从取土与伐木开始，依次记下制造、运输、使用、清洗、重复次数和最后去向，还把柴、水、破损与回收分别列开。",
-        "客栈可以继续把一种材料宣传成美德，也可以为整项服务做比较。秦娘在核实前退回减税。账房选定功能单位——供应一百壶茶——再固定系统边界，收集运输距离、窑火、清洗、损耗和最终去向数据；缺失值写成范围，不能方便地当作零。供应商资料与客栈测量统一单位，避免轻杯只因某阶段被漏算而获胜。",
-        "算过以后，没有哪只杯子天然获胜。陶杯若只用两次，前面的烧制和运输很难抵回；若押一枚小钱、集中清洗并用上几十次，每杯茶承担的耗费便会下降。秦娘给堂食客人用陶杯，难以收回杯子的外带摊仍用轻纸杯，并要求供应商回收。他们分别比较气候、水耗、材料需求与废弃物，不把不同影响压成一个讨喜总分。敏感性分析显示，使用次数与清洗方式最能改变结果。",
-        "夏末，一名旅人把陶杯送回柜台，取回押钱。秦娘翻过杯底，在原有的三十六道细划痕旁又刻了一道，然后把它放回热水盆。押金制度耗费一名书记的时间和一座新洗架，却让比较假设的重复次数真正有机会实现。"
+        "共享阅读室要给新桌位选一款灯，程澜负责在两只样灯里定下当前采购方案。两款灯在约定安装条件下核过，都能提供同样的桌面照明；比较假定两者都能用满1000小时而无需更换。表中把温室气体影响统一折算成二氧化碳当量（CO2e）：原料、制造和运输合计，A为1 kg CO2e，B为5 kg CO2e。采购同事指着表问：“那不是A吗？”",
+        "程澜没有马上把A移到采购区。比较表里，A功率20 W，亮1000小时需要20 kWh电；B功率5 W，需要5 kWh。她还把任务结束后每盏灯的处置影响估算为0.2 kg CO2e，写在表格最右边。",
+        "场地方当时还在确认本项目使用阶段应采用哪一组电力全生命周期排放因子。程澜先按候选条件0.5 kg CO2e/kWh计算：A的使用阶段是20×0.5=10，加上前端1和末端0.2，总计11.2 kg CO2e；B的使用阶段是5×0.5=2.5，加上前端5和末端0.2，总计7.7。只看前端时领先的A，在这一组条件下反而排到B后面。",
+        "她又把表里的前端数字1、5和两边的处置估计0.2暂时保持不动，只把使用阶段的电力排放因子换成0.1。A变为3.2，B为5.7 kg CO2e，排序又翻回A。“供电数据还没确认，”程澜说，“这张表现在还不能替我们决定。”",
+        "第二天，场地方确认本项目的气候影响比较采用0.5 kg CO2e/kWh。程澜把B放进当前采购方案，A留在样品架供其他使用观察。B的前端影响比A高，但在约定的1000小时和这一项气候指标下，总结果7.7低于11.2。采购同事把B样灯拿到第一张阅读桌上，按下了开关。"
       ],
-      "conceptName": "Life-cycle assessment",
+      "overallZh": "本篇用两款虚构灯具说明生命周期评价的一个入口：环境比较先要定义相同功能单位和系统边界，再建立各阶段清单，并将清单数据转入明确的影响类别后解释结果。示例只计算气候变化这一项指标，不代表完整多指标生命周期评价或总体“最环保”结论。",
       "conceptNameZh": "生命周期评价",
-      "explanationParagraphs": [
-        "Life-cycle assessment compares products or services against a defined functional unit, following raw-material extraction, manufacture, transport, use, maintenance, reuse, and final disposal. Energy, materials, and emissions are translated into environmental impact indicators. Results depend on system boundaries, data, reuse rates, and assumptions, so one stage or a 'reusable' label cannot decide the outcome. The story uses serving one hundred pots of tea as the common function needed for a fair comparison."
-      ],
       "explanationParagraphsZh": [
-        "生命周期评价以明确的功能单位比较产品或服务，从原料取得、制造和运输，一直追踪到使用、维护、重复利用与最终处置，并把能源、物料和排放转换为若干环境影响指标。结论取决于系统边界、数据、使用次数和假设，不能只凭某一阶段或‘可重复使用’标签判断。故事以供应一百壶茶为共同功能，才使不同杯子能够公平比较。"
+        "功能单位是“提供1000小时同等桌面照明”；本例假设两款灯都能完成这一服务且无需更换。生命周期清单通常记录材料、能源和各类排放等原始流量；本例给出使用阶段的电量活动数据：20 W×1000 h=20 kWh，5 W×1000 h=5 kWh。前端的1、5以及末端的0.2 kg CO2e则是事先折算好的阶段气候影响，不是原始清单；这里没有重建缺失的上游排放明细。各阶段采用相同功能单位、气候指标和时间尺度，范围互不重叠。",
+        "随后对气候变化指标应用电力全生命周期排放因子。0.5 kg CO2e/kWh时，A=1+20×0.5+0.2=11.2，B=5+5×0.5+0.2=7.7 kg CO2e/功能单位。若仅做敏感度演示并暂时固定前端与处置数值，把因子改为0.1，则A=3.2、B=5.7，排序反转。现实能源系统变化也可能影响上游制造数据，因此这种单变量敏感度不等于完整现实情景重算。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先给两个方案同一个照明任务，再把各阶段数据放进同一边界，最后只对明确的气候变化指标进行比较。",
+        "diagramTitle": "制造阶段A更低，为什么1000小时照明后B反而可能更低",
+        "diagramSteps": [
+          "固定功能单位：两款灯都提供同等桌面照明1000小时",
+          "采用预先折算的阶段气候影响：A前端1、B前端5，任务结束处置两者各0.2 kg CO2e",
+          "计算使用清单：A 20 W对应20 kWh，B 5 W对应5 kWh",
+          "采用项目确认的0.5 kg CO2e/kWh因子，得到A=11.2、B=7.7 kg CO2e/功能单位",
+          "将0.1因子作为固定其他教学数据的敏感度对照，得到A=3.2、B=5.7，并说明结果依赖假设"
+        ],
+        "diagramStepNotes": [
+          "功能单位先保持相同，否则功率或排放数字不能公平代表同一种服务。",
+          "1、5和0.2 kg CO2e已是折算后的气候影响，非原始排放清单；末端值是任务结束时的假定分摊。",
+          "功率与用电量属于清单信息；电力排放因子用于把用电转成这里讨论的气候变化影响。",
+          "0.5是本故事项目最终采用的教学情景，因此当前采购方案选择B。",
+          "0.1敏感度演示有意固定前端和处置数值；现实电网或供应链改变时，上游阶段也可能改变，不能把该简化对照当完整预测。"
+        ],
+        "mapping": [
+          "1000小时同等桌面照明 → 两款灯共同的功能单位。",
+          "1与5 kg CO2e → 预先折算的原料、制造和运输阶段气候影响，不是原始清单流。",
+          "20 kWh与5 kWh → 两款灯完成同一任务的使用阶段电量。",
+          "11.2与7.7 kg CO2e → 在0.5因子和约定边界下的单一气候变化指标结果。",
+          "0.1因子下排序反转 → 检查结论对关键假设敏感性的对照。"
+        ],
+        "boundary": "本篇只展示生命周期思维中的目标与范围、功能单位、清单、影响评价和解释的入门关系，并只计算气候变化这一项指标。它不是完整ISO符合性声明，也没有计算生态毒性、水压力等其他影响。所有灯具数据均为教学虚构。系统边界、寿命、损耗、分配、电力系统和数据代表性改变时，结果可能变化；单一碳指标不能自动转化为总体环境优劣。",
+        "reflection": "若其他阶段数据和1000小时服务假设不变，只把用电排放因子设为0.2 kg CO2e/kWh，A和B的气候影响各是多少？这个结果能证明所有环境影响都更低吗？"
+      },
+      "referencesZh": [
+        {
+          "id": "iso14040-2006",
+          "citation": "International Organization for Standardization. (2006). ISO 14040:2006, Environmental management — Life cycle assessment — Principles and framework (2nd ed.).",
+          "url": "https://www.iso.org/standard/37456.html",
+          "use": "支持生命周期评价包含目标和范围、生命周期清单、生命周期影响评价及解释等阶段，并强调报告、限制和审查等框架内容；本篇只依据公开摘要使用这些高层概念，不声称示例符合完整ISO标准条款。"
+        },
+        {
+          "id": "epa-lca-2006",
+          "citation": "Scientific Applications International Corporation. (2006). Life Cycle Assessment: Principles and Practice. EPA/600/R-06/060. U.S. Environmental Protection Agency, Office of Research and Development.",
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1000L86.TXT",
+          "use": "支持将目标与范围、清单、影响评价和解释分开，并支持比较方案时采用相同功能单位或等量服务、明确系统边界和数据代表性；不把该资料当作具体灯具排放数据或产品认证。"
+        },
+        {
+          "id": "iso-unido-lca-cfp-2024",
+          "citation": "International Organization for Standardization & United Nations Industrial Development Organization. (2024). Global programme for hydrogen in industry: Guide on ISO/TS 19870, section 4, pp. 18–19.",
+          "url": "https://www.iso.org/files/live/sites/isoorg/files/store/en/PUB100493.pdf",
+          "use": "支持区分可涵盖多个环境影响类别的LCA与只关注温室气体的碳足迹范围，并支持在目标与范围阶段确定功能单位和系统边界；本篇只借用这些一般概念，不套用氢专题方法或数据。"
+        }
+      ],
+      "title": "The Ledger for Two Lamps",
+      "summary": "A reading room needs lamps for its new desks. One option has a lower climate impact from manufacturing and transport; Cheng Lan still has to check whether the comparison changes after both provide the same hours of light.",
+      "storyParagraphs": [
+        "A shared reading room needs a lamp for its new desks, and Cheng Lan must choose the current procurement option from two samples. Under the agreed installation conditions, both have been checked to provide the same desk lighting; the comparison assumes each lasts 1000 hours without replacement. The table expresses greenhouse-gas impacts as carbon dioxide equivalent (CO2e): raw materials, manufacturing and transport together account for 1 kg CO2e for A and 5 kg for B. “Then isn’t it A?” the procurement colleague asks.",
+        "Cheng Lan does not immediately move A into the procurement area. On the comparison sheet, A is rated at 20 W and needs 20 kWh of electricity over 1000 hours; B is rated at 5 W and needs 5 kWh. She writes an estimated disposal impact of 0.2 kg CO2e for each lamp at the end of the task in the rightmost column.",
+        "The venue is still confirming which life-cycle electricity emission factor should be used for the use phase in this project. Cheng Lan first calculates the candidate condition of 0.5 kg CO2e/kWh. A's use phase contributes 20×0.5=10, giving a total of 1+10+0.2=11.2 kg CO2e. B's use phase contributes 5×0.5=2.5, giving 5+2.5+0.2=7.7. A, which had looked better from the front-end figures alone, now ranks behind B under this set of conditions.",
+        "She holds the table’s front-end figures of 1 and 5 and both disposal estimates of 0.2 fixed for a moment, changing only the use-phase electricity emission factor to 0.1. A becomes 3.2 and B 5.7 kg CO2e, reversing the ranking again. “The electricity data aren’t confirmed yet,” Cheng Lan says. “This table can’t decide for us today.”",
+        "The next day, the venue confirms an electricity factor of 0.5 kg CO2e/kWh for the project’s climate comparison. Cheng Lan puts B into the current procurement plan and leaves A on the sample shelf for other use observations. B’s front-end impact is higher, but over the agreed 1000 hours its total for this climate indicator, 7.7, is lower than 11.2. The procurement colleague takes sample B to the first reading desk and switches it on."
+      ],
+      "overall": "This article uses two fictional lamps to introduce one aspect of life-cycle assessment: environmental comparisons first require the same functional unit and a defined system boundary, then an inventory of the relevant stages, followed by assessment and interpretation within a clearly specified impact category. The example calculates only one climate-change indicator and does not represent a complete multi-impact LCA or an overall claim that one product is universally “greener.”",
+      "conceptName": "Life-cycle assessment",
+      "explanationParagraphs": [
+        "The functional unit is “providing the same desk lighting for 1000 hours”; the example assumes both lamps complete that service without replacement. A life-cycle inventory normally records original flows of materials, energy and individual emissions. This example supplies electricity-use activity data: 20 W×1000 h=20 kWh and 5 W×1000 h=5 kWh. The front-end 1 and 5, and disposal 0.2 kg CO2e, are pre-characterized stage climate impacts, not raw inventory flows; the missing upstream emissions inventory has not been reconstructed here. The stage results use the same functional unit, climate indicator and time horizon, with non-overlapping boundaries.",
+        "The electricity life-cycle emission factor is then applied for the climate-change indicator. At 0.5 kg CO2e/kWh, A=1+20×0.5+0.2=11.2 and B=5+5×0.5+0.2=7.7 kg CO2e per functional unit. In a sensitivity demonstration that temporarily holds the front-end and disposal values fixed while changing only the factor to 0.1, A=3.2 and B=5.7, reversing the ranking. In reality, a change in the energy system can also affect upstream manufacturing data, so this single-variable sensitivity exercise is not a complete recalculation of a real-world scenario."
+      ],
+      "module": {
+        "intro": "Give both options the same lighting task first, place stage-specific data inside the same system boundary, and then compare only the clearly defined climate-change indicator.",
+        "diagramTitle": "If A Is Lower at the Manufacturing Stage, Why Can B Be Lower After 1000 Hours of Lighting?",
+        "diagramSteps": [
+          "Fix the functional unit: both lamps provide the same desk lighting for 1000 hours",
+          "Use pre-characterized stage climate impacts: front-end 1 for A and 5 for B, plus 0.2 kg CO2e each for end-of-task disposal",
+          "Calculate the use-phase energy inventory: A at 20 W uses 20 kWh and B at 5 W uses 5 kWh",
+          "Apply the project-confirmed factor of 0.5 kg CO2e/kWh to obtain A=11.2 and B=7.7 kg CO2e per functional unit",
+          "Use 0.1 as a sensitivity comparison while holding the other teaching values fixed, obtaining A=3.2 and B=5.7, and note that the result depends on assumptions"
+        ],
+        "diagramStepNotes": [
+          "The functional unit is kept the same first; otherwise power or emissions figures would not represent an equal service comparison.",
+          "The 1, 5 and 0.2 kg CO2e figures are characterized climate impacts, not raw emission inventories; the end value is an assumed allocation at the end of the task.",
+          "Power and electricity use are inventory information; the electricity emission factor is used to convert use-phase electricity into the climate-change impact discussed here.",
+          "The 0.5 factor is the teaching scenario ultimately adopted for this story's project, so B is selected for the current procurement plan.",
+          "The 0.1 sensitivity demonstration deliberately keeps front-end and disposal values fixed; in reality, changes in the grid or supply chain can also alter upstream stages, so the simplified comparison is not a complete forecast."
+        ],
+        "mapping": [
+          "1000 hours of equal desk lighting → the common functional unit for the two lamps.",
+          "1 and 5 kg CO2e → pre-characterized raw-material, manufacturing and transport climate impacts, not raw inventory flows.",
+          "20 kWh and 5 kWh → the use-phase electricity required by the two lamps for the same task.",
+          "11.2 and 7.7 kg CO2e → the single climate-change-indicator results under the 0.5 factor and the agreed boundary.",
+          "Ranking reversal under the 0.1 factor → a sensitivity check showing dependence on a key assumption."
+        ],
+        "boundary": "This article only introduces the relationship among goal and scope, functional unit, inventory, impact assessment, and interpretation in life-cycle thinking, and it calculates only one climate-change indicator. It is not a complete ISO conformity claim and does not calculate other impacts such as ecotoxicity or water stress. All lamp values are fictional teaching data. Results can change if the system boundary, lifetime, losses, allocation, electricity system, or data representativeness changes. A single carbon indicator cannot automatically be converted into a conclusion about overall environmental superiority.",
+        "reflection": "Keep the other stage values and the 1000-hour service assumption fixed, but set the electricity emission factor to 0.2 kg CO2e/kWh. What is each lamp’s climate impact? Does that establish that every environmental impact is lower?"
+      },
+      "references": [
+        {
+          "id": "iso14040-2006",
+          "citation": "International Organization for Standardization. (2006). ISO 14040:2006, Environmental management — Life cycle assessment — Principles and framework (2nd ed.).",
+          "url": "https://www.iso.org/standard/37456.html",
+          "use": "Supports the high-level life-cycle assessment framework of goal and scope, life-cycle inventory, life-cycle impact assessment, and interpretation, together with reporting, limitations, and review. This article uses only the concepts supported by the public ISO summary and does not claim that the example conforms to the full ISO standard."
+        },
+        {
+          "id": "epa-lca-2006",
+          "citation": "Scientific Applications International Corporation. (2006). Life Cycle Assessment: Principles and Practice. EPA/600/R-06/060. U.S. Environmental Protection Agency, Office of Research and Development.",
+          "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1000L86.TXT",
+          "use": "Supports separating goal and scope, inventory, impact assessment, and interpretation, and supports comparing alternatives using the same functional unit or equivalent service while making system boundaries and data representativeness explicit. It is not used as a source of actual lamp emissions data or product certification."
+        },
+        {
+          "id": "iso-unido-lca-cfp-2024",
+          "citation": "International Organization for Standardization & United Nations Industrial Development Organization. (2024). Global programme for hydrogen in industry: Guide on ISO/TS 19870, section 4, pp. 18–19.",
+          "url": "https://www.iso.org/files/live/sites/isoorg/files/store/en/PUB100493.pdf",
+          "use": "Supports distinguishing LCA, which can cover multiple environmental impact categories, from a carbon-footprint scope focused on greenhouse gases, and supports defining the functional unit and system boundary during goal and scope definition. This article uses only those general concepts and does not apply hydrogen-specific methods or data to the lamp example."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-23-preparation/group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-23-preparation/group1-edit-pass1-evidence.json",
+          "engineering-reader-first-23-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
       }
     }
   ]

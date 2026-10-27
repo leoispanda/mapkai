@@ -18580,47 +18580,137 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0712",
     "fieldTitle": "Environmental protection technology",
     "fieldTitleZh": "环境保护技术",
-    "title": "The Chimney That Kept Growing",
-    "titleZh": "越修越高的烟囱",
-    "summary": "A kiln yard answers every smoke complaint by raising its chimney, until soot falling on a distant reservoir returns in the whole city's drinking water.",
-    "summaryZh": "窑场每收到一次烟尘投诉就把烟囱加高，直到落在远处水库上的黑灰又被全城喝了回来。",
-    "storyParagraphs": [
-      "While the imperial kiln rushed to make roof tiles for a new palace, black smoke settled on nearby washing lines. Stopping the furnaces would miss the deadline, so the kiln master raised the chimney by thirty feet. The air beside the yard became clean, and he pointed to the blue sky and said the problem had travelled away with the wind. The taller stack let the kiln meet the palace deadline and moved complaints beyond the workers' own street.",
-      "Two weeks later, orchard growers from the eastern fields arrived with soot-marked pears. The master raised the chimney another thirty feet. Smoke crossed the orchards and fell on villages beyond the hill. Later, a north wind carried fine ash into the reservoir, and the next morning every water jar in the city had a black rim. The chimney was now visible from outside the city; no one could claim the ash belonged elsewhere. Each extension reduced local concentration under one wind yet left total emissions unchanged and shifted exposure elsewhere.",
-      "The kiln chief wanted another extension because stopping production would trigger a contract penalty. The young kiln worker accepted responsibility for three lost days and opened the process instead. She measured coal moisture, air leakage, and powder loss at charging. The largest plume coincided with wet fuel and sudden feeding, not with a shortage of chimney height. Trial burns recorded fuel per tile, visible smoke, recovered powder, and stack samples, so a pale plume could not substitute for measured reduction.",
-      "A young kiln engineer stopped one furnace and opened its feed system and doors. She found damp, smoky coal, cracks drawing unwanted air, and glaze powder swept away whenever material was charged. The master urged her to add one more section to the chimney. Instead, she put three days of delay under her own name, changed to dry coal, sealed the doors, altered the charging chute, and collected the remaining dust at the outlet. The kiln missed its bonus, but fuel use and recoverable glaze loss also fell. Workers monitored the remaining stack emissions instead of declaring prevention perfect. Dry-fuel storage and a slower feed gate required capital and reduced peak output, costs the chief had avoided by extending the chimney.",
-      "When firing resumed three days later, the same number of tiles used less coal and produced lighter smoke. The outlet equipment remained because some residue was unavoidable, but it was no longer being asked to handle the dense stream previously created by the process itself. They ranked actions: avoid generation, reduce it, recover material, then treat and safely dispose of what remained.",
-      "The master ordered the newest bricks removed from the top of the chimney. They were not discarded. Workers carried them to the furnaces and built them into the door frames that had once leaked air. When the final brick was laid, the mason's palms were still red."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "印刷机旁的空架子",
+    "summaryZh": "周静每周都要交付一百张活动标签，印刷机旁的废纸箱却总是装得很快。她原本打算扩大回收区，开机前的一次调整让她重新安排了时间。",
     "storyParagraphsZh": [
-      "官窑赶制新宫瓦时，黑烟落满附近晾衣绳。停窑会误了限期，窑长便把烟囱加高三丈。窑边的空气果然干净了，他指着蓝天说，问题已经随风走远。高烟囱让窑场按时交宫瓦，也把投诉移出工人自己居住的街区。",
-      "半个月后，东郊果农带着沾灰的梨来告状。窑长又加高三丈，烟越过果园，落到山后的村子。再后来，一场北风把细灰送进水库，第二天城里的水缸都浮着一圈黑边。烟囱已经高得能从城外看见，谁也不能再说那些灰不属于官窑。每次加高只在一种风向下降低近处浓度，总排放不变，暴露地点却继续转移。",
-      "窑长因停产会触发罚款，坚持继续接高。年轻窑师愿承担停工三日，转而打开生产过程。她测煤的含水、炉门漏风和投料粉损，发现最大烟团总同湿煤与突然投料同时出现，并非烟囱还不够高。试烧同时记录每片瓦耗煤、可见烟、回收粉与烟道样本，不能让颜色变淡代替总量测量。",
-      "年轻窑师停下一座窑，拆开进料和炉门。她找到受潮冒烟的煤、漏风的裂缝，以及每次投料时被气流卷走的釉粉。窑长催她先把烟囱再接一段，她却把三天工期写在自己名下，换干煤、封炉门、改投料槽，并在出口收集剩下的粉尘。窑场失去按期奖金，耗煤与可回收釉粉损失也一同下降。工人仍监测烟囱残余排放，不把源头减量说成彻底消失。干煤仓和缓慢投料闸需要投资，也降低峰值产量；这些正是窑长此前靠接高烟囱躲开的成本。",
-      "三天后复烧，同样数量的瓦用了更少的煤，烟也淡了。出口装置仍然保留，因为不可能一点残余都没有；可它处理的已不再是原先那股不断被制造出来的浓烟。众人把行动排成次序：先避免产生，再减量与回收，最后处理并安全处置无法避免的残余。",
-      "窑长命人拆下烟囱最上面的新砖。那些砖没有丢掉，而是被运到炉前，砌进了原本漏风的门框。最后一块砖落下时，砌砖人的手掌仍是红的。"
+      "社区印刷室每周都要给活动中心交100张整版活动标签，每张合格标签用一张同规格纸印制，不拼版。周静最近最常搬的却是机器旁的废纸箱。旧工艺每批领130张纸，100张印成合格标签，另外30张成为废纸，包括试印错位、套印调整和收尾清理用掉的纸。",
+      "多领一些纸并不是谁做错了。机器状态每天都会有小变化，过去边走纸边调整很直接，前面即使废掉几张，后面还有足够纸把100张合格标签做出来。周静原本想把外部回收区再腾大一点，直到有一次开机前，她先多花了一段准备时间，把两组印版的位置校到更接近目标，再开始正式走纸。",
+      "这一轮仍要交同样100张合格标签。结束时，记录上领用115张纸：100张各印成一张合格标签，另外15张是试印和收尾清理产生的废纸。操作员把最后一张废纸放进箱里，顺手掂了掂：“这次确实轻多了。”",
+      "周静没有撤掉废纸箱。那15张废纸照旧送去外部回收。她改了下周的开机安排：先给校准留出时间，再开始印那100张标签。准备会慢一些，操作员要更仔细；机器状态每天不同，下周领纸仍得看实际记录。",
+      "下午，活动中心的人把装着100张标签的纸盒抱走。清洁人员随后拎走废纸箱，原本准备扩回收区用的空架子则被周静推回机器旁，放上了校准工具。她在下周的排班表上，给开机前的准备多留了一格。"
     ],
-    "conceptName": "Source control",
+    "overallZh": "本篇用相同合格产出下的纸张平衡说明源头控制的一个入口：通过改变材料、设备或生产步骤，在废物进入废物流之前减少其产生，与对已经产生的残余物进行回收或末端处理是不同阶段的动作。两者可以同时存在。",
     "conceptNameZh": "源头控制",
-    "explanationParagraphs": [
-      "Source control changes materials, equipment, or operations before pollution or waste is created, preventing or reducing its formation. A taller chimney changes where pollutants disperse without reducing their total amount. End-of-pipe treatment remains useful for unavoidable residual emissions. In practice, prevention and reduction generally come first, followed by recovery or reuse, then treatment and safe disposal of what remains."
-    ],
     "explanationParagraphsZh": [
-      "源头控制优先在污染或废物产生之前改变材料、设备与操作，以避免或减少其形成。加高烟囱只改变污染物的扩散位置，并未减少总量；末端治理则适合处理无法避免的剩余排放。实践中通常先预防和减量，再回收利用，最后对残余进行处理与安全处置。"
+      "比较是否真正减少废物，需要保持产出和统计边界可比。本例每张整版合格标签用一张同规格纸印制，两次都交付100张，并把试印、调整和清理纸计入同一口径。旧工艺130张纸=100张合格成品纸+30张废纸；新工艺115=100+15。教学设定中没有其他纸张进出或库存变化。",
+      "因此在这个边界内，每100张合格标签对应的纸张废物由30张降到15张，减少(30-15)/30=50%。这个50%只描述本例纸张废物，不表示化学污染、毒性、生命周期影响或工人暴露也下降50%；剩余15张仍需适当管理。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先固定相同合格产出和纸张统计口径，再区分‘少产生废纸’与‘已经产生后怎么处理’。",
+      "diagramTitle": "同样交付100张标签，为什么先校准能把废纸从30张降到15张",
+      "diagramSteps": [
+        "旧工艺每批领用130张同规格纸，交付100张合格标签；每张合格纸对应一张标签",
+        "其余30张全部进入废纸口径，其中已经包括试印、套印调整和收尾清理用纸",
+        "新工艺先增加一次印版校准，再开始正式走纸",
+        "新工艺领用115张：100张各印一张合格标签，15张进入同一废纸口径",
+        "残余15张继续外送回收，同时下一轮排班保留前置校准时间"
+      ],
+      "diagramStepNotes": [
+        "两次都交付100张合格标签；每张合格纸是一张整版标签，避免把不同单位直接相加。",
+        "30张已经完整包含本批所有计入范围的试印和清理纸，不能再额外加一遍。",
+        "前置校准会增加准备时间和操作要求，因此源头减量并非没有成本。",
+        "115张纸=100张合格成品纸+15张废纸；本批假定没有其他纸张进出或库存变化。",
+        "这里明确讨论的是产生后的外部回收；其他工艺内循环是否计入源头预防需按具体定义和边界判断，不能一概而论。"
+      ],
+      "mapping": [
+        "130张与115张领用量 → 同样100张整版合格标签所需的两种纸张投入，每张成品纸印一张标签。",
+        "30张与15张废纸 → 同一统计边界中的纸张废物流。",
+        "开机前校准 → 废物产生之前改变生产步骤的动作。",
+        "保留的回收箱 → 已产生残余废纸仍需要后续管理。"
+      ],
+      "boundary": "本篇只证明虚构印刷边界内的纸张废物在一次可比教学对照中减少。源头减量不能用减产、漏记、稀释、转移废物或只改变排放位置来冒充。更少纸张废物也不能自动证明其他污染物、危害、生命周期影响或工人暴露下降。EPA提出的预防层级还受法律、技术可行性、风险和成本等条件影响，并非任何情况下的绝对排序。",
+      "reflection": "如果下一次仍只产生15张废纸，但原因是只交付了50张合格标签，为什么不能直接说过程相对于本篇又实现了同样的源头减量？"
+    },
+    "referencesZh": [
+      {
+        "id": "epa1992-pollution-prevention-definition",
+        "citation": "Habicht, F. H., II. (1992, May 28). EPA Definition of “Pollution Prevention.” Memorandum to EPA Personnel. U.S. Environmental Protection Agency.",
+        "url": "https://www.epa.gov/sites/default/files/2014-09/documents/pollprev.pdf",
+        "use": "支持源头减量通过材料、设备或生产步骤改变，在污染物或废物进入废物流之前减少其产生，并区分其与后续回收、处理和处置；同时保留法律、可行性、风险和成本等条件。本篇纸张示例只说明材料废物预防，不声称有毒排放同步下降。"
+      },
+      {
+        "id": "epa1997-production-adjusted-p2",
+        "citation": "Malkin, M., Baskir, J., & Greiner, T. J. (1997, September). Developing and Using Production-Adjusted Measurements of Pollution Prevention. EPA/600/R-97/048. U.S. Environmental Protection Agency.",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30003JQ6.txt",
+        "use": "支持使用按单位产品调整的指标区分工艺改进与产量变化，并强调测量假设和边界。本篇因此固定100张合格标签作为共同产出；示例数字为虚构教学值，不来自该EPA文件。"
+      }
+    ],
+    "title": "The Empty Rack Beside the Press",
+    "summary": "Zhou Jing must deliver one hundred event labels each week, but the waste-paper bin beside the press fills quickly. She plans to expand the recycling area until an adjustment before printing changes how she schedules the work.",
+    "storyParagraphs": [
+      "Every week, the community print room must deliver 100 full-sheet event labels to the activity centre. Each acceptable label is printed on one whole sheet of the same paper, with no multiple labels on a sheet. Lately Zhou Jing moves the waste-paper bin beside the press more often than the finished box. The old process issues 130 sheets per batch: 100 become acceptable labels and 30 become waste, including misregistered test prints, registration adjustment and cleanup sheets.",
+      "Taking extra paper was not evidence that someone had done something wrong. The machine changes slightly from day to day, and adjusting while feeding sheets through was direct and convenient. Even if several early sheets were lost, enough remained to complete the 100 acceptable labels. Zhou Jing had originally planned to free up more space in the external recycling area, until one startup when she spent extra preparation time aligning the two printing plates closer to their target positions before feeding the production sheets.",
+      "This run must still deliver 100 acceptable labels. The record shows 115 sheets issued: 100 each become one acceptable label, and the other 15 are waste from test printing and final cleanup. The operator drops the last waste sheet into the bin and lifts it slightly. “This one really is lighter today.”",
+      "Zhou Jing keeps the waste bin, and the 15 discarded sheets still go to external recycling. She changes next week’s startup schedule instead: allow time for calibration first, then print the 100 labels. Preparation will be slower and the operator must check more carefully. The machine changes from day to day, so next week’s paper needs still have to be recorded.",
+      "That afternoon, the activity centre collects the box of 100 labels, and the cleaner carries away the waste-paper bin. Zhou Jing pushes the empty rack she had planned to use for the recycling area back beside the press and puts the calibration tools on it. On next week’s schedule, she gives startup preparation an extra slot."
+    ],
+    "overall": "This article uses a paper balance at the same acceptable output to introduce one aspect of source control: changing materials, equipment, or production steps to reduce waste before it enters the waste stream is a different stage of action from recycling or treating residual material after it has already been generated. Both can still be necessary at the same time.",
+    "conceptName": "Source control",
+    "explanationParagraphs": [
+      "To compare waste fairly, keep output and the accounting boundary comparable. Here each full-sheet acceptable label uses one sheet of the same paper, and both runs deliver 100. Test-print, adjustment and cleanup sheets are counted in the same boundary. The old process balances 130 sheets = 100 acceptable finished sheets + 30 waste sheets; the new one balances 115=100+15. The teaching example assumes no other paper flows or inventory changes.",
+      "Within this boundary, paper waste per 100 acceptable labels falls from 30 sheets to 15 sheets, a reduction of (30-15)/30=50%. That 50% describes only paper waste in this example; it does not mean chemical pollution, toxicity, life-cycle impacts, or worker exposure also fell by 50%. The remaining 15 waste sheets still require appropriate management."
+    ],
+    "module": {
+      "intro": "Hold acceptable output and the paper-accounting boundary constant, then distinguish between generating less waste and managing waste after it has already been created.",
+      "diagramTitle": "With the Same 100 Acceptable Labels, Why Can Pre-Calibration Reduce Waste Paper from 30 Sheets to 15?",
+      "diagramSteps": [
+        "Issue 130 sheets under the old process and deliver 100 acceptable labels, with one label per acceptable sheet",
+        "The remaining 30 sheets all enter the waste-paper boundary, already including test prints, registration adjustment, and final cleanup paper",
+        "Under the new process, add a printing-plate calibration step before feeding production sheets",
+        "Issue 115 sheets: 100 each make an acceptable label and 15 enter the same waste-paper boundary",
+        "Continue external recycling for the residual 15 sheets while reserving calibration time in the next production schedule"
+      ],
+      "diagramStepNotes": [
+        "Both runs deliver 100 acceptable labels, with one full-sheet label per acceptable sheet, so the paper balance uses consistent units.",
+        "The 30 sheets already include every setup and cleanup sheet counted within this batch boundary and must not be added again.",
+        "Pre-calibration requires additional preparation time and operator attention, so source reduction is not cost-free.",
+        "115 sheets = 100 acceptable finished sheets + 15 waste sheets; the batch assumes no other paper flows or inventory changes.",
+        "This story explicitly describes external recycling after waste generation. Whether an internal process loop counts as prevention depends on the specific definition and boundary and cannot be generalized from this example."
+      ],
+      "mapping": [
+        "130 and 115 input sheets → two paper inputs for the same 100 full-sheet acceptable labels, one per finished sheet.",
+        "30-sheet and 15-sheet waste amounts → paper waste streams measured within the same accounting boundary.",
+        "Pre-start calibration → a production-step change made before waste is generated.",
+        "Retained recycling bin → residual waste that has already been generated still requires downstream management."
+      ],
+      "boundary": "This article demonstrates only that paper waste falls within one fictional print-process boundary in one comparable teaching example. Source reduction cannot be established merely by reducing output, omitting records, diluting or transferring waste, or moving the discharge point. Less paper waste also does not automatically prove lower levels of other pollutants, hazards, life-cycle impacts, or worker exposure. EPA's prevention hierarchy is also conditioned by law, technical feasibility, risk, and cost rather than being an absolute ranking in every circumstance.",
+      "reflection": "If a later run also produces only 15 waste sheets but delivers only 50 acceptable labels, why can that result not be used directly to claim the same source reduction achieved in this article?"
+    },
+    "references": [
+      {
+        "id": "epa1992-pollution-prevention-definition",
+        "citation": "Habicht, F. H., II. (1992, May 28). EPA Definition of “Pollution Prevention.” Memorandum to EPA Personnel. U.S. Environmental Protection Agency.",
+        "url": "https://www.epa.gov/sites/default/files/2014-09/documents/pollprev.pdf",
+        "use": "Supports source reduction through changes to materials, equipment, or production steps that reduce pollutants or waste before they enter waste streams, and distinguishes this from subsequent recycling, treatment, and disposal while retaining legal, feasibility, risk, and cost qualifications. The fictional paper example demonstrates material-waste prevention only and does not claim that toxic releases also decline."
+      },
+      {
+        "id": "epa1997-production-adjusted-p2",
+        "citation": "Malkin, M., Baskir, J., & Greiner, T. J. (1997, September). Developing and Using Production-Adjusted Measurements of Pollution Prevention. EPA/600/R-97/048. U.S. Environmental Protection Agency.",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30003JQ6.txt",
+        "use": "Supports using unit-of-product or production-adjusted measures to distinguish process improvements from changes in production output, while making measurement assumptions and boundaries explicit. This article therefore fixes 100 acceptable labels as the common output; its numerical example is fictional and does not come from the EPA document."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-23-preparation/group1-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-23-preparation/group1-edit-pass1-evidence.json",
+        "engineering-reader-first-23-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "While the imperial kiln rushed to make roof tiles for a new palace, black smoke settled on nearby washing lines. Stopping the furnaces would miss the deadline, so the kiln master raised the chimney by thirty feet. The air beside the yard became clean, and he pointed to the blue sky and said the problem had travelled away with the wind. The taller stack let the kiln meet the palace deadline and moved complaints beyond the workers' own street.\n\nTwo weeks later, orchard growers from the eastern fields arrived with soot-marked pears. The master raised the chimney another thirty feet. Smoke crossed the orchards and fell on villages beyond the hill. Later, a north wind carried fine ash into the reservoir, and the next morning every water jar in the city had a black rim. The chimney was now visible from outside the city; no one could claim the ash belonged elsewhere. Each extension reduced local concentration under one wind yet left total emissions unchanged and shifted exposure elsewhere.\n\nThe kiln chief wanted another extension because stopping production would trigger a contract penalty. The young kiln worker accepted responsibility for three lost days and opened the process instead. She measured coal moisture, air leakage, and powder loss at charging. The largest plume coincided with wet fuel and sudden feeding, not with a shortage of chimney height. Trial burns recorded fuel per tile, visible smoke, recovered powder, and stack samples, so a pale plume could not substitute for measured reduction.\n\nA young kiln engineer stopped one furnace and opened its feed system and doors. She found damp, smoky coal, cracks drawing unwanted air, and glaze powder swept away whenever material was charged. The master urged her to add one more section to the chimney. Instead, she put three days of delay under her own name, changed to dry coal, sealed the doors, altered the charging chute, and collected the remaining dust at the outlet. The kiln missed its bonus, but fuel use and recoverable glaze loss also fell. Workers monitored the remaining stack emissions instead of declaring prevention perfect. Dry-fuel storage and a slower feed gate required capital and reduced peak output, costs the chief had avoided by extending the chimney.\n\nWhen firing resumed three days later, the same number of tiles used less coal and produced lighter smoke. The outlet equipment remained because some residue was unavoidable, but it was no longer being asked to handle the dense stream previously created by the process itself. They ranked actions: avoid generation, reduce it, recover material, then treat and safely dispose of what remained.\n\nThe master ordered the newest bricks removed from the top of the chimney. They were not discarded. Workers carried them to the furnaces and built them into the door frames that had once leaked air. When the final brick was laid, the mason's palms were still red.",
-    "storyBodyZh": "官窑赶制新宫瓦时，黑烟落满附近晾衣绳。停窑会误了限期，窑长便把烟囱加高三丈。窑边的空气果然干净了，他指着蓝天说，问题已经随风走远。高烟囱让窑场按时交宫瓦，也把投诉移出工人自己居住的街区。\n\n半个月后，东郊果农带着沾灰的梨来告状。窑长又加高三丈，烟越过果园，落到山后的村子。再后来，一场北风把细灰送进水库，第二天城里的水缸都浮着一圈黑边。烟囱已经高得能从城外看见，谁也不能再说那些灰不属于官窑。每次加高只在一种风向下降低近处浓度，总排放不变，暴露地点却继续转移。\n\n窑长因停产会触发罚款，坚持继续接高。年轻窑师愿承担停工三日，转而打开生产过程。她测煤的含水、炉门漏风和投料粉损，发现最大烟团总同湿煤与突然投料同时出现，并非烟囱还不够高。试烧同时记录每片瓦耗煤、可见烟、回收粉与烟道样本，不能让颜色变淡代替总量测量。\n\n年轻窑师停下一座窑，拆开进料和炉门。她找到受潮冒烟的煤、漏风的裂缝，以及每次投料时被气流卷走的釉粉。窑长催她先把烟囱再接一段，她却把三天工期写在自己名下，换干煤、封炉门、改投料槽，并在出口收集剩下的粉尘。窑场失去按期奖金，耗煤与可回收釉粉损失也一同下降。工人仍监测烟囱残余排放，不把源头减量说成彻底消失。干煤仓和缓慢投料闸需要投资，也降低峰值产量；这些正是窑长此前靠接高烟囱躲开的成本。\n\n三天后复烧，同样数量的瓦用了更少的煤，烟也淡了。出口装置仍然保留，因为不可能一点残余都没有；可它处理的已不再是原先那股不断被制造出来的浓烟。众人把行动排成次序：先避免产生，再减量与回收，最后处理并安全处置无法避免的残余。\n\n窑长命人拆下烟囱最上面的新砖。那些砖没有丢掉，而是被运到炉前，砌进了原本漏风的门框。最后一块砖落下时，砌砖人的手掌仍是红的。",
-    "explanation": "Source control changes materials, equipment, or operations before pollution or waste is created, preventing or reducing its formation. A taller chimney changes where pollutants disperse without reducing their total amount. End-of-pipe treatment remains useful for unavoidable residual emissions. In practice, prevention and reduction generally come first, followed by recovery or reuse, then treatment and safe disposal of what remains.",
-    "explanationZh": "源头控制优先在污染或废物产生之前改变材料、设备与操作，以避免或减少其形成。加高烟囱只改变污染物的扩散位置，并未减少总量；末端治理则适合处理无法避免的剩余排放。实践中通常先预防和减量，再回收利用，最后对残余进行处理与安全处置。"
+    "storyBody": "Every week, the community print room must deliver 100 full-sheet event labels to the activity centre. Each acceptable label is printed on one whole sheet of the same paper, with no multiple labels on a sheet. Lately Zhou Jing moves the waste-paper bin beside the press more often than the finished box. The old process issues 130 sheets per batch: 100 become acceptable labels and 30 become waste, including misregistered test prints, registration adjustment and cleanup sheets.\n\nTaking extra paper was not evidence that someone had done something wrong. The machine changes slightly from day to day, and adjusting while feeding sheets through was direct and convenient. Even if several early sheets were lost, enough remained to complete the 100 acceptable labels. Zhou Jing had originally planned to free up more space in the external recycling area, until one startup when she spent extra preparation time aligning the two printing plates closer to their target positions before feeding the production sheets.\n\nThis run must still deliver 100 acceptable labels. The record shows 115 sheets issued: 100 each become one acceptable label, and the other 15 are waste from test printing and final cleanup. The operator drops the last waste sheet into the bin and lifts it slightly. “This one really is lighter today.”\n\nZhou Jing keeps the waste bin, and the 15 discarded sheets still go to external recycling. She changes next week’s startup schedule instead: allow time for calibration first, then print the 100 labels. Preparation will be slower and the operator must check more carefully. The machine changes from day to day, so next week’s paper needs still have to be recorded.\n\nThat afternoon, the activity centre collects the box of 100 labels, and the cleaner carries away the waste-paper bin. Zhou Jing pushes the empty rack she had planned to use for the recycling area back beside the press and puts the calibration tools on it. On next week’s schedule, she gives startup preparation an extra slot.",
+    "storyBodyZh": "社区印刷室每周都要给活动中心交100张整版活动标签，每张合格标签用一张同规格纸印制，不拼版。周静最近最常搬的却是机器旁的废纸箱。旧工艺每批领130张纸，100张印成合格标签，另外30张成为废纸，包括试印错位、套印调整和收尾清理用掉的纸。\n\n多领一些纸并不是谁做错了。机器状态每天都会有小变化，过去边走纸边调整很直接，前面即使废掉几张，后面还有足够纸把100张合格标签做出来。周静原本想把外部回收区再腾大一点，直到有一次开机前，她先多花了一段准备时间，把两组印版的位置校到更接近目标，再开始正式走纸。\n\n这一轮仍要交同样100张合格标签。结束时，记录上领用115张纸：100张各印成一张合格标签，另外15张是试印和收尾清理产生的废纸。操作员把最后一张废纸放进箱里，顺手掂了掂：“这次确实轻多了。”\n\n周静没有撤掉废纸箱。那15张废纸照旧送去外部回收。她改了下周的开机安排：先给校准留出时间，再开始印那100张标签。准备会慢一些，操作员要更仔细；机器状态每天不同，下周领纸仍得看实际记录。\n\n下午，活动中心的人把装着100张标签的纸盒抱走。清洁人员随后拎走废纸箱，原本准备扩回收区用的空架子则被周静推回机器旁，放上了校准工具。她在下周的排班表上，给开机前的准备多留了一格。",
+    "explanation": "To compare waste fairly, keep output and the accounting boundary comparable. Here each full-sheet acceptable label uses one sheet of the same paper, and both runs deliver 100. Test-print, adjustment and cleanup sheets are counted in the same boundary. The old process balances 130 sheets = 100 acceptable finished sheets + 30 waste sheets; the new one balances 115=100+15. The teaching example assumes no other paper flows or inventory changes.\n\nWithin this boundary, paper waste per 100 acceptable labels falls from 30 sheets to 15 sheets, a reduction of (30-15)/30=50%. That 50% describes only paper waste in this example; it does not mean chemical pollution, toxicity, life-cycle impacts, or worker exposure also fell by 50%. The remaining 15 waste sheets still require appropriate management.",
+    "explanationZh": "比较是否真正减少废物，需要保持产出和统计边界可比。本例每张整版合格标签用一张同规格纸印制，两次都交付100张，并把试印、调整和清理纸计入同一口径。旧工艺130张纸=100张合格成品纸+30张废纸；新工艺115=100+15。教学设定中没有其他纸张进出或库存变化。\n\n因此在这个边界内，每100张合格标签对应的纸张废物由30张降到15张，减少(30-15)/30=50%。这个50%只描述本例纸张废物，不表示化学污染、毒性、生命周期影响或工人暴露也下降50%；剩余15张仍需适当管理。"
   },
   {
     "id": "0712-life-cycle-assessment",
@@ -18629,47 +18719,151 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0712",
     "fieldTitle": "Environmental protection technology",
     "fieldTitleZh": "环境保护技术",
-    "title": "Before the Cup Held Tea",
-    "titleZh": "杯子在装茶以前",
-    "summary": "An innkeeper seeks the cleanest cup for serving tea and discovers that a cup's story begins before the tea and continues after the guest leaves.",
-    "summaryZh": "客栈老板想选出最清洁的茶杯，却发现一只杯子的故事早在装茶之前开始，也不会在客人喝完时结束。",
-    "storyParagraphs": [
-      "After the spring fair, the inn yard was piled with paper cups discarded after one use. The owner, Madam Qin, called them wasteful and immediately ordered five hundred thick ceramic cups from another province, each stamped 'the lasting choice' underneath. Their delivery required three heavy carts, and forty broke on the journey. She had not counted the firing of the cups or the wood and water needed to wash them each day. The purchase won public praise and a tax rebate, giving the owner little reason to question the label on the base.",
-      "The first month was worse. Travellers carried cups away without thinking, servers broke a batch, and the washroom heated water all day. The paper merchant said ceramic used more resources; the potter pointed to the rubbish pile and said paper had to be remade every day. They argued at the counter, each describing only the part of the journey that favoured his own goods. Washing shifted burdens to water and fuel; breakage and theft shortened the reuse count on which the choice depended.",
-      "The bookkeeper placed a pot of tea on the table. 'Are we comparing one cup,' he asked, 'or the serving of one hundred pots of tea?' Beginning with clay digging and tree cutting, he recorded manufacture, transport, use, washing, number of returns, and final destination. He kept fuel, water, breakage, and recovery in separate columns.",
-      "The inn could keep advertising one material as virtuous or fund a comparison across the full service. Qin surrendered the rebate until the claim was checked. The accountant chose a functional unit—serving one hundred pots of tea—then fixed system boundaries and gathered transport distance, kiln fuel, washing, loss rate, and end-of-life data. Missing values were shown as ranges, not convenient zeros. The supplier's data and the inn's measurements used the same units, preventing a light cup from winning only because one stage was omitted.",
-      "No cup won by its nature alone. If a ceramic cup was used twice, the burden of firing and transport was difficult to recover. With a small deposit, efficient shared washing, and dozens of uses, its cost per serving fell. Madam Qin used ceramic for guests staying at the inn. At the takeaway stall, where returns were uncertain, she kept light paper cups and required the supplier to collect them. They compared climate, water use, material demand, and waste rather than collapsing unlike impacts into one flattering score. Sensitivity tests showed the reuse count and washing method changed the result most.",
-      "At the end of summer, a traveller returned a ceramic cup and reclaimed his deposit. Madam Qin turned the cup over, carved one more mark beside the thirty-six fine scratches already on its base, and placed it back in the basin of hot water. The deposit system cost a clerk's time and a new wash rack, a practical price for reaching the reuse level assumed in the comparison."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "两盏灯的账",
+    "summaryZh": "阅读室要为新桌位选灯。程澜看到一款灯制造和运输阶段的气候影响较低，还要确认它亮满同样时长后，两款灯的比较会不会改变。",
     "storyParagraphsZh": [
-      "春市过后，客栈后院堆满用过即丢的纸杯。老板秦娘嫌它们浪费，立刻从外省订来五百只厚陶杯，还在杯底印上‘长久之选’。陶杯运到时用了三辆重车，途中碎了四十只；开窑烧杯和每日洗杯的柴水，她原先都没算。这笔采购赢得称赞和税款减免，杯底标签也让老板几乎没有理由继续追问。",
-      "头一个月更糟。赶路的客人顺手带走杯子，伙计摔破了一批，洗杯房整日烧水。纸杯商说陶杯反而更费，陶匠则指着垃圾堆说纸杯每天都要重做。两人争到柜台前，谁都只拿对自己有利的一段路说话。清洗把负担转向水与柴，破损和带走又缩短了选择所依赖的重复次数。",
-      "账房在桌上放了一壶茶，问：‘我们究竟比较一只杯子，还是比较把一百壶茶送到客人手里？’他从取土与伐木开始，依次记下制造、运输、使用、清洗、重复次数和最后去向，还把柴、水、破损与回收分别列开。",
-      "客栈可以继续把一种材料宣传成美德，也可以为整项服务做比较。秦娘在核实前退回减税。账房选定功能单位——供应一百壶茶——再固定系统边界，收集运输距离、窑火、清洗、损耗和最终去向数据；缺失值写成范围，不能方便地当作零。供应商资料与客栈测量统一单位，避免轻杯只因某阶段被漏算而获胜。",
-      "算过以后，没有哪只杯子天然获胜。陶杯若只用两次，前面的烧制和运输很难抵回；若押一枚小钱、集中清洗并用上几十次，每杯茶承担的耗费便会下降。秦娘给堂食客人用陶杯，难以收回杯子的外带摊仍用轻纸杯，并要求供应商回收。他们分别比较气候、水耗、材料需求与废弃物，不把不同影响压成一个讨喜总分。敏感性分析显示，使用次数与清洗方式最能改变结果。",
-      "夏末，一名旅人把陶杯送回柜台，取回押钱。秦娘翻过杯底，在原有的三十六道细划痕旁又刻了一道，然后把它放回热水盆。押金制度耗费一名书记的时间和一座新洗架，却让比较假设的重复次数真正有机会实现。"
+      "共享阅读室要给新桌位选一款灯，程澜负责在两只样灯里定下当前采购方案。两款灯在约定安装条件下核过，都能提供同样的桌面照明；比较假定两者都能用满1000小时而无需更换。表中把温室气体影响统一折算成二氧化碳当量（CO2e）：原料、制造和运输合计，A为1 kg CO2e，B为5 kg CO2e。采购同事指着表问：“那不是A吗？”",
+      "程澜没有马上把A移到采购区。比较表里，A功率20 W，亮1000小时需要20 kWh电；B功率5 W，需要5 kWh。她还把任务结束后每盏灯的处置影响估算为0.2 kg CO2e，写在表格最右边。",
+      "场地方当时还在确认本项目使用阶段应采用哪一组电力全生命周期排放因子。程澜先按候选条件0.5 kg CO2e/kWh计算：A的使用阶段是20×0.5=10，加上前端1和末端0.2，总计11.2 kg CO2e；B的使用阶段是5×0.5=2.5，加上前端5和末端0.2，总计7.7。只看前端时领先的A，在这一组条件下反而排到B后面。",
+      "她又把表里的前端数字1、5和两边的处置估计0.2暂时保持不动，只把使用阶段的电力排放因子换成0.1。A变为3.2，B为5.7 kg CO2e，排序又翻回A。“供电数据还没确认，”程澜说，“这张表现在还不能替我们决定。”",
+      "第二天，场地方确认本项目的气候影响比较采用0.5 kg CO2e/kWh。程澜把B放进当前采购方案，A留在样品架供其他使用观察。B的前端影响比A高，但在约定的1000小时和这一项气候指标下，总结果7.7低于11.2。采购同事把B样灯拿到第一张阅读桌上，按下了开关。"
     ],
-    "conceptName": "Life-cycle assessment",
+    "overallZh": "本篇用两款虚构灯具说明生命周期评价的一个入口：环境比较先要定义相同功能单位和系统边界，再建立各阶段清单，并将清单数据转入明确的影响类别后解释结果。示例只计算气候变化这一项指标，不代表完整多指标生命周期评价或总体“最环保”结论。",
     "conceptNameZh": "生命周期评价",
-    "explanationParagraphs": [
-      "Life-cycle assessment compares products or services against a defined functional unit, following raw-material extraction, manufacture, transport, use, maintenance, reuse, and final disposal. Energy, materials, and emissions are translated into environmental impact indicators. Results depend on system boundaries, data, reuse rates, and assumptions, so one stage or a 'reusable' label cannot decide the outcome. The story uses serving one hundred pots of tea as the common function needed for a fair comparison."
-    ],
     "explanationParagraphsZh": [
-      "生命周期评价以明确的功能单位比较产品或服务，从原料取得、制造和运输，一直追踪到使用、维护、重复利用与最终处置，并把能源、物料和排放转换为若干环境影响指标。结论取决于系统边界、数据、使用次数和假设，不能只凭某一阶段或‘可重复使用’标签判断。故事以供应一百壶茶为共同功能，才使不同杯子能够公平比较。"
+      "功能单位是“提供1000小时同等桌面照明”；本例假设两款灯都能完成这一服务且无需更换。生命周期清单通常记录材料、能源和各类排放等原始流量；本例给出使用阶段的电量活动数据：20 W×1000 h=20 kWh，5 W×1000 h=5 kWh。前端的1、5以及末端的0.2 kg CO2e则是事先折算好的阶段气候影响，不是原始清单；这里没有重建缺失的上游排放明细。各阶段采用相同功能单位、气候指标和时间尺度，范围互不重叠。",
+      "随后对气候变化指标应用电力全生命周期排放因子。0.5 kg CO2e/kWh时，A=1+20×0.5+0.2=11.2，B=5+5×0.5+0.2=7.7 kg CO2e/功能单位。若仅做敏感度演示并暂时固定前端与处置数值，把因子改为0.1，则A=3.2、B=5.7，排序反转。现实能源系统变化也可能影响上游制造数据，因此这种单变量敏感度不等于完整现实情景重算。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先给两个方案同一个照明任务，再把各阶段数据放进同一边界，最后只对明确的气候变化指标进行比较。",
+      "diagramTitle": "制造阶段A更低，为什么1000小时照明后B反而可能更低",
+      "diagramSteps": [
+        "固定功能单位：两款灯都提供同等桌面照明1000小时",
+        "采用预先折算的阶段气候影响：A前端1、B前端5，任务结束处置两者各0.2 kg CO2e",
+        "计算使用清单：A 20 W对应20 kWh，B 5 W对应5 kWh",
+        "采用项目确认的0.5 kg CO2e/kWh因子，得到A=11.2、B=7.7 kg CO2e/功能单位",
+        "将0.1因子作为固定其他教学数据的敏感度对照，得到A=3.2、B=5.7，并说明结果依赖假设"
+      ],
+      "diagramStepNotes": [
+        "功能单位先保持相同，否则功率或排放数字不能公平代表同一种服务。",
+        "1、5和0.2 kg CO2e已是折算后的气候影响，非原始排放清单；末端值是任务结束时的假定分摊。",
+        "功率与用电量属于清单信息；电力排放因子用于把用电转成这里讨论的气候变化影响。",
+        "0.5是本故事项目最终采用的教学情景，因此当前采购方案选择B。",
+        "0.1敏感度演示有意固定前端和处置数值；现实电网或供应链改变时，上游阶段也可能改变，不能把该简化对照当完整预测。"
+      ],
+      "mapping": [
+        "1000小时同等桌面照明 → 两款灯共同的功能单位。",
+        "1与5 kg CO2e → 预先折算的原料、制造和运输阶段气候影响，不是原始清单流。",
+        "20 kWh与5 kWh → 两款灯完成同一任务的使用阶段电量。",
+        "11.2与7.7 kg CO2e → 在0.5因子和约定边界下的单一气候变化指标结果。",
+        "0.1因子下排序反转 → 检查结论对关键假设敏感性的对照。"
+      ],
+      "boundary": "本篇只展示生命周期思维中的目标与范围、功能单位、清单、影响评价和解释的入门关系，并只计算气候变化这一项指标。它不是完整ISO符合性声明，也没有计算生态毒性、水压力等其他影响。所有灯具数据均为教学虚构。系统边界、寿命、损耗、分配、电力系统和数据代表性改变时，结果可能变化；单一碳指标不能自动转化为总体环境优劣。",
+      "reflection": "若其他阶段数据和1000小时服务假设不变，只把用电排放因子设为0.2 kg CO2e/kWh，A和B的气候影响各是多少？这个结果能证明所有环境影响都更低吗？"
+    },
+    "referencesZh": [
+      {
+        "id": "iso14040-2006",
+        "citation": "International Organization for Standardization. (2006). ISO 14040:2006, Environmental management — Life cycle assessment — Principles and framework (2nd ed.).",
+        "url": "https://www.iso.org/standard/37456.html",
+        "use": "支持生命周期评价包含目标和范围、生命周期清单、生命周期影响评价及解释等阶段，并强调报告、限制和审查等框架内容；本篇只依据公开摘要使用这些高层概念，不声称示例符合完整ISO标准条款。"
+      },
+      {
+        "id": "epa-lca-2006",
+        "citation": "Scientific Applications International Corporation. (2006). Life Cycle Assessment: Principles and Practice. EPA/600/R-06/060. U.S. Environmental Protection Agency, Office of Research and Development.",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1000L86.TXT",
+        "use": "支持将目标与范围、清单、影响评价和解释分开，并支持比较方案时采用相同功能单位或等量服务、明确系统边界和数据代表性；不把该资料当作具体灯具排放数据或产品认证。"
+      },
+      {
+        "id": "iso-unido-lca-cfp-2024",
+        "citation": "International Organization for Standardization & United Nations Industrial Development Organization. (2024). Global programme for hydrogen in industry: Guide on ISO/TS 19870, section 4, pp. 18–19.",
+        "url": "https://www.iso.org/files/live/sites/isoorg/files/store/en/PUB100493.pdf",
+        "use": "支持区分可涵盖多个环境影响类别的LCA与只关注温室气体的碳足迹范围，并支持在目标与范围阶段确定功能单位和系统边界；本篇只借用这些一般概念，不套用氢专题方法或数据。"
+      }
+    ],
+    "title": "The Ledger for Two Lamps",
+    "summary": "A reading room needs lamps for its new desks. One option has a lower climate impact from manufacturing and transport; Cheng Lan still has to check whether the comparison changes after both provide the same hours of light.",
+    "storyParagraphs": [
+      "A shared reading room needs a lamp for its new desks, and Cheng Lan must choose the current procurement option from two samples. Under the agreed installation conditions, both have been checked to provide the same desk lighting; the comparison assumes each lasts 1000 hours without replacement. The table expresses greenhouse-gas impacts as carbon dioxide equivalent (CO2e): raw materials, manufacturing and transport together account for 1 kg CO2e for A and 5 kg for B. “Then isn’t it A?” the procurement colleague asks.",
+      "Cheng Lan does not immediately move A into the procurement area. On the comparison sheet, A is rated at 20 W and needs 20 kWh of electricity over 1000 hours; B is rated at 5 W and needs 5 kWh. She writes an estimated disposal impact of 0.2 kg CO2e for each lamp at the end of the task in the rightmost column.",
+      "The venue is still confirming which life-cycle electricity emission factor should be used for the use phase in this project. Cheng Lan first calculates the candidate condition of 0.5 kg CO2e/kWh. A's use phase contributes 20×0.5=10, giving a total of 1+10+0.2=11.2 kg CO2e. B's use phase contributes 5×0.5=2.5, giving 5+2.5+0.2=7.7. A, which had looked better from the front-end figures alone, now ranks behind B under this set of conditions.",
+      "She holds the table’s front-end figures of 1 and 5 and both disposal estimates of 0.2 fixed for a moment, changing only the use-phase electricity emission factor to 0.1. A becomes 3.2 and B 5.7 kg CO2e, reversing the ranking again. “The electricity data aren’t confirmed yet,” Cheng Lan says. “This table can’t decide for us today.”",
+      "The next day, the venue confirms an electricity factor of 0.5 kg CO2e/kWh for the project’s climate comparison. Cheng Lan puts B into the current procurement plan and leaves A on the sample shelf for other use observations. B’s front-end impact is higher, but over the agreed 1000 hours its total for this climate indicator, 7.7, is lower than 11.2. The procurement colleague takes sample B to the first reading desk and switches it on."
+    ],
+    "overall": "This article uses two fictional lamps to introduce one aspect of life-cycle assessment: environmental comparisons first require the same functional unit and a defined system boundary, then an inventory of the relevant stages, followed by assessment and interpretation within a clearly specified impact category. The example calculates only one climate-change indicator and does not represent a complete multi-impact LCA or an overall claim that one product is universally “greener.”",
+    "conceptName": "Life-cycle assessment",
+    "explanationParagraphs": [
+      "The functional unit is “providing the same desk lighting for 1000 hours”; the example assumes both lamps complete that service without replacement. A life-cycle inventory normally records original flows of materials, energy and individual emissions. This example supplies electricity-use activity data: 20 W×1000 h=20 kWh and 5 W×1000 h=5 kWh. The front-end 1 and 5, and disposal 0.2 kg CO2e, are pre-characterized stage climate impacts, not raw inventory flows; the missing upstream emissions inventory has not been reconstructed here. The stage results use the same functional unit, climate indicator and time horizon, with non-overlapping boundaries.",
+      "The electricity life-cycle emission factor is then applied for the climate-change indicator. At 0.5 kg CO2e/kWh, A=1+20×0.5+0.2=11.2 and B=5+5×0.5+0.2=7.7 kg CO2e per functional unit. In a sensitivity demonstration that temporarily holds the front-end and disposal values fixed while changing only the factor to 0.1, A=3.2 and B=5.7, reversing the ranking. In reality, a change in the energy system can also affect upstream manufacturing data, so this single-variable sensitivity exercise is not a complete recalculation of a real-world scenario."
+    ],
+    "module": {
+      "intro": "Give both options the same lighting task first, place stage-specific data inside the same system boundary, and then compare only the clearly defined climate-change indicator.",
+      "diagramTitle": "If A Is Lower at the Manufacturing Stage, Why Can B Be Lower After 1000 Hours of Lighting?",
+      "diagramSteps": [
+        "Fix the functional unit: both lamps provide the same desk lighting for 1000 hours",
+        "Use pre-characterized stage climate impacts: front-end 1 for A and 5 for B, plus 0.2 kg CO2e each for end-of-task disposal",
+        "Calculate the use-phase energy inventory: A at 20 W uses 20 kWh and B at 5 W uses 5 kWh",
+        "Apply the project-confirmed factor of 0.5 kg CO2e/kWh to obtain A=11.2 and B=7.7 kg CO2e per functional unit",
+        "Use 0.1 as a sensitivity comparison while holding the other teaching values fixed, obtaining A=3.2 and B=5.7, and note that the result depends on assumptions"
+      ],
+      "diagramStepNotes": [
+        "The functional unit is kept the same first; otherwise power or emissions figures would not represent an equal service comparison.",
+        "The 1, 5 and 0.2 kg CO2e figures are characterized climate impacts, not raw emission inventories; the end value is an assumed allocation at the end of the task.",
+        "Power and electricity use are inventory information; the electricity emission factor is used to convert use-phase electricity into the climate-change impact discussed here.",
+        "The 0.5 factor is the teaching scenario ultimately adopted for this story's project, so B is selected for the current procurement plan.",
+        "The 0.1 sensitivity demonstration deliberately keeps front-end and disposal values fixed; in reality, changes in the grid or supply chain can also alter upstream stages, so the simplified comparison is not a complete forecast."
+      ],
+      "mapping": [
+        "1000 hours of equal desk lighting → the common functional unit for the two lamps.",
+        "1 and 5 kg CO2e → pre-characterized raw-material, manufacturing and transport climate impacts, not raw inventory flows.",
+        "20 kWh and 5 kWh → the use-phase electricity required by the two lamps for the same task.",
+        "11.2 and 7.7 kg CO2e → the single climate-change-indicator results under the 0.5 factor and the agreed boundary.",
+        "Ranking reversal under the 0.1 factor → a sensitivity check showing dependence on a key assumption."
+      ],
+      "boundary": "This article only introduces the relationship among goal and scope, functional unit, inventory, impact assessment, and interpretation in life-cycle thinking, and it calculates only one climate-change indicator. It is not a complete ISO conformity claim and does not calculate other impacts such as ecotoxicity or water stress. All lamp values are fictional teaching data. Results can change if the system boundary, lifetime, losses, allocation, electricity system, or data representativeness changes. A single carbon indicator cannot automatically be converted into a conclusion about overall environmental superiority.",
+      "reflection": "Keep the other stage values and the 1000-hour service assumption fixed, but set the electricity emission factor to 0.2 kg CO2e/kWh. What is each lamp’s climate impact? Does that establish that every environmental impact is lower?"
+    },
+    "references": [
+      {
+        "id": "iso14040-2006",
+        "citation": "International Organization for Standardization. (2006). ISO 14040:2006, Environmental management — Life cycle assessment — Principles and framework (2nd ed.).",
+        "url": "https://www.iso.org/standard/37456.html",
+        "use": "Supports the high-level life-cycle assessment framework of goal and scope, life-cycle inventory, life-cycle impact assessment, and interpretation, together with reporting, limitations, and review. This article uses only the concepts supported by the public ISO summary and does not claim that the example conforms to the full ISO standard."
+      },
+      {
+        "id": "epa-lca-2006",
+        "citation": "Scientific Applications International Corporation. (2006). Life Cycle Assessment: Principles and Practice. EPA/600/R-06/060. U.S. Environmental Protection Agency, Office of Research and Development.",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1000L86.TXT",
+        "use": "Supports separating goal and scope, inventory, impact assessment, and interpretation, and supports comparing alternatives using the same functional unit or equivalent service while making system boundaries and data representativeness explicit. It is not used as a source of actual lamp emissions data or product certification."
+      },
+      {
+        "id": "iso-unido-lca-cfp-2024",
+        "citation": "International Organization for Standardization & United Nations Industrial Development Organization. (2024). Global programme for hydrogen in industry: Guide on ISO/TS 19870, section 4, pp. 18–19.",
+        "url": "https://www.iso.org/files/live/sites/isoorg/files/store/en/PUB100493.pdf",
+        "use": "Supports distinguishing LCA, which can cover multiple environmental impact categories, from a carbon-footprint scope focused on greenhouse gases, and supports defining the functional unit and system boundary during goal and scope definition. This article uses only those general concepts and does not apply hydrogen-specific methods or data to the lamp example."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-23-preparation/group1-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-23-preparation/group1-edit-pass1-evidence.json",
+        "engineering-reader-first-23-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "After the spring fair, the inn yard was piled with paper cups discarded after one use. The owner, Madam Qin, called them wasteful and immediately ordered five hundred thick ceramic cups from another province, each stamped 'the lasting choice' underneath. Their delivery required three heavy carts, and forty broke on the journey. She had not counted the firing of the cups or the wood and water needed to wash them each day. The purchase won public praise and a tax rebate, giving the owner little reason to question the label on the base.\n\nThe first month was worse. Travellers carried cups away without thinking, servers broke a batch, and the washroom heated water all day. The paper merchant said ceramic used more resources; the potter pointed to the rubbish pile and said paper had to be remade every day. They argued at the counter, each describing only the part of the journey that favoured his own goods. Washing shifted burdens to water and fuel; breakage and theft shortened the reuse count on which the choice depended.\n\nThe bookkeeper placed a pot of tea on the table. 'Are we comparing one cup,' he asked, 'or the serving of one hundred pots of tea?' Beginning with clay digging and tree cutting, he recorded manufacture, transport, use, washing, number of returns, and final destination. He kept fuel, water, breakage, and recovery in separate columns.\n\nThe inn could keep advertising one material as virtuous or fund a comparison across the full service. Qin surrendered the rebate until the claim was checked. The accountant chose a functional unit—serving one hundred pots of tea—then fixed system boundaries and gathered transport distance, kiln fuel, washing, loss rate, and end-of-life data. Missing values were shown as ranges, not convenient zeros. The supplier's data and the inn's measurements used the same units, preventing a light cup from winning only because one stage was omitted.\n\nNo cup won by its nature alone. If a ceramic cup was used twice, the burden of firing and transport was difficult to recover. With a small deposit, efficient shared washing, and dozens of uses, its cost per serving fell. Madam Qin used ceramic for guests staying at the inn. At the takeaway stall, where returns were uncertain, she kept light paper cups and required the supplier to collect them. They compared climate, water use, material demand, and waste rather than collapsing unlike impacts into one flattering score. Sensitivity tests showed the reuse count and washing method changed the result most.\n\nAt the end of summer, a traveller returned a ceramic cup and reclaimed his deposit. Madam Qin turned the cup over, carved one more mark beside the thirty-six fine scratches already on its base, and placed it back in the basin of hot water. The deposit system cost a clerk's time and a new wash rack, a practical price for reaching the reuse level assumed in the comparison.",
-    "storyBodyZh": "春市过后，客栈后院堆满用过即丢的纸杯。老板秦娘嫌它们浪费，立刻从外省订来五百只厚陶杯，还在杯底印上‘长久之选’。陶杯运到时用了三辆重车，途中碎了四十只；开窑烧杯和每日洗杯的柴水，她原先都没算。这笔采购赢得称赞和税款减免，杯底标签也让老板几乎没有理由继续追问。\n\n头一个月更糟。赶路的客人顺手带走杯子，伙计摔破了一批，洗杯房整日烧水。纸杯商说陶杯反而更费，陶匠则指着垃圾堆说纸杯每天都要重做。两人争到柜台前，谁都只拿对自己有利的一段路说话。清洗把负担转向水与柴，破损和带走又缩短了选择所依赖的重复次数。\n\n账房在桌上放了一壶茶，问：‘我们究竟比较一只杯子，还是比较把一百壶茶送到客人手里？’他从取土与伐木开始，依次记下制造、运输、使用、清洗、重复次数和最后去向，还把柴、水、破损与回收分别列开。\n\n客栈可以继续把一种材料宣传成美德，也可以为整项服务做比较。秦娘在核实前退回减税。账房选定功能单位——供应一百壶茶——再固定系统边界，收集运输距离、窑火、清洗、损耗和最终去向数据；缺失值写成范围，不能方便地当作零。供应商资料与客栈测量统一单位，避免轻杯只因某阶段被漏算而获胜。\n\n算过以后，没有哪只杯子天然获胜。陶杯若只用两次，前面的烧制和运输很难抵回；若押一枚小钱、集中清洗并用上几十次，每杯茶承担的耗费便会下降。秦娘给堂食客人用陶杯，难以收回杯子的外带摊仍用轻纸杯，并要求供应商回收。他们分别比较气候、水耗、材料需求与废弃物，不把不同影响压成一个讨喜总分。敏感性分析显示，使用次数与清洗方式最能改变结果。\n\n夏末，一名旅人把陶杯送回柜台，取回押钱。秦娘翻过杯底，在原有的三十六道细划痕旁又刻了一道，然后把它放回热水盆。押金制度耗费一名书记的时间和一座新洗架，却让比较假设的重复次数真正有机会实现。",
-    "explanation": "Life-cycle assessment compares products or services against a defined functional unit, following raw-material extraction, manufacture, transport, use, maintenance, reuse, and final disposal. Energy, materials, and emissions are translated into environmental impact indicators. Results depend on system boundaries, data, reuse rates, and assumptions, so one stage or a 'reusable' label cannot decide the outcome. The story uses serving one hundred pots of tea as the common function needed for a fair comparison.",
-    "explanationZh": "生命周期评价以明确的功能单位比较产品或服务，从原料取得、制造和运输，一直追踪到使用、维护、重复利用与最终处置，并把能源、物料和排放转换为若干环境影响指标。结论取决于系统边界、数据、使用次数和假设，不能只凭某一阶段或‘可重复使用’标签判断。故事以供应一百壶茶为共同功能，才使不同杯子能够公平比较。"
+    "storyBody": "A shared reading room needs a lamp for its new desks, and Cheng Lan must choose the current procurement option from two samples. Under the agreed installation conditions, both have been checked to provide the same desk lighting; the comparison assumes each lasts 1000 hours without replacement. The table expresses greenhouse-gas impacts as carbon dioxide equivalent (CO2e): raw materials, manufacturing and transport together account for 1 kg CO2e for A and 5 kg for B. “Then isn’t it A?” the procurement colleague asks.\n\nCheng Lan does not immediately move A into the procurement area. On the comparison sheet, A is rated at 20 W and needs 20 kWh of electricity over 1000 hours; B is rated at 5 W and needs 5 kWh. She writes an estimated disposal impact of 0.2 kg CO2e for each lamp at the end of the task in the rightmost column.\n\nThe venue is still confirming which life-cycle electricity emission factor should be used for the use phase in this project. Cheng Lan first calculates the candidate condition of 0.5 kg CO2e/kWh. A's use phase contributes 20×0.5=10, giving a total of 1+10+0.2=11.2 kg CO2e. B's use phase contributes 5×0.5=2.5, giving 5+2.5+0.2=7.7. A, which had looked better from the front-end figures alone, now ranks behind B under this set of conditions.\n\nShe holds the table’s front-end figures of 1 and 5 and both disposal estimates of 0.2 fixed for a moment, changing only the use-phase electricity emission factor to 0.1. A becomes 3.2 and B 5.7 kg CO2e, reversing the ranking again. “The electricity data aren’t confirmed yet,” Cheng Lan says. “This table can’t decide for us today.”\n\nThe next day, the venue confirms an electricity factor of 0.5 kg CO2e/kWh for the project’s climate comparison. Cheng Lan puts B into the current procurement plan and leaves A on the sample shelf for other use observations. B’s front-end impact is higher, but over the agreed 1000 hours its total for this climate indicator, 7.7, is lower than 11.2. The procurement colleague takes sample B to the first reading desk and switches it on.",
+    "storyBodyZh": "共享阅读室要给新桌位选一款灯，程澜负责在两只样灯里定下当前采购方案。两款灯在约定安装条件下核过，都能提供同样的桌面照明；比较假定两者都能用满1000小时而无需更换。表中把温室气体影响统一折算成二氧化碳当量（CO2e）：原料、制造和运输合计，A为1 kg CO2e，B为5 kg CO2e。采购同事指着表问：“那不是A吗？”\n\n程澜没有马上把A移到采购区。比较表里，A功率20 W，亮1000小时需要20 kWh电；B功率5 W，需要5 kWh。她还把任务结束后每盏灯的处置影响估算为0.2 kg CO2e，写在表格最右边。\n\n场地方当时还在确认本项目使用阶段应采用哪一组电力全生命周期排放因子。程澜先按候选条件0.5 kg CO2e/kWh计算：A的使用阶段是20×0.5=10，加上前端1和末端0.2，总计11.2 kg CO2e；B的使用阶段是5×0.5=2.5，加上前端5和末端0.2，总计7.7。只看前端时领先的A，在这一组条件下反而排到B后面。\n\n她又把表里的前端数字1、5和两边的处置估计0.2暂时保持不动，只把使用阶段的电力排放因子换成0.1。A变为3.2，B为5.7 kg CO2e，排序又翻回A。“供电数据还没确认，”程澜说，“这张表现在还不能替我们决定。”\n\n第二天，场地方确认本项目的气候影响比较采用0.5 kg CO2e/kWh。程澜把B放进当前采购方案，A留在样品架供其他使用观察。B的前端影响比A高，但在约定的1000小时和这一项气候指标下，总结果7.7低于11.2。采购同事把B样灯拿到第一张阅读桌上，按下了开关。",
+    "explanation": "The functional unit is “providing the same desk lighting for 1000 hours”; the example assumes both lamps complete that service without replacement. A life-cycle inventory normally records original flows of materials, energy and individual emissions. This example supplies electricity-use activity data: 20 W×1000 h=20 kWh and 5 W×1000 h=5 kWh. The front-end 1 and 5, and disposal 0.2 kg CO2e, are pre-characterized stage climate impacts, not raw inventory flows; the missing upstream emissions inventory has not been reconstructed here. The stage results use the same functional unit, climate indicator and time horizon, with non-overlapping boundaries.\n\nThe electricity life-cycle emission factor is then applied for the climate-change indicator. At 0.5 kg CO2e/kWh, A=1+20×0.5+0.2=11.2 and B=5+5×0.5+0.2=7.7 kg CO2e per functional unit. In a sensitivity demonstration that temporarily holds the front-end and disposal values fixed while changing only the factor to 0.1, A=3.2 and B=5.7, reversing the ranking. In reality, a change in the energy system can also affect upstream manufacturing data, so this single-variable sensitivity exercise is not a complete recalculation of a real-world scenario.",
+    "explanationZh": "功能单位是“提供1000小时同等桌面照明”；本例假设两款灯都能完成这一服务且无需更换。生命周期清单通常记录材料、能源和各类排放等原始流量；本例给出使用阶段的电量活动数据：20 W×1000 h=20 kWh，5 W×1000 h=5 kWh。前端的1、5以及末端的0.2 kg CO2e则是事先折算好的阶段气候影响，不是原始清单；这里没有重建缺失的上游排放明细。各阶段采用相同功能单位、气候指标和时间尺度，范围互不重叠。\n\n随后对气候变化指标应用电力全生命周期排放因子。0.5 kg CO2e/kWh时，A=1+20×0.5+0.2=11.2，B=5+5×0.5+0.2=7.7 kg CO2e/功能单位。若仅做敏感度演示并暂时固定前端与处置数值，把因子改为0.1，则A=3.2、B=5.7，排序反转。现实能源系统变化也可能影响上游制造数据，因此这种单变量敏感度不等于完整现实情景重算。"
   },
   {
     "id": "0713-grid-balancing",
@@ -18944,45 +19138,149 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0713",
     "fieldTitle": "Electricity and energy",
     "fieldTitleZh": "电力与能源",
-    "title": "The Full Reservoir That Could Not Light the Town",
-    "titleZh": "装满水却点不亮灯的水库",
-    "summary": "An island reservoir stores a whole night of wind, yet one narrow pipe cannot carry the town through the instant its festival begins.",
-    "summaryZh": "岛上的高水库存够了一夜的风，却因一根太窄的水管，没能撑过庆典开始的那一刻。",
-    "storyParagraphs": [
-      "Wind Island used night gales to pump seawater into a mountaintop reservoir and released it through turbines in the evening. Before the Lantern Festival, the island chief saw the water at its highest mark and promised that one bell stroke would start every street light, oven, and concert stage. Cancelling the mass lighting would cost him the festival contract. By ordinary daily consumption, the stored water lasted until dawn. Vendors had prepaid for the broadcast and bakers timed every oven to the bell. The chief treated the highest water mark as a public promise and had it painted on festival posters.",
-      "When the bell rang, thousands of lamp switches rose across the island. The reservoir remained full, yet voltage in town fell. The pipe and turbine could pass only a fixed flow; extra water could not squeeze through the same narrow throat. The music stage failed first, ovens went dark next, and a cable near the square overheated as people reconnected portable heaters. The chief ordered operators to open the valve farther, but it was already against its stop. A technician smelled hot insulation and pulled the square cable before it failed. One baker opened his oven to trays of pale dough, while the reservoir above reflected every dark street lamp.",
-      "Engineer Sora watched the island frequency sink while the chief waited for more output. She cut power to the illuminated arch bearing his name, started a flywheel for the fastest seconds, and paid the harbour cold store to pause ice making. Crowds were admitted by district, so lighting restarted in sections. The reservoir surface had barely moved, but the expensive stage broadcast was lost. Sora refunded the stage vendor from the festival guarantee and faced the crowd herself. The chief's arch went dark first, making the cut visible to the same cameras he had invited. The square clock stopped at 8:17, when the waiting dough began to collapse.",
-      "She set two vessels before the council: a large jar with a pinhole and a small cup that could empty at once. The first held more but delivered slowly; the second delivered little but quickly. The next plan added fast devices for short peaks, widened part of the water path, and retained enough reservoir volume for long windless periods. Forecasts, flexible demand, and the undersea cable covered other gaps; each resource was tested for the duration and output it could actually provide.",
-      "At the following festival, the chief did not inspect only the waterline. He touched the vibrating outlet valve, read the flywheel display, and ordered the first district lit. The old illuminated arch remained in a storehouse, its power cable cut cleanly through the letter of his name."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "明早还要再来吗",
+    "summaryZh": "许清想用白天存下来的太阳能，撑过学习室的晚间活动。开始前，清洁人员推来一台设备，也想趁这段时间一起用电。",
     "storyParagraphsZh": [
-      "风岛用夜间大风把海水抽进山顶水库，傍晚再放水发电。丰灯节前，岛长看见水位到达最高刻线，便承诺钟声一响，全岛彩灯、烤炉和乐台一齐启动；若取消齐亮，他会失去庆典合同。按平日每日用量计算，库里的水确实足够撑到天亮。商贩预付了直播费，面包师也把每只烤炉排在钟响后点火。岛长把最高水位当成公开承诺，甚至画在节庆海报上。",
-      "钟声一响，各街区数千只灯闸都被推了上去。水库仍然满着，城里电压却迅速下降。管道与水轮机只能通过固定流量，再多水也挤不过同一只窄口。乐台先失声，烤炉随后熄火；人们重新接上便携加热器，广场旁一根电缆开始过热。岛长命令继续开阀，手轮却早已抵住尽头。技术员闻到绝缘层焦味，在电缆烧断前拔掉广场线路。面包师打开烤炉，只见一盘盘苍白面团；山顶水库仍映着街灯熄灭后的黑影。",
-      "工程师索拉看着全岛频率继续下坠，岛长还在等不存在的额外输出。她先断掉写着岛长名字的发光拱门，启动飞轮撑过最急的几秒，再付钱让码头冷库暂停制冰。人群按街区入场，灯光分段恢复。水面几乎没降，昂贵的舞台直播却已中断。索拉从庆典保证金退还舞台商费用，又亲自面对人群。岛长的拱门最先熄灭，恰好被他请来的镜头完整拍下。广场钟停在八点十七分，面团就在那个时刻开始回缩。",
-      "她在议会桌上放两只容器：大罐只有针眼小孔，小杯却能一下倒空。前者存得多却给得慢，后者给得快却撑不久。下一年，岛上为短峰增加快速装置，拓宽部分出水能力，并保留够长时间无风使用的库水；预测、灵活需求与海底电缆补其他缺口。每项资源都按实际可输出的大小和持续时间测试。",
-      "下一届节日前，岛长没有只看水位。他先摸过微微震动的出水阀，读完飞轮显示，才下令点亮第一街区。旧发光拱门仍放在仓库，电缆正从他名字中间齐齐剪断。"
+      "社区学习室晚上有一场两小时的语言交换活动。许清准备让具备独立供电能力的储能系统承担这两个小时的灯光和屏幕：太阳已经落下，晚上也没有其他并供电源。活动开始前，清洁人员推来一台功率为1千瓦（kW）、需要连续运行一小时的设备：“能不能顺便开着？这样明早不用再跑一趟。”",
+      "白天，屋顶太阳能满足当时用电后，在同一交流侧计量点还有6千瓦时（kWh）的可利用电量。储能的可用电量当时已到允许下限，充电时间和功率都足够。许清把其中5 kWh交流电充入储能；按这次设定的80%往返效率，之后整次放电可向交流负载交付4 kWh。另有1 kWh白天富余电没有充进储能。",
+      "许清再看逆变器参数：持续额定输出是2 kW。灯光和屏幕本身就持续需要2 kW；清洁设备若同时运行，持续需求会变成3 kW，超过这次已知的持续额定能力。她不能按这套额定能力把两项任务同时安排进去，便把清洁设备的插头卷回机器旁：“今晚先不接它。”",
+      "活动开始后，储能稳定承担2 kW基本负载。许清这次把全部4 kWh可交付电量都安排给活动，没有另留备用量。一小时后用掉2 kWh，还剩2 kWh；第二小时再用掉余下的电，散场时这次可交付电量刚好用完。",
+      "活动散场后，屏幕熄灭，清洁设备仍停在墙边。许清给第二天的清洁重新排了时段，锁上学习室的门。次日早晨，场地方确认正常电网供电已经恢复，清洁人员回来，用这段供电时间完成了工作；为了这一小时，他们多跑了一趟。"
     ],
-    "conceptName": "Energy storage and intermittency",
+    "overallZh": "储能可以把白天富余电移到夜晚，但可交付能量和持续输出功率是不同约束。本例的4 kWh刚好供2 kW基本负载运行两小时；若另加1 kW清洁设备运行一小时，即使持续输出能力足够，所需总电量也会增至5 kWh。",
     "conceptNameZh": "储能与间歇性",
-    "explanationParagraphs": [
-      "Energy storage moves energy from one time to another to address mismatches between variable supply and demand. Energy capacity determines how much can be stored and for how long it can serve, while power determines the rate of charging or discharge. Efficiency, response, degradation, safety, and location also constrain value. Storage works alongside forecasting, transmission, flexible demand, and dependable supply; a large stored quantity alone does not guarantee that a peak can be met."
-    ],
     "explanationParagraphsZh": [
-      "储能把能量从一个时刻转移到另一个时刻，用来缓解可变供给与需求的错位。容量决定可储存的能量和可支撑时长，功率决定某一时刻可充放多快；效率、响应、衰减、安全与位置也会限制价值。储能通常与预测、输电、灵活需求和可靠电源配合，不能仅凭‘存得很多’判断能否应对峰值。"
+      "本例的6 kWh富余量和5 kWh充电量都在交流侧计量。储能从允许的可用下限开始充电，输入5 kWh；假定交流输入到交流输出的往返效率为80%，之后整次可交付5×0.80=4 kWh。白天另有1 kWh富余电未充入；从5变4所损失的1 kWh是另一笔能量，不能混为一谈。4 kWh已计入该往返损失，放电时不再重复乘80%。",
+      "4 kWh是可交付的能量总量，2 kW是本例给出的持续额定输出能力。假定这次充电后的4 kWh全部可交付、额定工况稳定输出且不另留余量，2 kW运行两小时用去4 kWh；再让1 kW设备运行一小时，合计需5 kWh。若同时运行，连续需求3 kW也超过2 kW的持续额定能力。短时过载能力要另查设备规格，不能仅由持续额定值推断。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先区分白天充入与夜间可交付的交流电量，再分别核对持续输出能力和整段任务需要的能量。",
+      "diagramTitle": "为什么电量刚够基本活动，额外的清洁任务仍不能一起安排",
+      "diagramSteps": [
+        "白天交流侧有6 kWh富余，储能从允许下限开始充入其中5 kWh",
+        "按80%往返效率，整次放电可向交流负载交付4 kWh",
+        "晚间基本负载需2 kW持续两小时；清洁设备另需1 kW运行一小时",
+        "若同时运行，持续需求3 kW超过逆变器2 kW持续额定能力",
+        "推迟清洁后，基本任务用完4 kWh；清洁改在次日可用电网时完成"
+      ],
+      "diagramStepNotes": [
+        "这6和5 kWh都在交流侧；另外1 kWh富余电没有进入储能，后续用途不在本例中假定。",
+        "5 kWh输入和4 kWh可交付的差额是1 kWh往返损耗，与未充入的那1 kWh不同；4无需再乘效率。",
+        "kW描述功率；kWh是功率随时间累计的能量。清洁的一小时是本教学例的任务条件。",
+        "这里比较持续额定能力，不根据它推断短时过载能力；该能力须另查实际设备规格。",
+        "基本任务2×2=4 kWh；若额外清洁1×1=1 kWh，合计5 kWh。4÷2=2小时还假设这次充电后的4 kWh全部可交付、稳定输出且无额外备用余量。"
+      ],
+      "mapping": [
+        "白天6 kWh交流侧富余光伏 → 与夜间负荷时间错开的可利用发电。",
+        "5 kWh充入、4 kWh可交付 → 计入往返损耗后的跨时间能量转移。",
+        "逆变器2 kW持续额定输出 → 持续运行负载的功率能力约束。",
+        "推迟1 kW、持续一小时的清洁 → 为持续功率和总电量约束改变任务时间。"
+      ],
+      "boundary": "这是统一到交流侧的简化教学模型，不提供真实离网系统设计、布线、安全操作或设备选型。实际可用容量、充放电效率、逆变器功率、温度、寿命、剩余荷电状态和保护策略都会影响结果。若夜间存在可用电网或其他允许并供的电源，3 kW总负载可以有不同的供能组合；本故事特意选择储能独立承担基本负载，以突出能量容量与功率容量的区别。",
+      "reflection": "如果把逆变器持续额定输出提高到3 kW，但仍只有4 kWh可交付电量，能否同时完成2 kW基本负载两小时和1 kW清洁任务一小时？为什么？"
+    },
+    "referencesZh": [
+      {
+        "id": "doe-solar-storage-basics",
+        "citation": "U.S. Department of Energy, Solar Energy Technologies Office. Solar Integration: Solar Energy and Storage Basics.",
+        "url": "https://www.energy.gov/cmei/systems/solar-integration-solar-energy-and-storage-basics",
+        "use": "支持太阳能发电与负荷在时间上的错位、储能将能量从一个时段移到另一个时段，以及能量容量、功率容量和转换损失属于不同约束；不作为本虚构学习室或具体储能设备的性能保证。"
+      },
+      {
+        "id": "eia-grid-battery-2018",
+        "citation": "U.S. Energy Information Administration. (2018, January 8). Batteries perform many different functions on the power grid. Today in Energy.",
+        "url": "https://www.eia.gov/todayinenergy/detail.php?id=34432",
+        "use": "支持区分功率容量与能量容量，并支持在额定功率下用能量容量除以功率容量理解理论持续时间；不把历史设备统计或示例当成本故事设备的真实参数。"
+      },
+      {
+        "id": "eia-storage-efficiency-2021",
+        "citation": "U.S. Energy Information Administration. (2021, February 12). Utility-scale batteries and pumped storage return about 80% of the electricity they store. Today in Energy.",
+        "url": "https://www.eia.gov/todayinenergy/detail.php?id=46756",
+        "use": "支持将往返效率理解为储能输出电量与充入电量的比值以及充放电存在能量损失；本故事采用的80%只是虚构教学假设，并不代表所有现实储能设备。"
+      }
+    ],
+    "title": "Another Trip Tomorrow?",
+    "summary": "Xu Qing wants stored daytime solar energy to power an evening event at the study room. Just before it starts, the cleaning staff wheel in a machine they hope to run at the same time.",
+    "storyParagraphs": [
+      "The community study room has a two-hour language-exchange event that evening. Xu Qing plans to use a storage system capable of standalone operation for the lights and screens: the sun has set and no other power source is available in parallel. Just before the event, the cleaning staff wheel over a 1-kilowatt (kW) machine that needs to run continuously for an hour. “Can we run it at the same time? Then we won’t have to come back tomorrow morning.”",
+      "During the day, after meeting the current load, rooftop solar has 6 kilowatt-hours (kWh) of usable surplus measured at the same AC-side point. The storage system has reached its permitted usable lower limit, and charging time and power are sufficient. Xu Qing sends 5 kWh of AC electricity into storage. At the assumed 80% round-trip efficiency, the complete later discharge can deliver 4 kWh to AC loads. Another 1 kWh of daytime surplus does not enter storage.",
+      "Xu Qing checks the inverter rating: its continuous rated output is 2 kW. The lights and screens already need a continuous 2 kW; running the cleaner alongside them would require a continuous 3 kW, beyond the specified continuous rating. She cannot schedule both tasks together on that rated capability, so she coils the cleaner’s plug beside the machine. “Not tonight.”",
+      "The event begins with storage steadily supplying the 2 kW basic load. Xu Qing allocates the full 4 kWh deliverable amount to the event, with no separate reserve. After one hour it has delivered 2 kWh and has 2 kWh left; the second hour uses the remainder, exhausting this deliverable amount as the event ends.",
+      "After the event, the screen goes dark and the cleaning machine remains by the wall. Xu Qing schedules the work for the following day and locks the study room. The next morning, the venue confirms that normal grid power is available again, and the cleaners return to finish the job during that supply period. The one-hour task has cost them an extra trip."
+    ],
+    "overall": "Storage can shift surplus electricity from day to evening, but deliverable energy and continuous output power are separate constraints. Here 4 kWh is just enough for the 2 kW basic load for two hours. Adding a 1 kW cleaner for one hour would raise total energy demand to 5 kWh even if sufficient continuous output power were available.",
+    "conceptName": "Energy storage and intermittency",
+    "explanationParagraphs": [
+      "The 6 kWh surplus and 5 kWh charging input are measured on the AC side. Storage starts charging from its permitted usable lower limit. At an assumed 80% round-trip efficiency from AC input to AC output, the 5 kWh input yields 5×0.80=4 kWh for the complete later discharge. Another 1 kWh of daytime surplus was not charged; the 1 kWh lost between the 5 kWh input and 4 kWh output is a different quantity. The deliverable 4 kWh already includes this loss and is not multiplied by 80% again during discharge.",
+      "The 4 kWh is total deliverable energy; 2 kW is the continuous rated output specified here. Assuming the 4 kWh from this charge is fully deliverable, steady rated output and no separate reserve, 2 kW for two hours uses 4 kWh. A 1 kW machine for another hour raises total demand to 5 kWh. If run alongside the basic load, the continuous demand of 3 kW also exceeds the 2 kW continuous rating. Short-duration overload capability requires separate specifications and cannot be inferred from that rating alone."
+    ],
+    "module": {
+      "intro": "Distinguish AC energy charged in the daytime from deliverable energy at night, then check continuous rated output and total task energy separately.",
+      "diagramTitle": "Why Is Energy Just Sufficient for the Basic Event but Not for an Additional Cleaning Task?",
+      "diagramSteps": [
+        "From 6 kWh AC-side daytime surplus, charge 5 kWh into storage starting at its permitted lower limit",
+        "At 80% round-trip efficiency, the complete discharge can deliver 4 kWh to AC loads",
+        "The evening basic load requires 2 kW for two hours; the cleaner would need another 1 kW for one hour",
+        "Running them together would require a continuous 3 kW, above the inverter’s 2 kW continuous rating",
+        "Defer cleaning: the basic task uses the 4 kWh, and the cleaner returns when grid power is available next morning"
+      ],
+      "diagramStepNotes": [
+        "The 6 and 5 kWh are both AC-side quantities. The other 1 kWh surplus was not charged; its later use is not assumed.",
+        "The difference between 5 kWh input and 4 kWh deliverable is 1 kWh of round-trip loss, distinct from the uncharged 1 kWh; do not multiply the 4 by efficiency again.",
+        "kW describes power, while kWh is energy accumulated over time. The one-hour cleaning duration is an assumption in this teaching case.",
+        "This compares continuous ratings; short-duration overload capability is not inferred and requires actual equipment specifications.",
+        "The basic task uses 2×2=4 kWh. Adding cleaning uses 1×1=1 kWh, totaling 5 kWh. The 4÷2=2 h duration also assumes the 4 kWh from this charge is fully deliverable, steady output and no separate reserve."
+      ],
+      "mapping": [
+        "6 kWh of AC-side daytime surplus solar → usable generation occurring at a different time from the evening load.",
+        "5 kWh charged and 4 kWh deliverable → energy shifted across time after round-trip loss.",
+        "2 kW continuous inverter rating → a power constraint on loads running continuously.",
+        "Deferring the 1 kW, one-hour cleaning task → changing timing in response to both continuous power and total energy constraints."
+      ],
+      "boundary": "This is a simplified teaching model using an AC-side accounting basis. It is not a guide to real standalone-system design, wiring, safety operation, or equipment selection. Actual usable capacity, charging and discharging efficiency, inverter power, temperature, ageing, remaining state of charge, and protection strategies can all change real performance. If a usable grid connection or another permitted parallel source were available at night, the 3 kW total load could be supplied in a different combination. This story deliberately has storage independently support the basic load in order to isolate the distinction between energy capacity and power capacity.",
+      "reflection": "If the inverter’s continuous rating rose to 3 kW but only 4 kWh remained deliverable, could it power the 2 kW basic task for two hours and a 1 kW cleaner for one hour? Why or why not?"
+    },
+    "references": [
+      {
+        "id": "doe-solar-storage-basics",
+        "citation": "U.S. Department of Energy, Solar Energy Technologies Office. Solar Integration: Solar Energy and Storage Basics.",
+        "url": "https://www.energy.gov/cmei/systems/solar-integration-solar-energy-and-storage-basics",
+        "use": "Supports the time mismatch between solar generation and electricity demand, the use of storage to shift energy from one period to another, and the distinction among energy capacity, power capacity, and conversion losses. It is not used as a performance guarantee for the fictional study room or any specific storage device."
+      },
+      {
+        "id": "eia-grid-battery-2018",
+        "citation": "U.S. Energy Information Administration. (2018, January 8). Batteries perform many different functions on the power grid. Today in Energy.",
+        "url": "https://www.eia.gov/todayinenergy/detail.php?id=34432",
+        "use": "Supports distinguishing power capacity from energy capacity and using energy capacity divided by rated power to understand theoretical duration at that output. Historical equipment statistics and examples are not treated as real parameters for the fictional system in this story."
+      },
+      {
+        "id": "eia-storage-efficiency-2021",
+        "citation": "U.S. Energy Information Administration. (2021, February 12). Utility-scale batteries and pumped storage return about 80% of the electricity they store. Today in Energy.",
+        "url": "https://www.eia.gov/todayinenergy/detail.php?id=46756",
+        "use": "Supports understanding round-trip efficiency as the ratio of electricity delivered from storage to electricity put into storage, and supports the principle that charging and discharging involve energy losses. The 80% value in this story is a fictional teaching assumption and does not represent all real storage systems."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-23-preparation/group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-23-preparation/group2-edit-pass1-evidence.json",
+        "engineering-reader-first-23-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Wind Island used night gales to pump seawater into a mountaintop reservoir and released it through turbines in the evening. Before the Lantern Festival, the island chief saw the water at its highest mark and promised that one bell stroke would start every street light, oven, and concert stage. Cancelling the mass lighting would cost him the festival contract. By ordinary daily consumption, the stored water lasted until dawn. Vendors had prepaid for the broadcast and bakers timed every oven to the bell. The chief treated the highest water mark as a public promise and had it painted on festival posters.\n\nWhen the bell rang, thousands of lamp switches rose across the island. The reservoir remained full, yet voltage in town fell. The pipe and turbine could pass only a fixed flow; extra water could not squeeze through the same narrow throat. The music stage failed first, ovens went dark next, and a cable near the square overheated as people reconnected portable heaters. The chief ordered operators to open the valve farther, but it was already against its stop. A technician smelled hot insulation and pulled the square cable before it failed. One baker opened his oven to trays of pale dough, while the reservoir above reflected every dark street lamp.\n\nEngineer Sora watched the island frequency sink while the chief waited for more output. She cut power to the illuminated arch bearing his name, started a flywheel for the fastest seconds, and paid the harbour cold store to pause ice making. Crowds were admitted by district, so lighting restarted in sections. The reservoir surface had barely moved, but the expensive stage broadcast was lost. Sora refunded the stage vendor from the festival guarantee and faced the crowd herself. The chief's arch went dark first, making the cut visible to the same cameras he had invited. The square clock stopped at 8:17, when the waiting dough began to collapse.\n\nShe set two vessels before the council: a large jar with a pinhole and a small cup that could empty at once. The first held more but delivered slowly; the second delivered little but quickly. The next plan added fast devices for short peaks, widened part of the water path, and retained enough reservoir volume for long windless periods. Forecasts, flexible demand, and the undersea cable covered other gaps; each resource was tested for the duration and output it could actually provide.\n\nAt the following festival, the chief did not inspect only the waterline. He touched the vibrating outlet valve, read the flywheel display, and ordered the first district lit. The old illuminated arch remained in a storehouse, its power cable cut cleanly through the letter of his name.",
-    "storyBodyZh": "风岛用夜间大风把海水抽进山顶水库，傍晚再放水发电。丰灯节前，岛长看见水位到达最高刻线，便承诺钟声一响，全岛彩灯、烤炉和乐台一齐启动；若取消齐亮，他会失去庆典合同。按平日每日用量计算，库里的水确实足够撑到天亮。商贩预付了直播费，面包师也把每只烤炉排在钟响后点火。岛长把最高水位当成公开承诺，甚至画在节庆海报上。\n\n钟声一响，各街区数千只灯闸都被推了上去。水库仍然满着，城里电压却迅速下降。管道与水轮机只能通过固定流量，再多水也挤不过同一只窄口。乐台先失声，烤炉随后熄火；人们重新接上便携加热器，广场旁一根电缆开始过热。岛长命令继续开阀，手轮却早已抵住尽头。技术员闻到绝缘层焦味，在电缆烧断前拔掉广场线路。面包师打开烤炉，只见一盘盘苍白面团；山顶水库仍映着街灯熄灭后的黑影。\n\n工程师索拉看着全岛频率继续下坠，岛长还在等不存在的额外输出。她先断掉写着岛长名字的发光拱门，启动飞轮撑过最急的几秒，再付钱让码头冷库暂停制冰。人群按街区入场，灯光分段恢复。水面几乎没降，昂贵的舞台直播却已中断。索拉从庆典保证金退还舞台商费用，又亲自面对人群。岛长的拱门最先熄灭，恰好被他请来的镜头完整拍下。广场钟停在八点十七分，面团就在那个时刻开始回缩。\n\n她在议会桌上放两只容器：大罐只有针眼小孔，小杯却能一下倒空。前者存得多却给得慢，后者给得快却撑不久。下一年，岛上为短峰增加快速装置，拓宽部分出水能力，并保留够长时间无风使用的库水；预测、灵活需求与海底电缆补其他缺口。每项资源都按实际可输出的大小和持续时间测试。\n\n下一届节日前，岛长没有只看水位。他先摸过微微震动的出水阀，读完飞轮显示，才下令点亮第一街区。旧发光拱门仍放在仓库，电缆正从他名字中间齐齐剪断。",
-    "explanation": "Energy storage moves energy from one time to another to address mismatches between variable supply and demand. Energy capacity determines how much can be stored and for how long it can serve, while power determines the rate of charging or discharge. Efficiency, response, degradation, safety, and location also constrain value. Storage works alongside forecasting, transmission, flexible demand, and dependable supply; a large stored quantity alone does not guarantee that a peak can be met.",
-    "explanationZh": "储能把能量从一个时刻转移到另一个时刻，用来缓解可变供给与需求的错位。容量决定可储存的能量和可支撑时长，功率决定某一时刻可充放多快；效率、响应、衰减、安全与位置也会限制价值。储能通常与预测、输电、灵活需求和可靠电源配合，不能仅凭‘存得很多’判断能否应对峰值。"
+    "storyBody": "The community study room has a two-hour language-exchange event that evening. Xu Qing plans to use a storage system capable of standalone operation for the lights and screens: the sun has set and no other power source is available in parallel. Just before the event, the cleaning staff wheel over a 1-kilowatt (kW) machine that needs to run continuously for an hour. “Can we run it at the same time? Then we won’t have to come back tomorrow morning.”\n\nDuring the day, after meeting the current load, rooftop solar has 6 kilowatt-hours (kWh) of usable surplus measured at the same AC-side point. The storage system has reached its permitted usable lower limit, and charging time and power are sufficient. Xu Qing sends 5 kWh of AC electricity into storage. At the assumed 80% round-trip efficiency, the complete later discharge can deliver 4 kWh to AC loads. Another 1 kWh of daytime surplus does not enter storage.\n\nXu Qing checks the inverter rating: its continuous rated output is 2 kW. The lights and screens already need a continuous 2 kW; running the cleaner alongside them would require a continuous 3 kW, beyond the specified continuous rating. She cannot schedule both tasks together on that rated capability, so she coils the cleaner’s plug beside the machine. “Not tonight.”\n\nThe event begins with storage steadily supplying the 2 kW basic load. Xu Qing allocates the full 4 kWh deliverable amount to the event, with no separate reserve. After one hour it has delivered 2 kWh and has 2 kWh left; the second hour uses the remainder, exhausting this deliverable amount as the event ends.\n\nAfter the event, the screen goes dark and the cleaning machine remains by the wall. Xu Qing schedules the work for the following day and locks the study room. The next morning, the venue confirms that normal grid power is available again, and the cleaners return to finish the job during that supply period. The one-hour task has cost them an extra trip.",
+    "storyBodyZh": "社区学习室晚上有一场两小时的语言交换活动。许清准备让具备独立供电能力的储能系统承担这两个小时的灯光和屏幕：太阳已经落下，晚上也没有其他并供电源。活动开始前，清洁人员推来一台功率为1千瓦（kW）、需要连续运行一小时的设备：“能不能顺便开着？这样明早不用再跑一趟。”\n\n白天，屋顶太阳能满足当时用电后，在同一交流侧计量点还有6千瓦时（kWh）的可利用电量。储能的可用电量当时已到允许下限，充电时间和功率都足够。许清把其中5 kWh交流电充入储能；按这次设定的80%往返效率，之后整次放电可向交流负载交付4 kWh。另有1 kWh白天富余电没有充进储能。\n\n许清再看逆变器参数：持续额定输出是2 kW。灯光和屏幕本身就持续需要2 kW；清洁设备若同时运行，持续需求会变成3 kW，超过这次已知的持续额定能力。她不能按这套额定能力把两项任务同时安排进去，便把清洁设备的插头卷回机器旁：“今晚先不接它。”\n\n活动开始后，储能稳定承担2 kW基本负载。许清这次把全部4 kWh可交付电量都安排给活动，没有另留备用量。一小时后用掉2 kWh，还剩2 kWh；第二小时再用掉余下的电，散场时这次可交付电量刚好用完。\n\n活动散场后，屏幕熄灭，清洁设备仍停在墙边。许清给第二天的清洁重新排了时段，锁上学习室的门。次日早晨，场地方确认正常电网供电已经恢复，清洁人员回来，用这段供电时间完成了工作；为了这一小时，他们多跑了一趟。",
+    "explanation": "The 6 kWh surplus and 5 kWh charging input are measured on the AC side. Storage starts charging from its permitted usable lower limit. At an assumed 80% round-trip efficiency from AC input to AC output, the 5 kWh input yields 5×0.80=4 kWh for the complete later discharge. Another 1 kWh of daytime surplus was not charged; the 1 kWh lost between the 5 kWh input and 4 kWh output is a different quantity. The deliverable 4 kWh already includes this loss and is not multiplied by 80% again during discharge.\n\nThe 4 kWh is total deliverable energy; 2 kW is the continuous rated output specified here. Assuming the 4 kWh from this charge is fully deliverable, steady rated output and no separate reserve, 2 kW for two hours uses 4 kWh. A 1 kW machine for another hour raises total demand to 5 kWh. If run alongside the basic load, the continuous demand of 3 kW also exceeds the 2 kW continuous rating. Short-duration overload capability requires separate specifications and cannot be inferred from that rating alone.",
+    "explanationZh": "本例的6 kWh富余量和5 kWh充电量都在交流侧计量。储能从允许的可用下限开始充电，输入5 kWh；假定交流输入到交流输出的往返效率为80%，之后整次可交付5×0.80=4 kWh。白天另有1 kWh富余电未充入；从5变4所损失的1 kWh是另一笔能量，不能混为一谈。4 kWh已计入该往返损失，放电时不再重复乘80%。\n\n4 kWh是可交付的能量总量，2 kW是本例给出的持续额定输出能力。假定这次充电后的4 kWh全部可交付、额定工况稳定输出且不另留余量，2 kW运行两小时用去4 kWh；再让1 kW设备运行一小时，合计需5 kWh。若同时运行，连续需求3 kW也超过2 kW的持续额定能力。短时过载能力要另查设备规格，不能仅由持续额定值推断。"
   },
   {
     "id": "0714-feedback-control",
@@ -19245,45 +19543,137 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0714",
     "fieldTitle": "Electronics and automation",
     "fieldTitleZh": "电子与自动化",
-    "title": "The Brake That Fell When the Air Was Lost",
-    "titleZh": "断气以后落下的刹车",
-    "summary": "A mine cage relies on air pressure to apply its brake, until a ruptured pipe reveals which way the machine chooses when it fails.",
-    "summaryZh": "矿场升降笼原本靠气压推住刹车，一根管子破裂后，众人才发现故障发生时机器会选择哪一边。",
-    "storyParagraphs": [
-      "Mountain Mine replaced its hoist cage before the winter contract. In the old arrangement, air pressure held a long lever against the winding-drum brake; losing pressure released it. Mechanic Liang Qiu asked what would happen if a hose split. The owner pointed to ore carts waiting at the shaft and offered her a completion bonus. Reversing the mechanism meant three days without lifting, so he approved only stronger joints and a new pressure gauge. Liang had already sketched the reversed arrangement, but the owner rolled the drawing around the new gauge and locked it in his desk. The bonus envelope carried her name; three days of delay would cancel it.",
-      "For six weeks the gauge stayed green and output rose. Operators grew used to releasing the cage as soon as pressure returned. During a rainstorm, a falling stone cut a hose between two perfect joints. Pressure vanished, the lever relaxed, and the loaded cage slid two levels before striking an empty platform. Nobody was inside, but the platform folded, ore blocked the shaft, and the promised shipment missed its train. The undamaged gauge still pointed at zero. Early-shift workers spent three days shovelling ore from the bent platform. One cart wheel remained trapped under it, and the railway charged storage for every missed wagon. The damage had begun with a hose no stronger joint could protect.",
-      "The owner wanted the hose patched before morning. Liang locked the control handle and refused to sign. She redirected springs and a suspended weight so their natural force applied the brake; normal pressure and a valid command were now needed to lift it. Loss of air, electricity, or the control line sent the cage toward a stopped condition. Restart required inspection and deliberate reset instead of returning automatically when pressure flickered back.",
-      "The change cost another contract week. Separate cases—people aboard, ore aboard, maintenance, sensor error, and a jammed cage—were reviewed because stopping was not harmless in every situation. Position sensing, inspection, and test stops supported the chosen response. The owner signed the lost-shipment invoice beside each review. Liang never claimed the cage would keep serving after a fault; she required the identified fault to move first toward the less dangerous state. During the first test, the new brake stopped on a simulated power loss but one position signal disagreed. Liang kept the shaft closed another day until the discrepancy was found, refusing to turn a successful stop into proof that every part was ready.",
-      "Half a year later another hose burst between levels. The cage stopped hard and miners waited forty minutes for a controlled rescue, cursing the delay but walking out. Liang hung the split hose above the brake handle. Beneath it lay the old completion-bonus envelope, still unopened and grey with dust."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "运行灯灭了以后",
+    "summaryZh": "科普馆要演示一个自动注水装置。罗文切断控制电源，运行灯灭了，透明杯里的水却还在流；他得找到真正让水停下来的方式。",
     "storyParagraphsZh": [
-      "山矿赶在冬季合同前更换升降笼。旧装置依靠气压把长杆压在卷轮刹车上，失压便松开。修械师梁秋问，气管若破会怎样。矿主指着井口等待的矿车，答应按期完成便发奖金；反转机构要停运三天，他只批准加固接头、增装压力表。梁秋早画好反向机构，矿主却把图纸卷在新压力表外，锁进抽屉。奖金信封上写着她的名字，只要延误三天就会取消。",
-      "六周里，指针一直在绿色区，出矿量也上升。操作员习惯气压一恢复便放行。一个雨夜，落石割破两只完好接头之间的气管。压力消失，长杆松开，满载矿笼下滑两层，撞上空装卸台才停。笼内无人，平台却折叠，矿石堵住井筒，约定货物错过火车。没损坏的表仍指着零。早班工人花三天从折弯平台下铲矿，一只矿车轮仍卡在里面；铁路还对每节误期车厢收取堆存费。事故从接头以外的气管开始，再牢的接头也护不到那里。",
-      "矿主要梁秋补管后天亮前复工。她锁住控制柄，拒绝签字，改用弹簧和悬重的自然力量压紧刹车；只有气压正常、命令有效时，刹车才被提起。失去气源、电力或控制线，矿笼先朝停止状态移动；压力忽明忽灭后，也不能自动重启，必须检查并手动复位。",
-      "改造又损失一周合同。载人、载矿、检修、传感器错误和卡笼分别复核，因为停下本身并非每种情形都无害；位置检测、检查和试刹共同支持预定反应。矿主把误期账单逐张签在复核表旁。梁秋没有承诺故障后仍能照常工作，只要求已识别故障先把机器带向伤害较小处。第一次试验中，新刹车在模拟断电时确实停住，一只位置讯号却不一致。梁秋继续封井一天，直到找到差异，没有把一次成功停车当成所有部分都已妥当的证明。",
-      "半年后，另一根气管在半空爆裂。升降笼猛地停住，矿工等了四十分钟才按程序获救，骂着延误却都走了出来。梁秋把破管挂在刹车手柄上方，下面压着那只从未打开、已经落灰的完工奖金信封。"
+      "科普馆准备一个桌面清水演示：按下按钮后，高处的小水箱靠重力把水送过阀门，流进透明杯。第一版通电时，执行机构打开阀门。罗文要验证一个具体情形：如果控制盒突然失去供电，这套演示能不能停止继续往杯里加水？",
+      "第一版运行时绿色灯亮着，水稳定流进杯里。罗文切断控制盒电源，灯灭了，可高位水箱仍提供重力压头，水位继续上涨。他从灯旁转向阀门：执行件失去驱动后仍停在开启位置。他先关上水箱另设的手动总阀，结束这一轮。",
+      "下一版在阀门上加入预置回位机构：正常时通电保持开启；失电时，回位动作不依赖失去的电源，把阀门推向这次演示选定的关闭位置。检查水箱仍有足够水后，罗文恢复控制盒供电，打开手动总阀并按运行键，让阀门开启、水重新流起来，然后再次切断控制电源。",
+      "阀门回到关闭位置后，罗文等管路里可能剩下的水流尽，再确认杯中不再进水。他保持装置停止并检查，再由讲解员按这次演示规程重新启动。这样会中断展示几分钟，也多一道人工确认；这一次，他们看到的不只是灯的变化，还有阀位回转和水流停止。",
+      "开放前最后一次排练，讲解员让水流起来，再切断控制盒电源。绿色运行灯灭了，阀门回位，透明杯的水面停止上涨。罗文等了一会儿，确认没有继续流入后，把杯里的水倒进回收桶，再放回托盘。下一场正式演示前，系统仍要按他们约定的步骤重新检查和启动。"
     ],
-    "conceptName": "Fail-safe design",
+    "overallZh": "本篇用低风险清水演示说明故障安全设计的一个入口：针对明确识别的故障和危险，需要先选定较低风险状态，并让系统在该故障发生时能够实际向这个状态移动。报警或运行指示变化本身不等于执行安全动作；最终还要确认执行件位置和过程结果。",
     "conceptNameZh": "故障安全设计",
-    "explanationParagraphs": [
-      "Fail-safe design begins with specific hazards and failure modes, then defines a lower-risk state for loss of energy, broken connections, or erroneous action. In the story, springs apply the brake and air pressure releases it, so loss of energy defaults to stopping. This is not the same as continuing normal service after a fault, which is fault tolerance. Diagnostics, independent channels, interlocks, tests, and manual reset help ensure the intended safe response actually occurs."
-    ],
     "explanationParagraphsZh": [
-      "故障安全设计先依据具体危害和故障模式，规定失能、断线、误动作等情况应进入何种较低风险状态。故事中的弹簧施加制动、气压释放制动，使失去能源时默认停车。它不等于系统在故障后仍正常服务；后者属于容错。诊断、独立通道、联锁、试验与人工复位常用于保证预定安全行为确实发生。"
+      "高位水箱的重力供水独立于控制盒电源。第一版通电时执行机构打开阀门，失去驱动后却可能停在开启位置；新版则在正常运行时用电保持开启，并在失电时由预置机构回位。针对控制供电丢失这一已识别故障，演示把关闭阀门选为较低风险状态。",
+      "核对时不能只看指示灯：切断控制供电后，先观察阀门是否实际移到关闭位置，再等可能的下游余水流尽，确认不再进水。灯不亮本身也不能排除灯具或线路故障。一次演示只覆盖这次失电情况，不能证明阀门卡滞、回位机构损坏或其他失效都已控制。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先定义本场景在失电时希望系统到达的状态，再区分‘知道失电了’和‘执行件真的完成保护动作’。",
+      "diagramTitle": "为什么运行灯熄灭，还不能证明水已经停了",
+      "diagramSteps": [
+        "第一版通电时由执行机构打开阀门，高位水箱靠重力供水",
+        "切断第一版控制电源：运行灯熄灭，执行件仍停在开启位置",
+        "水仍流入杯中；关闭另设的手动总阀结束这一轮",
+        "新版通电保持阀门开启；失电后由预置回位机构推动关闭",
+        "确认阀位，等下游余水流尽并确认停止，再按演示规程检查重启"
+      ],
+      "diagramStepNotes": [
+        "高位水箱的重力供水独立于控制盒电源；第一版未说明有失电回位。",
+        "绿色灯是运行指示，灯不亮本身不能排除灯具或线路故障，也不能证明阀位。",
+        "另设手动总阀只用来结束这一轮，并不替代新版对失电的自动回位动作。",
+        "关闭仅是此清水演示针对控制失电选择的较低风险状态，不是所有过程的通用安全状态。",
+        "一次测试只覆盖这一失电情形；卡滞或回位机构损坏需另行分析，人工重启是本例规程。"
+      ],
+      "mapping": [
+        "高位小水箱 → 与控制电源独立的重力供水来源。",
+        "绿色运行灯 → 正常供电状态的显示，而不是保护动作本身。",
+        "失电回位机构 → 在指定失电情形下推动阀门向关闭位置移动的机制。",
+        "透明杯水面停止上涨 → 实际过程结果已随阀位改变的可见证据。"
+      ],
+      "boundary": "所谓较低风险状态取决于具体过程与故障。某些真实系统在失电后仍需持续冷却、搅拌、抑制剂供应或其他主动功能，因此‘断电、关闭或停止’并非普遍安全答案。本故事只讨论一个低风险清水注杯演示中的控制供电丢失；不能据此提供真实设备改装、测试、认证或风险分析方法。保护动作也不意味着服务不中断，恢复供电后不一定应自动重启。",
+      "reflection": "这次断电试验成功后，若回位机构本身卡住，能否仅凭这一次结果断定阀门仍会关闭？还需另行考虑什么故障？"
+    },
+    "referencesZh": [
+      {
+        "id": "hse-control-systems",
+        "citation": "Health and Safety Executive. Control systems. Technical Measure Document, COMAH Safety Report Assessment Manual.",
+        "url": "https://www.hse.gov.uk/comah/sragtech/techmeascontsyst.htm",
+        "use": "支持安全功能针对特定危险寻求定义好的安全状态，并支持失去信号或动力时由弹簧回位执行机构进入预定跳闸状态的原则；同时支持考虑公用工程依赖和保护系统测试。该资料也说明某些过程需要持续冷却等功能，因此关闭或断电并非通用安全状态。"
+      },
+      {
+        "id": "cnsc-reactor-failsafe-v21",
+        "citation": "Canadian Nuclear Safety Commission. REGDOC-2.5.2: Design of Reactor Facilities, Version 2.1, section 5.6.6, Fail-safe design.",
+        "url": "https://www.cnsc.gc.ca/eng/acts-and-regulations/regulatory-documents/published/html/regdoc2-5-2-v2-1/index.cfm?pedisable=true",
+        "use": "支持在适用情况下，故障安全设计应考虑部件或系统失效时无需额外操作即可趋向指定安全状态，并考虑失效模式和可检测故障；本篇只借用这一一般原则解释清水教学演示，不把核设施要求当成其他设备的设计认证。"
+      }
+    ],
+    "title": "After the Running Light Went Dark",
+    "summary": "A science museum is preparing an automatic water-filling demonstration. Luo Wen cuts the control power and the running light goes dark, but water still enters the clear cup. He needs a way to make it stop.",
+    "storyParagraphs": [
+      "The science museum is preparing a tabletop water demonstration. When a button is pressed, a small elevated tank sends water by gravity through a valve and into a clear cup. In the first version, the powered actuator opens the valve. Luo Wen wants to check one situation: if the control box suddenly loses power, can the demonstration stop adding water to the cup?",
+      "In the first version, the green running light is on and water flows steadily into the cup. Luo Wen cuts power to the control box. The light goes out, but the elevated tank still provides gravitational head and the level continues to rise. He turns from the lamp to the valve: the actuator has lost its drive yet remains in its open position, leaving the valve open. He closes a separate manual tank shutoff to end the first trial.",
+      "The next version adds a preset return mechanism: power holds the valve open during normal operation; on power loss, the return action uses no lost electrical supply and moves the valve toward the closed position selected for this demonstration. After checking that the tank still contains enough water, Luo Wen restores control power, opens the manual tank shutoff and presses the run button. With the valve open and water flowing again, he cuts control power once more.",
+      "After the valve returns to the closed position, Luo Wen waits for any water remaining downstream to drain, then confirms that no more enters the cup. He keeps the apparatus stopped and checks it before the presenter restarts it under this demonstration’s procedure. That interrupts the display for several minutes and adds a manual check. This time they have observed more than a change in the light: the valve moved and the water stopped.",
+      "During the final rehearsal before opening, the presenter starts the water and then cuts power to the control box. The green running light goes out, the valve returns, and the water level in the clear cup stops rising. Luo Wen waits for a moment to confirm that no more water is entering, pours the cup into the recovery container, and puts it back on the tray. Before the next public demonstration, the system will still be checked and restarted according to their agreed procedure."
+    ],
+    "overall": "This article uses a low-risk water demonstration to introduce one aspect of fail-safe design: for a specifically identified failure and hazard, a lower-risk state must first be selected, and the system should actually move toward that state when the failure occurs. An alarm or change in operating indication is not itself the protective action; the actuator position and the resulting process state also need to be verified.",
+    "conceptName": "Fail-safe design",
+    "explanationParagraphs": [
+      "The elevated tank’s gravity-driven water supply is independent of the control-box power. In the first version, the powered actuator opens the valve but may remain open after losing drive. In the new version, power holds it open during normal operation and a preset mechanism returns it on power loss. For the identified control-power failure, the demonstration selects valve closure as the lower-risk state.",
+      "The check cannot rely on the indicator light alone. After control power is cut, observe whether the valve actually moves closed, then allow any downstream residual water to drain and confirm that inflow stops. A dark light alone cannot rule out a failed bulb or wiring. One demonstration covers only this power-loss case; it does not prove that valve sticking, return-mechanism damage or other faults have been controlled."
+    ],
+    "module": {
+      "intro": "First define the state this scenario should reach after loss of power, then separate 'knowing that power is gone' from 'the actuator actually completing the protective action.'",
+      "diagramTitle": "Why Doesn't the Running Light Going Out Prove That the Water Has Stopped?",
+      "diagramSteps": [
+        "In the first powered version, the actuator opens the valve and the elevated tank supplies water by gravity",
+        "Cut first-version control power: the running light goes dark while the actuator remains in its open position, leaving the valve open",
+        "Water continues into the cup; close the separate manual tank shutoff to end the trial",
+        "In the new version, power holds the valve open; loss of power triggers the preset return toward closed",
+        "Check the valve, let downstream residual water drain and confirm flow stops, then check and restart under the demonstration procedure"
+      ],
+      "diagramStepNotes": [
+        "The elevated tank supplies water by gravity independently of the control box; the first version has no specified loss-of-power return.",
+        "The green lamp is a running indicator. Darkness alone cannot rule out bulb or wiring failure and does not prove valve position.",
+        "The separate manual shutoff ends this trial; it is not a substitute for the new version’s automatic return on loss of power.",
+        "Closure is the lower-risk state selected for this water demonstration and control-power failure, not a universal safe state.",
+        "One test covers only this power-loss case; sticking or return-mechanism damage needs separate analysis, and manual restart is this demonstration’s procedure."
+      ],
+      "mapping": [
+        "Elevated small water tank → the gravity-driven water source independent of control power.",
+        "Green running light → indication of normal powered operation, not the protective action itself.",
+        "Loss-of-power return mechanism → the mechanism that moves the valve toward the closed position for the specified failure.",
+        "Water level in the clear cup stops rising → visible evidence that the process result has changed with the valve position."
+      ],
+      "boundary": "The lower-risk state depends on the specific process and failure. Some real systems still require active cooling, mixing, inhibitor addition, or other functions after loss of power, so 'power off, close, or stop' is not a universal safe answer. This story covers only loss of control power in a low-risk tabletop water-filling demonstration. It does not provide a method for modifying, testing, certifying, or performing risk analysis on real equipment. A protective action also does not mean service remains uninterrupted, and restoration of power does not necessarily justify automatic restart.",
+      "reflection": "After this power-loss test succeeds, suppose the return mechanism itself sticks. Does this one result establish that the valve will still close? What failure would need separate consideration?"
+    },
+    "references": [
+      {
+        "id": "hse-control-systems",
+        "citation": "Health and Safety Executive. Control systems. Technical Measure Document, COMAH Safety Report Assessment Manual.",
+        "url": "https://www.hse.gov.uk/comah/sragtech/techmeascontsyst.htm",
+        "use": "Supports the principle that safety functions seek a defined safe state for specified hazards, including the example of a spring-return actuator taking its tripped state on loss of signal or power, and supports considering dependence on utilities and testing of protection systems. The source also notes that some processes require continued functions such as active cooling, so closure or power-off is not a universal safe state."
+      },
+      {
+        "id": "cnsc-reactor-failsafe-v21",
+        "citation": "Canadian Nuclear Safety Commission. REGDOC-2.5.2: Design of Reactor Facilities, Version 2.1, section 5.6.6, Fail-safe design.",
+        "url": "https://www.cnsc.gc.ca/eng/acts-and-regulations/regulatory-documents/published/html/regdoc2-5-2-v2-1/index.cfm?pedisable=true",
+        "use": "Supports the general principle that, where applicable, fail-safe design aims for a specified safe state following component or system failure without requiring additional action, while considering failure modes and detectable failures. This article uses only that general principle for a water teaching demonstration and does not treat reactor-facility requirements as design certification for other equipment."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-23-preparation/group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-23-preparation/group2-edit-pass1-evidence.json",
+        "engineering-reader-first-23-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Mountain Mine replaced its hoist cage before the winter contract. In the old arrangement, air pressure held a long lever against the winding-drum brake; losing pressure released it. Mechanic Liang Qiu asked what would happen if a hose split. The owner pointed to ore carts waiting at the shaft and offered her a completion bonus. Reversing the mechanism meant three days without lifting, so he approved only stronger joints and a new pressure gauge. Liang had already sketched the reversed arrangement, but the owner rolled the drawing around the new gauge and locked it in his desk. The bonus envelope carried her name; three days of delay would cancel it.\n\nFor six weeks the gauge stayed green and output rose. Operators grew used to releasing the cage as soon as pressure returned. During a rainstorm, a falling stone cut a hose between two perfect joints. Pressure vanished, the lever relaxed, and the loaded cage slid two levels before striking an empty platform. Nobody was inside, but the platform folded, ore blocked the shaft, and the promised shipment missed its train. The undamaged gauge still pointed at zero. Early-shift workers spent three days shovelling ore from the bent platform. One cart wheel remained trapped under it, and the railway charged storage for every missed wagon. The damage had begun with a hose no stronger joint could protect.\n\nThe owner wanted the hose patched before morning. Liang locked the control handle and refused to sign. She redirected springs and a suspended weight so their natural force applied the brake; normal pressure and a valid command were now needed to lift it. Loss of air, electricity, or the control line sent the cage toward a stopped condition. Restart required inspection and deliberate reset instead of returning automatically when pressure flickered back.\n\nThe change cost another contract week. Separate cases—people aboard, ore aboard, maintenance, sensor error, and a jammed cage—were reviewed because stopping was not harmless in every situation. Position sensing, inspection, and test stops supported the chosen response. The owner signed the lost-shipment invoice beside each review. Liang never claimed the cage would keep serving after a fault; she required the identified fault to move first toward the less dangerous state. During the first test, the new brake stopped on a simulated power loss but one position signal disagreed. Liang kept the shaft closed another day until the discrepancy was found, refusing to turn a successful stop into proof that every part was ready.\n\nHalf a year later another hose burst between levels. The cage stopped hard and miners waited forty minutes for a controlled rescue, cursing the delay but walking out. Liang hung the split hose above the brake handle. Beneath it lay the old completion-bonus envelope, still unopened and grey with dust.",
-    "storyBodyZh": "山矿赶在冬季合同前更换升降笼。旧装置依靠气压把长杆压在卷轮刹车上，失压便松开。修械师梁秋问，气管若破会怎样。矿主指着井口等待的矿车，答应按期完成便发奖金；反转机构要停运三天，他只批准加固接头、增装压力表。梁秋早画好反向机构，矿主却把图纸卷在新压力表外，锁进抽屉。奖金信封上写着她的名字，只要延误三天就会取消。\n\n六周里，指针一直在绿色区，出矿量也上升。操作员习惯气压一恢复便放行。一个雨夜，落石割破两只完好接头之间的气管。压力消失，长杆松开，满载矿笼下滑两层，撞上空装卸台才停。笼内无人，平台却折叠，矿石堵住井筒，约定货物错过火车。没损坏的表仍指着零。早班工人花三天从折弯平台下铲矿，一只矿车轮仍卡在里面；铁路还对每节误期车厢收取堆存费。事故从接头以外的气管开始，再牢的接头也护不到那里。\n\n矿主要梁秋补管后天亮前复工。她锁住控制柄，拒绝签字，改用弹簧和悬重的自然力量压紧刹车；只有气压正常、命令有效时，刹车才被提起。失去气源、电力或控制线，矿笼先朝停止状态移动；压力忽明忽灭后，也不能自动重启，必须检查并手动复位。\n\n改造又损失一周合同。载人、载矿、检修、传感器错误和卡笼分别复核，因为停下本身并非每种情形都无害；位置检测、检查和试刹共同支持预定反应。矿主把误期账单逐张签在复核表旁。梁秋没有承诺故障后仍能照常工作，只要求已识别故障先把机器带向伤害较小处。第一次试验中，新刹车在模拟断电时确实停住，一只位置讯号却不一致。梁秋继续封井一天，直到找到差异，没有把一次成功停车当成所有部分都已妥当的证明。\n\n半年后，另一根气管在半空爆裂。升降笼猛地停住，矿工等了四十分钟才按程序获救，骂着延误却都走了出来。梁秋把破管挂在刹车手柄上方，下面压着那只从未打开、已经落灰的完工奖金信封。",
-    "explanation": "Fail-safe design begins with specific hazards and failure modes, then defines a lower-risk state for loss of energy, broken connections, or erroneous action. In the story, springs apply the brake and air pressure releases it, so loss of energy defaults to stopping. This is not the same as continuing normal service after a fault, which is fault tolerance. Diagnostics, independent channels, interlocks, tests, and manual reset help ensure the intended safe response actually occurs.",
-    "explanationZh": "故障安全设计先依据具体危害和故障模式，规定失能、断线、误动作等情况应进入何种较低风险状态。故事中的弹簧施加制动、气压释放制动，使失去能源时默认停车。它不等于系统在故障后仍正常服务；后者属于容错。诊断、独立通道、联锁、试验与人工复位常用于保证预定安全行为确实发生。"
+    "storyBody": "The science museum is preparing a tabletop water demonstration. When a button is pressed, a small elevated tank sends water by gravity through a valve and into a clear cup. In the first version, the powered actuator opens the valve. Luo Wen wants to check one situation: if the control box suddenly loses power, can the demonstration stop adding water to the cup?\n\nIn the first version, the green running light is on and water flows steadily into the cup. Luo Wen cuts power to the control box. The light goes out, but the elevated tank still provides gravitational head and the level continues to rise. He turns from the lamp to the valve: the actuator has lost its drive yet remains in its open position, leaving the valve open. He closes a separate manual tank shutoff to end the first trial.\n\nThe next version adds a preset return mechanism: power holds the valve open during normal operation; on power loss, the return action uses no lost electrical supply and moves the valve toward the closed position selected for this demonstration. After checking that the tank still contains enough water, Luo Wen restores control power, opens the manual tank shutoff and presses the run button. With the valve open and water flowing again, he cuts control power once more.\n\nAfter the valve returns to the closed position, Luo Wen waits for any water remaining downstream to drain, then confirms that no more enters the cup. He keeps the apparatus stopped and checks it before the presenter restarts it under this demonstration’s procedure. That interrupts the display for several minutes and adds a manual check. This time they have observed more than a change in the light: the valve moved and the water stopped.\n\nDuring the final rehearsal before opening, the presenter starts the water and then cuts power to the control box. The green running light goes out, the valve returns, and the water level in the clear cup stops rising. Luo Wen waits for a moment to confirm that no more water is entering, pours the cup into the recovery container, and puts it back on the tray. Before the next public demonstration, the system will still be checked and restarted according to their agreed procedure.",
+    "storyBodyZh": "科普馆准备一个桌面清水演示：按下按钮后，高处的小水箱靠重力把水送过阀门，流进透明杯。第一版通电时，执行机构打开阀门。罗文要验证一个具体情形：如果控制盒突然失去供电，这套演示能不能停止继续往杯里加水？\n\n第一版运行时绿色灯亮着，水稳定流进杯里。罗文切断控制盒电源，灯灭了，可高位水箱仍提供重力压头，水位继续上涨。他从灯旁转向阀门：执行件失去驱动后仍停在开启位置。他先关上水箱另设的手动总阀，结束这一轮。\n\n下一版在阀门上加入预置回位机构：正常时通电保持开启；失电时，回位动作不依赖失去的电源，把阀门推向这次演示选定的关闭位置。检查水箱仍有足够水后，罗文恢复控制盒供电，打开手动总阀并按运行键，让阀门开启、水重新流起来，然后再次切断控制电源。\n\n阀门回到关闭位置后，罗文等管路里可能剩下的水流尽，再确认杯中不再进水。他保持装置停止并检查，再由讲解员按这次演示规程重新启动。这样会中断展示几分钟，也多一道人工确认；这一次，他们看到的不只是灯的变化，还有阀位回转和水流停止。\n\n开放前最后一次排练，讲解员让水流起来，再切断控制盒电源。绿色运行灯灭了，阀门回位，透明杯的水面停止上涨。罗文等了一会儿，确认没有继续流入后，把杯里的水倒进回收桶，再放回托盘。下一场正式演示前，系统仍要按他们约定的步骤重新检查和启动。",
+    "explanation": "The elevated tank’s gravity-driven water supply is independent of the control-box power. In the first version, the powered actuator opens the valve but may remain open after losing drive. In the new version, power holds it open during normal operation and a preset mechanism returns it on power loss. For the identified control-power failure, the demonstration selects valve closure as the lower-risk state.\n\nThe check cannot rely on the indicator light alone. After control power is cut, observe whether the valve actually moves closed, then allow any downstream residual water to drain and confirm that inflow stops. A dark light alone cannot rule out a failed bulb or wiring. One demonstration covers only this power-loss case; it does not prove that valve sticking, return-mechanism damage or other faults have been controlled.",
+    "explanationZh": "高位水箱的重力供水独立于控制盒电源。第一版通电时执行机构打开阀门，失去驱动后却可能停在开启位置；新版则在正常运行时用电保持开启，并在失电时由预置机构回位。针对控制供电丢失这一已识别故障，演示把关闭阀门选为较低风险状态。\n\n核对时不能只看指示灯：切断控制供电后，先观察阀门是否实际移到关闭位置，再等可能的下游余水流尽，确认不再进水。灯不亮本身也不能排除灯具或线路故障。一次演示只覆盖这次失电情况，不能证明阀门卡滞、回位机构损坏或其他失效都已控制。"
   },
   {
     "id": "0715-stress-strain",
@@ -19420,47 +19810,137 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0715",
     "fieldTitle": "Mechanics and metal trades",
     "fieldTitleZh": "机械与金属工艺",
-    "title": "The Hook That Was Never Overloaded",
-    "titleZh": "从未超载的吊钩",
-    "summary": "A dock hook lifts only half its rated load each time, yet cracks from an old scratch after more than eight thousand lifts.",
-    "summaryZh": "码头吊钩每次都只提额定重量的一半，却在第八千多次起吊时，从一道旧划痕处突然裂开。",
-    "storyParagraphs": [
-      "River Port's great lifting hook passed an annual proof load heavier than any timber crate. Foreman Du needed every crane working through the export rush, and the hook had survived five years. When a chain cut a shallow notch near its curve, he painted over it rather than lose a shift. The next proof test still held, so he used the stamped certificate to silence the crane operator's concern.",
-      "Months later, during roughly the eight-thousandth ordinary lift, a crate had barely left the deck when the hook broke at the painted notch. It fell into the hold and crushed a shipment of porcelain. No recorded lift exceeded the limit. Du accused the test weight of being false and ordered a new, heavier one, intending to prove the remaining hooks safe before the insurer arrived. Crane work stopped while sailors counted broken plates in the hold. The insurer photographed the painted notch and suspended coverage for every hook with an undocumented repair. Du's quick coat of paint now idled the whole quay.",
-      "A surveyor washed away the paint and applied an inspection dye. A thin red line entered from the old notch. Curved bands across the fracture showed a crack advancing by small amounts under repeated changes in load; only the final remaining section had separated under the ordinary crate. One heavy survival event had not represented thousands of smaller cycles, their order, or the surface damage where they concentrated.",
-      "Du turned the reopening board face down and stopped all three cranes for inspections suited to hidden cracks. Two ships left for another port while his crew opened every painted repair. A second hook showed a short line at its shoulder. It had never exceeded its permitted load either. Merchants shouted from the gate as inspection tents went up. Du paid idle crews and storage for cargo left on shore. When the second red line appeared, he placed it beside the first fracture on the insurer's table rather than asking for another proof load.",
-      "Hooks were thereafter tracked by lifts and load history, not only by their single heaviest crate. Damaged surfaces and sharp transitions received attention, higher-risk regions were examined at defined intervals using appropriate qualified methods, and components retired under a life-management plan. Important loads gained a secondary catch. The details depended on material, geometry, environment, and validated engineering practice rather than the foreman's new favourite number.",
-      "After each hundred lifts, Du cut a notch into a wooden counter board. The old hook's painted fracture was bolted above it, its red inspection line still visible. When the next shipmaster offered a bonus to skip an overdue check, Du placed the bonus coin into the lowest notch and stopped the crane."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "弹片还要再等几天",
+    "summaryZh": "产品实验室要决定下一版展示架是否继续使用一枚小金属弹片。一次加载检查原本通过就能推进，乔宁却想知道，反复开合会留下什么。",
     "storyParagraphsZh": [
-      "河港大吊钩每年都通过一次重载检验，试铁比任何木箱都重。出口旺季里，领班杜成需要每台吊机不停运，那只钩也已连续五年合格。铁链在弯处划出浅痕时，他用油漆盖住，免得损失一个班次。下一次试铁仍吊得住，他便用合格章压下操作员的担心。",
-      "几个月后，大约第八千次普通起吊，木箱刚离甲板，吊钩就在油漆痕处断开，落进船舱砸碎一批瓷器。记录里没有一次超重。杜成认定试铁重量有假，命人准备更重的一块，打算在保险员到港前证明其余吊钩安全。吊机停下，水手在舱底清点碎瓷。保险员拍下涂漆缺口，暂停承保所有有未记录修补的吊钩。杜成当初省下一个班次的油漆，如今让整座码头停工。",
-      "验船师洗去油漆，使用适当检测显示断口。细红线从旧划痕向里伸，一圈圈弧纹记录裂缝在反复载荷变化下逐次前进；只剩最后一小段金属，才在普通木箱下断开。一次扛住重物的结果，没有代表几千次循环、先后顺序和表面缺口的作用。",
-      "杜成把复工牌翻到背面，停掉三台吊机，改用适合隐裂的检查。两艘货船驶向别港，他的班组则把所有涂漆修补逐一打开。第二只吊钩的肩部也显出短线，它同样从未超过允许载荷。检查帐篷搭起时，商人在门外叫骂。杜成照付停工班组和岸上货物仓租。第二条红线出现后，他把它放到保险员桌上的旧断口旁，没有再要求吊一次更重试铁。",
-      "此后吊钩按起吊次数和载荷历史管理，不只记最重木箱。受损表面与尖锐过渡得到处理，高风险部位由合格人员按既定间隔和适当方法检查，零件依寿命方案退役，重要货物还有第二道承接。具体做法仍须按材料、形状、环境与经验证工程要求决定，不靠领班新喜欢的一个数字。",
-      "每完成一百次起吊，杜成就在木牌刻一道短线。旧钩涂过漆的断口钉在最上方，红色检测线仍看得见。下一位船主拿奖金求他跳过到期检查，他把金币塞进木牌最低一道刻痕，停下吊机。"
+      "产品实验室正在改一款折叠展示架，里面有一枚小金属弹片，每次展开和收起都会经历一次加载变化。乔宁要决定下一轮样件是否继续沿用这个结构。团队原本准备只做一次峰值加载检查：如果试片承受设定峰值力后卸载，表面检查没有新发现，就继续推进下一版。",
+      "乔宁却把真实使用动作又想了一遍：展示架不会只开合一次。她从同一批材料里准备两枚同材质、名义几何相同的独立试片，测试前用同一方法检查关注区域的表面，两枚都没有记录到可见裂纹。",
+      "两枚试片在同一台仪器和同样环境中，使用同一工装、加载方向和设定峰值力。第一枚只完成一次从低载荷升到峰值力再卸载的过程，随后被取下。第二枚留在仪器上，反复经历同样的加载—卸载循环。乔宁把两片的测试记录放在一起，等着下一次检查。",
+      "第一枚单次加载后，用同一检查方法仍没有记录到新的可见表面裂纹。第二枚在循环初期也没有新发现。实验人员按既定间隔暂停循环，用同样方法观察同一关注区域；经过一段循环历史后，发现了一条此前没有记录到的细裂纹，后续检查中这条裂纹又比前一次更长了一些。",
+      "乔宁把下一轮样机计划往后移了几天，并增加更多同几何试片，用于受控循环加载和后续观察。原定送去装配的下一版弹片因此暂时留在实验室周转架上。负责样机的人来取件时，她没有交出那盒零件：“再等几天。一次加载告诉我们的，还不够回答反复开合。”"
     ],
-    "conceptName": "Material fatigue",
+    "overallZh": "本篇用低风险教学试片说明材料疲劳的一个入口：金属在反复变化的载荷下，裂纹可能逐渐萌生并扩展，因此一次峰值加载后没有发现问题，并不能代表相同构件能够承受完整的循环载荷历史。疲劳判断需要关注载荷循环、裂纹发展和相关检查，而不仅是一次峰值。",
     "conceptNameZh": "材料疲劳",
-    "explanationParagraphs": [
-      "Material fatigue is progressive damage caused by repeated or fluctuating loads. Cracks can initiate and grow at stresses far below those required for a single static failure. Life depends on stress amplitude, mean stress, cycle count, load sequence, surface defects, geometric concentrations, environment, and residual stress. A static proof test cannot replace cyclic testing, inspection, life management, and damage-tolerant design."
-    ],
     "explanationParagraphsZh": [
-      "材料疲劳是反复或波动载荷造成的渐进损伤，裂纹可在远低于一次静载破坏水平的应力下萌生并扩展。寿命受应力幅、平均应力、循环次数、载荷顺序、表面缺陷、几何集中、环境与残余应力影响。静态强度试验不能替代循环试验、定期检查、寿命管理和损伤容限设计。"
+      "疲劳与重复或波动载荷有关。在某些金属和条件下，裂纹可以在循环历史中萌生并逐渐扩展，最终导致性能下降甚至断裂。单次加载没有出现可见问题，只说明那一次观察的结果，不能替代对循环历史的判断。",
+      "本例的对照让两枚独立试片的批次、名义几何、峰值力、工装、加载方向、仪器和环境尽量可比；一枚只加载一次，另一枚反复循环。循环试片后来首次被记录到细裂纹，后续检查又看到它变长，说明这一加载历史值得继续研究。首次发现不等于证明裂纹当时才萌生；两片试样也不能排除未检微缺陷、材料离散或确定通用寿命。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "让试片批次、名义几何、峰值力、工装方向、仪器和环境尽量可比，再比较一次与反复加载的观察。",
+      "diagramTitle": "为什么一次峰值加载后未发现可见裂纹，仍不能代表反复开合也没问题",
+      "diagramSteps": [
+        "准备两枚同批、同材质、名义几何相同的独立试片，并用同一方法做初始表面检查",
+        "在同一仪器和环境下，用同一工装、方向、设定峰值力和加载—卸载方式测试两片",
+        "第一片只完成一次加载后卸载，随后停止测试",
+        "第二片反复循环，并按既定间隔用同一方法检查同一关注区域",
+        "若循环试片后来首次被记录到细裂纹且后续观察变长，则下一轮开发增加循环验证"
+      ],
+      "diagramStepNotes": [
+        "初始检查没有发现可见裂纹，不代表排除了所有微小缺陷或材料离散。",
+        "峰值力、工装、加载方向和方式尽量一致，降低已记录条件差异；未检微缺陷仍可能不同。",
+        "单次试片在一次卸载后不再参与循环，因此不会发生时间顺序上的重复加载混淆。",
+        "定期检查只能在所用方法的能力范围内观察裂纹，不意味着每个循环都产生可见增长。",
+        "一对教学试片不能确定真实构件寿命、唯一根因或所有材料在所有应力水平下的疲劳表现。"
+      ],
+      "mapping": [
+        "一次加载试片 → 单次峰值条件下的有限观察。",
+        "重复循环试片 → 具有累积加载历史的教学对照。",
+        "后来首次被记录且后续变长的细裂纹 → 检出与扩展的观察，不能单凭首次发现确定萌生时间。",
+        "推迟下一版样机 → 为加入循环验证付出的开发时间和样件成本。"
+      ],
+      "boundary": "疲劳寿命受应力范围、平均应力、频率、几何、材料、加工、缺陷和环境等影响。早期裂纹可能低于表面检查的检测能力；初始微缺陷、腐蚀、磨损或未记录超载等也可能影响结果。两片教学试样不能确定唯一根因或真实构件寿命。本例没有足够应力资料判断是否屈服，也不提供检修方法、循环次数、载荷阈值或通用疲劳极限。",
+      "reflection": "某零件出厂时肉眼没有发现裂纹，使用一段时间后显微检查发现一道细纹。能断定裂纹一定是在使用之后才萌生吗？还需要知道哪些检查条件？"
+    },
+    "referencesZh": [
+      {
+        "id": "deschanel-2017-fatigue",
+        "citation": "Deschanel, S., Ben Rhouma, W., & Weiss, J. (2017). Acoustic emission multiplets as early warnings of fatigue failure in metallic materials. Scientific Reports, 7, 13680. https://doi.org/10.1038/s41598-017-13226-1",
+        "url": "https://www.nature.com/articles/s41598-017-13226-1",
+        "use": "支持循环疲劳中裂纹萌生、逐步扩展以及最终失效可能与单调加载失效不同的基本机制，并支持特定金属样品中增量裂纹传播的研究；不把论文中的具体试样、循环次数、载荷或低周实验条件改写成本故事数据或通用安全阈值。"
+      },
+      {
+        "id": "faa-fatigue-damage-tolerance",
+        "citation": "Federal Aviation Administration. Technical Discipline: Fatigue and Damage Tolerance. Updated April 9, 2026.",
+        "url": "https://www.faa.gov/aircraft/air_cert/step/disciplines/fatigue_damage_tolerance",
+        "use": "支持疲劳与反复或波动载荷、环境因素、断裂力学和寿命管理有关的广泛范围；该航空资料不用于提供本虚构金属试片的通用检查间隔、寿命或疲劳强度。"
+      }
+    ],
+    "title": "A Few More Days for the Spring Element",
+    "summary": "A product laboratory must decide whether its next folding display stand will keep a small metal spring element. A single load check was meant to clear the way, but Qiao Ning wants to know what repeated opening and closing might leave behind.",
+    "storyParagraphs": [
+      "The product laboratory is revising a folding display stand. Inside it is a small metal spring element that experiences a load change each time the stand is opened and closed. Qiao Ning has to decide whether the next prototype should keep this structure. The team had originally planned only a one-time peak-force check: if a specimen was loaded to the specified peak force, unloaded, and showed no newly recorded visible surface crack, they would move on to the next prototype.",
+      "Qiao Ning thinks again about how the product is actually used: the stand will not be opened and closed only once. She prepares two independent specimens from the same material batch with the same material and nominal geometry. Before testing, the same method records no visible surface cracks in the area of interest on either specimen.",
+      "The two specimens are tested in the same machine and environment with the same fixture, loading direction and specified peak force. The first makes one rise from a low load to that peak and is unloaded, then removed. The second remains in the machine for repeated cycles of the same loading and unloading. Qiao Ning puts the two test records side by side and waits for the next inspection.",
+      "After its single loading event, the first specimen is inspected again using the same method, and no newly recorded visible surface crack is found. The cyclic specimen also shows no new finding early in the test. At predetermined intervals, the laboratory pauses the cycling and examines the same region using the same method. After some cyclic history has accumulated, a fine crack that had not previously been recorded is found. In a later inspection, that crack is longer than it was before.",
+      "Qiao Ning moves the next prototype schedule back by several days and adds more specimens of the same geometry for controlled cyclic loading and follow-up observation. The next batch of spring elements that had been scheduled for assembly therefore remains on the laboratory transfer rack. When the prototype colleague comes to collect them, she does not hand over the box. “Give me a few more days. One load doesn't tell us enough about repeated opening and closing.”"
+    ],
+    "overall": "This article uses low-risk teaching specimens to introduce one aspect of material fatigue: under repeated or fluctuating loading, cracks can initiate and gradually grow, so a specimen showing no problem after a single peak load does not establish its ability to withstand an entire cyclic loading history. Fatigue reasoning therefore requires attention to load cycles, crack development, and relevant inspection rather than only to one peak event.",
+    "conceptName": "Material fatigue",
+    "explanationParagraphs": [
+      "Fatigue is associated with repeated or fluctuating loads. In some metals and conditions, cracks can initiate during cyclic loading and grow progressively, eventually reducing performance or leading to fracture. A one-time load with no visible problem reports only the result of that particular observation; it cannot replace consideration of cyclic history.",
+      "The comparison makes the two independent specimens’ batch, nominal geometry, peak force, fixture, loading direction, machine and environment as comparable as possible. One is loaded once and the other cycled repeatedly. A fine crack is first recorded later in the cyclic specimen and is observed to grow in a subsequent inspection, making that loading history worth further study. First detection does not prove when the crack initiated; two specimens cannot rule out undetected microscopic defects or material variability, or establish a universal life."
+    ],
+    "module": {
+      "intro": "Make batch, nominal geometry, peak force, fixture and direction, machine and environment as comparable as possible, then compare observations after one versus repeated loading.",
+      "diagramTitle": "Why Does Finding No Visible Crack After One Peak Load Not Prove Repeated Opening and Closing Will Be Fine?",
+      "diagramSteps": [
+        "Prepare two independent specimens from the same batch with the same material and nominal geometry, and inspect both initially using the same surface method",
+        "Test both in the same machine and environment, using the same fixture, direction, peak force and loading-unloading pattern",
+        "Load the first specimen once to the peak force, unload it, and then remove it from further cyclic testing",
+        "Cycle the second specimen repeatedly and inspect the same region at predetermined intervals using the same method",
+        "If a previously unrecorded fine crack is later found in the cyclic specimen and observed to grow, add cyclic validation to the next development round"
+      ],
+      "diagramStepNotes": [
+        "No visible crack recorded during the initial inspection does not mean all microscopic defects or material variability have been excluded.",
+        "Match peak force, fixture, direction and loading pattern to reduce known differences; undetected microscopic defects may still differ.",
+        "The single-load specimen does not enter the later cyclic sequence, preventing confusion about its time history.",
+        "Periodic inspection can observe cracks only within the capability of the chosen method and does not mean every cycle produces visible crack growth.",
+        "A pair of teaching specimens cannot establish the fatigue life, unique cause, or cyclic behavior of all real components or all materials."
+      ],
+      "mapping": [
+        "Single-load specimen → a limited observation under one peak-force event.",
+        "Repeated-cycle specimen → a teaching comparison containing accumulated loading history.",
+        "A fine crack first recorded later and then observed to grow → an observation of detection and propagation, not proof of when initiation occurred.",
+        "Delayed next prototype → the development-time and specimen cost of adding cyclic validation."
+      ],
+      "boundary": "Fatigue life depends on stress range, mean stress, frequency, geometry, material, processing, defects, environment and other factors. Early cracks can be below the detection capability of surface inspection; initial microscopic defects, corrosion, wear or unrecorded overload may also affect results. Two teaching specimens cannot establish a unique cause or a real component’s life. This example lacks enough stress information to determine whether yielding occurred, and it provides no inspection procedure, cycle count, load threshold or universal fatigue limit.",
+      "reflection": "A component leaves the factory with no crack seen by eye. After some use, microscopic inspection finds a fine crack. Does that establish that it must have initiated during use? What inspection conditions would you need to know?"
+    },
+    "references": [
+      {
+        "id": "deschanel-2017-fatigue",
+        "citation": "Deschanel, S., Ben Rhouma, W., & Weiss, J. (2017). Acoustic emission multiplets as early warnings of fatigue failure in metallic materials. Scientific Reports, 7, 13680. https://doi.org/10.1038/s41598-017-13226-1",
+        "url": "https://www.nature.com/articles/s41598-017-13226-1",
+        "use": "Supports the basic mechanism of crack initiation, incremental crack growth, and eventual failure under cyclic fatigue, and supports research into incremental crack propagation in particular metallic specimens. The paper's specific specimen dimensions, cycle counts, loads, and low-cycle experimental conditions are not used as fictional story data or universal safety thresholds."
+      },
+      {
+        "id": "faa-fatigue-damage-tolerance",
+        "citation": "Federal Aviation Administration. Technical Discipline: Fatigue and Damage Tolerance. Updated April 9, 2026.",
+        "url": "https://www.faa.gov/aircraft/air_cert/step/disciplines/fatigue_damage_tolerance",
+        "use": "Supports the broad scope of fatigue involving repeated or fluctuating loads, environmental factors, fracture mechanics, and life management. This aviation source is not used to provide a universal inspection interval, service life, or fatigue strength for the fictional metal specimens."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-23-preparation/group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-23-preparation/group2-edit-pass1-evidence.json",
+        "engineering-reader-first-23-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "River Port's great lifting hook passed an annual proof load heavier than any timber crate. Foreman Du needed every crane working through the export rush, and the hook had survived five years. When a chain cut a shallow notch near its curve, he painted over it rather than lose a shift. The next proof test still held, so he used the stamped certificate to silence the crane operator's concern.\n\nMonths later, during roughly the eight-thousandth ordinary lift, a crate had barely left the deck when the hook broke at the painted notch. It fell into the hold and crushed a shipment of porcelain. No recorded lift exceeded the limit. Du accused the test weight of being false and ordered a new, heavier one, intending to prove the remaining hooks safe before the insurer arrived. Crane work stopped while sailors counted broken plates in the hold. The insurer photographed the painted notch and suspended coverage for every hook with an undocumented repair. Du's quick coat of paint now idled the whole quay.\n\nA surveyor washed away the paint and applied an inspection dye. A thin red line entered from the old notch. Curved bands across the fracture showed a crack advancing by small amounts under repeated changes in load; only the final remaining section had separated under the ordinary crate. One heavy survival event had not represented thousands of smaller cycles, their order, or the surface damage where they concentrated.\n\nDu turned the reopening board face down and stopped all three cranes for inspections suited to hidden cracks. Two ships left for another port while his crew opened every painted repair. A second hook showed a short line at its shoulder. It had never exceeded its permitted load either. Merchants shouted from the gate as inspection tents went up. Du paid idle crews and storage for cargo left on shore. When the second red line appeared, he placed it beside the first fracture on the insurer's table rather than asking for another proof load.\n\nHooks were thereafter tracked by lifts and load history, not only by their single heaviest crate. Damaged surfaces and sharp transitions received attention, higher-risk regions were examined at defined intervals using appropriate qualified methods, and components retired under a life-management plan. Important loads gained a secondary catch. The details depended on material, geometry, environment, and validated engineering practice rather than the foreman's new favourite number.\n\nAfter each hundred lifts, Du cut a notch into a wooden counter board. The old hook's painted fracture was bolted above it, its red inspection line still visible. When the next shipmaster offered a bonus to skip an overdue check, Du placed the bonus coin into the lowest notch and stopped the crane.",
-    "storyBodyZh": "河港大吊钩每年都通过一次重载检验，试铁比任何木箱都重。出口旺季里，领班杜成需要每台吊机不停运，那只钩也已连续五年合格。铁链在弯处划出浅痕时，他用油漆盖住，免得损失一个班次。下一次试铁仍吊得住，他便用合格章压下操作员的担心。\n\n几个月后，大约第八千次普通起吊，木箱刚离甲板，吊钩就在油漆痕处断开，落进船舱砸碎一批瓷器。记录里没有一次超重。杜成认定试铁重量有假，命人准备更重的一块，打算在保险员到港前证明其余吊钩安全。吊机停下，水手在舱底清点碎瓷。保险员拍下涂漆缺口，暂停承保所有有未记录修补的吊钩。杜成当初省下一个班次的油漆，如今让整座码头停工。\n\n验船师洗去油漆，使用适当检测显示断口。细红线从旧划痕向里伸，一圈圈弧纹记录裂缝在反复载荷变化下逐次前进；只剩最后一小段金属，才在普通木箱下断开。一次扛住重物的结果，没有代表几千次循环、先后顺序和表面缺口的作用。\n\n杜成把复工牌翻到背面，停掉三台吊机，改用适合隐裂的检查。两艘货船驶向别港，他的班组则把所有涂漆修补逐一打开。第二只吊钩的肩部也显出短线，它同样从未超过允许载荷。检查帐篷搭起时，商人在门外叫骂。杜成照付停工班组和岸上货物仓租。第二条红线出现后，他把它放到保险员桌上的旧断口旁，没有再要求吊一次更重试铁。\n\n此后吊钩按起吊次数和载荷历史管理，不只记最重木箱。受损表面与尖锐过渡得到处理，高风险部位由合格人员按既定间隔和适当方法检查，零件依寿命方案退役，重要货物还有第二道承接。具体做法仍须按材料、形状、环境与经验证工程要求决定，不靠领班新喜欢的一个数字。\n\n每完成一百次起吊，杜成就在木牌刻一道短线。旧钩涂过漆的断口钉在最上方，红色检测线仍看得见。下一位船主拿奖金求他跳过到期检查，他把金币塞进木牌最低一道刻痕，停下吊机。",
-    "explanation": "Material fatigue is progressive damage caused by repeated or fluctuating loads. Cracks can initiate and grow at stresses far below those required for a single static failure. Life depends on stress amplitude, mean stress, cycle count, load sequence, surface defects, geometric concentrations, environment, and residual stress. A static proof test cannot replace cyclic testing, inspection, life management, and damage-tolerant design.",
-    "explanationZh": "材料疲劳是反复或波动载荷造成的渐进损伤，裂纹可在远低于一次静载破坏水平的应力下萌生并扩展。寿命受应力幅、平均应力、循环次数、载荷顺序、表面缺陷、几何集中、环境与残余应力影响。静态强度试验不能替代循环试验、定期检查、寿命管理和损伤容限设计。"
+    "storyBody": "The product laboratory is revising a folding display stand. Inside it is a small metal spring element that experiences a load change each time the stand is opened and closed. Qiao Ning has to decide whether the next prototype should keep this structure. The team had originally planned only a one-time peak-force check: if a specimen was loaded to the specified peak force, unloaded, and showed no newly recorded visible surface crack, they would move on to the next prototype.\n\nQiao Ning thinks again about how the product is actually used: the stand will not be opened and closed only once. She prepares two independent specimens from the same material batch with the same material and nominal geometry. Before testing, the same method records no visible surface cracks in the area of interest on either specimen.\n\nThe two specimens are tested in the same machine and environment with the same fixture, loading direction and specified peak force. The first makes one rise from a low load to that peak and is unloaded, then removed. The second remains in the machine for repeated cycles of the same loading and unloading. Qiao Ning puts the two test records side by side and waits for the next inspection.\n\nAfter its single loading event, the first specimen is inspected again using the same method, and no newly recorded visible surface crack is found. The cyclic specimen also shows no new finding early in the test. At predetermined intervals, the laboratory pauses the cycling and examines the same region using the same method. After some cyclic history has accumulated, a fine crack that had not previously been recorded is found. In a later inspection, that crack is longer than it was before.\n\nQiao Ning moves the next prototype schedule back by several days and adds more specimens of the same geometry for controlled cyclic loading and follow-up observation. The next batch of spring elements that had been scheduled for assembly therefore remains on the laboratory transfer rack. When the prototype colleague comes to collect them, she does not hand over the box. “Give me a few more days. One load doesn't tell us enough about repeated opening and closing.”",
+    "storyBodyZh": "产品实验室正在改一款折叠展示架，里面有一枚小金属弹片，每次展开和收起都会经历一次加载变化。乔宁要决定下一轮样件是否继续沿用这个结构。团队原本准备只做一次峰值加载检查：如果试片承受设定峰值力后卸载，表面检查没有新发现，就继续推进下一版。\n\n乔宁却把真实使用动作又想了一遍：展示架不会只开合一次。她从同一批材料里准备两枚同材质、名义几何相同的独立试片，测试前用同一方法检查关注区域的表面，两枚都没有记录到可见裂纹。\n\n两枚试片在同一台仪器和同样环境中，使用同一工装、加载方向和设定峰值力。第一枚只完成一次从低载荷升到峰值力再卸载的过程，随后被取下。第二枚留在仪器上，反复经历同样的加载—卸载循环。乔宁把两片的测试记录放在一起，等着下一次检查。\n\n第一枚单次加载后，用同一检查方法仍没有记录到新的可见表面裂纹。第二枚在循环初期也没有新发现。实验人员按既定间隔暂停循环，用同样方法观察同一关注区域；经过一段循环历史后，发现了一条此前没有记录到的细裂纹，后续检查中这条裂纹又比前一次更长了一些。\n\n乔宁把下一轮样机计划往后移了几天，并增加更多同几何试片，用于受控循环加载和后续观察。原定送去装配的下一版弹片因此暂时留在实验室周转架上。负责样机的人来取件时，她没有交出那盒零件：“再等几天。一次加载告诉我们的，还不够回答反复开合。”",
+    "explanation": "Fatigue is associated with repeated or fluctuating loads. In some metals and conditions, cracks can initiate during cyclic loading and grow progressively, eventually reducing performance or leading to fracture. A one-time load with no visible problem reports only the result of that particular observation; it cannot replace consideration of cyclic history.\n\nThe comparison makes the two independent specimens’ batch, nominal geometry, peak force, fixture, loading direction, machine and environment as comparable as possible. One is loaded once and the other cycled repeatedly. A fine crack is first recorded later in the cyclic specimen and is observed to grow in a subsequent inspection, making that loading history worth further study. First detection does not prove when the crack initiated; two specimens cannot rule out undetected microscopic defects or material variability, or establish a universal life.",
+    "explanationZh": "疲劳与重复或波动载荷有关。在某些金属和条件下，裂纹可以在循环历史中萌生并逐渐扩展，最终导致性能下降甚至断裂。单次加载没有出现可见问题，只说明那一次观察的结果，不能替代对循环历史的判断。\n\n本例的对照让两枚独立试片的批次、名义几何、峰值力、工装、加载方向、仪器和环境尽量可比；一枚只加载一次，另一枚反复循环。循环试片后来首次被记录到细裂纹，后续检查又看到它变长，说明这一加载历史值得继续研究。首次发现不等于证明裂纹当时才萌生；两片试样也不能排除未检微缺陷、材料离散或确定通用寿命。"
   },
   {
     "id": "0715-engineering-tolerance",
@@ -21331,49 +21811,137 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0732",
     "fieldTitle": "Building and civil engineering",
     "fieldTitleZh": "建筑与土木工程",
-    "title": "The Giant Number Two at the Bridge",
-    "titleZh": "桥头那个巨大的“二”",
-    "summary": "A mayor paints 'twice the required strength' at a bridge entrance, until a flood removes the riverbed beneath a pier that the number never considered.",
-    "summaryZh": "市长在桥头写下“承受力是需要的两倍”，直到洪水从这个数字没有计算过的桥墩下面掏走了河床。",
-    "storyParagraphs": [
-      "When the new footbridge opened, an engineer said its main beams had a margin of two against the expected crowd load. The mayor liked this so much that he ordered a giant number two painted at the entrance and promised citizens that whatever happened, the bridge was twice as strong as necessary.",
-      "Three years later, floodwater passed around the bank protection and scoured a deep hole beside one pier. The main beams could still carry far more than the pedestrians above, but the deck began tilting. Inspection also found moisture damage at one connection. The number two had referred to main-beam bending under a particular load; it did not automatically protect against foundation scour, connection failure, or deterioration over time.",
-      "The mayor closed only half the bridge and pointed to the painted two. Inspector An used the original calculation to show its narrow meaning: if a particular beam resistance was 200 matching units and the stated bending demand 100, their ratio was two for that check. A scour-weakened foundation and a corroded connection had different demands, resistances, uncertainties, and failure consequences. The large numeral supplied no denominator for them.",
-      "The mayor asked why the engineer did not simply change the number to three. On paper, the engineer separated crowds, wind, water, and accidental actions, then the possible failures of beams, connections, piers, and foundations. Each demand and resistance had its own variability, model error, and consequence and had to be compared under matching definitions. Multiplying the wrong question by a larger number still left the wrong question.",
-      "A festival procession was due in two days. Its route banner already hung from the bridge slogan when inspectors refused to promise how much capacity remained. The mayor turned both signs toward the river and ordered closure. He lost the festival route and paid ferry operators for six weeks. Engineers then used the applicable design framework and site evidence rather than inventing one universal number at the gate.",
-      "The bridge received reinforcement against scour and at the corroded connection, with water-depth checks and closure conditions after storms. Review used code-based combinations and resistance rules, while construction quality, drainage, inspection, and maintenance entered the plan. Margins remained, but no longer carried every promise that modelling, detailing, and management had to fulfil.",
-      "At reopening, the mayor painted over the giant number two himself. A smaller sign replaced it with the occupancy limit, latest inspection date, and red flood closure level. The bridge still depended on inspection, drainage, construction quality, and future decisions; the sign promised no universal immunity. Rain later exposed a faint curve of the old two beneath the paint, directly above the ferry invoices kept in the gatehouse."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "那份暂未发出的图纸",
+    "summaryZh": "展陈团队准备把一套支臂方案交给制作方。主体计算已告一段落，林澈点开发送窗口时，却发现还有一处连接需要再看一眼。",
     "storyParagraphsZh": [
-      "新步桥完工时，工程师说主梁按预计人群重量留有两倍余量。市长听后十分喜欢，命人在桥头漆上一个巨大的‘二’，并向百姓保证这座桥无论遇到什么，都比需要强一倍。",
-      "三年后，洪水绕过护岸，在一只桥墩周围冲出深坑。主梁仍能承受远超桥上行人的重量，桥面却开始向一侧倾斜。检查还发现一处连接被潮气腐蚀。那个‘二’只属于某种载荷下的主梁弯曲，并没有自动保护地基冲刷、连接破坏或材料随时间变差。",
-      "市长只封半座桥，仍指着那个“二”。检查员安翻出原计算：若某根梁的抗力是二百个匹配单位，规定弯曲需求为一百，二只属于这项比值。被冲弱的地基和锈蚀连接各有不同需求、抗力、不确定性与后果，桥头大字没有给它们提供分母。",
-      "市长问工程师为何不把数字改成三。工程师在纸上分别列出人群、风、水流和偶然作用，又列出梁、连接、桥墩和地基可能怎样失效。每一种需求和抗力都有自己的变异、模型误差与后果，必须在同一定义下比较；错误的问题即使乘上更大的数，仍是错误的问题。",
-      "两天后节庆队伍就要过桥，路线横幅已挂在桥头标语下，检查人员却拒绝承诺剩余能力。市长把两块牌都转向河面，下令关闭，失去节庆路线，又为六周渡船付费。工程师随后依据适用规范框架和现场证据复核，没有再在桥头发明一个包办一切的数字。",
-      "桥梁加固了受冲刷基础和腐蚀连接，并设置水深检查与暴雨后的封桥条件。设计按规范的荷载组合和抗力规则复核，施工质量、排水、检查和维护也进入计划。余量仍然存在，却不再替模型、构造和管理承担所有保证。",
-      "重新开放时，市长亲手刷掉桥头巨大的“二”。原处换成小牌，写载客限制、最近检查日期和洪水封闭红线。桥仍依赖检查、排水、施工质量与未来决策，那块牌不再承诺一种数字可以抵挡所有失效。后来雨水冲淡新漆，旧“二”的一弯仍隐约透出，正对着门房里那叠六周渡船账单。市长没有再补厚油漆，只让人按日期更新旁边的检查牌。"
+      "展陈团队下午要把一套不载人的展示支臂方案发给制作方，决定下一轮样机长什么样。细支臂已经改了几轮，屏幕上的这一版最利落，负责外观的同事正等林澈点发送。支臂本体那页也不再让人皱眉：在这套纸面荷载案例中，所选屈服判据的预测极限力是120牛顿（N），对应工作需求是60 N。",
+      "前几轮大家一直围着这根支臂加厚、改形。120除以60得到2，会议气氛松了下来。外观同事准备收起样机盒，林澈点开发送窗口，又扫了一眼剩下的接口计算。",
+      "鼠标停在底部夹具那一行。这里问的不是支臂会不会达到所选屈服判据，而是连接会不会先发生滑移。工程师对同一荷载案例，按夹具尚未滑移的假定构型估算，滑移方向的工作需求碰巧也是60 N，预测滑移极限却只有45 N。林澈按了计算器：45÷60=0.75。支臂那一项的2仍然成立，却不能替夹具回答这一项。",
+      "她把发送窗口关掉。团队原本还在讨论要不要继续给支臂加材料，现在决定先保持支臂不动，把底部连接交回接口设计去修改，再用修订后的方案重新检查各自对应的判据。这样会推迟下一轮样机制作，原本藏得很干净的接口也可能需要更多空间，但继续强化已经有余量的支臂，并不能解决眼前暴露出来的连接问题。",
+      "散会前，林澈把细支臂留在样机上，只卸下底部夹具交给负责接口的人。外观同事把刚准备收走的样机盒又放回桌边：“那这一版先不发？”林澈点头：“等接口回来，再一起看。”制作文件仍停在草稿状态。"
     ],
-    "conceptName": "Factor of safety",
+    "overallZh": "本篇用虚构纸面设计比较说明安全系数的一个入口：对明确对象、工况、方向和失效模式，可以把预测极限抗力与相应工作需求这两个同类物理量相除，得到无量纲比值。这个比值只回答所定义的那一项裕度，不能自动覆盖另一种失效模式，也不是事故概率、普适安全门槛或整套构造的安全证明。",
     "conceptNameZh": "安全系数",
-    "explanationParagraphs": [
-      "A factor of safety is the ratio of a resistance measure to its corresponding demand under a specified failure mode and design method, providing margin for variability in materials, loads, and models. The number is meaningful only when definitions match and cannot be extended automatically from one component or failure mode to a whole system. Modern codes may instead use calibrated partial factors on loads and resistance; sound models, detailing, construction, and maintenance remain essential."
-    ],
     "explanationParagraphsZh": [
-      "安全系数是在规定失效模式和设计方法下，抗力度量与相应需求度量的比值，用来为材料变异、载荷和模型不确定性提供裕度。数值只有在定义匹配时才有意义，不能从一种构件或失效方式自动推广到整个系统。现代规范也常用校准后的荷载与抗力分项系数；正确模型、构造、施工和维护仍不可替代。"
+      "本篇采用一种“计算得到的比值”用法：安全系数=某一明确失效模式下的预测极限抗力÷同一工况下、同一对象口径和相同物理量的工作需求。分子和分母必须能够直接比较；不同方向、不同判据或不同物理量不能随意相除。",
+      "最小例子：支臂屈服判据下预测极限力120 N、对应工作需求60 N，则120/60=2。另对同一荷载案例，按夹具滑移前的假定构型估算滑移方向需求为60 N，预测滑移极限45 N，则45/60=0.75：纸面需求高于这一预测极限。这提示该模式需重新核查，不代表实物已按纸面数值验证失效；一旦发生滑移，受力也可能重新分配。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "先把一个比值绑定到明确对象和失效模式，再检查系统中是否还有另一个比值正在回答不同的问题。",
+      "diagramTitle": "为什么支臂的比值是2，仍不能替夹具的滑移判据作结论",
+      "diagramSteps": [
+        "在固定展示工况和方向下，计算支臂屈服判据对应的工作需求60 N",
+        "用该判据的预测极限力120 N除以60 N，得到无量纲比值2",
+        "继续检查底部夹具滑移判据：同一荷载案例下，按滑移前假定构型估算其滑移方向需求为60 N",
+        "用预测滑移极限45 N除以该需求60 N，得到0.75",
+        "暂缓这一版制作，先修改连接，再重新核查相关失效模式"
+      ],
+      "diagramStepNotes": [
+        "第一个60 N只属于支臂屈服判据在该工况下的匹配需求，不是所有构件天然都承受同一力。",
+        "120 N是虚构纸面预测极限值，不是实测额定值；屈服判据也不等同于必然断裂。",
+        "第二个60 N是针对夹具滑移方向、按滑移前构型另行估算的需求；相同数值只是本教学例设定，不是实测“未滑移”状态。",
+        "0.75暴露的是这一局部滑移判据需要重新检查，不能据此断言真实装置已经发生失效。",
+        "不同失效模式需要分别检查，一个局部高比值不能覆盖稳定、连接、疲劳、材料或整体其他模式。"
+      ],
+      "mapping": [
+        "120 N与60 N → 支臂屈服判据下可比较的预测极限力与工作需求。",
+        "45 N与60 N → 夹具滑移判据下另一组可比较的预测极限力与工作需求。",
+        "关闭发送窗口 → 一个局部指标不足以支持整套方案继续深化后的实际选择变化。",
+        "拆下夹具 → 把下一步工作转到当前暴露出的连接模式。"
+      ],
+      "boundary": "本篇只演示一种“预测极限抗力÷相应工作需求”的计算比值。工程文献中“factor of safety”也可能指设计方法中预先规定的乘数，不能与本例计算比值混为一谈；许用应力设计中的允许值也不能直接当作实际工作应力。现代规范还可能使用分项荷载和抗力系数。所有120 N、60 N、45 N均为虚构纸面教学值，不是建筑设计参数、规范要求、施工指引或普适门槛。",
+      "reflection": "另一个构件在指定屈服判据下，预测极限为80 N、对应需求为50 N，比值是多少？它能直接说明该构件连接的滑移判据也有足够裕度吗？"
+    },
+    "referencesZh": [
+      {
+        "id": "ramsey2019-factor-of-safety",
+        "citation": "Ramsey, J. K. (2019, September). Calculating Factors of Safety and Margins of Safety From Interaction Equations. NASA/TM—2019-220153, Appendix A. NASA Glenn Research Center.",
+        "url": "https://ntrs.nasa.gov/api/citations/20190032150/downloads/TM-2019-220153.pdf",
+        "use": "支持安全系数术语可指相同物理量之间计算得到的比值，也可在其他语境中指预先规定的乘数，具体定义取决于方法与上下文；本篇只采用前一种教学用法，不把NASA方法当作建筑规范或通用数值要求。"
+      },
+      {
+        "id": "fhwa2013-bridge-performance-safety-factor",
+        "citation": "Hooks, J., & Frangopol, D. M. (2013, December). LTBP Bridge Performance Primer. FHWA-HRT-13-051. Federal Highway Administration.",
+        "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/structures/ltbp/13051/",
+        "use": "支持理解许用应力设计中的安全系数概念以及现代LRFD使用不同荷载与抗力分项系数的区别；该技术资料不是标准、规范或法规，本篇不把其中的许用应力概念等同于实际工作应力或现实设计值。"
+      }
+    ],
+    "title": "The Drawing That Stayed Unsent",
+    "summary": "An exhibition team is ready to send its display-arm design to the fabricator. The main arm calculation looks reassuring, but as Lin Che opens the send window, one connection still needs a closer look.",
+    "storyParagraphs": [
+      "That afternoon, the exhibition team is about to send a display-arm design not intended to support people to the fabricator and decide what the next prototype will look like. The slender arm has gone through several revisions, and the version on screen is the cleanest yet. The colleague responsible for appearance waits for Lin Che to click Send. The arm calculation page is reassuring too: in this paper load case, the selected yield criterion has a predicted limiting force of 120 newtons (N) and a corresponding demand of 60 N.",
+      "For the past several rounds, everyone has been thickening and reshaping the arm. Dividing 120 by 60 gives 2, and the mood in the meeting relaxes. The appearance colleague starts to pack away the prototype box. Lin Che opens the send window and gives the remaining interface calculations one last look.",
+      "Her cursor stops on the base-clamp line. The question is no longer whether the arm reaches the selected yield criterion, but whether the connection might slip first. For the same load case, engineers estimate the demand in the slip direction using an assumed configuration before the clamp slips. It happens to be 60 N, while the predicted slip limit is only 45 N. Lin Che taps the calculator: 45÷60=0.75. The arm’s ratio of 2 still stands, but it cannot answer the clamp’s question.",
+      "She closes the send window. The team had still been discussing whether to add more material to the arm, but now they decide to leave the arm unchanged, send the base connection back for revision, and then recheck the corresponding criteria using the revised scheme. This will delay the next prototype, and an interface that had been neatly hidden may need more space, but adding more material to an arm that already has margin does not solve the connection issue that has now appeared.",
+      "Before the meeting ends, Lin Che leaves the slender arm on the prototype and removes only the base clamp, handing it to the person responsible for the interface. The appearance colleague puts the prototype box, which had just been about to be packed away, back beside the table. “So this version doesn't go out yet?” Lin Che nods. “Wait until the interface comes back, then we'll look at it together.” The fabrication file remains in draft."
+    ],
+    "overall": "This article uses a fictional paper design comparison to introduce one meaning of factor of safety: for a clearly defined object, operating condition, direction, and failure mode, a dimensionless ratio can be calculated by dividing predicted limiting resistance by the corresponding working demand when the numerator and denominator are directly comparable physical quantities. That ratio answers only the margin defined for that case. It does not automatically cover another failure mode, and it is not an accident probability, a universal safety threshold, or proof that an entire assembly is safe.",
+    "conceptName": "Factor of safety",
+    "explanationParagraphs": [
+      "This article uses the calculated-ratio meaning: factor of safety = predicted limiting resistance for a clearly defined failure mode ÷ the corresponding working demand for the same operating condition, object definition, and physical quantity. The numerator and denominator must be directly comparable; quantities from different directions, criteria, or physical measures cannot simply be divided.",
+      "Minimal example: for the arm yield criterion, a predicted limiting force of 120 N and corresponding demand of 60 N give 120/60=2. For the same load case, estimate the clamp’s demand in the slip direction using an assumed pre-slip configuration: 60 N against a predicted slip limit of 45 N gives 45/60=0.75. The paper demand exceeds that predicted limit, so this mode needs rechecking. It does not establish that a real prototype has failed as the figures suggest; if slip occurs, forces may redistribute."
+    ],
+    "module": {
+      "intro": "First bind each ratio to a specific object and failure mode, then check whether another part of the system has a different ratio answering a different question.",
+      "diagramTitle": "Why a Ratio of 2 for the Arm Cannot Answer the Clamp's Slip Criterion",
+      "diagramSteps": [
+        "Under a fixed display operating condition and direction, calculate a 60 N working demand corresponding to the arm yield criterion",
+        "Divide the predicted limiting force of 120 N for that criterion by 60 N to obtain the dimensionless ratio 2",
+        "For the same load case, estimate the clamp’s demand in the slip direction as 60 N using an assumed pre-slip configuration",
+        "Divide the predicted slip limit of 45 N by that 60 N demand to obtain 0.75",
+        "Pause fabrication of this version, revise the connection first, and then recheck the relevant failure modes"
+      ],
+      "diagramStepNotes": [
+        "The first 60 N belongs specifically to the arm yield criterion under this operating condition; it does not mean every component naturally carries the same force.",
+        "The 120 N value is a fictional predicted paper limit, not a tested rated value, and a yield criterion is not the same as inevitable fracture.",
+        "The second 60 N is separately estimated in the clamp’s slip direction using a pre-slip configuration. Its equal value is a teaching assumption, not an observed no-slip state.",
+        "The 0.75 result identifies a local slip criterion that requires further checking; it does not prove that the real device has already failed.",
+        "Different failure modes require separate checks. A high local ratio cannot cover stability, connections, fatigue, material behavior, or other system-level modes."
+      ],
+      "mapping": [
+        "120 N and 60 N → the predicted limiting force and working demand that are directly comparable for the arm yield criterion.",
+        "45 N and 60 N → a separate pair of directly comparable predicted limiting force and working demand for the clamp slip criterion.",
+        "Closing the send window → the practical decision change after one local metric proves insufficient to support the whole scheme.",
+        "Removing the clamp → shifting the next design effort toward the currently exposed connection mode."
+      ],
+      "boundary": "This article demonstrates only one calculated form of factor of safety: predicted limiting resistance divided by corresponding working demand. In engineering literature, “factor of safety” can also refer in other contexts to a prescribed multiplier used within a design method; that use must not be confused with the calculated ratio shown here. Allowable values in allowable-stress design also must not be treated as actual working stress. Modern codes may instead use separate load and resistance factors. All values of 120 N, 60 N, and 45 N are fictional teaching values, not building-design parameters, code requirements, construction guidance, or universal thresholds.",
+      "reflection": "For another component, a specified yield criterion has a predicted limit of 80 N and a corresponding demand of 50 N. What is the ratio? Does it establish that the connection also has sufficient margin against slip?"
+    },
+    "references": [
+      {
+        "id": "ramsey2019-factor-of-safety",
+        "citation": "Ramsey, J. K. (2019, September). Calculating Factors of Safety and Margins of Safety From Interaction Equations. NASA/TM—2019-220153, Appendix A. NASA Glenn Research Center.",
+        "url": "https://ntrs.nasa.gov/api/citations/20190032150/downloads/TM-2019-220153.pdf",
+        "use": "Supports that factor-of-safety terminology can refer to a calculated ratio between like physical quantities and, in other contexts, to a prescribed multiplying factor, with the definition depending on the method and context. This article uses only the former teaching meaning and does not treat NASA methods as building codes or universal numerical requirements."
+      },
+      {
+        "id": "fhwa2013-bridge-performance-safety-factor",
+        "citation": "Hooks, J., & Frangopol, D. M. (2013, December). LTBP Bridge Performance Primer. FHWA-HRT-13-051. Federal Highway Administration.",
+        "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/structures/ltbp/13051/",
+        "use": "Supports the conceptual distinction between factor of safety in allowable-stress design and the use of separate load and resistance factors in modern LRFD approaches. This technical primer is not a standard, specification, or regulation, and the article does not treat allowable stress as actual working stress or use the source as a basis for real design values."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-23-preparation/group1-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-23-preparation/group1-edit-pass1-evidence.json",
+        "engineering-reader-first-23-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "When the new footbridge opened, an engineer said its main beams had a margin of two against the expected crowd load. The mayor liked this so much that he ordered a giant number two painted at the entrance and promised citizens that whatever happened, the bridge was twice as strong as necessary.\n\nThree years later, floodwater passed around the bank protection and scoured a deep hole beside one pier. The main beams could still carry far more than the pedestrians above, but the deck began tilting. Inspection also found moisture damage at one connection. The number two had referred to main-beam bending under a particular load; it did not automatically protect against foundation scour, connection failure, or deterioration over time.\n\nThe mayor closed only half the bridge and pointed to the painted two. Inspector An used the original calculation to show its narrow meaning: if a particular beam resistance was 200 matching units and the stated bending demand 100, their ratio was two for that check. A scour-weakened foundation and a corroded connection had different demands, resistances, uncertainties, and failure consequences. The large numeral supplied no denominator for them.\n\nThe mayor asked why the engineer did not simply change the number to three. On paper, the engineer separated crowds, wind, water, and accidental actions, then the possible failures of beams, connections, piers, and foundations. Each demand and resistance had its own variability, model error, and consequence and had to be compared under matching definitions. Multiplying the wrong question by a larger number still left the wrong question.\n\nA festival procession was due in two days. Its route banner already hung from the bridge slogan when inspectors refused to promise how much capacity remained. The mayor turned both signs toward the river and ordered closure. He lost the festival route and paid ferry operators for six weeks. Engineers then used the applicable design framework and site evidence rather than inventing one universal number at the gate.\n\nThe bridge received reinforcement against scour and at the corroded connection, with water-depth checks and closure conditions after storms. Review used code-based combinations and resistance rules, while construction quality, drainage, inspection, and maintenance entered the plan. Margins remained, but no longer carried every promise that modelling, detailing, and management had to fulfil.\n\nAt reopening, the mayor painted over the giant number two himself. A smaller sign replaced it with the occupancy limit, latest inspection date, and red flood closure level. The bridge still depended on inspection, drainage, construction quality, and future decisions; the sign promised no universal immunity. Rain later exposed a faint curve of the old two beneath the paint, directly above the ferry invoices kept in the gatehouse.",
-    "storyBodyZh": "新步桥完工时，工程师说主梁按预计人群重量留有两倍余量。市长听后十分喜欢，命人在桥头漆上一个巨大的‘二’，并向百姓保证这座桥无论遇到什么，都比需要强一倍。\n\n三年后，洪水绕过护岸，在一只桥墩周围冲出深坑。主梁仍能承受远超桥上行人的重量，桥面却开始向一侧倾斜。检查还发现一处连接被潮气腐蚀。那个‘二’只属于某种载荷下的主梁弯曲，并没有自动保护地基冲刷、连接破坏或材料随时间变差。\n\n市长只封半座桥，仍指着那个“二”。检查员安翻出原计算：若某根梁的抗力是二百个匹配单位，规定弯曲需求为一百，二只属于这项比值。被冲弱的地基和锈蚀连接各有不同需求、抗力、不确定性与后果，桥头大字没有给它们提供分母。\n\n市长问工程师为何不把数字改成三。工程师在纸上分别列出人群、风、水流和偶然作用，又列出梁、连接、桥墩和地基可能怎样失效。每一种需求和抗力都有自己的变异、模型误差与后果，必须在同一定义下比较；错误的问题即使乘上更大的数，仍是错误的问题。\n\n两天后节庆队伍就要过桥，路线横幅已挂在桥头标语下，检查人员却拒绝承诺剩余能力。市长把两块牌都转向河面，下令关闭，失去节庆路线，又为六周渡船付费。工程师随后依据适用规范框架和现场证据复核，没有再在桥头发明一个包办一切的数字。\n\n桥梁加固了受冲刷基础和腐蚀连接，并设置水深检查与暴雨后的封桥条件。设计按规范的荷载组合和抗力规则复核，施工质量、排水、检查和维护也进入计划。余量仍然存在，却不再替模型、构造和管理承担所有保证。\n\n重新开放时，市长亲手刷掉桥头巨大的“二”。原处换成小牌，写载客限制、最近检查日期和洪水封闭红线。桥仍依赖检查、排水、施工质量与未来决策，那块牌不再承诺一种数字可以抵挡所有失效。后来雨水冲淡新漆，旧“二”的一弯仍隐约透出，正对着门房里那叠六周渡船账单。市长没有再补厚油漆，只让人按日期更新旁边的检查牌。",
-    "explanation": "A factor of safety is the ratio of a resistance measure to its corresponding demand under a specified failure mode and design method, providing margin for variability in materials, loads, and models. The number is meaningful only when definitions match and cannot be extended automatically from one component or failure mode to a whole system. Modern codes may instead use calibrated partial factors on loads and resistance; sound models, detailing, construction, and maintenance remain essential.",
-    "explanationZh": "安全系数是在规定失效模式和设计方法下，抗力度量与相应需求度量的比值，用来为材料变异、载荷和模型不确定性提供裕度。数值只有在定义匹配时才有意义，不能从一种构件或失效方式自动推广到整个系统。现代规范也常用校准后的荷载与抗力分项系数；正确模型、构造、施工和维护仍不可替代。"
+    "storyBody": "That afternoon, the exhibition team is about to send a display-arm design not intended to support people to the fabricator and decide what the next prototype will look like. The slender arm has gone through several revisions, and the version on screen is the cleanest yet. The colleague responsible for appearance waits for Lin Che to click Send. The arm calculation page is reassuring too: in this paper load case, the selected yield criterion has a predicted limiting force of 120 newtons (N) and a corresponding demand of 60 N.\n\nFor the past several rounds, everyone has been thickening and reshaping the arm. Dividing 120 by 60 gives 2, and the mood in the meeting relaxes. The appearance colleague starts to pack away the prototype box. Lin Che opens the send window and gives the remaining interface calculations one last look.\n\nHer cursor stops on the base-clamp line. The question is no longer whether the arm reaches the selected yield criterion, but whether the connection might slip first. For the same load case, engineers estimate the demand in the slip direction using an assumed configuration before the clamp slips. It happens to be 60 N, while the predicted slip limit is only 45 N. Lin Che taps the calculator: 45÷60=0.75. The arm’s ratio of 2 still stands, but it cannot answer the clamp’s question.\n\nShe closes the send window. The team had still been discussing whether to add more material to the arm, but now they decide to leave the arm unchanged, send the base connection back for revision, and then recheck the corresponding criteria using the revised scheme. This will delay the next prototype, and an interface that had been neatly hidden may need more space, but adding more material to an arm that already has margin does not solve the connection issue that has now appeared.\n\nBefore the meeting ends, Lin Che leaves the slender arm on the prototype and removes only the base clamp, handing it to the person responsible for the interface. The appearance colleague puts the prototype box, which had just been about to be packed away, back beside the table. “So this version doesn't go out yet?” Lin Che nods. “Wait until the interface comes back, then we'll look at it together.” The fabrication file remains in draft.",
+    "storyBodyZh": "展陈团队下午要把一套不载人的展示支臂方案发给制作方，决定下一轮样机长什么样。细支臂已经改了几轮，屏幕上的这一版最利落，负责外观的同事正等林澈点发送。支臂本体那页也不再让人皱眉：在这套纸面荷载案例中，所选屈服判据的预测极限力是120牛顿（N），对应工作需求是60 N。\n\n前几轮大家一直围着这根支臂加厚、改形。120除以60得到2，会议气氛松了下来。外观同事准备收起样机盒，林澈点开发送窗口，又扫了一眼剩下的接口计算。\n\n鼠标停在底部夹具那一行。这里问的不是支臂会不会达到所选屈服判据，而是连接会不会先发生滑移。工程师对同一荷载案例，按夹具尚未滑移的假定构型估算，滑移方向的工作需求碰巧也是60 N，预测滑移极限却只有45 N。林澈按了计算器：45÷60=0.75。支臂那一项的2仍然成立，却不能替夹具回答这一项。\n\n她把发送窗口关掉。团队原本还在讨论要不要继续给支臂加材料，现在决定先保持支臂不动，把底部连接交回接口设计去修改，再用修订后的方案重新检查各自对应的判据。这样会推迟下一轮样机制作，原本藏得很干净的接口也可能需要更多空间，但继续强化已经有余量的支臂，并不能解决眼前暴露出来的连接问题。\n\n散会前，林澈把细支臂留在样机上，只卸下底部夹具交给负责接口的人。外观同事把刚准备收走的样机盒又放回桌边：“那这一版先不发？”林澈点头：“等接口回来，再一起看。”制作文件仍停在草稿状态。",
+    "explanation": "This article uses the calculated-ratio meaning: factor of safety = predicted limiting resistance for a clearly defined failure mode ÷ the corresponding working demand for the same operating condition, object definition, and physical quantity. The numerator and denominator must be directly comparable; quantities from different directions, criteria, or physical measures cannot simply be divided.\n\nMinimal example: for the arm yield criterion, a predicted limiting force of 120 N and corresponding demand of 60 N give 120/60=2. For the same load case, estimate the clamp’s demand in the slip direction using an assumed pre-slip configuration: 60 N against a predicted slip limit of 45 N gives 45/60=0.75. The paper demand exceeds that predicted limit, so this mode needs rechecking. It does not establish that a real prototype has failed as the figures suggest; if slip occurs, forces may redistribute.",
+    "explanationZh": "本篇采用一种“计算得到的比值”用法：安全系数=某一明确失效模式下的预测极限抗力÷同一工况下、同一对象口径和相同物理量的工作需求。分子和分母必须能够直接比较；不同方向、不同判据或不同物理量不能随意相除。\n\n最小例子：支臂屈服判据下预测极限力120 N、对应工作需求60 N，则120/60=2。另对同一荷载案例，按夹具滑移前的假定构型估算滑移方向需求为60 N，预测滑移极限45 N，则45/60=0.75：纸面需求高于这一预测极限。这提示该模式需重新核查，不代表实物已按纸面数值验证失效；一旦发生滑移，受力也可能重新分配。"
   },
   {
     "id": "0732-infrastructure-life-cycle",

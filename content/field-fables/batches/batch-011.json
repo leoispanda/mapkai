@@ -1062,43 +1062,131 @@
       "fieldCode": "0732",
       "fieldTitle": "Building and civil engineering",
       "fieldTitleZh": "建筑与土木工程",
-      "title": "The Giant Number Two at the Bridge",
-      "titleZh": "桥头那个巨大的“二”",
-      "summary": "A mayor paints 'twice the required strength' at a bridge entrance, until a flood removes the riverbed beneath a pier that the number never considered.",
-      "summaryZh": "市长在桥头写下“承受力是需要的两倍”，直到洪水从这个数字没有计算过的桥墩下面掏走了河床。",
-      "storyParagraphs": [
-        "When the new footbridge opened, an engineer said its main beams had a margin of two against the expected crowd load. The mayor liked this so much that he ordered a giant number two painted at the entrance and promised citizens that whatever happened, the bridge was twice as strong as necessary.",
-        "Three years later, floodwater passed around the bank protection and scoured a deep hole beside one pier. The main beams could still carry far more than the pedestrians above, but the deck began tilting. Inspection also found moisture damage at one connection. The number two had referred to main-beam bending under a particular load; it did not automatically protect against foundation scour, connection failure, or deterioration over time.",
-        "The mayor closed only half the bridge and pointed to the painted two. Inspector An used the original calculation to show its narrow meaning: if a particular beam resistance was 200 matching units and the stated bending demand 100, their ratio was two for that check. A scour-weakened foundation and a corroded connection had different demands, resistances, uncertainties, and failure consequences. The large numeral supplied no denominator for them.",
-        "The mayor asked why the engineer did not simply change the number to three. On paper, the engineer separated crowds, wind, water, and accidental actions, then the possible failures of beams, connections, piers, and foundations. Each demand and resistance had its own variability, model error, and consequence and had to be compared under matching definitions. Multiplying the wrong question by a larger number still left the wrong question.",
-        "A festival procession was due in two days. Its route banner already hung from the bridge slogan when inspectors refused to promise how much capacity remained. The mayor turned both signs toward the river and ordered closure. He lost the festival route and paid ferry operators for six weeks. Engineers then used the applicable design framework and site evidence rather than inventing one universal number at the gate.",
-        "The bridge received reinforcement against scour and at the corroded connection, with water-depth checks and closure conditions after storms. Review used code-based combinations and resistance rules, while construction quality, drainage, inspection, and maintenance entered the plan. Margins remained, but no longer carried every promise that modelling, detailing, and management had to fulfil.",
-        "At reopening, the mayor painted over the giant number two himself. A smaller sign replaced it with the occupancy limit, latest inspection date, and red flood closure level. The bridge still depended on inspection, drainage, construction quality, and future decisions; the sign promised no universal immunity. Rain later exposed a faint curve of the old two beneath the paint, directly above the ferry invoices kept in the gatehouse."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "那份暂未发出的图纸",
+      "summaryZh": "展陈团队准备把一套支臂方案交给制作方。主体计算已告一段落，林澈点开发送窗口时，却发现还有一处连接需要再看一眼。",
       "storyParagraphsZh": [
-        "新步桥完工时，工程师说主梁按预计人群重量留有两倍余量。市长听后十分喜欢，命人在桥头漆上一个巨大的‘二’，并向百姓保证这座桥无论遇到什么，都比需要强一倍。",
-        "三年后，洪水绕过护岸，在一只桥墩周围冲出深坑。主梁仍能承受远超桥上行人的重量，桥面却开始向一侧倾斜。检查还发现一处连接被潮气腐蚀。那个‘二’只属于某种载荷下的主梁弯曲，并没有自动保护地基冲刷、连接破坏或材料随时间变差。",
-        "市长只封半座桥，仍指着那个“二”。检查员安翻出原计算：若某根梁的抗力是二百个匹配单位，规定弯曲需求为一百，二只属于这项比值。被冲弱的地基和锈蚀连接各有不同需求、抗力、不确定性与后果，桥头大字没有给它们提供分母。",
-        "市长问工程师为何不把数字改成三。工程师在纸上分别列出人群、风、水流和偶然作用，又列出梁、连接、桥墩和地基可能怎样失效。每一种需求和抗力都有自己的变异、模型误差与后果，必须在同一定义下比较；错误的问题即使乘上更大的数，仍是错误的问题。",
-        "两天后节庆队伍就要过桥，路线横幅已挂在桥头标语下，检查人员却拒绝承诺剩余能力。市长把两块牌都转向河面，下令关闭，失去节庆路线，又为六周渡船付费。工程师随后依据适用规范框架和现场证据复核，没有再在桥头发明一个包办一切的数字。",
-        "桥梁加固了受冲刷基础和腐蚀连接，并设置水深检查与暴雨后的封桥条件。设计按规范的荷载组合和抗力规则复核，施工质量、排水、检查和维护也进入计划。余量仍然存在，却不再替模型、构造和管理承担所有保证。",
-        "重新开放时，市长亲手刷掉桥头巨大的“二”。原处换成小牌，写载客限制、最近检查日期和洪水封闭红线。桥仍依赖检查、排水、施工质量与未来决策，那块牌不再承诺一种数字可以抵挡所有失效。后来雨水冲淡新漆，旧“二”的一弯仍隐约透出，正对着门房里那叠六周渡船账单。市长没有再补厚油漆，只让人按日期更新旁边的检查牌。"
+        "展陈团队下午要把一套不载人的展示支臂方案发给制作方，决定下一轮样机长什么样。细支臂已经改了几轮，屏幕上的这一版最利落，负责外观的同事正等林澈点发送。支臂本体那页也不再让人皱眉：在这套纸面荷载案例中，所选屈服判据的预测极限力是120牛顿（N），对应工作需求是60 N。",
+        "前几轮大家一直围着这根支臂加厚、改形。120除以60得到2，会议气氛松了下来。外观同事准备收起样机盒，林澈点开发送窗口，又扫了一眼剩下的接口计算。",
+        "鼠标停在底部夹具那一行。这里问的不是支臂会不会达到所选屈服判据，而是连接会不会先发生滑移。工程师对同一荷载案例，按夹具尚未滑移的假定构型估算，滑移方向的工作需求碰巧也是60 N，预测滑移极限却只有45 N。林澈按了计算器：45÷60=0.75。支臂那一项的2仍然成立，却不能替夹具回答这一项。",
+        "她把发送窗口关掉。团队原本还在讨论要不要继续给支臂加材料，现在决定先保持支臂不动，把底部连接交回接口设计去修改，再用修订后的方案重新检查各自对应的判据。这样会推迟下一轮样机制作，原本藏得很干净的接口也可能需要更多空间，但继续强化已经有余量的支臂，并不能解决眼前暴露出来的连接问题。",
+        "散会前，林澈把细支臂留在样机上，只卸下底部夹具交给负责接口的人。外观同事把刚准备收走的样机盒又放回桌边：“那这一版先不发？”林澈点头：“等接口回来，再一起看。”制作文件仍停在草稿状态。"
       ],
-      "conceptName": "Factor of safety",
+      "overallZh": "本篇用虚构纸面设计比较说明安全系数的一个入口：对明确对象、工况、方向和失效模式，可以把预测极限抗力与相应工作需求这两个同类物理量相除，得到无量纲比值。这个比值只回答所定义的那一项裕度，不能自动覆盖另一种失效模式，也不是事故概率、普适安全门槛或整套构造的安全证明。",
       "conceptNameZh": "安全系数",
-      "explanationParagraphs": [
-        "A factor of safety is the ratio of a resistance measure to its corresponding demand under a specified failure mode and design method, providing margin for variability in materials, loads, and models. The number is meaningful only when definitions match and cannot be extended automatically from one component or failure mode to a whole system. Modern codes may instead use calibrated partial factors on loads and resistance; sound models, detailing, construction, and maintenance remain essential."
-      ],
       "explanationParagraphsZh": [
-        "安全系数是在规定失效模式和设计方法下，抗力度量与相应需求度量的比值，用来为材料变异、载荷和模型不确定性提供裕度。数值只有在定义匹配时才有意义，不能从一种构件或失效方式自动推广到整个系统。现代规范也常用校准后的荷载与抗力分项系数；正确模型、构造、施工和维护仍不可替代。"
+        "本篇采用一种“计算得到的比值”用法：安全系数=某一明确失效模式下的预测极限抗力÷同一工况下、同一对象口径和相同物理量的工作需求。分子和分母必须能够直接比较；不同方向、不同判据或不同物理量不能随意相除。",
+        "最小例子：支臂屈服判据下预测极限力120 N、对应工作需求60 N，则120/60=2。另对同一荷载案例，按夹具滑移前的假定构型估算滑移方向需求为60 N，预测滑移极限45 N，则45/60=0.75：纸面需求高于这一预测极限。这提示该模式需重新核查，不代表实物已按纸面数值验证失效；一旦发生滑移，受力也可能重新分配。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "先把一个比值绑定到明确对象和失效模式，再检查系统中是否还有另一个比值正在回答不同的问题。",
+        "diagramTitle": "为什么支臂的比值是2，仍不能替夹具的滑移判据作结论",
+        "diagramSteps": [
+          "在固定展示工况和方向下，计算支臂屈服判据对应的工作需求60 N",
+          "用该判据的预测极限力120 N除以60 N，得到无量纲比值2",
+          "继续检查底部夹具滑移判据：同一荷载案例下，按滑移前假定构型估算其滑移方向需求为60 N",
+          "用预测滑移极限45 N除以该需求60 N，得到0.75",
+          "暂缓这一版制作，先修改连接，再重新核查相关失效模式"
+        ],
+        "diagramStepNotes": [
+          "第一个60 N只属于支臂屈服判据在该工况下的匹配需求，不是所有构件天然都承受同一力。",
+          "120 N是虚构纸面预测极限值，不是实测额定值；屈服判据也不等同于必然断裂。",
+          "第二个60 N是针对夹具滑移方向、按滑移前构型另行估算的需求；相同数值只是本教学例设定，不是实测“未滑移”状态。",
+          "0.75暴露的是这一局部滑移判据需要重新检查，不能据此断言真实装置已经发生失效。",
+          "不同失效模式需要分别检查，一个局部高比值不能覆盖稳定、连接、疲劳、材料或整体其他模式。"
+        ],
+        "mapping": [
+          "120 N与60 N → 支臂屈服判据下可比较的预测极限力与工作需求。",
+          "45 N与60 N → 夹具滑移判据下另一组可比较的预测极限力与工作需求。",
+          "关闭发送窗口 → 一个局部指标不足以支持整套方案继续深化后的实际选择变化。",
+          "拆下夹具 → 把下一步工作转到当前暴露出的连接模式。"
+        ],
+        "boundary": "本篇只演示一种“预测极限抗力÷相应工作需求”的计算比值。工程文献中“factor of safety”也可能指设计方法中预先规定的乘数，不能与本例计算比值混为一谈；许用应力设计中的允许值也不能直接当作实际工作应力。现代规范还可能使用分项荷载和抗力系数。所有120 N、60 N、45 N均为虚构纸面教学值，不是建筑设计参数、规范要求、施工指引或普适门槛。",
+        "reflection": "另一个构件在指定屈服判据下，预测极限为80 N、对应需求为50 N，比值是多少？它能直接说明该构件连接的滑移判据也有足够裕度吗？"
+      },
+      "referencesZh": [
+        {
+          "id": "ramsey2019-factor-of-safety",
+          "citation": "Ramsey, J. K. (2019, September). Calculating Factors of Safety and Margins of Safety From Interaction Equations. NASA/TM—2019-220153, Appendix A. NASA Glenn Research Center.",
+          "url": "https://ntrs.nasa.gov/api/citations/20190032150/downloads/TM-2019-220153.pdf",
+          "use": "支持安全系数术语可指相同物理量之间计算得到的比值，也可在其他语境中指预先规定的乘数，具体定义取决于方法与上下文；本篇只采用前一种教学用法，不把NASA方法当作建筑规范或通用数值要求。"
+        },
+        {
+          "id": "fhwa2013-bridge-performance-safety-factor",
+          "citation": "Hooks, J., & Frangopol, D. M. (2013, December). LTBP Bridge Performance Primer. FHWA-HRT-13-051. Federal Highway Administration.",
+          "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/structures/ltbp/13051/",
+          "use": "支持理解许用应力设计中的安全系数概念以及现代LRFD使用不同荷载与抗力分项系数的区别；该技术资料不是标准、规范或法规，本篇不把其中的许用应力概念等同于实际工作应力或现实设计值。"
+        }
+      ],
+      "title": "The Drawing That Stayed Unsent",
+      "summary": "An exhibition team is ready to send its display-arm design to the fabricator. The main arm calculation looks reassuring, but as Lin Che opens the send window, one connection still needs a closer look.",
+      "storyParagraphs": [
+        "That afternoon, the exhibition team is about to send a display-arm design not intended to support people to the fabricator and decide what the next prototype will look like. The slender arm has gone through several revisions, and the version on screen is the cleanest yet. The colleague responsible for appearance waits for Lin Che to click Send. The arm calculation page is reassuring too: in this paper load case, the selected yield criterion has a predicted limiting force of 120 newtons (N) and a corresponding demand of 60 N.",
+        "For the past several rounds, everyone has been thickening and reshaping the arm. Dividing 120 by 60 gives 2, and the mood in the meeting relaxes. The appearance colleague starts to pack away the prototype box. Lin Che opens the send window and gives the remaining interface calculations one last look.",
+        "Her cursor stops on the base-clamp line. The question is no longer whether the arm reaches the selected yield criterion, but whether the connection might slip first. For the same load case, engineers estimate the demand in the slip direction using an assumed configuration before the clamp slips. It happens to be 60 N, while the predicted slip limit is only 45 N. Lin Che taps the calculator: 45÷60=0.75. The arm’s ratio of 2 still stands, but it cannot answer the clamp’s question.",
+        "She closes the send window. The team had still been discussing whether to add more material to the arm, but now they decide to leave the arm unchanged, send the base connection back for revision, and then recheck the corresponding criteria using the revised scheme. This will delay the next prototype, and an interface that had been neatly hidden may need more space, but adding more material to an arm that already has margin does not solve the connection issue that has now appeared.",
+        "Before the meeting ends, Lin Che leaves the slender arm on the prototype and removes only the base clamp, handing it to the person responsible for the interface. The appearance colleague puts the prototype box, which had just been about to be packed away, back beside the table. “So this version doesn't go out yet?” Lin Che nods. “Wait until the interface comes back, then we'll look at it together.” The fabrication file remains in draft."
+      ],
+      "overall": "This article uses a fictional paper design comparison to introduce one meaning of factor of safety: for a clearly defined object, operating condition, direction, and failure mode, a dimensionless ratio can be calculated by dividing predicted limiting resistance by the corresponding working demand when the numerator and denominator are directly comparable physical quantities. That ratio answers only the margin defined for that case. It does not automatically cover another failure mode, and it is not an accident probability, a universal safety threshold, or proof that an entire assembly is safe.",
+      "conceptName": "Factor of safety",
+      "explanationParagraphs": [
+        "This article uses the calculated-ratio meaning: factor of safety = predicted limiting resistance for a clearly defined failure mode ÷ the corresponding working demand for the same operating condition, object definition, and physical quantity. The numerator and denominator must be directly comparable; quantities from different directions, criteria, or physical measures cannot simply be divided.",
+        "Minimal example: for the arm yield criterion, a predicted limiting force of 120 N and corresponding demand of 60 N give 120/60=2. For the same load case, estimate the clamp’s demand in the slip direction using an assumed pre-slip configuration: 60 N against a predicted slip limit of 45 N gives 45/60=0.75. The paper demand exceeds that predicted limit, so this mode needs rechecking. It does not establish that a real prototype has failed as the figures suggest; if slip occurs, forces may redistribute."
+      ],
+      "module": {
+        "intro": "First bind each ratio to a specific object and failure mode, then check whether another part of the system has a different ratio answering a different question.",
+        "diagramTitle": "Why a Ratio of 2 for the Arm Cannot Answer the Clamp's Slip Criterion",
+        "diagramSteps": [
+          "Under a fixed display operating condition and direction, calculate a 60 N working demand corresponding to the arm yield criterion",
+          "Divide the predicted limiting force of 120 N for that criterion by 60 N to obtain the dimensionless ratio 2",
+          "For the same load case, estimate the clamp’s demand in the slip direction as 60 N using an assumed pre-slip configuration",
+          "Divide the predicted slip limit of 45 N by that 60 N demand to obtain 0.75",
+          "Pause fabrication of this version, revise the connection first, and then recheck the relevant failure modes"
+        ],
+        "diagramStepNotes": [
+          "The first 60 N belongs specifically to the arm yield criterion under this operating condition; it does not mean every component naturally carries the same force.",
+          "The 120 N value is a fictional predicted paper limit, not a tested rated value, and a yield criterion is not the same as inevitable fracture.",
+          "The second 60 N is separately estimated in the clamp’s slip direction using a pre-slip configuration. Its equal value is a teaching assumption, not an observed no-slip state.",
+          "The 0.75 result identifies a local slip criterion that requires further checking; it does not prove that the real device has already failed.",
+          "Different failure modes require separate checks. A high local ratio cannot cover stability, connections, fatigue, material behavior, or other system-level modes."
+        ],
+        "mapping": [
+          "120 N and 60 N → the predicted limiting force and working demand that are directly comparable for the arm yield criterion.",
+          "45 N and 60 N → a separate pair of directly comparable predicted limiting force and working demand for the clamp slip criterion.",
+          "Closing the send window → the practical decision change after one local metric proves insufficient to support the whole scheme.",
+          "Removing the clamp → shifting the next design effort toward the currently exposed connection mode."
+        ],
+        "boundary": "This article demonstrates only one calculated form of factor of safety: predicted limiting resistance divided by corresponding working demand. In engineering literature, “factor of safety” can also refer in other contexts to a prescribed multiplier used within a design method; that use must not be confused with the calculated ratio shown here. Allowable values in allowable-stress design also must not be treated as actual working stress. Modern codes may instead use separate load and resistance factors. All values of 120 N, 60 N, and 45 N are fictional teaching values, not building-design parameters, code requirements, construction guidance, or universal thresholds.",
+        "reflection": "For another component, a specified yield criterion has a predicted limit of 80 N and a corresponding demand of 50 N. What is the ratio? Does it establish that the connection also has sufficient margin against slip?"
+      },
+      "references": [
+        {
+          "id": "ramsey2019-factor-of-safety",
+          "citation": "Ramsey, J. K. (2019, September). Calculating Factors of Safety and Margins of Safety From Interaction Equations. NASA/TM—2019-220153, Appendix A. NASA Glenn Research Center.",
+          "url": "https://ntrs.nasa.gov/api/citations/20190032150/downloads/TM-2019-220153.pdf",
+          "use": "Supports that factor-of-safety terminology can refer to a calculated ratio between like physical quantities and, in other contexts, to a prescribed multiplying factor, with the definition depending on the method and context. This article uses only the former teaching meaning and does not treat NASA methods as building codes or universal numerical requirements."
+        },
+        {
+          "id": "fhwa2013-bridge-performance-safety-factor",
+          "citation": "Hooks, J., & Frangopol, D. M. (2013, December). LTBP Bridge Performance Primer. FHWA-HRT-13-051. Federal Highway Administration.",
+          "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/structures/ltbp/13051/",
+          "use": "Supports the conceptual distinction between factor of safety in allowable-stress design and the use of separate load and resistance factors in modern LRFD approaches. This technical primer is not a standard, specification, or regulation, and the article does not treat allowable stress as actual working stress or use the source as a basis for real design values."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-23-preparation/group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-23-preparation/group1-edit-pass1-evidence.json",
+          "engineering-reader-first-23-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor applied 13 perspectives, with two additional read-only reviewer agents for the initial bilingual audit; four real ordinary ChatGPT Extra High stages."
       }
     },
     {

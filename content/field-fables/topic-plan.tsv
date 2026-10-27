@@ -132,16 +132,16 @@ batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	1	071
 batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	2	0711-residence-time	Residence time	停留时间	mechanism-explainer	配方相同却因流过管道太快而没有完成的发酵液	integrated
 batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	3	0711-process-control	Process control	过程控制	mechanism-explainer	蒸馏塔不能靠一天一次的温度记录保持稳定	integrated
 batch-009	07	0712	Environmental protection technology	环境保护技术	1	0712-treatment-train	Treatment train	处理工艺链	mechanism-explainer	单层滤网无法独自处理整条河的不同污染物	integrated
-batch-009	07	0712	Environmental protection technology	环境保护技术	2	0712-source-control	Source control	源头控制	concept-fable	城市不断加高烟囱却没有减少炉膛里的烟	integrated
-batch-009	07	0712	Environmental protection technology	环境保护技术	3	0712-life-cycle-assessment	Life-cycle assessment	生命周期评价	concept-fable	一只可重复杯子跨越矿山、船队、洗涤房和垃圾场	integrated
+batch-009	07	0712	Environmental protection technology	环境保护技术	2	0712-source-control	Source control	源头控制	mechanism-explainer	城市不断加高烟囱却没有减少炉膛里的烟	integrated
+batch-009	07	0712	Environmental protection technology	环境保护技术	3	0712-life-cycle-assessment	Life-cycle assessment	生命周期评价	mechanism-explainer	一只可重复杯子跨越矿山、船队、洗涤房和垃圾场	integrated
 batch-010	07	0713	Electricity and energy	电力与能源	1	0713-grid-balancing	Grid balancing	电网平衡	mechanism-explainer	岛上每盏灯亮起都要求发电房同时回应	integrated
 batch-010	07	0713	Electricity and energy	电力与能源	2	0713-energy-efficiency	Energy efficiency	能源效率	mechanism-explainer	两台锅炉烧同样煤却只有一台把热送进屋里	integrated
-batch-010	07	0713	Electricity and energy	电力与能源	3	0713-energy-storage	Energy storage and intermittency	储能与间歇性	concept-fable	风最强时无人用电而晚宴时风停的海岛	integrated
+batch-010	07	0713	Electricity and energy	电力与能源	3	0713-energy-storage	Energy storage and intermittency	储能与间歇性	mechanism-explainer	风最强时无人用电而晚宴时风停的海岛	integrated
 batch-010	07	0714	Electronics and automation	电子与自动化	1	0714-feedback-control	Feedback control	反馈控制	mechanism-explainer	烤炉根据刚测得的温度不断修正火门	integrated
 batch-010	07	0714	Electronics and automation	电子与自动化	2	0714-signal-to-noise-ratio	Signal-to-noise ratio	信噪比	mechanism-explainer	暴风雨里港口接收员分辨一声真正求救信号	integrated
-batch-010	07	0714	Electronics and automation	电子与自动化	3	0714-fail-safe-design	Fail-safe design	故障安全设计	concept-fable	断电时自动落下还是升起的水闸引发争论	integrated
+batch-010	07	0714	Electronics and automation	电子与自动化	3	0714-fail-safe-design	Fail-safe design	故障安全设计	mechanism-explainer	断电时自动落下还是升起的水闸引发争论	integrated
 batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	1	0715-stress-strain	Stress and strain	应力与应变	mechanism-explainer	两根外形相同的桥索在载荷下伸长不同	integrated
-batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	2	0715-fatigue	Material fatigue	材料疲劳	concept-fable	从未超载却在第一万次转动后断裂的车轴	integrated
+batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	2	0715-fatigue	Material fatigue	材料疲劳	mechanism-explainer	从未超载却在第一万次转动后断裂的车轴	integrated
 batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	3	0715-engineering-tolerance	Engineering tolerance	工程公差	mechanism-explainer	每只齿轮单独合格却无法共同转动的机器	integrated
 batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	1	0716-stability-and-control	Stability and control	稳定性与操纵性	mechanism-explainer	越想装更多货越容易倾覆的窄船	integrated
 batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	2	0716-drag	Drag and transport efficiency	阻力与运输效率	mechanism-explainer	更强发动机输给一条重新修形的船身	integrated
@@ -162,7 +162,7 @@ batch-011	07	0731	Architecture and town planning	建筑学与城市规划	1	0731
 batch-011	07	0731	Architecture and town planning	建筑学与城市规划	2	0731-mixed-use-development	Mixed-use development	混合功能开发	concept-fable	白天繁忙夜晚空无一人的单一用途新区	integrated
 batch-011	07	0731	Architecture and town planning	建筑学与城市规划	3	0731-adaptive-reuse	Adaptive reuse	适应性再利用	concept-fable	旧仓库的柱距拒绝成为新歌剧院却接住另一种生活	integrated
 batch-011	07	0732	Building and civil engineering	建筑与土木工程	1	0732-load-path	Load path	荷载路径	mechanism-explainer	屋顶上的雪必须沿每根梁柱找到大地	integrated
-batch-011	07	0732	Building and civil engineering	建筑与土木工程	2	0732-factor-of-safety	Factor of safety	安全系数	mechanism-fable	只为平均河水设计的桥遇到罕见洪峰	integrated
+batch-011	07	0732	Building and civil engineering	建筑与土木工程	2	0732-factor-of-safety	Factor of safety	安全系数	mechanism-explainer	只为平均河水设计的桥遇到罕见洪峰	integrated
 batch-011	07	0732	Building and civil engineering	建筑与土木工程	3	0732-infrastructure-life-cycle	Infrastructure life-cycle management	基础设施全生命周期管理	concept-fable	剪彩后无人再看桥底缓慢生长的锈迹	integrated
 batch-012	08	0811	Crop and livestock production	作物与畜牧生产	1	0811-nutrient-cycling	Nutrient cycling	养分循环	mechanism-fable	不断运走收成却从不归还土壤的农场	integrated
 batch-012	08	0811	Crop and livestock production	作物与畜牧生产	2	0811-integrated-pest-management	Integrated pest management	综合虫害管理	concept-fable	杀光所有昆虫后害虫反而更快回来的果园	integrated
