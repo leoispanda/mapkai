@@ -23,10 +23,10 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
     if(event.sourceEvent){focusMode=null;setViewMode('custom');}updateMini();
   });
   surface.call(zoom).on('dblclick.zoom',null);
-  function wrap(label,size,maxWidth,weight=500){
+  function wrap(label,size,maxWidth,weight=500,breakWords=true){
     measure.font=`${weight} ${size}px ${family}`;
     const raw=String(label).match(/\p{Script=Han}|[^\s\p{Script=Han}]+|\s+/gu)||[];
-    const tokens=raw.flatMap(token=>measure.measureText(token).width>maxWidth?[...token]:[token]);const lines=[];let line='';
+    const tokens=raw.flatMap(token=>breakWords&&measure.measureText(token).width>maxWidth?[...token]:[token]);const lines=[];let line='';
     for(const token of tokens){if(line&&measure.measureText(line+token).width>maxWidth){lines.push(line.trim());line=token.trimStart();}else line+=token;}
     if(line.trim())lines.push(line.trim());
     return lines;
@@ -43,8 +43,9 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
     if(item.kind==='category'){
       const short=zh?['通用','教育','艺术人文','社会科学','商业法律','自然科学','信息技术','工程建筑','农林渔牧','健康福利','服务']:['General','Edu','Arts','Society','Biz','Science','ICT','Eng','Agri','Health','Services'];
       const label=c.phone?(short[Number(item.item.code)]||item.label):item.label;
-      const lines=wrap(label,c.categorySize,c.categoryWidth-3*c.scale,700),line=c.categorySize*1.12;
-      return {w:c.categoryWidth,h:c.categoryRadius*2+lines.length*line+7*c.scale,lines,line};
+      const lines=wrap(label,c.categorySize,c.categoryWidth-3*c.scale,700,false),line=c.categorySize*1.12;
+      const w=Math.max(c.categoryWidth,...lines.map(value=>measure.measureText(value).width+3*c.scale));
+      return {w,h:c.categoryRadius*2+lines.length*line+7*c.scale,lines,line};
     }
     const lines=wrap(item.label,c.name,c.fieldWidth-2*c.pad),nameHeight=lines.length*c.line;
     const resourceY=nameHeight+c.small*.95,versionY=resourceY;
