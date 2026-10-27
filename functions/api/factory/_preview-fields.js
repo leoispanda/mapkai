@@ -54,6 +54,11 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0723': 'Textiles (clothes, footwear and leather)',
   '0724': 'Mining and extraction',
   '0731': 'Architecture and town planning',
+  '0732': 'Building and civil engineering',
+  '0811': 'Crop and livestock production',
+  '0812': 'Horticulture',
+  '0821': 'Forestry',
+  '0831': 'Fisheries',
 });
 
 export const PUBLIC_PREVIEW_FIELD_IDS = Object.freeze(
