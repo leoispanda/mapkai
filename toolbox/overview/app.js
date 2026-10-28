@@ -142,38 +142,78 @@ function renderFilters() {
   for(const [value,label,count,disabled]of options){const button=$('overview-filters').querySelector(`[data-filter="${value}"]`);button.querySelector('span').textContent=label;button.querySelector('strong').textContent=count;button.disabled=disabled;button.setAttribute('aria-pressed',String(filter===value));}
 }
 function renderTree() {
-  const root={id:'root',kind:'root',label:'MapKAI',subtitle:zh?'80 个小学科':'80 learning fields',description:zh?'MapKAI，显示全部80个小学科':'MapKAI, show all 80 fields'};
-  const categories=[],allNodes=[root];let fieldCount=0;
-  for(const category of catalog.categories){
-    const song=songsById.get(category.songId);
-    const categoryMatch=matches(Object.values(category.title),category.introduction?Object.values(category.introduction.title):[])||Boolean(query&&songMatches(song));
-    const fields=category.fields.filter(f=>(categoryMatch||fieldMatches(f))&&passesFilter(f));
-    if(!fields.length)continue;
-    fieldCount+=fields.length;
-    const complete=fields.filter(f=>fieldScore(f)===3).length;
-    const subtitle=zh?`${fields.length} 小学科 · ${videos===null?'待核实':`${complete} 大满贯`}`:`${fields.length} fields · ${videos===null?'Unverified':`${complete} complete`}`;
-    const node={id:`category-${category.code}`,kind:'category',item:category,label:pick(category.title),subtitle,complete,total:fields.length,expandable:false,expanded:expandedAll};
-    node.description=`${node.label}. ${subtitle}`;allNodes.push(node);
-    if(expandedAll||query||filter!=='all')node.children=fields.map(field=>{
-      const children=field.stories.map(storyNode);allNodes.push(...children);
-      const f={id:`field-${field.code}`,kind:'field',item:field,category,label:pick(field.title),subtitle:availability(field),score:fieldScore(field),expandable:true,expanded:expandedFields.has(`field-${field.code}`)||Boolean(query&&field.stories.some(story=>matches(Object.values(story.title),Object.values(story.concept)))),signals:graphSignals(field,field.stories.some(s=>s.ready),true),storySignals:field.stories.map((story,i)=>({...graphSignal(story.ready,`${pick(story.title)} · ${t(story.newer?'newer':'older')} · ${t(story.public?'open':'pending')}`),id:story.id,newer:story.newer,node:children[i]}))};
-      f.description=`${f.label}. ${f.subtitle}. ${f.signals.map(s=>s.label).join('. ')}. ${f.storySignals.map(s=>s.label).join('. ')}`;
-      if(f.expanded)f.children=children;allNodes.push(f);return f;
+  const isFiltered = Boolean(query || filter !== 'all');
+  $('map-frame').dataset.activeFilter = filter;
+  $('map-frame').dataset.filtered = String(isFiltered);
+  const root = { id: 'root', kind: 'root', label: 'MapKAI', subtitle: zh ? '80 个小学科' : '80 learning fields', description: zh ? 'MapKAI，显示全部80个小学科' : 'MapKAI, show all 80 fields' };
+  const categories = [], allNodes = [root];
+  let matchedFieldCount = 0;
+  for (const category of catalog.categories) {
+    const song = songsById.get(category.songId);
+    const categoryMatch = matches(Object.values(category.title), category.introduction ? Object.values(category.introduction.title) : []) || Boolean(query && songMatches(song));
+    const fieldsWithMatch = category.fields.map(field => {
+      const isMatched = (categoryMatch || fieldMatches(field)) && passesFilter(field);
+      if (isMatched) matchedFieldCount++;
+      return { field, matched: isMatched };
+    });
+    const categoryMatched = fieldsWithMatch.some(f => f.matched);
+    const complete = category.fields.filter(f => fieldScore(f) === 3).length;
+    const subtitle = zh ? `${category.fields.length} 小学科 · ${videos === null ? '待核实' : `${complete} 大满贯`}` : `${category.fields.length} fields · ${videos === null ? 'Unverified' : `${complete} complete`}`;
+    const node = { id: `category-${category.code}`, kind: 'category', item: category, label: pick(category.title), subtitle, complete, total: category.fields.length, matched: categoryMatched, expandable: false, expanded: expandedAll };
+    node.description = `${node.label}. ${subtitle}`;
+    allNodes.push(node);
+    if (expandedAll || query || filter !== 'all') node.children = fieldsWithMatch.map(({ field, matched }) => {
+      const children = field.stories.map(storyNode);
+      allNodes.push(...children);
+      const f = {
+        id: `field-${field.code}`, kind: 'field', item: field, category, label: pick(field.title), subtitle: availability(field), score: fieldScore(field),
+        matched,
+        expandable: true, expanded: expandedFields.has(`field-${field.code}`) || Boolean(query && field.stories.some(story => matches(Object.values(story.title), Object.values(story.concept)))),
+        signals: graphSignals(field, field.stories.some(s => s.ready), true),
+        storySignals: field.stories.map((story, i) => {
+          const statusLabel = `${pick(story.title)} · ${t(story.newer ? 'newer' : 'older')} · ${story.ready ? t(story.public ? 'open' : 'pending') : t('missing')}`;
+          return { ready: story.ready, shared: false, label: statusLabel, id: story.id, newer: story.newer, node: children[i] };
+        })
+      };
+      f.description = `${f.label}. ${f.subtitle}. ${f.signals.map(s => s.label).join('. ')}. ${f.storySignals.map(s => s.label).join('. ')}`;
+      if (f.expanded) f.children = children;
+      allNodes.push(f);
+      return f;
     });
     categories.push(node);
   }
-  if(!allNodes.some(n=>n.id===selected))selected='root';
-  mindMap.render({root,categories,selected,viewKey:`${query}|${filter}|${expandedAll}`,searching:Boolean(query),filtered:Boolean(query||filter!=='all')});renderSelection(allNodes.find(n=>n.id===selected));renderFilters();
-  $('overview-empty').hidden=fieldCount>0;
-  const detailed=Boolean(expandedAll||query||filter!=='all');
-  $('directory-title').textContent=zh?(query?'搜索结果':filter!=='all'?'筛选结果':detailed?'全部小学科':'学科大类'):(query?'Search results':filter!=='all'?'Filtered fields':detailed?'All fields':'Subject groups');
-  $('map-guidance').textContent=zh?`${detailed?fieldCount:categories.length}${detailed?'科':'类'}完整全景 · 点击学科放大`:`${detailed?fieldCount:categories.length} ${detailed?'fields':'subjects'} · Select a subject to zoom`;
-  $('directory-results').textContent=zh?`${fieldCount} / 80 个小学科 · ${categories.length} 个学科分支`:`${fieldCount} / 80 fields · ${categories.length} subject branches`;
-  $('map-expand').textContent=zh?(detailed?'只看大类':'展开80小学科'):(detailed?'Subjects only':'Expand 80 fields');$('map-expand').setAttribute('aria-pressed',String(detailed));
-  const counts={1:0,2:0,3:0};for(const field of catalog.categories.flatMap(c=>c.fields)){const score=fieldScore(field);if(score!==null)counts[score]=(counts[score]||0)+1;}
-  $('readiness').textContent=videos===null?(zh?'正在核实视频资源':'Verifying videos'):(zh?`${counts[3]} 大满贯 · ${counts[2]} 双绿 · ${counts[1]} 单绿`:`${counts[3]} complete · ${counts[2]} with two · ${counts[1]} with one`);
-  if(!$('overview-subject').querySelector('option[data-category]'))$('overview-subject').insertAdjacentHTML('beforeend',catalog.categories.map(c=>`<option data-category="${c.code}" value="${c.code}">${esc(pick(c.title))}</option>`).join(''));
-  const visible=new Set(categories.map(c=>c.item.code));$('overview-subject').querySelectorAll('option[data-category]').forEach(option=>{option.disabled=!visible.has(option.value);});if($('overview-subject').value&&!visible.has($('overview-subject').value))$('overview-subject').value='';
+  if (!allNodes.some(n => n.id === selected)) selected = 'root';
+  mindMap.render({ root, categories, selected, viewKey: `${query}|${filter}|${expandedAll}`, searching: Boolean(query), filtered: isFiltered });
+  renderSelection(allNodes.find(n => n.id === selected));
+  renderFilters();
+  const emptyEl = $('overview-empty');
+  emptyEl.hidden = matchedFieldCount > 0;
+  if (matchedFieldCount === 0) {
+    const emptyText = emptyEl.querySelector('p');
+    if (emptyText) {
+      emptyText.textContent = query
+        ? (zh ? '没有找到相关内容，试试另一个关键词。' : 'No matching content. Try another keyword.')
+        : (filter === 'missing-music' || filter === 'missing-video')
+          ? (zh ? '全部 80 个小学科均已覆盖该项资源。' : 'All 80 fields already cover this resource.')
+          : (zh ? '当前筛选条件下没有匹配的小学科。' : 'No fields match the selected filter.');
+    }
+  }
+  const detailed = Boolean(expandedAll || query || filter !== 'all');
+  $('directory-title').textContent = zh ? (query ? '搜索结果' : filter !== 'all' ? '筛选结果' : detailed ? '全部小学科' : '学科大类') : (query ? 'Search results' : filter !== 'all' ? 'Filtered fields' : detailed ? 'All fields' : 'Subject groups');
+  $('map-guidance').textContent = zh ? `${detailed ? matchedFieldCount : categories.filter(c => c.matched).length}${detailed ? '科' : '类'}完整全景 · 点击学科放大` : `${detailed ? matchedFieldCount : categories.filter(c => c.matched).length} ${detailed ? 'fields' : 'subjects'} · Select a subject to zoom`;
+  $('directory-results').textContent = zh ? `${matchedFieldCount} / 80 个小学科 · ${categories.filter(c => c.matched).length} 个学科分支` : `${matchedFieldCount} / 80 fields · ${categories.filter(c => c.matched).length} subject branches`;
+  $('map-expand').textContent = zh ? (detailed ? '只看大类' : '展开80小学科') : (detailed ? 'Subjects only' : 'Expand 80 fields');
+  $('map-expand').setAttribute('aria-pressed', String(detailed));
+  const counts = { 1: 0, 2: 0, 3: 0 };
+  for (const field of catalog.categories.flatMap(c => c.fields)) {
+    const score = fieldScore(field);
+    if (score !== null) counts[score] = (counts[score] || 0) + 1;
+  }
+  $('readiness').textContent = videos === null ? (zh ? '正在核实视频资源' : 'Verifying videos') : (zh ? `${counts[3]} 大满贯 · ${counts[2]} 双绿 · ${counts[1]} 单绿` : `${counts[3]} complete · ${counts[2]} with two · ${counts[1]} with one`);
+  if (!$('overview-subject').querySelector('option[data-category]')) $('overview-subject').insertAdjacentHTML('beforeend', catalog.categories.map(c => `<option data-category="${c.code}" value="${c.code}">${esc(pick(c.title))}</option>`).join(''));
+  const visible = new Set(categories.filter(c => c.matched).map(c => c.item.code));
+  $('overview-subject').querySelectorAll('option[data-category]').forEach(option => { option.disabled = !visible.has(option.value); });
+  if ($('overview-subject').value && !visible.has($('overview-subject').value)) $('overview-subject').value = '';
 }
 function renderCounts() {
   const fields = catalog.categories.flatMap(c => c.fields);
