@@ -22099,47 +22099,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0731",
     "fieldTitle": "Architecture and town planning",
     "fieldTitleZh": "建筑学与城市规划",
-    "title": "The Plaza That Looked Perfect from the Tower",
-    "titleZh": "从塔顶看很完美的广场",
-    "summary": "A new plaza looks majestic and symmetrical from the clock tower, while people on the ground cross three hundred sunlit paces before reaching shade.",
-    "summaryZh": "新广场从钟塔上看庄严对称，走在地面的人却要穿过三百步烈日，才能找到第一处树荫。",
-    "storyParagraphs": [
-      "The chief planner designed a monumental plaza for the royal city. From the clock tower, two straight axes crossed perfectly, the centre held a parade of ten thousand, and no tree interrupted the stone pattern. The king admired the model. The planner himself had never walked from one end to the other at noon.",
-      "In the first summer after opening, vendors crowded under the narrow arcades at the edges. Older people took longer routes, children crossed the exposed stone without a place to pause, and wheelchair users met a long stair at the side entrance. The centre filled during ceremonies but on ordinary days resembled an empty plate heated by the sun.",
-      "At first, the planner blamed citizens for using a good space badly. One day he followed a woman with a walking stick from the pharmacy to the station. Halfway across, she stopped against a low wall with no backrest. Two carriages turned together through the broad crossing, and she waited a long time before continuing. For the first time, he saw his axes through footsteps, sightlines, and reaching distance.",
-      "He timed the trip. The tower map showed a direct line of 420 metres, but detours around stairs and a wide carriage crossing made her route 690 metres with no shaded rest for the first five minutes. The king's order to preserve the anniversary parade pattern waited under a wax seal. The planner set the woman's walking stick across his celebrated axis, marked two cuts through the expensive stone, and carried both the altered drawing and the unopened order downstairs.",
-      "The centre remained open for parades, but new direct paths joined everyday destinations, with shorter crossings, shade trees, seats at varied heights, legible edges, and accessible ramps. Ground-floor shops opened toward the plaza, and night lighting served faces and walking surfaces. Children, older people, and people with limited mobility tested the changes instead of being reduced to one average body.",
-      "He chose the cuts, surrendered his anniversary bonus, and closed half the plaza during the busiest market month. Afterward, the trip measured 455 metres and offered two shaded seats; the woman used one and rose without losing breath. Vendors regained trade, though parades required removable barriers and crews had to water trees. The planner kept tests from children, seated users, night workers, rain, and noon heat; one average walk could not certify every body, time, season, or maintenance condition. He moved the empty chair beside her stick six inches into shade, over a chip in the old axis, before the city's next noon heat returned."
-    ],
-    "storyParagraphsZh": [
-      "首席规划师为王城画了一座宏大广场。站在钟塔上看，两条轴线笔直交叉，中央足以举行万人阅兵，石面没有一棵树破坏图案。国王看过模型十分满意，规划师也从未在正午从广场一端走到另一端。",
-      "开场后的第一个夏天，商贩全挤到边缘狭窄的廊下。老人宁可绕远路，孩子穿过空旷石面时没有地方停，推轮椅的人被长台阶挡在侧门。广场中央只在庆典时拥挤，平日则像一只被太阳烤热的空盘。",
-      "规划师起初责怪百姓不会使用好空间。一天，他跟着一名拄杖妇人从药房走向车站。走到一半，她停下来扶住没有靠背的矮墙；两辆马车从宽阔路口同时转入，她等了很久才敢继续。规划师第一次从脚步、视线和伸手可及的距离看自己的轴线。",
-      "他给这段路计时。塔上地图的直线是四百二十米，台阶绕行和宽车道却让她实际走六百九十米，前五分钟没有一处树荫。国王要求周年阅兵前不得破坏图案，蜡封命令仍压在桌上。规划师把老妇人的手杖横放在获奖轴线上，在昂贵石面画出两处切口，带着改过的图和未拆命令一起下楼。",
-      "广场中央仍为阅兵保留，却增加穿过日常目的地的短路、分段过街、树荫、不同高度的座椅、清楚边缘和无障碍坡道。底层小铺朝向广场开门，夜间照明照顾面孔与路面。设计者还分别邀请儿童、老人和行动不便者试走，而不是只使用一个‘普通人’尺寸。",
-      "他选择动工，放弃周年奖金，又在最旺的集市月封闭半座广场。改造后，同一路程缩到四百五十五米，并有两处荫椅。妇人坐过一次，起身没有喘得说不出话；新短路旁摊贩恢复生意，阅兵时则需安装可移栏杆，养护班还要浇树和修座椅。规划师把儿童、推车者、夜班工人、雨天和炎热午后的试走记录压在塔楼模型下，一次平均步行不再替所有身体与季节作证。他没有抬头看塔，只把手杖旁空椅再挪入阴影半尺，椅脚盖住旧轴线被切开的一小处缺口。"
-    ],
-    "conceptName": "Human scale",
-    "conceptNameZh": "人性尺度",
-    "explanationParagraphs": [
-      "Human scale organizes the built environment around how people perceive, move, reach, pause, and interact at bodily speeds and distances. It includes not just dimensions but edges, walking time, shelter, sensory detail, accessibility, climate, safety, and maintenance, while respecting varied bodies. It does not require every space to be small; large places can remain approachable through legible paths, stopping points, and everyday edges."
-    ],
-    "explanationParagraphsZh": [
-      "人性尺度依据人们以身体速度和距离怎样感知、移动、伸手、停留与互动来组织建成空间。它不仅是尺寸，还包括边缘、步行时间、遮蔽、感官细节、无障碍、气候、安全和维护，并应照顾多样身体。它不要求所有地方都小；大型空间也可通过可读路径、停留点和适合日常使用的边界获得可亲近性。"
-    ],
     "mode": "concept-fable",
+    "titleZh": "入口前的两只花箱",
+    "summaryZh": "阅读节明天开场，花箱和桌椅都已摆好。周宁准备签字收工时，却在入口前遇见一辆过不去的婴儿车。",
+    "storyParagraphsZh": [
+      "周末阅读节第二天就要开场，周宁负责图书馆外那段小街的最后布置。花箱、展板、阅读桌和咖啡摊都已经照图摆好，工作人员正等她签字收工。她从公交站方向走过来，却在离入口不远的地方停了下来：一辆双人婴儿车和拖着书箱的工作人员刚好迎面相遇，两边都停了下来，工作人员得先把书箱拉回一点，婴儿车才能通过。",
+      "周宁没有只站在原地看，而是自己继续往入口走。前面有人站着等朋友，后面的人便从花箱旁绕过；长椅上的老人想看入口，视线却被一块展板挡住；工作人员推着装书的小车转弯时，又得先等咖啡桌边的人让开。每一处单独看都还能使用，可这些动作连续发生时，这段本来不长的路不断要求人停、绕、让。",
+      "入口两边那两只大花箱是周宁最不想动的。它们在布置图上正好把门框住，咖啡摊主也已经按旁边的空位准备多展开一张桌子。周宁在长椅上坐了一会儿，看见另一个推婴儿车的人走近入口，又在等候的人身后拐了一次。她站起来，让布置组移开一只花箱，把高展板贴近墙边，再把等候的位置从主要通路上让开。",
+      "咖啡摊主问备用桌怎么办。周宁看了看刚腾出的路线，最后还是摇头：“这张先别开。”少一张桌，意味着少一个售卖位置；另一只花箱也被移到较远的墙边，原来入口两侧完全对称的布置没有了。可工作人员再推书箱经过时，不必先等入口的人全部散开，长椅前也留出了完整的停留空间。",
+      "第二天开场，一个孩子从公交站方向跑到入口前，又停下来等身后的家长。家长推着车走到他旁边时，另一位抱着书的人仍能从旁边通过。周宁站在长椅边，看见等人的、坐着的和继续往前走的人同时留在这一小段街上。那只花箱靠墙摆着。推车的人经过时，不再需要往它旁边绕。"
+    ],
+    "overallZh": "本篇用一段从公交站到图书馆入口的具体使用经历说明人性尺度的一个入口：空间是否好用，不只看平面是否整齐或设施是否靠得近，还要看人在地面如何看见、通过、等待、休息和与他人错身。尺度和细节需要回应不同身体、速度和公共空间活动。",
+    "conceptNameZh": "人性尺度",
+    "explanationParagraphsZh": [
+      "本例中，花箱、展板、座椅和售卖桌本身都不是问题；问题出现在它们与真实身体移动、视线、停留和等待叠加之后。周宁沿明确的公交站—入口路线观察这些动作，再调整设施位置，说明人性尺度关注的是人与空间之间的实际关系，而不是单纯把建筑或设施做得更小。",
+      "结尾只展示开场时几种具体使用动作能够同时发生，并不能证明所有年龄、身体条件、时段或活动都已经得到验证。真实可用性还需要在不同时间、不同使用者和具体当地标准下继续观察和判断；本故事不提供通用尺寸、无障碍合规结论或现场设计标准。"
+    ],
+    "moduleZh": {
+      "intro": "从一条明确的步行路线出发，观察人在地面如何通过、停留、看见和彼此避让，再判断设施位置是否支持这些真实动作。",
+      "diagramTitle": "为什么看起来整齐的入口，在地面上仍可能不断让人停、绕、让",
+      "diagramSteps": [
+        "从公交站方向沿实际路线走向图书馆入口，而不是只看布置图",
+        "观察婴儿车、运书小车、等候者和坐下者如何共享同一段空间",
+        "发现花箱、展板和售卖桌在连续动作中造成绕行、视线遮挡和相互等待",
+        "先后移开入口两只花箱，调整展板和等候位置，并不再展开备用售卖桌",
+        "在开场后的具体场景中观察通过、停留和等待是否能够同时发生"
+      ],
+      "diagramStepNotes": [
+        "明确起点和终点能让判断落在实际使用任务上，而不是抽象评价空间是否漂亮。",
+        "不同身体、速度和活动方式会占用空间、改变视线和停留方式，不能只按一个平均使用者判断。",
+        "设施更近或数量更多并不自动改善体验，位置不当反而可能增加绕行和冲突。",
+        "调整空间会有代价，本例中少一个售卖位置并失去原来的对称入口构图。",
+        "一次观察只能说明当时这些具体动作的表现，不能推出所有人和所有时段都同样可用。"
+      ],
+      "mapping": [
+        "公交站到图书馆入口 → 明确的实际使用路线。",
+        "婴儿车、书箱小车和等候者 → 不同身体占用、移动速度和停留需求。",
+        "被挪开的花箱与备用桌 → 为连续通过和停留让出的空间与经营代价。",
+        "长椅前恢复的视线和空间 → 人的感知、停留与街道边缘关系。",
+        "开场时同时发生的走、等、坐 → 地面使用体验的具体观察，而非全面可用性证明。"
+      ],
+      "boundary": "人性尺度不是“小建筑”的同义词，也不是只缩短距离或按单一平均身体设计。空间还要面对不同年龄、行动能力、视觉感知、移动速度和公共活动。整齐、美观、设施更近或行人变多，都不能单独证明空间对所有人可用。本例只说明一个虚构阅读节入口在特定时段的具体观察，不提供通用尺寸、现实合规判断或完整专业设计。",
+      "reflection": "假如入口变宽了，一位看不清展板的读者仍找不到门，你还会观察哪些具体使用动作，才知道这次布置照顾到了谁、遗漏了谁？"
+    },
+    "referencesZh": [
+      {
+        "id": "gdci-human-scale",
+        "citation": "Global Designing Cities Initiative. (n.d.). Global Street Design Guide: Immediate Context.",
+        "url": "https://globaldesigningcities.org/publication/global-street-design-guide/designing-streets-for-place/immediate-context/",
+        "use": "支持从人的视高、身体使用、街道边缘、设施位置和无障碍活动理解空间，并通过不同时间的实际使用观察设计效果；本篇借用这些设计原则，不把它们当作全球统一尺寸标准，也不把虚构现场观察当成来源实测数据。"
+      },
+      {
+        "id": "gdci-pedestrians",
+        "citation": "Global Designing Cities Initiative. (n.d.). Global Street Design Guide: Designing for Pedestrians—Overview.",
+        "url": "https://globaldesigningcities.org/publication/global-street-design-guide/designing-streets-people/designing-for-pedestrians/overview/",
+        "use": "支持连续无阻的步行路线、停留和休息，并强调考虑不同年龄、感知和行动能力；本篇不采用来源中的速度或尺寸作为通用阈值，也不由一次观察推出所有使用者都已得到满足。"
+      }
+    ],
+    "title": "The Two Planters by the Entrance",
+    "summary": "The reading festival opens tomorrow, and the planters and tables are already in place. Zhou Ning is about to sign off on the setup when a stroller gets stuck near the entrance.",
+    "storyParagraphs": [
+      "The weekend reading festival opens the next day, and Zhou Ning is responsible for the final setup of the small street outside the library. The planters, display boards, reading tables, and coffee stall have all been placed according to the plan, and the staff are waiting for her sign-off before leaving. As she walks in from the bus-stop direction, she stops not far from the entrance: a double stroller and a staff member pulling a box of books meet head-on. Both stop. The staff member has to pull the box back a little before the stroller can pass.",
+      "Zhou Ning does not simply stand there and look. She continues walking toward the entrance herself. Someone ahead is waiting for a friend, so people behind detour around a planter; an older person sitting on the bench wants to see the entrance, but a display board blocks the view; when a staff member turns with a cart of books, they have to wait for people beside the coffee table to move. Each spot can still be used on its own, but when these actions occur one after another, this short stretch keeps making people stop, detour, and give way.",
+      "The two large planters on either side of the entrance are the elements Zhou Ning least wants to move. On the setup drawing, they frame the doorway perfectly, and the coffee vendor has already prepared to open an extra table in the space beside them. Zhou Ning sits on the bench for a while and sees another person pushing a stroller approach the entrance, then make another turn behind the people waiting there. She stands up and asks the setup team to move one planter, place the tall display board closer to the wall, and shift the waiting area out of the main path.",
+      "The coffee vendor asks what to do with the spare table. Zhou Ning looks at the route they have just opened up and finally shakes her head. “Don't set this one up.” One fewer table means one fewer sales position. The other planter is also moved farther toward the wall, and the entrance is no longer perfectly symmetrical. But when staff push the book cart through again, they no longer have to wait for everyone near the entrance to clear, and the space in front of the bench remains open for stopping.",
+      "When the event opens the next day, a child runs from the bus-stop direction to the entrance and then stops to wait for the parent behind. As the parent reaches the child with a stroller, another person carrying books can still pass beside them. Zhou Ning stands near the bench and sees people waiting, sitting, and continuing forward at the same time on this small stretch of street. The planter stands against the wall. People pushing strollers no longer have to detour around it."
+    ],
+    "overall": "This article uses a specific journey from a bus stop to a library entrance to introduce one aspect of human scale: whether a space works well depends not only on whether its plan looks orderly or whether facilities are close together, but also on how people at ground level see, pass, wait, rest, and move around one another. Scale and detail need to respond to different bodies, speeds, and public-space activities.",
+    "conceptName": "Human scale",
+    "explanationParagraphs": [
+      "In this example, the planters, display boards, seating, and sales table are not problems by themselves. The problem emerges when their positions interact with real bodily movement, sightlines, stopping, and waiting. Zhou Ning observes these activities along a defined bus-stop-to-entrance route and then changes the placement of facilities, showing that human scale concerns the actual relationship between people and space rather than simply making buildings or facilities smaller.",
+      "The ending shows only that several specific activities can occur together during the opening period. It does not prove that every age group, physical condition, time period, or activity has been fully accommodated. Real usability still requires observation and assessment across different users, times, and applicable local standards. This story provides no universal dimensions, accessibility-compliance conclusion, or site-design standard."
+    ],
+    "module": {
+      "intro": "Start with a defined walking route, observe how people at ground level pass, stop, see, and move around one another, and then judge whether the placement of facilities supports those real activities.",
+      "diagramTitle": "Why Can an Entrance That Looks Orderly Still Keep Making People Stop, Detour, and Give Way at Ground Level?",
+      "diagramSteps": [
+        "Walk from the bus-stop direction toward the library entrance along the actual route rather than judging only from the layout drawing",
+        "Observe how a stroller, a book cart, people waiting, and people sitting share the same stretch of space",
+        "Notice that planters, a display board, and a sales table create detours, blocked sightlines, and mutual waiting when activities occur in sequence",
+        "Move both entrance planters in turn, adjust the display board and waiting area, and leave the spare sales table folded",
+        "During the opening period, observe whether passing, stopping, and waiting can occur at the same time in the specific scene"
+      ],
+      "diagramStepNotes": [
+        "A clear origin and destination keep the judgment tied to an actual use task rather than an abstract opinion about whether the space looks attractive.",
+        "Different bodies, movement speeds, and activities occupy space and change sightlines and stopping patterns, so one average user cannot represent everyone.",
+        "Closer facilities or more facilities do not automatically improve experience; poor placement can instead increase detours and conflicts.",
+        "Changing the space has a cost: this example loses one sales position and the original symmetrical entrance composition.",
+        "One observation can show only how these specific activities perform at that time; it cannot establish equal usability for everyone or at all times."
+      ],
+      "mapping": [
+        "Bus stop to library entrance → the defined real-use route.",
+        "Stroller, book cart, and people waiting → different bodily footprints, movement speeds, and stopping needs.",
+        "Moved planter and spare table → space and commercial capacity given up to support continuous passage and stopping.",
+        "Restored sightline and space in front of the bench → the relationship between human perception, staying, and the street edge.",
+        "Walking, waiting, and sitting happening together during opening → a concrete observation of ground-level use rather than proof of universal usability."
+      ],
+      "boundary": "Human scale is not a synonym for 'small buildings,' nor does it mean simply shortening distances or designing for one average body. Space must also respond to different ages, mobility abilities, visual perception, movement speeds, and public activities. Orderliness, visual appeal, closer facilities, or more pedestrians cannot by themselves prove that a space works for everyone. This example describes only a fictional reading-festival entrance during a particular period and does not provide universal dimensions, real-world compliance judgments, or a complete professional design.",
+      "reflection": "Suppose the entrance is wider, but a reader who cannot see the display board still cannot find the door. What would you observe to learn whom the layout serves and whom it misses?"
+    },
+    "references": [
+      {
+        "id": "gdci-human-scale",
+        "citation": "Global Designing Cities Initiative. (n.d.). Global Street Design Guide: Immediate Context.",
+        "url": "https://globaldesigningcities.org/publication/global-street-design-guide/designing-streets-for-place/immediate-context/",
+        "use": "Supports understanding space through human eye level, bodily use, street edges, facility placement, and accessible activity, and through observation of actual use at different times. This article borrows those design principles without treating them as universal dimensional standards or presenting the fictional observations as source measurements."
+      },
+      {
+        "id": "gdci-pedestrians",
+        "citation": "Global Designing Cities Initiative. (n.d.). Global Street Design Guide: Designing for Pedestrians—Overview.",
+        "url": "https://globaldesigningcities.org/publication/global-street-design-guide/designing-streets-people/designing-for-pedestrians/overview/",
+        "use": "Supports continuous unobstructed walking routes, stopping and resting, and consideration of different ages, perceptual abilities, and mobility abilities. This article does not use speed or dimensional ranges from the source as universal thresholds and does not infer from one observation that all users have been accommodated."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "urban-agriculture-reader-first-25-preparation/group1-pdc-round3.json",
+      "edits": [
+        "urban-agriculture-reader-first-25-preparation/group1-edit-pass1-evidence.json",
+        "urban-agriculture-reader-first-25-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13 perspectives; four real ordinary ChatGPT GPT-5.6 Sol High stages, explicitly user-authorized."
     },
     "collection": "field-core-fables",
-    "storyBody": "The chief planner designed a monumental plaza for the royal city. From the clock tower, two straight axes crossed perfectly, the centre held a parade of ten thousand, and no tree interrupted the stone pattern. The king admired the model. The planner himself had never walked from one end to the other at noon.\n\nIn the first summer after opening, vendors crowded under the narrow arcades at the edges. Older people took longer routes, children crossed the exposed stone without a place to pause, and wheelchair users met a long stair at the side entrance. The centre filled during ceremonies but on ordinary days resembled an empty plate heated by the sun.\n\nAt first, the planner blamed citizens for using a good space badly. One day he followed a woman with a walking stick from the pharmacy to the station. Halfway across, she stopped against a low wall with no backrest. Two carriages turned together through the broad crossing, and she waited a long time before continuing. For the first time, he saw his axes through footsteps, sightlines, and reaching distance.\n\nHe timed the trip. The tower map showed a direct line of 420 metres, but detours around stairs and a wide carriage crossing made her route 690 metres with no shaded rest for the first five minutes. The king's order to preserve the anniversary parade pattern waited under a wax seal. The planner set the woman's walking stick across his celebrated axis, marked two cuts through the expensive stone, and carried both the altered drawing and the unopened order downstairs.\n\nThe centre remained open for parades, but new direct paths joined everyday destinations, with shorter crossings, shade trees, seats at varied heights, legible edges, and accessible ramps. Ground-floor shops opened toward the plaza, and night lighting served faces and walking surfaces. Children, older people, and people with limited mobility tested the changes instead of being reduced to one average body.\n\nHe chose the cuts, surrendered his anniversary bonus, and closed half the plaza during the busiest market month. Afterward, the trip measured 455 metres and offered two shaded seats; the woman used one and rose without losing breath. Vendors regained trade, though parades required removable barriers and crews had to water trees. The planner kept tests from children, seated users, night workers, rain, and noon heat; one average walk could not certify every body, time, season, or maintenance condition. He moved the empty chair beside her stick six inches into shade, over a chip in the old axis, before the city's next noon heat returned.",
-    "storyBodyZh": "首席规划师为王城画了一座宏大广场。站在钟塔上看，两条轴线笔直交叉，中央足以举行万人阅兵，石面没有一棵树破坏图案。国王看过模型十分满意，规划师也从未在正午从广场一端走到另一端。\n\n开场后的第一个夏天，商贩全挤到边缘狭窄的廊下。老人宁可绕远路，孩子穿过空旷石面时没有地方停，推轮椅的人被长台阶挡在侧门。广场中央只在庆典时拥挤，平日则像一只被太阳烤热的空盘。\n\n规划师起初责怪百姓不会使用好空间。一天，他跟着一名拄杖妇人从药房走向车站。走到一半，她停下来扶住没有靠背的矮墙；两辆马车从宽阔路口同时转入，她等了很久才敢继续。规划师第一次从脚步、视线和伸手可及的距离看自己的轴线。\n\n他给这段路计时。塔上地图的直线是四百二十米，台阶绕行和宽车道却让她实际走六百九十米，前五分钟没有一处树荫。国王要求周年阅兵前不得破坏图案，蜡封命令仍压在桌上。规划师把老妇人的手杖横放在获奖轴线上，在昂贵石面画出两处切口，带着改过的图和未拆命令一起下楼。\n\n广场中央仍为阅兵保留，却增加穿过日常目的地的短路、分段过街、树荫、不同高度的座椅、清楚边缘和无障碍坡道。底层小铺朝向广场开门，夜间照明照顾面孔与路面。设计者还分别邀请儿童、老人和行动不便者试走，而不是只使用一个‘普通人’尺寸。\n\n他选择动工，放弃周年奖金，又在最旺的集市月封闭半座广场。改造后，同一路程缩到四百五十五米，并有两处荫椅。妇人坐过一次，起身没有喘得说不出话；新短路旁摊贩恢复生意，阅兵时则需安装可移栏杆，养护班还要浇树和修座椅。规划师把儿童、推车者、夜班工人、雨天和炎热午后的试走记录压在塔楼模型下，一次平均步行不再替所有身体与季节作证。他没有抬头看塔，只把手杖旁空椅再挪入阴影半尺，椅脚盖住旧轴线被切开的一小处缺口。",
-    "explanation": "Human scale organizes the built environment around how people perceive, move, reach, pause, and interact at bodily speeds and distances. It includes not just dimensions but edges, walking time, shelter, sensory detail, accessibility, climate, safety, and maintenance, while respecting varied bodies. It does not require every space to be small; large places can remain approachable through legible paths, stopping points, and everyday edges.",
-    "explanationZh": "人性尺度依据人们以身体速度和距离怎样感知、移动、伸手、停留与互动来组织建成空间。它不仅是尺寸，还包括边缘、步行时间、遮蔽、感官细节、无障碍、气候、安全和维护，并应照顾多样身体。它不要求所有地方都小；大型空间也可通过可读路径、停留点和适合日常使用的边界获得可亲近性。"
+    "storyBody": "The weekend reading festival opens the next day, and Zhou Ning is responsible for the final setup of the small street outside the library. The planters, display boards, reading tables, and coffee stall have all been placed according to the plan, and the staff are waiting for her sign-off before leaving. As she walks in from the bus-stop direction, she stops not far from the entrance: a double stroller and a staff member pulling a box of books meet head-on. Both stop. The staff member has to pull the box back a little before the stroller can pass.\n\nZhou Ning does not simply stand there and look. She continues walking toward the entrance herself. Someone ahead is waiting for a friend, so people behind detour around a planter; an older person sitting on the bench wants to see the entrance, but a display board blocks the view; when a staff member turns with a cart of books, they have to wait for people beside the coffee table to move. Each spot can still be used on its own, but when these actions occur one after another, this short stretch keeps making people stop, detour, and give way.\n\nThe two large planters on either side of the entrance are the elements Zhou Ning least wants to move. On the setup drawing, they frame the doorway perfectly, and the coffee vendor has already prepared to open an extra table in the space beside them. Zhou Ning sits on the bench for a while and sees another person pushing a stroller approach the entrance, then make another turn behind the people waiting there. She stands up and asks the setup team to move one planter, place the tall display board closer to the wall, and shift the waiting area out of the main path.\n\nThe coffee vendor asks what to do with the spare table. Zhou Ning looks at the route they have just opened up and finally shakes her head. “Don't set this one up.” One fewer table means one fewer sales position. The other planter is also moved farther toward the wall, and the entrance is no longer perfectly symmetrical. But when staff push the book cart through again, they no longer have to wait for everyone near the entrance to clear, and the space in front of the bench remains open for stopping.\n\nWhen the event opens the next day, a child runs from the bus-stop direction to the entrance and then stops to wait for the parent behind. As the parent reaches the child with a stroller, another person carrying books can still pass beside them. Zhou Ning stands near the bench and sees people waiting, sitting, and continuing forward at the same time on this small stretch of street. The planter stands against the wall. People pushing strollers no longer have to detour around it.",
+    "storyBodyZh": "周末阅读节第二天就要开场，周宁负责图书馆外那段小街的最后布置。花箱、展板、阅读桌和咖啡摊都已经照图摆好，工作人员正等她签字收工。她从公交站方向走过来，却在离入口不远的地方停了下来：一辆双人婴儿车和拖着书箱的工作人员刚好迎面相遇，两边都停了下来，工作人员得先把书箱拉回一点，婴儿车才能通过。\n\n周宁没有只站在原地看，而是自己继续往入口走。前面有人站着等朋友，后面的人便从花箱旁绕过；长椅上的老人想看入口，视线却被一块展板挡住；工作人员推着装书的小车转弯时，又得先等咖啡桌边的人让开。每一处单独看都还能使用，可这些动作连续发生时，这段本来不长的路不断要求人停、绕、让。\n\n入口两边那两只大花箱是周宁最不想动的。它们在布置图上正好把门框住，咖啡摊主也已经按旁边的空位准备多展开一张桌子。周宁在长椅上坐了一会儿，看见另一个推婴儿车的人走近入口，又在等候的人身后拐了一次。她站起来，让布置组移开一只花箱，把高展板贴近墙边，再把等候的位置从主要通路上让开。\n\n咖啡摊主问备用桌怎么办。周宁看了看刚腾出的路线，最后还是摇头：“这张先别开。”少一张桌，意味着少一个售卖位置；另一只花箱也被移到较远的墙边，原来入口两侧完全对称的布置没有了。可工作人员再推书箱经过时，不必先等入口的人全部散开，长椅前也留出了完整的停留空间。\n\n第二天开场，一个孩子从公交站方向跑到入口前，又停下来等身后的家长。家长推着车走到他旁边时，另一位抱着书的人仍能从旁边通过。周宁站在长椅边，看见等人的、坐着的和继续往前走的人同时留在这一小段街上。那只花箱靠墙摆着。推车的人经过时，不再需要往它旁边绕。",
+    "explanation": "In this example, the planters, display boards, seating, and sales table are not problems by themselves. The problem emerges when their positions interact with real bodily movement, sightlines, stopping, and waiting. Zhou Ning observes these activities along a defined bus-stop-to-entrance route and then changes the placement of facilities, showing that human scale concerns the actual relationship between people and space rather than simply making buildings or facilities smaller.\n\nThe ending shows only that several specific activities can occur together during the opening period. It does not prove that every age group, physical condition, time period, or activity has been fully accommodated. Real usability still requires observation and assessment across different users, times, and applicable local standards. This story provides no universal dimensions, accessibility-compliance conclusion, or site-design standard.",
+    "explanationZh": "本例中，花箱、展板、座椅和售卖桌本身都不是问题；问题出现在它们与真实身体移动、视线、停留和等待叠加之后。周宁沿明确的公交站—入口路线观察这些动作，再调整设施位置，说明人性尺度关注的是人与空间之间的实际关系，而不是单纯把建筑或设施做得更小。\n\n结尾只展示开场时几种具体使用动作能够同时发生，并不能证明所有年龄、身体条件、时段或活动都已经得到验证。真实可用性还需要在不同时间、不同使用者和具体当地标准下继续观察和判断；本故事不提供通用尺寸、无障碍合规结论或现场设计标准。"
   },
   {
     "id": "0731-mixed-use-development",
@@ -22148,49 +22240,127 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0731",
     "fieldTitle": "Architecture and town planning",
     "fieldTitleZh": "建筑学与城市规划",
-    "title": "The District That Woke Twice a Day",
-    "titleZh": "一天只醒两次的城",
-    "summary": "A new district separates homes, offices, and shops into perfect order, then fills only during two daily commutes while each zone sits empty in turn.",
-    "summaryZh": "新城区把住宅、办公和商店分得井然有序，也因此每天只在两次通勤中挤满人，其余时间各自空着。",
-    "storyParagraphs": [
-      "Planner Meng Qi coloured the new district map in three orderly shades: homes in the east, offices in the west, and shops in the south. The mayor admired the arrangement. Factory noise would not reach bedrooms, he said, and delivery trucks would not block schools. Broad roads connected the three areas.",
-      "Once the district filled, those roads jammed every morning and evening. During the day, the eastern zone held mostly older residents and empty parking spaces; even buying medicine required a half-hour trip. At night the western offices went dark, while restaurants queued only at lunch. After the southern mall closed, no one crossed its vast car park. Buses overflowed during two peaks and carried empty seats in between.",
-      "Meng tried adding two traffic lanes and more peak buses. Commutes shortened for one month, then new junction queues formed and the extra buses still ran nearly empty at noon. A pharmacist asked to open a small eastern shop, but the colour-coded plan forbade retail there. The mayor preferred another road because its ribbon could be cut before the election. Meng approved it, spending the reserve meant for neighbourhood paths.",
-      "A snowstorm closed the north-south road, leaving eastern residents without fresh food for two days. Walking through the area, Meng found a baker secretly selling bread from his garage. A queue quickly formed. The district did not lack activities; the map had prevented those activities from approaching one another.",
-      "The bakery inspector waited for Meng's fine while the ceremonial boulevard contract waited for his seal. Meng crossed out the fine, signed a rules review instead, and cancelled the extension. The city lost the road contract deposit and spent a winter facing office owners and mediating freight hours, rents, ventilation, and school access. Bringing uses closer required judging compatibility and protecting residents, not pouring every activity into one block.",
-      "Revised neighbourhoods allowed small shops, clinics, schools, and suitable workplaces near homes, with different activities on upper and lower floors. Frequent walking routes and transit stops connected them. Noise, exhaust, freight, and hazardous production received boundaries and operating times, while policy protected affordable homes and small-business space. Not everything was mixed indiscriminately; compatible daily needs were brought closer.",
-      "Several years later, an eastern bakery turned its sign to OPEN as a night-shift nurse switched off her bedroom light upstairs. The baker received flour through the rear lane during agreed hours, while the clinic opened across the street. Rents still required monitoring; activity alone had not guaranteed fairness. There was no traffic queue, and the smell of first bread reached the bus stop before the bus did."
-    ],
-    "storyParagraphsZh": [
-      "规划师孟启把新区地图涂成三种整齐颜色：东边全是住宅，西边全是办公楼，商店集中在城南。市长喜欢这种秩序，说工厂噪声不会吵到卧室，货车也不会挡在学校门口。宽阔道路把三块区域连接起来。",
-      "新区住满后，道路每天清晨和傍晚堵死。东区白天只剩老人和空车位，连买药也要坐半小时车；西区夜里整片熄灯，餐馆只在午间排队；城南商场关门后，巨大的停车场无人经过。公交在两个高峰挤不上去，其余时段却载着空座。",
-      "孟启先加两条车道和高峰公交。通勤只短暂变快，新路口很快又排队，增开的车到中午仍几乎空着。药剂师申请在东区开小店，却被分色图禁止。市长更喜欢一条能在选举前剪彩的新路，孟启批准了它，花掉原留给街坊步行路的钱。",
-      "一场大雪封住南北主路，东区居民两天买不到新鲜食物。孟启步行查看，发现一位面包师在自家车库偷偷卖面包，门口很快排起长队。人们并不缺用途，只是地图不许这些用途靠近彼此。",
-      "面包铺检查员等着孟屿开罚单，礼仪大道合同也等着他的印章。孟屿划掉罚款，改签规则复核，并取消大道扩建。城市损失道路合同订金，又花一冬天面对担心噪声的办公楼业主，协调货运时段、租金、排烟和学校出入口。让用途靠近需要判断相容性并保护居民，不是把所有活动塞进一栋楼。",
-      "修改后的街区允许住宅旁有小店、诊所、学校和适合的工作场所，楼上楼下也可承担不同活动；公交站和步行路把它们密密连接。噪声、排烟、货运和危险生产另设边界与时段，原住者的租金和小商户空间也写进政策。并非所有东西都混在一起，而是让相容的日常需要彼此靠近。",
-      "数年后一个清晨，东区面包店把门牌翻到营业，楼上的夜班护士正好关灯。面粉车按约定时段从后巷卸货，对面诊所也拉开卷帘；租金仍需监测，街上有人并不自动等于人人受益。孟启把当年三色地图折在柜台下，折痕正穿过曾被禁止的店址。此刻街上没有堵车，第一炉面包香气先到了公交站。"
-    ],
-    "conceptName": "Mixed-use development",
-    "conceptNameZh": "混合功能开发",
-    "explanationParagraphs": [
-      "Mixed-use development places compatible housing, commerce, public services, work, and leisure within walkable, connected proximity, supporting activity across different times of day. Outcomes also depend on density, fine-grained routes, transit, public space, affordability, and management of noise, freight, and hazardous uses. Placing different labels on the same map does not automatically create vitality or equity."
-    ],
-    "explanationParagraphsZh": [
-      "混合功能开发把相容的居住、商业、公共服务、工作和休闲活动放在可步行、可连接的邻近范围，并让街区在一天不同时段都有使用。效果还取决于密度、细密路网、公共交通、公共空间、可负担性及对噪声、货运和危险用途的管理。仅把不同标签放在同一地图上，并不自动带来活力或公平。"
-    ],
     "mode": "concept-fable",
+    "titleZh": "回家前的三件事",
+    "summaryZh": "托育点、眼镜店和面包店都在家门口，陈禾却接连两天没能办完下班后的几件事。他带去观察会的，是一条绕了又绕的路线。",
+    "storyParagraphsZh": [
+      "陈禾下班后通常只有四十来分钟处理家里的杂事。那天他要从街区里的托育点接女儿、取已经修好的眼镜，再买第二天早餐。搬来这里时，他最看中的就是住宅楼下和内街周边已经有这些日常用途，不必为了三件小事分别去三个相距很远的地方。可第一次真把它们串在一起，他还是没能一次办完。",
+      "托育点就在住宅内街一侧，接到女儿后几步就能看到面包店的窗户，眼镜店也在同一街区。可眼镜店面向内街的侧门一直锁着，顾客只能绕到外侧入口。那天陈禾抱着女儿绕过去时，眼镜店已经关门；再回到面包店，卷帘门也落下了。第二天他接到女儿后先买了面包，才去绕那段路，仍然错过了眼镜店的取件时段。修好的眼镜一直留在店里。",
+      "开业后的使用观察会上，陈禾把自己的路线画在纸上。他从托育点出发，先指了指能直接看到的面包店，再把笔绕到眼镜店外侧入口，最后才回到住宅门厅：“这几件事我都要办，可这一圈还是被门和时间拆开了。”运营人员跟着他把这趟路重新走了一遍，没有再讨论要不要新增第四家店，而是开始看现有几个地方之间到底哪里接不上。",
+      "后来眼镜店开放了面向内街的侧门，面包店把部分晚间营业时间向后挪，托育点到住宅内街的步行通道保持开放。为了不让新的步行高峰和送货撞在一起，物业又调整了部分货运安排。商户要重新排班，物业也得把新的送货时段逐一通知商家。陈禾来接女儿的那段时间，内街入口留给步行的人。",
+      "几天后，陈禾接到女儿后没有再走出街区。他们沿内街先取了眼镜，又在面包店关门前买到早餐，最后直接走回住宅门厅。女儿一手拿着眼镜盒，一手抱着纸袋，问他：“今天还要去哪儿？”陈禾按下电梯键：“没有了，今天这三件事就在回家的路上。”"
+    ],
+    "overallZh": "本篇用一位家长的一趟下班行程说明混合功能开发的一个入口：当住宅、照护、零售和生活服务等相容用途位于同一街区并且实际连通时，原本分散的日常任务可能被组合成一趟更直接的行程。但用途邻近只是基础，入口、开放时间、通道和运营协调仍会决定实际可达性。",
+    "conceptNameZh": "混合功能开发",
+    "explanationParagraphsZh": [
+      "故事中的便利变化不是单靠延长面包店营业时间产生的。住宅、托育、眼镜服务和零售原本已经在同一生活圈内，这使陈禾有可能在一次下班步行中串联多种日常任务；侧门开放、通道保持可用和时间协调则让这些已经相邻的用途真正连接起来。",
+      "混合功能不等于把所有用途都挤在一起，也不保证任何街区天然便利。货运、噪声、排放、营业时间、住宅负担和不同使用者需求都可能产生冲突。本例只说明陈禾这一趟具体行程如何变化，不能据此推出整个街区租金更低、更公平、通勤更短或交通效果都由用途混合单独造成。"
+    ],
+    "moduleZh": {
+      "intro": "先看一趟真实生活行程需要哪些日常用途，再检查这些用途是否既相邻又在时间和入口上真正连得起来。",
+      "diagramTitle": "为什么几个地方都在同一个街区，陈禾第一次仍然办不完三件事",
+      "diagramSteps": [
+        "陈禾下班后需要接孩子、取眼镜并购买第二天早餐",
+        "住宅、托育点、眼镜店和面包店已经位于同一个街区，为一趟步行行程提供多个相邻节点",
+        "眼镜店侧门关闭、营业时间不匹配，使这些近距离用途仍被实际路线拆开",
+        "运营方调整侧门、部分营业时段和步行通道，同时重新协调货运",
+        "调整后陈禾能在同一趟回家步行中完成三件事，但商户和物业承担新的运营协调成本"
+      ],
+      "diagramStepNotes": [
+        "故事的起点是一个具体生活任务，而不是抽象评价街区功能数量。",
+        "不同用途的相容邻近提供了组合行程的基础；如果这些功能原本相距很远，单独调整一扇门不会产生相同结果。",
+        "直线距离近不代表实际可达，入口方向、开门时间和通道状态都可能改变真实行程。",
+        "货运与居民步行可能冲突，因此混合功能仍需要运营和空间协调。",
+        "这一趟行程改善不能外推为所有居民、所有时段或所有城市交通结果都相同。"
+      ],
+      "mapping": [
+        "托育点 → 日常照护用途。",
+        "眼镜店 → 生活服务用途。",
+        "面包店 → 日常零售用途。",
+        "住宅门厅 → 行程结束的居住用途。",
+        "侧门、通道和营业时间 → 把用途邻近转化为实际可达性的连接条件。"
+      ],
+      "boundary": "混合功能开发强调在一栋楼、街区或邻近区域组合相容的住宅、工作、商业和公共服务等用途，但不是用途越多越好，也不是把冲突用途全部挤在一起。实际效果还受入口、营业时间、步行网络、交通方式、货运、噪声、排放和运营安排影响。用途混合本身不保证低租金、公平、短通勤或便利，也不能把一次具体行程改善全部归因于单一规划因素。",
+      "reflection": "假如托育点搬到必须乘车才能到的另一个街区，只延长面包店营业时间，还能让这三件事成为同一趟步行吗？为什么？"
+    },
+    "referencesZh": [
+      {
+        "id": "epa-smart-growth",
+        "citation": "U.S. Environmental Protection Agency. (n.d.). About Smart Growth.",
+        "url": "https://www.epa.gov/smartgrowth/about-smart-growth",
+        "use": "支持相容用途混合、步行街坊、住房选择和多种交通方式作为综合智慧增长策略，并支持紧凑混合用途与交通选择结合时有助于日常出行便利；本篇只借用这一概念关系，不把一次虚构行程改善视为用途混合单独造成的普遍效果，也不推导租金、噪声或通勤必然下降。"
+      }
+    ],
+    "title": "Three Errands on the Way Home",
+    "summary": "The childcare centre, optical shop and bakery are all close to home, yet Chen He fails to finish his errands two evenings in a row. He brings the neighbourhood meeting a route full of detours.",
+    "storyParagraphs": [
+      "After work, Chen He usually has only around forty minutes to deal with household errands. That day he needs to pick up his daughter from the childcare centre in the neighbourhood, collect his repaired glasses, and buy breakfast for the next morning. When he moved there, one of the things he valued most was that these daily uses were already around the residential building and the internal street, so he would not have to travel to three far-apart places for three small tasks. But the first time he actually tries to combine them, he still cannot finish everything in one trip.",
+      "The childcare centre is on one side of the residential internal street. After collecting his daughter, he can see the bakery window just a few steps away, and the optical shop is in the same neighbourhood. But the shop's side door facing the internal street stays locked, so customers must go around to the outer entrance. By the time Chen He carries his daughter around that day, the optical shop is closed; when they return to the bakery, its shutter is down too. The next day, he collects his daughter and buys bread first, then takes the detour, but still misses the optical shop's collection window. The repaired glasses remain in the shop.",
+      "At a post-opening use-observation meeting, Chen He draws his route on paper. Starting from the childcare centre, he points first to the bakery that is directly visible, then traces the pen around to the optical shop's outer entrance, and only after that returns to the residential lobby. “These are all errands I need to finish, but this one trip still gets broken apart by doors and timing.” The operators walk the route with him. Instead of discussing whether to add a fourth shop, they start looking at where the existing places fail to connect.",
+      "Later, the optical shop opens its side door onto the internal street, the bakery shifts part of its evening opening period later, and the walking connection from the childcare centre to the residential internal street remains open. To avoid a new pedestrian peak colliding with deliveries, the property manager also adjusts part of the delivery schedule. Shops have to rearrange staffing, and the property manager must notify each business of the new delivery times. During the period when Chen He picks up his daughter, the internal-street entrance is kept clear for people on foot.",
+      "A few days later, Chen He picks up his daughter and does not leave the neighbourhood again. They walk along the internal street, collect the glasses first, buy breakfast before the bakery closes, and then go straight back to the residential lobby. His daughter holds the glasses case in one hand and the paper bag in the other. “Do we still have to go anywhere?” she asks. Chen He presses the lift button. “No. Today those three things were all on the way home.”"
+    ],
+    "overall": "This article uses one parent's after-work trip to introduce one aspect of mixed-use development: when compatible uses such as housing, childcare, retail, and daily services are located in the same neighbourhood and are effectively connected, tasks that would otherwise be dispersed may be combined into a more direct trip. But proximity is only the foundation; entrances, opening hours, routes, and operating coordination still determine actual accessibility.",
+    "conceptName": "Mixed-use development",
+    "explanationParagraphs": [
+      "The improvement in this story is not produced simply by extending the bakery's opening hours. Housing, childcare, optical services, and retail were already located within the same everyday activity area, making it possible for Chen He to combine several daily tasks into one after-work walking trip. Opening the side door, keeping the route available, and coordinating operating times then allow those already-nearby uses to function as an actual connected journey.",
+      "Mixed use does not mean placing every possible use together, nor does it guarantee that any neighbourhood will automatically be convenient. Freight activity, noise, emissions, opening hours, residential burdens, and the needs of different users can all create conflicts. This example only shows how Chen He's particular trip changes; it cannot establish that the whole neighbourhood has lower rents, greater fairness, shorter commutes, or transport effects caused by mixed use alone."
+    ],
+    "module": {
+      "intro": "Start with the daily uses required by one real-life trip, then check whether those uses are both nearby and genuinely connected through time and entrances.",
+      "diagramTitle": "Why Couldn't Chen He Finish Three Tasks the First Time Even Though All the Places Were in the Same Neighbourhood?",
+      "diagramSteps": [
+        "After work, Chen He needs to pick up his child, collect his glasses, and buy breakfast for the next day",
+        "Housing, the childcare centre, the optical shop, and the bakery are already located within the same neighbourhood, providing several nearby nodes for one walking trip",
+        "A closed optical-shop side door and mismatched opening times break those nearby uses apart in the actual route",
+        "The operator adjusts the side door, part of the opening schedule, and the walking connection while also coordinating deliveries differently",
+        "After the changes, Chen He can complete all three tasks on one walk home, while shops and property management absorb new operating-coordination costs"
+      ],
+      "diagramStepNotes": [
+        "The starting point is one specific daily-life task rather than an abstract count of how many uses the neighbourhood contains.",
+        "Compatible proximity among different uses provides the basis for combining trips; if those functions were originally far apart, changing one door would not create the same result.",
+        "Short straight-line distance does not guarantee actual accessibility; entrance direction, opening hours, and route availability can all change the real trip.",
+        "Freight and pedestrian movement can conflict, so mixed-use environments still require operational and spatial coordination.",
+        "Improvement in this one trip cannot be generalized to all residents, all times, or all citywide transport outcomes."
+      ],
+      "mapping": [
+        "Childcare centre → a daily care use.",
+        "Optical shop → a daily service use.",
+        "Bakery → a daily retail use.",
+        "Residential lobby → the residential use at the end of the trip.",
+        "Side door, route, and opening hours → connection conditions that turn nearby uses into actual accessibility."
+      ],
+      "boundary": "Mixed-use development combines compatible residential, employment, commercial, and public-service uses within a building, neighbourhood, or nearby area, but it does not mean that more uses are always better or that conflicting activities should simply be packed together. Actual outcomes also depend on entrances, opening hours, walking networks, transport options, freight activity, noise, emissions, and operating arrangements. Mixed use by itself does not guarantee lower rents, greater fairness, shorter commutes, or convenience, and the improvement in one specific trip cannot be attributed entirely to a single planning factor.",
+      "reflection": "If the childcare centre moved to another neighbourhood that required a vehicle trip, would extending the bakery’s hours still make all three errands one walk? Why?"
+    },
+    "references": [
+      {
+        "id": "epa-smart-growth",
+        "citation": "U.S. Environmental Protection Agency. (n.d.). About Smart Growth.",
+        "url": "https://www.epa.gov/smartgrowth/about-smart-growth",
+        "use": "Supports compatible mixed uses, walkable neighbourhoods, housing choice, and multiple transportation options as elements of a broader smart-growth strategy, and supports the idea that compact mixed use combined with transportation options can make daily trips more convenient. This article borrows only that conceptual relationship and does not treat one fictional trip improvement as a universal effect caused by mixed use alone, nor does it infer that rents, noise, or commuting necessarily decline."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "urban-agriculture-reader-first-25-preparation/group1-pdc-round3.json",
+      "edits": [
+        "urban-agriculture-reader-first-25-preparation/group1-edit-pass1-evidence.json",
+        "urban-agriculture-reader-first-25-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13 perspectives; four real ordinary ChatGPT GPT-5.6 Sol High stages, explicitly user-authorized."
     },
     "collection": "field-core-fables",
-    "storyBody": "Planner Meng Qi coloured the new district map in three orderly shades: homes in the east, offices in the west, and shops in the south. The mayor admired the arrangement. Factory noise would not reach bedrooms, he said, and delivery trucks would not block schools. Broad roads connected the three areas.\n\nOnce the district filled, those roads jammed every morning and evening. During the day, the eastern zone held mostly older residents and empty parking spaces; even buying medicine required a half-hour trip. At night the western offices went dark, while restaurants queued only at lunch. After the southern mall closed, no one crossed its vast car park. Buses overflowed during two peaks and carried empty seats in between.\n\nMeng tried adding two traffic lanes and more peak buses. Commutes shortened for one month, then new junction queues formed and the extra buses still ran nearly empty at noon. A pharmacist asked to open a small eastern shop, but the colour-coded plan forbade retail there. The mayor preferred another road because its ribbon could be cut before the election. Meng approved it, spending the reserve meant for neighbourhood paths.\n\nA snowstorm closed the north-south road, leaving eastern residents without fresh food for two days. Walking through the area, Meng found a baker secretly selling bread from his garage. A queue quickly formed. The district did not lack activities; the map had prevented those activities from approaching one another.\n\nThe bakery inspector waited for Meng's fine while the ceremonial boulevard contract waited for his seal. Meng crossed out the fine, signed a rules review instead, and cancelled the extension. The city lost the road contract deposit and spent a winter facing office owners and mediating freight hours, rents, ventilation, and school access. Bringing uses closer required judging compatibility and protecting residents, not pouring every activity into one block.\n\nRevised neighbourhoods allowed small shops, clinics, schools, and suitable workplaces near homes, with different activities on upper and lower floors. Frequent walking routes and transit stops connected them. Noise, exhaust, freight, and hazardous production received boundaries and operating times, while policy protected affordable homes and small-business space. Not everything was mixed indiscriminately; compatible daily needs were brought closer.\n\nSeveral years later, an eastern bakery turned its sign to OPEN as a night-shift nurse switched off her bedroom light upstairs. The baker received flour through the rear lane during agreed hours, while the clinic opened across the street. Rents still required monitoring; activity alone had not guaranteed fairness. There was no traffic queue, and the smell of first bread reached the bus stop before the bus did.",
-    "storyBodyZh": "规划师孟启把新区地图涂成三种整齐颜色：东边全是住宅，西边全是办公楼，商店集中在城南。市长喜欢这种秩序，说工厂噪声不会吵到卧室，货车也不会挡在学校门口。宽阔道路把三块区域连接起来。\n\n新区住满后，道路每天清晨和傍晚堵死。东区白天只剩老人和空车位，连买药也要坐半小时车；西区夜里整片熄灯，餐馆只在午间排队；城南商场关门后，巨大的停车场无人经过。公交在两个高峰挤不上去，其余时段却载着空座。\n\n孟启先加两条车道和高峰公交。通勤只短暂变快，新路口很快又排队，增开的车到中午仍几乎空着。药剂师申请在东区开小店，却被分色图禁止。市长更喜欢一条能在选举前剪彩的新路，孟启批准了它，花掉原留给街坊步行路的钱。\n\n一场大雪封住南北主路，东区居民两天买不到新鲜食物。孟启步行查看，发现一位面包师在自家车库偷偷卖面包，门口很快排起长队。人们并不缺用途，只是地图不许这些用途靠近彼此。\n\n面包铺检查员等着孟屿开罚单，礼仪大道合同也等着他的印章。孟屿划掉罚款，改签规则复核，并取消大道扩建。城市损失道路合同订金，又花一冬天面对担心噪声的办公楼业主，协调货运时段、租金、排烟和学校出入口。让用途靠近需要判断相容性并保护居民，不是把所有活动塞进一栋楼。\n\n修改后的街区允许住宅旁有小店、诊所、学校和适合的工作场所，楼上楼下也可承担不同活动；公交站和步行路把它们密密连接。噪声、排烟、货运和危险生产另设边界与时段，原住者的租金和小商户空间也写进政策。并非所有东西都混在一起，而是让相容的日常需要彼此靠近。\n\n数年后一个清晨，东区面包店把门牌翻到营业，楼上的夜班护士正好关灯。面粉车按约定时段从后巷卸货，对面诊所也拉开卷帘；租金仍需监测，街上有人并不自动等于人人受益。孟启把当年三色地图折在柜台下，折痕正穿过曾被禁止的店址。此刻街上没有堵车，第一炉面包香气先到了公交站。",
-    "explanation": "Mixed-use development places compatible housing, commerce, public services, work, and leisure within walkable, connected proximity, supporting activity across different times of day. Outcomes also depend on density, fine-grained routes, transit, public space, affordability, and management of noise, freight, and hazardous uses. Placing different labels on the same map does not automatically create vitality or equity.",
-    "explanationZh": "混合功能开发把相容的居住、商业、公共服务、工作和休闲活动放在可步行、可连接的邻近范围，并让街区在一天不同时段都有使用。效果还取决于密度、细密路网、公共交通、公共空间、可负担性及对噪声、货运和危险用途的管理。仅把不同标签放在同一地图上，并不自动带来活力或公平。"
+    "storyBody": "After work, Chen He usually has only around forty minutes to deal with household errands. That day he needs to pick up his daughter from the childcare centre in the neighbourhood, collect his repaired glasses, and buy breakfast for the next morning. When he moved there, one of the things he valued most was that these daily uses were already around the residential building and the internal street, so he would not have to travel to three far-apart places for three small tasks. But the first time he actually tries to combine them, he still cannot finish everything in one trip.\n\nThe childcare centre is on one side of the residential internal street. After collecting his daughter, he can see the bakery window just a few steps away, and the optical shop is in the same neighbourhood. But the shop's side door facing the internal street stays locked, so customers must go around to the outer entrance. By the time Chen He carries his daughter around that day, the optical shop is closed; when they return to the bakery, its shutter is down too. The next day, he collects his daughter and buys bread first, then takes the detour, but still misses the optical shop's collection window. The repaired glasses remain in the shop.\n\nAt a post-opening use-observation meeting, Chen He draws his route on paper. Starting from the childcare centre, he points first to the bakery that is directly visible, then traces the pen around to the optical shop's outer entrance, and only after that returns to the residential lobby. “These are all errands I need to finish, but this one trip still gets broken apart by doors and timing.” The operators walk the route with him. Instead of discussing whether to add a fourth shop, they start looking at where the existing places fail to connect.\n\nLater, the optical shop opens its side door onto the internal street, the bakery shifts part of its evening opening period later, and the walking connection from the childcare centre to the residential internal street remains open. To avoid a new pedestrian peak colliding with deliveries, the property manager also adjusts part of the delivery schedule. Shops have to rearrange staffing, and the property manager must notify each business of the new delivery times. During the period when Chen He picks up his daughter, the internal-street entrance is kept clear for people on foot.\n\nA few days later, Chen He picks up his daughter and does not leave the neighbourhood again. They walk along the internal street, collect the glasses first, buy breakfast before the bakery closes, and then go straight back to the residential lobby. His daughter holds the glasses case in one hand and the paper bag in the other. “Do we still have to go anywhere?” she asks. Chen He presses the lift button. “No. Today those three things were all on the way home.”",
+    "storyBodyZh": "陈禾下班后通常只有四十来分钟处理家里的杂事。那天他要从街区里的托育点接女儿、取已经修好的眼镜，再买第二天早餐。搬来这里时，他最看中的就是住宅楼下和内街周边已经有这些日常用途，不必为了三件小事分别去三个相距很远的地方。可第一次真把它们串在一起，他还是没能一次办完。\n\n托育点就在住宅内街一侧，接到女儿后几步就能看到面包店的窗户，眼镜店也在同一街区。可眼镜店面向内街的侧门一直锁着，顾客只能绕到外侧入口。那天陈禾抱着女儿绕过去时，眼镜店已经关门；再回到面包店，卷帘门也落下了。第二天他接到女儿后先买了面包，才去绕那段路，仍然错过了眼镜店的取件时段。修好的眼镜一直留在店里。\n\n开业后的使用观察会上，陈禾把自己的路线画在纸上。他从托育点出发，先指了指能直接看到的面包店，再把笔绕到眼镜店外侧入口，最后才回到住宅门厅：“这几件事我都要办，可这一圈还是被门和时间拆开了。”运营人员跟着他把这趟路重新走了一遍，没有再讨论要不要新增第四家店，而是开始看现有几个地方之间到底哪里接不上。\n\n后来眼镜店开放了面向内街的侧门，面包店把部分晚间营业时间向后挪，托育点到住宅内街的步行通道保持开放。为了不让新的步行高峰和送货撞在一起，物业又调整了部分货运安排。商户要重新排班，物业也得把新的送货时段逐一通知商家。陈禾来接女儿的那段时间，内街入口留给步行的人。\n\n几天后，陈禾接到女儿后没有再走出街区。他们沿内街先取了眼镜，又在面包店关门前买到早餐，最后直接走回住宅门厅。女儿一手拿着眼镜盒，一手抱着纸袋，问他：“今天还要去哪儿？”陈禾按下电梯键：“没有了，今天这三件事就在回家的路上。”",
+    "explanation": "The improvement in this story is not produced simply by extending the bakery's opening hours. Housing, childcare, optical services, and retail were already located within the same everyday activity area, making it possible for Chen He to combine several daily tasks into one after-work walking trip. Opening the side door, keeping the route available, and coordinating operating times then allow those already-nearby uses to function as an actual connected journey.\n\nMixed use does not mean placing every possible use together, nor does it guarantee that any neighbourhood will automatically be convenient. Freight activity, noise, emissions, opening hours, residential burdens, and the needs of different users can all create conflicts. This example only shows how Chen He's particular trip changes; it cannot establish that the whole neighbourhood has lower rents, greater fairness, shorter commutes, or transport effects caused by mixed use alone.",
+    "explanationZh": "故事中的便利变化不是单靠延长面包店营业时间产生的。住宅、托育、眼镜服务和零售原本已经在同一生活圈内，这使陈禾有可能在一次下班步行中串联多种日常任务；侧门开放、通道保持可用和时间协调则让这些已经相邻的用途真正连接起来。\n\n混合功能不等于把所有用途都挤在一起，也不保证任何街区天然便利。货运、噪声、排放、营业时间、住宅负担和不同使用者需求都可能产生冲突。本例只说明陈禾这一趟具体行程如何变化，不能据此推出整个街区租金更低、更公平、通勤更短或交通效果都由用途混合单独造成。"
   },
   {
     "id": "0731-adaptive-reuse",
@@ -22199,49 +22369,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0731",
     "fieldTitle": "Architecture and town planning",
     "fieldTitleZh": "建筑学与城市规划",
-    "title": "The Station's Second Opening",
-    "titleZh": "第二次开门的车站",
-    "summary": "After the railway moves, an old station stands ten years between demolition and preservation until market traders notice that its platform already shelters the morning rain.",
-    "summaryZh": "铁路改线后，旧车站在拆除与封存之间空了十年，直到市场摊贩发现月台正好能遮住清晨的雨。",
-    "storyParagraphs": [
-      "After the railway moved, the old River Bend station stood empty for ten years. A developer wanted to demolish it for a new market, while a preservation society demanded that every window, ticket hall, and waiting bench remain untouched. The longer they argued, the worse the roof leaked, and nearby traders continued working outdoors in wind and rain.",
-      "Architect Su Lan did not begin with a new facade. She walked every room with a structural engineer, fire officer, and former station workers. The broad hall and brick walls remained useful, and the platform suited deliveries. Part of the canopy had decayed, old paint contained hazardous material, and the stairs blocked wheelchairs and carts. The building was neither useless rubble nor an object that could remain unchanged behind glass.",
-      "Two tenders sharpened the dispute. Demolition and a simple shed appeared cheaper on the opening-day budget; careful conversion retained more existing material but required investigation, treatment, strengthening, and uncertain contingency. Meanwhile another winter storm tore roofing from the canopy and ruined three traders' stock. Every month spent defending absolute preservation was also changing the thing being preserved.",
-      "She proposed an everyday market in the hall, cold storage and stockrooms in the baggage area, and covered stalls along the platform. New stairs, ramps, fire compartments, and services were added legibly. Hazardous material was treated and the worst canopy replaced. Ticket windows remained without obstructing traders, while structures unable to carry new loads were strengthened.",
-      "Su Lan refused both the developer's total clearing and the society's untouched monument. The city cancelled the fast-build bonus, paid for temporary indoor stalls, and removed one beloved but unsound canopy bay. Former station workers marked which fittings carried local memory; engineers marked which members could safely take the market's new loads. What remained, changed, or left the site was recorded rather than hidden behind a historic-looking finish.",
-      "The work did not always cost less than a simple new shed, but it preserved existing material, familiar space, and neighbourhood memory, and kept the market from moving to the edge of town. The city also examined operation, maintenance, and stall rents to ensure that the new use could endure rather than merely look good in opening photographs.",
-      "On reopening day, the earliest baker used the old ticket window. The market ledger included roof inspection, fire-system testing, rents, and a reserve for the next repair; reopening was not the end of care. The first customer pushed a coin across the worn brass tray. What came back was not a ticket but a warm loaf, beside a small plate recording which canopy bay had been removed and why."
-    ],
-    "storyParagraphsZh": [
-      "河湾铁路改线后，老车站空了十年。开发商想拆掉它建一座新市场，保存协会则要求门窗、售票厅和候车椅一处不动。两边争得越久，屋顶漏得越厉害，附近摊贩仍在露天街道经受风雨。",
-      "建筑师苏岚没有先画新外形。她带着结构师、消防员和旧站工人逐间检查：大跨站厅和砖墙仍可使用，月台适合装卸；一段雨棚已经腐朽，旧油漆含有害物，台阶也挡住轮椅和推车。原建筑既不是一堆无用旧砖，也不是可以原封不动供起来的摆设。",
-      "两份投标让争端更尖锐：拆除后建简棚，在开幕预算上更便宜；谨慎改造保留材料更多，却要调查、治理、加固并预留未知费用。又一场冬雨撕掉雨棚铁皮，毁了三户摊贩存货。每个月用来争取“绝不改变”，也在继续改变那座被保护的建筑。",
-      "她提出把站厅改成日常市场，旧行李房容纳冷藏和仓储，月台成为有顶棚的摊位。新楼梯、坡道、消防分区和设备管线清楚地加入，危险材料被处理，最坏的雨棚拆换。售票窗留下，但不妨碍摊贩使用；几处无法满足新荷载的结构则得到加固。",
-      "苏岚拒绝开发商全部推平，也拒绝协会原封不动。市府取消快速完工奖金，出钱安置临时室内摊位，还拆掉一跨深受喜爱却已不可靠的雨棚。旧站工人标出承载街坊记忆的构件，工程师标出能承担市场新荷载的部分。什么留下、改变或离场，都被记录，而非藏在仿旧表面后。",
-      "工程费用并不总比一座简陋新棚低，却保住了大量已有材料、熟悉空间和街区记忆，也避免让市场再迁到城外。市府同时核算运行、维修和商户租金，确认新用途能长期维持，而不是只在开幕照片里好看。",
-      "重新开门那天，最早到的面包摊借用旧售票窗。市场账本同时写着屋顶检查、消防测试、摊租和下一次维修储备；开门不是照管的终点。第一位顾客把硬币推过磨白铜槽，里面递出的不是车票，而是一只热面包。铜槽旁还有一块小牌，记录哪一跨雨棚被拆、为什么不能留下。苏岚用手抹去牌上的面粉，没有遮住那行字。"
-    ],
-    "conceptName": "Adaptive reuse",
-    "conceptNameZh": "适应性再利用",
-    "explanationParagraphs": [
-      "Adaptive reuse gives an existing building a viable new purpose after understanding its material, structure, spatial logic, cultural value, condition, and constraints, while meeting current safety, accessibility, and operational needs. It can preserve resources and memory but is not always cheaper or free of alteration. Contamination, loads, fire safety, cost, maintenance, functional fit, and community effects determine whether a proposal works."
-    ],
-    "explanationParagraphsZh": [
-      "适应性再利用在理解既有建筑的材料、结构、空间逻辑、文化价值、状况与约束后，为其配置可行的新用途，并满足当前安全、无障碍和运行要求。它可能保存既有资源与记忆，但并非一律更便宜或完全不改。污染物、结构荷载、消防、成本、维护、功能适配和社区影响共同决定方案是否成立。"
-    ],
     "mode": "concept-fable",
+    "titleZh": "旧厂房的新课表",
+    "summaryZh": "合作社想在旧印刷厂开学习厨房和手作课。许棠舍不得那排旧长桌，可把新课表放进旧房间，并不像换块招牌那么简单。",
+    "storyParagraphsZh": [
+      "街区合作社租下了一座停用多年的小印刷厂，准备把它变成长期开放的社区学习厨房和手作教室。许棠第一次进去，就喜欢上中央的大开间、高窗和一排结实的旧长桌；那些桌子很适合画图、装配和手作课程。真正让方案卡住的是后部：旧的小房间和内部隔墙把未来需要的厨房工作区、清洗、储物和通行路线切得七零八落。",
+      "有人主张尽量一处都别动，也有人觉得既然要改用途，不如把内部全部清空。合作社没有靠肉眼决定哪些能留，而是先请专业团队针对新用途完成调查。调查结论认为中央开间、高窗和部分旧构件可以继续利用；同时确认几处非承重内部隔墙可以按新用途调整，厨房服务、清洗和其他技术设施则需要重新布置和接入。",
+      "方案讨论时，团队用平面模型和流程卡做了一次施工前演练。许棠把标着手作课的卡片放到旧长桌对应的位置，把厨房课程卡片放到计划新增的独立食物处理区；旧长桌只安排手作，不作食物接触台面。她沿图上的路线移动两组流程卡，卡片走到后部时，取物、清洗和返回的路线都挤在原有小房间的转折处。",
+      "许棠把模型里那一段经专业调查确认可以调整的非承重内部隔墙拿掉，重新留出服务和通行位置。这个选择让项目不再是‘刷墙、搬机器、换招牌’那么简单：改造预算增加，开放日期后移，旧长桌还要修整，新的厨房工作区、清洗、储物和设备服务也要按方案施工。但她没有因此放弃那些真正帮助新用途的旧空间。",
+      "改造完成并投入使用后，手作课仍围着修整后的旧长桌开始，厨房课程则在独立的新工作区准备食材。下课后，两组学员从重新组织过的后部空间分别去收工具和清洗，没有再堵在原来的转折处。许棠最后关灯时，高窗和旧厂编号还在，原来那段非承重内部隔墙的位置已经改变。她收好第二天的课表，放在一张旧长桌上。"
+    ],
+    "overallZh": "本篇用旧印刷厂改为社区学习厨房和手作教室的故事说明适应性再利用的一个入口：旧建筑中的有用实体和重要特征可以继续发挥价值，但新的长期用途往往也需要真实改变内部安排、技术服务和运行方式。关键不是一律保留或一律拆除，而是依据调查选择哪些值得保留、哪些必须改变。",
+    "conceptNameZh": "适应性再利用",
+    "explanationParagraphsZh": [
+      "本例把技术可行性作为虚构专业调查结论，而不是由许棠凭肉眼判断。调查确认中央开间、高窗和部分旧构件可以继续使用，也确认几处非承重内部隔墙能够按新用途调整；施工前的模型与流程演练只用于检查新用途的空间关系，并不等于未经改造的旧厂已经可以开展厨房活动。",
+      "适应性再利用不仅是换招牌、保留外皮或临时借用旧空间，也不要求所有旧部分原样留下。新用途还需要满足安全、可达性、技术服务和持续经营等实际条件。保留旧建筑也不自动意味着项目一定更便宜或全生命周期影响更低，这些结果需要另外调查和比较。"
+    ],
+    "moduleZh": {
+      "intro": "先确认旧建筑哪些实体和特征对新用途仍有价值，再依据专业调查识别必须改变的内部安排和服务条件。",
+      "diagramTitle": "为什么旧印刷厂既保留长桌和高窗，又必须改变部分内部隔墙",
+      "diagramSteps": [
+        "确定新用途是长期运行的社区学习厨房和手作教室，而不是一次临时活动",
+        "由专业调查确认中央开间、高窗和部分旧构件可以继续利用",
+        "同一调查确认几处非承重内部隔墙可调整，新厨房、清洗、储物和技术服务需要重新安排",
+        "在施工前用模型和流程卡检查两类课程的取物、清洗和通行关系，并据此调整方案",
+        "施工完成后让保留空间和新增设施共同支持新的长期日常使用"
+      ],
+      "diagramStepNotes": [
+        "长期用途转换要求考虑持续运行，而不仅是一次活动能否临时塞进旧空间。",
+        "可保留部分来自专业调查的虚构结论，不代表所有旧建筑中的类似构件都适合继续使用。",
+        "只有经专业调查确认的非承重内部隔墙才进入本故事的调整范围，不涉及现实结构许可判断。",
+        "模型演练发生在施工前，厨房食物处理只存在于计划中的独立新工作区，不在旧长桌上实际进行。",
+        "改造完成后是否长期可行还涉及运营、维护和其他条件，本故事只展示一个有限入口。"
+      ],
+      "mapping": [
+        "中央大开间与高窗 → 旧建筑中继续帮助新用途的空间特征。",
+        "旧长桌 → 经修整后继续服务非食物接触手作活动的旧构件。",
+        "非承重内部隔墙调整 → 为新用途真实改变旧安排的一处具体改造。",
+        "独立新厨房工作区 → 新用途需要新增而不能由旧设施直接替代的功能。",
+        "预算增加和延期 → 选择性保留与真实改造带来的项目代价。"
+      ],
+      "boundary": "适应性再利用不是只换招牌、只保留外皮、完全不动或一律拆除。具体旧建筑是否适合新用途，需要专业调查其结构、可达性、机电服务、技术条件和长期管理。本篇只把若干非承重内部隔墙可调整作为虚构专业结论，不提供现实拆改许可、结构安全判断或施工指导。保留建筑也不自动证明项目比新建更便宜、更低碳或更适合，环境与经济结果需要单独比较。",
+      "reflection": "假如旧厂房只借给手作班办一天活动，结束后仍恢复空置，这与故事中的长期改用有什么不同？你还需要知道哪些条件？"
+    },
+    "referencesZh": [
+      {
+        "id": "he-housing-2024",
+        "citation": "Historic England. (2024, August 14). Heritage Works for Housing.",
+        "url": "https://historicengland.org.uk/advice/planning/housing/heritage-works-for-housing/",
+        "use": "支持为旧建筑寻找可持续的新用途，并强调技术调查、长期使用和管理的重要性；本篇借用这些一般再利用原则，不把住宅语境资料当作虚构印刷厂的结构合格证明或现实许可依据。"
+      },
+      {
+        "id": "he-managing-change",
+        "citation": "Historic England. (n.d.). Heritage Works for Housing: Managing Change.",
+        "url": "https://historicengland.org.uk/advice/planning/housing/heritage-works-for-housing/managing-change/",
+        "use": "支持由技术团队综合考虑新用途需要的改变、机电服务和既有建筑价值，并提醒隐含与运行影响需要一起考虑；本篇不把英国历史建筑指导当作其他地区法规，也不据此声称保留建筑必然比新建更便宜或更低碳。"
+      }
+    ],
+    "title": "A New Timetable for the Old Printing Works",
+    "summary": "A cooperative wants to open a teaching kitchen and craft classroom in an old printing works. Xu Tang wants to keep the old worktables, but fitting the new timetable into the old rooms takes more than a new sign.",
+    "storyParagraphs": [
+      "A neighbourhood cooperative rents a small printing works that has been unused for years and plans to turn it into a community teaching kitchen and craft classroom for long-term use. On her first visit, Xu Tang immediately likes the large central room, the high windows, and a row of sturdy old worktables; those tables would suit drawing, assembly, and craft classes. What stalls the plan is the rear of the building: the old small rooms and interior partitions break up the future kitchen work area, washing, storage, and circulation routes.",
+      "Some people argue that almost nothing should be changed, while others say that if the use is changing anyway, the entire interior should simply be cleared out. The cooperative does not decide by eye what can stay. It first commissions a professional team to investigate the building for the proposed new use. The survey concludes that the central room, high windows, and some existing components can continue to be used. It also confirms that several non-load-bearing interior partitions can be adjusted for the new use, while kitchen services, washing facilities, and other technical systems need to be rearranged and newly connected.",
+      "During design discussions, the team runs a pre-construction exercise with a floor-plan model and process cards. Xu Tang places the craft-class cards at the positions of the old worktables and the kitchen-class cards in the planned separate new food-preparation area. The old tables are assigned only to crafts, not food contact. She moves the two sets of cards along the routes on the plan. At the rear rooms, the routes for collecting items, washing, and returning all converge at the turns between the old small rooms.",
+      "Xu Tang removes from the model the section of non-load-bearing interior partition that the professional survey has confirmed can be altered and redraws the service and circulation space. The choice means the project is no longer as simple as 'paint the walls, move the machines, and change the sign.' The renovation budget rises, the opening date moves back, the old worktables still need refurbishment, and the new kitchen work area, washing, storage, and equipment services all have to be built according to the plan. But she does not give up the old spaces that genuinely help the new use.",
+      "After the renovation is completed and the building enters use, craft classes still begin around the refurbished old worktables, while kitchen classes prepare food in the separate new work area. After class, the two groups move through the reorganized rear space to put away tools and use the washing facilities without bunching up at the old turn. When Xu Tang switches off the lights at the end of the day, the high windows and old factory number are still there, while the position of the former non-load-bearing interior partition has changed. She puts away the next day's timetable on one of the old worktables."
+    ],
+    "overall": "This article uses the conversion of an old printing works into a community teaching kitchen and craft classroom to introduce one aspect of adaptive reuse: useful physical fabric and important features of an existing building can continue to provide value, while a new long-term use may still require real changes to internal arrangements, technical services, and operating patterns. The key is not to preserve everything or remove everything, but to investigate which parts are worth retaining and which need to change.",
+    "conceptName": "Adaptive reuse",
+    "explanationParagraphs": [
+      "This example treats technical feasibility as the conclusion of a fictional professional survey rather than something Xu Tang determines by visual inspection. The survey confirms that the central room, high windows, and some existing components can continue in use, and that several non-load-bearing interior partitions can be adjusted for the new use. The pre-construction model and process exercise is used only to test spatial relationships for the proposed functions; it does not mean that kitchen activities can already take place in the unmodified old building.",
+      "Adaptive reuse is more than changing a sign, retaining only a façade, or temporarily borrowing an old space, and it does not require every old element to remain untouched. The new use still has to meet real conditions for safety, accessibility, technical services, and continuing operation. Retaining an existing building also does not automatically mean that a project will be cheaper or have lower whole-life impacts; those outcomes require separate investigation and comparison."
+    ],
+    "module": {
+      "intro": "First identify which physical elements and features of the existing building still provide value for the new use, then use professional investigation to identify which internal arrangements and service conditions must change.",
+      "diagramTitle": "Why Can the Old Printing Works Keep Its Long Tables and High Windows Yet Still Need Some Interior Partitions to Change?",
+      "diagramSteps": [
+        "Define the new use as a long-term community teaching kitchen and craft classroom rather than a one-off temporary activity",
+        "Use professional investigation to confirm that the central open room, high windows, and some existing components can continue to be used",
+        "Use the same investigation to confirm that several non-load-bearing interior partitions can be adjusted and that new kitchen, washing, storage, and technical services need to be reorganized",
+        "Before construction, use a floor-plan model and process cards to examine how the two types of classes would collect items, wash, and circulate, and revise the design accordingly",
+        "After construction, let the retained spaces and new facilities work together to support the building's new long-term daily use"
+      ],
+      "diagramStepNotes": [
+        "Long-term change of use requires consideration of continued operation rather than only whether one temporary event can fit inside the old space.",
+        "The elements identified for retention come from the fictional professional survey and do not imply that similar elements in every old building are suitable for continued use.",
+        "Only the non-load-bearing interior partitions confirmed by the professional survey are within the alteration scope of this story; it makes no real-world structural-permission judgment.",
+        "The model exercise takes place before construction. Food preparation exists only in the planned separate new kitchen area and is not actually performed on the old worktables.",
+        "Long-term viability after renovation also depends on operation, maintenance, and other conditions; this story shows only one limited entry point."
+      ],
+      "mapping": [
+        "Large central room and high windows → existing spatial features that continue to help the new use.",
+        "Old worktables → existing components refurbished for non-food-contact craft activities.",
+        "Adjustment of non-load-bearing interior partitions → one specific physical alteration required by the new use.",
+        "Separate new kitchen work area → a new function that cannot simply be substituted by the old facilities.",
+        "Higher budget and delayed opening → the project cost of selective retention combined with real alteration."
+      ],
+      "boundary": "Adaptive reuse is not merely changing a sign, retaining only the exterior, leaving everything untouched, or demolishing everything. Whether a specific old building is suitable for a new use requires professional investigation of structure, accessibility, mechanical and electrical services, technical conditions, and long-term management. This article treats the adjustability of several non-load-bearing interior partitions only as a fictional professional conclusion and provides no real demolition permission, structural-safety judgment, or construction guidance. Retaining a building also does not automatically prove that the project is cheaper, lower-carbon, or more suitable than new construction; environmental and economic outcomes require separate comparison.",
+      "reflection": "If the old printing works hosted a craft class for one day and then stood empty again, how would that differ from the lasting change of use in the story? What else would you need to know?"
+    },
+    "references": [
+      {
+        "id": "he-housing-2024",
+        "citation": "Historic England. (2024, August 14). Heritage Works for Housing.",
+        "url": "https://historicengland.org.uk/advice/planning/housing/heritage-works-for-housing/",
+        "use": "Supports finding sustainable new uses for existing buildings and emphasizes the importance of technical investigation, long-term use, and management. This article borrows those general reuse principles without treating the housing-context guidance as structural approval or a real permitting basis for the fictional printing works."
+      },
+      {
+        "id": "he-managing-change",
+        "citation": "Historic England. (n.d.). Heritage Works for Housing: Managing Change.",
+        "url": "https://historicengland.org.uk/advice/planning/housing/heritage-works-for-housing/managing-change/",
+        "use": "Supports technical teams considering together the changes required by a new use, mechanical and electrical services, and the value of an existing building, while also considering embodied and operational impacts. This article does not treat UK historic-building guidance as regulation for other jurisdictions and does not use it to claim that retaining a building is necessarily cheaper or lower-carbon than new construction."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "urban-agriculture-reader-first-25-preparation/group1-pdc-round3.json",
+      "edits": [
+        "urban-agriculture-reader-first-25-preparation/group1-edit-pass1-evidence.json",
+        "urban-agriculture-reader-first-25-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13 perspectives; four real ordinary ChatGPT GPT-5.6 Sol High stages, explicitly user-authorized."
     },
     "collection": "field-core-fables",
-    "storyBody": "After the railway moved, the old River Bend station stood empty for ten years. A developer wanted to demolish it for a new market, while a preservation society demanded that every window, ticket hall, and waiting bench remain untouched. The longer they argued, the worse the roof leaked, and nearby traders continued working outdoors in wind and rain.\n\nArchitect Su Lan did not begin with a new facade. She walked every room with a structural engineer, fire officer, and former station workers. The broad hall and brick walls remained useful, and the platform suited deliveries. Part of the canopy had decayed, old paint contained hazardous material, and the stairs blocked wheelchairs and carts. The building was neither useless rubble nor an object that could remain unchanged behind glass.\n\nTwo tenders sharpened the dispute. Demolition and a simple shed appeared cheaper on the opening-day budget; careful conversion retained more existing material but required investigation, treatment, strengthening, and uncertain contingency. Meanwhile another winter storm tore roofing from the canopy and ruined three traders' stock. Every month spent defending absolute preservation was also changing the thing being preserved.\n\nShe proposed an everyday market in the hall, cold storage and stockrooms in the baggage area, and covered stalls along the platform. New stairs, ramps, fire compartments, and services were added legibly. Hazardous material was treated and the worst canopy replaced. Ticket windows remained without obstructing traders, while structures unable to carry new loads were strengthened.\n\nSu Lan refused both the developer's total clearing and the society's untouched monument. The city cancelled the fast-build bonus, paid for temporary indoor stalls, and removed one beloved but unsound canopy bay. Former station workers marked which fittings carried local memory; engineers marked which members could safely take the market's new loads. What remained, changed, or left the site was recorded rather than hidden behind a historic-looking finish.\n\nThe work did not always cost less than a simple new shed, but it preserved existing material, familiar space, and neighbourhood memory, and kept the market from moving to the edge of town. The city also examined operation, maintenance, and stall rents to ensure that the new use could endure rather than merely look good in opening photographs.\n\nOn reopening day, the earliest baker used the old ticket window. The market ledger included roof inspection, fire-system testing, rents, and a reserve for the next repair; reopening was not the end of care. The first customer pushed a coin across the worn brass tray. What came back was not a ticket but a warm loaf, beside a small plate recording which canopy bay had been removed and why.",
-    "storyBodyZh": "河湾铁路改线后，老车站空了十年。开发商想拆掉它建一座新市场，保存协会则要求门窗、售票厅和候车椅一处不动。两边争得越久，屋顶漏得越厉害，附近摊贩仍在露天街道经受风雨。\n\n建筑师苏岚没有先画新外形。她带着结构师、消防员和旧站工人逐间检查：大跨站厅和砖墙仍可使用，月台适合装卸；一段雨棚已经腐朽，旧油漆含有害物，台阶也挡住轮椅和推车。原建筑既不是一堆无用旧砖，也不是可以原封不动供起来的摆设。\n\n两份投标让争端更尖锐：拆除后建简棚，在开幕预算上更便宜；谨慎改造保留材料更多，却要调查、治理、加固并预留未知费用。又一场冬雨撕掉雨棚铁皮，毁了三户摊贩存货。每个月用来争取“绝不改变”，也在继续改变那座被保护的建筑。\n\n她提出把站厅改成日常市场，旧行李房容纳冷藏和仓储，月台成为有顶棚的摊位。新楼梯、坡道、消防分区和设备管线清楚地加入，危险材料被处理，最坏的雨棚拆换。售票窗留下，但不妨碍摊贩使用；几处无法满足新荷载的结构则得到加固。\n\n苏岚拒绝开发商全部推平，也拒绝协会原封不动。市府取消快速完工奖金，出钱安置临时室内摊位，还拆掉一跨深受喜爱却已不可靠的雨棚。旧站工人标出承载街坊记忆的构件，工程师标出能承担市场新荷载的部分。什么留下、改变或离场，都被记录，而非藏在仿旧表面后。\n\n工程费用并不总比一座简陋新棚低，却保住了大量已有材料、熟悉空间和街区记忆，也避免让市场再迁到城外。市府同时核算运行、维修和商户租金，确认新用途能长期维持，而不是只在开幕照片里好看。\n\n重新开门那天，最早到的面包摊借用旧售票窗。市场账本同时写着屋顶检查、消防测试、摊租和下一次维修储备；开门不是照管的终点。第一位顾客把硬币推过磨白铜槽，里面递出的不是车票，而是一只热面包。铜槽旁还有一块小牌，记录哪一跨雨棚被拆、为什么不能留下。苏岚用手抹去牌上的面粉，没有遮住那行字。",
-    "explanation": "Adaptive reuse gives an existing building a viable new purpose after understanding its material, structure, spatial logic, cultural value, condition, and constraints, while meeting current safety, accessibility, and operational needs. It can preserve resources and memory but is not always cheaper or free of alteration. Contamination, loads, fire safety, cost, maintenance, functional fit, and community effects determine whether a proposal works.",
-    "explanationZh": "适应性再利用在理解既有建筑的材料、结构、空间逻辑、文化价值、状况与约束后，为其配置可行的新用途，并满足当前安全、无障碍和运行要求。它可能保存既有资源与记忆，但并非一律更便宜或完全不改。污染物、结构荷载、消防、成本、维护、功能适配和社区影响共同决定方案是否成立。"
+    "storyBody": "A neighbourhood cooperative rents a small printing works that has been unused for years and plans to turn it into a community teaching kitchen and craft classroom for long-term use. On her first visit, Xu Tang immediately likes the large central room, the high windows, and a row of sturdy old worktables; those tables would suit drawing, assembly, and craft classes. What stalls the plan is the rear of the building: the old small rooms and interior partitions break up the future kitchen work area, washing, storage, and circulation routes.\n\nSome people argue that almost nothing should be changed, while others say that if the use is changing anyway, the entire interior should simply be cleared out. The cooperative does not decide by eye what can stay. It first commissions a professional team to investigate the building for the proposed new use. The survey concludes that the central room, high windows, and some existing components can continue to be used. It also confirms that several non-load-bearing interior partitions can be adjusted for the new use, while kitchen services, washing facilities, and other technical systems need to be rearranged and newly connected.\n\nDuring design discussions, the team runs a pre-construction exercise with a floor-plan model and process cards. Xu Tang places the craft-class cards at the positions of the old worktables and the kitchen-class cards in the planned separate new food-preparation area. The old tables are assigned only to crafts, not food contact. She moves the two sets of cards along the routes on the plan. At the rear rooms, the routes for collecting items, washing, and returning all converge at the turns between the old small rooms.\n\nXu Tang removes from the model the section of non-load-bearing interior partition that the professional survey has confirmed can be altered and redraws the service and circulation space. The choice means the project is no longer as simple as 'paint the walls, move the machines, and change the sign.' The renovation budget rises, the opening date moves back, the old worktables still need refurbishment, and the new kitchen work area, washing, storage, and equipment services all have to be built according to the plan. But she does not give up the old spaces that genuinely help the new use.\n\nAfter the renovation is completed and the building enters use, craft classes still begin around the refurbished old worktables, while kitchen classes prepare food in the separate new work area. After class, the two groups move through the reorganized rear space to put away tools and use the washing facilities without bunching up at the old turn. When Xu Tang switches off the lights at the end of the day, the high windows and old factory number are still there, while the position of the former non-load-bearing interior partition has changed. She puts away the next day's timetable on one of the old worktables.",
+    "storyBodyZh": "街区合作社租下了一座停用多年的小印刷厂，准备把它变成长期开放的社区学习厨房和手作教室。许棠第一次进去，就喜欢上中央的大开间、高窗和一排结实的旧长桌；那些桌子很适合画图、装配和手作课程。真正让方案卡住的是后部：旧的小房间和内部隔墙把未来需要的厨房工作区、清洗、储物和通行路线切得七零八落。\n\n有人主张尽量一处都别动，也有人觉得既然要改用途，不如把内部全部清空。合作社没有靠肉眼决定哪些能留，而是先请专业团队针对新用途完成调查。调查结论认为中央开间、高窗和部分旧构件可以继续利用；同时确认几处非承重内部隔墙可以按新用途调整，厨房服务、清洗和其他技术设施则需要重新布置和接入。\n\n方案讨论时，团队用平面模型和流程卡做了一次施工前演练。许棠把标着手作课的卡片放到旧长桌对应的位置，把厨房课程卡片放到计划新增的独立食物处理区；旧长桌只安排手作，不作食物接触台面。她沿图上的路线移动两组流程卡，卡片走到后部时，取物、清洗和返回的路线都挤在原有小房间的转折处。\n\n许棠把模型里那一段经专业调查确认可以调整的非承重内部隔墙拿掉，重新留出服务和通行位置。这个选择让项目不再是‘刷墙、搬机器、换招牌’那么简单：改造预算增加，开放日期后移，旧长桌还要修整，新的厨房工作区、清洗、储物和设备服务也要按方案施工。但她没有因此放弃那些真正帮助新用途的旧空间。\n\n改造完成并投入使用后，手作课仍围着修整后的旧长桌开始，厨房课程则在独立的新工作区准备食材。下课后，两组学员从重新组织过的后部空间分别去收工具和清洗，没有再堵在原来的转折处。许棠最后关灯时，高窗和旧厂编号还在，原来那段非承重内部隔墙的位置已经改变。她收好第二天的课表，放在一张旧长桌上。",
+    "explanation": "This example treats technical feasibility as the conclusion of a fictional professional survey rather than something Xu Tang determines by visual inspection. The survey confirms that the central room, high windows, and some existing components can continue in use, and that several non-load-bearing interior partitions can be adjusted for the new use. The pre-construction model and process exercise is used only to test spatial relationships for the proposed functions; it does not mean that kitchen activities can already take place in the unmodified old building.\n\nAdaptive reuse is more than changing a sign, retaining only a façade, or temporarily borrowing an old space, and it does not require every old element to remain untouched. The new use still has to meet real conditions for safety, accessibility, technical services, and continuing operation. Retaining an existing building also does not automatically mean that a project will be cheaper or have lower whole-life impacts; those outcomes require separate investigation and comparison.",
+    "explanationZh": "本例把技术可行性作为虚构专业调查结论，而不是由许棠凭肉眼判断。调查确认中央开间、高窗和部分旧构件可以继续使用，也确认几处非承重内部隔墙能够按新用途调整；施工前的模型与流程演练只用于检查新用途的空间关系，并不等于未经改造的旧厂已经可以开展厨房活动。\n\n适应性再利用不仅是换招牌、保留外皮或临时借用旧空间，也不要求所有旧部分原样留下。新用途还需要满足安全、可达性、技术服务和持续经营等实际条件。保留旧建筑也不自动意味着项目一定更便宜或全生命周期影响更低，这些结果需要另外调查和比较。"
   },
   {
     "id": "0732-load-path",
@@ -22516,49 +22776,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0732",
     "fieldTitle": "Building and civil engineering",
     "fieldTitleZh": "建筑与土木工程",
-    "title": "After the Ribbon Was Cut",
-    "titleZh": "剪彩以后",
-    "summary": "Everyone wants a photograph cutting the new river bridge's ribbon; for the next decade, no one wants one clearing its drains.",
-    "summaryZh": "跨河大桥开幕时人人争着剪彩，随后十年，却没有人愿意为清一只排水口拍照。",
-    "storyParagraphs": [
-      "Three generations of officials attended the river bridge opening to cut its ribbon. The design was handsome, construction finished on time, and a small amount remained in the budget. The mayor redirected the balance to a new plaza. The bridge was built, he said; maintenance could wait until it became necessary.",
-      "In the first years, only small things appeared: sand in drains, gravel packed into expansion joints, and salty water reaching beam edges through cracks. Inspectors wrote repeated reports, but new projects pushed the work into the next budget year. By the time bearings seized and corroding reinforcement split the concrete, work that once needed a brief closure required half the bridge to shut.",
-      "The maintenance supervisor had once requested one night to clear drains and joints for one hundred ledger coins. The mayor deferred it three times. Five years later, access scaffolds, bearing work, concrete repair, traffic control, and emergency contracts required more than twenty times that amount before counting users' delay. The comparison did not prove every early repair would save money; it showed that postponement was itself a decision with changing condition and consequence.",
-      "The closure forced ambulances onto a forty-minute detour and reduced trade in nearby shops. The city discovered that the bridge did not provide a new object; it provided a crossing service that had to remain available. Money saved on opening day returned as a larger bill for delay and major repair.",
-      "The half-closed bridge stayed red on the council map while the new plaza fountains waited for funding. The mayor folded the fountain drawing, cancelled it, surrendered her re-election centrepiece, and funded repair plus a permanent inspection reserve. Shopkeepers still lost a season and one ambulance arrived late; maintenance money could reduce future risk, not return those days. Service targets and user consequences now appeared beside component costs at every budget meeting.",
-      "A new management plan worked backward from service needs through design, inspection, cleaning, preventive maintenance, renewal, and eventual retirement. Components received intervention times based on deterioration, consequences, and criticality. Higher future floods and thermal movement entered adaptation plans. Annual funds were no longer spread evenly; they first addressed places where small action could avoid larger risk.",
-      "The next spring, the mayor came without scissors. Wearing gloves, she pulled black mud from the first drain while the supervisor logged its condition and next inspection date. Users saw no ceremony, only one lane closed for an hour. The cancelled fountain drawing remained folded beneath the maintenance board. When water ran freely through the outlet, she left the mud in a labelled bucket for the crew's training table."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "预算表右边的六列",
+    "summaryZh": "林澈今天要提交公共通道更新方案。较贵的方案会挤压今年的照明预算，维护负责人却让她再看一张表。",
     "storyParagraphsZh": [
-      "跨河大桥落成那天，三任官员都来剪彩。设计精美，工期准时，预算还略有结余。市长把余款改去修建广场，说桥已经造好，维护可以等将来有需要再说。",
-      "最初几年，桥只是出现小事：排水口积沙，伸缩缝塞满碎石，盐水从裂缝渗到梁边。检查员连续写报告，却总被新工程挤到下一年度。等到支座卡住、钢筋锈胀把混凝土顶裂时，原本一次短时维修能解决的问题已经需要封闭半幅桥面。",
-      "养护班长曾申请夜间清理排水与接缝，只需一百枚账面钱，市长却连续三次延期。五年后，脚手、支座、混凝土修复、交通管制和紧急合同超过其二十倍，还未计使用者延误。这不代表每次早修必定省钱，只表明延期本身也是会随状况与后果变化的决定。",
-      "封桥让急救车绕行四十分钟，商店也少了客人。市府这才发现，桥提供的不是一座新物件，而是一条必须持续可用的过河服务。开幕日省下的钱，在交通延误和大修中加倍付了回来。",
-      "议会地图上的半幅桥一直标红，新广场喷泉图则等着拨款。市长折起喷泉图，取消这项连任时最想展示的工程，拨款大修并建立固定检查储备。商户仍失去一季生意，一辆急救车也已迟到；养护费能降低未来风险，不能买回那些日子。从此每次预算会同时写构件费用、服务目标和使用者后果。",
-      "新的管理计划从服务目标倒推设计、检查、清洁、预防维修、更新和最后退役。不同构件按劣化速度、失效后果和重要性安排时机；气候带来的更高洪水与热胀也进入未来方案。每年预算不再平均撒开，而先处理能以较小代价避免较大风险的地方。",
-      "第二年春天，市长来到桥上，没有带剪刀。她戴手套从第一个排水口掏出黑泥，养护班长在板上写下状态与下次检查日期。没有典礼，使用者只遇到一小时单车道封闭。被取消的喷泉图折在记录板下面，纸角已磨白。排水重新流通后，她把黑泥装进标注位置和日期的桶，留在养护班培训桌上；剪彩时的红绸则早已找不到。"
+      "社区中心旁的公共步行通道准备更新，林澈要在当天把方案送进预算会。A方案今年需要30个计价单位，B方案需要42；如果选B，多出的12个单位就得从今年另一项入口照明更新里腾出来。她已经把A放到推荐栏里，因为眼前的预算缺口是真实存在的。",
+      "维护负责人来找她时，没有要求她把A划掉，只问了一句：“这条通道六年里谁来养？”他把两套维护安排放到桌上：A以后每年需要5个计价单位的维护支出，B每年需要2个。林澈原本只留了一栏给建设费用，现在不得不把表格往右拉长。",
+      "她把六个年份依次写进去。A后面连续出现六个“5”，B后面是六个“2”。最开始那两个醒目的数字30和42都没有消失；只是A今年少付12个单位的优势旁边，第一次出现了未来几年反复承担的支出。林澈把手从“提交”键上移开，重新打开了今年和后续年度的预算说明。",
+      "这并没有让选择突然变得轻松。B会让今年的入口照明更新推迟，A则把更多已设定的维护支出留到以后。林澈没有把任何一边直接圈成赢家，而是让两套方案都按同样的六年服务任务进入会议材料，并把今年要让出的照明项目单独列在旁边。",
+      "预算会开始前，她把新表放到每个座位上。第一页仍然能看见30和42，后面多了六列。负责今年预算的人先指向那12个单位，维护负责人则指向后面的年份。林澈翻开旁边的照明项目说明，等两人看完，再把通道的维护安排摊在中间。"
     ],
-    "conceptName": "Infrastructure life-cycle management",
+    "overallZh": "本篇用一项六年公共通道服务比较说明基础设施全生命周期管理的一个入口：决策不能只停在初始建设价格，还要把同一服务和时间范围内的运行维护、更新等后续责任一起考虑。全生命周期视角的目标是持续提供服务，而不是简单寻找开场最便宜或维护支出最低的方案。",
     "conceptNameZh": "基础设施全生命周期管理",
-    "explanationParagraphs": [
-      "Infrastructure life-cycle management links planning, design, construction, operation, inspection, maintenance, renewal, adaptation, and retirement into continuous decisions that preserve service and value over time. Intervention timing should reflect condition, deterioration, risk, criticality, user impacts, uncertainty, and future conditions. Opening cost is only part of total cost; delaying small maintenance can produce much more expensive failure, closure, and reconstruction."
-    ],
     "explanationParagraphsZh": [
-      "基础设施全生命周期管理把规划、设计、建造、运行、检查、维护、更新、适应和退役连成持续决策，以跨时间维持服务与价值。干预时机应结合状况、劣化、风险、关键性、用户影响、不确定性和未来环境。开幕成本只是总成本的一部分；过度延后小型维护，可能换来更昂贵的失效、封闭与重建。"
+      "为把数字放在同一口径下，本教学算例明确假设A、B提供相同的六年服务，六年末均无残值，所有费用使用同一实价口径，贴现率假设为0，并排除其他服务差异。在这些条件下，A的六年支出为30+5×6=60个计价单位；B为42+2×6=54个计价单位。因此本例中B虽然初建多12个单位，按这组设定计算的六年总支出却少6个单位。",
+      "这个结果只是一个决策入口，不表示更贵的初装方案通常更便宜，也不表示维护支出越低、越早或越多就一定更好。真实基础设施管理还要结合资产状态、服务水平、风险、不确定性、资金时点、长期需求、残值和适当的时间价值处理；未经核实的远期费用也不能与当期支出随意相加。这60与54只计算通道本身的设定支出，没有把照明更新延期造成的收益变化或其他后果计价，不能替两个项目作整体排序。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先固定相同的服务任务和时间范围，再把初始建设与后续维护支出放到同一口径比较，同时保留当期资金约束。",
+      "diagramTitle": "为什么A今年少付12个单位，仍不足以回答哪套六年方案支出更低",
+      "diagramSteps": [
+        "把A和B放在相同的六年公共通道服务范围内比较",
+        "记录初建支出：A为30个计价单位，B为42个",
+        "记录六年维护支出：A每年5个单位，B每年2个",
+        "在零残值、同一实价和贴现率0等教学条件下计算A为60、B为54",
+        "把六年比较结果与B今年额外占用12个单位、导致照明更新延期的现实预算取舍同时带进决策"
+      ],
+      "diagramStepNotes": [
+        "若服务范围或比较期限不同，单纯比较总额就失去共同基础。",
+        "42比30多12个单位，这个当期资金差额不会因为采用全生命周期视角而消失。",
+        "这里比较的是每年的维护支出金额，不是维护次数，也不推断哪一方案实际故障更少。",
+        "60与54只在本例明确的六年、零残值、同实价、0贴现率和排除其他差异条件下成立。",
+        "全生命周期管理需要同时看长期服务责任与资金时点，而不是用长期总额自动覆盖今年的预算约束。"
+      ],
+      "mapping": [
+        "A初建30 → 当期较低的建设支出。",
+        "B初建42 → 当期多占用12个单位并挤压另一项项目的建设支出。",
+        "A每年维护5、B每年维护2 → 六年服务期内持续发生的设定维护支出。",
+        "A总60、B总54 → 在统一教学假设下得到的六年支出比较。",
+        "入口照明延期 → 长期方案选择对当前资金配置造成的具体代价。"
+      ],
+      "boundary": "本例中的30、42、5、2、60和54均为虚构教学数字，不是现实工程报价。全生命周期管理不等于永远选择初建更贵或年度维护支出更低的方案，也不意味着维护越早越多越好。真实决策需要结合资产状态、风险、服务需求、不确定性、资金约束、残值和适当的贴现处理。本故事不提供现实基础设施设计、维护周期、故障概率或采购结论。",
+      "reflection": "如果两套方案只需服务三年，而不是六年，你会重新核对哪些费用和期末价值？原来的60与54为什么不能直接沿用？"
+    },
+    "referencesZh": [
+      {
+        "id": "fhwa-asset-faq",
+        "citation": "Federal Highway Administration. (n.d.). Common Q’s and A’s pertaining to Transportation Asset Management.",
+        "url": "https://www.fhwa.dot.gov/asset/faq.cfm",
+        "use": "支持交通资产管理从服务性能、经济与工程证据出发配置资源，并在全寿命视角中考虑维护、修复、替换、使用者成本和决策时点；本篇只借用这一决策框架，不把虚构费用或六年期限说成FHWA数据。"
+      },
+      {
+        "id": "fhwa-its-life",
+        "citation": "Federal Highway Administration. (n.d.). Applying Transportation Asset Management to Intelligent Transportation Systems Assets: A Primer, Chapter 6.",
+        "url": "https://ops.fhwa.dot.gov/publications/fhwahop20047/chap6.htm",
+        "use": "支持把初始建设、维护、保存、修复和重建等放进全寿命规划，并考虑不确定性、故障和技术过时；该来源属于ITS语境，本篇不把其中任何特定资产寿命外推到全部基础设施。"
+      }
+    ],
+    "title": "Six More Columns in the Budget",
+    "summary": "Lin Che must submit a walkway upgrade plan today. The dearer option would squeeze this year’s lighting budget, but the maintenance manager asks her to look at another table.",
+    "storyParagraphs": [
+      "The public walkway beside the community centre is due for an upgrade, and Lin Che has to submit a plan to the budget meeting that day. Option A requires 30 accounting units this year, while option B requires 42. If they choose B, the extra 12 units will have to come out of another entrance-lighting upgrade scheduled for this year. She has already placed A in the recommendation column because the immediate budget gap is real.",
+      "When the maintenance manager comes to see her, he does not ask her to cross out A. He asks only one question: “Who is going to look after this walkway over the next six years?” He places two maintenance schedules on the table: A requires 5 accounting units of maintenance expenditure each year, while B requires 2 each year. Lin Che had originally left only one column for construction cost; now she has to extend the table to the right.",
+      "She writes in the six years one by one. Six consecutive 5s appear after A, and six 2s after B. The two prominent opening figures, 30 and 42, have not disappeared. But beside A's 12-unit advantage this year, the expenditure that will recur in later years appears for the first time. Lin Che moves her hand away from the “submit” button and reopens the budget notes for this year and the following years.",
+      "That does not suddenly make the choice easy. B would delay this year's entrance-lighting upgrade, while A would leave more of the specified maintenance expenditure for later years. Lin Che does not circle either side as the winner. Instead, she puts both options into the meeting papers under the same six-year service task and lists the lighting project that would have to give way this year separately beside them.",
+      "Before the budget meeting begins, she places the new table at every seat. The first page still shows 30 and 42, followed by six more columns. The person responsible for this year’s budget points first to the 12 units; the maintenance manager points to the later years. Lin Che opens the lighting project notes beside them. When both have finished reading, she lays the walkway maintenance schedules between them."
+    ],
+    "overall": "This article uses a six-year public-walkway service comparison to introduce one aspect of infrastructure life-cycle management: a decision should not stop at the initial construction price but should also consider subsequent responsibilities such as operation, maintenance, and renewal over the same service scope and time period. A life-cycle perspective aims to sustain service rather than simply identify the cheapest opening price or the lowest maintenance expenditure.",
+    "conceptName": "Infrastructure life-cycle management",
+    "explanationParagraphs": [
+      "To place the figures on a common basis, this teaching example explicitly assumes that A and B provide the same six-year service, both have zero residual value at the end of year six, all costs are expressed on the same real-price basis, the discount rate is assumed to be 0, and other service differences are excluded. Under those conditions, A's six-year expenditure is 30+5×6=60 accounting units, while B's is 42+2×6=54. In this example, B therefore costs 12 units more initially but 6 units less over the six years under the stated assumptions.",
+      "This result is only an entry point for decision-making. It does not mean that more expensive initial installation is generally cheaper over the life cycle, nor that lower, earlier, or greater maintenance expenditure is always better. Real infrastructure management also has to consider asset condition, service level, risk, uncertainty, timing of funds, long-term demand, residual value, and appropriate treatment of the time value of money. Unverified future costs also cannot simply be added to current expenditure without a sound common basis. The totals of 60 and 54 cover only the specified walkway expenditure. They do not price the benefits or other consequences of postponing the lighting upgrade and cannot rank the two projects as a whole."
+    ],
+    "module": {
+      "intro": "First fix the same service task and time period, then compare initial construction and later maintenance expenditure on the same basis while keeping current funding constraints visible.",
+      "diagramTitle": "Why Is A's 12-Unit Saving This Year Still Not Enough to Answer Which Six-Year Option Costs Less?",
+      "diagramSteps": [
+        "Compare A and B over the same six-year public-walkway service scope",
+        "Record initial expenditure: A is 30 accounting units and B is 42",
+        "Record six years of maintenance expenditure: A is 5 units per year and B is 2",
+        "Under the teaching assumptions of zero residual value, the same real-price basis, and a 0 discount rate, calculate A as 60 and B as 54",
+        "Bring the six-year comparison into the decision together with the fact that B uses an extra 12 units this year and delays the lighting upgrade"
+      ],
+      "diagramStepNotes": [
+        "If the service scope or comparison period differs, comparing totals no longer has a common basis.",
+        "42 is 12 units more than 30, and that current funding difference does not disappear simply because a life-cycle perspective is used.",
+        "The comparison here concerns annual maintenance expenditure amounts, not maintenance frequency, and it does not infer which option experiences fewer failures.",
+        "The totals of 60 and 54 hold only under the explicitly stated six-year, zero-residual-value, same-real-price, 0-discount-rate assumptions with other differences excluded.",
+        "Life-cycle management has to consider both long-term service responsibilities and the timing of funds rather than allowing a long-term total automatically to override this year's budget constraint."
+      ],
+      "mapping": [
+        "A initial cost 30 → the lower current construction expenditure.",
+        "B initial cost 42 → construction expenditure that uses 12 more units this year and squeezes another project.",
+        "A maintenance 5 per year and B maintenance 2 per year → the specified continuing maintenance expenditure over the six-year service period.",
+        "A total 60 and B total 54 → the six-year expenditure comparison under the unified teaching assumptions.",
+        "Delayed entrance-lighting upgrade → the concrete current-budget trade-off created by the long-term option choice."
+      ],
+      "boundary": "The figures 30, 42, 5, 2, 60, and 54 in this example are fictional teaching values, not real engineering quotations. Infrastructure life-cycle management does not mean always choosing the option with the higher initial cost or the lower annual maintenance expenditure, and it does not mean that maintenance is always better when it happens earlier or more often. Real decisions need to consider asset condition, risk, service demand, uncertainty, funding constraints, residual value, and appropriate discounting. This story provides no real infrastructure design, maintenance interval, failure probability, or procurement conclusion.",
+      "reflection": "If the options need to provide only three years of service instead of six, which costs and end-of-period values would you check again? Why can you not simply reuse the totals of 60 and 54?"
+    },
+    "references": [
+      {
+        "id": "fhwa-asset-faq",
+        "citation": "Federal Highway Administration. (n.d.). Common Q’s and A’s pertaining to Transportation Asset Management.",
+        "url": "https://www.fhwa.dot.gov/asset/faq.cfm",
+        "use": "Supports allocating resources in transportation asset management using service performance, economic evidence, and engineering evidence, and considering maintenance, repair, replacement, user costs, and decision timing from a life-cycle perspective. This article borrows only that decision framework and does not present the fictional costs or six-year period as FHWA data."
+      },
+      {
+        "id": "fhwa-its-life",
+        "citation": "Federal Highway Administration. (n.d.). Applying Transportation Asset Management to Intelligent Transportation Systems Assets: A Primer, Chapter 6.",
+        "url": "https://ops.fhwa.dot.gov/publications/fhwahop20047/chap6.htm",
+        "use": "Supports incorporating initial construction, maintenance, preservation, repair, and reconstruction into life-cycle planning while considering uncertainty, failures, and technological obsolescence. The source is specific to an ITS context, and this article does not generalize any particular asset life from it to all infrastructure."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "urban-agriculture-reader-first-25-preparation/group2-pdc-round3.json",
+      "edits": [
+        "urban-agriculture-reader-first-25-preparation/group2-edit-pass1-evidence.json",
+        "urban-agriculture-reader-first-25-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13 perspectives; four real ordinary ChatGPT GPT-5.6 Sol High stages, explicitly user-authorized."
     },
     "collection": "field-core-fables",
-    "storyBody": "Three generations of officials attended the river bridge opening to cut its ribbon. The design was handsome, construction finished on time, and a small amount remained in the budget. The mayor redirected the balance to a new plaza. The bridge was built, he said; maintenance could wait until it became necessary.\n\nIn the first years, only small things appeared: sand in drains, gravel packed into expansion joints, and salty water reaching beam edges through cracks. Inspectors wrote repeated reports, but new projects pushed the work into the next budget year. By the time bearings seized and corroding reinforcement split the concrete, work that once needed a brief closure required half the bridge to shut.\n\nThe maintenance supervisor had once requested one night to clear drains and joints for one hundred ledger coins. The mayor deferred it three times. Five years later, access scaffolds, bearing work, concrete repair, traffic control, and emergency contracts required more than twenty times that amount before counting users' delay. The comparison did not prove every early repair would save money; it showed that postponement was itself a decision with changing condition and consequence.\n\nThe closure forced ambulances onto a forty-minute detour and reduced trade in nearby shops. The city discovered that the bridge did not provide a new object; it provided a crossing service that had to remain available. Money saved on opening day returned as a larger bill for delay and major repair.\n\nThe half-closed bridge stayed red on the council map while the new plaza fountains waited for funding. The mayor folded the fountain drawing, cancelled it, surrendered her re-election centrepiece, and funded repair plus a permanent inspection reserve. Shopkeepers still lost a season and one ambulance arrived late; maintenance money could reduce future risk, not return those days. Service targets and user consequences now appeared beside component costs at every budget meeting.\n\nA new management plan worked backward from service needs through design, inspection, cleaning, preventive maintenance, renewal, and eventual retirement. Components received intervention times based on deterioration, consequences, and criticality. Higher future floods and thermal movement entered adaptation plans. Annual funds were no longer spread evenly; they first addressed places where small action could avoid larger risk.\n\nThe next spring, the mayor came without scissors. Wearing gloves, she pulled black mud from the first drain while the supervisor logged its condition and next inspection date. Users saw no ceremony, only one lane closed for an hour. The cancelled fountain drawing remained folded beneath the maintenance board. When water ran freely through the outlet, she left the mud in a labelled bucket for the crew's training table.",
-    "storyBodyZh": "跨河大桥落成那天，三任官员都来剪彩。设计精美，工期准时，预算还略有结余。市长把余款改去修建广场，说桥已经造好，维护可以等将来有需要再说。\n\n最初几年，桥只是出现小事：排水口积沙，伸缩缝塞满碎石，盐水从裂缝渗到梁边。检查员连续写报告，却总被新工程挤到下一年度。等到支座卡住、钢筋锈胀把混凝土顶裂时，原本一次短时维修能解决的问题已经需要封闭半幅桥面。\n\n养护班长曾申请夜间清理排水与接缝，只需一百枚账面钱，市长却连续三次延期。五年后，脚手、支座、混凝土修复、交通管制和紧急合同超过其二十倍，还未计使用者延误。这不代表每次早修必定省钱，只表明延期本身也是会随状况与后果变化的决定。\n\n封桥让急救车绕行四十分钟，商店也少了客人。市府这才发现，桥提供的不是一座新物件，而是一条必须持续可用的过河服务。开幕日省下的钱，在交通延误和大修中加倍付了回来。\n\n议会地图上的半幅桥一直标红，新广场喷泉图则等着拨款。市长折起喷泉图，取消这项连任时最想展示的工程，拨款大修并建立固定检查储备。商户仍失去一季生意，一辆急救车也已迟到；养护费能降低未来风险，不能买回那些日子。从此每次预算会同时写构件费用、服务目标和使用者后果。\n\n新的管理计划从服务目标倒推设计、检查、清洁、预防维修、更新和最后退役。不同构件按劣化速度、失效后果和重要性安排时机；气候带来的更高洪水与热胀也进入未来方案。每年预算不再平均撒开，而先处理能以较小代价避免较大风险的地方。\n\n第二年春天，市长来到桥上，没有带剪刀。她戴手套从第一个排水口掏出黑泥，养护班长在板上写下状态与下次检查日期。没有典礼，使用者只遇到一小时单车道封闭。被取消的喷泉图折在记录板下面，纸角已磨白。排水重新流通后，她把黑泥装进标注位置和日期的桶，留在养护班培训桌上；剪彩时的红绸则早已找不到。",
-    "explanation": "Infrastructure life-cycle management links planning, design, construction, operation, inspection, maintenance, renewal, adaptation, and retirement into continuous decisions that preserve service and value over time. Intervention timing should reflect condition, deterioration, risk, criticality, user impacts, uncertainty, and future conditions. Opening cost is only part of total cost; delaying small maintenance can produce much more expensive failure, closure, and reconstruction.",
-    "explanationZh": "基础设施全生命周期管理把规划、设计、建造、运行、检查、维护、更新、适应和退役连成持续决策，以跨时间维持服务与价值。干预时机应结合状况、劣化、风险、关键性、用户影响、不确定性和未来环境。开幕成本只是总成本的一部分；过度延后小型维护，可能换来更昂贵的失效、封闭与重建。"
+    "storyBody": "The public walkway beside the community centre is due for an upgrade, and Lin Che has to submit a plan to the budget meeting that day. Option A requires 30 accounting units this year, while option B requires 42. If they choose B, the extra 12 units will have to come out of another entrance-lighting upgrade scheduled for this year. She has already placed A in the recommendation column because the immediate budget gap is real.\n\nWhen the maintenance manager comes to see her, he does not ask her to cross out A. He asks only one question: “Who is going to look after this walkway over the next six years?” He places two maintenance schedules on the table: A requires 5 accounting units of maintenance expenditure each year, while B requires 2 each year. Lin Che had originally left only one column for construction cost; now she has to extend the table to the right.\n\nShe writes in the six years one by one. Six consecutive 5s appear after A, and six 2s after B. The two prominent opening figures, 30 and 42, have not disappeared. But beside A's 12-unit advantage this year, the expenditure that will recur in later years appears for the first time. Lin Che moves her hand away from the “submit” button and reopens the budget notes for this year and the following years.\n\nThat does not suddenly make the choice easy. B would delay this year's entrance-lighting upgrade, while A would leave more of the specified maintenance expenditure for later years. Lin Che does not circle either side as the winner. Instead, she puts both options into the meeting papers under the same six-year service task and lists the lighting project that would have to give way this year separately beside them.\n\nBefore the budget meeting begins, she places the new table at every seat. The first page still shows 30 and 42, followed by six more columns. The person responsible for this year’s budget points first to the 12 units; the maintenance manager points to the later years. Lin Che opens the lighting project notes beside them. When both have finished reading, she lays the walkway maintenance schedules between them.",
+    "storyBodyZh": "社区中心旁的公共步行通道准备更新，林澈要在当天把方案送进预算会。A方案今年需要30个计价单位，B方案需要42；如果选B，多出的12个单位就得从今年另一项入口照明更新里腾出来。她已经把A放到推荐栏里，因为眼前的预算缺口是真实存在的。\n\n维护负责人来找她时，没有要求她把A划掉，只问了一句：“这条通道六年里谁来养？”他把两套维护安排放到桌上：A以后每年需要5个计价单位的维护支出，B每年需要2个。林澈原本只留了一栏给建设费用，现在不得不把表格往右拉长。\n\n她把六个年份依次写进去。A后面连续出现六个“5”，B后面是六个“2”。最开始那两个醒目的数字30和42都没有消失；只是A今年少付12个单位的优势旁边，第一次出现了未来几年反复承担的支出。林澈把手从“提交”键上移开，重新打开了今年和后续年度的预算说明。\n\n这并没有让选择突然变得轻松。B会让今年的入口照明更新推迟，A则把更多已设定的维护支出留到以后。林澈没有把任何一边直接圈成赢家，而是让两套方案都按同样的六年服务任务进入会议材料，并把今年要让出的照明项目单独列在旁边。\n\n预算会开始前，她把新表放到每个座位上。第一页仍然能看见30和42，后面多了六列。负责今年预算的人先指向那12个单位，维护负责人则指向后面的年份。林澈翻开旁边的照明项目说明，等两人看完，再把通道的维护安排摊在中间。",
+    "explanation": "To place the figures on a common basis, this teaching example explicitly assumes that A and B provide the same six-year service, both have zero residual value at the end of year six, all costs are expressed on the same real-price basis, the discount rate is assumed to be 0, and other service differences are excluded. Under those conditions, A's six-year expenditure is 30+5×6=60 accounting units, while B's is 42+2×6=54. In this example, B therefore costs 12 units more initially but 6 units less over the six years under the stated assumptions.\n\nThis result is only an entry point for decision-making. It does not mean that more expensive initial installation is generally cheaper over the life cycle, nor that lower, earlier, or greater maintenance expenditure is always better. Real infrastructure management also has to consider asset condition, service level, risk, uncertainty, timing of funds, long-term demand, residual value, and appropriate treatment of the time value of money. Unverified future costs also cannot simply be added to current expenditure without a sound common basis. The totals of 60 and 54 cover only the specified walkway expenditure. They do not price the benefits or other consequences of postponing the lighting upgrade and cannot rank the two projects as a whole.",
+    "explanationZh": "为把数字放在同一口径下，本教学算例明确假设A、B提供相同的六年服务，六年末均无残值，所有费用使用同一实价口径，贴现率假设为0，并排除其他服务差异。在这些条件下，A的六年支出为30+5×6=60个计价单位；B为42+2×6=54个计价单位。因此本例中B虽然初建多12个单位，按这组设定计算的六年总支出却少6个单位。\n\n这个结果只是一个决策入口，不表示更贵的初装方案通常更便宜，也不表示维护支出越低、越早或越多就一定更好。真实基础设施管理还要结合资产状态、服务水平、风险、不确定性、资金时点、长期需求、残值和适当的时间价值处理；未经核实的远期费用也不能与当期支出随意相加。这60与54只计算通道本身的设定支出，没有把照明更新延期造成的收益变化或其他后果计价，不能替两个项目作整体排序。"
   },
   {
     "id": "0811-nutrient-cycling",
@@ -22567,49 +22917,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0811",
     "fieldTitle": "Crop and livestock production",
     "fieldTitleZh": "作物与畜牧生产",
-    "title": "The Field That Never Filled",
-    "titleZh": "总也填不满的田",
-    "summary": "A farm buys more fertilizer each year; the hillside wheat still weakens while the pond below turns green enough to hide its water.",
-    "summaryZh": "农场年年买更多肥料，坡上麦田仍越来越瘦，而坡下池塘却绿得看不见水面。",
-    "storyParagraphs": [
-      "Wheat ears at Stone Slope Farm shortened for three years. Owner Gu Rong bought more fertilizer each season and spread it all before spring planting, certain that anything missing from the soil could simply be added. Across the farm, cattle manure stood uncovered beside a ditch, most straw was burned after harvest, and carts of grain and milk continually left the gate. The extra fertiliser briefly greened the field and protected a bank payment, so increasing the dose looked more reliable than changing the whole farm routine.",
-      "After a storm, algae covered the pond below the slope while wheat at the top remained yellow. Gu pointed to the total ledger: more nutrients entered than the harvest removed. The agronomist first followed the rain rather than the sum. Fertilizer washed away before crops needed it, manure leached into the ditch, topsoil eroded from the slope, and some material left soil and manure as gas. The algae forced the farm to buy clean stock water, turning an off-field loss into an immediate operating cost.",
-      "She also sampled different parts of the fields. Some elements accumulated excessively at the foot of the slope while the crest was depleted. Other nutrients remained in the soil but in forms or seasons unavailable to wheat roots. A surplus across the whole farm did not mean every field and growth stage could obtain what it needed. They drew nitrogen and phosphorus flows separately for a full season, recording purchased feed and fertiliser, harvested grain and milk, stored manure, soil change, runoff, erosion, and estimated gaseous loss.",
-      "Gu pushed away the invoice for another large spring dose and spent the money on testing, covered storage, and split application.",
-      "The slower plan cost him an early-yield bonus, and he left one strip untreated as a comparison. Results showed that placement and timing raised uptake while lowering runoff; the budget was updated by field rather than farm total. Monthly budgets now compared inputs, harvested exports, soil tests, and estimated losses, while uncertainty was written as a range rather than hidden inside one balance.",
-      "The farm began storing manure properly, composting it, and returning it according to soil results. More straw stayed on the land or found another use. Fertilizer was split across periods of actual crop demand, while cover crops and buffer strips protected the slope and kept the pond from receiving every excess. Nutrients leaving in products still required replacement, but inputs now had timing and destination. Legume cover, manure composting, and mineral supplements were credited only for nutrients made available at relevant times, not for material merely present on the farm.",
-      "The following spring, the first manure cart did not take its usual road toward the ditch. Standing at the junction, Gu waved a flag and sent it uphill to the poorest field."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "十二枚磁片和一封邮件",
+    "summaryZh": "唐悠想省下半天课程准备时间，凭堆肥报告取消一次核查。写讲义时，一个问题让她停在了发送键前。",
     "storyParagraphsZh": [
-      "石坡农场连续三年麦穗变短。主人顾荣每年都多买肥料，春播前一次撒完，认定地里缺什么就补什么。农场另一边，牛粪堆在露天沟旁，收后的麦秸大半烧掉，卖出的谷物和牛奶则一车车离开。加肥曾短暂让麦苗返绿，也保住一笔银行还款，因此继续加量比改变整套农事看起来更可靠。",
-      "一场暴雨过后，坡下池塘浮满绿藻，坡顶麦苗却仍发黄。顾荣拿着总账说，买进来的养分明明比收成带走的更多。农艺师没有先看总数，而是沿着雨水走了一遍：肥料在作物需要前被冲走，粪堆渗入沟渠，表土从坡面流失，另有一部分从土壤和粪中变成气体离开。绿藻迫使农场另买洁净饮水，田外损失立刻变成经营成本。",
-      "她又在田间分区取土。坡脚某些元素积得过多，坡顶却已经耗竭；有些养分虽然仍在土里，所处形态和时节却不能被麦根利用。整个农场看似有余，并不代表每块地、每个生长阶段都拿得到。众人按整季分别画氮、磷流向，记录外购饲料与肥料、谷物和牛奶、粪肥库存、土壤变化、径流、侵蚀及估算气态损失。",
-      "顾荣推开再买一批春肥的账单，把钱投给检测、遮盖储粪与分次施用。",
-      "这套慢办法让他失去早产奖金，他还留下一条不处理的对照带。结果显示位置和时机提高吸收、减少径流；预算此后按地块更新，不再只看全场总数。月度预算同时比较投入、收获输出、土检与估算损失；不确定性写成范围，不再藏进一个总差额。",
-      "农场开始把粪肥妥善储存、堆制后按检测结果还田，麦秸更多留地或再利用。肥料分次施在作物真正需要的时期，坡地加了覆盖作物和缓冲带，池塘边不再成为多余养分的终点。卖出产品带走的部分仍需补充，但投入有了时间和去处。豆科覆盖、粪肥堆制与矿质补充，只有在相关时段真正可利用才计入，不能因材料留在农场就视为已供作物。",
-      "第二年春天，第一辆粪肥车没有照旧驶向沟边。顾荣站在岔路口挥旗，让车转上了最瘦的那片坡地。"
+      "屋顶农园准备换上春季课程用的一批展示盆，唐悠负责把课程材料和日程一起定下来。堆肥供应资料上列着总氮信息，她原本想据此取消已经排好的养分状态核查，把那半天留给别的课程准备。可她在写讲义时卡住了：报告告诉她“总共有多少”，却没有直接告诉她这些氮此刻有多少处在植物能够利用的形态。",
+      "她把取消核查的邮件留在草稿箱里，转去整理周末的课堂示意。桌上的堆肥样品和供应资料被放到一边。唐悠另外拿出十二枚磁片，在白板上画了三个框，写下“课堂模型”，再把磁片摆进去。",
+      "模型开始时，十二个氮单位被分成三处：土壤有机氮8单位、土壤中当期可利用的无机氮3单位、植株氮1单位。唐悠把其中2个单位从有机氮移到可利用氮，三个框变成6、5、1；接着又把1个单位从可利用氮移进植株，变成6、4、2。她每移动一次都重新数一遍，十二枚磁片一枚也没有增加。",
+      "她看着那十二枚磁片，又回到电脑前，把取消核查的邮件删掉了。她在日程上保留了那半天，把堆肥资料夹在核查安排后面。原本想提前完成的课程材料，只好留到下午继续做。",
+      "周末上课时，他们重新按8、3、1摆好磁片，先从土壤有机氮移2枚到可利用框，再由一个学生把1枚从“可利用”框移进“植株”框。此时“植株”里有2枚，另外两个框合起来还有10枚；他从头数到尾，抬头说：“还是十二个。”唐悠点点头，把真实展示盆推到白板旁边，却没有给它贴上那组数字：“这十二个是我们用来想清楚过程的，不是这盆土的化验单。”"
     ],
-    "conceptName": "Nutrient cycling",
+    "overallZh": "本篇用一次课程准备说明养分循环的一个小入口：元素可以在土壤有机物、植物可利用形态和生物体之间移动、转化和储存，因此土壤或堆肥中的总氮并不等于某一时刻植物可利用的氮。转化和吸收改变的是氮所在的形态和库，不会凭空创造新的氮。",
     "conceptNameZh": "养分循环",
-    "explanationParagraphs": [
-      "Nutrient cycling describes the movement, transformation, storage, reuse, and loss of essential elements among soil, organisms, products, water, and air. Totals for inputs and harvest removal are only a starting point. Chemical form, microbial processes, timing, location, erosion, drainage, and gaseous loss determine availability and environmental effects. A whole-farm balance can hide local depletion or excessive accumulation."
-    ],
     "explanationParagraphsZh": [
-      "养分循环描述必需元素在土壤、生物、产品、水和空气之间的移动、转化、储存、再利用与损失。投入与收成总量只是起点；化学形态、微生物过程、时间、位置、侵蚀、排水和气态损失决定作物能否利用及环境后果。农场整体平衡可能掩盖局部耗竭或过度累积。"
+      "12单位算例是一个与真实盆土分开的封闭教学时段模型，明确假设这一时段没有外部氮输入、输出或损失。三个账户互不重叠：土壤有机氮不计植株氮，土壤可利用库只计这里假设可被植物利用的无机氮，植株氮另计。开始分别为8、3、1，总量12；其中2单位由有机氮转到可利用氮后变为6、5、1，总量仍12；随后植物吸收1单位，可利用氮减少1、植株增加1，变成6、4、2，总量仍为12。这里的单位、转化量和顺序只是教学记账，不是实测值或真实矿化速率。",
+      "现实土壤中，有机氮能否以及多快转化为植物可利用形态，会受到材料性质、微生物活动和环境条件影响。开放农田还会有外部投入、收获带走、淋失和气态损失等路径。叶黄也可能与水分、温度、病害等因素有关，因此不能仅凭叶色或堆肥存在就判断植物当期缺氮或可利用氮充足；氮的这些过程也不能直接当作磷或所有元素完全相同的循环方式。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "先把“总共有多少氮”与“氮此时在哪个库、植物现在能利用多少”分开，再追踪一次转化和一次吸收。",
+      "diagramTitle": "为什么12单位氮移动了两次，总量仍然是12",
+      "diagramSteps": [
+        "建立一个无外部输入、输出或损失的封闭教学时段，总氮设为12单位",
+        "把12单位分进互不重叠的三库：土壤有机氮8、土壤可利用无机氮3、植株氮1",
+        "让2单位由有机氮转到可利用氮，得到6、5、1",
+        "再让植物从可利用氮库吸收1单位，得到6、4、2",
+        "重新相加得到6+4+2=12，并把这个模型与真实展示盆的未知状态分开"
+      ],
+      "diagramStepNotes": [
+        "封闭条件只是为了追踪元素守恒的教学简化，现实农田通常存在输入、输出和损失。",
+        "总氮12不等于可利用氮12；开始时本模型中可利用库只有3单位。",
+        "2单位发生的是库和形态变化，不是新增2单位氮，也不代表现实固定矿化比例。",
+        "植物吸收后植株库从1增到2，可利用库从5减到4，因此植株外其余两个库合计为10。",
+        "真实盆土的总量、形态和转化速率需要实际信息，本模型不能替代实测或农事判断。"
+      ],
+      "mapping": [
+        "土壤有机氮8→6 → 教学模型中一部分氮从有机库转出。",
+        "可利用氮3→5→4 → 先接受2单位转化，再被植物吸收1单位。",
+        "植株氮1→2 → 植物从可利用库获得1单位氮。",
+        "总量始终12 → 在封闭教学时段内，转化和吸收没有创造或消灭氮。",
+        "保留养分状态核查 → 不用总氮信息替代植物当期可利用状态的问题。"
+      ],
+      "boundary": "本篇只用氮展示养分循环中的一个小机制。总氮不等于植物当期可利用氮，有机氮转化需要合适的材料、环境和微生物条件。12单位模型明确假设一个封闭时段内无外部输入、输出或损失，不能当成真实盆土、农田数据、矿化速率或施肥依据。现实系统还会有收获带走、淋失、气态损失等路径，氮与磷等元素的循环机制也不能简单视为完全相同。",
+      "reflection": "如果有人在这个模型中从外部加入2个氮单位，总量还应固定为12吗？你会怎样记录外部输入，并继续区分总量与当期可利用量？"
+    },
+    "referencesZh": [
+      {
+        "id": "umn-soil-organic",
+        "citation": "University of Minnesota Extension. (n.d.). Soil organic matter in cropping systems.",
+        "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/soil-organic-matter-in-cropping-systems",
+        "use": "支持有机物分解及微生物矿化、固定等过程会影响氮的形态与植物可利用性，并且转化速度受材料和环境条件影响；本篇只以氮为入口，不把虚构12单位模型或其中2单位转化当作来源数据或通用释放比例。"
+      },
+      {
+        "id": "mda-nitrogen",
+        "citation": "Minnesota Department of Agriculture. (n.d.). Nitrogen Management.",
+        "url": "https://www.mda.state.mn.us/chemicals/fertilizers/nutrient-mgmt/nitrogenplan/nitrogenmgmt",
+        "use": "支持氮在有机形态、无机可利用形态和植物之间发生转化与吸收，同时现实农业系统还存在收获带走、淋失和气态损失等路径；本篇不据此提供施肥剂量、真实田间数值或产量保证。"
+      }
+    ],
+    "title": "Twelve Tokens and an Email",
+    "summary": "Tang You hopes to save half a day of class preparation by using a compost report to cancel a check. While writing the handout, a question stops her before she sends the email.",
+    "storyParagraphs": [
+      "The rooftop garden is preparing a new set of display pots for its spring classes, and Tang You is responsible for finalizing both the teaching materials and the schedule. The compost supplier's documentation includes total-nitrogen information, and she originally plans to use that to cancel an already scheduled nutrient-status check and free up half a day for other course preparation. But while writing the handout, she stops: the report tells her 'how much there is in total,' not directly how much of that nitrogen is currently in forms the plants can use.",
+      "She leaves the cancellation email in her drafts and turns to preparing the weekend classroom demonstration. She sets the compost sample and supplier documentation to one side. Then she takes out twelve magnetic tokens, draws three boxes on the whiteboard, writes “classroom model” above them, and puts the tokens in place.",
+      "At the start of the model, the twelve nitrogen units are divided among three places: 8 units in soil organic nitrogen, 3 in currently plant-available mineral nitrogen in the soil, and 1 in the plant. Tang You moves 2 units from organic nitrogen to the available-nitrogen box, giving 6, 5, 1. Then she moves 1 unit from available nitrogen into the plant, giving 6, 4, 2. Each time she moves the tokens, she counts again; not one of the twelve tokens has been added.",
+      "She looks at the twelve tokens, returns to her computer, and deletes the cancellation email. She keeps the half-day appointment in the schedule and files the compost documentation behind the check arrangements. The teaching materials she had hoped to finish early will have to wait until the afternoon.",
+      "During the weekend class, they reset the tokens to 8, 3, 1. First they move 2 from soil organic nitrogen into the available box, then a student moves 1 from 'available' into 'plant'. There are now 2 tokens in 'plant' and 10 in the other two boxes combined. He counts from the beginning and looks up: “Still twelve.” Tang You nods and wheels the real display pot beside the whiteboard without attaching those numbers to it. “These twelve help us think through the process. They are not a laboratory report for this pot.”"
+    ],
+    "overall": "This article uses one course-preparation decision to introduce a small entry point into nutrient cycling: an element can move, transform, and be stored among soil organic matter, plant-available forms, and living organisms, so total nitrogen in soil or compost is not the same as the amount of nitrogen available to plants at a particular moment. Transformation and uptake change the form and pool in which nitrogen resides; they do not create new nitrogen from nothing.",
+    "conceptName": "Nutrient cycling",
+    "explanationParagraphs": [
+      "The 12-unit example is a closed teaching-period model kept separate from the real potting material. It explicitly assumes that during this period there are no external nitrogen inputs, outputs, or losses. The three accounts do not overlap: soil organic nitrogen excludes plant nitrogen, the soil available pool contains mineral nitrogen assumed available to the plant, and plant nitrogen is counted separately. They begin at 8, 3, and 1 units respectively, totaling 12. When 2 units move from organic nitrogen to available nitrogen, the state becomes 6, 5, 1 and still totals 12. The plant then takes up 1 unit, so available nitrogen decreases by 1 and plant nitrogen increases by 1, giving 6, 4, 2, again totaling 12. The units, conversion amount, and sequence are teaching bookkeeping, not measured values or a real mineralization rate.",
+      "In real soil, whether and how quickly organic nitrogen becomes plant-available depends on material properties, microbial activity, and environmental conditions. Open agricultural systems also include pathways such as external inputs, nitrogen removal through harvest, leaching, and gaseous losses. Yellow leaves may also result from water conditions, temperature, disease, or other factors, so leaf colour or the presence of compost alone cannot determine whether a plant is currently nitrogen-deficient or has sufficient available nitrogen. These nitrogen processes also should not be assumed to operate identically for phosphorus or every other element."
+    ],
+    "module": {
+      "intro": "First separate 'how much nitrogen exists in total' from 'which pool it is in now and how much plants can currently use,' then trace one conversion and one uptake step.",
+      "diagramTitle": "Why Does the Total Stay at 12 Even After the 12 Nitrogen Units Move Twice?",
+      "diagramSteps": [
+        "Set up a closed teaching period with no external inputs, outputs, or losses and define total nitrogen as 12 units",
+        "Divide 12 units among three non-overlapping pools: soil organic nitrogen 8, soil available mineral nitrogen 3, and plant nitrogen 1",
+        "Move 2 units from organic nitrogen to available nitrogen, producing 6, 5, 1",
+        "Then let the plant take up 1 unit from the available pool, producing 6, 4, 2",
+        "Add the pools again to obtain 6+4+2=12 and keep this model separate from the unknown state of the real display pot"
+      ],
+      "diagramStepNotes": [
+        "The closed condition is only a teaching simplification for tracking conservation of the element; real agricultural systems usually have inputs, outputs, and losses.",
+        "Total nitrogen of 12 does not mean 12 units are plant-available; at the beginning of this model, only 3 units are in the available pool.",
+        "The 2 units undergo a change of pool and form; they are not 2 newly created units of nitrogen and do not represent a universal real-world mineralization proportion.",
+        "After plant uptake, the plant pool rises from 1 to 2 while the available pool falls from 5 to 4, so the two pools outside the plant together contain 10.",
+        "The real pot's total amount, forms, and transformation rates require actual information; this model cannot substitute for measurement or agronomic judgment."
+      ],
+      "mapping": [
+        "Soil organic nitrogen 8→6 → part of the nitrogen moves out of the organic pool in the teaching model.",
+        "Available nitrogen 3→5→4 → the pool first receives 2 units from conversion and then loses 1 unit to plant uptake.",
+        "Plant nitrogen 1→2 → the plant receives 1 unit from the available pool.",
+        "Total always 12 → within the closed teaching period, conversion and uptake neither create nor destroy nitrogen.",
+        "Keeping the nutrient-status check → not using total-nitrogen information as a substitute for the question of current plant availability."
+      ],
+      "boundary": "This article uses nitrogen only to illustrate one small mechanism within nutrient cycling. Total nitrogen is not the same as nitrogen currently available to plants, and conversion of organic nitrogen requires suitable material, environmental, and microbial conditions. The 12-unit model explicitly assumes a closed period with no external inputs, outputs, or losses and cannot be treated as real potting-soil data, field data, a mineralization rate, or a fertilization basis. Real systems also include removal through harvest, leaching, gaseous losses, and other pathways, and the cycling mechanisms of nitrogen and phosphorus or other elements should not be treated as identical.",
+      "reflection": "If someone adds 2 nitrogen units from outside this model, should the total still stay at 12? How would you record that input while continuing to distinguish total nitrogen from nitrogen currently available to plants?"
+    },
+    "references": [
+      {
+        "id": "umn-soil-organic",
+        "citation": "University of Minnesota Extension. (n.d.). Soil organic matter in cropping systems.",
+        "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/soil-organic-matter-in-cropping-systems",
+        "use": "Supports that organic-matter decomposition and microbial processes such as mineralization and immobilization affect nitrogen forms and plant availability, and that transformation rates depend on material and environmental conditions. This article uses nitrogen only as an entry point and does not treat the fictional 12-unit model or the 2-unit conversion as source data or a universal release proportion."
+      },
+      {
+        "id": "mda-nitrogen",
+        "citation": "Minnesota Department of Agriculture. (n.d.). Nitrogen Management.",
+        "url": "https://www.mda.state.mn.us/chemicals/fertilizers/nutrient-mgmt/nitrogenplan/nitrogenmgmt",
+        "use": "Supports nitrogen transformation and uptake among organic forms, inorganic plant-available forms, and plants, while real agricultural systems also include pathways such as harvest removal, leaching, and gaseous loss. This article does not use the source to provide fertilizer rates, real field values, or yield guarantees."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "urban-agriculture-reader-first-25-preparation/group2-pdc-round3.json",
+      "edits": [
+        "urban-agriculture-reader-first-25-preparation/group2-edit-pass1-evidence.json",
+        "urban-agriculture-reader-first-25-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13 perspectives; four real ordinary ChatGPT GPT-5.6 Sol High stages, explicitly user-authorized."
     },
     "collection": "field-core-fables",
-    "storyBody": "Wheat ears at Stone Slope Farm shortened for three years. Owner Gu Rong bought more fertilizer each season and spread it all before spring planting, certain that anything missing from the soil could simply be added. Across the farm, cattle manure stood uncovered beside a ditch, most straw was burned after harvest, and carts of grain and milk continually left the gate. The extra fertiliser briefly greened the field and protected a bank payment, so increasing the dose looked more reliable than changing the whole farm routine.\n\nAfter a storm, algae covered the pond below the slope while wheat at the top remained yellow. Gu pointed to the total ledger: more nutrients entered than the harvest removed. The agronomist first followed the rain rather than the sum. Fertilizer washed away before crops needed it, manure leached into the ditch, topsoil eroded from the slope, and some material left soil and manure as gas. The algae forced the farm to buy clean stock water, turning an off-field loss into an immediate operating cost.\n\nShe also sampled different parts of the fields. Some elements accumulated excessively at the foot of the slope while the crest was depleted. Other nutrients remained in the soil but in forms or seasons unavailable to wheat roots. A surplus across the whole farm did not mean every field and growth stage could obtain what it needed. They drew nitrogen and phosphorus flows separately for a full season, recording purchased feed and fertiliser, harvested grain and milk, stored manure, soil change, runoff, erosion, and estimated gaseous loss.\n\nGu pushed away the invoice for another large spring dose and spent the money on testing, covered storage, and split application.\n\nThe slower plan cost him an early-yield bonus, and he left one strip untreated as a comparison. Results showed that placement and timing raised uptake while lowering runoff; the budget was updated by field rather than farm total. Monthly budgets now compared inputs, harvested exports, soil tests, and estimated losses, while uncertainty was written as a range rather than hidden inside one balance.\n\nThe farm began storing manure properly, composting it, and returning it according to soil results. More straw stayed on the land or found another use. Fertilizer was split across periods of actual crop demand, while cover crops and buffer strips protected the slope and kept the pond from receiving every excess. Nutrients leaving in products still required replacement, but inputs now had timing and destination. Legume cover, manure composting, and mineral supplements were credited only for nutrients made available at relevant times, not for material merely present on the farm.\n\nThe following spring, the first manure cart did not take its usual road toward the ditch. Standing at the junction, Gu waved a flag and sent it uphill to the poorest field.",
-    "storyBodyZh": "石坡农场连续三年麦穗变短。主人顾荣每年都多买肥料，春播前一次撒完，认定地里缺什么就补什么。农场另一边，牛粪堆在露天沟旁，收后的麦秸大半烧掉，卖出的谷物和牛奶则一车车离开。加肥曾短暂让麦苗返绿，也保住一笔银行还款，因此继续加量比改变整套农事看起来更可靠。\n\n一场暴雨过后，坡下池塘浮满绿藻，坡顶麦苗却仍发黄。顾荣拿着总账说，买进来的养分明明比收成带走的更多。农艺师没有先看总数，而是沿着雨水走了一遍：肥料在作物需要前被冲走，粪堆渗入沟渠，表土从坡面流失，另有一部分从土壤和粪中变成气体离开。绿藻迫使农场另买洁净饮水，田外损失立刻变成经营成本。\n\n她又在田间分区取土。坡脚某些元素积得过多，坡顶却已经耗竭；有些养分虽然仍在土里，所处形态和时节却不能被麦根利用。整个农场看似有余，并不代表每块地、每个生长阶段都拿得到。众人按整季分别画氮、磷流向，记录外购饲料与肥料、谷物和牛奶、粪肥库存、土壤变化、径流、侵蚀及估算气态损失。\n\n顾荣推开再买一批春肥的账单，把钱投给检测、遮盖储粪与分次施用。\n\n这套慢办法让他失去早产奖金，他还留下一条不处理的对照带。结果显示位置和时机提高吸收、减少径流；预算此后按地块更新，不再只看全场总数。月度预算同时比较投入、收获输出、土检与估算损失；不确定性写成范围，不再藏进一个总差额。\n\n农场开始把粪肥妥善储存、堆制后按检测结果还田，麦秸更多留地或再利用。肥料分次施在作物真正需要的时期，坡地加了覆盖作物和缓冲带，池塘边不再成为多余养分的终点。卖出产品带走的部分仍需补充，但投入有了时间和去处。豆科覆盖、粪肥堆制与矿质补充，只有在相关时段真正可利用才计入，不能因材料留在农场就视为已供作物。\n\n第二年春天，第一辆粪肥车没有照旧驶向沟边。顾荣站在岔路口挥旗，让车转上了最瘦的那片坡地。",
-    "explanation": "Nutrient cycling describes the movement, transformation, storage, reuse, and loss of essential elements among soil, organisms, products, water, and air. Totals for inputs and harvest removal are only a starting point. Chemical form, microbial processes, timing, location, erosion, drainage, and gaseous loss determine availability and environmental effects. A whole-farm balance can hide local depletion or excessive accumulation.",
-    "explanationZh": "养分循环描述必需元素在土壤、生物、产品、水和空气之间的移动、转化、储存、再利用与损失。投入与收成总量只是起点；化学形态、微生物过程、时间、位置、侵蚀、排水和气态损失决定作物能否利用及环境后果。农场整体平衡可能掩盖局部耗竭或过度累积。"
+    "storyBody": "The rooftop garden is preparing a new set of display pots for its spring classes, and Tang You is responsible for finalizing both the teaching materials and the schedule. The compost supplier's documentation includes total-nitrogen information, and she originally plans to use that to cancel an already scheduled nutrient-status check and free up half a day for other course preparation. But while writing the handout, she stops: the report tells her 'how much there is in total,' not directly how much of that nitrogen is currently in forms the plants can use.\n\nShe leaves the cancellation email in her drafts and turns to preparing the weekend classroom demonstration. She sets the compost sample and supplier documentation to one side. Then she takes out twelve magnetic tokens, draws three boxes on the whiteboard, writes “classroom model” above them, and puts the tokens in place.\n\nAt the start of the model, the twelve nitrogen units are divided among three places: 8 units in soil organic nitrogen, 3 in currently plant-available mineral nitrogen in the soil, and 1 in the plant. Tang You moves 2 units from organic nitrogen to the available-nitrogen box, giving 6, 5, 1. Then she moves 1 unit from available nitrogen into the plant, giving 6, 4, 2. Each time she moves the tokens, she counts again; not one of the twelve tokens has been added.\n\nShe looks at the twelve tokens, returns to her computer, and deletes the cancellation email. She keeps the half-day appointment in the schedule and files the compost documentation behind the check arrangements. The teaching materials she had hoped to finish early will have to wait until the afternoon.\n\nDuring the weekend class, they reset the tokens to 8, 3, 1. First they move 2 from soil organic nitrogen into the available box, then a student moves 1 from 'available' into 'plant'. There are now 2 tokens in 'plant' and 10 in the other two boxes combined. He counts from the beginning and looks up: “Still twelve.” Tang You nods and wheels the real display pot beside the whiteboard without attaching those numbers to it. “These twelve help us think through the process. They are not a laboratory report for this pot.”",
+    "storyBodyZh": "屋顶农园准备换上春季课程用的一批展示盆，唐悠负责把课程材料和日程一起定下来。堆肥供应资料上列着总氮信息，她原本想据此取消已经排好的养分状态核查，把那半天留给别的课程准备。可她在写讲义时卡住了：报告告诉她“总共有多少”，却没有直接告诉她这些氮此刻有多少处在植物能够利用的形态。\n\n她把取消核查的邮件留在草稿箱里，转去整理周末的课堂示意。桌上的堆肥样品和供应资料被放到一边。唐悠另外拿出十二枚磁片，在白板上画了三个框，写下“课堂模型”，再把磁片摆进去。\n\n模型开始时，十二个氮单位被分成三处：土壤有机氮8单位、土壤中当期可利用的无机氮3单位、植株氮1单位。唐悠把其中2个单位从有机氮移到可利用氮，三个框变成6、5、1；接着又把1个单位从可利用氮移进植株，变成6、4、2。她每移动一次都重新数一遍，十二枚磁片一枚也没有增加。\n\n她看着那十二枚磁片，又回到电脑前，把取消核查的邮件删掉了。她在日程上保留了那半天，把堆肥资料夹在核查安排后面。原本想提前完成的课程材料，只好留到下午继续做。\n\n周末上课时，他们重新按8、3、1摆好磁片，先从土壤有机氮移2枚到可利用框，再由一个学生把1枚从“可利用”框移进“植株”框。此时“植株”里有2枚，另外两个框合起来还有10枚；他从头数到尾，抬头说：“还是十二个。”唐悠点点头，把真实展示盆推到白板旁边，却没有给它贴上那组数字：“这十二个是我们用来想清楚过程的，不是这盆土的化验单。”",
+    "explanation": "The 12-unit example is a closed teaching-period model kept separate from the real potting material. It explicitly assumes that during this period there are no external nitrogen inputs, outputs, or losses. The three accounts do not overlap: soil organic nitrogen excludes plant nitrogen, the soil available pool contains mineral nitrogen assumed available to the plant, and plant nitrogen is counted separately. They begin at 8, 3, and 1 units respectively, totaling 12. When 2 units move from organic nitrogen to available nitrogen, the state becomes 6, 5, 1 and still totals 12. The plant then takes up 1 unit, so available nitrogen decreases by 1 and plant nitrogen increases by 1, giving 6, 4, 2, again totaling 12. The units, conversion amount, and sequence are teaching bookkeeping, not measured values or a real mineralization rate.\n\nIn real soil, whether and how quickly organic nitrogen becomes plant-available depends on material properties, microbial activity, and environmental conditions. Open agricultural systems also include pathways such as external inputs, nitrogen removal through harvest, leaching, and gaseous losses. Yellow leaves may also result from water conditions, temperature, disease, or other factors, so leaf colour or the presence of compost alone cannot determine whether a plant is currently nitrogen-deficient or has sufficient available nitrogen. These nitrogen processes also should not be assumed to operate identically for phosphorus or every other element.",
+    "explanationZh": "12单位算例是一个与真实盆土分开的封闭教学时段模型，明确假设这一时段没有外部氮输入、输出或损失。三个账户互不重叠：土壤有机氮不计植株氮，土壤可利用库只计这里假设可被植物利用的无机氮，植株氮另计。开始分别为8、3、1，总量12；其中2单位由有机氮转到可利用氮后变为6、5、1，总量仍12；随后植物吸收1单位，可利用氮减少1、植株增加1，变成6、4、2，总量仍为12。这里的单位、转化量和顺序只是教学记账，不是实测值或真实矿化速率。\n\n现实土壤中，有机氮能否以及多快转化为植物可利用形态，会受到材料性质、微生物活动和环境条件影响。开放农田还会有外部投入、收获带走、淋失和气态损失等路径。叶黄也可能与水分、温度、病害等因素有关，因此不能仅凭叶色或堆肥存在就判断植物当期缺氮或可利用氮充足；氮的这些过程也不能直接当作磷或所有元素完全相同的循环方式。"
   },
   {
     "id": "0811-integrated-pest-management",
@@ -22716,45 +23156,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0812",
     "fieldTitle": "Horticulture",
     "fieldTitleZh": "园艺",
-    "title": "The Cut That Preserved the Flavour",
-    "titleZh": "保住果味的那一刀",
-    "summary": "When an old pear tree begins to die, its owner plants the seeds expecting the same fruit; years later, every seedling bears something different.",
-    "summaryZh": "老梨树将死，园主种下它的种子等着原味回来，几年后结出的梨却一棵一个样。",
-    "storyParagraphs": [
-      "A botanical garden held an old pear tree whose fruit carried a faint honey aroma, a variety inherited from the owner's mother. Waterlogged roots weakened it each year, so the owner collected every seed and planted two rows of seedlings. Children resemble their mother, he thought; the old pear flavour was secure. A buyer offered to propagate the famous pear if the owner could supply identical trees within three years, adding a commercial deadline to the family memory.",
-      "Years later, the young trees bore fruit. Some pears were sour, some hard, and some lacked fragrance; none exactly matched the old tree. The gardener explained that seed combines two genetic sources and reshuffles them. Preserving the same fruit could not rely on seed to copy its parent. She cut buds and short shoots from the remaining healthy branches and joined them to several compatible rooted young trees. The seedlings were valuable new variation, but they could not promise genetic identity with the parent.",
-      "At the bench, the gardener matched cut surfaces so living cambial regions met, bound the joint against drying, and labelled scion, rootstock, date, and source. Bud break alone did not prove lasting union; each tree was watched through wind, growth, and fruiting. One vigorous first-year graft later failed at an incompatible junction. The cut was made in the appropriate season, protected from drying, and inspected for callus and vascular connection before supports were removed.",
-      "She cleaned her knife between plants and labelled every source. Not every combination worked. One union healed poorly and broke in wind; one root kept the tree small, while another tolerated wet soil. The upper shoot retained the old pear variety, but the lower partner influenced vigour, fruiting time, and response to soil disease. Choosing several rootstocks cost uniformity and complicated orchard work, but one flood or disease response would no longer decide the fate of every clone. The failed combinations remained labelled in the nursery, preventing the next worker from repeating them as if silence meant success.",
-      "The owner did not keep only one replacement. He chose roots suited to different plots, preserved multiple copies, and continued using cuttings and seed for other plants so the whole garden did not share one genetic background. Diseased plants and tool hygiene were managed to avoid preserving a pathogen together with the variety. The third pear was cut and its flavour recorded only after the tree had carried a full season without union failure. The fruit matched the remembered flavour closely, but the owner kept records because rootstock and site could still influence size, timing, and condition. In the second year after the old tree fell, the first new tree carried three pears. The owner cut and tasted one, then left the other two among the leaves instead of picking them all."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "照片里的最高枝",
+    "summaryZh": "繁殖展只差一张主照片就能送印。志愿者选中了最旺的新枝，顾遥却蹲下来寻找它的起点。",
     "storyParagraphsZh": [
-      "百果园有棵老梨树，果肉带一点蜂蜜香，是园主母亲留下的品种。树根受涝后逐年衰弱，园主急忙收下全部种子，种了两排小树。他相信孩子总会像母亲，老梨的味道已经保住。买家答应三年内若能提供同样果树便长期采购，让家族记忆又多了一道商业期限。",
-      "几年后，小树陆续结果。有的酸，有的硬，有的香气全无，没有一棵完全像老树。园丁解释，种子由两份遗传来源形成，会重新组合；想保留同一结果，不能只等种子把原树复制出来。她从尚健康的枝上取下芽和短枝，接到几种相容的有根幼树上。实生苗带来有价值的新变异，却不能承诺与母树遗传相同。",
-      "操作台上，园丁让切面形成层相接，绑紧接口防干，并标明接穗、砧木、日期与来源。芽萌发并不证明长久愈合，每株还要经历风、长势与结果观察；一株首年旺盛的嫁接树后来仍从不亲和接口断开。切口在合适季节完成并防止干燥，支撑拆除以前还要检查愈伤与维管连接。",
-      "她的刀每换一棵树都清洁一次，每个来源也挂上标签。不是所有组合都成功：一株接口愈合不好，风来时折断；另一种根让树长得矮，第三种更能忍受湿土。上面的枝仍保留老梨品种，下面的根却会影响树势、结果时机和对土壤病害的反应。选多种砧木牺牲整齐，也增加管理复杂度，却不再让一次洪水或病害反应决定全部克隆的命运。失败组合仍带标签留在苗圃，免得后来者把沉默误作成功而重复。",
-      "园主没有只留一株新树。他选择适合不同地块的根系，保留多份来源，继续用扦插和种子繁育其他植物，以免整个果园只有同一种遗传背景。病株和工具卫生也受到管理，防止保存品种时一并传播病害。第三只梨在接口完整承受一个季节以后才被切开，香味也随之记录。果味接近记忆，园主仍保留记录，因为砧木与地点还会影响大小、时期与状态。老梨树倒下后的第二年，第一棵新树结了三只梨。园主切开一只尝过，把另外两只放回枝叶间，没有急着摘完。"
+      "社区苗圃下周要布置繁殖展，顾遥只差一张主照片就能把展牌送去印刷。她特意选了一株教学样本：嫁接口还看得清，上面的枝条挂着一张来源标签，根系一侧也留着另一张。拍摄当天，两边都冒出了新枝，偏偏接口下方那一根长得最高、最抢镜。",
+      "志愿者已经蹲下来找角度，镜头里只剩那根旺枝和一片新叶。“用这一张吧，看起来最像成功。”顾遥没有回答，伸手顺着那根枝条一直找到它的起点。枝条从接口下方长出来，旁边正是根系一侧的标签；接口上方那枚刚展开的芽则靠近另一张来源标签。",
+      "她让志愿者先别按快门，把花盆转了半圈。新的构图里，嫁接口留在画面中央，两张标签分别出现在上、下两侧，那根最高的新枝也没有被裁掉。顾遥原来准备好的标题只有一句“新枝已经长出来了”，现在却显得太含糊：读者如果只看高度，根本不知道照片里最旺的枝条来自接口哪一边。",
+      "印刷因此推迟了一天。顾遥把新选的照片发给宣传同事，又在观察记录上写下上方萌芽的位置和日期。宣传同事把原来那张特写从版面里撤下，换上接口和两张标签都在画面中的照片，重新调整了标题的位置。",
+      "第二天下午，志愿者把新版展牌样张拿来。画面里最高的枝条仍然很显眼，但视线往下就能落到接口，再分别找到上下两张标签。顾遥把样张靠在花盆边比了一下。志愿者这次没有问哪根长得最快，只指着接口上方那枚芽说：“我们等的是这里，对吧？”顾遥把样张收进文件袋：“先把它从哪里长出来说清楚。”"
     ],
-    "conceptName": "Grafting and propagation",
+    "overallZh": "本篇用一株带清楚嫁接口和来源标签的教学样本说明嫁接与繁殖的一个入口：嫁接把接穗的芽或枝连接到相容砧木上，接穗形成上部生长部分，砧木提供根系；两部分通过愈合建立维管联系后成为一个可共同生长的植株系统，但仍保留各自来源的遗传身份。",
     "conceptNameZh": "嫁接与繁殖",
-    "explanationParagraphs": [
-      "Grafting joins a desired shoot or bud to a compatible rooted plant so healing and vascular continuity form, clonally preserving the scion genotype. The rootstock retains its own genes and influences vigour, adaptation, and aspects of performance. Seed propagation creates genetic recombination, while other propagation methods serve different purposes. Success also depends on compatibility, timing, hygiene, healthy material, traceability, and diversity management."
-    ],
     "explanationParagraphsZh": [
-      "嫁接把目标枝条或芽与相容的有根植株连接，使愈伤和维管组织连续，从而克隆保留接穗基因型；砧木仍保留自身基因，并影响树势、适应性和部分表现。种子繁殖会产生遗传重组，其他繁殖方法各有用途。成功还依赖亲和性、时机、卫生、健康材料、追踪和多样性管理。"
+      "本例中，嫁接口上方带有接穗来源标签，接口下方和根系一侧带有砧木来源标签，因此可以根据可见新枝从接口哪一侧萌出，判断这根枝条属于接穗还是砧木。接穗来自目标来源植株，并保留其来源品种的遗传身份；砧木保留自己的遗传身份并提供根系，也可能影响树势等整株表现。嫁接把两个部分连接起来，并不是像种子杂交那样把它们混成一个新的杂交遗传身份。",
+      "嫁接要让相容、健康的两部分愈合，形成能输送水分和养分的组织连接，也就是维管联系。Texas A&M指出，接穗有时会在连接尚未建立时先萌芽。萌芽、愈伤组织和持续生长都可作为观察线索，但一张外观照片不足以确认内部连接及其长期稳定；砧木萌蘖也不能作为接穗生长的证据。本例只用接口位置和已知来源标签判断新枝来源，长期连接仍需后续观察。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "先用嫁接口位置和来源标签判断可见新枝来自接穗还是砧木，再把枝条来源与嫁接连接是否长期建立分开判断。",
+      "diagramTitle": "为什么最高的新枝不能自动代表上部接穗已经成功生长",
+      "diagramSteps": [
+        "确认教学样本具有清楚的嫁接口以及上部接穗、下部砧木两个来源标签",
+        "沿最高新枝回查其萌出位置，发现它来自嫁接口下方的砧木一侧",
+        "观察接口上方另有一枚来自接穗一侧的新芽，并在照片中同时保留接口和两张标签",
+        "用来源位置区分接穗上部与砧木根部的作用，同时说明两者保持各自遗传身份",
+        "把早期萌芽与长期嫁接成功分开，后续仍需观察愈合、维管连接和持续生长"
+      ],
+      "diagramStepNotes": [
+        "枝条高度、叶色或长势本身不能替代接口位置与来源记录。",
+        "接口下方的新枝属于砧木一侧，不能用作接穗已经旺盛生长的证据。",
+        "接口上方萌芽可以帮助判断可见枝条来源，但萌芽本身还不能证明内部连接已经长期建立。",
+        "接穗通常保留来源植株的遗传身份，砧木也保留自身身份；嫁接不是种子杂交。",
+        "有效长期连接涉及相容性、健康、愈合和维管连续，照片或外观不能单独完成这一判断。"
+      ],
+      "mapping": [
+        "接口上方来源标签 → 接穗一侧及其来源身份。",
+        "接口下方根系标签 → 砧木一侧及其来源身份。",
+        "最高的新枝 → 从砧木一侧萌出的可见枝条，不代表接穗长势。",
+        "接口上方的新芽 → 来自接穗一侧的可见新生长，但不等于长期连接已确认。",
+        "主照片同时保留接口和两张标签 → 让观众先判断枝条来源，而不是只按外观猜测。"
+      ],
+      "boundary": "并非所有植物或所有接穗—砧木组合都能成功嫁接。长期成功需要相容性、健康材料、适当愈合并形成有效维管联系；早期萌芽、叶片展开、愈伤外观或照片都不能单独证明这一点。砧木可以影响树势等表现，因此也不能宣称嫁接后整株所有性状都只是接穗的简单复制，或果味、大小等一定不变。本篇不提供刀口尺寸、操作温湿度、时长、成活率、病害管理步骤或现实嫁接操作指导。",
+      "reflection": "如果新芽确定长在嫁接口上方，你已经能判断什么，又还不能据此判断什么？要讨论长期嫁接成功，还需要观察哪些变化？"
+    },
+    "referencesZh": [
+      {
+        "id": "mu-grafting-2022",
+        "citation": "University of Missouri Extension. (2022, August). Grafting (G6971), reviewed by David Trinklein.",
+        "url": "https://extension.missouri.edu/publications/g6971",
+        "use": "支持接穗形成植株上部、砧木提供根系，以及亲和性、形成层接触、健康与愈合对嫁接的重要性；同时支持嫁接通常不把接穗与砧木混成种子杂交产生的新遗传品种。本篇不据此保证所有组合成活、接口长期稳定或果实性状完全不变。"
+      },
+      {
+        "id": "tamu-hartmann-2020",
+        "citation": "Hartmann, T. (2020, May). Whip and Tongue Grafting (HORT-PU-169). Texas A&M AgriLife Extension.",
+        "url": "https://mytexas.ag.tamu.edu/publications/whip-and-tongue-grafting/",
+        "use": "支持接穗作为来源植株的遗传复制部分、愈合组织进一步形成维管连接，以及接穗可能在嫁接连接尚未建立时先出现萌芽、砧木自身也可能萌蘖；本篇只借用这些形态、连接和判断边界，不采用来源中的刀口、温湿度、时间或成活率作为操作建议，也不凭照片确认内部维管连续。"
+      }
+    ],
+    "title": "The Tallest Shoot in the Photograph",
+    "summary": "The propagation exhibit needs one main photograph before it can go to print. A volunteer picks the most vigorous new shoot, while Gu Yao crouches down to trace its origin.",
+    "storyParagraphs": [
+      "The community nursery is setting up a propagation exhibit the following week, and Gu Yao needs only one main photograph before the display panel can go to print. She deliberately chooses a teaching specimen on which the graft union is still clearly visible, with one source label attached to the upper shoot and another retained on the root side. On the day of the photo shoot, new growth has appeared on both sides, and the shoot below the union happens to be the tallest and most eye-catching.",
+      "The volunteer has already crouched down to find an angle, leaving only the vigorous shoot and one new leaf in the frame. “Let's use this one. It looks most like success.” Gu Yao does not answer. She follows the shoot all the way back to its point of origin. It emerges below the graft union, beside the label on the root side; the newly opening bud above the union sits near the other source label.",
+      "She asks the volunteer not to press the shutter yet and turns the pot halfway around. In the new composition, the graft union remains in the centre, the two labels appear above and below it, and the tallest new shoot is still visible rather than being cropped out. Gu Yao's original title had only said, “New growth has appeared.” Now it feels too vague: if readers look only at height, they have no way to know which side of the union produced the most vigorous shoot in the photograph.",
+      "Printing is delayed by one day. Gu Yao sends the new photograph to the communications colleague and adds the position and date of the upper bud to the observation record. The colleague removes the original close-up from the layout, replaces it with the image showing the union and both labels, and adjusts the title’s position.",
+      "The next afternoon, the volunteer brings over the revised display proof. The tallest shoot is still conspicuous in the image, but following it downward leads the eye to the union and then to the two labels above and below. Gu Yao holds the proof beside the pot. This time the volunteer does not ask which shoot is growing fastest. Instead, he points to the bud above the union. “This is the one we're waiting for, right?” Gu Yao slips the proof into the document pouch. “First make clear where it came from.”"
+    ],
+    "overall": "This article uses a teaching specimen with a clearly visible graft union and source labels to introduce one aspect of grafting and propagation: grafting connects a bud or shoot from a scion to a compatible rootstock. The scion forms the upper growth, while the rootstock provides the root system. After healing establishes vascular continuity, the two parts function together as one growing plant system while retaining the genetic identity of their respective sources.",
+    "conceptName": "Grafting and propagation",
+    "explanationParagraphs": [
+      "In this example, the area above the graft union carries the scion-source label, while the area below the union and the root side carries the rootstock-source label. The visible point from which a shoot emerges can therefore be used to determine whether that shoot belongs to the scion or the rootstock. The scion comes from the target source plant and retains the genetic identity of that source variety. The rootstock retains its own genetic identity and provides the root system, while also potentially influencing traits such as plant vigour. Grafting connects the two parts; it does not combine them into a new hybrid genetic identity in the way seed hybridization can.",
+      "Grafting requires compatible, healthy parts to heal and form connected tissues that transport water and nutrients: a vascular connection. Texas A&M notes that a scion may sprout before a graft connection is established. Bud emergence, callus tissue and sustained growth can provide useful observations, but one outward photograph cannot establish the internal connection or its long-term stability. A rootstock shoot is also not evidence of scion growth. This example uses the union position and known source labels only to identify new-shoot origin; a lasting connection still requires further observation."
+    ],
+    "module": {
+      "intro": "First use the graft-union position and source labels to determine whether a visible shoot comes from the scion or the rootstock, then keep shoot origin separate from whether a durable graft connection has been established.",
+      "diagramTitle": "Why Doesn't the Tallest New Shoot Automatically Show That the Upper Scion Has Successfully Established?",
+      "diagramSteps": [
+        "Confirm that the teaching specimen has a clear graft union and separate source labels for the upper scion and lower rootstock",
+        "Trace the tallest new shoot back to its point of emergence and find that it comes from the rootstock side below the graft union",
+        "Observe a separate bud above the union on the scion side and keep the union and both labels visible in the photograph",
+        "Use the source positions to distinguish the roles of the upper scion and the rootstock while recognizing that each retains its own genetic identity",
+        "Keep early bud emergence separate from long-term graft success and continue observing healing, vascular connection, and sustained growth"
+      ],
+      "diagramStepNotes": [
+        "Shoot height, leaf colour, or apparent vigour cannot substitute for graft-union position and source records.",
+        "A new shoot below the union belongs to the rootstock side and cannot serve as evidence that the scion is growing strongly.",
+        "A bud above the union can help identify visible growth as coming from the scion side, but bud emergence alone does not prove that an internal connection has been durably established.",
+        "The scion normally retains the genetic identity of its source plant, and the rootstock retains its own identity; grafting is not seed hybridization.",
+        "A durable functional connection involves compatibility, health, healing, and vascular continuity, none of which can be fully established from a photograph or outward appearance alone."
+      ],
+      "mapping": [
+        "Source label above the union → the scion side and its source identity.",
+        "Root-side label below the union → the rootstock side and its source identity.",
+        "Tallest new shoot → a visible shoot emerging from the rootstock side, not evidence of scion growth.",
+        "New bud above the union → visible new growth from the scion side, but not confirmation of a durable connection.",
+        "Main photograph showing the union and both labels → lets viewers first determine shoot origin instead of guessing from appearance alone."
+      ],
+      "boundary": "Not all plants or all scion-rootstock combinations can be grafted successfully. Long-term success requires compatibility, healthy material, appropriate healing, and the formation of an effective vascular connection. Early bud emergence, leaf expansion, the appearance of callus, or a photograph cannot by themselves prove that this has occurred. Rootstocks can also influence characteristics such as vigour, so grafting does not mean that every whole-plant trait is simply copied from the scion or that fruit flavour, size, or other traits must remain unchanged. This article provides no cut dimensions, temperature or humidity settings, timing, success rates, disease-management steps, or real-world grafting instructions.",
+      "reflection": "If a new bud definitely emerges above the graft union, what can you now identify, and what can you still not conclude from that alone? What further changes would you observe before discussing long-term graft success?"
+    },
+    "references": [
+      {
+        "id": "mu-grafting-2022",
+        "citation": "University of Missouri Extension. (2022, August). Grafting (G6971), reviewed by David Trinklein.",
+        "url": "https://extension.missouri.edu/publications/g6971",
+        "use": "Supports that the scion forms the upper part of the plant, the rootstock provides the root system, and compatibility, cambial contact, health, and healing are important to grafting. It also supports that grafting generally does not combine scion and rootstock into a new genetic variety in the manner of seed hybridization. This article does not use the source to guarantee that all combinations survive, that graft unions remain stable long term, or that fruit traits remain completely unchanged."
+      },
+      {
+        "id": "tamu-hartmann-2020",
+        "citation": "Hartmann, T. (2020, May). Whip and Tongue Grafting (HORT-PU-169). Texas A&M AgriLife Extension.",
+        "url": "https://mytexas.ag.tamu.edu/publications/whip-and-tongue-grafting/",
+        "use": "Supports the scion as a genetic copy of the source plant, healing tissue developing into a vascular connection, the possibility that a scion may begin to bud before a graft connection has been established, and the possibility of rootstock suckering. This article borrows only those morphological, connection, and judgment boundaries, does not use the source's cut dimensions, temperature, humidity, timing, or success rates as operating advice, and does not claim that a photograph can confirm internal vascular continuity."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "urban-agriculture-reader-first-25-preparation/group2-pdc-round3.json",
+      "edits": [
+        "urban-agriculture-reader-first-25-preparation/group2-edit-pass1-evidence.json",
+        "urban-agriculture-reader-first-25-preparation/group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13 perspectives; four real ordinary ChatGPT GPT-5.6 Sol High stages, explicitly user-authorized."
     },
     "collection": "field-core-fables",
-    "storyBody": "A botanical garden held an old pear tree whose fruit carried a faint honey aroma, a variety inherited from the owner's mother. Waterlogged roots weakened it each year, so the owner collected every seed and planted two rows of seedlings. Children resemble their mother, he thought; the old pear flavour was secure. A buyer offered to propagate the famous pear if the owner could supply identical trees within three years, adding a commercial deadline to the family memory.\n\nYears later, the young trees bore fruit. Some pears were sour, some hard, and some lacked fragrance; none exactly matched the old tree. The gardener explained that seed combines two genetic sources and reshuffles them. Preserving the same fruit could not rely on seed to copy its parent. She cut buds and short shoots from the remaining healthy branches and joined them to several compatible rooted young trees. The seedlings were valuable new variation, but they could not promise genetic identity with the parent.\n\nAt the bench, the gardener matched cut surfaces so living cambial regions met, bound the joint against drying, and labelled scion, rootstock, date, and source. Bud break alone did not prove lasting union; each tree was watched through wind, growth, and fruiting. One vigorous first-year graft later failed at an incompatible junction. The cut was made in the appropriate season, protected from drying, and inspected for callus and vascular connection before supports were removed.\n\nShe cleaned her knife between plants and labelled every source. Not every combination worked. One union healed poorly and broke in wind; one root kept the tree small, while another tolerated wet soil. The upper shoot retained the old pear variety, but the lower partner influenced vigour, fruiting time, and response to soil disease. Choosing several rootstocks cost uniformity and complicated orchard work, but one flood or disease response would no longer decide the fate of every clone. The failed combinations remained labelled in the nursery, preventing the next worker from repeating them as if silence meant success.\n\nThe owner did not keep only one replacement. He chose roots suited to different plots, preserved multiple copies, and continued using cuttings and seed for other plants so the whole garden did not share one genetic background. Diseased plants and tool hygiene were managed to avoid preserving a pathogen together with the variety. The third pear was cut and its flavour recorded only after the tree had carried a full season without union failure. The fruit matched the remembered flavour closely, but the owner kept records because rootstock and site could still influence size, timing, and condition. In the second year after the old tree fell, the first new tree carried three pears. The owner cut and tasted one, then left the other two among the leaves instead of picking them all.",
-    "storyBodyZh": "百果园有棵老梨树，果肉带一点蜂蜜香，是园主母亲留下的品种。树根受涝后逐年衰弱，园主急忙收下全部种子，种了两排小树。他相信孩子总会像母亲，老梨的味道已经保住。买家答应三年内若能提供同样果树便长期采购，让家族记忆又多了一道商业期限。\n\n几年后，小树陆续结果。有的酸，有的硬，有的香气全无，没有一棵完全像老树。园丁解释，种子由两份遗传来源形成，会重新组合；想保留同一结果，不能只等种子把原树复制出来。她从尚健康的枝上取下芽和短枝，接到几种相容的有根幼树上。实生苗带来有价值的新变异，却不能承诺与母树遗传相同。\n\n操作台上，园丁让切面形成层相接，绑紧接口防干，并标明接穗、砧木、日期与来源。芽萌发并不证明长久愈合，每株还要经历风、长势与结果观察；一株首年旺盛的嫁接树后来仍从不亲和接口断开。切口在合适季节完成并防止干燥，支撑拆除以前还要检查愈伤与维管连接。\n\n她的刀每换一棵树都清洁一次，每个来源也挂上标签。不是所有组合都成功：一株接口愈合不好，风来时折断；另一种根让树长得矮，第三种更能忍受湿土。上面的枝仍保留老梨品种，下面的根却会影响树势、结果时机和对土壤病害的反应。选多种砧木牺牲整齐，也增加管理复杂度，却不再让一次洪水或病害反应决定全部克隆的命运。失败组合仍带标签留在苗圃，免得后来者把沉默误作成功而重复。\n\n园主没有只留一株新树。他选择适合不同地块的根系，保留多份来源，继续用扦插和种子繁育其他植物，以免整个果园只有同一种遗传背景。病株和工具卫生也受到管理，防止保存品种时一并传播病害。第三只梨在接口完整承受一个季节以后才被切开，香味也随之记录。果味接近记忆，园主仍保留记录，因为砧木与地点还会影响大小、时期与状态。老梨树倒下后的第二年，第一棵新树结了三只梨。园主切开一只尝过，把另外两只放回枝叶间，没有急着摘完。",
-    "explanation": "Grafting joins a desired shoot or bud to a compatible rooted plant so healing and vascular continuity form, clonally preserving the scion genotype. The rootstock retains its own genes and influences vigour, adaptation, and aspects of performance. Seed propagation creates genetic recombination, while other propagation methods serve different purposes. Success also depends on compatibility, timing, hygiene, healthy material, traceability, and diversity management.",
-    "explanationZh": "嫁接把目标枝条或芽与相容的有根植株连接，使愈伤和维管组织连续，从而克隆保留接穗基因型；砧木仍保留自身基因，并影响树势、适应性和部分表现。种子繁殖会产生遗传重组，其他繁殖方法各有用途。成功还依赖亲和性、时机、卫生、健康材料、追踪和多样性管理。"
+    "storyBody": "The community nursery is setting up a propagation exhibit the following week, and Gu Yao needs only one main photograph before the display panel can go to print. She deliberately chooses a teaching specimen on which the graft union is still clearly visible, with one source label attached to the upper shoot and another retained on the root side. On the day of the photo shoot, new growth has appeared on both sides, and the shoot below the union happens to be the tallest and most eye-catching.\n\nThe volunteer has already crouched down to find an angle, leaving only the vigorous shoot and one new leaf in the frame. “Let's use this one. It looks most like success.” Gu Yao does not answer. She follows the shoot all the way back to its point of origin. It emerges below the graft union, beside the label on the root side; the newly opening bud above the union sits near the other source label.\n\nShe asks the volunteer not to press the shutter yet and turns the pot halfway around. In the new composition, the graft union remains in the centre, the two labels appear above and below it, and the tallest new shoot is still visible rather than being cropped out. Gu Yao's original title had only said, “New growth has appeared.” Now it feels too vague: if readers look only at height, they have no way to know which side of the union produced the most vigorous shoot in the photograph.\n\nPrinting is delayed by one day. Gu Yao sends the new photograph to the communications colleague and adds the position and date of the upper bud to the observation record. The colleague removes the original close-up from the layout, replaces it with the image showing the union and both labels, and adjusts the title’s position.\n\nThe next afternoon, the volunteer brings over the revised display proof. The tallest shoot is still conspicuous in the image, but following it downward leads the eye to the union and then to the two labels above and below. Gu Yao holds the proof beside the pot. This time the volunteer does not ask which shoot is growing fastest. Instead, he points to the bud above the union. “This is the one we're waiting for, right?” Gu Yao slips the proof into the document pouch. “First make clear where it came from.”",
+    "storyBodyZh": "社区苗圃下周要布置繁殖展，顾遥只差一张主照片就能把展牌送去印刷。她特意选了一株教学样本：嫁接口还看得清，上面的枝条挂着一张来源标签，根系一侧也留着另一张。拍摄当天，两边都冒出了新枝，偏偏接口下方那一根长得最高、最抢镜。\n\n志愿者已经蹲下来找角度，镜头里只剩那根旺枝和一片新叶。“用这一张吧，看起来最像成功。”顾遥没有回答，伸手顺着那根枝条一直找到它的起点。枝条从接口下方长出来，旁边正是根系一侧的标签；接口上方那枚刚展开的芽则靠近另一张来源标签。\n\n她让志愿者先别按快门，把花盆转了半圈。新的构图里，嫁接口留在画面中央，两张标签分别出现在上、下两侧，那根最高的新枝也没有被裁掉。顾遥原来准备好的标题只有一句“新枝已经长出来了”，现在却显得太含糊：读者如果只看高度，根本不知道照片里最旺的枝条来自接口哪一边。\n\n印刷因此推迟了一天。顾遥把新选的照片发给宣传同事，又在观察记录上写下上方萌芽的位置和日期。宣传同事把原来那张特写从版面里撤下，换上接口和两张标签都在画面中的照片，重新调整了标题的位置。\n\n第二天下午，志愿者把新版展牌样张拿来。画面里最高的枝条仍然很显眼，但视线往下就能落到接口，再分别找到上下两张标签。顾遥把样张靠在花盆边比了一下。志愿者这次没有问哪根长得最快，只指着接口上方那枚芽说：“我们等的是这里，对吧？”顾遥把样张收进文件袋：“先把它从哪里长出来说清楚。”",
+    "explanation": "In this example, the area above the graft union carries the scion-source label, while the area below the union and the root side carries the rootstock-source label. The visible point from which a shoot emerges can therefore be used to determine whether that shoot belongs to the scion or the rootstock. The scion comes from the target source plant and retains the genetic identity of that source variety. The rootstock retains its own genetic identity and provides the root system, while also potentially influencing traits such as plant vigour. Grafting connects the two parts; it does not combine them into a new hybrid genetic identity in the way seed hybridization can.\n\nGrafting requires compatible, healthy parts to heal and form connected tissues that transport water and nutrients: a vascular connection. Texas A&M notes that a scion may sprout before a graft connection is established. Bud emergence, callus tissue and sustained growth can provide useful observations, but one outward photograph cannot establish the internal connection or its long-term stability. A rootstock shoot is also not evidence of scion growth. This example uses the union position and known source labels only to identify new-shoot origin; a lasting connection still requires further observation.",
+    "explanationZh": "本例中，嫁接口上方带有接穗来源标签，接口下方和根系一侧带有砧木来源标签，因此可以根据可见新枝从接口哪一侧萌出，判断这根枝条属于接穗还是砧木。接穗来自目标来源植株，并保留其来源品种的遗传身份；砧木保留自己的遗传身份并提供根系，也可能影响树势等整株表现。嫁接把两个部分连接起来，并不是像种子杂交那样把它们混成一个新的杂交遗传身份。\n\n嫁接要让相容、健康的两部分愈合，形成能输送水分和养分的组织连接，也就是维管联系。Texas A&M指出，接穗有时会在连接尚未建立时先萌芽。萌芽、愈伤组织和持续生长都可作为观察线索，但一张外观照片不足以确认内部连接及其长期稳定；砧木萌蘖也不能作为接穗生长的证据。本例只用接口位置和已知来源标签判断新枝来源，长期连接仍需后续观察。"
   },
   {
     "id": "0812-microclimate",

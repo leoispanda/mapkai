@@ -1702,32 +1702,32 @@ export default {
   },
   "/concept-fables/0731-human-scale": {
     "zh": {
-      "title": "从塔顶看很完美的广场",
-      "description": "新广场从钟塔上看庄严对称，走在地面的人却要穿过三百步烈日，才能找到第一处树荫。"
+      "title": "入口前的两只花箱",
+      "description": "阅读节明天开场，花箱和桌椅都已摆好。周宁准备签字收工时，却在入口前遇见一辆过不去的婴儿车。"
     },
     "en": {
-      "title": "The Plaza That Looked Perfect from the Tower",
-      "description": "A new plaza looks majestic and symmetrical from the clock tower, while people on the ground cross three hundred sunlit paces before reaching shade."
+      "title": "The Two Planters by the Entrance",
+      "description": "The reading festival opens tomorrow, and the planters and tables are already in place. Zhou Ning is about to sign off on the setup when a stroller gets stuck near the entrance."
     }
   },
   "/concept-fables/0731-mixed-use-development": {
     "zh": {
-      "title": "一天只醒两次的城",
-      "description": "新城区把住宅、办公和商店分得井然有序，也因此每天只在两次通勤中挤满人，其余时间各自空着。"
+      "title": "回家前的三件事",
+      "description": "托育点、眼镜店和面包店都在家门口，陈禾却接连两天没能办完下班后的几件事。他带去观察会的，是一条绕了又绕的路线。"
     },
     "en": {
-      "title": "The District That Woke Twice a Day",
-      "description": "A new district separates homes, offices, and shops into perfect order, then fills only during two daily commutes while each zone sits empty in turn."
+      "title": "Three Errands on the Way Home",
+      "description": "The childcare centre, optical shop and bakery are all close to home, yet Chen He fails to finish his errands two evenings in a row. He brings the neighbourhood meeting a route full of detours."
     }
   },
   "/concept-fables/0731-adaptive-reuse": {
     "zh": {
-      "title": "第二次开门的车站",
-      "description": "铁路改线后，旧车站在拆除与封存之间空了十年，直到市场摊贩发现月台正好能遮住清晨的雨。"
+      "title": "旧厂房的新课表",
+      "description": "合作社想在旧印刷厂开学习厨房和手作课。许棠舍不得那排旧长桌，可把新课表放进旧房间，并不像换块招牌那么简单。"
     },
     "en": {
-      "title": "The Station's Second Opening",
-      "description": "After the railway moves, an old station stands ten years between demolition and preservation until market traders notice that its platform already shelters the morning rain."
+      "title": "A New Timetable for the Old Printing Works",
+      "description": "A cooperative wants to open a teaching kitchen and craft classroom in an old printing works. Xu Tang wants to keep the old worktables, but fitting the new timetable into the old rooms takes more than a new sign."
     }
   },
   "/concept-fables/0732-load-path": {
@@ -1752,22 +1752,22 @@ export default {
   },
   "/concept-fables/0732-infrastructure-life-cycle": {
     "zh": {
-      "title": "剪彩以后",
-      "description": "跨河大桥开幕时人人争着剪彩，随后十年，却没有人愿意为清一只排水口拍照。"
+      "title": "预算表右边的六列",
+      "description": "林澈今天要提交公共通道更新方案。较贵的方案会挤压今年的照明预算，维护负责人却让她再看一张表。"
     },
     "en": {
-      "title": "After the Ribbon Was Cut",
-      "description": "Everyone wants a photograph cutting the new river bridge's ribbon; for the next decade, no one wants one clearing its drains."
+      "title": "Six More Columns in the Budget",
+      "description": "Lin Che must submit a walkway upgrade plan today. The dearer option would squeeze this year’s lighting budget, but the maintenance manager asks her to look at another table."
     }
   },
   "/concept-fables/0811-nutrient-cycling": {
     "zh": {
-      "title": "总也填不满的田",
-      "description": "农场年年买更多肥料，坡上麦田仍越来越瘦，而坡下池塘却绿得看不见水面。"
+      "title": "十二枚磁片和一封邮件",
+      "description": "唐悠想省下半天课程准备时间，凭堆肥报告取消一次核查。写讲义时，一个问题让她停在了发送键前。"
     },
     "en": {
-      "title": "The Field That Never Filled",
-      "description": "A farm buys more fertilizer each year; the hillside wheat still weakens while the pond below turns green enough to hide its water."
+      "title": "Twelve Tokens and an Email",
+      "description": "Tang You hopes to save half a day of class preparation by using a compost report to cancel a check. While writing the handout, a question stops her before she sends the email."
     }
   },
   "/concept-fables/0811-integrated-pest-management": {
@@ -1792,12 +1792,12 @@ export default {
   },
   "/concept-fables/0812-grafting": {
     "zh": {
-      "title": "保住果味的那一刀",
-      "description": "老梨树将死，园主种下它的种子等着原味回来，几年后结出的梨却一棵一个样。"
+      "title": "照片里的最高枝",
+      "description": "繁殖展只差一张主照片就能送印。志愿者选中了最旺的新枝，顾遥却蹲下来寻找它的起点。"
     },
     "en": {
-      "title": "The Cut That Preserved the Flavour",
-      "description": "When an old pear tree begins to die, its owner plants the seeds expecting the same fruit; years later, every seedling bears something different."
+      "title": "The Tallest Shoot in the Photograph",
+      "description": "The propagation exhibit needs one main photograph before it can go to print. A volunteer picks the most vigorous new shoot, while Gu Yao crouches down to trace its origin."
     }
   },
   "/concept-fables/0812-microclimate": {

@@ -163,11 +163,11 @@ batch-011	07	0731	Architecture and town planning	建筑学与城市规划	2	0731
 batch-011	07	0731	Architecture and town planning	建筑学与城市规划	3	0731-adaptive-reuse	Adaptive reuse	适应性再利用	concept-fable	旧仓库的柱距拒绝成为新歌剧院却接住另一种生活	integrated
 batch-011	07	0732	Building and civil engineering	建筑与土木工程	1	0732-load-path	Load path	荷载路径	mechanism-explainer	屋顶上的雪必须沿每根梁柱找到大地	integrated
 batch-011	07	0732	Building and civil engineering	建筑与土木工程	2	0732-factor-of-safety	Factor of safety	安全系数	mechanism-explainer	只为平均河水设计的桥遇到罕见洪峰	integrated
-batch-011	07	0732	Building and civil engineering	建筑与土木工程	3	0732-infrastructure-life-cycle	Infrastructure life-cycle management	基础设施全生命周期管理	concept-fable	剪彩后无人再看桥底缓慢生长的锈迹	integrated
-batch-012	08	0811	Crop and livestock production	作物与畜牧生产	1	0811-nutrient-cycling	Nutrient cycling	养分循环	mechanism-fable	不断运走收成却从不归还土壤的农场	integrated
+batch-011	07	0732	Building and civil engineering	建筑与土木工程	3	0732-infrastructure-life-cycle	Infrastructure life-cycle management	基础设施全生命周期管理	mechanism-explainer	剪彩后无人再看桥底缓慢生长的锈迹	integrated
+batch-012	08	0811	Crop and livestock production	作物与畜牧生产	1	0811-nutrient-cycling	Nutrient cycling	养分循环	mechanism-explainer	不断运走收成却从不归还土壤的农场	integrated
 batch-012	08	0811	Crop and livestock production	作物与畜牧生产	2	0811-integrated-pest-management	Integrated pest management	综合虫害管理	concept-fable	杀光所有昆虫后害虫反而更快回来的果园	integrated
 batch-012	08	0811	Crop and livestock production	作物与畜牧生产	3	0811-selective-breeding-tradeoffs	Selective breeding trade-offs	选择育种的权衡	concept-fable	只追求最大果实后失去抗旱能力的种群	integrated
-batch-012	08	0812	Horticulture	园艺	1	0812-grafting	Grafting and propagation	嫁接与繁殖	mechanism-fable	一棵树的根与另一棵树的枝共同结果	integrated
+batch-012	08	0812	Horticulture	园艺	1	0812-grafting	Grafting and propagation	嫁接与繁殖	mechanism-explainer	一棵树的根与另一棵树的枝共同结果	integrated
 batch-012	08	0812	Horticulture	园艺	2	0812-microclimate	Microclimate	微气候	concept-fable	同一花园里靠墙与低洼处经历不同春天	integrated
 batch-012	08	0812	Horticulture	园艺	3	0812-phenology	Phenology	物候学	lens-fable	园丁不再只看日历而开始记录花与昆虫的时间	integrated
 batch-012	08	0821	Forestry	林业	1	0821-sustainable-yield	Sustainable yield	可持续采伐量	mechanism-fable	每年砍同样树数却逐渐透支不同年龄的森林	integrated

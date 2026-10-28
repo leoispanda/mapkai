@@ -8,43 +8,133 @@
       "fieldCode": "0811",
       "fieldTitle": "Crop and livestock production",
       "fieldTitleZh": "作物与畜牧生产",
-      "title": "The Field That Never Filled",
-      "titleZh": "总也填不满的田",
-      "summary": "A farm buys more fertilizer each year; the hillside wheat still weakens while the pond below turns green enough to hide its water.",
-      "summaryZh": "农场年年买更多肥料，坡上麦田仍越来越瘦，而坡下池塘却绿得看不见水面。",
-      "storyParagraphs": [
-        "Wheat ears at Stone Slope Farm shortened for three years. Owner Gu Rong bought more fertilizer each season and spread it all before spring planting, certain that anything missing from the soil could simply be added. Across the farm, cattle manure stood uncovered beside a ditch, most straw was burned after harvest, and carts of grain and milk continually left the gate. The extra fertiliser briefly greened the field and protected a bank payment, so increasing the dose looked more reliable than changing the whole farm routine.",
-        "After a storm, algae covered the pond below the slope while wheat at the top remained yellow. Gu pointed to the total ledger: more nutrients entered than the harvest removed. The agronomist first followed the rain rather than the sum. Fertilizer washed away before crops needed it, manure leached into the ditch, topsoil eroded from the slope, and some material left soil and manure as gas. The algae forced the farm to buy clean stock water, turning an off-field loss into an immediate operating cost.",
-        "She also sampled different parts of the fields. Some elements accumulated excessively at the foot of the slope while the crest was depleted. Other nutrients remained in the soil but in forms or seasons unavailable to wheat roots. A surplus across the whole farm did not mean every field and growth stage could obtain what it needed. They drew nitrogen and phosphorus flows separately for a full season, recording purchased feed and fertiliser, harvested grain and milk, stored manure, soil change, runoff, erosion, and estimated gaseous loss.",
-        "Gu pushed away the invoice for another large spring dose and spent the money on testing, covered storage, and split application.",
-        "The slower plan cost him an early-yield bonus, and he left one strip untreated as a comparison. Results showed that placement and timing raised uptake while lowering runoff; the budget was updated by field rather than farm total. Monthly budgets now compared inputs, harvested exports, soil tests, and estimated losses, while uncertainty was written as a range rather than hidden inside one balance.",
-        "The farm began storing manure properly, composting it, and returning it according to soil results. More straw stayed on the land or found another use. Fertilizer was split across periods of actual crop demand, while cover crops and buffer strips protected the slope and kept the pond from receiving every excess. Nutrients leaving in products still required replacement, but inputs now had timing and destination. Legume cover, manure composting, and mineral supplements were credited only for nutrients made available at relevant times, not for material merely present on the farm.",
-        "The following spring, the first manure cart did not take its usual road toward the ditch. Standing at the junction, Gu waved a flag and sent it uphill to the poorest field."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "十二枚磁片和一封邮件",
+      "summaryZh": "唐悠想省下半天课程准备时间，凭堆肥报告取消一次核查。写讲义时，一个问题让她停在了发送键前。",
       "storyParagraphsZh": [
-        "石坡农场连续三年麦穗变短。主人顾荣每年都多买肥料，春播前一次撒完，认定地里缺什么就补什么。农场另一边，牛粪堆在露天沟旁，收后的麦秸大半烧掉，卖出的谷物和牛奶则一车车离开。加肥曾短暂让麦苗返绿，也保住一笔银行还款，因此继续加量比改变整套农事看起来更可靠。",
-        "一场暴雨过后，坡下池塘浮满绿藻，坡顶麦苗却仍发黄。顾荣拿着总账说，买进来的养分明明比收成带走的更多。农艺师没有先看总数，而是沿着雨水走了一遍：肥料在作物需要前被冲走，粪堆渗入沟渠，表土从坡面流失，另有一部分从土壤和粪中变成气体离开。绿藻迫使农场另买洁净饮水，田外损失立刻变成经营成本。",
-        "她又在田间分区取土。坡脚某些元素积得过多，坡顶却已经耗竭；有些养分虽然仍在土里，所处形态和时节却不能被麦根利用。整个农场看似有余，并不代表每块地、每个生长阶段都拿得到。众人按整季分别画氮、磷流向，记录外购饲料与肥料、谷物和牛奶、粪肥库存、土壤变化、径流、侵蚀及估算气态损失。",
-        "顾荣推开再买一批春肥的账单，把钱投给检测、遮盖储粪与分次施用。",
-        "这套慢办法让他失去早产奖金，他还留下一条不处理的对照带。结果显示位置和时机提高吸收、减少径流；预算此后按地块更新，不再只看全场总数。月度预算同时比较投入、收获输出、土检与估算损失；不确定性写成范围，不再藏进一个总差额。",
-        "农场开始把粪肥妥善储存、堆制后按检测结果还田，麦秸更多留地或再利用。肥料分次施在作物真正需要的时期，坡地加了覆盖作物和缓冲带，池塘边不再成为多余养分的终点。卖出产品带走的部分仍需补充，但投入有了时间和去处。豆科覆盖、粪肥堆制与矿质补充，只有在相关时段真正可利用才计入，不能因材料留在农场就视为已供作物。",
-        "第二年春天，第一辆粪肥车没有照旧驶向沟边。顾荣站在岔路口挥旗，让车转上了最瘦的那片坡地。"
+        "屋顶农园准备换上春季课程用的一批展示盆，唐悠负责把课程材料和日程一起定下来。堆肥供应资料上列着总氮信息，她原本想据此取消已经排好的养分状态核查，把那半天留给别的课程准备。可她在写讲义时卡住了：报告告诉她“总共有多少”，却没有直接告诉她这些氮此刻有多少处在植物能够利用的形态。",
+        "她把取消核查的邮件留在草稿箱里，转去整理周末的课堂示意。桌上的堆肥样品和供应资料被放到一边。唐悠另外拿出十二枚磁片，在白板上画了三个框，写下“课堂模型”，再把磁片摆进去。",
+        "模型开始时，十二个氮单位被分成三处：土壤有机氮8单位、土壤中当期可利用的无机氮3单位、植株氮1单位。唐悠把其中2个单位从有机氮移到可利用氮，三个框变成6、5、1；接着又把1个单位从可利用氮移进植株，变成6、4、2。她每移动一次都重新数一遍，十二枚磁片一枚也没有增加。",
+        "她看着那十二枚磁片，又回到电脑前，把取消核查的邮件删掉了。她在日程上保留了那半天，把堆肥资料夹在核查安排后面。原本想提前完成的课程材料，只好留到下午继续做。",
+        "周末上课时，他们重新按8、3、1摆好磁片，先从土壤有机氮移2枚到可利用框，再由一个学生把1枚从“可利用”框移进“植株”框。此时“植株”里有2枚，另外两个框合起来还有10枚；他从头数到尾，抬头说：“还是十二个。”唐悠点点头，把真实展示盆推到白板旁边，却没有给它贴上那组数字：“这十二个是我们用来想清楚过程的，不是这盆土的化验单。”"
       ],
-      "conceptName": "Nutrient cycling",
+      "overallZh": "本篇用一次课程准备说明养分循环的一个小入口：元素可以在土壤有机物、植物可利用形态和生物体之间移动、转化和储存，因此土壤或堆肥中的总氮并不等于某一时刻植物可利用的氮。转化和吸收改变的是氮所在的形态和库，不会凭空创造新的氮。",
       "conceptNameZh": "养分循环",
-      "explanationParagraphs": [
-        "Nutrient cycling describes the movement, transformation, storage, reuse, and loss of essential elements among soil, organisms, products, water, and air. Totals for inputs and harvest removal are only a starting point. Chemical form, microbial processes, timing, location, erosion, drainage, and gaseous loss determine availability and environmental effects. A whole-farm balance can hide local depletion or excessive accumulation."
-      ],
       "explanationParagraphsZh": [
-        "养分循环描述必需元素在土壤、生物、产品、水和空气之间的移动、转化、储存、再利用与损失。投入与收成总量只是起点；化学形态、微生物过程、时间、位置、侵蚀、排水和气态损失决定作物能否利用及环境后果。农场整体平衡可能掩盖局部耗竭或过度累积。"
+        "12单位算例是一个与真实盆土分开的封闭教学时段模型，明确假设这一时段没有外部氮输入、输出或损失。三个账户互不重叠：土壤有机氮不计植株氮，土壤可利用库只计这里假设可被植物利用的无机氮，植株氮另计。开始分别为8、3、1，总量12；其中2单位由有机氮转到可利用氮后变为6、5、1，总量仍12；随后植物吸收1单位，可利用氮减少1、植株增加1，变成6、4、2，总量仍为12。这里的单位、转化量和顺序只是教学记账，不是实测值或真实矿化速率。",
+        "现实土壤中，有机氮能否以及多快转化为植物可利用形态，会受到材料性质、微生物活动和环境条件影响。开放农田还会有外部投入、收获带走、淋失和气态损失等路径。叶黄也可能与水分、温度、病害等因素有关，因此不能仅凭叶色或堆肥存在就判断植物当期缺氮或可利用氮充足；氮的这些过程也不能直接当作磷或所有元素完全相同的循环方式。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "先把“总共有多少氮”与“氮此时在哪个库、植物现在能利用多少”分开，再追踪一次转化和一次吸收。",
+        "diagramTitle": "为什么12单位氮移动了两次，总量仍然是12",
+        "diagramSteps": [
+          "建立一个无外部输入、输出或损失的封闭教学时段，总氮设为12单位",
+          "把12单位分进互不重叠的三库：土壤有机氮8、土壤可利用无机氮3、植株氮1",
+          "让2单位由有机氮转到可利用氮，得到6、5、1",
+          "再让植物从可利用氮库吸收1单位，得到6、4、2",
+          "重新相加得到6+4+2=12，并把这个模型与真实展示盆的未知状态分开"
+        ],
+        "diagramStepNotes": [
+          "封闭条件只是为了追踪元素守恒的教学简化，现实农田通常存在输入、输出和损失。",
+          "总氮12不等于可利用氮12；开始时本模型中可利用库只有3单位。",
+          "2单位发生的是库和形态变化，不是新增2单位氮，也不代表现实固定矿化比例。",
+          "植物吸收后植株库从1增到2，可利用库从5减到4，因此植株外其余两个库合计为10。",
+          "真实盆土的总量、形态和转化速率需要实际信息，本模型不能替代实测或农事判断。"
+        ],
+        "mapping": [
+          "土壤有机氮8→6 → 教学模型中一部分氮从有机库转出。",
+          "可利用氮3→5→4 → 先接受2单位转化，再被植物吸收1单位。",
+          "植株氮1→2 → 植物从可利用库获得1单位氮。",
+          "总量始终12 → 在封闭教学时段内，转化和吸收没有创造或消灭氮。",
+          "保留养分状态核查 → 不用总氮信息替代植物当期可利用状态的问题。"
+        ],
+        "boundary": "本篇只用氮展示养分循环中的一个小机制。总氮不等于植物当期可利用氮，有机氮转化需要合适的材料、环境和微生物条件。12单位模型明确假设一个封闭时段内无外部输入、输出或损失，不能当成真实盆土、农田数据、矿化速率或施肥依据。现实系统还会有收获带走、淋失、气态损失等路径，氮与磷等元素的循环机制也不能简单视为完全相同。",
+        "reflection": "如果有人在这个模型中从外部加入2个氮单位，总量还应固定为12吗？你会怎样记录外部输入，并继续区分总量与当期可利用量？"
+      },
+      "referencesZh": [
+        {
+          "id": "umn-soil-organic",
+          "citation": "University of Minnesota Extension. (n.d.). Soil organic matter in cropping systems.",
+          "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/soil-organic-matter-in-cropping-systems",
+          "use": "支持有机物分解及微生物矿化、固定等过程会影响氮的形态与植物可利用性，并且转化速度受材料和环境条件影响；本篇只以氮为入口，不把虚构12单位模型或其中2单位转化当作来源数据或通用释放比例。"
+        },
+        {
+          "id": "mda-nitrogen",
+          "citation": "Minnesota Department of Agriculture. (n.d.). Nitrogen Management.",
+          "url": "https://www.mda.state.mn.us/chemicals/fertilizers/nutrient-mgmt/nitrogenplan/nitrogenmgmt",
+          "use": "支持氮在有机形态、无机可利用形态和植物之间发生转化与吸收，同时现实农业系统还存在收获带走、淋失和气态损失等路径；本篇不据此提供施肥剂量、真实田间数值或产量保证。"
+        }
+      ],
+      "title": "Twelve Tokens and an Email",
+      "summary": "Tang You hopes to save half a day of class preparation by using a compost report to cancel a check. While writing the handout, a question stops her before she sends the email.",
+      "storyParagraphs": [
+        "The rooftop garden is preparing a new set of display pots for its spring classes, and Tang You is responsible for finalizing both the teaching materials and the schedule. The compost supplier's documentation includes total-nitrogen information, and she originally plans to use that to cancel an already scheduled nutrient-status check and free up half a day for other course preparation. But while writing the handout, she stops: the report tells her 'how much there is in total,' not directly how much of that nitrogen is currently in forms the plants can use.",
+        "She leaves the cancellation email in her drafts and turns to preparing the weekend classroom demonstration. She sets the compost sample and supplier documentation to one side. Then she takes out twelve magnetic tokens, draws three boxes on the whiteboard, writes “classroom model” above them, and puts the tokens in place.",
+        "At the start of the model, the twelve nitrogen units are divided among three places: 8 units in soil organic nitrogen, 3 in currently plant-available mineral nitrogen in the soil, and 1 in the plant. Tang You moves 2 units from organic nitrogen to the available-nitrogen box, giving 6, 5, 1. Then she moves 1 unit from available nitrogen into the plant, giving 6, 4, 2. Each time she moves the tokens, she counts again; not one of the twelve tokens has been added.",
+        "She looks at the twelve tokens, returns to her computer, and deletes the cancellation email. She keeps the half-day appointment in the schedule and files the compost documentation behind the check arrangements. The teaching materials she had hoped to finish early will have to wait until the afternoon.",
+        "During the weekend class, they reset the tokens to 8, 3, 1. First they move 2 from soil organic nitrogen into the available box, then a student moves 1 from 'available' into 'plant'. There are now 2 tokens in 'plant' and 10 in the other two boxes combined. He counts from the beginning and looks up: “Still twelve.” Tang You nods and wheels the real display pot beside the whiteboard without attaching those numbers to it. “These twelve help us think through the process. They are not a laboratory report for this pot.”"
+      ],
+      "overall": "This article uses one course-preparation decision to introduce a small entry point into nutrient cycling: an element can move, transform, and be stored among soil organic matter, plant-available forms, and living organisms, so total nitrogen in soil or compost is not the same as the amount of nitrogen available to plants at a particular moment. Transformation and uptake change the form and pool in which nitrogen resides; they do not create new nitrogen from nothing.",
+      "conceptName": "Nutrient cycling",
+      "explanationParagraphs": [
+        "The 12-unit example is a closed teaching-period model kept separate from the real potting material. It explicitly assumes that during this period there are no external nitrogen inputs, outputs, or losses. The three accounts do not overlap: soil organic nitrogen excludes plant nitrogen, the soil available pool contains mineral nitrogen assumed available to the plant, and plant nitrogen is counted separately. They begin at 8, 3, and 1 units respectively, totaling 12. When 2 units move from organic nitrogen to available nitrogen, the state becomes 6, 5, 1 and still totals 12. The plant then takes up 1 unit, so available nitrogen decreases by 1 and plant nitrogen increases by 1, giving 6, 4, 2, again totaling 12. The units, conversion amount, and sequence are teaching bookkeeping, not measured values or a real mineralization rate.",
+        "In real soil, whether and how quickly organic nitrogen becomes plant-available depends on material properties, microbial activity, and environmental conditions. Open agricultural systems also include pathways such as external inputs, nitrogen removal through harvest, leaching, and gaseous losses. Yellow leaves may also result from water conditions, temperature, disease, or other factors, so leaf colour or the presence of compost alone cannot determine whether a plant is currently nitrogen-deficient or has sufficient available nitrogen. These nitrogen processes also should not be assumed to operate identically for phosphorus or every other element."
+      ],
+      "module": {
+        "intro": "First separate 'how much nitrogen exists in total' from 'which pool it is in now and how much plants can currently use,' then trace one conversion and one uptake step.",
+        "diagramTitle": "Why Does the Total Stay at 12 Even After the 12 Nitrogen Units Move Twice?",
+        "diagramSteps": [
+          "Set up a closed teaching period with no external inputs, outputs, or losses and define total nitrogen as 12 units",
+          "Divide 12 units among three non-overlapping pools: soil organic nitrogen 8, soil available mineral nitrogen 3, and plant nitrogen 1",
+          "Move 2 units from organic nitrogen to available nitrogen, producing 6, 5, 1",
+          "Then let the plant take up 1 unit from the available pool, producing 6, 4, 2",
+          "Add the pools again to obtain 6+4+2=12 and keep this model separate from the unknown state of the real display pot"
+        ],
+        "diagramStepNotes": [
+          "The closed condition is only a teaching simplification for tracking conservation of the element; real agricultural systems usually have inputs, outputs, and losses.",
+          "Total nitrogen of 12 does not mean 12 units are plant-available; at the beginning of this model, only 3 units are in the available pool.",
+          "The 2 units undergo a change of pool and form; they are not 2 newly created units of nitrogen and do not represent a universal real-world mineralization proportion.",
+          "After plant uptake, the plant pool rises from 1 to 2 while the available pool falls from 5 to 4, so the two pools outside the plant together contain 10.",
+          "The real pot's total amount, forms, and transformation rates require actual information; this model cannot substitute for measurement or agronomic judgment."
+        ],
+        "mapping": [
+          "Soil organic nitrogen 8→6 → part of the nitrogen moves out of the organic pool in the teaching model.",
+          "Available nitrogen 3→5→4 → the pool first receives 2 units from conversion and then loses 1 unit to plant uptake.",
+          "Plant nitrogen 1→2 → the plant receives 1 unit from the available pool.",
+          "Total always 12 → within the closed teaching period, conversion and uptake neither create nor destroy nitrogen.",
+          "Keeping the nutrient-status check → not using total-nitrogen information as a substitute for the question of current plant availability."
+        ],
+        "boundary": "This article uses nitrogen only to illustrate one small mechanism within nutrient cycling. Total nitrogen is not the same as nitrogen currently available to plants, and conversion of organic nitrogen requires suitable material, environmental, and microbial conditions. The 12-unit model explicitly assumes a closed period with no external inputs, outputs, or losses and cannot be treated as real potting-soil data, field data, a mineralization rate, or a fertilization basis. Real systems also include removal through harvest, leaching, gaseous losses, and other pathways, and the cycling mechanisms of nitrogen and phosphorus or other elements should not be treated as identical.",
+        "reflection": "If someone adds 2 nitrogen units from outside this model, should the total still stay at 12? How would you record that input while continuing to distinguish total nitrogen from nitrogen currently available to plants?"
+      },
+      "references": [
+        {
+          "id": "umn-soil-organic",
+          "citation": "University of Minnesota Extension. (n.d.). Soil organic matter in cropping systems.",
+          "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/soil-organic-matter-in-cropping-systems",
+          "use": "Supports that organic-matter decomposition and microbial processes such as mineralization and immobilization affect nitrogen forms and plant availability, and that transformation rates depend on material and environmental conditions. This article uses nitrogen only as an entry point and does not treat the fictional 12-unit model or the 2-unit conversion as source data or a universal release proportion."
+        },
+        {
+          "id": "mda-nitrogen",
+          "citation": "Minnesota Department of Agriculture. (n.d.). Nitrogen Management.",
+          "url": "https://www.mda.state.mn.us/chemicals/fertilizers/nutrient-mgmt/nitrogenplan/nitrogenmgmt",
+          "use": "Supports nitrogen transformation and uptake among organic forms, inorganic plant-available forms, and plants, while real agricultural systems also include pathways such as harvest removal, leaching, and gaseous loss. This article does not use the source to provide fertilizer rates, real field values, or yield guarantees."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "urban-agriculture-reader-first-25-preparation/group2-pdc-round3.json",
+        "edits": [
+          "urban-agriculture-reader-first-25-preparation/group2-edit-pass1-evidence.json",
+          "urban-agriculture-reader-first-25-preparation/group2-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13 perspectives; four real ordinary ChatGPT GPT-5.6 Sol High stages, explicitly user-authorized."
       }
     },
     {
@@ -142,39 +232,133 @@
       "fieldCode": "0812",
       "fieldTitle": "Horticulture",
       "fieldTitleZh": "园艺",
-      "title": "The Cut That Preserved the Flavour",
-      "titleZh": "保住果味的那一刀",
-      "summary": "When an old pear tree begins to die, its owner plants the seeds expecting the same fruit; years later, every seedling bears something different.",
-      "summaryZh": "老梨树将死，园主种下它的种子等着原味回来，几年后结出的梨却一棵一个样。",
-      "storyParagraphs": [
-        "A botanical garden held an old pear tree whose fruit carried a faint honey aroma, a variety inherited from the owner's mother. Waterlogged roots weakened it each year, so the owner collected every seed and planted two rows of seedlings. Children resemble their mother, he thought; the old pear flavour was secure. A buyer offered to propagate the famous pear if the owner could supply identical trees within three years, adding a commercial deadline to the family memory.",
-        "Years later, the young trees bore fruit. Some pears were sour, some hard, and some lacked fragrance; none exactly matched the old tree. The gardener explained that seed combines two genetic sources and reshuffles them. Preserving the same fruit could not rely on seed to copy its parent. She cut buds and short shoots from the remaining healthy branches and joined them to several compatible rooted young trees. The seedlings were valuable new variation, but they could not promise genetic identity with the parent.",
-        "At the bench, the gardener matched cut surfaces so living cambial regions met, bound the joint against drying, and labelled scion, rootstock, date, and source. Bud break alone did not prove lasting union; each tree was watched through wind, growth, and fruiting. One vigorous first-year graft later failed at an incompatible junction. The cut was made in the appropriate season, protected from drying, and inspected for callus and vascular connection before supports were removed.",
-        "She cleaned her knife between plants and labelled every source. Not every combination worked. One union healed poorly and broke in wind; one root kept the tree small, while another tolerated wet soil. The upper shoot retained the old pear variety, but the lower partner influenced vigour, fruiting time, and response to soil disease. Choosing several rootstocks cost uniformity and complicated orchard work, but one flood or disease response would no longer decide the fate of every clone. The failed combinations remained labelled in the nursery, preventing the next worker from repeating them as if silence meant success.",
-        "The owner did not keep only one replacement. He chose roots suited to different plots, preserved multiple copies, and continued using cuttings and seed for other plants so the whole garden did not share one genetic background. Diseased plants and tool hygiene were managed to avoid preserving a pathogen together with the variety. The third pear was cut and its flavour recorded only after the tree had carried a full season without union failure. The fruit matched the remembered flavour closely, but the owner kept records because rootstock and site could still influence size, timing, and condition. In the second year after the old tree fell, the first new tree carried three pears. The owner cut and tasted one, then left the other two among the leaves instead of picking them all."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "照片里的最高枝",
+      "summaryZh": "繁殖展只差一张主照片就能送印。志愿者选中了最旺的新枝，顾遥却蹲下来寻找它的起点。",
       "storyParagraphsZh": [
-        "百果园有棵老梨树，果肉带一点蜂蜜香，是园主母亲留下的品种。树根受涝后逐年衰弱，园主急忙收下全部种子，种了两排小树。他相信孩子总会像母亲，老梨的味道已经保住。买家答应三年内若能提供同样果树便长期采购，让家族记忆又多了一道商业期限。",
-        "几年后，小树陆续结果。有的酸，有的硬，有的香气全无，没有一棵完全像老树。园丁解释，种子由两份遗传来源形成，会重新组合；想保留同一结果，不能只等种子把原树复制出来。她从尚健康的枝上取下芽和短枝，接到几种相容的有根幼树上。实生苗带来有价值的新变异，却不能承诺与母树遗传相同。",
-        "操作台上，园丁让切面形成层相接，绑紧接口防干，并标明接穗、砧木、日期与来源。芽萌发并不证明长久愈合，每株还要经历风、长势与结果观察；一株首年旺盛的嫁接树后来仍从不亲和接口断开。切口在合适季节完成并防止干燥，支撑拆除以前还要检查愈伤与维管连接。",
-        "她的刀每换一棵树都清洁一次，每个来源也挂上标签。不是所有组合都成功：一株接口愈合不好，风来时折断；另一种根让树长得矮，第三种更能忍受湿土。上面的枝仍保留老梨品种，下面的根却会影响树势、结果时机和对土壤病害的反应。选多种砧木牺牲整齐，也增加管理复杂度，却不再让一次洪水或病害反应决定全部克隆的命运。失败组合仍带标签留在苗圃，免得后来者把沉默误作成功而重复。",
-        "园主没有只留一株新树。他选择适合不同地块的根系，保留多份来源，继续用扦插和种子繁育其他植物，以免整个果园只有同一种遗传背景。病株和工具卫生也受到管理，防止保存品种时一并传播病害。第三只梨在接口完整承受一个季节以后才被切开，香味也随之记录。果味接近记忆，园主仍保留记录，因为砧木与地点还会影响大小、时期与状态。老梨树倒下后的第二年，第一棵新树结了三只梨。园主切开一只尝过，把另外两只放回枝叶间，没有急着摘完。"
+        "社区苗圃下周要布置繁殖展，顾遥只差一张主照片就能把展牌送去印刷。她特意选了一株教学样本：嫁接口还看得清，上面的枝条挂着一张来源标签，根系一侧也留着另一张。拍摄当天，两边都冒出了新枝，偏偏接口下方那一根长得最高、最抢镜。",
+        "志愿者已经蹲下来找角度，镜头里只剩那根旺枝和一片新叶。“用这一张吧，看起来最像成功。”顾遥没有回答，伸手顺着那根枝条一直找到它的起点。枝条从接口下方长出来，旁边正是根系一侧的标签；接口上方那枚刚展开的芽则靠近另一张来源标签。",
+        "她让志愿者先别按快门，把花盆转了半圈。新的构图里，嫁接口留在画面中央，两张标签分别出现在上、下两侧，那根最高的新枝也没有被裁掉。顾遥原来准备好的标题只有一句“新枝已经长出来了”，现在却显得太含糊：读者如果只看高度，根本不知道照片里最旺的枝条来自接口哪一边。",
+        "印刷因此推迟了一天。顾遥把新选的照片发给宣传同事，又在观察记录上写下上方萌芽的位置和日期。宣传同事把原来那张特写从版面里撤下，换上接口和两张标签都在画面中的照片，重新调整了标题的位置。",
+        "第二天下午，志愿者把新版展牌样张拿来。画面里最高的枝条仍然很显眼，但视线往下就能落到接口，再分别找到上下两张标签。顾遥把样张靠在花盆边比了一下。志愿者这次没有问哪根长得最快，只指着接口上方那枚芽说：“我们等的是这里，对吧？”顾遥把样张收进文件袋：“先把它从哪里长出来说清楚。”"
       ],
-      "conceptName": "Grafting and propagation",
+      "overallZh": "本篇用一株带清楚嫁接口和来源标签的教学样本说明嫁接与繁殖的一个入口：嫁接把接穗的芽或枝连接到相容砧木上，接穗形成上部生长部分，砧木提供根系；两部分通过愈合建立维管联系后成为一个可共同生长的植株系统，但仍保留各自来源的遗传身份。",
       "conceptNameZh": "嫁接与繁殖",
-      "explanationParagraphs": [
-        "Grafting joins a desired shoot or bud to a compatible rooted plant so healing and vascular continuity form, clonally preserving the scion genotype. The rootstock retains its own genes and influences vigour, adaptation, and aspects of performance. Seed propagation creates genetic recombination, while other propagation methods serve different purposes. Success also depends on compatibility, timing, hygiene, healthy material, traceability, and diversity management."
-      ],
       "explanationParagraphsZh": [
-        "嫁接把目标枝条或芽与相容的有根植株连接，使愈伤和维管组织连续，从而克隆保留接穗基因型；砧木仍保留自身基因，并影响树势、适应性和部分表现。种子繁殖会产生遗传重组，其他繁殖方法各有用途。成功还依赖亲和性、时机、卫生、健康材料、追踪和多样性管理。"
+        "本例中，嫁接口上方带有接穗来源标签，接口下方和根系一侧带有砧木来源标签，因此可以根据可见新枝从接口哪一侧萌出，判断这根枝条属于接穗还是砧木。接穗来自目标来源植株，并保留其来源品种的遗传身份；砧木保留自己的遗传身份并提供根系，也可能影响树势等整株表现。嫁接把两个部分连接起来，并不是像种子杂交那样把它们混成一个新的杂交遗传身份。",
+        "嫁接要让相容、健康的两部分愈合，形成能输送水分和养分的组织连接，也就是维管联系。Texas A&M指出，接穗有时会在连接尚未建立时先萌芽。萌芽、愈伤组织和持续生长都可作为观察线索，但一张外观照片不足以确认内部连接及其长期稳定；砧木萌蘖也不能作为接穗生长的证据。本例只用接口位置和已知来源标签判断新枝来源，长期连接仍需后续观察。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "先用嫁接口位置和来源标签判断可见新枝来自接穗还是砧木，再把枝条来源与嫁接连接是否长期建立分开判断。",
+        "diagramTitle": "为什么最高的新枝不能自动代表上部接穗已经成功生长",
+        "diagramSteps": [
+          "确认教学样本具有清楚的嫁接口以及上部接穗、下部砧木两个来源标签",
+          "沿最高新枝回查其萌出位置，发现它来自嫁接口下方的砧木一侧",
+          "观察接口上方另有一枚来自接穗一侧的新芽，并在照片中同时保留接口和两张标签",
+          "用来源位置区分接穗上部与砧木根部的作用，同时说明两者保持各自遗传身份",
+          "把早期萌芽与长期嫁接成功分开，后续仍需观察愈合、维管连接和持续生长"
+        ],
+        "diagramStepNotes": [
+          "枝条高度、叶色或长势本身不能替代接口位置与来源记录。",
+          "接口下方的新枝属于砧木一侧，不能用作接穗已经旺盛生长的证据。",
+          "接口上方萌芽可以帮助判断可见枝条来源，但萌芽本身还不能证明内部连接已经长期建立。",
+          "接穗通常保留来源植株的遗传身份，砧木也保留自身身份；嫁接不是种子杂交。",
+          "有效长期连接涉及相容性、健康、愈合和维管连续，照片或外观不能单独完成这一判断。"
+        ],
+        "mapping": [
+          "接口上方来源标签 → 接穗一侧及其来源身份。",
+          "接口下方根系标签 → 砧木一侧及其来源身份。",
+          "最高的新枝 → 从砧木一侧萌出的可见枝条，不代表接穗长势。",
+          "接口上方的新芽 → 来自接穗一侧的可见新生长，但不等于长期连接已确认。",
+          "主照片同时保留接口和两张标签 → 让观众先判断枝条来源，而不是只按外观猜测。"
+        ],
+        "boundary": "并非所有植物或所有接穗—砧木组合都能成功嫁接。长期成功需要相容性、健康材料、适当愈合并形成有效维管联系；早期萌芽、叶片展开、愈伤外观或照片都不能单独证明这一点。砧木可以影响树势等表现，因此也不能宣称嫁接后整株所有性状都只是接穗的简单复制，或果味、大小等一定不变。本篇不提供刀口尺寸、操作温湿度、时长、成活率、病害管理步骤或现实嫁接操作指导。",
+        "reflection": "如果新芽确定长在嫁接口上方，你已经能判断什么，又还不能据此判断什么？要讨论长期嫁接成功，还需要观察哪些变化？"
+      },
+      "referencesZh": [
+        {
+          "id": "mu-grafting-2022",
+          "citation": "University of Missouri Extension. (2022, August). Grafting (G6971), reviewed by David Trinklein.",
+          "url": "https://extension.missouri.edu/publications/g6971",
+          "use": "支持接穗形成植株上部、砧木提供根系，以及亲和性、形成层接触、健康与愈合对嫁接的重要性；同时支持嫁接通常不把接穗与砧木混成种子杂交产生的新遗传品种。本篇不据此保证所有组合成活、接口长期稳定或果实性状完全不变。"
+        },
+        {
+          "id": "tamu-hartmann-2020",
+          "citation": "Hartmann, T. (2020, May). Whip and Tongue Grafting (HORT-PU-169). Texas A&M AgriLife Extension.",
+          "url": "https://mytexas.ag.tamu.edu/publications/whip-and-tongue-grafting/",
+          "use": "支持接穗作为来源植株的遗传复制部分、愈合组织进一步形成维管连接，以及接穗可能在嫁接连接尚未建立时先出现萌芽、砧木自身也可能萌蘖；本篇只借用这些形态、连接和判断边界，不采用来源中的刀口、温湿度、时间或成活率作为操作建议，也不凭照片确认内部维管连续。"
+        }
+      ],
+      "title": "The Tallest Shoot in the Photograph",
+      "summary": "The propagation exhibit needs one main photograph before it can go to print. A volunteer picks the most vigorous new shoot, while Gu Yao crouches down to trace its origin.",
+      "storyParagraphs": [
+        "The community nursery is setting up a propagation exhibit the following week, and Gu Yao needs only one main photograph before the display panel can go to print. She deliberately chooses a teaching specimen on which the graft union is still clearly visible, with one source label attached to the upper shoot and another retained on the root side. On the day of the photo shoot, new growth has appeared on both sides, and the shoot below the union happens to be the tallest and most eye-catching.",
+        "The volunteer has already crouched down to find an angle, leaving only the vigorous shoot and one new leaf in the frame. “Let's use this one. It looks most like success.” Gu Yao does not answer. She follows the shoot all the way back to its point of origin. It emerges below the graft union, beside the label on the root side; the newly opening bud above the union sits near the other source label.",
+        "She asks the volunteer not to press the shutter yet and turns the pot halfway around. In the new composition, the graft union remains in the centre, the two labels appear above and below it, and the tallest new shoot is still visible rather than being cropped out. Gu Yao's original title had only said, “New growth has appeared.” Now it feels too vague: if readers look only at height, they have no way to know which side of the union produced the most vigorous shoot in the photograph.",
+        "Printing is delayed by one day. Gu Yao sends the new photograph to the communications colleague and adds the position and date of the upper bud to the observation record. The colleague removes the original close-up from the layout, replaces it with the image showing the union and both labels, and adjusts the title’s position.",
+        "The next afternoon, the volunteer brings over the revised display proof. The tallest shoot is still conspicuous in the image, but following it downward leads the eye to the union and then to the two labels above and below. Gu Yao holds the proof beside the pot. This time the volunteer does not ask which shoot is growing fastest. Instead, he points to the bud above the union. “This is the one we're waiting for, right?” Gu Yao slips the proof into the document pouch. “First make clear where it came from.”"
+      ],
+      "overall": "This article uses a teaching specimen with a clearly visible graft union and source labels to introduce one aspect of grafting and propagation: grafting connects a bud or shoot from a scion to a compatible rootstock. The scion forms the upper growth, while the rootstock provides the root system. After healing establishes vascular continuity, the two parts function together as one growing plant system while retaining the genetic identity of their respective sources.",
+      "conceptName": "Grafting and propagation",
+      "explanationParagraphs": [
+        "In this example, the area above the graft union carries the scion-source label, while the area below the union and the root side carries the rootstock-source label. The visible point from which a shoot emerges can therefore be used to determine whether that shoot belongs to the scion or the rootstock. The scion comes from the target source plant and retains the genetic identity of that source variety. The rootstock retains its own genetic identity and provides the root system, while also potentially influencing traits such as plant vigour. Grafting connects the two parts; it does not combine them into a new hybrid genetic identity in the way seed hybridization can.",
+        "Grafting requires compatible, healthy parts to heal and form connected tissues that transport water and nutrients: a vascular connection. Texas A&M notes that a scion may sprout before a graft connection is established. Bud emergence, callus tissue and sustained growth can provide useful observations, but one outward photograph cannot establish the internal connection or its long-term stability. A rootstock shoot is also not evidence of scion growth. This example uses the union position and known source labels only to identify new-shoot origin; a lasting connection still requires further observation."
+      ],
+      "module": {
+        "intro": "First use the graft-union position and source labels to determine whether a visible shoot comes from the scion or the rootstock, then keep shoot origin separate from whether a durable graft connection has been established.",
+        "diagramTitle": "Why Doesn't the Tallest New Shoot Automatically Show That the Upper Scion Has Successfully Established?",
+        "diagramSteps": [
+          "Confirm that the teaching specimen has a clear graft union and separate source labels for the upper scion and lower rootstock",
+          "Trace the tallest new shoot back to its point of emergence and find that it comes from the rootstock side below the graft union",
+          "Observe a separate bud above the union on the scion side and keep the union and both labels visible in the photograph",
+          "Use the source positions to distinguish the roles of the upper scion and the rootstock while recognizing that each retains its own genetic identity",
+          "Keep early bud emergence separate from long-term graft success and continue observing healing, vascular connection, and sustained growth"
+        ],
+        "diagramStepNotes": [
+          "Shoot height, leaf colour, or apparent vigour cannot substitute for graft-union position and source records.",
+          "A new shoot below the union belongs to the rootstock side and cannot serve as evidence that the scion is growing strongly.",
+          "A bud above the union can help identify visible growth as coming from the scion side, but bud emergence alone does not prove that an internal connection has been durably established.",
+          "The scion normally retains the genetic identity of its source plant, and the rootstock retains its own identity; grafting is not seed hybridization.",
+          "A durable functional connection involves compatibility, health, healing, and vascular continuity, none of which can be fully established from a photograph or outward appearance alone."
+        ],
+        "mapping": [
+          "Source label above the union → the scion side and its source identity.",
+          "Root-side label below the union → the rootstock side and its source identity.",
+          "Tallest new shoot → a visible shoot emerging from the rootstock side, not evidence of scion growth.",
+          "New bud above the union → visible new growth from the scion side, but not confirmation of a durable connection.",
+          "Main photograph showing the union and both labels → lets viewers first determine shoot origin instead of guessing from appearance alone."
+        ],
+        "boundary": "Not all plants or all scion-rootstock combinations can be grafted successfully. Long-term success requires compatibility, healthy material, appropriate healing, and the formation of an effective vascular connection. Early bud emergence, leaf expansion, the appearance of callus, or a photograph cannot by themselves prove that this has occurred. Rootstocks can also influence characteristics such as vigour, so grafting does not mean that every whole-plant trait is simply copied from the scion or that fruit flavour, size, or other traits must remain unchanged. This article provides no cut dimensions, temperature or humidity settings, timing, success rates, disease-management steps, or real-world grafting instructions.",
+        "reflection": "If a new bud definitely emerges above the graft union, what can you now identify, and what can you still not conclude from that alone? What further changes would you observe before discussing long-term graft success?"
+      },
+      "references": [
+        {
+          "id": "mu-grafting-2022",
+          "citation": "University of Missouri Extension. (2022, August). Grafting (G6971), reviewed by David Trinklein.",
+          "url": "https://extension.missouri.edu/publications/g6971",
+          "use": "Supports that the scion forms the upper part of the plant, the rootstock provides the root system, and compatibility, cambial contact, health, and healing are important to grafting. It also supports that grafting generally does not combine scion and rootstock into a new genetic variety in the manner of seed hybridization. This article does not use the source to guarantee that all combinations survive, that graft unions remain stable long term, or that fruit traits remain completely unchanged."
+        },
+        {
+          "id": "tamu-hartmann-2020",
+          "citation": "Hartmann, T. (2020, May). Whip and Tongue Grafting (HORT-PU-169). Texas A&M AgriLife Extension.",
+          "url": "https://mytexas.ag.tamu.edu/publications/whip-and-tongue-grafting/",
+          "use": "Supports the scion as a genetic copy of the source plant, healing tissue developing into a vascular connection, the possibility that a scion may begin to bud before a graft connection has been established, and the possibility of rootstock suckering. This article borrows only those morphological, connection, and judgment boundaries, does not use the source's cut dimensions, temperature, humidity, timing, or success rates as operating advice, and does not claim that a photograph can confirm internal vascular continuity."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "urban-agriculture-reader-first-25-preparation/group2-pdc-round3.json",
+        "edits": [
+          "urban-agriculture-reader-first-25-preparation/group2-edit-pass1-evidence.json",
+          "urban-agriculture-reader-first-25-preparation/group2-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13 perspectives; four real ordinary ChatGPT GPT-5.6 Sol High stages, explicitly user-authorized."
       }
     },
     {
