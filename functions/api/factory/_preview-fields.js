@@ -59,6 +59,12 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0812': 'Horticulture',
   '0821': 'Forestry',
   '0831': 'Fisheries',
+  '0841': 'Veterinary',
+  '0911': 'Dental studies',
+  '0912': 'Medicine',
+  '0913': 'Nursing and midwifery',
+  '0914': 'Medical diagnostic and treatment technology',
+  '0915': 'Therapy and rehabilitation',
 });
 
 export const PUBLIC_PREVIEW_FIELD_IDS = Object.freeze(
