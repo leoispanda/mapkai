@@ -1822,12 +1822,12 @@ export default {
   },
   "/concept-fables/0821-sustainable-yield": {
     "zh": {
-      "title": "账本里没有变少的森林",
-      "description": "林场每年砍掉的木材都不超过测得的新增体积，账本始终平衡，山里却越来越难找到老树和幼苗。"
+      "title": "预留单的后半段",
+      "description": "木工坊想提前排好下一季的材料，许岑桌上的生长预测看起来也有余地。回复供料前，她又翻到了另一行记录。"
     },
     "en": {
-      "title": "The Forest That Never Grew Smaller in the Ledger",
-      "description": "A forest cuts no more timber than its measured annual growth; the ledger stays balanced while old trees and seedlings become increasingly scarce."
+      "title": "The Second Half of the Reservation",
+      "description": "The workshop wants to plan next season’s materials, and the growth projection on Xu Cen’s desk seems to leave room. Before confirming supply, she notices another line."
     }
   },
   "/concept-fables/0821-ecological-succession": {
@@ -1852,12 +1852,12 @@ export default {
   },
   "/concept-fables/0831-maximum-sustainable-yield": {
     "zh": {
-      "title": "写在海图上的最大数",
-      "description": "渔港把模型算出的最高长期平均捕量当成每年保证，鱼越来越难找时，新声呐仍替船队完成了配额。"
+      "title": "午前的仓位预约",
+      "description": "午前就要回复冷库了。唐沅想拿整排仓位的折扣，却还不能确定合作社下一季的稳定到货量。"
     },
     "en": {
-      "title": "The Largest Number on the Sea Chart",
-      "description": "A fishing port treats a model's highest long-run average catch as an annual promise; as fish grow scarcer, new sonar still helps the fleet fill its quota."
+      "title": "A Storage Booking Before Noon",
+      "description": "Tang Yuan must reply to the cold-storage operator before noon. She wants the full-row discount, but the cooperative’s steady arrival volume for next season is still uncertain."
     }
   },
   "/concept-fables/0831-bycatch": {
@@ -1892,12 +1892,12 @@ export default {
   },
   "/concept-fables/0841-herd-immunity": {
     "zh": {
-      "title": "八成已经打过针的羊场",
-      "description": "羊场总体已有八成免疫，所有尚未接种的幼羊却住在同一间棚里，一只新来的羊从那里走过。"
+      "title": "红片会走到哪里",
+      "description": "两张接触图都是八蓝两白。季岚只有十分钟，要让听众明白为什么红片未必能走到同一个地方。"
     },
     "en": {
-      "title": "The Farm Where Eight in Ten Sheep Were Vaccinated",
-      "description": "Eight in ten sheep on a farm are immunized, but every unvaccinated lamb lives in one shed that a newly arrived animal passes through."
+      "title": "Where Will the Red Token Go?",
+      "description": "Both contact diagrams have eight blue cards and two white ones. Ji Lan has ten minutes to show her audience why a red token may travel differently on them."
     }
   },
   "/concept-fables/0841-five-domains-welfare": {

@@ -23397,47 +23397,130 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0821",
     "fieldTitle": "Forestry",
     "fieldTitleZh": "林业",
-    "title": "The Forest That Never Grew Smaller in the Ledger",
-    "titleZh": "账本里没有变少的森林",
-    "summary": "A forest cuts no more timber than its measured annual growth; the ledger stays balanced while old trees and seedlings become increasingly scarce.",
-    "summaryZh": "林场每年砍掉的木材都不超过测得的新增体积，账本始终平衡，山里却越来越难找到老树和幼苗。",
-    "storyParagraphs": [
-      "Green Fir Forest adopted a rule it considered permanently safe: cut only the volume of timber the mountain grew in a year. Surveyors entered annual increment in a ledger, and the manager never exceeded it. Timber output remained stable, so the city sawmill praised a forest that repaid its own account. The annual number also secured mill contracts, so changing it threatened jobs beyond the forest.",
-      "Harvests always favoured the largest, straightest old trees beside roads because they were valuable and cheap to move. Ten years later, total volume in the ledger had barely fallen, but fast-growing young stands contained few old seed trees. A slow-growing shade species became scarce, road soil washed into streams during storms, and the next wind event felled large areas of even-aged young forest together. The mill's steady orders had masked declining optionality: timber volume remained while future seed, species balance, and storm resistance narrowed.",
-      "A new forester separated harvest by place, age, and species. Total growth could equal total cutting without returning the removed structure at the same location or time. Mortality, regeneration, wind and fire, timber quality, and access costs altered future supply, while streams, habitat, and local uses never appeared in the sawmill ledger. They built age-class tables, regeneration surveys, and growth-and-yield projections by management unit rather than averaging the mountain.",
-      "The manager left the remaining old roadside stands marked but uncut, paid the mill's contract penalty, and negotiated variable deliveries while young areas matured and mill trucks waited outside. A monitoring trigger required proven regeneration and retained seed sources before the next entry; storm losses automatically reopened the plan. Harvest scheduling included road recovery and stream protection, because extracting the nominal volume could still degrade future access and other forest functions.",
-      "Under uncertainty, the forest reduced harvest, retained seed sources and old patches, distributed cutting, and protected stream edges. Successful regeneration in each site came before the next entry, and drought or storm results changed the plan through monitoring. Reliable timber remained an objective but no longer stood for the forest's entire future. Scenario ranges replaced one precise forecast, making drought and measurement error visible in the allowable cut. Local users and the mill saw the scenarios before approval, making employment and non-timber effects explicit rather than invisible vetoes.",
-      "The next season, the manager reached a large fir already marked with a red circle. It stood on a slope short of seed trees. He wiped the paint away with turpentine and moved the mark to another tree several dozen paces away."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "预留单的后半段",
+    "summaryZh": "木工坊想提前排好下一季的材料，许岑桌上的生长预测看起来也有余地。回复供料前，她又翻到了另一行记录。",
     "storyParagraphsZh": [
-      "青杉林场定下一条自认为永远安全的规则：全山一年长出多少木材，就砍掉多少。测量员每年把新增体积写进账本，场长也从不超过那个数字。木材产量稳定，城里的锯木厂因此称赞这片森林会自己还账。年度数字还绑定锯木厂合同，调整它会影响森林之外的工作。",
-      "可采伐总挑路边最大、最直的老树，因为它们最值钱、运出也最便宜。十年后，账本里的总体积仍没明显下降，年轻密林长得很快，却缺少能结大量种子的老树；阴坡一种慢生树越来越少，林道旁的土在暴雨中流进溪流。下一场风暴又集中刮倒了同龄幼林。锯木厂稳定订单掩住选择空间缩小：木材体积尚在，未来种源、树种平衡与抗风能力却在减少。",
-      "新任林务员把采伐量分回地点、年龄和树种查看。总生长能抵消总砍伐，并不代表被拿走的结构会在同一地点、同一时间回来。死亡、更新、风火扰动、木材质量和通达成本也会改变未来供给，而溪流、栖息地和当地使用并没有出现在锯木账上。众人按经营小区建立龄级表、更新调查和生长收获预测，不再把整座山平均成一个数字。",
-      "场长让剩余路边老林保留砍伐标记，却没有下锯。木厂卡车等在门外，他支付违约金，在幼林成熟前改谈浮动交付。再次进场前必须证明更新成功并保留种源；风灾损失则自动触发重审。采伐计划还纳入林道恢复与溪流保护，因为取出名义木量仍可能损害未来通达和其他森林功能。",
-      "林场降低了不确定情况下的采量，保留种源与老龄斑块，分散采伐并保护溪边。每块地先确认更新成功，再决定下一轮；风灾或干旱后，计划随监测调整。稳定木材仍是目标，却不再被当作森林全部的未来。情景范围取代单一精确预测，让干旱与测量误差进入允许采量。地方使用者与锯木厂在批准前查看情景，让就业与非木材影响明示，而非成为暗中否决。",
-      "下一季，场长走到一棵已经画上红圈的大杉树前。它正好位于一片缺少种树的坡面。他用松节油擦掉红圈，把标记移到几十步外另一棵树上。"
+      "社区木工坊正在排下一季的长桌订单，想先把教学林地未来可能提供的木料锁进生产表。许岑负责给出下一管理期能不能继续按计划移除9个活立木体积单位的建议。她桌上的预测表显示，这一拟议期从100个活立木体积单位开始，预计毛生长12；第一眼看去，9似乎还留着余地。",
+      "她正准备回复木工坊，看到预测表下面还有一行预计自然死亡4。许岑把三项变化放到同一个拟议期里：毛生长12先扣自然死亡4，得到净增长8；如果再按计划采伐9个同口径的活立木体积单位，预测期末就是100+12-4-9=99。她在“12”旁边重新写上“毛生长”，免得它以后被误读成已经扣过死亡的净增长。",
+      "木工坊已经按整期供料安排好了加工时段。许岑打电话把原来的整期锁量改成分段确认：加工档期先保留，后段从这片林地实际能确认多少，再根据后续资源信息更新。负责人得重新安排配料，部分材料来源也可能需要调整。",
+      "同事问，预测期末只比期初少1个单位，是否值得动已经排好的安排。许岑把预测表推过去：“算完这一期的体积，还得看接下来由哪些树补上。更新、林木大小和年龄，还有这些预测有多稳，都要一起看。”她把更新和林分结构资料放到预留单旁边，准备核对后半段供料。",
+      "傍晚，木工坊把新的生产表发回来。原来横跨整季的一条供料预留被拆成前后两段，后半段留着待确认标记。许岑把它和预测表夹在一起。屏幕上，前半段的加工档期仍在原来的位置。"
     ],
-    "conceptName": "Sustainable yield",
+    "overallZh": "这篇在讲：判断可持续采伐不能只拿毛生长和计划采伐直接比较。必须在同一林地、时期和活立木体积口径下，把毛生长、死亡和采伐分开核算，再结合更新、林分结构与不确定性判断长期生产能力。",
     "conceptNameZh": "可持续采伐量",
-    "explanationParagraphs": [
-      "Sustainable yield sets a harvest rate and spatial pattern that can be maintained under stated objectives and uncertainty without undermining the productive stock and regeneration needed for future output. It requires more than comparing total growth with total cutting: age and species structure, mortality, regeneration, location, disturbance, timber quality, and management all matter. Sustained commodity production is only one part of ecological and social sustainability."
-    ],
     "explanationParagraphsZh": [
-      "可持续采伐量是在明确目标和不确定性下，以不破坏未来产量所需的生产储量和更新能力为条件，确定可长期维持的采伐速率与空间格局。判断不能只比较总生长与总砍伐，还要考虑年龄和树种结构、死亡、再生、地点、扰动、木材质量及管理。商品产量持续也只是生态和社会可持续性的一部分。"
+      "本例固定同一片林地、同一个拟议管理期和同一活立木体积口径，不另计林地面积、分类变化或其他转入转出。期初100、预计毛生长12、预计自然死亡4，则净增长12-4=8；若计划采伐9，预测期末100+12-4-9=99。",
+      "12是毛生长；如果资料给出的已是净增长，就不能再减一次死亡。9也指计划移除的活立木体积，不是加工后成品量，本例没有给木料加工得率。",
+      "从100到99只是单期库存预测，不是现实许可或长期不可持续的证明。持续供给还需足够更新、合适林分结构及对未来生长和死亡的判断。死亡和采伐是不同流量，死木仍可能留在生态系统中发挥作用。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "先固定同一林地、同一时期和同一活立木体积口径，再把毛生长、死亡和采伐分别放入库存变化，并把单期算术与长期生产能力分开。",
+      "diagramTitle": "为什么预计毛生长12，仍不能直接把9个单位的计划采伐视为长期可持续",
+      "diagramSteps": [
+        "固定拟议期初活立木体积为100单位，并确认所有变化都使用同一活立木体积口径",
+        "记录预计毛生长12单位，并确认这12尚未扣除自然死亡和采伐",
+        "扣除预计自然死亡4单位，得到本拟议期预计净增长8单位",
+        "再扣除计划采伐9单位，得到预测期末100+12-4-9=99单位",
+        "把99视为单期库存结果，再结合更新、林分结构和不确定性决定是否需要调整后续供给安排"
+      ],
+      "diagramStepNotes": [
+        "如果林地边界、时间范围或活立木分类不同，数字不能直接放在同一库存账中比较。",
+        "毛生长与净增长不是同一个量；净增长若已经扣除死亡，就不能再次减死亡。",
+        "自然死亡与采伐必须分开记录；死亡木材不因此自动成为额外可采量。",
+        "计划采伐9指同一活立木体积口径下的计划移除量，不等于9单位加工后木料或成品产量。",
+        "预测期末99既不自动证明长期不可持续，也不证明长期可以维持固定采伐；长期判断还需要更新和结构信息。"
+      ],
+      "mapping": [
+        "期初100 → 拟议期开始时同一固定林地内的活立木体积。",
+        "毛生长12 → 拟议期内预计新增的活立木体积，尚未扣死亡。",
+        "自然死亡4 → 从活立木库存中退出的预计死亡量，与采伐分开。",
+        "计划采伐9 → 同一活立木体积口径下拟议移除的量，不是加工成品量。",
+        "分段确认供料 → 把单期库存预测与更新、结构等后续信息连接到实际排程。"
+      ],
+      "boundary": "本例中的100、12、4、9和99均为虚构教学预测，不是实测林业数据或现实采伐许可。可持续采伐量关注的是不削弱长期生产能力的持续供给，但单期库存持平或接近持平都不足以证明更新、生物多样性或林分结构良好。若输入数据是净增长而非毛生长，死亡不得重复扣除。枯死木在生态系统中仍可能具有其他作用，本篇也不提供现实清理、采伐或经营操作指导。",
+      "reflection": "如果新表上写的是“净增长8”，并已扣除自然死亡4，你会怎样计算计划采伐9后的存量？为什么不能再把4减一次？"
+    },
+    "referencesZh": [
+      {
+        "id": "usfs-goff-2022",
+        "citation": "Goff, T. C., et al. (2022). Iowa forests 2018: summary report. Resource Bulletin NRS-128. USDA Forest Service, Northern Research Station.",
+        "url": "https://www.fs.usda.gov/nrs/pubs/rb/rb_nrs128.pdf",
+        "use": "支持区分毛生长、死亡与净增长，并支持把持续生产能力与再生更新、林分结构等长期条件联系起来；本篇只借用这些森林清查口径与长期供给原则，不把100、12、4、9、99等虚构教学数字称为Iowa报告数据，也不据此给出现实采伐量。"
+      }
+    ],
+    "title": "The Second Half of the Reservation",
+    "summary": "The workshop wants to plan next season’s materials, and the growth projection on Xu Cen’s desk seems to leave room. Before confirming supply, she notices another line.",
+    "storyParagraphs": [
+      "The community woodworking shop is scheduling its next season of long-table orders and wants to lock into its production plan the timber that the teaching forest may be able to provide. Xu Cen is responsible for advising whether the next management period can still include the planned removal of 9 units of live-tree volume. The projection sheet on her desk shows that the proposed period begins with 100 units of live-tree volume and is expected to have gross growth of 12. At first glance, 9 seems to leave some room.",
+      "She is about to reply to the workshop when she notices another line on the projection sheet: projected natural mortality of 4. Xu Cen places the three changes within the same proposed period. Gross growth of 12 minus natural mortality of 4 gives net growth of 8; if 9 units of live-tree volume on the same accounting basis are then harvested as planned, the projected ending volume is 100+12-4-9=99. Beside the '12,' she writes 'gross growth' again so that it will not later be misread as net growth that already excludes mortality.",
+      "The woodworking shop has already scheduled processing time around the full-period supply arrangement. Xu Cen calls to change the original locked quantity to staged confirmation: the processing slot stays reserved, while the amount that can later be confirmed from this forest will be updated as further resource information arrives. The manager has to revise the material schedule and may need to adjust some material sources.",
+      "A colleague asks whether it is worth changing an established arrangement when the projected ending volume is only 1 unit below the opening volume. Xu Cen pushes the projection sheet across the desk. “After calculating this period’s volume, we still need to see which trees will replenish it. Regeneration, tree sizes and ages, and how reliable these projections are all matter.” She places the regeneration and stand-structure material beside the reservation form to check the later supply section.",
+      "That evening, the woodworking shop sends back the revised production sheet. The supply reservation that once stretched across the season has been split into an early and a later section, with the second marked pending confirmation. Xu Cen clips it to the projection sheet. On the screen, the earlier processing slot remains in its original place."
+    ],
+    "overall": "This article explains that sustainable-yield reasoning cannot simply compare gross growth with planned harvest. Gross growth, mortality, and harvest must be accounted for separately within the same forest area, time period, and live-tree-volume basis, and long-term productive capacity also depends on regeneration, stand structure, and uncertainty.",
+    "conceptName": "Sustainable yield",
+    "explanationParagraphs": [
+      "This example fixes one forest area, proposed management period and live-tree-volume basis, with no additional area, classification or other transfers. Opening volume 100, projected gross growth 12 and projected mortality 4 give net growth 12-4=8. With planned harvest 9, projected ending volume is 100+12-4-9=99.",
+      "The 12 is gross growth. If the input already reports net growth, mortality must not be deducted again. The 9 is planned live-tree-volume removal, not finished-product output; no wood-processing conversion yield is given.",
+      "The movement from 100 to 99 is one inventory projection, not a permit or proof of long-term unsustainability. Continued supply also needs sufficient regeneration, suitable stand structure, and assessment of future growth and mortality. Death and harvest are different flows; dead wood can remain in the ecosystem and play other roles."
+    ],
+    "module": {
+      "intro": "First fix the same forest area, time period, and live-tree-volume accounting basis. Then place gross growth, mortality, and harvest separately into the inventory change, and keep single-period arithmetic distinct from long-term productive capacity.",
+      "diagramTitle": "Why Doesn't Projected Gross Growth of 12 Automatically Make a Planned Harvest of 9 Long-Term Sustainable?",
+      "diagramSteps": [
+        "Fix the proposed opening live-tree volume at 100 units and confirm that every change uses the same live-tree-volume basis",
+        "Record projected gross growth of 12 units and confirm that the 12 has not yet deducted natural mortality or harvest",
+        "Subtract projected natural mortality of 4 units to obtain projected net growth of 8 units for the proposed period",
+        "Then subtract the planned harvest of 9 units to obtain a projected ending volume of 100+12-4-9=99 units",
+        "Treat 99 as a single-period inventory result, then combine it with regeneration, stand structure, and uncertainty before deciding whether later supply arrangements need adjustment"
+      ],
+      "diagramStepNotes": [
+        "If forest boundaries, time periods, or live-tree classifications differ, the figures cannot simply be combined in the same inventory account.",
+        "Gross growth and net growth are not the same quantity. If net growth has already deducted mortality, mortality must not be deducted again.",
+        "Natural mortality and harvest must be recorded separately; dead trees do not thereby become additional harvestable volume.",
+        "The planned harvest of 9 is a planned removal measured on the same live-tree-volume basis, not 9 units of processed lumber or finished-product output.",
+        "A projected ending volume of 99 neither automatically proves long-term unsustainability nor proves that a fixed harvest can continue indefinitely; long-term judgment also requires regeneration and structural information."
+      ],
+      "mapping": [
+        "Opening 100 → live-tree volume within the same fixed forest area at the beginning of the proposed period.",
+        "Gross growth 12 → projected addition to live-tree volume during the proposed period before mortality is deducted.",
+        "Natural mortality 4 → projected mortality leaving the live-tree inventory, recorded separately from harvest.",
+        "Planned harvest 9 → proposed removal on the same live-tree-volume basis, not processed-product output.",
+        "Staged supply confirmation → connecting the single-period inventory projection with later information on regeneration, structure, and other resource conditions."
+      ],
+      "boundary": "The values 100, 12, 4, 9, and 99 in this example are fictional teaching projections, not measured forestry data or a real harvesting permit. Sustainable yield concerns continued supply without undermining long-term productive capacity, but a stable or nearly stable single-period inventory is not enough to prove adequate regeneration, biodiversity, or stand structure. If input data represent net growth rather than gross growth, mortality must not be deducted twice. Dead wood may continue to play other roles in the ecosystem, and this article provides no real-world guidance on removal, harvesting, or forest management operations.",
+      "reflection": "If a new sheet reports “net growth 8” after already deducting mortality 4, how would you calculate the inventory after planned harvest 9? Why must the 4 not be subtracted again?"
+    },
+    "references": [
+      {
+        "id": "usfs-goff-2022",
+        "citation": "Goff, T. C., et al. (2022). Iowa forests 2018: summary report. Resource Bulletin NRS-128. USDA Forest Service, Northern Research Station.",
+        "url": "https://www.fs.usda.gov/nrs/pubs/rb/rb_nrs128.pdf",
+        "use": "Supports distinguishing gross growth, mortality, and net growth, and supports linking sustained productive capacity with longer-term conditions such as regeneration and stand structure. This article borrows only those forest-inventory accounting concepts and long-term supply principles; it does not present the fictional teaching values 100, 12, 4, 9, or 99 as data from the Iowa report or use them to prescribe a real harvest level."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
-      "reviewRounds": 3,
-      "rewriteRounds": 2,
+      "reviewRounds": 4,
+      "rewriteRounds": 3,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "resource-health-night-26-preparation/group1-pdc-round4.json",
+      "edits": [
+        "resource-health-night-26-preparation/group1-edit-pass1-evidence.json",
+        "resource-health-night-26-preparation/group1-edit-pass2-evidence.json",
+        "resource-health-night-26-preparation/group1-edit-pass3-evidence.json"
+      ],
+      "execution": "One Codex editor,13 perspectives; four actual GPT-5.6 Sol High writer stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Green Fir Forest adopted a rule it considered permanently safe: cut only the volume of timber the mountain grew in a year. Surveyors entered annual increment in a ledger, and the manager never exceeded it. Timber output remained stable, so the city sawmill praised a forest that repaid its own account. The annual number also secured mill contracts, so changing it threatened jobs beyond the forest.\n\nHarvests always favoured the largest, straightest old trees beside roads because they were valuable and cheap to move. Ten years later, total volume in the ledger had barely fallen, but fast-growing young stands contained few old seed trees. A slow-growing shade species became scarce, road soil washed into streams during storms, and the next wind event felled large areas of even-aged young forest together. The mill's steady orders had masked declining optionality: timber volume remained while future seed, species balance, and storm resistance narrowed.\n\nA new forester separated harvest by place, age, and species. Total growth could equal total cutting without returning the removed structure at the same location or time. Mortality, regeneration, wind and fire, timber quality, and access costs altered future supply, while streams, habitat, and local uses never appeared in the sawmill ledger. They built age-class tables, regeneration surveys, and growth-and-yield projections by management unit rather than averaging the mountain.\n\nThe manager left the remaining old roadside stands marked but uncut, paid the mill's contract penalty, and negotiated variable deliveries while young areas matured and mill trucks waited outside. A monitoring trigger required proven regeneration and retained seed sources before the next entry; storm losses automatically reopened the plan. Harvest scheduling included road recovery and stream protection, because extracting the nominal volume could still degrade future access and other forest functions.\n\nUnder uncertainty, the forest reduced harvest, retained seed sources and old patches, distributed cutting, and protected stream edges. Successful regeneration in each site came before the next entry, and drought or storm results changed the plan through monitoring. Reliable timber remained an objective but no longer stood for the forest's entire future. Scenario ranges replaced one precise forecast, making drought and measurement error visible in the allowable cut. Local users and the mill saw the scenarios before approval, making employment and non-timber effects explicit rather than invisible vetoes.\n\nThe next season, the manager reached a large fir already marked with a red circle. It stood on a slope short of seed trees. He wiped the paint away with turpentine and moved the mark to another tree several dozen paces away.",
-    "storyBodyZh": "青杉林场定下一条自认为永远安全的规则：全山一年长出多少木材，就砍掉多少。测量员每年把新增体积写进账本，场长也从不超过那个数字。木材产量稳定，城里的锯木厂因此称赞这片森林会自己还账。年度数字还绑定锯木厂合同，调整它会影响森林之外的工作。\n\n可采伐总挑路边最大、最直的老树，因为它们最值钱、运出也最便宜。十年后，账本里的总体积仍没明显下降，年轻密林长得很快，却缺少能结大量种子的老树；阴坡一种慢生树越来越少，林道旁的土在暴雨中流进溪流。下一场风暴又集中刮倒了同龄幼林。锯木厂稳定订单掩住选择空间缩小：木材体积尚在，未来种源、树种平衡与抗风能力却在减少。\n\n新任林务员把采伐量分回地点、年龄和树种查看。总生长能抵消总砍伐，并不代表被拿走的结构会在同一地点、同一时间回来。死亡、更新、风火扰动、木材质量和通达成本也会改变未来供给，而溪流、栖息地和当地使用并没有出现在锯木账上。众人按经营小区建立龄级表、更新调查和生长收获预测，不再把整座山平均成一个数字。\n\n场长让剩余路边老林保留砍伐标记，却没有下锯。木厂卡车等在门外，他支付违约金，在幼林成熟前改谈浮动交付。再次进场前必须证明更新成功并保留种源；风灾损失则自动触发重审。采伐计划还纳入林道恢复与溪流保护，因为取出名义木量仍可能损害未来通达和其他森林功能。\n\n林场降低了不确定情况下的采量，保留种源与老龄斑块，分散采伐并保护溪边。每块地先确认更新成功，再决定下一轮；风灾或干旱后，计划随监测调整。稳定木材仍是目标，却不再被当作森林全部的未来。情景范围取代单一精确预测，让干旱与测量误差进入允许采量。地方使用者与锯木厂在批准前查看情景，让就业与非木材影响明示，而非成为暗中否决。\n\n下一季，场长走到一棵已经画上红圈的大杉树前。它正好位于一片缺少种树的坡面。他用松节油擦掉红圈，把标记移到几十步外另一棵树上。",
-    "explanation": "Sustainable yield sets a harvest rate and spatial pattern that can be maintained under stated objectives and uncertainty without undermining the productive stock and regeneration needed for future output. It requires more than comparing total growth with total cutting: age and species structure, mortality, regeneration, location, disturbance, timber quality, and management all matter. Sustained commodity production is only one part of ecological and social sustainability.",
-    "explanationZh": "可持续采伐量是在明确目标和不确定性下，以不破坏未来产量所需的生产储量和更新能力为条件，确定可长期维持的采伐速率与空间格局。判断不能只比较总生长与总砍伐，还要考虑年龄和树种结构、死亡、再生、地点、扰动、木材质量及管理。商品产量持续也只是生态和社会可持续性的一部分。"
+    "storyBody": "The community woodworking shop is scheduling its next season of long-table orders and wants to lock into its production plan the timber that the teaching forest may be able to provide. Xu Cen is responsible for advising whether the next management period can still include the planned removal of 9 units of live-tree volume. The projection sheet on her desk shows that the proposed period begins with 100 units of live-tree volume and is expected to have gross growth of 12. At first glance, 9 seems to leave some room.\n\nShe is about to reply to the workshop when she notices another line on the projection sheet: projected natural mortality of 4. Xu Cen places the three changes within the same proposed period. Gross growth of 12 minus natural mortality of 4 gives net growth of 8; if 9 units of live-tree volume on the same accounting basis are then harvested as planned, the projected ending volume is 100+12-4-9=99. Beside the '12,' she writes 'gross growth' again so that it will not later be misread as net growth that already excludes mortality.\n\nThe woodworking shop has already scheduled processing time around the full-period supply arrangement. Xu Cen calls to change the original locked quantity to staged confirmation: the processing slot stays reserved, while the amount that can later be confirmed from this forest will be updated as further resource information arrives. The manager has to revise the material schedule and may need to adjust some material sources.\n\nA colleague asks whether it is worth changing an established arrangement when the projected ending volume is only 1 unit below the opening volume. Xu Cen pushes the projection sheet across the desk. “After calculating this period’s volume, we still need to see which trees will replenish it. Regeneration, tree sizes and ages, and how reliable these projections are all matter.” She places the regeneration and stand-structure material beside the reservation form to check the later supply section.\n\nThat evening, the woodworking shop sends back the revised production sheet. The supply reservation that once stretched across the season has been split into an early and a later section, with the second marked pending confirmation. Xu Cen clips it to the projection sheet. On the screen, the earlier processing slot remains in its original place.",
+    "storyBodyZh": "社区木工坊正在排下一季的长桌订单，想先把教学林地未来可能提供的木料锁进生产表。许岑负责给出下一管理期能不能继续按计划移除9个活立木体积单位的建议。她桌上的预测表显示，这一拟议期从100个活立木体积单位开始，预计毛生长12；第一眼看去，9似乎还留着余地。\n\n她正准备回复木工坊，看到预测表下面还有一行预计自然死亡4。许岑把三项变化放到同一个拟议期里：毛生长12先扣自然死亡4，得到净增长8；如果再按计划采伐9个同口径的活立木体积单位，预测期末就是100+12-4-9=99。她在“12”旁边重新写上“毛生长”，免得它以后被误读成已经扣过死亡的净增长。\n\n木工坊已经按整期供料安排好了加工时段。许岑打电话把原来的整期锁量改成分段确认：加工档期先保留，后段从这片林地实际能确认多少，再根据后续资源信息更新。负责人得重新安排配料，部分材料来源也可能需要调整。\n\n同事问，预测期末只比期初少1个单位，是否值得动已经排好的安排。许岑把预测表推过去：“算完这一期的体积，还得看接下来由哪些树补上。更新、林木大小和年龄，还有这些预测有多稳，都要一起看。”她把更新和林分结构资料放到预留单旁边，准备核对后半段供料。\n\n傍晚，木工坊把新的生产表发回来。原来横跨整季的一条供料预留被拆成前后两段，后半段留着待确认标记。许岑把它和预测表夹在一起。屏幕上，前半段的加工档期仍在原来的位置。",
+    "explanation": "This example fixes one forest area, proposed management period and live-tree-volume basis, with no additional area, classification or other transfers. Opening volume 100, projected gross growth 12 and projected mortality 4 give net growth 12-4=8. With planned harvest 9, projected ending volume is 100+12-4-9=99.\n\nThe 12 is gross growth. If the input already reports net growth, mortality must not be deducted again. The 9 is planned live-tree-volume removal, not finished-product output; no wood-processing conversion yield is given.\n\nThe movement from 100 to 99 is one inventory projection, not a permit or proof of long-term unsustainability. Continued supply also needs sufficient regeneration, suitable stand structure, and assessment of future growth and mortality. Death and harvest are different flows; dead wood can remain in the ecosystem and play other roles.",
+    "explanationZh": "本例固定同一片林地、同一个拟议管理期和同一活立木体积口径，不另计林地面积、分类变化或其他转入转出。期初100、预计毛生长12、预计自然死亡4，则净增长12-4=8；若计划采伐9，预测期末100+12-4-9=99。\n\n12是毛生长；如果资料给出的已是净增长，就不能再减一次死亡。9也指计划移除的活立木体积，不是加工后成品量，本例没有给木料加工得率。\n\n从100到99只是单期库存预测，不是现实许可或长期不可持续的证明。持续供给还需足够更新、合适林分结构及对未来生长和死亡的判断。死亡和采伐是不同流量，死木仍可能留在生态系统中发挥作用。"
   },
   {
     "id": "0821-ecological-succession",
@@ -23544,45 +23627,144 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0831",
     "fieldTitle": "Fisheries",
     "fieldTitleZh": "渔业",
-    "title": "The Largest Number on the Sea Chart",
-    "titleZh": "写在海图上的最大数",
-    "summary": "A fishing port treats a model's highest long-run average catch as an annual promise; as fish grow scarcer, new sonar still helps the fleet fill its quota.",
-    "summaryZh": "渔港把模型算出的最高长期平均捕量当成每年保证，鱼越来越难找时，新声呐仍替船队完成了配额。",
-    "storyParagraphs": [
-      "Using years of data, a Silver Bay scientist calculated that under a set of ideal assumptions, a fish population near an intermediate size grew fastest and could support a highest long-run average catch. The harbour master wrote that number on the chart and used it directly as the annual quota. Fishers borrowed for new boats because they heard 'long-run average' as a promise payable every year. Banks financed boats against the printed quota, turning a biological estimate into a financial promise.",
-      "The first seasons were good. Then two cold springs reduced recruitment and gaps appeared in surveys. Fish concentrated in a few deep bays. New sonar still helped crews find them, so total landings did not decline visibly. The more concentrated the catch became, the more everyone trusted the number on the chart. Catch per trip stayed high because technology concentrated effort where fish remained, masking falling abundance. The apparent stability encouraged another boat purchase, further increasing capacity precisely as recruitment weakened.",
-      "Before certainty arrived, the harbour cut effort, bought back some permits, and paid temporary support to crews instead of renewing the debt-financed quota, despite protests from boat owners. Scientists compared survey indices, catch age composition, recruitment, and uncertainty across models; no single dense sonar patch could reset the population estimate. The reference point was not accepted as an operational target without considering economic behaviour and implementation error.",
-      "In the third year, boats suddenly travelled much farther to fill their holds. The scientist re-examined age structure, young fish, and fishing efficiency and found that the same landing came from fewer adults. The old number assumed stable productivity, accurate observation, and a particular model. It had not left enough room for consecutive poor years, uncertainty, or technology that increased catchability. Decision tables stated how survey decline changed fishing mortality, creating predictable action before political pressure peaked.",
-      "Managers turned the theoretical reference into a buffered harvest rule. As population indicators fell, fishing rates declined; below a warning point, the season closed early. Quotas used several surveys and regular updates, protected spawning stock and age structure, and considered food-web effects. Good years no longer surrendered every increase, and bad years did not wait for an empty dock. The control rule was tested against poor recruitment and observation error, with lower trigger points creating explicit consequences. When sonar next showed a dense group in the deep bay, the captain had already received the closure notice. He switched off the screen and clipped his final unused net permit over the old number on the chart."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "午前的仓位预约",
+    "summaryZh": "午前就要回复冷库了。唐沅想拿整排仓位的折扣，却还不能确定合作社下一季的稳定到货量。",
     "storyParagraphsZh": [
-      "银湾的科学员根据多年资料算出，在一组理想假设下，鱼群保持在中等规模时增长最快，可长期支持一个最高平均捕量。港长把那个数写到海图上，直接作为每年配额。渔民借钱换船，因为他们以为‘长期平均’就是每年都能兑现的保证。银行按印刷配额贷款，把生物估计变成金融承诺。",
-      "头几年收成很好。后来连续两个寒冷春季让幼鱼补充减少，调查数据又有空缺。鱼群开始集中在少数深湾，新声呐仍能帮船队找到它们，所以码头上的总渔获看不出明显下降。捕得越集中，大家越相信海图上的数没有错。技术把捕捞集中到剩余鱼群所在处，使单航次渔获仍高，掩盖总量下降。表面稳定又促成一艘新船采购，补充量变弱时捕捞能力反而继续增加。",
-      "完全确定尚未到来，港口顶着船主抗议停止续签负债配额，降低捕捞，回购部分许可，并给船员临时支持。科学员比较调查指数、渔获年龄、补充量及不同模型不确定性；一处声呐密集斑不能重置种群估计。参照点不能不考虑经济行为和执行误差，直接变成操作目标。",
-      "第三年，船队忽然要跑很远才能装满。科学员重新检查年龄结构、幼鱼数量和捕捞效率，发现同样的渔获已经来自更少的成鱼。原来的数依赖稳定生产力、准确观察和特定模型，并没有为连续坏年份、不确定性和技术提高可捕性留下足够余地。决策表事先写明调查下降如何改变捕捞死亡率，在政治压力最高前便确定行动。",
-      "管理者把理论参照改成带缓冲的控制规则：种群指标下降时，捕捞率随之减少；低于警戒线则提前停捕。配额参考多种调查并定期更新，保护产卵群和年龄结构，也考虑食物网影响。好年份不再把所有新增都取走，坏年份也不再等码头空了才行动。控制规则用低补充与观测误差情景检验，较低触发点都有明确降捕后果。下一次声呐在深湾显示出密集鱼群时，船长已经接到停捕通知。他关闭屏幕，把最后一张未用完的网牌夹在海图那个旧数字上。"
+      "渔业合作社必须在中午前回复冷库：是整季锁下一整排仓位，还是按月订较灵活的小批仓位。整排方案更便宜，但要求唐沅提前给出较稳定的到货承诺。她负责协调合作社的供货和仓储，原本觉得科学人员既然已经解释过一个“长期捕量参照”，就足以支撑他们把仓位订得更固定一些。",
+      "唐沅给科学人员打了电话。对方没有给她一个可直接填进订单的鱼货数字，而是重新打开那张教学增长图：在简化模型里，三个独立的种群状态分别是生物量20、50和80个单位，对应的瞬时净增加速度分别是16、25和16个单位每教学时间单位。25描述的是模型在特定状态下的增长峰值，不是合作社下一季必然拥有的鱼货。",
+      "她这才发现自己缺的不是一个更漂亮的峰值，而是现实种群此刻处在哪个状态、环境条件有没有变化，以及评估本身有多大不确定性。唐沅能决定的是冷库怎么订，不能替有权限的管理程序设定捕捞许可或年度限制。她把原来准备支持整季固定仓位的内部建议撤回，改选按月调整的方案。",
+      "冷库经理在电话里确认：“那整排折扣就不要了？”唐沅答应下来。灵活方案价格更高，旺季也可能拿不到最方便的库位，于是她同时在合作社自己的排程里留出临时转运余量。科学图仍留在内部资料里，只作为理解增长与移除关系的参照。",
+      "中午前，新预约单传回冷库。原来整排锁仓的位置改成了按月更新的栏位，旁边多了一行灵活仓储附加费。唐沅签完字，把增长图放回资源评估资料夹，将预约单发给冷库经理。"
     ],
-    "conceptName": "Maximum sustainable yield",
+    "overallZh": "最大可持续产量是在给定环境和模型条件下可长期支持的最大平均捕量参照。现实当期能承受多少捕捞，还取决于当前种群状态和不确定性；模型参照不能直接代替年度限制或商业到货承诺。",
     "conceptNameZh": "最大可持续产量",
-    "explanationParagraphs": [
-      "Maximum sustainable yield is the largest average catch a population could theoretically support over time under specified environmental conditions and a defined model. It is an uncertain reference, not a guaranteed annual quota. Age structure, recruitment variation, changing productivity, catchability, observation error, and ecological relationships can move reality away from the model, so management usually needs precautionary buffers, monitoring, and harvest rules that respond to stock status."
-    ],
     "explanationParagraphsZh": [
-      "最大可持续产量是在指定环境和模型下，种群理论上可长期支持的最大平均渔获量。它是具有不确定性的参照，不是每年保证的配额。种群年龄结构、补充波动、生产力变化、可捕性、数据误差和生态关系都会使实际情况偏离模型，因此管理通常需要预防性缓冲、监测和随种群状态变化的控制规则。"
+      "在此简化模型中，生物量很少时总增长受基数小的限制；接近环境上限时，资源限制又压低净增加速度。B表示生物量，承载量K=100单位，低密度每单位生物量的净增长参数r=1/教学时间单位。",
+      "无捕捞时瞬时净增长率G(B)=rB(1-B/K)。三个独立状态B=20、50、80，对应G=16、25、16个生物量单位每教学时间单位，并非连续三年或上岸量。模型可写成G(B)=25-(B-50)^2/100，所以在0≤B≤100内，B=50时增长率最高为25。",
+      "只有在这个定参、无迁移的连续时间模型中，生物量维持在50、持续移除率恰与净增长率相等，25才对应模型内可维持的最大捕获率。这不是从三个点直接推出实际年配额。",
+      "现实MSY是在给定条件下可长期支持的最大平均捕量参照。年度限制还需当前种群状态、环境、补充与不确定性信息，通常需要缓冲；参照本身不能保证下一季固定到货。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "把模型中的长期增长参照与现实年度捕捞控制分开：先理解增长如何随种群状态变化，再检查现实状态和不确定性是否足以支持具体管理决定。",
+      "diagramTitle": "为什么模型里的增长峰值25不能直接变成下一季固定鱼货承诺",
+      "diagramSteps": [
+        "先说明模型如何把种群生物量与净增加速度联系起来，再设K=100、r=1并写出G(B)",
+        "分别代入三个独立种群状态B=20、50、80，得到瞬时净增长率16、25、16单位每教学时间单位",
+        "将模型改写为G(B)=25-(B-50)^2/100，确认仅在该模型内部B=50时峰值为25",
+        "在此定参模型内，只有种群维持相应状态、持续移除与净增长相等时，增长参照才对应可维持的捕获率",
+        "在现实年度控制前继续使用当前种群监测、环境信息和不确定性，并由有权限的管理程序设置适当限制与缓冲"
+      ],
+      "diagramStepNotes": [
+        "K和r都是本教学模型的设定，不是某个真实鱼群的测量结果。",
+        "20、50、80是三个独立状态，不是连续三年的种群变化轨迹。",
+        "三个示例点本身不足以证明全局峰值；峰值来自完整模型关系及其代数形式。",
+        "增长率25的单位是生物量单位每教学时间单位，不是一步后的种群数量、上岸量或年度配额。",
+        "模型或环境条件变化时，参照也可能改变；年度控制需要监测和不确定性缓冲。"
+      ],
+      "mapping": [
+        "整排固定仓位 → 需要较稳定商业到货承诺的仓储选择。",
+        "按月灵活仓位 → 唐沅在缺少足够现实资源信息时选择的可调整商业安排。",
+        "B=20/50/80 → 简化模型中的三个独立种群状态。",
+        "16/25/16 → 各状态下的瞬时净增长率，不是现实鱼货数量。",
+        "管理程序 → 有权根据现实评估与不确定性设置年度捕捞控制的主体，而不是合作社仓储协调人。"
+      ],
+      "boundary": "最大可持续产量并不是所有物种都在某个简单‘中等种群’状态达到固定峰值的自然定律。本篇K=100、r=1以及16/25/16均为虚构纸面模型数字。年龄结构、环境条件、补充过程、观测误差和执行误差都会影响现实结论；旧模型或环境变化时参照需要更新。稳定上岸量也不能单独证明种群稳定。本篇不提供真实配额、捕捞许可或特定司法管辖区的管理程序。",
+      "reflection": "如果环境变化使模型承载量不再是100，你还会沿用原来的50和25吗？重新考虑参照与下一季承诺时，需要更新哪些信息？"
+    },
+    "referencesZh": [
+      {
+        "id": "dfo-msy-2026",
+        "citation": "Fisheries and Oceans Canada. (2026, January 7). Introduction to stock assessment: Unit 1.3, Stock status and reference points.",
+        "url": "https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/module-1/12-eng.html",
+        "use": "支持把MSY理解为给定条件下种群可长期支持的最大平均产量参照，并结合B_MSY等种群状态参照及不确定性解释；本篇的K=100、r=1和16/25/16均为虚构教学模型，不取自该页面，也不采用页面示例警戒比例作为通用阈值。"
+      },
+      {
+        "id": "noaa-annual-limit",
+        "citation": "NOAA Fisheries. (n.d.). Setting an Annual Catch Limit.",
+        "url": "https://www.fisheries.noaa.gov/insight/setting-annual-catch-limit",
+        "use": "支持区分MSY等长期参照与实际年度捕捞限制，并说明科学不确定性、管理不确定性和缓冲会进入年度控制；本篇只借用‘参照不等于操作承诺’的逻辑，不把美国程序描述成世界统一的法定做法。"
+      }
+    ],
+    "title": "A Storage Booking Before Noon",
+    "summary": "Tang Yuan must reply to the cold-storage operator before noon. She wants the full-row discount, but the cooperative’s steady arrival volume for next season is still uncertain.",
+    "storyParagraphs": [
+      "The fisheries cooperative has to reply to the cold-storage operator before noon: either lock in a full row of storage for the entire season or reserve smaller, more flexible amounts month by month. The full-row option is cheaper, but it requires Tang Yuan to give a relatively stable arrival commitment in advance. She coordinates the cooperative's supply and storage and initially thinks that, since the scientists have already explained a 'long-term catch reference', that should be enough to justify making the storage reservation more fixed.",
+      "Tang Yuan calls the scientist. Instead of giving her a fish quantity that can be entered directly into the order, the scientist reopens the teaching growth graph. In the simplified model, three independent stock states have biomasses of 20, 50, and 80 units, with corresponding instantaneous rates of net increase of 16, 25, and 16 biomass units per teaching-time unit. The 25 describes the growth peak under a particular state in the model; it is not fish that the cooperative is guaranteed to have next season.",
+      "She realizes that what she is missing is not a more attractive peak value but information about the stock's actual current state, whether environmental conditions have changed, and how uncertain the assessment is. Tang Yuan can decide how to reserve cold storage, but she cannot set harvesting permits or annual catch controls on behalf of the authorized management process. She withdraws her internal recommendation to reserve fixed full-season space and chooses the month-by-month adjustable option instead.",
+      "The cold-storage manager confirms over the phone: “So you don't want the full-row discount?” Tang Yuan agrees. The flexible option costs more, and during the busiest period they may not get the most convenient storage location, so she also leaves room in the cooperative's own schedule for temporary transfers. The scientific graph remains in the internal file only as a reference for understanding the relationship between stock growth and removals.",
+      "Before noon, the revised reservation form reaches the cold-storage operator. The fixed full-row booking has become a set of monthly update fields, with an extra line for the flexible-storage surcharge. Tang Yuan signs it, returns the growth graph to the resource-assessment file, and sends the reservation to the cold-storage manager."
+    ],
+    "overall": "Maximum sustainable yield is a reference for the largest average catch that can be supported over the long term under specified environmental and model conditions. What a stock can support now also depends on its current state and uncertainty; the reference cannot replace an annual limit or a commercial arrival commitment.",
+    "conceptName": "Maximum sustainable yield",
+    "explanationParagraphs": [
+      "In this simplified model, low biomass limits total growth through a small starting base; near carrying capacity, resource limits reduce net increase. B denotes biomass, K=100 biomass units is carrying capacity, and r=1 per teaching-time unit is the low-density net growth parameter per unit of biomass.",
+      "Without fishing, instantaneous net growth is G(B)=rB(1-B/K). Independent states B=20, 50, 80 give G=16, 25, 16 biomass units per teaching-time unit, not successive years or landed catch. Since G(B)=25-(B-50)^2/100, within 0≤B≤100 the peak is 25 at B=50.",
+      "Only in this fixed-parameter, no-migration, continuous-time model, with biomass maintained at 50 and ongoing removal exactly matching net growth, does 25 correspond to the maximum sustainable model catch rate. Three sample points do not establish a real annual quota.",
+      "Real MSY is a reference for the largest average catch supportable over time under specified conditions. Annual limits still require current stock status, environmental and recruitment information, uncertainty, and typically a buffer. The reference alone cannot guarantee next season’s arrivals."
+    ],
+    "module": {
+      "intro": "Keep the model's long-run growth reference separate from real annual catch control: first understand how growth changes with stock state, then ask whether real stock information and uncertainty are sufficient to support a specific management decision.",
+      "diagramTitle": "Why Can't a Model Growth Peak of 25 Be Turned Directly into a Fixed Fish-Supply Commitment for Next Season?",
+      "diagramSteps": [
+        "First explain how the model links biomass to net increase, then set K=100 and r=1 and write G(B)",
+        "Substitute three independent stock states B=20, 50, and 80 to obtain instantaneous net growth rates of 16, 25, and 16 biomass units per teaching-time unit",
+        "Rewrite the model as G(B)=25-(B-50)^2/100 to confirm that only within this model the peak is 25 at B=50",
+        "Within this fixed-parameter model, a growth reference corresponds to a maintainable catch rate only when the stock is kept at that state and ongoing removal equals net growth",
+        "Before setting real annual controls, continue using current stock monitoring, environmental information, and uncertainty, with appropriate limits and buffers set by the authorized management process"
+      ],
+      "diagramStepNotes": [
+        "K and r are settings of this teaching model, not measurements from a real fish stock.",
+        "20, 50, and 80 are three independent states, not a three-year sequence of stock change.",
+        "The three sample points alone are insufficient to prove the global peak; the peak follows from the full model relationship and its algebraic form.",
+        "The unit of the growth rate 25 is biomass units per teaching-time unit, not stock quantity after one step, landed catch, or an annual quota.",
+        "If model conditions or environmental conditions change, the reference may also change; annual control requires monitoring and buffers for uncertainty."
+      ],
+      "mapping": [
+        "Fixed full-row cold storage → a storage choice that requires a relatively stable commercial arrival commitment.",
+        "Flexible monthly storage → the adjustable commercial arrangement Tang Yuan chooses when real resource information is insufficient for a fixed commitment.",
+        "B=20/50/80 → three independent stock states in the simplified model.",
+        "16/25/16 → instantaneous rates of net growth at those states, not real fish quantities.",
+        "Authorized management process → the body that sets annual catch controls using real assessment and uncertainty, rather than the cooperative's storage coordinator."
+      ],
+      "boundary": "Maximum sustainable yield is not a natural law stating that every species reaches a fixed growth peak at some simple 'middle' stock size. The values K=100, r=1, and 16/25/16 in this article are fictional teaching-model values. Age structure, environmental conditions, recruitment, observation error, and implementation error can all affect real conclusions, and references need updating when models or environmental conditions change. Stable landings alone also do not prove that a stock is stable. This article provides no real quota, harvesting permit, or management procedure for any specific jurisdiction.",
+      "reflection": "If environmental change means the model’s carrying capacity is no longer 100, would you retain the old 50 and 25? Which information would need updating before reconsidering the reference and next season’s commitment?"
+    },
+    "references": [
+      {
+        "id": "dfo-msy-2026",
+        "citation": "Fisheries and Oceans Canada. (2026, January 7). Introduction to stock assessment: Unit 1.3, Stock status and reference points.",
+        "url": "https://www.dfo-mpo.gc.ca/science/species-especes/fisheries-halieutiques/assessment-evaluation/module-1/12-eng.html",
+        "use": "Supports understanding MSY as the maximum average yield a stock can sustain over the long term under specified conditions, interpreted together with stock-status reference points such as B_MSY and uncertainty. The values K=100, r=1, and 16/25/16 in this article are fictional teaching-model values, not data from the page, and the page's example cautionary proportions are not used as universal thresholds."
+      },
+      {
+        "id": "noaa-annual-limit",
+        "citation": "NOAA Fisheries. (n.d.). Setting an Annual Catch Limit.",
+        "url": "https://www.fisheries.noaa.gov/insight/setting-annual-catch-limit",
+        "use": "Supports distinguishing long-term references such as MSY from actual annual catch limits and recognizes that scientific uncertainty, management uncertainty, and buffers enter annual control. This article borrows only the logic that a reference is not the same as an operational commitment and does not present the U.S. process as a universal legal procedure."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
-      "reviewRounds": 3,
-      "rewriteRounds": 2,
+      "reviewRounds": 4,
+      "rewriteRounds": 3,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "resource-health-night-26-preparation/group1-pdc-round4.json",
+      "edits": [
+        "resource-health-night-26-preparation/group1-edit-pass1-evidence.json",
+        "resource-health-night-26-preparation/group1-edit-pass2-evidence.json",
+        "resource-health-night-26-preparation/group1-edit-pass3-evidence.json"
+      ],
+      "execution": "One Codex editor,13 perspectives; four actual GPT-5.6 Sol High writer stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Using years of data, a Silver Bay scientist calculated that under a set of ideal assumptions, a fish population near an intermediate size grew fastest and could support a highest long-run average catch. The harbour master wrote that number on the chart and used it directly as the annual quota. Fishers borrowed for new boats because they heard 'long-run average' as a promise payable every year. Banks financed boats against the printed quota, turning a biological estimate into a financial promise.\n\nThe first seasons were good. Then two cold springs reduced recruitment and gaps appeared in surveys. Fish concentrated in a few deep bays. New sonar still helped crews find them, so total landings did not decline visibly. The more concentrated the catch became, the more everyone trusted the number on the chart. Catch per trip stayed high because technology concentrated effort where fish remained, masking falling abundance. The apparent stability encouraged another boat purchase, further increasing capacity precisely as recruitment weakened.\n\nBefore certainty arrived, the harbour cut effort, bought back some permits, and paid temporary support to crews instead of renewing the debt-financed quota, despite protests from boat owners. Scientists compared survey indices, catch age composition, recruitment, and uncertainty across models; no single dense sonar patch could reset the population estimate. The reference point was not accepted as an operational target without considering economic behaviour and implementation error.\n\nIn the third year, boats suddenly travelled much farther to fill their holds. The scientist re-examined age structure, young fish, and fishing efficiency and found that the same landing came from fewer adults. The old number assumed stable productivity, accurate observation, and a particular model. It had not left enough room for consecutive poor years, uncertainty, or technology that increased catchability. Decision tables stated how survey decline changed fishing mortality, creating predictable action before political pressure peaked.\n\nManagers turned the theoretical reference into a buffered harvest rule. As population indicators fell, fishing rates declined; below a warning point, the season closed early. Quotas used several surveys and regular updates, protected spawning stock and age structure, and considered food-web effects. Good years no longer surrendered every increase, and bad years did not wait for an empty dock. The control rule was tested against poor recruitment and observation error, with lower trigger points creating explicit consequences. When sonar next showed a dense group in the deep bay, the captain had already received the closure notice. He switched off the screen and clipped his final unused net permit over the old number on the chart.",
-    "storyBodyZh": "银湾的科学员根据多年资料算出，在一组理想假设下，鱼群保持在中等规模时增长最快，可长期支持一个最高平均捕量。港长把那个数写到海图上，直接作为每年配额。渔民借钱换船，因为他们以为‘长期平均’就是每年都能兑现的保证。银行按印刷配额贷款，把生物估计变成金融承诺。\n\n头几年收成很好。后来连续两个寒冷春季让幼鱼补充减少，调查数据又有空缺。鱼群开始集中在少数深湾，新声呐仍能帮船队找到它们，所以码头上的总渔获看不出明显下降。捕得越集中，大家越相信海图上的数没有错。技术把捕捞集中到剩余鱼群所在处，使单航次渔获仍高，掩盖总量下降。表面稳定又促成一艘新船采购，补充量变弱时捕捞能力反而继续增加。\n\n完全确定尚未到来，港口顶着船主抗议停止续签负债配额，降低捕捞，回购部分许可，并给船员临时支持。科学员比较调查指数、渔获年龄、补充量及不同模型不确定性；一处声呐密集斑不能重置种群估计。参照点不能不考虑经济行为和执行误差，直接变成操作目标。\n\n第三年，船队忽然要跑很远才能装满。科学员重新检查年龄结构、幼鱼数量和捕捞效率，发现同样的渔获已经来自更少的成鱼。原来的数依赖稳定生产力、准确观察和特定模型，并没有为连续坏年份、不确定性和技术提高可捕性留下足够余地。决策表事先写明调查下降如何改变捕捞死亡率，在政治压力最高前便确定行动。\n\n管理者把理论参照改成带缓冲的控制规则：种群指标下降时，捕捞率随之减少；低于警戒线则提前停捕。配额参考多种调查并定期更新，保护产卵群和年龄结构，也考虑食物网影响。好年份不再把所有新增都取走，坏年份也不再等码头空了才行动。控制规则用低补充与观测误差情景检验，较低触发点都有明确降捕后果。下一次声呐在深湾显示出密集鱼群时，船长已经接到停捕通知。他关闭屏幕，把最后一张未用完的网牌夹在海图那个旧数字上。",
-    "explanation": "Maximum sustainable yield is the largest average catch a population could theoretically support over time under specified environmental conditions and a defined model. It is an uncertain reference, not a guaranteed annual quota. Age structure, recruitment variation, changing productivity, catchability, observation error, and ecological relationships can move reality away from the model, so management usually needs precautionary buffers, monitoring, and harvest rules that respond to stock status.",
-    "explanationZh": "最大可持续产量是在指定环境和模型下，种群理论上可长期支持的最大平均渔获量。它是具有不确定性的参照，不是每年保证的配额。种群年龄结构、补充波动、生产力变化、可捕性、数据误差和生态关系都会使实际情况偏离模型，因此管理通常需要预防性缓冲、监测和随种群状态变化的控制规则。"
+    "storyBody": "The fisheries cooperative has to reply to the cold-storage operator before noon: either lock in a full row of storage for the entire season or reserve smaller, more flexible amounts month by month. The full-row option is cheaper, but it requires Tang Yuan to give a relatively stable arrival commitment in advance. She coordinates the cooperative's supply and storage and initially thinks that, since the scientists have already explained a 'long-term catch reference', that should be enough to justify making the storage reservation more fixed.\n\nTang Yuan calls the scientist. Instead of giving her a fish quantity that can be entered directly into the order, the scientist reopens the teaching growth graph. In the simplified model, three independent stock states have biomasses of 20, 50, and 80 units, with corresponding instantaneous rates of net increase of 16, 25, and 16 biomass units per teaching-time unit. The 25 describes the growth peak under a particular state in the model; it is not fish that the cooperative is guaranteed to have next season.\n\nShe realizes that what she is missing is not a more attractive peak value but information about the stock's actual current state, whether environmental conditions have changed, and how uncertain the assessment is. Tang Yuan can decide how to reserve cold storage, but she cannot set harvesting permits or annual catch controls on behalf of the authorized management process. She withdraws her internal recommendation to reserve fixed full-season space and chooses the month-by-month adjustable option instead.\n\nThe cold-storage manager confirms over the phone: “So you don't want the full-row discount?” Tang Yuan agrees. The flexible option costs more, and during the busiest period they may not get the most convenient storage location, so she also leaves room in the cooperative's own schedule for temporary transfers. The scientific graph remains in the internal file only as a reference for understanding the relationship between stock growth and removals.\n\nBefore noon, the revised reservation form reaches the cold-storage operator. The fixed full-row booking has become a set of monthly update fields, with an extra line for the flexible-storage surcharge. Tang Yuan signs it, returns the growth graph to the resource-assessment file, and sends the reservation to the cold-storage manager.",
+    "storyBodyZh": "渔业合作社必须在中午前回复冷库：是整季锁下一整排仓位，还是按月订较灵活的小批仓位。整排方案更便宜，但要求唐沅提前给出较稳定的到货承诺。她负责协调合作社的供货和仓储，原本觉得科学人员既然已经解释过一个“长期捕量参照”，就足以支撑他们把仓位订得更固定一些。\n\n唐沅给科学人员打了电话。对方没有给她一个可直接填进订单的鱼货数字，而是重新打开那张教学增长图：在简化模型里，三个独立的种群状态分别是生物量20、50和80个单位，对应的瞬时净增加速度分别是16、25和16个单位每教学时间单位。25描述的是模型在特定状态下的增长峰值，不是合作社下一季必然拥有的鱼货。\n\n她这才发现自己缺的不是一个更漂亮的峰值，而是现实种群此刻处在哪个状态、环境条件有没有变化，以及评估本身有多大不确定性。唐沅能决定的是冷库怎么订，不能替有权限的管理程序设定捕捞许可或年度限制。她把原来准备支持整季固定仓位的内部建议撤回，改选按月调整的方案。\n\n冷库经理在电话里确认：“那整排折扣就不要了？”唐沅答应下来。灵活方案价格更高，旺季也可能拿不到最方便的库位，于是她同时在合作社自己的排程里留出临时转运余量。科学图仍留在内部资料里，只作为理解增长与移除关系的参照。\n\n中午前，新预约单传回冷库。原来整排锁仓的位置改成了按月更新的栏位，旁边多了一行灵活仓储附加费。唐沅签完字，把增长图放回资源评估资料夹，将预约单发给冷库经理。",
+    "explanation": "In this simplified model, low biomass limits total growth through a small starting base; near carrying capacity, resource limits reduce net increase. B denotes biomass, K=100 biomass units is carrying capacity, and r=1 per teaching-time unit is the low-density net growth parameter per unit of biomass.\n\nWithout fishing, instantaneous net growth is G(B)=rB(1-B/K). Independent states B=20, 50, 80 give G=16, 25, 16 biomass units per teaching-time unit, not successive years or landed catch. Since G(B)=25-(B-50)^2/100, within 0≤B≤100 the peak is 25 at B=50.\n\nOnly in this fixed-parameter, no-migration, continuous-time model, with biomass maintained at 50 and ongoing removal exactly matching net growth, does 25 correspond to the maximum sustainable model catch rate. Three sample points do not establish a real annual quota.\n\nReal MSY is a reference for the largest average catch supportable over time under specified conditions. Annual limits still require current stock status, environmental and recruitment information, uncertainty, and typically a buffer. The reference alone cannot guarantee next season’s arrivals.",
+    "explanationZh": "在此简化模型中，生物量很少时总增长受基数小的限制；接近环境上限时，资源限制又压低净增加速度。B表示生物量，承载量K=100单位，低密度每单位生物量的净增长参数r=1/教学时间单位。\n\n无捕捞时瞬时净增长率G(B)=rB(1-B/K)。三个独立状态B=20、50、80，对应G=16、25、16个生物量单位每教学时间单位，并非连续三年或上岸量。模型可写成G(B)=25-(B-50)^2/100，所以在0≤B≤100内，B=50时增长率最高为25。\n\n只有在这个定参、无迁移的连续时间模型中，生物量维持在50、持续移除率恰与净增长率相等，25才对应模型内可维持的最大捕获率。这不是从三个点直接推出实际年配额。\n\n现实MSY是在给定条件下可长期支持的最大平均捕量参照。年度限制还需当前种群状态、环境、补充与不确定性信息，通常需要缓冲；参照本身不能保证下一季固定到货。"
   },
   {
     "id": "0831-bycatch",
@@ -23740,47 +23922,130 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0841",
     "fieldTitle": "Veterinary",
     "fieldTitleZh": "兽医学",
-    "title": "The Farm Where Eight in Ten Sheep Were Vaccinated",
-    "titleZh": "八成已经打过针的羊场",
-    "summary": "Eight in ten sheep on a farm are immunized, but every unvaccinated lamb lives in one shed that a newly arrived animal passes through.",
-    "summaryZh": "羊场总体已有八成免疫，所有尚未接种的幼羊却住在同一间棚里，一只新来的羊从那里走过。",
-    "storyParagraphs": [
-      "After eight in ten sheep at the hill farm were vaccinated, the owner painted 'safe' at the entrance. Lambs not yet at the appropriate vaccination age, animals with insufficient response, and several whose health required delay all shared one warm shed. He saw the farm-wide proportion, not how those sheep contacted one another. The overall figure earned the farm a certificate, so the clustered gaps remained invisible behind one average.",
-      "A sheep bought at the spring fair waited beside the warm shed without quarantine. Days later, infection spread rapidly among the lambs. Immunized adults dispersed across the hillside mostly avoided disease, but they did not form an even wall around the shed. Clustered susceptible animals still offered a continuous route. The outbreak response cost weeks of movement restrictions and required veterinary supervision; the fable does not specify treatment for individual animals.",
-      "The spring-sale date was painted on the gate. The owner scrubbed it off, mapped ages, pens, contacts, and timing, and found two highly connected pens with low effective coverage. Vaccine records were checked for product, schedule, handling, and expected response rather than counted as identical marks. The contact map showed that market arrivals connected pens otherwise separated, so timing of introductions mattered alongside coverage.",
-      "The veterinarian spread the shed map over the owner's painted eighty-per-cent sign. She circled each sick lamb by onset date, then ran red thread through the pens and the spring-fair gate. The thread never crossed most immunized adults; it passed from the unquarantined arrival into the warm shed and along its shared trough. Beside several dose marks she placed faded tags for uncertain response or elapsed time. The owner rubbed at the word 'safe' until the paint blurred, while movement restrictions kept buyers outside the yard.",
-      "Workers divided the warm shed, moved new arrivals behind the quarantine gate, and gave each age group its own line in the calendar. The owner walked the red-thread route with the veterinarian, checking product, schedule, handling, boosters, and which animals could not yet be protected. After one lamb coughed, a keeper shut its small gate and pinned the alert to the matching pen on the map. The total percentage remained in the ledger, but every verified alert changed the map beside it. Spring buyers waited another week, and empty sale ropes hung from the posts.",
-      "When the next lambs were not yet vaccinated, the owner did not crowd them into one shed. He closed the quarantine gate and tied the new animal's rope to a separate post outside it. None of the links erased the original book."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "红片会走到哪里",
+    "summaryZh": "两张接触图都是八蓝两白。季岚只有十分钟，要让听众明白为什么红片未必能走到同一个地方。",
     "storyParagraphsZh": [
-      "岭上羊场给八成羊接种后，场主便在门口写下‘已经安全’。尚未到合适接种时间的幼羊、接种后反应不足的个体，以及几只因健康原因暂缓的羊，都集中在暖棚里。他只看全场比例，没有看这些羊彼此怎样接触。总体比例让羊场拿到证书，聚集缺口便藏在一个平均数后面。",
-      "春市买来的一只羊未经隔离，先在暖棚旁等候。几天后，传染病从幼羊间迅速传播。山坡上分散饲养、已具免疫的成年羊大多没有发病，却没能像一堵均匀的墙那样保护暖棚；易感个体聚在一起，病原仍找到连续通路。疫情响应导致数周移动限制，并须由兽医监督；本寓言不为个体动物规定治疗。",
-      "春售日期已经漆在栏门上。场主把它擦掉，改画年龄、栏舍、接触与时间，结果发现两处高连接栏舍的有效覆盖很低。免疫记录还核对产品、程序、保存与预期反应，不能把每个勾都算成相同保护。接触图显示集市新羊会连接原本分开的栏舍，因此引入时机同覆盖率一样重要。",
-      "兽医把栏舍图铺在场主写着“八成”的牌子上，按发病日期圈出每只病羔，再用红线穿过羊栏和春市入口。红线绕开大多数已免疫成年羊，却从未经隔离的新羊伸进暖棚，又沿共用料槽连下去。几处接种勾旁，她放上代表反应不明或时间已久的褪色标签。场主伸手擦门口的“安全”二字，油漆渐渐发花；移动限制仍把买家挡在院外。",
-      "工人把暖棚隔开，新羊移到检疫栏后，日历也按年龄另起一行。场主跟兽医沿红线逐栏走，核对产品、程序、保存、加强时间，以及哪些羊暂时还得不到保护。一只幼羊咳嗽后，饲养员立即关上小门，把警示钉到地图对应栏位。总百分比仍留在账本里，但每次核实预警，旁边的图就跟着改变。春市买家又等了一周，售羊木桩上只挂着空绳。",
-      "下一批幼羊尚未接种时，场主没有再把它们全赶进一间棚。他关上检疫栏门，把新买羊的绳结系在门外那根独立木桩上。任何连接都没有抹去原始记录。"
+      "兽医学院晚上有一场面向公众的短课，季岚只有十分钟。她桌上摆着两张接触图，每张各放十张动物卡：八张蓝卡代表演示中已假定具有阻断传播免疫的动物，两张白卡代表仍可能被感染的动物。投影片上只有“8/10有效免疫”，助教看完问：“那两张白卡，为什么会因为别的动物有免疫而不一样？”",
+      "季岚拿来一枚红色磁片，指着第一张图说：“先假设其中一只白卡动物感染了。”她把红片放在那张卡上；另一张白卡还没有感染。两张白卡之间有一条直接接触线，她沿线推动红片，不经过蓝卡就到了另一张白卡。",
+      "她把红片放回起点，再换到第二张图。这里仍是八蓝两白，但两个白点没有直接连线；从起点去另一白点，沿画出的线走，总会先碰到蓝点。演示规定蓝卡在这段时间里完全阻断传播，红片便停在蓝点前。另一张白卡没有因此变成蓝卡，却没有被这些画出的路径抵达。",
+      "季岚因此把原来准备收尾的百分比大字删掉，把两张图并排放到桌面中央。她多花时间重新画清每一条接触边，原本能讲的另一张疫苗历史幻灯片只好拿掉。正式上课时，她先让观众猜红片在两张图里各能走到哪里，再请他们自己沿线检查。",
+      "轮到一个孩子操作时，他先把红片从第一张图的起点白点推到另一个白点。换到第二张图，他沿着线推了一格，在第一个蓝点前停下。季岚没有替他跨过去。孩子把红片拿回起点，转头对助教说：“下一组也从这个白点开始吧。”助教点点头，把两张图重新摆齐。"
     ],
-    "conceptName": "Herd immunity",
+    "overallZh": "这篇在讲：群体免疫的一个核心机制是，部分动物具有能够阻断传播的有效免疫后，会切断某些传播链，从而间接减少其他易感动物被传播路径抵达的机会。总接种比例本身不足以说明每个接触群的保护情况。",
     "conceptNameZh": "群体免疫",
-    "explanationParagraphs": [
-      "Herd immunity is indirect protection for some susceptible individuals when enough others have effective immunity across the relevant contact network and time, reducing transmission. Required coverage depends on pathogen transmissibility, immune effectiveness and waning, clustering of susceptibility, importation, behaviour, and population structure. A total percentage does not ensure protection in every subgroup, and simplified thresholds cannot replace disease- and setting-specific veterinary planning."
-    ],
     "explanationParagraphsZh": [
-      "群体免疫是足够多个体在相关接触网络和时间内具有有效免疫、降低传播后，对部分易感个体产生的间接保护。所需覆盖受病原传播性、免疫效果与衰减、易感聚集、外来输入、行为和种群结构影响。总体比例不能保证每个群体都受保护，简化阈值也不能替代针对疾病和场景的兽医计划。"
+      "两张图初始各有10个节点：8个假设完全阻断所设病原传播，另2个易感，有效免疫比例均为80%。演示从其中一个原本易感的节点引入假设感染；放上红片后，该点成为感染起点，另一个白点仍易感。",
+      "第一图的两个白点有直接边，传播路径可以继续；第二图去另一白点的所有画出路径都先遇到免疫节点。另一个白点没有自己变得免疫，受的是传播链被截断带来的间接保护。",
+      "推演假定同一时段内免疫完全且不衰减，传播只沿画出的边发生，没有其他通路。现实接种覆盖不等于有效免疫，不是每种疾病或疫苗都完全阻断感染传播，易感动物也可能聚集。80%不是通用安全阈值。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "不要只数有多少动物具有有效免疫，还要沿接触网络追踪：假设病原从一个易感节点进入后，传播路径是否在抵达另一个易感节点前被有效免疫节点切断。",
+      "diagramTitle": "为什么两张图起始都是8/10有效免疫，另一个易感节点的传播机会却不同",
+      "diagramSteps": [
+        "建立两张各10节点的图，每张起始都有8个有效免疫节点和2个易感节点",
+        "在第一张图中，把一个易感节点设为假设感染起点，并沿其与另一个易感节点之间的直接边追踪传播",
+        "重置第二张图，再把对应易感节点设为假设感染起点",
+        "沿第二图所有画出的路径追踪，发现抵达另一个易感节点前都会先遇到假设完全阻断传播的免疫节点",
+        "比较两图：总有效免疫比例相同，但接触结构不同，使第二图中的另一个易感节点得到路径中断带来的间接保护"
+      ],
+      "diagramStepNotes": [
+        "起始时8/10表示本教学模型中的有效免疫比例，不是现实接种覆盖率或安全阈值。",
+        "红色磁片代表演示中的假设感染起点；一旦演示开始，该起点不再同时被描述为未感染易感节点。",
+        "第二图与第一图使用相同节点数量和免疫假设，改变的是节点之间画出的接触关系。",
+        "路径停止依赖模型假定免疫节点在该固定教学时段内完全阻断所设病原，且不存在未画出的其他通路。",
+        "间接保护指另一个易感节点自身仍易感，但部分到达它的传播链被其他具有有效免疫的节点截断。"
+      ],
+      "mapping": [
+        "8个蓝色节点 → 教学模型中假设具有完全传播阻断作用的有效免疫节点。",
+        "2个白色节点 → 演示开始前的两个易感节点。",
+        "红色磁片 → 将其中一个易感节点设为假设感染起点后的传播追踪标记。",
+        "第一图白点间直接边 → 不经过免疫节点即可抵达另一易感节点的传播路径。",
+        "第二图先经过蓝点的路径 → 有效免疫节点截断传播并为另一易感节点提供间接保护的机制。"
+      ],
+      "boundary": "群体免疫不能由单一接种覆盖百分比直接判断。接种覆盖与同一时刻的有效免疫不同，疫苗也可能只减少临床症状、病原排出或部分传播，而不是完全阻止感染。接触网络、易感动物是否聚集、免疫随时间变化和疾病本身都会影响传播。本篇的10节点和80%只是纸面教学设定，不提供真实疫苗阈值、产品、剂量、程序、隔离或换栏方案；重新摆卡片也不等于现实动物管理建议。",
+      "reflection": "如果蓝卡只表示“较少发病”，却不保证阻断感染和传播，红片遇蓝点就停止的规则还能沿用吗？为什么？"
+    },
+    "referencesZh": [
+      {
+        "id": "woah-vaccination-2022",
+        "citation": "World Organisation for Animal Health (OIE). (2022). Terrestrial Animal Health Code, Chapter 4.18: Vaccination (10 August 2022 edition).",
+        "url": "https://www.woah.org/fileadmin/Home/eng/Health_standards/tahc/current/chapitre_vaccination.pdf",
+        "use": "支持接种覆盖与有效群体免疫的区分，以及不同疫苗对感染、症状、传播和病原排出的作用可能不同。免疫需求还与流行病学和易感动物分布有关；本篇借用一般概念，不把80%当真实阈值或提供具体兽医处置建议。"
+      }
+    ],
+    "title": "Where Will the Red Token Go?",
+    "summary": "Both contact diagrams have eight blue cards and two white ones. Ji Lan has ten minutes to show her audience why a red token may travel differently on them.",
+    "storyParagraphs": [
+      "The veterinary school is holding an evening class for the public, and Ji Lan has only ten minutes. Two contact diagrams sit on her table, each holding ten animal cards: eight blue cards represent animals assumed in the demonstration to have immunity that blocks transmission; two white cards represent animals that can still become infected. Her slide says only “8/10 effectively immune.” The teaching assistant asks, “Why would the other animals’ immunity make a difference to those two white cards?”",
+      "Ji Lan brings over a red token and points to the first diagram. “Suppose one of the white-card animals becomes infected.” She places the token on that card; the other white-card animal has not been infected. A direct contact line joins the two white cards. She pushes the token along it and reaches the other white card without passing a blue one.",
+      "She returns the token to the starting point and switches to the second diagram. It still has eight blue cards and two white ones, but no direct line joins the white points. Every drawn route from the starting point to the other white point meets a blue point first. The demonstration assumes that blue cards completely block transmission during this period, so the token stops before the blue point. The other white card has not turned blue, but these drawn paths do not reach it.",
+      "Ji Lan therefore removes the large percentage figure she had planned to use as the conclusion and places the two diagrams side by side in the centre of the table. She spends extra time redrawing every contact edge clearly, so another slide on vaccination history has to be dropped. During the actual class, she first asks the audience to guess how far the red token can travel on each diagram and then asks them to trace the lines themselves.",
+      "When it is one child's turn, he first pushes the red token from the starting white node to the other white node on the first diagram. On the second diagram, he follows the line one step and stops before the first blue node. Ji Lan does not move it across for him. The child returns the token to the starting point and turns to the teaching assistant. “Let's have the next group start from this white node too.” The assistant nods and straightens the two diagrams again."
+    ],
+    "overall": "This article explains one core mechanism of herd immunity: when some animals have effective immunity that interrupts transmission, they can break certain transmission chains and indirectly reduce the chance that transmission paths reach other susceptible animals. Overall vaccination coverage alone is not enough to describe protection within every contact group.",
+    "conceptName": "Herd immunity",
+    "explanationParagraphs": [
+      "Both diagrams initially contain 10 nodes: 8 are assumed to completely block transmission of the specified pathogen and 2 are susceptible, giving 80% effective immunity. A hypothetical infection is introduced at one initially susceptible node. Once the red token is placed, that node is the infected starting point; the other white node remains susceptible.",
+      "The white nodes in the first diagram have a direct edge, so a transmission path remains. Every drawn route to the other white node in the second diagram first encounters an immune node. That white node has not acquired immunity itself: it receives indirect protection from interruption of the transmission chain.",
+      "The model assumes complete immunity without waning during one period, transmission only along drawn edges, and no other routes. Real vaccination coverage is not the same as effective immunity, not every disease or vaccine completely blocks infection and transmission, and susceptibility can cluster. 80% is not a universal safety threshold."
+    ],
+    "module": {
+      "intro": "Do not only count how many animals have effective immunity. Trace the contact network instead: after a pathogen is hypothetically introduced through one susceptible node, ask whether effective immunity interrupts the transmission path before it reaches another susceptible node.",
+      "diagramTitle": "Why Can Two Diagrams Both Start at 8/10 Effective Immunity Yet Give the Other Susceptible Node Different Transmission Opportunities?",
+      "diagramSteps": [
+        "Create two 10-node diagrams, each starting with 8 effectively immune nodes and 2 susceptible nodes",
+        "In the first diagram, designate one susceptible node as the hypothetical infected starting point and trace transmission along its direct edge to the other susceptible node",
+        "Reset the second diagram and designate the corresponding susceptible node as the hypothetical infected starting point",
+        "Trace every drawn route in the second diagram and observe that each encounters an immune node assumed to completely block transmission before reaching the other susceptible node",
+        "Compare the diagrams: the total effective-immunity proportion is the same, but the contact structure differs, giving the other susceptible node in the second diagram indirect protection through interruption of transmission paths"
+      ],
+      "diagramStepNotes": [
+        "At the start, 8/10 represents effective immunity in this teaching model, not a real vaccination-coverage figure or safety threshold.",
+        "The red token marks the hypothetical infected starting point used in the demonstration; once the demonstration begins, that node is no longer simultaneously described as an uninfected susceptible node.",
+        "The second diagram uses the same number of nodes and the same immunity assumptions as the first; what changes is the drawn contact relationship among the nodes.",
+        "The path stops only because the model assumes that immune nodes completely block the specified pathogen during that fixed teaching period and that no unshown transmission routes exist.",
+        "Indirect protection means that the other susceptible node remains susceptible itself, but some transmission chains that could reach it are interrupted by other nodes with effective immunity."
+      ],
+      "mapping": [
+        "8 blue nodes → effectively immune nodes assumed in the teaching model to completely block transmission.",
+        "2 white nodes → the two susceptible nodes before the demonstration begins.",
+        "Red token → the transmission-tracing marker after one of the susceptible nodes is designated as the hypothetical infected starting point.",
+        "Direct edge between white nodes in the first diagram → a transmission route that can reach the other susceptible node without passing through an immune node.",
+        "Routes in the second diagram that first meet blue nodes → the mechanism by which effectively immune nodes interrupt transmission and provide indirect protection to the other susceptible node."
+      ],
+      "boundary": "Herd immunity cannot be determined directly from a single vaccination-coverage percentage. Vaccination coverage differs from effective immunity at a particular moment, and some vaccines may reduce clinical disease, pathogen shedding, or some transmission without completely preventing infection. Contact networks, clustering of susceptible animals, changes in immunity over time, and the disease itself all affect transmission. The 10-node structure and 80% figure in this article are only paper-model assumptions and provide no real vaccine threshold, product, dose, schedule, isolation procedure, or animal-group rearrangement plan. Rearranging cards is not equivalent to a real animal-management recommendation.",
+      "reflection": "If blue cards mean only “less clinical illness” without guaranteeing that infection and transmission are blocked, can the rule that stops the red token at a blue point still be used? Why?"
+    },
+    "references": [
+      {
+        "id": "woah-vaccination-2022",
+        "citation": "World Organisation for Animal Health (OIE). (2022). Terrestrial Animal Health Code, Chapter 4.18: Vaccination (10 August 2022 edition).",
+        "url": "https://www.woah.org/fileadmin/Home/eng/Health_standards/tahc/current/chapitre_vaccination.pdf",
+        "use": "Supports distinguishing vaccination coverage from effective population immunity and recognizing that vaccines can differ in their effects on infection, symptoms, transmission and shedding. Immunity requirements also depend on epidemiology and susceptible-animal distribution. This article borrows general concepts, not a real 80% threshold or veterinary control plan."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
-      "reviewRounds": 3,
-      "rewriteRounds": 2,
+      "reviewRounds": 4,
+      "rewriteRounds": 3,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "resource-health-night-26-preparation/group1-pdc-round4.json",
+      "edits": [
+        "resource-health-night-26-preparation/group1-edit-pass1-evidence.json",
+        "resource-health-night-26-preparation/group1-edit-pass2-evidence.json",
+        "resource-health-night-26-preparation/group1-edit-pass3-evidence.json"
+      ],
+      "execution": "One Codex editor,13 perspectives; four actual GPT-5.6 Sol High writer stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "After eight in ten sheep at the hill farm were vaccinated, the owner painted 'safe' at the entrance. Lambs not yet at the appropriate vaccination age, animals with insufficient response, and several whose health required delay all shared one warm shed. He saw the farm-wide proportion, not how those sheep contacted one another. The overall figure earned the farm a certificate, so the clustered gaps remained invisible behind one average.\n\nA sheep bought at the spring fair waited beside the warm shed without quarantine. Days later, infection spread rapidly among the lambs. Immunized adults dispersed across the hillside mostly avoided disease, but they did not form an even wall around the shed. Clustered susceptible animals still offered a continuous route. The outbreak response cost weeks of movement restrictions and required veterinary supervision; the fable does not specify treatment for individual animals.\n\nThe spring-sale date was painted on the gate. The owner scrubbed it off, mapped ages, pens, contacts, and timing, and found two highly connected pens with low effective coverage. Vaccine records were checked for product, schedule, handling, and expected response rather than counted as identical marks. The contact map showed that market arrivals connected pens otherwise separated, so timing of introductions mattered alongside coverage.\n\nThe veterinarian spread the shed map over the owner's painted eighty-per-cent sign. She circled each sick lamb by onset date, then ran red thread through the pens and the spring-fair gate. The thread never crossed most immunized adults; it passed from the unquarantined arrival into the warm shed and along its shared trough. Beside several dose marks she placed faded tags for uncertain response or elapsed time. The owner rubbed at the word 'safe' until the paint blurred, while movement restrictions kept buyers outside the yard.\n\nWorkers divided the warm shed, moved new arrivals behind the quarantine gate, and gave each age group its own line in the calendar. The owner walked the red-thread route with the veterinarian, checking product, schedule, handling, boosters, and which animals could not yet be protected. After one lamb coughed, a keeper shut its small gate and pinned the alert to the matching pen on the map. The total percentage remained in the ledger, but every verified alert changed the map beside it. Spring buyers waited another week, and empty sale ropes hung from the posts.\n\nWhen the next lambs were not yet vaccinated, the owner did not crowd them into one shed. He closed the quarantine gate and tied the new animal's rope to a separate post outside it. None of the links erased the original book.",
-    "storyBodyZh": "岭上羊场给八成羊接种后，场主便在门口写下‘已经安全’。尚未到合适接种时间的幼羊、接种后反应不足的个体，以及几只因健康原因暂缓的羊，都集中在暖棚里。他只看全场比例，没有看这些羊彼此怎样接触。总体比例让羊场拿到证书，聚集缺口便藏在一个平均数后面。\n\n春市买来的一只羊未经隔离，先在暖棚旁等候。几天后，传染病从幼羊间迅速传播。山坡上分散饲养、已具免疫的成年羊大多没有发病，却没能像一堵均匀的墙那样保护暖棚；易感个体聚在一起，病原仍找到连续通路。疫情响应导致数周移动限制，并须由兽医监督；本寓言不为个体动物规定治疗。\n\n春售日期已经漆在栏门上。场主把它擦掉，改画年龄、栏舍、接触与时间，结果发现两处高连接栏舍的有效覆盖很低。免疫记录还核对产品、程序、保存与预期反应，不能把每个勾都算成相同保护。接触图显示集市新羊会连接原本分开的栏舍，因此引入时机同覆盖率一样重要。\n\n兽医把栏舍图铺在场主写着“八成”的牌子上，按发病日期圈出每只病羔，再用红线穿过羊栏和春市入口。红线绕开大多数已免疫成年羊，却从未经隔离的新羊伸进暖棚，又沿共用料槽连下去。几处接种勾旁，她放上代表反应不明或时间已久的褪色标签。场主伸手擦门口的“安全”二字，油漆渐渐发花；移动限制仍把买家挡在院外。\n\n工人把暖棚隔开，新羊移到检疫栏后，日历也按年龄另起一行。场主跟兽医沿红线逐栏走，核对产品、程序、保存、加强时间，以及哪些羊暂时还得不到保护。一只幼羊咳嗽后，饲养员立即关上小门，把警示钉到地图对应栏位。总百分比仍留在账本里，但每次核实预警，旁边的图就跟着改变。春市买家又等了一周，售羊木桩上只挂着空绳。\n\n下一批幼羊尚未接种时，场主没有再把它们全赶进一间棚。他关上检疫栏门，把新买羊的绳结系在门外那根独立木桩上。任何连接都没有抹去原始记录。",
-    "explanation": "Herd immunity is indirect protection for some susceptible individuals when enough others have effective immunity across the relevant contact network and time, reducing transmission. Required coverage depends on pathogen transmissibility, immune effectiveness and waning, clustering of susceptibility, importation, behaviour, and population structure. A total percentage does not ensure protection in every subgroup, and simplified thresholds cannot replace disease- and setting-specific veterinary planning.",
-    "explanationZh": "群体免疫是足够多个体在相关接触网络和时间内具有有效免疫、降低传播后，对部分易感个体产生的间接保护。所需覆盖受病原传播性、免疫效果与衰减、易感聚集、外来输入、行为和种群结构影响。总体比例不能保证每个群体都受保护，简化阈值也不能替代针对疾病和场景的兽医计划。"
+    "storyBody": "The veterinary school is holding an evening class for the public, and Ji Lan has only ten minutes. Two contact diagrams sit on her table, each holding ten animal cards: eight blue cards represent animals assumed in the demonstration to have immunity that blocks transmission; two white cards represent animals that can still become infected. Her slide says only “8/10 effectively immune.” The teaching assistant asks, “Why would the other animals’ immunity make a difference to those two white cards?”\n\nJi Lan brings over a red token and points to the first diagram. “Suppose one of the white-card animals becomes infected.” She places the token on that card; the other white-card animal has not been infected. A direct contact line joins the two white cards. She pushes the token along it and reaches the other white card without passing a blue one.\n\nShe returns the token to the starting point and switches to the second diagram. It still has eight blue cards and two white ones, but no direct line joins the white points. Every drawn route from the starting point to the other white point meets a blue point first. The demonstration assumes that blue cards completely block transmission during this period, so the token stops before the blue point. The other white card has not turned blue, but these drawn paths do not reach it.\n\nJi Lan therefore removes the large percentage figure she had planned to use as the conclusion and places the two diagrams side by side in the centre of the table. She spends extra time redrawing every contact edge clearly, so another slide on vaccination history has to be dropped. During the actual class, she first asks the audience to guess how far the red token can travel on each diagram and then asks them to trace the lines themselves.\n\nWhen it is one child's turn, he first pushes the red token from the starting white node to the other white node on the first diagram. On the second diagram, he follows the line one step and stops before the first blue node. Ji Lan does not move it across for him. The child returns the token to the starting point and turns to the teaching assistant. “Let's have the next group start from this white node too.” The assistant nods and straightens the two diagrams again.",
+    "storyBodyZh": "兽医学院晚上有一场面向公众的短课，季岚只有十分钟。她桌上摆着两张接触图，每张各放十张动物卡：八张蓝卡代表演示中已假定具有阻断传播免疫的动物，两张白卡代表仍可能被感染的动物。投影片上只有“8/10有效免疫”，助教看完问：“那两张白卡，为什么会因为别的动物有免疫而不一样？”\n\n季岚拿来一枚红色磁片，指着第一张图说：“先假设其中一只白卡动物感染了。”她把红片放在那张卡上；另一张白卡还没有感染。两张白卡之间有一条直接接触线，她沿线推动红片，不经过蓝卡就到了另一张白卡。\n\n她把红片放回起点，再换到第二张图。这里仍是八蓝两白，但两个白点没有直接连线；从起点去另一白点，沿画出的线走，总会先碰到蓝点。演示规定蓝卡在这段时间里完全阻断传播，红片便停在蓝点前。另一张白卡没有因此变成蓝卡，却没有被这些画出的路径抵达。\n\n季岚因此把原来准备收尾的百分比大字删掉，把两张图并排放到桌面中央。她多花时间重新画清每一条接触边，原本能讲的另一张疫苗历史幻灯片只好拿掉。正式上课时，她先让观众猜红片在两张图里各能走到哪里，再请他们自己沿线检查。\n\n轮到一个孩子操作时，他先把红片从第一张图的起点白点推到另一个白点。换到第二张图，他沿着线推了一格，在第一个蓝点前停下。季岚没有替他跨过去。孩子把红片拿回起点，转头对助教说：“下一组也从这个白点开始吧。”助教点点头，把两张图重新摆齐。",
+    "explanation": "Both diagrams initially contain 10 nodes: 8 are assumed to completely block transmission of the specified pathogen and 2 are susceptible, giving 80% effective immunity. A hypothetical infection is introduced at one initially susceptible node. Once the red token is placed, that node is the infected starting point; the other white node remains susceptible.\n\nThe white nodes in the first diagram have a direct edge, so a transmission path remains. Every drawn route to the other white node in the second diagram first encounters an immune node. That white node has not acquired immunity itself: it receives indirect protection from interruption of the transmission chain.\n\nThe model assumes complete immunity without waning during one period, transmission only along drawn edges, and no other routes. Real vaccination coverage is not the same as effective immunity, not every disease or vaccine completely blocks infection and transmission, and susceptibility can cluster. 80% is not a universal safety threshold.",
+    "explanationZh": "两张图初始各有10个节点：8个假设完全阻断所设病原传播，另2个易感，有效免疫比例均为80%。演示从其中一个原本易感的节点引入假设感染；放上红片后，该点成为感染起点，另一个白点仍易感。\n\n第一图的两个白点有直接边，传播路径可以继续；第二图去另一白点的所有画出路径都先遇到免疫节点。另一个白点没有自己变得免疫，受的是传播链被截断带来的间接保护。\n\n推演假定同一时段内免疫完全且不衰减，传播只沿画出的边发生，没有其他通路。现实接种覆盖不等于有效免疫，不是每种疾病或疫苗都完全阻断感染传播，易感动物也可能聚集。80%不是通用安全阈值。"
   },
   {
     "id": "0841-five-domains-welfare",

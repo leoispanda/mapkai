@@ -170,14 +170,14 @@ batch-012	08	0811	Crop and livestock production	作物与畜牧生产	3	0811-sel
 batch-012	08	0812	Horticulture	园艺	1	0812-grafting	Grafting and propagation	嫁接与繁殖	mechanism-explainer	一棵树的根与另一棵树的枝共同结果	integrated
 batch-012	08	0812	Horticulture	园艺	2	0812-microclimate	Microclimate	微气候	concept-fable	同一花园里靠墙与低洼处经历不同春天	integrated
 batch-012	08	0812	Horticulture	园艺	3	0812-phenology	Phenology	物候学	lens-fable	园丁不再只看日历而开始记录花与昆虫的时间	integrated
-batch-012	08	0821	Forestry	林业	1	0821-sustainable-yield	Sustainable yield	可持续采伐量	mechanism-fable	每年砍同样树数却逐渐透支不同年龄的森林	integrated
+batch-012	08	0821	Forestry	林业	1	0821-sustainable-yield	Sustainable yield	可持续采伐量	mechanism-explainer	每年砍同样树数却逐渐透支不同年龄的森林	integrated
 batch-012	08	0821	Forestry	林业	2	0821-ecological-succession	Ecological succession	生态演替	concept-fable	火后空地并没有一步返回原来的森林	integrated
 batch-012	08	0821	Forestry	林业	3	0821-fire-ecology	Fire ecology	火生态学	concept-fable	成功扑灭每场小火的林区积下更大的燃料	integrated
-batch-012	08	0831	Fisheries	渔业	1	0831-maximum-sustainable-yield	Maximum sustainable yield	最大可持续产量	mechanism-fable	今年多捕一网让明年的鱼群少掉不止一网	integrated
+batch-012	08	0831	Fisheries	渔业	1	0831-maximum-sustainable-yield	Maximum sustainable yield	最大可持续产量	mechanism-explainer	今年多捕一网让明年的鱼群少掉不止一网	integrated
 batch-012	08	0831	Fisheries	渔业	2	0831-bycatch	Bycatch and ecosystem-based fisheries	兼捕与生态系统渔业	concept-fable	只统计目标鱼的港口忽略网中其他生命	integrated
 batch-012	08	0831	Fisheries	渔业	3	0831-fisheries-co-management	Fisheries co-management	渔业共同管理	concept-fable	外来统一禁令不如渔民共同记录潮汐与繁殖地	integrated
 batch-012	08	0841	Veterinary	兽医学	1	0841-one-health	One Health	同一健康	concept-fable	牲畜、饮水、野生动物与村民的病被分进四本账	integrated
-batch-012	08	0841	Veterinary	兽医学	2	0841-herd-immunity	Herd immunity	群体免疫	mechanism-fable	一道防火间隔如何保护没有直接加固的谷仓	integrated
+batch-012	08	0841	Veterinary	兽医学	2	0841-herd-immunity	Herd immunity	群体免疫	mechanism-explainer	一道防火间隔如何保护没有直接加固的谷仓	integrated
 batch-012	08	0841	Veterinary	兽医学	3	0841-five-domains-welfare	Five Domains model of animal welfare	动物福利五域模型	concept-fable	吃饱且无伤的动物仍在每天重复撞栏	integrated
 batch-013	09	0911	Dental studies	牙科研究	1	0911-caries-biofilm	Dental caries as a biofilm-mediated process	龋病的生物膜过程	mechanism-fable	不是一颗糖而是反复改变口腔环境的钟声	integrated
 batch-013	09	0911	Dental studies	牙科研究	2	0911-occlusion	Occlusion	咬合	mechanism-fable	单颗牙齿完好却让整套齿轮受力偏斜	integrated
