@@ -100,5 +100,7 @@
   "实心小圆点：已转换故事": "Solid small dot: converted story",
   "空心小圆圈：待转换故事": "Hollow small circle: story awaiting conversion",
   "以MapKAI为中心，11个大学科各自成组并显示清晰边界，80个小学科按所属大学科排列。大学科标题字号更大，音乐、视频和故事资源使用大圆圈，每科三篇故事使用紧凑排列的小圆圈。绿色实心小圆点表示已转换故事，绿色空心小圆圈表示待转换的较早故事；已有资源为绿色，待补为红色，灰色虚线表示尚未核实。工具栏和导航缩略图位于绘图区外。故事版本与开放状态见详情；点击学科放大，回到全图恢复完整脉络，支持拖动、滚轮和双指缩放。": "Centred on MapKAI, 11 major subjects form distinct groups with clear boundaries. All 80 fields are arranged within their own subject. Major-subject headings use larger type. Music, video and story resources use larger circles; each field has three closely grouped smaller story circles. Solid green story dots are converted; hollow green story circles are earlier versions awaiting conversion. Green resources are available, red resources are needed, and grey dashed circles are unverified. The toolbar and navigation minimap sit outside the drawing area. See details for story versions and reading availability. Select a subject to zoom in; Show all restores the complete map. Drag to pan and scroll or pinch to zoom.",
-  "缩略图": "Minimap"
+  "缩略图": "Minimap",
+  "知识地图": "Knowledge Map",
+  "知识领域": "Knowledge Fields"
 }

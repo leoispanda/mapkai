@@ -9914,3 +9914,38 @@ body[data-theme="dark"] #map .map-tip-name { color: var(--atlas-ink); }
 /* Arts and humanities: an invitation to the music video collection. */
 .category-mv-feature{display:flex;align-items:center;gap:28px;padding:22px;margin:24px 0;border:1px solid var(--line);border-radius:18px;background:var(--surface,#fffdf8);color:var(--ink);text-decoration:none}.category-mv-feature:hover{border-color:#a8b6b0}.category-mv-poster{position:relative;display:block;flex:0 0 35%;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#19212a}.category-mv-poster img{display:block;width:100%;height:100%;object-fit:cover}.category-mv-poster>span{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:26px;text-shadow:0 2px 15px #000b;background:#0001}.category-mv-copy{min-width:0;display:flex;flex-direction:column;gap:10px;font-size:13px;line-height:1.8}.category-mv-label{font-size:10px;letter-spacing:.09em;color:var(--muted)}.category-mv-copy>strong{font-size:28px;line-height:1.2;font-weight:650;letter-spacing:-.03em}.category-mv-copy>span:not(.category-mv-label):not(.category-mv-action){color:var(--muted)}.category-mv-action{font-size:12px;font-weight:600;margin-top:3px}.category-mv-feature:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
 @media(max-width:600px){.category-mv-feature{align-items:stretch;flex-direction:column;gap:18px;padding:16px;border-radius:14px}.category-mv-poster{flex-basis:auto}.category-mv-copy{font-size:12px;gap:8px}.category-mv-copy>strong{font-size:25px}}
+
+/* Cross-navigation between Content Overview, Knowledge Map, Domains, Subfields, and Stories. */
+.category-subject-heading-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.knowledge-cross-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.category-subject-heading-meta .knowledge-cross-links{margin-top:0}
+.knowledge-cross-link{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:999px;border:1px solid rgba(37,99,235,0.22);background:rgba(37,99,235,0.06);color:var(--blue-dark,#1d4ed8);font-size:0.78rem;font-weight:650;line-height:1.35;text-decoration:none;transition:background 150ms ease,border-color 150ms ease}
+.knowledge-cross-link:hover{background:rgba(37,99,235,0.13);border-color:var(--blue,#2563eb)}
+.field-detail-area a{color:inherit;text-decoration:none}
+.field-detail-area a:hover{color:var(--blue,#2563eb);text-decoration:underline;text-underline-offset:3px}
+.public-field-card-group{display:flex;flex-direction:column;border:1px solid rgba(37,99,235,0.2);border-radius:12px;background:var(--surface,#fff);overflow:hidden;transition:border-color 160ms ease,box-shadow 160ms ease}
+.public-field-card-group:hover{border-color:var(--blue,#2563eb);box-shadow:0 10px 24px rgba(37,99,235,0.08)}
+.category-subject-story-layout .public-field-card-group .public-field-card{border:0;border-bottom:1px solid rgba(37,99,235,0.12);border-radius:0;min-height:64px;padding:14px 16px;transform:none}
+.category-subject-story-layout .public-field-card-group .public-field-card:hover{background:rgba(37,99,235,0.04);transform:none}
+.public-field-stories{display:flex;flex-direction:column;padding:6px 10px 8px;gap:2px}
+.public-field-story-link{display:flex;flex-direction:column;gap:1px;padding:6px 8px;border-radius:7px;color:var(--ink);text-decoration:none;font-size:0.82rem;line-height:1.35;transition:background 140ms ease}
+.public-field-story-link span{font-weight:620;color:var(--ink)}
+.public-field-story-link small{font-size:0.72rem;color:var(--muted)}
+.public-field-story-link:hover{background:rgba(37,99,235,0.08)}
+.public-field-story-link:hover span{color:var(--blue-dark,#1d4ed8)}
+.sibling-fables-section{margin:28px 0;padding:20px;border:1px solid rgba(37,99,235,0.18);border-radius:14px;background:rgba(37,99,235,0.035)}
+.sibling-fables-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;font-size:0.84rem;font-weight:700;color:var(--muted)}
+.sibling-fables-head a{color:var(--blue-dark,#1d4ed8);text-decoration:none;font-size:0.8rem;font-weight:650}
+.sibling-fables-head a:hover{text-decoration:underline;text-underline-offset:3px}
+.sibling-fables-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.sibling-fable-card{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border:1px solid rgba(37,99,235,0.16);border-radius:10px;background:var(--surface,#fff);color:var(--ink);text-decoration:none;transition:border-color 150ms ease,transform 150ms ease}
+.sibling-fable-card:hover{border-color:var(--blue,#2563eb);transform:translateY(-1px)}
+.sibling-fable-card.is-current{border-color:var(--blue,#2563eb);background:rgba(37,99,235,0.07)}
+.sibling-fable-card span{font-size:0.7rem;font-weight:750;color:var(--blue-dark,#1d4ed8);text-transform:uppercase;letter-spacing:0.04em}
+.sibling-fable-card strong{font-size:0.92rem;line-height:1.35;color:var(--ink)}
+.sibling-fable-card small{font-size:0.76rem;color:var(--muted);line-height:1.35}
+#map .map-focus-name a{color:inherit;text-decoration:none}
+#map .map-focus-name a:hover{text-decoration:underline;text-underline-offset:3px}
+body[data-theme="dark"] .public-field-card-group,body[data-theme="dark"] .sibling-fable-card{border-color:rgba(255,255,255,0.1);background:var(--surface)}
+body[data-theme="dark"] .knowledge-cross-link{border-color:rgba(216,177,95,0.3);background:rgba(216,177,95,0.08);color:var(--blue)}
+@media(max-width:600px){.category-subject-heading-meta{align-items:flex-start}}

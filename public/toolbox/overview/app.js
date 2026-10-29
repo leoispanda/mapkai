@@ -11,6 +11,7 @@ const words = {
   shared: ['分组共享歌曲', 'Shared group song'], pending: ['已有稿件 · 暂未开放', 'Draft ready · Not open for reading'],
   newer: ['当前版本', 'Current version'], older: ['较早版本', 'Earlier version'],
   openSubject: ['进入学科', 'Open subject'], readIntro: ['阅读学科导论', 'Read the introduction'],
+  openMap: ['知识地图', 'Knowledge map'],
   watch: ['看总览视频', 'Watch overview'], listen: ['听主题歌', 'Play theme song'],
   openField: ['进入小学科', 'Open field'], watchField: ['观看视频', 'Watch video'],
   read: ['阅读故事', 'Read story'], listenShared: ['听共享歌曲', 'Play shared song'],
@@ -88,8 +89,14 @@ function closeSelection() {
   const target=previous?.kind==='story'?[...$('content-map').querySelectorAll('[data-story-id]')].find(el=>el.dataset.storyId===previous.item.id):[...$('content-map').querySelectorAll('[data-node]')].find(el=>el.dataset.node===previous?.id);
   target?.focus({preventScroll:true});
 }
-function activateNode(node) {
+function activateNode(node, event) {
   if(node.kind==='root'){resetMap();mindMap.fit();return;}
+  if(node.kind==='story'&&node.item?.public&&event?.type==='click'){location.href=localizedPath(`/concept-fables/${node.item.id}`);return;}
+  if(selected===node.id&&event?.type==='click'){
+    if(node.kind==='category'){location.href=localizedPath(`/categories/${node.item.code}`);return;}
+    if(node.kind==='field'){location.href=localizedPath(`/fields/${node.item.slug}`);return;}
+    if(node.kind==='story'&&node.item?.public){location.href=localizedPath(`/concept-fables/${node.item.id}`);return;}
+  }
   selected=node.id;selectionReturn=node;
   if(node.kind==='category'&&!expandedAll){expandedAll=true;renderTree();mindMap.focusCategory(node.item.code);return;}
   if(node.kind==='field'){
@@ -106,22 +113,38 @@ function storyNode(story) {
   node.description=`${node.label}. ${node.subtitle}. ${t(story.public?'open':'pending')}`;
   return node;
 }
+function renderStoryEntry(story, i) {
+  const label = `${i+1}. ${pick(story.title)} · ${t(story.newer?'newer':'older')} · ${t(story.public?'open':'pending')}`;
+  const inner = `<span class="${storyDotClass(story)}" aria-hidden="true"></span><span><strong>${i+1}. ${esc(pick(story.title))}</strong><small>${esc(`${pick(story.concept)} · ${t(story.newer?'newer':'older')} · ${t(story.public?'open':'pending')}`)}</small></span>`;
+  return story.public
+    ? `<a class="selection-story-link" href="${esc(localizedPath(`/concept-fables/${story.id}`))}" aria-label="${esc(label)}">${inner}</a>`
+    : `<button type="button" data-select-story="${esc(story.id)}" aria-label="${esc(label)}">${inner}</button>`;
+}
 function renderSelection(node) {
   if(!node||node.kind==='root'){$('map-selection').hidden=true;return;}
-  const item=node.item;let links=[],note='',stories='';
+  const item=node.item;let links=[],note='',stories='',titleHref='';
   if(node.kind==='category'){
-    links=[anchor(`/categories/${item.code}`,t('openSubject')),item.introduction?.public?anchor(`/lens-stories/${item.introduction.id}`,t('readIntro')):'',watchAnchor(videoFor(item),t('watch')),songsById.has(item.songId)?songAnchor(item.songId,t('listen')):''];
+    titleHref=`/categories/${item.code}`;
+    links=[anchor(`/categories/${item.code}`,t('openSubject')),anchor(`/map?subject=${item.code}`,t('openMap')),item.introduction?.public?anchor(`/lens-stories/${item.introduction.id}`,t('readIntro')):'',watchAnchor(videoFor(item),t('watch')),songsById.has(item.songId)?songAnchor(item.songId,t('listen')):''];
     note=item.introduction?`${t(item.introduction.public?'open':'pending')} · ${pick(item.introduction.title)}`:'';
+    stories=`<div class="selection-stories">${item.fields.map(field=>`<a class="selection-story-link" href="${esc(localizedPath(`/fields/${field.slug}`))}" aria-label="${esc(`${pick(field.title)} · ${availability(field)}`)}"><span class="resource-dot small on" aria-hidden="true"></span><span><strong>${esc(pick(field.title))}</strong><small>${esc(`${field.code} · ${availability(field)}`)}</small></span></a>`).join('')}</div>`;
   }else if(node.kind==='field'){
-    links=[anchor(`/fields/${item.slug}`,t('openField')),watchAnchor(videoFor(item),t('watchField')),songsById.has(item.songId)?songAnchor(item.songId,t('listenShared')):`<span>${esc(zh?'音乐待补':'Music needed')}</span>`];
-    note=zh?'三个故事的版本与阅读状态':'Versions and reading availability of the three stories';
-    stories=`<div class="selection-stories">${item.stories.map((story,i)=>`<button type="button" data-select-story="${esc(story.id)}" aria-label="${esc(`${i+1}. ${pick(story.title)} · ${t(story.newer?'newer':'older')} · ${t(story.public?'open':'pending')}`)}"><span class="${storyDotClass(story)}" aria-hidden="true"></span><span><strong>${i+1}. ${esc(pick(story.title))}</strong><small>${esc(`${t(story.newer?'newer':'older')} · ${t(story.public?'open':'pending')}`)}</small></span></button>`).join('')}</div>`;
+    const category=node.category||catalog.categories.find(c=>c.fields.some(f=>f.code===item.code));
+    titleHref=`/fields/${item.slug}`;
+    links=[anchor(`/fields/${item.slug}`,t('openField')),category?anchor(`/categories/${category.code}`,t('openSubject')):'',category?anchor(`/map?subject=${category.code}`,t('openMap')):'',watchAnchor(videoFor(item),t('watchField')),songsById.has(item.songId)?songAnchor(item.songId,t('listenShared')):`<span>${esc(zh?'音乐待补':'Music needed')}</span>`];
+    note=zh?'点击下方小故事可直接进入阅读':'Select any story below to read directly';
+    stories=`<div class="selection-stories">${item.stories.map((story,i)=>renderStoryEntry(story,i)).join('')}</div>`;
   }else{
-    links=item.public?[anchor(`/concept-fables/${item.id}`,t('read'))]:[];
+    const category=catalog.categories.find(c=>c.fields.some(f=>f.stories.some(s=>s.id===item.id)));
+    const field=category?.fields.find(f=>f.stories.some(s=>s.id===item.id));
+    titleHref=item.public?`/concept-fables/${item.id}`:'';
+    links=[item.public?anchor(`/concept-fables/${item.id}`,t('read')):'',field?anchor(`/fields/${field.slug}`,t('openField')):'',category?anchor(`/categories/${category.code}`,t('openSubject')):'',category?anchor(`/map?subject=${category.code}`,t('openMap')):''];
     note=`${pick(item.concept)} · ${t(item.newer?'newer':'older')} · ${t(item.public?'open':'pending')}`;
+    if(field)stories=`<div class="selection-stories">${field.stories.map((story,i)=>renderStoryEntry(story,i)).join('')}</div>`;
   }
   const indicator=node.kind==='story'?`<i class="${storyDotClass(item)}" role="img" aria-label="${esc(t(item.newer?'newer':'older'))}"></i> `:'';
-  $('map-selection').innerHTML=`<button type="button" id="selection-close" class="selection-close" aria-label="${esc(zh?'关闭详情':'Close details')}">×</button><div class="selection-heading"><span>${indicator}${esc(zh?'当前分支':'Selected branch')}</span><h3>${esc(node.label)}</h3></div><div class="selection-content"><div class="overview-resource-links">${links.filter(Boolean).join('')}</div><p>${esc(note)}</p>${stories}</div>`;
+  const headingTitle=titleHref?`<a href="${esc(localizedPath(titleHref))}">${esc(node.label)} ↗</a>`:esc(node.label);
+  $('map-selection').innerHTML=`<button type="button" id="selection-close" class="selection-close" aria-label="${esc(zh?'关闭详情':'Close details')}">×</button><div class="selection-heading"><span>${indicator}${esc(zh?'当前分支':'Selected branch')}</span><h3>${headingTitle}</h3></div><div class="selection-content"><div class="overview-resource-links">${links.filter(Boolean).join('')}</div><p>${esc(note)}</p>${stories}</div>`;
   $('map-selection').hidden=false;
 }
 function availability(field) {
@@ -232,9 +255,10 @@ function renderCounts() {
   }).join('');
   const intros = catalog.categories.filter(c => c.introduction?.public).length;
   const draftCount = stories.filter(s => s.ready && !s.public).length;
+  const openCount = stories.filter(s => s.public).length;
   const workCount = films === null ? '—' : new Set(films.map(f => pick(f.title).replace(/\s*\(Draft \d+\)$/, '').toLowerCase())).size;
   const stats = [
-    ['#content-map', intros, t('introCollection'), zh ? `另有 ${draftCount} 篇故事稿已备` : `${draftCount} further story drafts ready`],
+    ['#content-map', intros, t('introCollection'), draftCount ? (zh ? `另有 ${draftCount} 篇故事稿已备` : `${draftCount} further story drafts ready`) : (zh ? `另有 ${openCount} 篇小故事可读` : `${openCount} field stories open for reading`)],
     ['#content-map', videos === null ? '—' : videos.size, t('videoCollection'), videoFailed ? t('unknown') : t('preview')],
     ['#music-library', catalog.songs.length, t('songCollection'), songsCurrent ? (zh ? '按录音计数 · 含不同版本' : 'Recordings, including alternate versions') : (zh ? '目录快照' : 'Directory snapshot')],
     ['#film-library', workCount, t('films'), films === null ? (filmFailed ? t('failed') : t('loading')) : (zh ? `${films.length} 个创作版本` : `${films.length} creative versions`)],
@@ -272,6 +296,24 @@ async function initialize() {
     navigationToggle.addEventListener('click',()=>{navigation.open=!navigation.open;navigationToggle.setAttribute('aria-expanded',String(navigation.open));});
     navigation.addEventListener('toggle',()=>navigationToggle.setAttribute('aria-expanded',String(navigation.open)));
     renderCounts(); renderCourse(); renderTree(true); renderSongs();
+    const params = new URLSearchParams(location.search);
+    const initialStory = params.get('story');
+    const initialField = params.get('field');
+    const initialSubject = params.get('subject');
+    if (initialStory) {
+      const story = catalog.categories.flatMap(c => c.fields).flatMap(f => f.stories).find(s => s.id === initialStory);
+      if (story) activateNode(storyNode(story));
+    } else if (initialField) {
+      const category = catalog.categories.find(c => c.fields.some(f => f.code === initialField || f.slug === initialField));
+      const field = category?.fields.find(f => f.code === initialField || f.slug === initialField);
+      if (field) activateNode({ id: `field-${field.code}`, kind: 'field', item: field, category, label: pick(field.title) });
+    } else if (initialSubject) {
+      const category = catalog.categories.find(c => c.code === initialSubject);
+      if (category) {
+        $('overview-subject').value = category.code;
+        activateNode({ id: `category-${category.code}`, kind: 'category', item: category, label: pick(category.title) });
+      }
+    }
     $('overview-search').addEventListener('input',event=>{query=event.target.value.trim().toLocaleLowerCase();selected='root';expandedFields.clear();renderTree();renderSongs();});
     $('overview-filters').addEventListener('click',event=>{const button=event.target.closest('[data-filter]');if(!button||button.disabled)return;filter=button.dataset.filter;selected='root';expandedFields.clear();renderTree();});
     $('overview-subject').addEventListener('change',event=>mindMap.focusCategory(event.target.value));

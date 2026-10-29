@@ -63,12 +63,12 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.352" />
-    <link rel="stylesheet" href="/map3d.css?v=0.1.352" />
-    <link rel="stylesheet" href="/site-shell.css?v=0.1.352" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.353" />
+    <link rel="stylesheet" href="/map3d.css?v=0.1.353" />
+    <link rel="stylesheet" href="/site-shell.css?v=0.1.353" />
     <link rel="stylesheet" href="/home-toolbox.css?v=1" />
     <script src="/home-toolbox.js?v=1" defer></script>
-    <script src="/site-shell.js?v=0.1.352" defer></script>
+    <script src="/site-shell.js?v=0.1.353" defer></script>
     <script type="importmap">{"imports":{"three":"/assets/vendor/three/three.module.js"}}</script>
     <link rel="stylesheet" href="/content-share.css?v=quiet-actions-20261024">
     <script src="/content-share.js?v=quiet-actions-20261024" defer></script>
@@ -613,6 +613,10 @@
                 <button type="button" data-spatial-mode="atlas" aria-pressed="true" data-spatial-text="full">Full atlas</button>
                 <button type="button" data-spatial-mode="journey" aria-pressed="false" data-spatial-text="journey">My journey</button>
               </div>
+              <div class="spatial-toolbar-links">
+                <a class="spatial-secondary" href="/categories" data-route="/categories" data-spatial-text="categories">All fields</a>
+                <a class="spatial-secondary" href="/toolbox/overview/en/" data-spatial-overview data-spatial-text="overview">Content overview</a>
+              </div>
               <a class="spatial-primary" href="/map-challenge" data-route="/map-challenge"><span data-spatial-text="start">Start exploring</span><span aria-hidden="true">↗</span></a>
             </div>
           <div class="spatial-world" id="spatialWorld">
@@ -637,6 +641,7 @@
               <a class="button primary" href="/map-challenge" data-route="/map-challenge">Start Map Challenge</a>
               <a class="button secondary" href="/explore" data-route="/explore">Try Lens Explore</a>
               <a class="button secondary" href="/categories" data-route="/categories">Browse Fields</a>
+              <a class="button secondary" href="/toolbox/overview/en/" data-overview-link>Content Overview</a>
             </div>
           </section>
           <section class="map-stage" aria-label="Knowledge atlas">
@@ -734,6 +739,7 @@
         <div class="route-cta">
           <a class="button primary" href="/explore" data-route="/explore">Start Exploring</a>
           <a class="button secondary" href="/map" data-route="/map">View Knowledge Map</a>
+          <a class="button secondary" href="/toolbox/overview/en/" data-overview-link>Content Overview</a>
         </div>
         <div class="category-grid" id="categoryGrid"></div>
       </section>
@@ -766,6 +772,7 @@
         <div class="route-cta">
           <a class="button primary" href="/explore" data-route="/explore">Explore This Domain</a>
           <a class="button secondary" href="/map" data-route="/map">View Knowledge Map</a>
+          <a class="button secondary" href="/toolbox/overview/en/" data-overview-link>Content Overview</a>
         </div>
       </section>
 
@@ -828,10 +835,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.352"></script>
-    <script src="/content/management-column.js?v=0.1.352"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.352"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.352"></script>
-    <script src="/script.js?v=0.1.352"></script>
+    <script src="/content/field-fables.js?v=0.1.353"></script>
+    <script src="/content/management-column.js?v=0.1.353"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.353"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.353"></script>
+    <script src="/script.js?v=0.1.353"></script>
   </body>
 </html>

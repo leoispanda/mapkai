@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { OrbitControls } from './assets/vendor/three/OrbitControls.js';
-import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.352';
+import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.353';
 
 const COPY = {
-  en: { title: 'Knowledge map', sideCopy: 'A new perspective starts here.', full: 'Full atlas', journey: 'My journey', start: 'Start exploring', headline: 'A world of knowledge.', subhead: 'Follow your curiosity. Find your next island.', reset: 'Reset view', loading: 'Preparing your world…', preview: 'Full atlas preview', help: 'Drag to orbit · Scroll to zoom · Select an island', open: 'Explore this field', close: 'Close field details', rotation: 'Auto-rotate', personal: 'Your progress', in: 'Zoom in', out: 'Zoom out', canvas: 'Interactive 3D knowledge islands. Arrow keys select fields, Enter opens a field, plus and minus zoom, Escape resets the view.' },
-  zh: { title: '知识地图', sideCopy: '从一个新的视角，重新认识世界。', full: '完整地图', journey: '我的探索', start: '开始探索', headline: '世界很大，知识也是。', subhead: '循着好奇心，发现下一座知识岛屿。', reset: '回到全景', loading: '正在展开你的知识世界…', preview: '完整地图预览', help: '拖动旋转 · 滚轮缩放 · 点击岛屿探索', open: '走进这个领域', close: '关闭领域详情', rotation: '自动旋转', personal: '我的进度', in: '放大', out: '缩小', canvas: '交互式三维知识群岛。方向键选择领域，回车进入，加减号缩放，Escape 回到全景。' },
+  en: { title: 'Knowledge map', sideCopy: 'A new perspective starts here.', full: 'Full atlas', journey: 'My journey', start: 'Start exploring', categories: 'All fields', overview: 'Content overview', intro: 'Read introduction', subfields: 'Subfields in this domain', headline: 'A world of knowledge.', subhead: 'Follow your curiosity. Find your next island.', reset: 'Reset view', loading: 'Preparing your world…', preview: 'Full atlas preview', help: 'Drag to orbit · Scroll to zoom · Select an island', open: 'Explore this field', close: 'Close field details', rotation: 'Auto-rotate', personal: 'Your progress', in: 'Zoom in', out: 'Zoom out', canvas: 'Interactive 3D knowledge islands. Arrow keys select fields, Enter opens a field, plus and minus zoom, Escape resets the view.' },
+  zh: { title: '知识地图', sideCopy: '从一个新的视角，重新认识世界。', full: '完整地图', journey: '我的探索', start: '开始探索', categories: '全部领域', overview: '内容总览', intro: '阅读导论', subfields: '包含小学科', headline: '世界很大，知识也是。', subhead: '循着好奇心，发现下一座知识岛屿。', reset: '回到全景', loading: '正在展开你的知识世界…', preview: '完整地图预览', help: '拖动旋转 · 滚轮缩放 · 点击岛屿探索', open: '走进这个领域', close: '关闭领域详情', rotation: '自动旋转', personal: '我的进度', in: '放大', out: '缩小', canvas: '交互式三维知识群岛。方向键选择领域，回车进入，加减号缩放，Escape 回到全景。' },
 };
 const NAMES = {
   en: ['General knowledge', 'Education', 'Arts & humanities', 'Society', 'Business & law', 'Natural sciences', 'Technology', 'Engineering', 'Agriculture', 'Health', 'Services'],
@@ -69,7 +69,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   for (const [i, island] of islands.entries()) {
     const code = island.spec.code;
     const label = document.createElement('button'); label.type = 'button'; label.className = 'spatial-island-label'; label.dataset.spatialIsland = code; label.setAttribute('aria-pressed', 'false'); labelsHost.append(label); labels.set(code, label);
-    label.addEventListener('click', () => select(code, true));
+    label.addEventListener('click', () => { if (selected === code) onOpen(code); else select(code, true); });
     for (const el of [label]) {
       el.addEventListener('mouseenter', () => { hovering = code; invalidate(); });
       el.addEventListener('mouseleave', () => { hovering = null; invalidate(); });
@@ -149,7 +149,14 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   function paintDetails() {
     if (!selected) { detail.hidden = true; return; }
     const f = field(selected), c = COPY[lang];
-    detail.innerHTML = `<button class="spatial-detail-close" type="button" aria-label="${c.close}" data-spatial-close>×</button><h3>${escape(f.name)}</h3><p>${escape(f.thinking)}</p><p class="spatial-personal-state">${c.personal} · ${escape(f.stateLabel)}</p><button type="button" data-spatial-open>${c.open} <span aria-hidden="true">↗</span></button>`;
+    const quickLinks = [
+      f.introHref ? `<a href="${escape(f.introHref)}" data-route="${escape(f.introHref)}">${c.intro} ↗</a>` : '',
+      f.overviewHref ? `<a href="${escape(f.overviewHref)}">${c.overview} ↗</a>` : '',
+    ].filter(Boolean).join('');
+    const subfields = Array.isArray(f.subfields) && f.subfields.length
+      ? `<div class="spatial-detail-subfields"><span>${c.subfields}</span><div class="spatial-subfield-chips">${f.subfields.map(sf => `<a href="${escape(sf.href)}" data-route="${escape(sf.href)}">${escape(sf.title)}</a>`).join('')}</div></div>`
+      : '';
+    detail.innerHTML = `<button class="spatial-detail-close" type="button" aria-label="${c.close}" data-spatial-close>×</button><h3><a href="/categories/${escape(f.code)}" data-route="/categories/${escape(f.code)}">${escape(f.name)} <span aria-hidden="true">↗</span></a></h3><p>${escape(f.thinking)}</p><p class="spatial-personal-state">${c.personal} · ${escape(f.stateLabel)}</p><button type="button" data-spatial-open>${c.open} <span aria-hidden="true">↗</span></button>${quickLinks ? `<div class="spatial-detail-links">${quickLinks}</div>` : ''}${subfields}`;
     detail.hidden = false;
   }
   function flyTo(target, position, zoom) {
@@ -192,7 +199,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   renderer.domElement.addEventListener('pointerdown', e => { pointerDown = { x: e.clientX, y: e.clientY }; });
   renderer.domElement.addEventListener('pointerup', e => {
     if (!pointerDown || Math.hypot(e.clientX - pointerDown.x, e.clientY - pointerDown.y) > 6) return;
-    const code = hit(e); if (code) select(code, true); else select(null, false);
+    const code = hit(e); if (code) { if (selected === code) onOpen(code); else select(code, true); } else select(null, false);
   });
   renderer.domElement.addEventListener('pointermove', e => { hovering = hit(e); renderer.domElement.style.cursor = hovering ? 'pointer' : 'grab'; invalidate(); });
   renderer.domElement.addEventListener('pointerleave', () => { hovering = null; invalidate(); });
@@ -258,6 +265,8 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   function update(nextState) {
     state = nextState; lang = state.language === 'zh' ? 'zh' : 'en'; const c = COPY[lang];
     for (const element of root.querySelectorAll('[data-spatial-text]')) element.textContent = c[element.dataset.spatialText] || '';
+    const overviewLink = root.querySelector('[data-spatial-overview]');
+    if (overviewLink) overviewLink.setAttribute('href', lang === 'zh' ? '/toolbox/overview/zh/' : '/toolbox/overview/en/');
     if (world.clientWidth < 600) root.querySelector('[data-spatial-text="help"]').textContent = lang === 'zh' ? '拖动旋转 · 双指缩放 · 点击岛屿探索' : 'Drag to orbit · Pinch to zoom · Select an island';
     root.querySelector('#spatialProgress').hidden = preview;
     root.querySelector('#spatialReset').setAttribute('aria-label', c.reset);
@@ -362,7 +371,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   };
   reducedQuery.addEventListener('change', motionPreferenceChanged);
   resize(); update(state); invalidate();
-  return { update, dispose() {
+  return { update, select, dispose() {
     disposed = true; stop(); controls.dispose(); resizeObserver.disconnect(); headerObserver.disconnect(); routeObserver.disconnect();
     document.removeEventListener('visibilitychange', visibilityChanged); reducedQuery.removeEventListener('change', motionPreferenceChanged);
     root.removeEventListener('pointerdown', deferRotation, true); root.removeEventListener('keydown', deferRotation, true);

@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.352";
+const appVersion = "0.1.353";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15533,6 +15533,11 @@ function applyLanguage() {
   document.querySelectorAll('.route-cta .button.secondary[href="/map"]').forEach((target) => {
     target.textContent = t("viewKnowledgeMap");
   });
+  document.querySelectorAll("[data-overview-link]").forEach((target) => {
+    target.textContent = currentLanguage === "zh" ? "内容总览" : "Content Overview";
+    const query = target.dataset.overviewQuery || "";
+    target.setAttribute("href", getContentOverviewHref(query));
+  });
   const categoryDetailExplore = document.querySelector('.category-page .route-cta .button.primary[href="/explore"]');
   if (categoryDetailExplore) categoryDetailExplore.textContent = t("exploreThisDomain");
 
@@ -16335,8 +16340,10 @@ function renderConceptFableDetail(fableId) {
   const explanationMarkup = explanationParagraphs.length
     ? explanationParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")
     : renderEscapedParagraphs(getConceptFableValue(fable, "explanation"));
+  const connectedField = getFieldByCode(fable.fieldCode);
   target.innerHTML = `
-    ${renderStoryDetailHeader(getConceptFableValue(fable, "title"), "", `/concept-fables/${fable.id}`)}
+    ${renderStoryDetailHeader(getConceptFableValue(fable, "title"), getConceptFableDetailMetaText(fable), `/concept-fables/${fable.id}`)}
+    ${renderKnowledgeCrossLinks({ categoryCode: fable.categoryCode, field: connectedField, storyId: fable.id })}
     <section class="lens-story-section concept-fable-story">
       <span>${escapeHtml(t("conceptFableStoryLabel"))}</span>
       <div class="concept-fable-story-body">${storyMarkup}</div>
@@ -16355,7 +16362,8 @@ function renderConceptFableDetail(fableId) {
       </div>
     </aside>
     ${renderConceptFableModule(fable)}
-    ${renderFieldSongs(getFieldByCode(fable.fieldCode), `/concept-fables/${fable.id}`)}
+    ${renderFieldSongs(connectedField, `/concept-fables/${fable.id}`)}
+    ${renderSiblingConceptFables(fable)}
     ${renderStoryRatingPanel(ratingArticle)}
     ${renderStoryNavigation(ratingArticle)}`;
   refreshCategorySongModules();
@@ -16488,7 +16496,14 @@ function renderFieldDetail(code) {
   const narrowField = getNarrowFieldById(field.narrowFieldId);
   const isLit = getLitFieldCodes().has(field.id);
   const coreFables = getFieldCoreConceptFables(field.code);
-  const categoryHref = area?.code ? `/categories/${area.code}` : "/categories";
+  const parentCategory = getCategoryGroupForField(field)?.category || null;
+  const areaCode = area?.code || parentCategory?.code || "";
+  const categoryHref = areaCode ? `/categories/${areaCode}` : "/categories";
+  const areaTitle = area
+    ? (typeof getAreaDisplayTitle === "function" ? getAreaDisplayTitle(area) : area.title)
+    : (parentCategory ? getPublicCategoryTitle(parentCategory) : "");
+  const overviewHref = `${currentLanguage === "zh" ? "/toolbox/overview/zh/" : "/toolbox/overview/en/"}${field?.code ? `?field=${encodeURIComponent(field.code)}` : ""}`;
+  const zh = currentLanguage === "zh";
   const backLink = document.querySelector(".field-detail-shell > .button.secondary");
   if (backLink) {
     backLink.textContent = t("backToCognitiveField");
@@ -16512,7 +16527,12 @@ function renderFieldDetail(code) {
         <span class="internal-code">${escapeHtml(field.code)}</span>
         <h1>${escapeHtml(getFieldDisplayTitle(field))}</h1>
       </div>
-      ${area ? `<p class="field-detail-area">${escapeHtml(getAreaDisplayTitle(area))}</p>` : ""}
+      ${areaTitle ? `<p class="field-detail-area"><a href="${escapeHtml(categoryHref)}" data-route="${escapeHtml(categoryHref)}">${escapeHtml(areaTitle)} ↗</a></p>` : ""}
+      <nav class="knowledge-cross-links" aria-label="${escapeHtml(zh ? "关联导航" : "Related navigation")}">
+        ${areaTitle ? `<a class="knowledge-cross-link" href="${escapeHtml(categoryHref)}" data-route="${escapeHtml(categoryHref)}">${escapeHtml(zh ? `所属领域：${areaTitle}` : `Domain: ${areaTitle}`)} ↗</a>` : ""}
+        <a class="knowledge-cross-link" href="/map${areaCode ? `?subject=${escapeHtml(areaCode)}` : ""}" data-route="/map"${areaCode ? ` data-map-subject="${escapeHtml(areaCode)}"` : ""}>${escapeHtml(zh ? "知识地图" : "Knowledge Map")} ↗</a>
+        <a class="knowledge-cross-link" href="${escapeHtml(overviewHref)}">${escapeHtml(zh ? "内容总览定位" : "Content Overview")} ↗</a>
+      </nav>
     </header>
     ${document.getElementById('fieldVideoPreviewTemplate')?.innerHTML || ''}
     <section class="field-core-fables" aria-label="${escapeHtml(t("fieldCoreFablesTitle"))}">
@@ -19850,6 +19870,16 @@ function renderCategoryDetail(code) {
     doNotTouch: "Do not change unrelated categories during this module update.",
   });
 
+  const detailOverviewLink = document.querySelector("#categoryDetail .route-cta [data-overview-link]");
+  if (detailOverviewLink) {
+    detailOverviewLink.dataset.overviewQuery = `subject=${category.code}`;
+    detailOverviewLink.setAttribute("href", getContentOverviewHref(`subject=${category.code}`));
+  }
+  const detailMapLink = document.querySelector('#categoryDetail .route-cta a[data-route="/map"]');
+  if (detailMapLink) {
+    detailMapLink.dataset.mapSubject = category.code;
+  }
+
   renderCategoryTree(category);
   refreshCategorySongTempos();
 }
@@ -19940,6 +19970,64 @@ function getLensStoryDetailMetaText(story) {
     getOriginalCategoryMetaPart(category),
     getFieldMetaPart(getLensStoryConnectedFieldTitles(story, group)),
   ]);
+}
+
+function getContentOverviewHref(query = "") {
+  const base = currentLanguage === "zh" ? "/toolbox/overview/zh/" : "/toolbox/overview/en/";
+  return query ? `${base}?${query}` : base;
+}
+
+function renderKnowledgeCrossLinks({ categoryCode = "", field = null, storyId = "" } = {}) {
+  const zh = currentLanguage === "zh";
+  const category = categoryCode
+    ? categories.find((item) => item.code === categoryCode)
+    : (field ? getCategoryGroupForField(field)?.category : null);
+  const resolvedCode = category?.code || categoryCode || "";
+  const categoryTitle = category ? (getPublicCategoryCardDisplay(category).displayTitle || getPublicCategoryTitle(category)) : "";
+  const fieldHref = field ? `/fields/${field.id}` : "";
+  const fieldTitle = field ? getFieldDisplayTitle(field) : "";
+  const overviewQuery = storyId
+    ? `story=${encodeURIComponent(storyId)}`
+    : field?.code
+      ? `field=${encodeURIComponent(field.code)}`
+      : resolvedCode
+        ? `subject=${encodeURIComponent(resolvedCode)}`
+        : "";
+  const overviewHref = getContentOverviewHref(overviewQuery);
+  const links = [
+    fieldHref ? `<a class="knowledge-cross-link" href="${escapeHtml(fieldHref)}" data-route="${escapeHtml(fieldHref)}">${escapeHtml(zh ? `小学科：${fieldTitle}` : `Subfield: ${fieldTitle}`)} ↗</a>` : "",
+    resolvedCode ? `<a class="knowledge-cross-link" href="/categories/${escapeHtml(resolvedCode)}" data-route="/categories/${escapeHtml(resolvedCode)}">${escapeHtml(zh ? `领域：${categoryTitle || resolvedCode}` : `Domain: ${categoryTitle || resolvedCode}`)} ↗</a>` : "",
+    `<a class="knowledge-cross-link" href="/map${resolvedCode ? `?subject=${escapeHtml(resolvedCode)}` : ""}" data-route="/map"${resolvedCode ? ` data-map-subject="${escapeHtml(resolvedCode)}"` : ""}>${escapeHtml(zh ? "知识地图" : "Knowledge Map")} ↗</a>`,
+    `<a class="knowledge-cross-link" href="${escapeHtml(overviewHref)}">${escapeHtml(zh ? "内容总览" : "Content Overview")} ↗</a>`,
+  ].filter(Boolean);
+  return `<nav class="knowledge-cross-links" aria-label="${escapeHtml(zh ? "关联导航" : "Related navigation")}">${links.join("")}</nav>`;
+}
+
+function renderSiblingConceptFables(currentFable) {
+  if (!currentFable?.fieldCode) return "";
+  const zh = currentLanguage === "zh";
+  const field = getFieldByCode(currentFable.fieldCode);
+  const fieldTitle = field ? getFieldDisplayTitle(field) : currentFable.fieldCode;
+  const fables = getFieldCoreConceptFables(currentFable.fieldCode);
+  if (fables.length <= 1) return "";
+  const cards = fables.map((item, idx) => {
+    const isCurrent = item.id === currentFable.id;
+    const href = `/concept-fables/${item.id}`;
+    return `
+      <a class="sibling-fable-card${isCurrent ? " is-current" : ""}" href="${escapeHtml(href)}" data-route="${escapeHtml(href)}"${isCurrent ? ' aria-current="page"' : ""}>
+        <span>${escapeHtml(`${t("fieldCoreFableLabel")} ${idx + 1}${isCurrent ? (zh ? " · 当前阅读" : " · Reading now") : ""}`)}</span>
+        <strong>${escapeHtml(getConceptFableValue(item, "title"))}</strong>
+        <small>${escapeHtml(getConceptFableValue(item, "conceptName"))}</small>
+      </a>`;
+  }).join("");
+  return `
+    <section class="sibling-fables-section" aria-label="${escapeHtml(zh ? "同小学科的三个核心故事" : "All three stories in this subfield")}">
+      <div class="sibling-fables-head">
+        <span>${escapeHtml(zh ? `${fieldTitle} · 三个核心概念故事` : `${fieldTitle} · Three core concept stories`)}</span>
+        ${field ? `<a href="/fields/${escapeHtml(field.id)}" data-route="/fields/${escapeHtml(field.id)}">${escapeHtml(zh ? "进入小学科页 ↗" : "Open subfield ↗")}</a>` : ""}
+      </div>
+      <div class="sibling-fables-grid">${cards}</div>
+    </section>`;
 }
 
 function renderStoryDetailHeader(title, metaText = "", sharePath = "") {
@@ -20056,6 +20144,7 @@ const ownerCulturalSongs = [
 function renderCategoryTree(category) {
   const target = document.getElementById("categoryTree");
   if (!target) return;
+  const zh = currentLanguage === "zh";
   const fieldEntries = getPublicCategoryEntryNodes(category).filter((entry) => entry.type !== "general_entry");
   const introStory = getSubjectIntroStoryForCategory(category.code);
   const visibleFieldEntries = introStory ? getFeaturedCategoryFieldEntries(fieldEntries) : fieldEntries;
@@ -20064,19 +20153,36 @@ function renderCategoryTree(category) {
       const field = getFieldById(entry.fieldCode);
       const href = field ? `/fields/${field.id}` : `/fields/${entry.fieldCode}`;
       const fieldTitle = getPublicSubjectTitle(entry);
+      const fables = getFieldCoreConceptFables(entry.fieldCode);
+      const storyLinks = fables.length
+        ? `<div class="public-field-stories">${fables.map((fable, idx) => {
+            const fableHref = `/concept-fables/${fable.id}`;
+            return `<a class="public-field-story-link" href="${escapeHtml(fableHref)}" data-route="${escapeHtml(fableHref)}"><span>${idx + 1}. ${escapeHtml(getConceptFableValue(fable, "title"))}</span><small>${escapeHtml(getConceptFableValue(fable, "conceptName"))}</small></a>`;
+          }).join("")}</div>`
+        : "";
       return `
-        <a class="submodule-button public-field-card" href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">
-          <span>${escapeHtml(fieldTitle)}</span><i aria-hidden="true">↗</i>
-        </a>`;
+        <div class="public-field-card-group">
+          <a class="submodule-button public-field-card" href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">
+            <span>${escapeHtml(fieldTitle)}</span><i aria-hidden="true">↗</i>
+          </a>
+          ${storyLinks}
+        </div>`;
     })
     .join("");
+  const overviewHref = getContentOverviewHref(`subject=${encodeURIComponent(category.code)}`);
   const storyArticle = introStory ? renderInlineLensStoryArticle(introStory) : "";
   target.innerHTML = `
     <div class="category-subject-story-layout">
     ${fieldCards ? `<nav class="submodule-browser category-subject-nav is-field-list-browser" aria-labelledby="categorySubjectsTitle">
       <div class="hierarchy-layer module-layer">
-        <div class="category-subject-heading"><div><p class="category-subject-kicker">SUBJECTS</p><h2 id="categorySubjectsTitle">${currentLanguage === "zh" ? "探索这个领域的学科" : "Explore the subjects"}</h2></div>
-        <p class="category-subfield-context">${escapeHtml(t("subfieldContextLine", visibleFieldEntries.length))}</p></div>
+        <div class="category-subject-heading"><div><p class="category-subject-kicker">SUBJECTS</p><h2 id="categorySubjectsTitle">${zh ? "探索这个领域的学科与小故事" : "Explore the subfields & stories"}</h2></div>
+        <div class="category-subject-heading-meta">
+          <p class="category-subfield-context">${escapeHtml(t("subfieldContextLine", visibleFieldEntries.length))}</p>
+          <div class="knowledge-cross-links">
+            <a class="knowledge-cross-link" href="/map?subject=${escapeHtml(category.code)}" data-route="/map" data-map-subject="${escapeHtml(category.code)}">${escapeHtml(zh ? "在知识地图查看" : "View on Knowledge Map")} ↗</a>
+            <a class="knowledge-cross-link" href="${escapeHtml(overviewHref)}">${escapeHtml(zh ? "在内容总览查看" : "View in Content Overview")} ↗</a>
+          </div>
+        </div></div>
         <div class="submodule-button-row public-field-grid" aria-label="${escapeHtml(t("submoduleLabel"))}">
           ${fieldCards}
         </div>
@@ -20118,9 +20224,26 @@ function renderLensStoryDetail(storyId) {
   const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
   const ratingArticle = getRatingArticleForLensStory(story);
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
+  const metaText = getLensStoryDetailMetaText(story);
+  const crossLinks = renderKnowledgeCrossLinks({ categoryCode: story.categoryCode });
   if (story.subjectOrigin) {
-    target.innerHTML = renderStoryDetailHeader(getLensStoryValue(story, "title"), "", `/lens-stories/${story.id}`) +
-      renderSubjectOriginContent(story) + renderStoryRatingPanel(ratingArticle) + renderStoryNavigation(ratingArticle);
+    const category = categories.find((item) => item.code === story.categoryCode);
+    const fieldEntries = category ? getFeaturedCategoryFieldEntries(getPublicCategoryEntryNodes(category).filter((entry) => entry.type !== "general_entry")) : [];
+    const zh = currentLanguage === "zh";
+    const subfieldSection = fieldEntries.length
+      ? `<section class="lens-story-section"><div class="sibling-fables-head"><span>${escapeHtml(zh ? "继续探索本领域下属小学科" : "Explore subfields in this domain")}</span><a href="/categories/${escapeHtml(story.categoryCode)}" data-route="/categories/${escapeHtml(story.categoryCode)}">${escapeHtml(zh ? "返回领域总览 ↗" : "Open domain overview ↗")}</a></div><div class="sibling-fables-grid">${fieldEntries.map((entry) => {
+          const field = getFieldById(entry.fieldCode);
+          const href = field ? `/fields/${field.id}` : `/fields/${entry.fieldCode}`;
+          const fables = getFieldCoreConceptFables(entry.fieldCode);
+          return `<a class="sibling-fable-card" href="${escapeHtml(href)}" data-route="${escapeHtml(href)}"><span>${escapeHtml(entry.fieldCode)}</span><strong>${escapeHtml(getPublicSubjectTitle(entry))}</strong><small>${escapeHtml(zh ? `${fables.length} 篇核心概念小故事` : `${fables.length} core concept stories`)}</small></a>`;
+        }).join("")}</div></section>`
+      : "";
+    target.innerHTML = renderStoryDetailHeader(getLensStoryValue(story, "title"), metaText, `/lens-stories/${story.id}`) +
+      crossLinks +
+      renderSubjectOriginContent(story) +
+      subfieldSection +
+      renderStoryRatingPanel(ratingArticle) +
+      renderStoryNavigation(ratingArticle);
     if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
     return;
   }
@@ -20129,7 +20252,8 @@ function renderLensStoryDetail(storyId) {
     <figure class="lens-story-figure">
       <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="lazy" />
     </figure>` : ""}
-    ${renderStoryDetailHeader(getLensStoryValue(story, "title"), "", `/lens-stories/${story.id}`)}
+    ${renderStoryDetailHeader(getLensStoryValue(story, "title"), metaText, `/lens-stories/${story.id}`)}
+    ${crossLinks}
     <div class="story-body">${storyBodyHtml}</div>
     ${formalExplanation ? `
     <section class="lens-story-section">
@@ -22418,16 +22542,50 @@ function mapPositionTip() {
   mapTipEl.style.transform = `translate(-50%, ${flip ? "0" : "-100%"}) translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
 }
 
+function getMapFieldBundle(code) {
+  const category = categories.find((item) => item.code === code);
+  const introStory = getSubjectIntroStoryForCategory(code);
+  const entries = category
+    ? getFeaturedCategoryFieldEntries(getPublicCategoryEntryNodes(category).filter((entry) => entry.type !== "general_entry"))
+    : [];
+  const subfields = entries.map((entry) => {
+    const field = getFieldById(entry.fieldCode);
+    return {
+      code: entry.fieldCode,
+      title: getPublicSubjectTitle(entry),
+      href: field ? `/fields/${field.id}` : `/fields/${entry.fieldCode}`,
+    };
+  });
+  return {
+    categoryHref: `/categories/${code}`,
+    overviewHref: getContentOverviewHref(`subject=${encodeURIComponent(code)}`),
+    introHref: introStory ? `/lens-stories/${introStory.id}` : "",
+    introTitle: introStory ? getLensStoryValue(introStory, "title") : "",
+    subfields,
+  };
+}
+
 function mapShowCard(code) {
   mapHudElements();
   if (!mapCardEl) return;
   const level = mapLevelOf(code);
+  const zh = currentLanguage === "zh";
+  const bundle = getMapFieldBundle(code);
+  const quickLinks = [
+    bundle.introHref ? `<a href="${escapeHtml(bundle.introHref)}" data-route="${escapeHtml(bundle.introHref)}">${escapeHtml(zh ? "阅读导论 ↗" : "Read introduction ↗")}</a>` : "",
+    `<a href="${escapeHtml(bundle.overviewHref)}">${escapeHtml(zh ? "内容总览 ↗" : "Content overview ↗")}</a>`,
+  ].filter(Boolean).join("");
+  const subfieldsMarkup = bundle.subfields.length
+    ? `<div class="spatial-detail-subfields"><span>${escapeHtml(zh ? "包含小学科" : "Subfields in this domain")}</span><div class="spatial-subfield-chips">${bundle.subfields.map((sf) => `<a href="${escapeHtml(sf.href)}" data-route="${escapeHtml(sf.href)}">${escapeHtml(sf.title)}</a>`).join("")}</div></div>`
+    : "";
   mapCardEl.innerHTML = `
     <button type="button" class="map-focus-close" data-map-card="close" aria-label="${escapeHtml(t("mapCardClose"))}">&times;</button>
-    <p class="map-focus-name">${escapeHtml(mapSubjectName(code))}</p>
+    <p class="map-focus-name"><a href="/categories/${escapeHtml(code)}" data-route="/categories/${escapeHtml(code)}">${escapeHtml(mapSubjectName(code))} ↗</a></p>
     <p class="map-focus-thinking">${escapeHtml(getCategoryThinking(code))}</p>
     <p class="map-focus-state"><i class="${mapLevelClass[level]}"></i>${escapeHtml(getMasteryLabel(level))}</p>
-    <button type="button" class="map-focus-open" data-map-card="open">${escapeHtml(t("mapOpenField"))}</button>`;
+    <button type="button" class="map-focus-open" data-map-card="open">${escapeHtml(t("mapOpenField"))}</button>
+    <div class="spatial-detail-links">${quickLinks}</div>
+    ${subfieldsMarkup}`;
   mapCardEl.hidden = false;
   requestAnimationFrame(() => mapCardEl.classList.add("is-visible"));
 }
@@ -22798,6 +22956,13 @@ function mapStartEntrance() {
 let spatialAtlasInstance = null;
 let spatialAtlasImport = null;
 let spatialAtlasFailed = false;
+let pendingMapSubject = "";
+function resolveRequestedMapSubject() {
+  const fromQuery = new URLSearchParams(window.location.search).get("subject");
+  const candidate = pendingMapSubject || (fromQuery && mapCodes().includes(fromQuery) ? fromQuery : "");
+  pendingMapSubject = "";
+  return candidate && mapCodes().includes(candidate) ? candidate : "";
+}
 function spatialAtlasState() {
   return {
     language: currentLanguage,
@@ -22805,20 +22970,36 @@ function spatialAtlasState() {
     fields: mapCodes().map((code) => ({
       code, name: mapSubjectName(code), shortName: mapIslandLabels[code][currentLanguage === "zh" ? "zh" : "en"],
       thinking: getCategoryThinking(code), level: mapLevelOf(code), stateLabel: getMasteryLabel(mapLevelOf(code)),
+      ...getMapFieldBundle(code),
     })),
   };
 }
 function drawKnowledgeMap() {
   if (!document.getElementById("map")?.classList.contains("is-active")) return;
   syncMapChallengeProgress();
-  if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
-  if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
-  if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.352").then(({ createSpatialAtlas }) => {
+  const requestedSubject = resolveRequestedMapSubject();
+  if (spatialAtlasFailed) {
+    drawLegacyKnowledgeMap();
+    if (requestedSubject) mapSelectSubject(requestedSubject, { fly: true });
+    return;
+  }
+  if (spatialAtlasInstance) {
+    spatialAtlasInstance.update(spatialAtlasState());
+    if (requestedSubject) spatialAtlasInstance.select?.(requestedSubject, true);
+    return;
+  }
+  if (spatialAtlasImport) {
+    if (requestedSubject) pendingMapSubject = requestedSubject;
+    return;
+  }
+  if (requestedSubject) pendingMapSubject = requestedSubject;
+  spatialAtlasImport = import("/map3d.js?v=0.1.353").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
     });
+    const initialSubject = resolveRequestedMapSubject();
+    if (initialSubject) spatialAtlasInstance.select?.(initialSubject, true);
   }).catch((error) => {
     console.warn("Spatial atlas unavailable; using the accessible 2D map.", error);
     spatialAtlasFailed = true;
@@ -22826,6 +23007,8 @@ function drawKnowledgeMap() {
     document.getElementById("legacyAtlas").hidden = false;
     document.getElementById("map").classList.remove("spatial-atlas");
     drawLegacyKnowledgeMap();
+    const initialSubject = resolveRequestedMapSubject();
+    if (initialSubject) mapSelectSubject(initialSubject, { fly: true });
   });
 }
 
@@ -23081,6 +23264,10 @@ document.addEventListener("click", (event) => {
   const link = event.target.closest("[data-route]");
   if (!link) return;
   event.preventDefault();
+  if (link.dataset.mapSubject) {
+    pendingMapSubject = link.dataset.mapSubject;
+    activeMapChallengeSubject = link.dataset.mapSubject;
+  }
   goToRoute(link.dataset.route);
 });
 

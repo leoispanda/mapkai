@@ -233,7 +233,7 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
       const x=storyLeft+i*step,y=top+c.pad+m.versionY;
       const storyTip=`${i+1}. ${signal.label}`;
       const tag=stories.append('g').attr('class',`map-story-tag ${signal.newer?'newer':'older'}${model.selected===signal.node.id?' is-selected':''}`).attr('data-story-id',signal.id).attr('role','button').attr('tabindex',0).attr('aria-label',storyTip).attr('aria-pressed',String(model.selected===signal.node.id))
-        .on('click',event=>{event.stopPropagation();onActivate(signal.node);}).on('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();onActivate(signal.node);}}).on('focus',function(){if(this.matches(':focus-visible'))ensureVisible(node);})
+        .on('click',event=>{event.stopPropagation();onActivate(signal.node,event);}).on('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();onActivate(signal.node,event);}}).on('focus',function(){if(this.matches(':focus-visible'))ensureVisible(node);})
         .on('pointerenter',event=>showTooltip(storyTip,event))
         .on('pointermove',event=>showTooltip(storyTip,event))
         .on('pointerleave',hideTooltip);
@@ -270,7 +270,7 @@ export function createMindMap({svg,frame,language,onActivate,onDismiss}) {
       .attr('class',n=>`map-node map-${n.kind}${n.id===data.selected||n.id===selectedCategory?' is-selected':''}${n.score===3?' is-complete':''}${n.kind!=='root'&&n.matched===false?' is-dimmed':''}`)
       .attr('data-node',n=>n.id).attr('data-kind',n=>n.kind).attr('data-parent',n=>n.parent?.id||null).attr('transform',n=>`translate(${n.x},${n.y})`)
       .attr('role','button').attr('tabindex',0).attr('aria-label',n=>n.description||n.label).attr('aria-controls',n=>n.kind!=='root'?'map-selection':null).attr('aria-expanded',n=>n.kind==='field'?String(n.id===data.selected||n.storySignals.some(s=>s.node.id===data.selected)):null).attr('aria-pressed',n=>String(n.id===data.selected))
-      .on('click',(event,n)=>{event.stopPropagation();onActivate(n);}).on('keydown',(event,n)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();onActivate(n);}}).on('focus',function(_,n){if(this.matches(':focus-visible'))ensureVisible(n);});
+      .on('click',(event,n)=>{event.stopPropagation();onActivate(n,event);}).on('keydown',(event,n)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();onActivate(n,event);}}).on('focus',function(_,n){if(this.matches(':focus-visible'))ensureVisible(n);});
     joined.each(function(n){drawNode(this,n);});drawMini();
     if(activeStory)marks.selectAll('[data-story-id]').filter(function(){return this.dataset.storyId===activeStory;}).node()?.focus({preventScroll:true});else if(activeNode)joined.filter(n=>n.id===activeNode).node()?.focus({preventScroll:true});
     const nextKey=data.viewKey||'';

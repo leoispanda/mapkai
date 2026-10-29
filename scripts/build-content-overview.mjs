@@ -31,13 +31,14 @@ const administrative = /not further defined|not elsewhere classified|inter-disci
 const slug = title => title.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 const songs = songCatalog.songs.map(s => ({ id: s.id, number: s.numberLabel, title: s.songName, subject: s.subjectName, concept: { en: s.conceptName, zh: topicLabels[s.conceptName] || s.conceptName }, language: s.language }));
 const songIds = new Set(songs.map(s => s.id));
+const isFieldCoreFable = story => story?.collection === 'field-core-fables' && story?.status === 'approved';
 const built = categories.map(category => {
   const origin = origins.find(item => item.code === category.code);
   const publicOrigin = Boolean(origin && (visibility.articles || rebuiltCodes.has(category.code)));
   const fields = category.groups.flatMap(group => group.fields.filter(([, title]) => !administrative.test(title)).map(([code, title, titleZh]) => {
     const stories = fables.filter(item => item.fieldCode === code).map(story => ({
       id: story.id, title: { zh: story.titleZh, en: story.title }, concept: { zh: story.conceptNameZh, en: story.conceptName },
-      ready: story.status === 'approved', public: Boolean(visibility.articles && story.status === 'approved'), newer: Boolean(story.module),
+      ready: story.status === 'approved', public: Boolean((visibility.articles || isFieldCoreFable(story)) && story.status === 'approved'), newer: Boolean(story.module),
     }));
     if (stories.length !== 3) throw new Error(`Expected three stories for ${code}`);
     const songId = groupSongs[group.code]?.id || null;
