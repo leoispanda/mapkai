@@ -65,6 +65,11 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0913': 'Nursing and midwifery',
   '0914': 'Medical diagnostic and treatment technology',
   '0915': 'Therapy and rehabilitation',
+  '0916': 'Pharmacy',
+  '0917': 'Traditional and complementary medicine and therapy',
+  '0921': 'Care of the elderly and of disabled adults',
+  '0922': 'Child care and youth services',
+  '0923': 'Social work and counselling',
 });
 
 export const PUBLIC_PREVIEW_FIELD_IDS = Object.freeze(
