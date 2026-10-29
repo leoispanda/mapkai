@@ -166,9 +166,9 @@ batch-011	07	0732	Building and civil engineering	建筑与土木工程	2	0732-fa
 batch-011	07	0732	Building and civil engineering	建筑与土木工程	3	0732-infrastructure-life-cycle	Infrastructure life-cycle management	基础设施全生命周期管理	mechanism-explainer	剪彩后无人再看桥底缓慢生长的锈迹	integrated
 batch-012	08	0811	Crop and livestock production	作物与畜牧生产	1	0811-nutrient-cycling	Nutrient cycling	养分循环	mechanism-explainer	不断运走收成却从不归还土壤的农场	integrated
 batch-012	08	0811	Crop and livestock production	作物与畜牧生产	2	0811-integrated-pest-management	Integrated pest management	综合虫害管理	concept-fable	杀光所有昆虫后害虫反而更快回来的果园	integrated
-batch-012	08	0811	Crop and livestock production	作物与畜牧生产	3	0811-selective-breeding-tradeoffs	Selective breeding trade-offs	选择育种的权衡	concept-fable	只追求最大果实后失去抗旱能力的种群	integrated
+batch-012	08	0811	Crop and livestock production	作物与畜牧生产	3	0811-selective-breeding-tradeoffs	Selective breeding trade-offs	选择育种的权衡	mechanism-explainer	只追求最大果实后失去抗旱能力的种群	integrated
 batch-012	08	0812	Horticulture	园艺	1	0812-grafting	Grafting and propagation	嫁接与繁殖	mechanism-explainer	一棵树的根与另一棵树的枝共同结果	integrated
-batch-012	08	0812	Horticulture	园艺	2	0812-microclimate	Microclimate	微气候	concept-fable	同一花园里靠墙与低洼处经历不同春天	integrated
+batch-012	08	0812	Horticulture	园艺	2	0812-microclimate	Microclimate	微气候	mechanism-explainer	同一花园里靠墙与低洼处经历不同春天	integrated
 batch-012	08	0812	Horticulture	园艺	3	0812-phenology	Phenology	物候学	lens-fable	园丁不再只看日历而开始记录花与昆虫的时间	integrated
 batch-012	08	0821	Forestry	林业	1	0821-sustainable-yield	Sustainable yield	可持续采伐量	mechanism-explainer	每年砍同样树数却逐渐透支不同年龄的森林	integrated
 batch-012	08	0821	Forestry	林业	2	0821-ecological-succession	Ecological succession	生态演替	concept-fable	火后空地并没有一步返回原来的森林	integrated

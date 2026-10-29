@@ -23058,47 +23058,129 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0811",
     "fieldTitle": "Crop and livestock production",
     "fieldTitleZh": "作物与畜牧生产",
-    "title": "The Orchard That Allowed No Insect",
-    "titleZh": "一只虫也不能有的果园",
-    "summary": "An orchard owner sprays after finding the first damaged leaf; the insects vanish briefly, then return in crowds after their natural enemies are gone.",
-    "summaryZh": "果园主发现第一片虫叶便反复喷药，虫子短暂消失后，却在失去天敌的树上成群回来。",
-    "storyParagraphs": [
-      "Pear grower Zhou Yan painted 'not one insect' on his storehouse door. At the first curled leaf in spring, he ordered the whole orchard sprayed, then repeated the treatment every seven days without asking how many insects were present or which species they were. He wanted flawless fruit for the city's highest purchasing grade. The first spotless harvest won the premium and paid for a new sprayer, reinforcing the rule before its wider effects appeared.",
-      "After the first two sprays, leaf-rollers declined, but ladybirds and parasitoid wasps disappeared too. Weeks later, a different sap-feeding pest surged and the original chemical worked less well against it. Zhou increased applications. Bees became scarce among flowering trees, workers avoided recently treated rows, and costs doubled before fruit quality improved. Dead beneficial insects left fewer checks on secondary pests, and repeated exposure selected survivors less affected by the same product.",
-      "The buyer threatened to downgrade any crate with visible blemishes. Zhou read the warning, cancelled the next contracted spray, and put its cost into scouting. Two rows lost the top grade. Workers used protective intervals and approved labels; uncertainty was referred to local specialists rather than guessed from the story. Scouts marked sample routes before entering the orchard so they would not choose only damaged or convenient trees. Thresholds considered crop stage, expected injury, control cost, and uncertainty.",
-      "Each morning the crop-protection specialist clipped a few dozen leaves along a marked route and laid them in separate trays by tree row. She opened curled leaves, finding many empty and only a few with feeding larvae, then counted predators on the undersides. Workers cleared overwintering debris, reset traps, and protected beneficial insects. A red line on the tally sheet marked when expected damage would exceed the cost of action; only after a count crossed it did she unlock a targeted approved product and follow its label.",
-      "Zhou still disliked the insects left on the leaves. At harvest he weighed the saleable crates from the monitored rows against an untreated reference row, then placed the spray invoices beside them. More pears reached market although fewer applications had been made. One treatment had failed early, so the crew recorded its weather and result and changed the next permitted mode of action instead of repeating it by habit. Zhou crossed out the calendar dates that had once ordered spraying and kept the stained leaf trays beside the harvest ledger.",
-      "The next spring, Zhou found three aphids beneath a young leaf. He raised a hand to call the spray cart, saw a ladybird approaching beside them, and instead drew three dots on the monitoring board."
-    ],
-    "storyParagraphsZh": [
-      "梨园主周岩把‘一只虫也不能有’写在仓房门上。春天看到第一片卷叶，他便让工人整园喷药，此后每七天一次，不问虫有多少，也不问是哪一种。他要的是果面无瑕，好赶上城里最高等级的收购价。第一季无斑果拿到最高价，还买回一台新喷雾机；更广影响出现以前，这条规则先得到了奖励。",
-      "头两次喷药后，卷叶虫少了，瓢虫和寄生蜂也不见了。几周后，另一种吸汁小虫突然增多，原先药剂对它越来越不灵。周岩加大次数，开花树旁的蜂群却减少，工人也不愿在刚喷完的园里久留。果面没有更好，费用先翻了一倍。天敌减少后，次生害虫失去制约；反复使用同一药剂，也让较不敏感的幸存者留下更多后代。",
-      "收购商威胁：有可见斑点便降级。周岩看完通知，取消下一次约定喷洒，把那笔钱改作监测；两排梨因此被降级。工人遵守安全间隔与批准标签，不确定之处交给本地专业人员判断。监测员入园前先定抽样路线，避免只挑受害或方便的树；界线同时考虑作物阶段、预计损失、防治成本与不确定性。",
-      "每天清晨，植保员沿画好的路线摘几十片叶，按树行分放在浅盘里。她掰开卷叶，许多里面已经空了，只有少数仍有幼虫；翻到背面，还能数见捕食虫。工人清走越冬病残枝，重挂诱捕器，留下有益昆虫。计数表上有一道红线，预计虫伤超过处理成本才算越界；数字真正越过时，她才打开一种较有针对性的合规药剂，并照标签使用。",
-      "周岩仍不习惯叶上留着小虫。收获时，他把监测行与一行未处理参照梨分别过秤，又把喷药账单压在秤边。施药次数少了，可售梨反而更多。有一种药早早失效，工人便记下当日天气与结果，下一次改用获准的其他作用方式，没有照习惯重复。周岩划掉过去按日历喷药的日期，把沾着叶汁的浅盘留在收获账本旁。",
-      "第二年春天，周岩又在嫩叶背面看见三只蚜虫。他举起手想叫喷药车，看到旁边一只瓢虫正在爬近，便只在记录板上画了三个点。"
-    ],
-    "conceptName": "Integrated pest management",
-    "conceptNameZh": "综合虫害管理",
-    "explanationParagraphs": [
-      "Integrated pest management begins with prevention, correct identification, and monitoring before deciding whether action is needed. It then combines cultural, biological, physical, genetic, and when necessary chemical methods according to crop-specific risk thresholds. Its aim is acceptable loss and lower overall risk, not eradication of all organisms. Products and thresholds must fit the pest, place, and time and follow approved labels and qualified local guidance."
-    ],
-    "explanationParagraphsZh": [
-      "综合虫害管理先通过预防、正确鉴定和监测判断是否需要行动，再依据作物与风险阈值组合栽培、生物、物理、遗传和必要的化学方法。它追求可接受损失与较低综合风险，而非消灭所有生物。药剂选择和阈值必须针对地点、时期与害虫，并遵守获准标签和本地专业指导。"
-    ],
     "mode": "concept-fable",
+    "titleZh": "绕开的那一段",
+    "summaryZh": "周末采摘前，何淼在入口旁发现新叶孔。整片处理的单子已经准备好了，她却还需要弄清这些痕迹意味着什么。",
+    "storyParagraphsZh": [
+      "社区菜园周六要开放采摘，何淼周四巡园时发现入口旁一排叶菜上多了几处新叶孔。她负责决定要不要启动已经准备好的虫害处理安排。距离开放只剩两天，如果损伤正在继续，她不能装作没看见；可要是一看到叶孔就把整片都纳入处理，周末的采摘区也得跟着改。",
+      "她沿着菜畦逐株看过去，在出现新鲜缺口的位置夹上小标记。越往里走，很多叶孔的边缘已经干了，像是早些时候留下的；两片叶背还有她认不准的小虫。何淼没有把那些虫直接当成答案，而是记下位置和外形，让负责植保判断的同事继续识别，同时把当天的新鲜损伤集中在哪一段记录下来。",
+      "第二天早晨，标记先给了她一半答案：新的啃食仍集中在入口附近那一小段，其他区域没有出现同样的增加。补充检查随后在同一小段确认了仍在活动、且取食痕迹与这些新伤相符的害物；前一天拍到的两只小虫则不是这次处理判断的依据。何淼原本准备填写的整片处理单因此作废，改成只核对这一小段是否达到既定计划中的行动条件。",
+      "这一小段最终达到干预条件，植保同事先比较适用控制办法的有效性，以及对人员、周围植物和环境的风险，再按原先专业计划确定局部方案。何淼让选定的防治只在相应位置执行，并安排之后复查新损伤是否继续。入口旁堆着的旧周转箱也被移回正常存放处，日常整理照常进行。周六开放时，这一小段继续封闭，不进入当天采摘路线；其他区域则按原活动安排管理。",
+      "周六早晨，志愿者把采摘指示牌一路摆到入口，在那一小段前停了下来。何淼把最后一块箭头牌往旁边挪，让路线绕过仍挂着复查标记的菜畦。旧叶孔还留在几片叶子上，她没有去数它们，只蹲下来翻开前一天标记的那几株，看有没有新的啃食。"
+    ],
+    "overallZh": "这篇在讲：虫害管理不是见到损伤就整片行动，而是让识别、监测、预防、行动界线、针对性控制和复查连续影响下一步判断。",
+    "conceptNameZh": "综合虫害管理",
+    "explanationParagraphsZh": [
+      "本例先区分旧伤和正在增加的新伤，再把害物识别与损伤位置对应起来。前一天看到的身份不明昆虫没有被直接当作处理依据；只有在同一局部确认仍有与新损伤相符的活动害物，并且达到既定情境计划中的行动条件后，人物才进入针对性控制。",
+      "达到行动条件之后，仍要比较适用控制办法的有效性和对人员、其他生物及环境的风险；“只处理一小段”本身还不足以说明选对了办法。",
+      "综合虫害管理不是单纯少处理、不处理或等待害物自行消失。行动界线会随作物、害物、生育阶段、健康与管理情境而变化；预防性环境整理也不能被误写成已经证明某个具体虫源。控制后还需要复查效果和新损伤。本例不提供通用阈值、药品、剂量、食品安全结论或现实操作方案。"
+    ],
+    "moduleZh": {
+      "intro": "先弄清正在发生什么，再判断是否已经达到需要行动的程度；预防、控制与复查都由新的现场信息继续修正。",
+      "diagramTitle": "为什么发现叶孔后，何淼没有立刻处理整片菜畦",
+      "diagramSteps": [
+        "区分旧叶孔与新鲜损伤，并记录新损伤集中在哪些位置",
+        "继续识别现场昆虫，确认哪些观察与当前新损伤真正相关",
+        "同时整理容易造成管理混乱的环境条件，但不把整理本身当成虫源证明",
+        "将已确认的局部害物活动和损伤变化与既定行动条件比较；达到条件后，再比较适用办法的有效性与风险，确定针对性控制",
+        "控制后继续复查是否还有新的损伤，并据此决定下一步是否维持、调整或结束干预"
+      ],
+      "diagramStepNotes": [
+        "一个叶孔不能说明整批植物正在遭遇同一种当前危害，旧伤与新伤需要分开。",
+        "看到昆虫不等于已经找到造成损伤的害物；识别必须与损伤类型、位置和持续活动相互对应。",
+        "预防和环境整理属于管理的一部分，但未经证据不能宣称某个箱子、角落或设施就是虫源。",
+        "行动界线依具体作物、害物、阶段和健康情境而定，本例没有提供可普遍照用的数字。",
+        "复查使管理形成循环；如果损伤继续、停止或出现新的信息，下一步行动都可能改变。"
+      ],
+      "mapping": [
+        "干边旧叶孔 → 过去损伤，不自动代表当前问题仍在扩大。",
+        "入口附近持续出现的新啃食 → 需要继续调查和监测的当前变化。",
+        "确认与新伤相符的活动害物 → 把身份识别与当前损伤联系起来的关键信息。",
+        "局部达到既定行动条件 → 从观察进入针对性控制的决策点。",
+        "周六仍保留复查标记 → 控制之后继续检查效果，而不是把一次行动当作结束。"
+      ],
+      "boundary": "综合虫害管理不是固定地少用药、从不用药或永远先等待。某些情境可能需要迅速行动，但是否行动以及采用什么控制方式，应依害物身份、作物和生育阶段、损伤发展、健康情境及既定专业计划判断。单个叶孔、身份未明昆虫或一次环境整理都不能替代这些信息。本故事不提供现实农药、剂量、安全间隔、采摘许可、食品安全认证或完整植保方案。",
+      "reflection": "如果下一次巡查发现同样数量的旧叶孔，但没有新的损伤，同时原先确认的害物活动也不再出现，你会期待管理者继续原来的控制，还是先改变下一步判断？为什么？"
+    },
+    "referencesZh": [
+      {
+        "id": "epa-ipm-principles",
+        "citation": "U.S. Environmental Protection Agency. (2026, July 22, updated). Integrated Pest Management (IPM) Principles.",
+        "url": "https://www.epa.gov/safepestcontrol/integrated-pest-management-ipm-principles",
+        "use": "支持以行动界线、监测与识别、预防、多种控制方法和结果检查形成信息驱动的虫害管理循环，并支持在需要时合理采用控制措施；本篇只借用这一决策框架，不把任何虚构现场情节写成EPA案例，也不提供统一阈值、具体药品、剂量或全球通用操作规范。"
+      }
+    ],
+    "title": "The Section They Walked Around",
+    "summary": "Before the weekend harvest event, He Miao finds fresh holes in leaves near the entrance. The form for treating the whole area is ready, but she still needs to find out what the damage means.",
+    "storyParagraphs": [
+      "The community garden is due to open for harvesting on Saturday, and during her Thursday inspection He Miao notices several fresh holes on a row of leafy vegetables near the entrance. She is responsible for deciding whether to start the pest-control arrangement already prepared. Only two days remain before opening. If the damage is continuing, she cannot pretend not to see it; but if every visible hole causes the whole area to be included in treatment, the weekend harvesting area will have to change as well.",
+      "She works along the bed plant by plant, clipping small markers where she sees fresh missing edges. Farther along, many of the holes have already dried around the edges and look older; two leaves also carry small insects she cannot identify. He Miao does not treat those insects as the answer. She records their location and appearance, asks the colleague responsible for plant-protection assessment to continue the identification, and separately records the section in which that day's fresh damage is concentrated.",
+      "On Friday morning, the markers give her half the answer first: new feeding remains concentrated in that small section near the entrance, while the rest of the area shows no comparable increase. A follow-up inspection then confirms, in the same section, active pests whose feeding signs match the fresh damage; the two insects photographed the day before are not used as the basis for the treatment decision. The whole-area treatment form He Miao had been preparing is therefore discarded, and she instead checks only this small section against the action conditions in the pre-established plan.",
+      "That small section ultimately meets the intervention conditions, so the plant-protection colleague first compares suitable control methods for effectiveness and risks to people, nearby plants, and the environment, then selects a local approach under the existing professional plan. He Miao has the chosen control carried out only at the relevant locations, with a later check scheduled to see whether fresh damage continues. The old transport crates stacked near the entrance are returned to their usual storage place as routine housekeeping continues. When the garden opens on Saturday, this small section remains closed and is excluded from the day's harvesting route; the other areas continue under the original event arrangement.",
+      "On Saturday morning, volunteers place the harvesting signs along the entrance route and stop at the small closed section. He Miao shifts the last arrow sign to the side so the route goes around the bed that still carries the follow-up markers. Old holes remain on several leaves, but she does not count them. She crouches beside the plants marked the day before and checks whether there is any new feeding."
+    ],
+    "overall": "This article explains that pest management is not simply a matter of seeing damage and acting across the whole area. Identification, monitoring, prevention, action thresholds, targeted control, and follow-up inspection should continuously shape the next decision.",
+    "conceptName": "Integrated pest management",
+    "explanationParagraphs": [
+      "This example first separates older damage from damage that is still increasing, then links pest identification to the location of the fresh damage. The unidentified insects seen on the first day are not used directly as a treatment basis. Targeted control begins only after the same local area is confirmed to contain active pests consistent with the new damage and the pre-established action conditions for that context are met.",
+      "Once action is warranted, suitable control methods still need to be compared for effectiveness and risks to people, other organisms, and the environment. Treating only a small area does not by itself establish that the method is appropriate.",
+      "Integrated pest management does not simply mean treating less, never treating, or waiting for pests to disappear on their own. Action thresholds vary with the crop, pest, growth stage, health context, and management situation. Preventive environmental housekeeping also cannot be rewritten as proof that a particular source of pests has been found. Control should be followed by checks on effectiveness and fresh damage. This example provides no universal threshold, pesticide, dose, food-safety conclusion, or real-world operating procedure."
+    ],
+    "module": {
+      "intro": "First determine what is actually happening, then judge whether it has reached the point at which action is needed; prevention, control, and follow-up should continue to be revised by new field information.",
+      "diagramTitle": "Why Didn't He Miao Treat the Entire Bed as Soon as She Found Leaf Holes?",
+      "diagramSteps": [
+        "Separate old leaf holes from fresh damage and record where new damage is concentrated",
+        "Continue identifying the insects present and confirm which observations are genuinely related to the current fresh damage",
+        "At the same time, tidy environmental conditions that complicate management, without treating housekeeping itself as proof of a pest source",
+        "Compare confirmed local pest activity and damage with the established action conditions; when action is warranted, compare suitable methods for effectiveness and risk before choosing targeted control",
+        "After control, continue checking for fresh damage and use the result to decide whether to maintain, adjust, or end the intervention"
+      ],
+      "diagramStepNotes": [
+        "A single leaf hole does not show that the entire crop is experiencing the same current pest problem; old and new damage need to be distinguished.",
+        "Seeing an insect does not mean the cause of the damage has been identified; identification needs to match the damage type, location, and continuing activity.",
+        "Prevention and environmental housekeeping are part of management, but without evidence a crate, corner, or facility should not be declared the pest source.",
+        "Action conditions depend on the specific crop, pest, stage, and health context; this example provides no universal number that can simply be reused.",
+        "Follow-up makes management a cycle: if damage continues, stops, or new information appears, the next action may change."
+      ],
+      "mapping": [
+        "Old holes with dried edges → past damage that does not automatically mean the current problem is still expanding.",
+        "Continuing fresh feeding near the entrance → a current change requiring further investigation and monitoring.",
+        "Active pests confirmed as consistent with the fresh damage → the key information linking identification to the current injury.",
+        "The local area meeting pre-established action conditions → the decision point at which observation moves into targeted control.",
+        "Follow-up markers still present on Saturday → checking results after control rather than treating one intervention as the end of the process."
+      ],
+      "boundary": "Integrated pest management does not mean always using less pesticide, never using pesticide, or always waiting first. Some situations may require rapid action, but whether to act and what form of control to use should depend on pest identity, crop and growth stage, progression of damage, health context, and an established professional plan. A single leaf hole, an unidentified insect, or one act of environmental housekeeping cannot substitute for that information. This story provides no real pesticide, dose, safety interval, harvesting permission, food-safety certification, or complete crop-protection program.",
+      "reflection": "If the next inspection found the same number of old leaf holes but no fresh damage, while the previously confirmed pest activity had also disappeared, would you expect the manager to continue the same control or change the next decision first? Why?"
+    },
+    "references": [
+      {
+        "id": "epa-ipm-principles",
+        "citation": "U.S. Environmental Protection Agency. (2026, July 22, updated). Integrated Pest Management (IPM) Principles.",
+        "url": "https://www.epa.gov/safepestcontrol/integrated-pest-management-ipm-principles",
+        "use": "Supports an information-driven pest-management cycle built around action thresholds, monitoring and identification, prevention, multiple control methods, and checking results, and supports the reasonable use of control measures when needed. This article borrows only that decision framework, does not present any fictional field event as an EPA case, and provides no universal threshold, specific pesticide, dose, or globally applicable operating rule."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "agriculture-garden-night-27-preparation/group1-pdc-round3.json",
+      "edits": [
+        "agriculture-garden-night-27-preparation/group1-edit-pass1-evidence.json",
+        "agriculture-garden-night-27-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor, thirteen perspectives; four actual ordinary ChatGPT GPT-5.6 Sol High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Pear grower Zhou Yan painted 'not one insect' on his storehouse door. At the first curled leaf in spring, he ordered the whole orchard sprayed, then repeated the treatment every seven days without asking how many insects were present or which species they were. He wanted flawless fruit for the city's highest purchasing grade. The first spotless harvest won the premium and paid for a new sprayer, reinforcing the rule before its wider effects appeared.\n\nAfter the first two sprays, leaf-rollers declined, but ladybirds and parasitoid wasps disappeared too. Weeks later, a different sap-feeding pest surged and the original chemical worked less well against it. Zhou increased applications. Bees became scarce among flowering trees, workers avoided recently treated rows, and costs doubled before fruit quality improved. Dead beneficial insects left fewer checks on secondary pests, and repeated exposure selected survivors less affected by the same product.\n\nThe buyer threatened to downgrade any crate with visible blemishes. Zhou read the warning, cancelled the next contracted spray, and put its cost into scouting. Two rows lost the top grade. Workers used protective intervals and approved labels; uncertainty was referred to local specialists rather than guessed from the story. Scouts marked sample routes before entering the orchard so they would not choose only damaged or convenient trees. Thresholds considered crop stage, expected injury, control cost, and uncertainty.\n\nEach morning the crop-protection specialist clipped a few dozen leaves along a marked route and laid them in separate trays by tree row. She opened curled leaves, finding many empty and only a few with feeding larvae, then counted predators on the undersides. Workers cleared overwintering debris, reset traps, and protected beneficial insects. A red line on the tally sheet marked when expected damage would exceed the cost of action; only after a count crossed it did she unlock a targeted approved product and follow its label.\n\nZhou still disliked the insects left on the leaves. At harvest he weighed the saleable crates from the monitored rows against an untreated reference row, then placed the spray invoices beside them. More pears reached market although fewer applications had been made. One treatment had failed early, so the crew recorded its weather and result and changed the next permitted mode of action instead of repeating it by habit. Zhou crossed out the calendar dates that had once ordered spraying and kept the stained leaf trays beside the harvest ledger.\n\nThe next spring, Zhou found three aphids beneath a young leaf. He raised a hand to call the spray cart, saw a ladybird approaching beside them, and instead drew three dots on the monitoring board.",
-    "storyBodyZh": "梨园主周岩把‘一只虫也不能有’写在仓房门上。春天看到第一片卷叶，他便让工人整园喷药，此后每七天一次，不问虫有多少，也不问是哪一种。他要的是果面无瑕，好赶上城里最高等级的收购价。第一季无斑果拿到最高价，还买回一台新喷雾机；更广影响出现以前，这条规则先得到了奖励。\n\n头两次喷药后，卷叶虫少了，瓢虫和寄生蜂也不见了。几周后，另一种吸汁小虫突然增多，原先药剂对它越来越不灵。周岩加大次数，开花树旁的蜂群却减少，工人也不愿在刚喷完的园里久留。果面没有更好，费用先翻了一倍。天敌减少后，次生害虫失去制约；反复使用同一药剂，也让较不敏感的幸存者留下更多后代。\n\n收购商威胁：有可见斑点便降级。周岩看完通知，取消下一次约定喷洒，把那笔钱改作监测；两排梨因此被降级。工人遵守安全间隔与批准标签，不确定之处交给本地专业人员判断。监测员入园前先定抽样路线，避免只挑受害或方便的树；界线同时考虑作物阶段、预计损失、防治成本与不确定性。\n\n每天清晨，植保员沿画好的路线摘几十片叶，按树行分放在浅盘里。她掰开卷叶，许多里面已经空了，只有少数仍有幼虫；翻到背面，还能数见捕食虫。工人清走越冬病残枝，重挂诱捕器，留下有益昆虫。计数表上有一道红线，预计虫伤超过处理成本才算越界；数字真正越过时，她才打开一种较有针对性的合规药剂，并照标签使用。\n\n周岩仍不习惯叶上留着小虫。收获时，他把监测行与一行未处理参照梨分别过秤，又把喷药账单压在秤边。施药次数少了，可售梨反而更多。有一种药早早失效，工人便记下当日天气与结果，下一次改用获准的其他作用方式，没有照习惯重复。周岩划掉过去按日历喷药的日期，把沾着叶汁的浅盘留在收获账本旁。\n\n第二年春天，周岩又在嫩叶背面看见三只蚜虫。他举起手想叫喷药车，看到旁边一只瓢虫正在爬近，便只在记录板上画了三个点。",
-    "explanation": "Integrated pest management begins with prevention, correct identification, and monitoring before deciding whether action is needed. It then combines cultural, biological, physical, genetic, and when necessary chemical methods according to crop-specific risk thresholds. Its aim is acceptable loss and lower overall risk, not eradication of all organisms. Products and thresholds must fit the pest, place, and time and follow approved labels and qualified local guidance.",
-    "explanationZh": "综合虫害管理先通过预防、正确鉴定和监测判断是否需要行动，再依据作物与风险阈值组合栽培、生物、物理、遗传和必要的化学方法。它追求可接受损失与较低综合风险，而非消灭所有生物。药剂选择和阈值必须针对地点、时期与害虫，并遵守获准标签和本地专业指导。"
+    "storyBody": "The community garden is due to open for harvesting on Saturday, and during her Thursday inspection He Miao notices several fresh holes on a row of leafy vegetables near the entrance. She is responsible for deciding whether to start the pest-control arrangement already prepared. Only two days remain before opening. If the damage is continuing, she cannot pretend not to see it; but if every visible hole causes the whole area to be included in treatment, the weekend harvesting area will have to change as well.\n\nShe works along the bed plant by plant, clipping small markers where she sees fresh missing edges. Farther along, many of the holes have already dried around the edges and look older; two leaves also carry small insects she cannot identify. He Miao does not treat those insects as the answer. She records their location and appearance, asks the colleague responsible for plant-protection assessment to continue the identification, and separately records the section in which that day's fresh damage is concentrated.\n\nOn Friday morning, the markers give her half the answer first: new feeding remains concentrated in that small section near the entrance, while the rest of the area shows no comparable increase. A follow-up inspection then confirms, in the same section, active pests whose feeding signs match the fresh damage; the two insects photographed the day before are not used as the basis for the treatment decision. The whole-area treatment form He Miao had been preparing is therefore discarded, and she instead checks only this small section against the action conditions in the pre-established plan.\n\nThat small section ultimately meets the intervention conditions, so the plant-protection colleague first compares suitable control methods for effectiveness and risks to people, nearby plants, and the environment, then selects a local approach under the existing professional plan. He Miao has the chosen control carried out only at the relevant locations, with a later check scheduled to see whether fresh damage continues. The old transport crates stacked near the entrance are returned to their usual storage place as routine housekeeping continues. When the garden opens on Saturday, this small section remains closed and is excluded from the day's harvesting route; the other areas continue under the original event arrangement.\n\nOn Saturday morning, volunteers place the harvesting signs along the entrance route and stop at the small closed section. He Miao shifts the last arrow sign to the side so the route goes around the bed that still carries the follow-up markers. Old holes remain on several leaves, but she does not count them. She crouches beside the plants marked the day before and checks whether there is any new feeding.",
+    "storyBodyZh": "社区菜园周六要开放采摘，何淼周四巡园时发现入口旁一排叶菜上多了几处新叶孔。她负责决定要不要启动已经准备好的虫害处理安排。距离开放只剩两天，如果损伤正在继续，她不能装作没看见；可要是一看到叶孔就把整片都纳入处理，周末的采摘区也得跟着改。\n\n她沿着菜畦逐株看过去，在出现新鲜缺口的位置夹上小标记。越往里走，很多叶孔的边缘已经干了，像是早些时候留下的；两片叶背还有她认不准的小虫。何淼没有把那些虫直接当成答案，而是记下位置和外形，让负责植保判断的同事继续识别，同时把当天的新鲜损伤集中在哪一段记录下来。\n\n第二天早晨，标记先给了她一半答案：新的啃食仍集中在入口附近那一小段，其他区域没有出现同样的增加。补充检查随后在同一小段确认了仍在活动、且取食痕迹与这些新伤相符的害物；前一天拍到的两只小虫则不是这次处理判断的依据。何淼原本准备填写的整片处理单因此作废，改成只核对这一小段是否达到既定计划中的行动条件。\n\n这一小段最终达到干预条件，植保同事先比较适用控制办法的有效性，以及对人员、周围植物和环境的风险，再按原先专业计划确定局部方案。何淼让选定的防治只在相应位置执行，并安排之后复查新损伤是否继续。入口旁堆着的旧周转箱也被移回正常存放处，日常整理照常进行。周六开放时，这一小段继续封闭，不进入当天采摘路线；其他区域则按原活动安排管理。\n\n周六早晨，志愿者把采摘指示牌一路摆到入口，在那一小段前停了下来。何淼把最后一块箭头牌往旁边挪，让路线绕过仍挂着复查标记的菜畦。旧叶孔还留在几片叶子上，她没有去数它们，只蹲下来翻开前一天标记的那几株，看有没有新的啃食。",
+    "explanation": "This example first separates older damage from damage that is still increasing, then links pest identification to the location of the fresh damage. The unidentified insects seen on the first day are not used directly as a treatment basis. Targeted control begins only after the same local area is confirmed to contain active pests consistent with the new damage and the pre-established action conditions for that context are met.\n\nOnce action is warranted, suitable control methods still need to be compared for effectiveness and risks to people, other organisms, and the environment. Treating only a small area does not by itself establish that the method is appropriate.\n\nIntegrated pest management does not simply mean treating less, never treating, or waiting for pests to disappear on their own. Action thresholds vary with the crop, pest, growth stage, health context, and management situation. Preventive environmental housekeeping also cannot be rewritten as proof that a particular source of pests has been found. Control should be followed by checks on effectiveness and fresh damage. This example provides no universal threshold, pesticide, dose, food-safety conclusion, or real-world operating procedure.",
+    "explanationZh": "本例先区分旧伤和正在增加的新伤，再把害物识别与损伤位置对应起来。前一天看到的身份不明昆虫没有被直接当作处理依据；只有在同一局部确认仍有与新损伤相符的活动害物，并且达到既定情境计划中的行动条件后，人物才进入针对性控制。\n\n达到行动条件之后，仍要比较适用控制办法的有效性和对人员、其他生物及环境的风险；“只处理一小段”本身还不足以说明选对了办法。\n\n综合虫害管理不是单纯少处理、不处理或等待害物自行消失。行动界线会随作物、害物、生育阶段、健康与管理情境而变化；预防性环境整理也不能被误写成已经证明某个具体虫源。控制后还需要复查效果和新损伤。本例不提供通用阈值、药品、剂量、食品安全结论或现实操作方案。"
   },
   {
     "id": "0811-selective-breeding-tradeoffs",
@@ -23107,47 +23189,129 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0811",
     "fieldTitle": "Crop and livestock production",
     "fieldTitleZh": "作物与畜牧生产",
-    "title": "The Hen That Laid Three Hundred Eggs",
-    "titleZh": "一年下三百枚蛋的鸡",
-    "summary": "A breeder keeps only the highest-laying hens as parents; the number in his ledger rises each year while the flock becomes less able to withstand heat.",
-    "summaryZh": "养鸡人连续多年只留下产蛋最多的母鸡作亲本，账本上的数字越来越高，鸡舍也越来越经不起炎热。",
-    "storyParagraphs": [
-      "Each year, poultry breeder Lu Chuan kept only the highest-laying hens and males from the same champion family as parents. After eight years, he had birds approaching three hundred eggs a year and buyers competed for them. Egg count appeared on the house sign; shell quality, longevity, and performance in summer heat did not enter the breeding ledger. The contract rewarded egg count alone, and each annual gain financed expansion, making omitted traits easy to treat as someone else's future problem.",
-      "The ninth year brought a prolonged heatwave. High-producing hens ate less, thin-shelled eggs increased, and many birds soon stopped laying. Similar leg problems appeared within the family. A neighbouring flock with lower production and more varied origins suffered the same heat but recovered much faster. Lu wanted another generation of maximum layers and found that nearly every available parent was closely related. The veterinary bill and lost production erased two years of premium income, making the hidden trade-off financially visible.",
-      "A veterinarian and breeder reviewed the records. Selecting one heritable trait also changed correlated traits and combinations of genes. A champion in one environment might not remain one under heat, different feed, or disease pressure. Concentrating parentage allowed hidden defects to meet more often and reduced variation available for future change. Records separated genetic relationships from feed, heat, age, and housing effects. A trait had to be heritable enough for selection, yet measured performance still belonged to an environment.",
-      "Lu pushed the champion-line order back across the desk, cancelled a high-volume egg contract, and brought unrelated birds into several breeding groups. Output would recover more slowly. Mating records limited close relatives, while frozen material and live lines preserved options that no current index valued. A selection index combined traits with stated weights, while genomic and pedigree information helped manage relatedness without replacing observed health and welfare.",
-      "The new objective recorded production alongside shells, health, reproduction, behaviour, and heat tolerance, with trials on different farms. Lu introduced unrelated families, preserved population diversity, and stopped allowing one champion male to father a whole generation. Progress slowed, but its costs were no longer hidden in other traits or the next extreme season. Selection weights were published before results were known, preventing a single good season from quietly redefining the breeding goal. Progress reports showed gain and loss for every trait, not only the one printed on the shed door.",
-      "At autumn selection, the highest-laying hen still occupied the first pen. Lu passed her and placed the parent leg band on the second bird, whose legs and shells remained sound and whose laying had continued through summer."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "只剩一个评估名额",
+    "summaryZh": "奶牛育种组下一阶段只够评估一个候选。程知眼前，生产预测最高的一份资料，并没有在每一列都领先。",
     "storyParagraphsZh": [
-      "养鸡人陆川每年只留产蛋最多的母鸡和同一冠军家系的公鸡作亲本。八年后，他养出一批一年能下近三百枚蛋的鸡，收购商争着上门。蛋数写在鸡舍门牌上，蛋壳、寿命和炎夏里的表现却没有进入那本选种账。合同只按蛋数付款，每年增长又能扩建鸡舍，于是被遗漏的性状很容易被当成未来才需面对的问题。",
-      "第九年遇上长久热浪。高产鸡吃料减少，薄壳蛋增多，许多母鸡很快停产；同一家系还出现相似的腿病。邻村那些产蛋较少、来源更杂的鸡舍同样受热，却恢复得快得多。陆川想从冠军家系里再挑一批最能下蛋的，发现可选亲缘已经非常接近。兽医费用与停产损失抹去两年高产溢价，让隐藏权衡终于在财务上显形。",
-      "兽医和育种员翻查多年记录，指出被挑选的性状会连同相关性状和基因组合一起改变。单一环境里的冠军未必在炎热、不同饲料或疾病压力下仍是冠军；亲本过度集中，也让隐藏缺陷更容易相遇，并减少未来可用的变化。记录把遗传关系同饲料、热、年龄与饲养条件分开；性状须有足够遗传基础才可选择，但实际表现仍属于特定环境。",
-      "陆川把冠军家系的订购单推回桌子另一边，取消一份大宗蛋约，把无亲缘鸡引入多个育种群。蛋量只能慢慢恢复。配种记录限制近亲，保存材料与活体家系则保留当前指数尚未重视的选择。选种指数用公开权重组合多项性状，基因组与系谱帮助管理亲缘，却不取代实际健康和福利观察。",
-      "新的目标同时记录产蛋、蛋壳、健康、繁殖、行为和耐热，并在不同农场试养。陆川引入不相关家系，保存种群，不再让一只冠军公鸡覆盖整代。进步慢了些，却不再只把损失藏到别的性状和下一次极端天气里。各性状权重在结果出现前公布，免得一次好季节悄悄改写育种目标。进展报告列出每个性状的得失，不再只报鸡舍门牌上的蛋数。",
-      "秋季选种时，产蛋最多的母鸡仍站在第一格。陆川越过它，把脚力好、蛋壳稳定、炎夏也持续产蛋的第二只母鸡戴上了亲本脚环。"
+      "奶牛育种组的下一阶段预算被压缩，只够继续评估一个候选公牛资料。程知要在当天把名单交给负责人。候选A的生产性状遗传预测是+3，候选B只有+1；如果育种目标只看这一项，A显然更占优势。",
+      "可这轮筛选从一开始就不只关心生产。团队希望未来群体既保持生产改进，也不要把繁殖方向完全丢在一边，因此早在看到这两个候选前，就把本轮纸面目标写成“P+2F”。程知展开第二列：A的繁殖性状遗传预测是-1，B是+1。按同一个目标计算，A得到3+2×(-1)=1，B得到1+2×1=3。",
+      "这让名额真正变得难选。把资源给B，意味着暂时放弃继续追踪A更高的生产遗传预期；把资源给A，则意味着在唯一名额上牺牲团队事先给繁殖性状留下的权重。程知把两个候选的资料并排摊开，又看了一遍最初的目标页。",
+      "他最后把下一阶段评估名额留给B，同时把A完整保留在候选档案里。负责人来收名单，程知把写着“P+2F”的目标页也夹了进去，又在A的档案上记下暂缓评估的日期。",
+      "下午，资料管理员来收下一阶段文件。程知把B的资料装进唯一一个蓝色文件夹，把A夹回档案盒。关上盒盖前，他又看了一眼A那一列+3；那个单项优势仍然存在，只是没有拿到这一次唯一的评估名额。"
     ],
-    "conceptName": "Selective breeding trade-offs",
+    "overallZh": "这篇在讲：选择育种可以同时面对多个遗传目标，单项预测最高的候选不一定最符合预先定义的多性状目标；比较必须建立在可比的遗传评价和明确权重上。",
     "conceptNameZh": "选择育种的权衡",
-    "explanationParagraphs": [
-      "Selective breeding changes future populations by choosing parents with heritable traits, but selection on one measure can also alter genetically correlated traits, diversity, and inbreeding risk. Performance may change across environments. Multi-trait objectives, representative trials in different conditions, kinship management, welfare assessment, and preservation of genetic resources reduce hidden losses accompanying improvement in one number."
-    ],
     "explanationParagraphsZh": [
-      "选择育种通过具有可遗传性状的亲本改变后代群体，但选择一个指标也会影响遗传相关性状、遗传多样性和近交风险。表现还可能随环境改变。多性状育种目标、不同环境的代表性试验、亲缘管理、福利评估和种质保存，能减少单项进步伴随的隐蔽损失。"
+      "本教学比较假设A和B属于同一品种、使用同一遗传评价基准，可靠性可比；生产P与繁殖F都已经标准化并统一成“越高越有利”的虚构遗传预测分。",
+      "教学目标P+2F在看到候选前已经确定，因此A=3+2×(-1)=1，B=1+2×1=3。这里不能把真实产奶公斤、繁殖天数等原始数值直接照加；真实多性状指数可通过合适系数处理单位和目标方向，还需考虑评价可靠性。",
+      "遗传评价描述的是对可遗传差异和未来群体表现方向的预测，不保证每个后代都实现同样结果。真实表型还受饲料、环境、年龄和管理等影响。两个候选在本例中出现的生产—繁殖权衡，也不能证明所有群体、所有性状之间都存在普遍负相关或必须互相牺牲。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先明确育种目标，再只比较处于同一评价基准、尺度和可靠性条件下的多项遗传预测；单项最高分不能自动替代综合目标。",
+      "diagramTitle": "为什么生产预测最高的A，没有得到唯一的下一阶段评估名额",
+      "diagramSteps": [
+        "固定本轮目标：同时考虑生产P与繁殖F，并在看到候选前确定教学权重P+2F",
+        "确认A、B来自同品种、同评价基准，P和F均已标准化为越高越有利且可靠性可比的预测分",
+        "记录候选A为P=+3、F=-1，候选B为P=+1、F=+1",
+        "按既定目标计算A=3+2×(-1)=1，B=1+2×1=3",
+        "把唯一下一阶段评估名额给综合目标得分更高的B，同时保留A较高生产预测这一机会成本"
+      ],
+      "diagramStepNotes": [
+        "权重代表预先定义的育种目标；若目标改变，排序也可能改变。",
+        "本例简化为同品种、同基准、可靠性可比且已统一方向与尺度的分数。真实指数需由系数处理不同单位与目标方向，并考虑评价可靠性，不能把原始数字照此直接相加。",
+        "这些数值是虚构标准化遗传预测，不是牛奶公斤、繁殖天数、货币收益或真实PTA。",
+        "A=1、B=3只说明在这个特定教学目标下的综合排序，不说明B在每一个性状上都优于A。",
+        "选择B意味着放弃本轮继续追踪A更高生产预测的机会；多性状选择本身就是在目标之间配置有限选择压力。"
+      ],
+      "mapping": [
+        "A的P=+3 → 较高的生产性状遗传预期。",
+        "A的F=-1 → 在本例统一方向下较不利的繁殖性状遗传预期。",
+        "B的P=+1、F=+1 → 单项生产不及A，但两项目标方向更均衡。",
+        "P+2F → 事先确定的教学育种目标，而不是看到候选后临时修改的公式。",
+        "唯一评估名额 → 让多性状取舍产生实际机会成本的有限资源。"
+      ],
+      "boundary": "本例中的+3、-1、+1和综合得分1、3均为虚构标准化遗传预测分，不是现实PTA、产奶量、繁殖天数或经济指数。只有在同品种、同评价基准、方向与尺度已统一且可靠性可比时，才有本例这种教学比较意义。选择育种改变的是未来群体的遗传预期，不保证每个后代的实际表现；环境、饲料、年龄与管理仍会影响表型。本例也不证明生产与繁殖性状在所有群体中普遍负相关，不提供现实配种或亲本选择处方。",
+      "reflection": "如果同样的两个候选被放进一个只重视生产、而不再给繁殖性状额外权重的育种目标中，你会预期排序可能怎样改变？这说明排序依赖什么？"
+    },
+    "referencesZh": [
+      {
+        "id": "umn-dairy-genetics",
+        "citation": "Armstrong, J., & Heins, B. (2023, reviewed). Dairy cattle genetics. University of Minnesota Extension.",
+        "url": "https://extension.umn.edu/agriculture/animals-and-livestock/dairy/dairy-cattle-genetics",
+        "use": "支持奶牛遗传评价和PTA属于预测、应在适当品种与评价基准内比较并考虑可靠性，也支持用多性状指数按育种目标赋权而不是只凭一个性状选择亲本；本篇只借用这些一般遗传评价关系，所有候选与标准分均为虚构，不使用真实PTA，也不提供现实配种方案。"
+      }
+    ],
+    "title": "Only One Evaluation Slot Remained",
+    "summary": "The dairy breeding team can evaluate only one candidate in the next stage. The record with the highest production prediction does not lead in every column.",
+    "storyParagraphs": [
+      "The dairy breeding team's budget for the next stage has been reduced, leaving enough resources to continue evaluating only one candidate bull record. Cheng Zhi has to submit the name that day. Candidate A has a production-trait genetic prediction of +3, while candidate B has only +1; if the breeding objective considered production alone, A would clearly have the advantage.",
+      "But this round of screening was never intended to focus on production alone. The team wants the future population to continue improving production without abandoning the fertility direction altogether, so before seeing these two candidates it had already defined the paper objective for this round as 'P+2F.' Cheng Zhi opens the second column: A's fertility-trait genetic prediction is -1, while B's is +1. Under the same objective, A scores 3+2×(-1)=1, while B scores 1+2×1=3.",
+      "That makes the single slot genuinely difficult. Giving the resources to B means temporarily giving up further evaluation of A's higher production genetic expectation; giving the resources to A means using the only slot while sacrificing the weight the team had deliberately assigned to fertility. Cheng Zhi lays the two candidate records side by side and looks again at the original objective sheet.",
+      "He gives the next-stage evaluation slot to B and keeps A's full record in the candidate archive. When the team leader comes for the list, Cheng Zhi includes the objective sheet marked “P+2F” and writes the date of the deferred evaluation on A's file.",
+      "That afternoon, the records administrator comes to collect the next-stage file. Cheng Zhi places B's material in the only blue folder and returns A's sheet to the archive box. Before closing the lid, he glances once more at A's +3 column. The single-trait advantage is still there; it simply did not receive the only evaluation slot available this time."
+    ],
+    "overall": "This article explains that selective breeding can involve several genetic objectives at the same time. The candidate with the highest single-trait prediction is not necessarily the best fit for a pre-defined multi-trait objective, and the comparison requires genetic evaluations that are genuinely comparable and weights that are clearly specified.",
+    "conceptName": "Selective breeding trade-offs",
+    "explanationParagraphs": [
+      "This teaching comparison assumes that A and B belong to the same breed, use the same genetic-evaluation reference base, and have comparable reliability. Production P and fertility F have both been standardized and oriented so that higher values are favorable.",
+      "The teaching objective P+2F was fixed before the candidates were viewed, so A=3+2×(-1)=1 and B=1+2×1=3. Real milk kilograms, fertility days, or other raw trait values cannot simply be added as shown here. A real multi-trait index can use appropriate coefficients to account for units and goal directions, while evaluation reliability also needs consideration.",
+      "Genetic evaluation describes predictions about heritable differences and the expected direction of future population performance; it does not guarantee that every descendant will achieve the same result. Actual phenotype is also affected by feed, environment, age, management, and other factors. The production-fertility trade-off shown by these two candidates also does not prove that all populations or all traits have a universal negative genetic relationship or must always be sacrificed against one another."
+    ],
+    "module": {
+      "intro": "Define the breeding objective first, then compare multiple genetic predictions only when they share an appropriate evaluation base, scale, direction, and reliability context; the highest single-trait score cannot automatically replace the overall objective.",
+      "diagramTitle": "Why Didn't A, with the Highest Production Prediction, Receive the Only Next-Stage Evaluation Slot?",
+      "diagramSteps": [
+        "Fix the objective for this round: consider both production P and fertility F, with the teaching weight P+2F defined before viewing the candidates",
+        "Confirm that A and B are from the same breed and evaluation base, with P and F standardized so that higher is favorable and reliability is comparable",
+        "Record candidate A as P=+3 and F=-1, and candidate B as P=+1 and F=+1",
+        "Apply the pre-established objective to calculate A=3+2×(-1)=1 and B=1+2×1=3",
+        "Give the only next-stage evaluation slot to B, whose combined score better fits the objective, while retaining A's higher production prediction as the opportunity cost"
+      ],
+      "diagramStepNotes": [
+        "The weights represent the pre-defined breeding objective; if the objective changes, the ranking may also change.",
+        "This example simplifies the comparison to one breed and base, comparable reliability, and scores with a common scale and favorable direction. Real index coefficients must account for trait units and directions, and evaluation reliability needs consideration; raw values cannot simply be added as shown here.",
+        "These values are fictional standardized genetic predictions, not milk kilograms, fertility days, monetary returns, or real PTA values.",
+        "A=1 and B=3 describe only the ranking under this particular teaching objective; they do not mean B is superior to A in every trait.",
+        "Choosing B means giving up the opportunity to continue pursuing A's higher production prediction in this round; multi-trait selection allocates limited selection emphasis across objectives."
+      ],
+      "mapping": [
+        "A's P=+3 → the higher genetic expectation for the production trait.",
+        "A's F=-1 → the less favorable fertility-trait genetic expectation under the common favorable direction used in this example.",
+        "B's P=+1 and F=+1 → lower production prediction than A but a more balanced direction across the two objectives.",
+        "P+2F → the pre-established teaching breeding objective, not a formula rewritten after the candidates were seen.",
+        "The single evaluation slot → the limited resource that turns the multi-trait comparison into a real opportunity-cost decision."
+      ],
+      "boundary": "The values +3, -1, +1, and the combined scores 1 and 3 in this example are fictional standardized genetic prediction scores, not real PTA values, milk yield, fertility days, or an economic index. This kind of teaching comparison is meaningful only when candidates are from the same breed and evaluation base, trait directions and scales have been standardized, and reliability is comparable. Selective breeding changes expectations for the genetic direction of future populations; it does not guarantee the actual performance of every descendant, and environment, feed, age, and management still affect phenotype. This example also does not prove that production and fertility traits are universally negatively correlated and provides no real mating or parent-selection prescription.",
+      "reflection": "If the same two candidates were placed under a breeding objective that valued production alone and no longer gave extra weight to fertility, how might you expect the ranking to change? What does that reveal about what the ranking depends on?"
+    },
+    "references": [
+      {
+        "id": "umn-dairy-genetics",
+        "citation": "Armstrong, J., & Heins, B. (2023, reviewed). Dairy cattle genetics. University of Minnesota Extension.",
+        "url": "https://extension.umn.edu/agriculture/animals-and-livestock/dairy/dairy-cattle-genetics",
+        "use": "Supports treating dairy genetic evaluations and PTA as predictions that should be compared within an appropriate breed and evaluation base while considering reliability, and supports using multi-trait indexes weighted according to breeding objectives rather than selecting parents from a single trait alone. This article borrows only those general genetic-evaluation relationships; all candidates and standardized scores are fictional, no real PTA values are used, and no real mating plan is provided."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "agriculture-garden-night-27-preparation/group1-pdc-round3.json",
+      "edits": [
+        "agriculture-garden-night-27-preparation/group1-edit-pass1-evidence.json",
+        "agriculture-garden-night-27-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor, thirteen perspectives; four actual ordinary ChatGPT GPT-5.6 Sol High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Each year, poultry breeder Lu Chuan kept only the highest-laying hens and males from the same champion family as parents. After eight years, he had birds approaching three hundred eggs a year and buyers competed for them. Egg count appeared on the house sign; shell quality, longevity, and performance in summer heat did not enter the breeding ledger. The contract rewarded egg count alone, and each annual gain financed expansion, making omitted traits easy to treat as someone else's future problem.\n\nThe ninth year brought a prolonged heatwave. High-producing hens ate less, thin-shelled eggs increased, and many birds soon stopped laying. Similar leg problems appeared within the family. A neighbouring flock with lower production and more varied origins suffered the same heat but recovered much faster. Lu wanted another generation of maximum layers and found that nearly every available parent was closely related. The veterinary bill and lost production erased two years of premium income, making the hidden trade-off financially visible.\n\nA veterinarian and breeder reviewed the records. Selecting one heritable trait also changed correlated traits and combinations of genes. A champion in one environment might not remain one under heat, different feed, or disease pressure. Concentrating parentage allowed hidden defects to meet more often and reduced variation available for future change. Records separated genetic relationships from feed, heat, age, and housing effects. A trait had to be heritable enough for selection, yet measured performance still belonged to an environment.\n\nLu pushed the champion-line order back across the desk, cancelled a high-volume egg contract, and brought unrelated birds into several breeding groups. Output would recover more slowly. Mating records limited close relatives, while frozen material and live lines preserved options that no current index valued. A selection index combined traits with stated weights, while genomic and pedigree information helped manage relatedness without replacing observed health and welfare.\n\nThe new objective recorded production alongside shells, health, reproduction, behaviour, and heat tolerance, with trials on different farms. Lu introduced unrelated families, preserved population diversity, and stopped allowing one champion male to father a whole generation. Progress slowed, but its costs were no longer hidden in other traits or the next extreme season. Selection weights were published before results were known, preventing a single good season from quietly redefining the breeding goal. Progress reports showed gain and loss for every trait, not only the one printed on the shed door.\n\nAt autumn selection, the highest-laying hen still occupied the first pen. Lu passed her and placed the parent leg band on the second bird, whose legs and shells remained sound and whose laying had continued through summer.",
-    "storyBodyZh": "养鸡人陆川每年只留产蛋最多的母鸡和同一冠军家系的公鸡作亲本。八年后，他养出一批一年能下近三百枚蛋的鸡，收购商争着上门。蛋数写在鸡舍门牌上，蛋壳、寿命和炎夏里的表现却没有进入那本选种账。合同只按蛋数付款，每年增长又能扩建鸡舍，于是被遗漏的性状很容易被当成未来才需面对的问题。\n\n第九年遇上长久热浪。高产鸡吃料减少，薄壳蛋增多，许多母鸡很快停产；同一家系还出现相似的腿病。邻村那些产蛋较少、来源更杂的鸡舍同样受热，却恢复得快得多。陆川想从冠军家系里再挑一批最能下蛋的，发现可选亲缘已经非常接近。兽医费用与停产损失抹去两年高产溢价，让隐藏权衡终于在财务上显形。\n\n兽医和育种员翻查多年记录，指出被挑选的性状会连同相关性状和基因组合一起改变。单一环境里的冠军未必在炎热、不同饲料或疾病压力下仍是冠军；亲本过度集中，也让隐藏缺陷更容易相遇，并减少未来可用的变化。记录把遗传关系同饲料、热、年龄与饲养条件分开；性状须有足够遗传基础才可选择，但实际表现仍属于特定环境。\n\n陆川把冠军家系的订购单推回桌子另一边，取消一份大宗蛋约，把无亲缘鸡引入多个育种群。蛋量只能慢慢恢复。配种记录限制近亲，保存材料与活体家系则保留当前指数尚未重视的选择。选种指数用公开权重组合多项性状，基因组与系谱帮助管理亲缘，却不取代实际健康和福利观察。\n\n新的目标同时记录产蛋、蛋壳、健康、繁殖、行为和耐热，并在不同农场试养。陆川引入不相关家系，保存种群，不再让一只冠军公鸡覆盖整代。进步慢了些，却不再只把损失藏到别的性状和下一次极端天气里。各性状权重在结果出现前公布，免得一次好季节悄悄改写育种目标。进展报告列出每个性状的得失，不再只报鸡舍门牌上的蛋数。\n\n秋季选种时，产蛋最多的母鸡仍站在第一格。陆川越过它，把脚力好、蛋壳稳定、炎夏也持续产蛋的第二只母鸡戴上了亲本脚环。",
-    "explanation": "Selective breeding changes future populations by choosing parents with heritable traits, but selection on one measure can also alter genetically correlated traits, diversity, and inbreeding risk. Performance may change across environments. Multi-trait objectives, representative trials in different conditions, kinship management, welfare assessment, and preservation of genetic resources reduce hidden losses accompanying improvement in one number.",
-    "explanationZh": "选择育种通过具有可遗传性状的亲本改变后代群体，但选择一个指标也会影响遗传相关性状、遗传多样性和近交风险。表现还可能随环境改变。多性状育种目标、不同环境的代表性试验、亲缘管理、福利评估和种质保存，能减少单项进步伴随的隐蔽损失。"
+    "storyBody": "The dairy breeding team's budget for the next stage has been reduced, leaving enough resources to continue evaluating only one candidate bull record. Cheng Zhi has to submit the name that day. Candidate A has a production-trait genetic prediction of +3, while candidate B has only +1; if the breeding objective considered production alone, A would clearly have the advantage.\n\nBut this round of screening was never intended to focus on production alone. The team wants the future population to continue improving production without abandoning the fertility direction altogether, so before seeing these two candidates it had already defined the paper objective for this round as 'P+2F.' Cheng Zhi opens the second column: A's fertility-trait genetic prediction is -1, while B's is +1. Under the same objective, A scores 3+2×(-1)=1, while B scores 1+2×1=3.\n\nThat makes the single slot genuinely difficult. Giving the resources to B means temporarily giving up further evaluation of A's higher production genetic expectation; giving the resources to A means using the only slot while sacrificing the weight the team had deliberately assigned to fertility. Cheng Zhi lays the two candidate records side by side and looks again at the original objective sheet.\n\nHe gives the next-stage evaluation slot to B and keeps A's full record in the candidate archive. When the team leader comes for the list, Cheng Zhi includes the objective sheet marked “P+2F” and writes the date of the deferred evaluation on A's file.\n\nThat afternoon, the records administrator comes to collect the next-stage file. Cheng Zhi places B's material in the only blue folder and returns A's sheet to the archive box. Before closing the lid, he glances once more at A's +3 column. The single-trait advantage is still there; it simply did not receive the only evaluation slot available this time.",
+    "storyBodyZh": "奶牛育种组的下一阶段预算被压缩，只够继续评估一个候选公牛资料。程知要在当天把名单交给负责人。候选A的生产性状遗传预测是+3，候选B只有+1；如果育种目标只看这一项，A显然更占优势。\n\n可这轮筛选从一开始就不只关心生产。团队希望未来群体既保持生产改进，也不要把繁殖方向完全丢在一边，因此早在看到这两个候选前，就把本轮纸面目标写成“P+2F”。程知展开第二列：A的繁殖性状遗传预测是-1，B是+1。按同一个目标计算，A得到3+2×(-1)=1，B得到1+2×1=3。\n\n这让名额真正变得难选。把资源给B，意味着暂时放弃继续追踪A更高的生产遗传预期；把资源给A，则意味着在唯一名额上牺牲团队事先给繁殖性状留下的权重。程知把两个候选的资料并排摊开，又看了一遍最初的目标页。\n\n他最后把下一阶段评估名额留给B，同时把A完整保留在候选档案里。负责人来收名单，程知把写着“P+2F”的目标页也夹了进去，又在A的档案上记下暂缓评估的日期。\n\n下午，资料管理员来收下一阶段文件。程知把B的资料装进唯一一个蓝色文件夹，把A夹回档案盒。关上盒盖前，他又看了一眼A那一列+3；那个单项优势仍然存在，只是没有拿到这一次唯一的评估名额。",
+    "explanation": "This teaching comparison assumes that A and B belong to the same breed, use the same genetic-evaluation reference base, and have comparable reliability. Production P and fertility F have both been standardized and oriented so that higher values are favorable.\n\nThe teaching objective P+2F was fixed before the candidates were viewed, so A=3+2×(-1)=1 and B=1+2×1=3. Real milk kilograms, fertility days, or other raw trait values cannot simply be added as shown here. A real multi-trait index can use appropriate coefficients to account for units and goal directions, while evaluation reliability also needs consideration.\n\nGenetic evaluation describes predictions about heritable differences and the expected direction of future population performance; it does not guarantee that every descendant will achieve the same result. Actual phenotype is also affected by feed, environment, age, management, and other factors. The production-fertility trade-off shown by these two candidates also does not prove that all populations or all traits have a universal negative genetic relationship or must always be sacrificed against one another.",
+    "explanationZh": "本教学比较假设A和B属于同一品种、使用同一遗传评价基准，可靠性可比；生产P与繁殖F都已经标准化并统一成“越高越有利”的虚构遗传预测分。\n\n教学目标P+2F在看到候选前已经确定，因此A=3+2×(-1)=1，B=1+2×1=3。这里不能把真实产奶公斤、繁殖天数等原始数值直接照加；真实多性状指数可通过合适系数处理单位和目标方向，还需考虑评价可靠性。\n\n遗传评价描述的是对可遗传差异和未来群体表现方向的预测，不保证每个后代都实现同样结果。真实表型还受饲料、环境、年龄和管理等影响。两个候选在本例中出现的生产—繁殖权衡，也不能证明所有群体、所有性状之间都存在普遍负相关或必须互相牺牲。"
   },
   {
     "id": "0812-grafting",
@@ -23297,47 +23461,141 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0812",
     "fieldTitle": "Horticulture",
     "fieldTitleZh": "园艺",
-    "title": "The Weather Station Had No Frost",
-    "titleZh": "天气站没有结霜",
-    "summary": "The estate weather station remains above freezing all night, yet grape buds in the hollow are white with frost by morning.",
-    "summaryZh": "庄园天气站整夜都在零度以上，清晨低洼处的葡萄芽却覆着一层白霜。",
-    "storyParagraphs": [
-      "The vineyard weather station stood on the estate's high ground and forecast a minimum of two degrees above freezing. The owner therefore did not start frost protection. At dawn, grass beside the station remained green, but three rows of newly budding vines in the hollow were white with frost. Vines of the same variety beside a south-facing wall were unharmed. The damaged buds belonged to a high-value new planting, and the insurer refused payment because the official station never crossed the frost threshold.",
-      "The owner blamed an inaccurate station. A horticulturist placed thermometers from the ridge to the hollow and recorded wind, humidity, and leaf temperature. On a clear, still night the ground lost heat and cold air drained downhill like water, collecting below. The stone wall released warmth stored during the day. Less than a hundred paces apart, plants experienced different nights. Smoke tests at dusk showed where cold air pooled behind a hedge, giving the temperature pattern a visible path.",
-      "The owner folded the heater quotation into the decorative-wall plans and spent the money mapping the vineyard first. Sensors were shielded, calibrated, and placed at bud height across slope positions; repeated nights distinguished a persistent cold pocket from one faulty reading. Radiation shields prevented direct sun from heating sensors, and reference checks exposed one probe that read consistently high.",
-      "Summer measurements revealed another pattern. The wall could overheat, moisture lingered behind hedges, and leaves inside dense canopies stayed wet. Average weather at one point could not replace local conditions around the crop at critical times. A sensor at the wrong height or place might record an irrelevant location very accurately. Maps combined minimum temperature with wind and humidity rather than turning one night into a permanent zone boundary.",
-      "The vineyard distributed sensors across terrain and canopy. Later-budding varieties went into the hollow, and an opening in the hedge allowed cold air to drain. Wind protection, shade, and irrigation were used where appropriate, with checks for added humidity or disease. Local measures could moderate risk but could not remove a regional extreme. Opening the hedge reduced frost pooling but increased wind exposure, so the team monitored both outcomes before extending the change. The owner accepted a smaller planting area in the cold pocket, losing projected revenue but avoiding repeated rescue costs.",
-      "On a frost night the next year, the hill station read one degree above zero while the hollow reached two below. The owner clipped both records to the same board and ran downhill instead of arguing with the station."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "院子两边",
+    "summaryZh": "植物展原本要在小院入口做对称陈列。第一次试摆到下午，林初发现相隔几步的两组盆栽并不一样。",
     "storyParagraphsZh": [
-      "葡萄园的天气站立在庄园高处，预报夜间最低两度。园主因此没有启动防霜措施。清晨，站旁草叶仍是绿色，坡底三排刚萌芽的葡萄却全覆着白霜；南墙边的同批葡萄则安然无事。受损嫩芽来自高价新园，保险方又因官方站未越过霜冻阈值而拒绝赔付。",
-      "园主责怪天气站失准。园艺师带着几支温度计，从山脊一路放到低洼处，又记录风、湿度和叶面温度。无风晴夜里，地面散热，冷空气像水一样顺坡沉到低处；石墙白天储下的热则保护了近旁枝芽。相隔不到百步，植物经历的夜晚并不相同。黄昏烟流试验显示冷空气在篱后何处积聚，让温度差有了可见路径。",
-      "园主把加热器报价单折进装饰墙图纸，先把那笔钱用来绘制葡萄园分布。传感器经遮蔽、校准，并按坡位放在芽高；连续多夜记录用来区分稳定冷穴与一次故障读数。辐射罩避免太阳直接加热传感器，参照核对还找出一支始终偏高的探头。",
-      "夏天的测量也显示另一幅图：墙边可能过热，树篱背风处湿气停留更久，密冠内部叶面迟迟不干。一个位置的平均天气无法替代作物周围、在关键时刻发生的局部条件，传感器若放错高度和位置，也只会准确记录不相关的地方。分区图把最低温同风与湿度结合，不让一个夜晚直接变成永久边界。",
-      "园里按地形和冠层布置了多个传感器，低洼地改种较晚萌芽品种，并清出阻挡冷空气下泄的篱口。防风、遮阴和灌溉分别用于合适地块，同时检查它们是否增加潮湿或病害。措施只能缓和局部风险，遇到区域性严寒仍需更大的应对。打开篱口减少积冷，却增加风害；团队同时监测两种结果，才决定是否继续扩大。园主缩小冷穴种植面积，牺牲预计收入，避免反复抢救。",
-      "第二年霜夜，山顶读数是一度，坡底已到零下二度。园主把两张记录夹在同一块板上，先跑向坡底，而不是去同天气站争辩。"
+      "周末植物展要占用一座不大的内院，林初想让入口两边各摆一组盆栽，进门就能看到整齐的对称效果。地区天气预报并没有显示什么异常，她以为两个位置相隔不过几步，差别不会太大。第一次试摆到下午，靠玻璃墙的一组却先显得疲软。",
+      "她没有马上给这个现象找一个单一原因。第二天，林初从同一批展示植物里挑出两组原本就使用相同规格容器、同批基质并有相近日常浇水记录的盆栽，再放回两个位置。她要看的不是哪一株为什么萎蔫，而是这两个位置在展览时段里会不会反复呈现不同条件。",
+      "接下来几个时段里，位置差异一次次出现。玻璃墙一侧下午受直射光更久，同时风感较弱；入口转角一侧较早进入建筑阴影，空气流动也更明显。两边盆面的干燥节奏也常常不同。林初没有把这些现象压成一个单独原因，只在平面图上分别记下阳光、阴影、风和盆面状态什么时候出现变化。",
+      "原来的对称方案因此被她拆开。主入口展示组被调整到下午较早进入阴影的那一侧，玻璃墙旁减少盆数，并留出工作人员查看的通道。入口失去了左右完全对称的效果，工作人员也多了一段巡查路线。林初把这段绕行画到展期值班表上，交给接班的同事。",
+      "开展第一天下午，玻璃墙的亮边慢慢爬过地砖，停在原先准备放第二排盆栽的位置。林初低头看了一眼记录板上的时间，在那一格画上短线，又把旁边一只备用展盆移到新布置图标出的空位。旧的对称布置图还压在板夹最下面。"
     ],
-    "conceptName": "Microclimate",
+    "overallZh": "这篇在讲：同一个地区天气背景下，相隔很近的位置仍可能因为建筑、遮阴和气流等条件形成不同的局部环境，植物实际经历的光、水热和风并不一定相同。",
     "conceptNameZh": "微气候",
-    "explanationParagraphs": [
-      "A microclimate is the local pattern of temperature, radiation, humidity, wind, and moisture created by terrain, surfaces, vegetation, soil, and structures, which may differ sharply from regional averages. Relevant scale depends on the organism and process, so sensor position, height, and timing must fit the question. Local design can moderate frost, heat, wind, or moisture risks but may create trade-offs and cannot remove regional extremes."
-    ],
     "explanationParagraphsZh": [
-      "微气候是地形、表面、植被、土壤和结构在局部形成的温度、辐射、湿度、风与水分格局，相对区域平均可有明显差异。相关尺度取决于作物和过程，传感器位置、高度与时机必须匹配问题。局部设计能缓和霜冻、热、风或湿度风险，但也可能带来权衡，且不能消除区域极端。"
+      "地区天气与院子里的局部差异可以同时正确。建筑墙面、遮阴时序、地面和周围植被会改变局部受光与热交换，墙角、开口和障碍物会改变气流；这些因素又会与盆体和水分交换一起影响植物实际经历的环境。因此相隔几步的位置也可能在同一时段出现不同条件。",
+      "例如，建筑遮阴会在遮挡时段减少到达盆栽的直射太阳辐射，从而改变热量输入；这能解释位置条件为何不同，却不能单凭这一点确定某株萎蔫的原因。",
+      "本故事的重复观察只支持‘这些展览时段里两个位置的环境条件反复不同’，不能证明某次萎蔫只有一个原因，也不能推出四季永久保持同样差异。光照更久和风更弱同时出现，也不能单独把任何一项宣布为全部变化的原因；盆栽初始状态、根部、水分历史等仍可能影响表现。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "把地区天气作为大背景，再观察建筑、遮阴和气流如何让相邻位置形成不同的局部条件；重复位置差异比一次植物反应更能支持摆位判断。",
+      "diagramTitle": "为什么同一个小院、同一天气下，两组相邻盆栽仍可能经历不同环境",
+      "diagramSteps": [
+        "从同一批植物中选择原本就较可比的匹配盆栽，分别放到玻璃墙侧和入口转角侧",
+        "在多个展览时段重复记录两处何时受直射光、何时进入阴影以及空气流动是否明显",
+        "同时观察两处盆面状态的变化节奏，但不把它单独当成某种病因或水分诊断",
+        "发现玻璃墙侧在这些时段反复受光更久且风较弱，转角侧较早遮阴且空气流动更明显",
+        "据此调整展盆数量、主入口展示位置和巡查路线，同时继续把该安排视为特定展期条件下的选择"
+      ],
+      "diagramStepNotes": [
+        "使用原本就较匹配的盆栽是为了减少明显初始差异，不等于排除了所有植物个体差异。",
+        "重复观察支持的是位置条件差异，不是用一次萎蔫确认单一因果。",
+        "盆面变化会受光、风、容器、基质、植株和水分历史等多项因素影响。",
+        "光照更久与风较弱在故事中同时出现，不能分别宣称任何一项单独造成全部植物反应。",
+        "展期摆位可以随季节、天气和现场变化重新评估，不是永久园区分区规则。"
+      ],
+      "mapping": [
+        "玻璃墙一侧 → 在本次展览观察时段内受直射光较久、风感较弱的位置。",
+        "入口转角一侧 → 较早进入建筑阴影且空气流动更明显的位置。",
+        "地区天气预报 → 描述较大尺度天气背景，并不否定院内小尺度差异。",
+        "取消完全对称陈列 → 因局部条件不同而付出的空间与视觉代价。",
+        "记录板与巡查路线 → 用重复观察继续检查局部条件，而不是一次性永久定区。"
+      ],
+      "boundary": "微气候描述的是比地区天气尺度更小的局部环境差异，不意味着附近天气站错误。建筑、地形、遮阴、地面、植被和气流都可能改变植物经历的光照、热交换和水分条件，但一次萎蔫、一次盆面干燥或单一位置观察都不能排除根部、浇水、基质或初始植株差异。地域朝向经验也不能无条件推广到全球。本篇不提供防霜、灌溉、病害诊断、永久分区或园艺工程参数。",
+      "reflection": "如果同一个展区换到另一个季节，太阳路径和盛行风方向都发生变化，你会继续沿用这次的摆位，还是重新观察两个位置？这说明微气候判断为什么需要时间和情境？"
+    },
+    "referencesZh": [
+      {
+        "id": "rmets-microclimates",
+        "citation": "Royal Meteorological Society. (2017, July 28). Microclimates in the garden.",
+        "url": "https://www.rmets.org/metmatters/microclimates-garden",
+        "use": "支持小尺度园地内部可以出现光照、风、温度和湿度差异，并支持地形、朝向、墙体、篱障和容器等改变局部环境；本篇不搬用来源中的具体温差或降雨比例，也不把某一地域朝向经验推广成全球规律。"
+      },
+      {
+        "id": "rhs-microclimate",
+        "citation": "Royal Horticultural Society Advice Team. (n.d.). Microclimates: assessing your garden.",
+        "url": "https://www.rhs.org.uk/garden-design/microclimates-assessing-garden",
+        "use": "支持地区气候背景与园内小尺度差异并存，并支持通过建筑、遮阴、风口、地形和季节变化观察局部条件；本篇只借用位置评估逻辑，不提供现实防霜、灌溉参数、病害诊断或合规设计。"
+      }
+    ],
+    "title": "Two Sides of the Courtyard",
+    "summary": "The plant exhibition is meant to have a symmetrical courtyard entrance. By the afternoon of the first trial, Lin Chu notices a difference between two groups of pots just a few steps apart.",
+    "storyParagraphs": [
+      "A weekend plant exhibition will occupy a small courtyard, and Lin Chu wants to place one group of potted plants on each side of the entrance for a clean symmetrical view. The regional weather forecast shows nothing unusual, and she assumes that two spots only a few steps apart will not differ much. By the afternoon of the first trial arrangement, however, the group beside the glass wall looks tired first.",
+      "She does not immediately assign a single cause to the observation. The next day, Lin Chu selects two groups from the same batch of display plants that already use containers of the same specification, the same batch of growing medium, and have similar routine watering records, and places them back in the two positions. What she wants to see is not why one particular plant wilted, but whether the two locations repeatedly present different conditions during the exhibition period.",
+      "Over the next several observation periods, the location differences recur. The glass-wall side receives direct afternoon sunlight for longer and at the same time feels less windy; the entrance-corner side enters building shade earlier and has more noticeable air movement. The drying pattern at the pot surface also often differs between the two sides. Lin Chu does not compress these observations into a single cause. On the floor plan, she separately records when sunlight and shade shift, when airflow is more noticeable, and when the pot surfaces change.",
+      "She breaks up the original symmetrical arrangement. The main entrance display group moves to the side that enters shade earlier in the afternoon. Beside the glass wall, she reduces the number of pots and leaves a passage for staff to inspect them. The entrance loses its perfect symmetry, and staff have a longer inspection route. Lin Chu marks the extra loop on the exhibition duty sheet and hands it to the colleague taking the next shift.",
+      "On the first afternoon of the exhibition, the edge of the sunlit patch beside the glass wall slowly moves across the paving and stops at the place where the second row of pots had originally been planned. Lin Chu glances at the time on her record board, marks that box with a short line, and moves a nearby spare display pot into the empty position shown on the revised layout. The old symmetrical plan remains underneath the clipboard."
+    ],
+    "overall": "This article explains that under the same regional weather background, nearby locations can still develop different local environmental conditions because of buildings, shade, and airflow, so plants may not experience the same light, heat-and-water conditions, or wind even when they are only a few steps apart.",
+    "conceptName": "Microclimate",
+    "explanationParagraphs": [
+      "Regional weather and local differences within a courtyard can both be correct. Building surfaces, the timing of shade, the ground, and surrounding vegetation can alter local exposure to light and heat exchange, while corners, openings, and obstacles can alter airflow. These factors also interact with containers and water exchange to shape the environment plants actually experience. Locations only a few steps apart can therefore differ during the same period.",
+      "For example, building shade reduces the direct solar radiation reaching a pot while it is shaded, changing the heat input. That explains one way locations can differ, without establishing the cause of a particular plant's wilting.",
+      "The repeated observations in this story support only the conclusion that the two locations repeatedly differed during these exhibition periods. They do not prove that a particular episode of wilting had a single cause, nor do they show that the same differences will persist unchanged through every season. Longer sunlight exposure and weaker airflow also occurred together, so neither one can be declared by itself to explain all of the observed changes; initial plant condition, roots, watering history, and other factors may still affect plant response."
+    ],
+    "module": {
+      "intro": "Treat regional weather as the broader background, then observe how buildings, shade, and airflow create different local conditions at nearby positions; repeated location differences support placement decisions more strongly than a single plant response does.",
+      "diagramTitle": "Why Can Two Nearby Groups of Potted Plants Experience Different Conditions in the Same Courtyard and the Same Weather?",
+      "diagramSteps": [
+        "Select already comparable groups of potted plants from the same batch and place them at the glass-wall side and the entrance-corner side",
+        "Across several exhibition periods, repeatedly record when each location receives direct sunlight, when it enters shade, and whether airflow is noticeable",
+        "At the same time, observe the pattern of change at the pot surface without using it alone as a diagnosis of water status or disease",
+        "Observe that during these periods the glass-wall side repeatedly receives longer sunlight and weaker airflow, while the corner side enters shade earlier and has more noticeable air movement",
+        "Use those repeated location differences to adjust pot numbers, the main entrance display position, and the inspection route, while treating the arrangement as a choice for this particular exhibition period"
+      ],
+      "diagramStepNotes": [
+        "Using plants that were already relatively well matched reduces obvious initial differences but does not eliminate all individual plant variation.",
+        "Repeated observation supports a difference between locations; it does not use one episode of wilting to prove a single cause.",
+        "Pot-surface change can be influenced by light, airflow, the container, growing medium, the plant, and watering history.",
+        "Longer sunlight and weaker airflow occur together in the story, so neither can be claimed separately to cause the entire plant response.",
+        "The exhibition layout can be reassessed as season, weather, and site conditions change; it is not a permanent zoning rule for the garden."
+      ],
+      "mapping": [
+        "Glass-wall side → a location that, during the observed exhibition periods, receives direct sunlight for longer and has weaker perceived airflow.",
+        "Entrance-corner side → a location that enters building shade earlier and has more noticeable air movement.",
+        "Regional weather forecast → the broader-scale weather background, which does not rule out small-scale differences within the courtyard.",
+        "Giving up perfect symmetry → the spatial and visual trade-off made because local conditions differ.",
+        "Record board and inspection route → continued repeated observation of local conditions rather than a one-time permanent classification."
+      ],
+      "boundary": "Microclimate describes local environmental differences at a smaller scale than regional weather and does not imply that a nearby weather station is wrong. Buildings, topography, shade, ground surfaces, vegetation, and airflow can all change the light, heat exchange, and water conditions experienced by plants, but one episode of wilting, one instance of a dry pot surface, or one location observation cannot exclude root conditions, watering, growing medium, or initial plant differences. Rules of thumb about orientation are also not universally transferable across regions. This article provides no frost-protection parameters, irrigation settings, disease diagnosis, permanent zoning rule, or horticultural engineering specification.",
+      "reflection": "If the same exhibition area were used in another season and both the sun path and prevailing wind direction had changed, would you keep the same placement or observe the two positions again? What does that suggest about why microclimate judgments depend on time and context?"
+    },
+    "references": [
+      {
+        "id": "rmets-microclimates",
+        "citation": "Royal Meteorological Society. (2017, July 28). Microclimates in the garden.",
+        "url": "https://www.rmets.org/metmatters/microclimates-garden",
+        "use": "Supports the existence of small-scale differences in light, wind, temperature, and humidity within a garden and supports that topography, orientation, walls, hedges, and containers can modify local conditions. This article does not reuse the source's specific temperature differences or rainfall proportions and does not generalize any region-specific orientation rule into a global rule."
+      },
+      {
+        "id": "rhs-microclimate",
+        "citation": "Royal Horticultural Society Advice Team. (n.d.). Microclimates: assessing your garden.",
+        "url": "https://www.rhs.org.uk/garden-design/microclimates-assessing-garden",
+        "use": "Supports that regional climate and small-scale variation within a garden can coexist and supports observing buildings, shade, wind exposure, topography, and seasonal change when assessing local conditions. This article borrows only that location-assessment logic and provides no real frost-protection method, irrigation parameter, disease diagnosis, or compliant design."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "agriculture-garden-night-27-preparation/group1-pdc-round3.json",
+      "edits": [
+        "agriculture-garden-night-27-preparation/group1-edit-pass1-evidence.json",
+        "agriculture-garden-night-27-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor, thirteen perspectives; four actual ordinary ChatGPT GPT-5.6 Sol High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "The vineyard weather station stood on the estate's high ground and forecast a minimum of two degrees above freezing. The owner therefore did not start frost protection. At dawn, grass beside the station remained green, but three rows of newly budding vines in the hollow were white with frost. Vines of the same variety beside a south-facing wall were unharmed. The damaged buds belonged to a high-value new planting, and the insurer refused payment because the official station never crossed the frost threshold.\n\nThe owner blamed an inaccurate station. A horticulturist placed thermometers from the ridge to the hollow and recorded wind, humidity, and leaf temperature. On a clear, still night the ground lost heat and cold air drained downhill like water, collecting below. The stone wall released warmth stored during the day. Less than a hundred paces apart, plants experienced different nights. Smoke tests at dusk showed where cold air pooled behind a hedge, giving the temperature pattern a visible path.\n\nThe owner folded the heater quotation into the decorative-wall plans and spent the money mapping the vineyard first. Sensors were shielded, calibrated, and placed at bud height across slope positions; repeated nights distinguished a persistent cold pocket from one faulty reading. Radiation shields prevented direct sun from heating sensors, and reference checks exposed one probe that read consistently high.\n\nSummer measurements revealed another pattern. The wall could overheat, moisture lingered behind hedges, and leaves inside dense canopies stayed wet. Average weather at one point could not replace local conditions around the crop at critical times. A sensor at the wrong height or place might record an irrelevant location very accurately. Maps combined minimum temperature with wind and humidity rather than turning one night into a permanent zone boundary.\n\nThe vineyard distributed sensors across terrain and canopy. Later-budding varieties went into the hollow, and an opening in the hedge allowed cold air to drain. Wind protection, shade, and irrigation were used where appropriate, with checks for added humidity or disease. Local measures could moderate risk but could not remove a regional extreme. Opening the hedge reduced frost pooling but increased wind exposure, so the team monitored both outcomes before extending the change. The owner accepted a smaller planting area in the cold pocket, losing projected revenue but avoiding repeated rescue costs.\n\nOn a frost night the next year, the hill station read one degree above zero while the hollow reached two below. The owner clipped both records to the same board and ran downhill instead of arguing with the station.",
-    "storyBodyZh": "葡萄园的天气站立在庄园高处，预报夜间最低两度。园主因此没有启动防霜措施。清晨，站旁草叶仍是绿色，坡底三排刚萌芽的葡萄却全覆着白霜；南墙边的同批葡萄则安然无事。受损嫩芽来自高价新园，保险方又因官方站未越过霜冻阈值而拒绝赔付。\n\n园主责怪天气站失准。园艺师带着几支温度计，从山脊一路放到低洼处，又记录风、湿度和叶面温度。无风晴夜里，地面散热，冷空气像水一样顺坡沉到低处；石墙白天储下的热则保护了近旁枝芽。相隔不到百步，植物经历的夜晚并不相同。黄昏烟流试验显示冷空气在篱后何处积聚，让温度差有了可见路径。\n\n园主把加热器报价单折进装饰墙图纸，先把那笔钱用来绘制葡萄园分布。传感器经遮蔽、校准，并按坡位放在芽高；连续多夜记录用来区分稳定冷穴与一次故障读数。辐射罩避免太阳直接加热传感器，参照核对还找出一支始终偏高的探头。\n\n夏天的测量也显示另一幅图：墙边可能过热，树篱背风处湿气停留更久，密冠内部叶面迟迟不干。一个位置的平均天气无法替代作物周围、在关键时刻发生的局部条件，传感器若放错高度和位置，也只会准确记录不相关的地方。分区图把最低温同风与湿度结合，不让一个夜晚直接变成永久边界。\n\n园里按地形和冠层布置了多个传感器，低洼地改种较晚萌芽品种，并清出阻挡冷空气下泄的篱口。防风、遮阴和灌溉分别用于合适地块，同时检查它们是否增加潮湿或病害。措施只能缓和局部风险，遇到区域性严寒仍需更大的应对。打开篱口减少积冷，却增加风害；团队同时监测两种结果，才决定是否继续扩大。园主缩小冷穴种植面积，牺牲预计收入，避免反复抢救。\n\n第二年霜夜，山顶读数是一度，坡底已到零下二度。园主把两张记录夹在同一块板上，先跑向坡底，而不是去同天气站争辩。",
-    "explanation": "A microclimate is the local pattern of temperature, radiation, humidity, wind, and moisture created by terrain, surfaces, vegetation, soil, and structures, which may differ sharply from regional averages. Relevant scale depends on the organism and process, so sensor position, height, and timing must fit the question. Local design can moderate frost, heat, wind, or moisture risks but may create trade-offs and cannot remove regional extremes.",
-    "explanationZh": "微气候是地形、表面、植被、土壤和结构在局部形成的温度、辐射、湿度、风与水分格局，相对区域平均可有明显差异。相关尺度取决于作物和过程，传感器位置、高度与时机必须匹配问题。局部设计能缓和霜冻、热、风或湿度风险，但也可能带来权衡，且不能消除区域极端。"
+    "storyBody": "A weekend plant exhibition will occupy a small courtyard, and Lin Chu wants to place one group of potted plants on each side of the entrance for a clean symmetrical view. The regional weather forecast shows nothing unusual, and she assumes that two spots only a few steps apart will not differ much. By the afternoon of the first trial arrangement, however, the group beside the glass wall looks tired first.\n\nShe does not immediately assign a single cause to the observation. The next day, Lin Chu selects two groups from the same batch of display plants that already use containers of the same specification, the same batch of growing medium, and have similar routine watering records, and places them back in the two positions. What she wants to see is not why one particular plant wilted, but whether the two locations repeatedly present different conditions during the exhibition period.\n\nOver the next several observation periods, the location differences recur. The glass-wall side receives direct afternoon sunlight for longer and at the same time feels less windy; the entrance-corner side enters building shade earlier and has more noticeable air movement. The drying pattern at the pot surface also often differs between the two sides. Lin Chu does not compress these observations into a single cause. On the floor plan, she separately records when sunlight and shade shift, when airflow is more noticeable, and when the pot surfaces change.\n\nShe breaks up the original symmetrical arrangement. The main entrance display group moves to the side that enters shade earlier in the afternoon. Beside the glass wall, she reduces the number of pots and leaves a passage for staff to inspect them. The entrance loses its perfect symmetry, and staff have a longer inspection route. Lin Chu marks the extra loop on the exhibition duty sheet and hands it to the colleague taking the next shift.\n\nOn the first afternoon of the exhibition, the edge of the sunlit patch beside the glass wall slowly moves across the paving and stops at the place where the second row of pots had originally been planned. Lin Chu glances at the time on her record board, marks that box with a short line, and moves a nearby spare display pot into the empty position shown on the revised layout. The old symmetrical plan remains underneath the clipboard.",
+    "storyBodyZh": "周末植物展要占用一座不大的内院，林初想让入口两边各摆一组盆栽，进门就能看到整齐的对称效果。地区天气预报并没有显示什么异常，她以为两个位置相隔不过几步，差别不会太大。第一次试摆到下午，靠玻璃墙的一组却先显得疲软。\n\n她没有马上给这个现象找一个单一原因。第二天，林初从同一批展示植物里挑出两组原本就使用相同规格容器、同批基质并有相近日常浇水记录的盆栽，再放回两个位置。她要看的不是哪一株为什么萎蔫，而是这两个位置在展览时段里会不会反复呈现不同条件。\n\n接下来几个时段里，位置差异一次次出现。玻璃墙一侧下午受直射光更久，同时风感较弱；入口转角一侧较早进入建筑阴影，空气流动也更明显。两边盆面的干燥节奏也常常不同。林初没有把这些现象压成一个单独原因，只在平面图上分别记下阳光、阴影、风和盆面状态什么时候出现变化。\n\n原来的对称方案因此被她拆开。主入口展示组被调整到下午较早进入阴影的那一侧，玻璃墙旁减少盆数，并留出工作人员查看的通道。入口失去了左右完全对称的效果，工作人员也多了一段巡查路线。林初把这段绕行画到展期值班表上，交给接班的同事。\n\n开展第一天下午，玻璃墙的亮边慢慢爬过地砖，停在原先准备放第二排盆栽的位置。林初低头看了一眼记录板上的时间，在那一格画上短线，又把旁边一只备用展盆移到新布置图标出的空位。旧的对称布置图还压在板夹最下面。",
+    "explanation": "Regional weather and local differences within a courtyard can both be correct. Building surfaces, the timing of shade, the ground, and surrounding vegetation can alter local exposure to light and heat exchange, while corners, openings, and obstacles can alter airflow. These factors also interact with containers and water exchange to shape the environment plants actually experience. Locations only a few steps apart can therefore differ during the same period.\n\nFor example, building shade reduces the direct solar radiation reaching a pot while it is shaded, changing the heat input. That explains one way locations can differ, without establishing the cause of a particular plant's wilting.\n\nThe repeated observations in this story support only the conclusion that the two locations repeatedly differed during these exhibition periods. They do not prove that a particular episode of wilting had a single cause, nor do they show that the same differences will persist unchanged through every season. Longer sunlight exposure and weaker airflow also occurred together, so neither one can be declared by itself to explain all of the observed changes; initial plant condition, roots, watering history, and other factors may still affect plant response.",
+    "explanationZh": "地区天气与院子里的局部差异可以同时正确。建筑墙面、遮阴时序、地面和周围植被会改变局部受光与热交换，墙角、开口和障碍物会改变气流；这些因素又会与盆体和水分交换一起影响植物实际经历的环境。因此相隔几步的位置也可能在同一时段出现不同条件。\n\n例如，建筑遮阴会在遮挡时段减少到达盆栽的直射太阳辐射，从而改变热量输入；这能解释位置条件为何不同，却不能单凭这一点确定某株萎蔫的原因。\n\n本故事的重复观察只支持‘这些展览时段里两个位置的环境条件反复不同’，不能证明某次萎蔫只有一个原因，也不能推出四季永久保持同样差异。光照更久和风更弱同时出现，也不能单独把任何一项宣布为全部变化的原因；盆栽初始状态、根部、水分历史等仍可能影响表现。"
   },
   {
     "id": "0812-phenology",

@@ -1772,22 +1772,22 @@ export default {
   },
   "/concept-fables/0811-integrated-pest-management": {
     "zh": {
-      "title": "一只虫也不能有的果园",
-      "description": "果园主发现第一片虫叶便反复喷药，虫子短暂消失后，却在失去天敌的树上成群回来。"
+      "title": "绕开的那一段",
+      "description": "周末采摘前，何淼在入口旁发现新叶孔。整片处理的单子已经准备好了，她却还需要弄清这些痕迹意味着什么。"
     },
     "en": {
-      "title": "The Orchard That Allowed No Insect",
-      "description": "An orchard owner sprays after finding the first damaged leaf; the insects vanish briefly, then return in crowds after their natural enemies are gone."
+      "title": "The Section They Walked Around",
+      "description": "Before the weekend harvest event, He Miao finds fresh holes in leaves near the entrance. The form for treating the whole area is ready, but she still needs to find out what the damage means."
     }
   },
   "/concept-fables/0811-selective-breeding-tradeoffs": {
     "zh": {
-      "title": "一年下三百枚蛋的鸡",
-      "description": "养鸡人连续多年只留下产蛋最多的母鸡作亲本，账本上的数字越来越高，鸡舍也越来越经不起炎热。"
+      "title": "只剩一个评估名额",
+      "description": "奶牛育种组下一阶段只够评估一个候选。程知眼前，生产预测最高的一份资料，并没有在每一列都领先。"
     },
     "en": {
-      "title": "The Hen That Laid Three Hundred Eggs",
-      "description": "A breeder keeps only the highest-laying hens as parents; the number in his ledger rises each year while the flock becomes less able to withstand heat."
+      "title": "Only One Evaluation Slot Remained",
+      "description": "The dairy breeding team can evaluate only one candidate in the next stage. The record with the highest production prediction does not lead in every column."
     }
   },
   "/concept-fables/0812-grafting": {
@@ -1802,12 +1802,12 @@ export default {
   },
   "/concept-fables/0812-microclimate": {
     "zh": {
-      "title": "天气站没有结霜",
-      "description": "庄园天气站整夜都在零度以上，清晨低洼处的葡萄芽却覆着一层白霜。"
+      "title": "院子两边",
+      "description": "植物展原本要在小院入口做对称陈列。第一次试摆到下午，林初发现相隔几步的两组盆栽并不一样。"
     },
     "en": {
-      "title": "The Weather Station Had No Frost",
-      "description": "The estate weather station remains above freezing all night, yet grape buds in the hollow are white with frost by morning."
+      "title": "Two Sides of the Courtyard",
+      "description": "The plant exhibition is meant to have a symmetrical courtyard entrance. By the afternoon of the first trial, Lin Chu notices a difference between two groups of pots just a few steps apart."
     }
   },
   "/concept-fables/0812-phenology": {
