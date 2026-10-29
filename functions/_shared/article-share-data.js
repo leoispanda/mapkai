@@ -1832,22 +1832,22 @@ export default {
   },
   "/concept-fables/0821-ecological-succession": {
     "zh": {
-      "title": "没有照表长成的两块荒地",
-      "description": "林务员把“草、灌木、乔木”的同一张恢复表贴在火烧地和废石场边，两块地却从第一年起就走向不同方向。"
+      "title": "旧观察点的新树影",
+      "description": "下一季课程原本只需重印旧路线。沈禾提前踩点，却发现多年的草地观察站已经不再是记忆中的样子。"
     },
     "en": {
-      "title": "Two Wastelands That Ignored the Chart",
-      "description": "A forester posts the same grass-shrub-tree recovery chart beside a burned field and a quarry floor; the two sites diverge from the first year."
+      "title": "New Shadows at the Old Stop",
+      "description": "The next course was meant to reuse the old route. When Shen He checks the familiar grassland stop, it no longer looks like the place in the earlier records."
     }
   },
   "/concept-fables/0821-fire-ecology": {
     "zh": {
-      "title": "没有火的三十年",
-      "description": "护林队扑灭了山里每一簇小火，三十年后，整片森林把积下的枯枝一次烧完。"
+      "title": "同一场火，三个停留点",
+      "description": "叶澄只有二十分钟带游客看火后的森林。她先选中一处黑色地表，调查组却送来了另外几个地点的照片。"
     },
     "en": {
-      "title": "Thirty Years Without Fire",
-      "description": "A forest crew extinguishes every small flame in the mountains; thirty years later, the forest burns its accumulated fuel all at once."
+      "title": "One Fire, Three Stops",
+      "description": "Ye Cheng has twenty minutes to show visitors a forest after fire. She chooses a patch of blackened ground, then the survey team sends photographs from other locations."
     }
   },
   "/concept-fables/0831-maximum-sustainable-yield": {
@@ -1862,12 +1862,12 @@ export default {
   },
   "/concept-fables/0831-bycatch": {
     "zh": {
-      "title": "没有写进鱼市账本的那一网",
-      "description": "虾船的账上只记卖掉的虾，跟网一起上来的幼鱼、海龟和小鲨鱼都在回港前消失了。"
+      "title": "签字栏上的便签",
+      "description": "餐厅们等着确定下一季度的食材成本。孟青手里的两份鱼货记录，目标鱼到货量差不多，附件却不一样。"
     },
     "en": {
-      "title": "The Haul Missing from the Market Ledger",
-      "description": "A shrimp boat records only the shrimp it sells; juvenile fish, turtles, and small sharks caught in the same net disappear before the boat reaches port."
+      "title": "The Note on the Signature Line",
+      "description": "The restaurants are waiting to fix next quarter's ingredient costs. Meng Qing has two fish-supply records with similar target-fish deliveries but different supporting information."
     }
   },
   "/concept-fables/0831-fisheries-co-management": {

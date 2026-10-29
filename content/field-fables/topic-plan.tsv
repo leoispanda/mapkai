@@ -171,8 +171,8 @@ batch-012	08	0812	Horticulture	园艺	1	0812-grafting	Grafting and propagation	�
 batch-012	08	0812	Horticulture	园艺	2	0812-microclimate	Microclimate	微气候	mechanism-explainer	同一花园里靠墙与低洼处经历不同春天	integrated
 batch-012	08	0812	Horticulture	园艺	3	0812-phenology	Phenology	物候学	lens-fable	园丁不再只看日历而开始记录花与昆虫的时间	integrated
 batch-012	08	0821	Forestry	林业	1	0821-sustainable-yield	Sustainable yield	可持续采伐量	mechanism-explainer	每年砍同样树数却逐渐透支不同年龄的森林	integrated
-batch-012	08	0821	Forestry	林业	2	0821-ecological-succession	Ecological succession	生态演替	concept-fable	火后空地并没有一步返回原来的森林	integrated
-batch-012	08	0821	Forestry	林业	3	0821-fire-ecology	Fire ecology	火生态学	concept-fable	成功扑灭每场小火的林区积下更大的燃料	integrated
+batch-012	08	0821	Forestry	林业	2	0821-ecological-succession	Ecological succession	生态演替	mechanism-explainer	火后空地并没有一步返回原来的森林	integrated
+batch-012	08	0821	Forestry	林业	3	0821-fire-ecology	Fire ecology	火生态学	mechanism-explainer	成功扑灭每场小火的林区积下更大的燃料	integrated
 batch-012	08	0831	Fisheries	渔业	1	0831-maximum-sustainable-yield	Maximum sustainable yield	最大可持续产量	mechanism-explainer	今年多捕一网让明年的鱼群少掉不止一网	integrated
 batch-012	08	0831	Fisheries	渔业	2	0831-bycatch	Bycatch and ecosystem-based fisheries	兼捕与生态系统渔业	concept-fable	只统计目标鱼的港口忽略网中其他生命	integrated
 batch-012	08	0831	Fisheries	渔业	3	0831-fisheries-co-management	Fisheries co-management	渔业共同管理	concept-fable	外来统一禁令不如渔民共同记录潮汐与繁殖地	integrated

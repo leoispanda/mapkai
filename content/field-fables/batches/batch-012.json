@@ -843,41 +843,135 @@
       "fieldCode": "0821",
       "fieldTitle": "Forestry",
       "fieldTitleZh": "林业",
-      "title": "Two Wastelands That Ignored the Chart",
-      "titleZh": "没有照表长成的两块荒地",
-      "summary": "A forester posts the same grass-shrub-tree recovery chart beside a burned field and a quarry floor; the two sites diverge from the first year.",
-      "summaryZh": "林务员把“草、灌木、乔木”的同一张恢复表贴在火烧地和废石场边，两块地却从第一年起就走向不同方向。",
-      "storyParagraphs": [
-        "After a wildfire, a forester took charge of both a burned woodland and an abandoned quarry. At each site he posted the same sign: grass in year one, shrubs in year five, trees in year fifteen, and finally the original forest restored. To accelerate progress, he planted the same 'final' tree species in both places immediately. The sign justified a single restoration contract and let the agency report one simple completion date.",
-        "Old roots and buried seed soon emerged from the burned soil. Shrubs grew beside surviving trees and crowded the planted seedlings. The quarry had almost no soil, and its seedlings dried on hot stone; lichens and drought-tolerant grasses arriving on the wind persisted first. Grazing sheep repeatedly ate the quarry edge, keeping it sparse for years. Repeated planting consumed most of the budget while dead seedlings were counted as implementation rather than failure. The quarry's repeated grazing and heat selected which arrivals could persist, so elapsed years alone could not predict convergence.",
-        "The officer cancelled the order for another shipment of final-stage trees, surrendered the planting bonus, and fenced small plots for a season of observation. Soil depth, surviving roots, seed arrival, moisture, and repeated disturbance were recorded. Different treatments tested facilitation and competition rather than assuming one ladder. Reference sites were used cautiously: they suggested functions and species pools but did not erase changed soil or climate.",
-        "The forester thought both sites had departed from the correct order. An ecologist asked him first to find soil, roots, seed sources, and shade left from before the fire, then to observe which organisms arrived, which helped or hindered later ones, and how new disturbances occurred. The burn retained many legacies; the quarry began near bare substrate. One chance seed or grazing event could redirect either path. Monitoring recorded survival, cover, erosion, and recruitment. When a planted shrub suppressed native seedlings, the treatment was reduced instead of defended by schedule.",
-        "Restoration stopped chasing one timetable. Natural regeneration and control of invasive species guided the burn. At the quarry, early work retained fine soil and water, using pioneer plants for shelter before later species arrived. Some open ground remained deliberately because it had developed into a different valuable habitat. Some plots moved toward woodland, others stabilised as open habitat; success was judged against site functions, not resemblance alone.",
-        "Years later, a birch absent from the sign appeared in a quarry corner. The forester stood over it with a hoe, then removed only the invasive vine beside it. He did not move the birch into the supposedly correct row."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "旧观察点的新树影",
+      "summaryZh": "下一季课程原本只需重印旧路线。沈禾提前踩点，却发现多年的草地观察站已经不再是记忆中的样子。",
       "storyParagraphsZh": [
-        "山火过后，林务员同时接管一片烧过的林地和一座废弃石场。他在两处都钉上相同木牌：第一年长草，第五年灌木，第十五年乔木，最后恢复成原来的森林。为了加快进度，他直接在两处种下同一种‘最终’树苗。木牌支撑一份统一恢复合同，也让管理局能报告一个简单完工日期。",
-        "烧过的林地很快从土中冒出旧根和种子，几种灌木在幸存树旁长起，外来的树苗反而受挤。石场几乎没有土，树苗在热石上干死，最先留下的是风吹来的地衣和耐旱小草。附近羊群又反复啃食石场边缘，使那里多年停在稀疏草本阶段。反复栽苗耗去大半预算，死苗却仍被算作已经实施，而非失败证据。石场反复放牧与高温筛选能存活的到达者，因此经过多少年并不能独自预测趋同。",
-        "林务员取消又一批所谓终态树的订单，放弃栽植奖金，围出小块防牧试验，用一季观察各地约束。土深、存活根系、种子到达、水分与重复干扰逐项记录；不同处理用来检验促进与竞争，而非假设同一阶梯。参照地谨慎使用，只提示功能与物种库，不能抹去已经改变的土壤或气候。",
-        "林务员以为两块地都偏离了正确次序。生态学者却让他先找火前留下的土壤、根、种源和阴影，再看谁能到达、谁帮助或阻碍后来者，以及新的干扰怎样发生。烧地保有许多遗产，石场接近从裸地开始；偶然到达的一颗种子和一次放牧都可能改变路径。监测记录存活、覆盖、侵蚀与更新；一种栽植灌木压住本地幼苗后，措施被缩减，而非用时间表辩护。",
-        "恢复方案不再追赶同一张时间表。烧地保护自然更新并控制入侵种，石场先留住细土和水，使用能提供遮蔽的先锋植物，再让后续物种逐渐进入。部分开阔地被有意保留，因为那里已经形成不同而有价值的栖息地。一些样地走向林地，另一些稳定为开阔生境；成功按地点功能判断，不只看外貌相似。",
-        "多年后，石场角落长出一株木牌上没有写的桦树。林务员拿着锄头站了一会儿，最后只拔掉缠在它旁边的入侵藤，没有把桦树移回所谓正确的一行。"
+        "自然教育中心准备下一季的户外课程，沈禾想沿用一条已经走了多年的观察路线。其中一站一直叫“开阔草地”，学生会在那里比较低矮植物。可她提前去踩点时，原来的视野已经被灌木和几株幼树切成了几块，十几个学生再站在那里，很难看到旧记录里那片连续的草本。",
+        "她最初以为只是今年长得特别旺，便把历年的同一固定拍摄点找了出来。较早的相近季节照片里，土壤一直存在，原有多年生植物也没有全部消失；后来几年的记录中，木本幼株先零散出现在地块边缘，随后有一部分留下来并逐渐长大。照片里的变化并不是同一批草越长越高，而是地块里出现了新的成员。",
+        "沈禾继续往后翻，才看见真正改变她决定的一段过程。随着留下来的灌木和幼树冠幅扩大，原先明亮的地面出现了更多遮阴；一些过去铺得很开的喜光草本，在后来的同季节记录里只在较亮的空隙和边缘保持得更明显。也有新幼苗出现，有些早先的小木本又没有留下。她因此不再把这块地理解成“原来的草地只是长乱了”，而是把它看成同一地块里成员比例和分布正在改变。",
+        "她原来只需要把旧路线打印一遍，现在却把“开阔草地”那一站从大组活动中撤下来，改成少人数经过时观察多年变化；需要大面积比较草本的活动则移到另一处仍然开阔的地点。这样一来，课程要多走一段路，旧路线里连续多年的同地点活动也被打断了一部分。",
+        "正式带队前一天，沈禾把新路线卡夹到胸牌后面，又独自走到旧观察点。树影已经越过地上那块褪色的木桩标记，旁边一小片亮处仍长着低矮草本。她站在历年照片的取景位置拍下新的一张，没有拔掉木桩，只把路线卡上的箭头改向了下一站。"
       ],
-      "conceptName": "Ecological succession",
+      "overallZh": "这篇在讲：同一地块的群落组成会随着不同植物的存活、到达、建立和相互作用而改变；后来者形成的遮阴等条件又会影响哪些植物更容易继续存在。",
       "conceptNameZh": "生态演替",
-      "explanationParagraphs": [
-        "Ecological succession is change in community composition, structure, and processes over time after new habitat forms or disturbance occurs. Legacies such as soil and survivors, dispersal, establishment, facilitation, competition, inhibition, consumption, environment, chance events, and repeated disturbance create multiple possible paths. Succession does not necessarily climb a fixed ladder toward one endpoint; restoration goals should fit site history and desired functions."
-      ],
       "explanationParagraphsZh": [
-        "生态演替是新生境形成或扰动后，群落组成、结构和过程随时间的变化。土壤与存活生物等遗产、传播、建立、促进、竞争、抑制、取食、环境、偶然事件和反复扰动共同塑造多条可能路径。演替不是必然沿固定阶梯到达唯一终态，恢复目标应根据地点历史和所需功能调整。"
+        "本例用同一固定地点、相近季节的多年记录，区分“同一株长大”与“群落组成改变”。新出现的木本个体有一部分留下来，冠层扩大又改变近地受光，一些喜光草本的相对丰度和分布因而可能改变。",
+        "木本新个体可以来自后来到达的种子，也可以来自原有种子萌发或再生；仅凭这些照片，不能把其来源分开。",
+        "这些记录支持一种可理解的机制，但不能证明遮阴是唯一原因，也不能排除气候、管理历史或其他环境变化的作用。这里保留了土壤和原有根系，因此并非从裸地开始；后续路径也不必是单一直线，更不保证最终一定形成森林。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先固定同一地点和相近季节，再追踪谁到达、谁建立、谁留下，以及这些成员如何改变后来者经历的条件。",
+        "diagramTitle": "为什么同一块地会从以草本为主，逐渐变成灌木和幼树更多",
+        "diagramSteps": [
+          "固定同一小地块和相近季节的多年记录，避免把季节差异或取景变化当成长期组成变化",
+          "观察到原有草本仍在，同时新的木本个体先后出现，其中一部分存活并逐渐长大",
+          "随着部分灌木和幼树长大，近地面出现更多遮阴和空间占用",
+          "在较暗条件下，一些喜光草本在地块中的相对丰度和分布减少，同时仍有新个体建立或消失",
+          "据此把变化理解为群落组成持续调整，而不是固定阶段表或必然通向某个最终群落"
+        ],
+        "diagramStepNotes": [
+          "同地点和相近季节能减少明显观察偏差，但不能排除所有气候、管理或其他环境因素。",
+          "种子到达不保证建立；原有种子也可能萌发，存活植物也可能再生。照片中的新个体不直接证明其种源来自地块之外。",
+          "遮阴只是本故事中可追踪的一种作用机制，不是唯一可能驱动因素。",
+          "这里描述的是同一地块内物种或功能群的相对丰度和分布变化，不是说原来的草本主动移动到亮处。",
+          "生态演替没有统一时间表，也不保证所有地点最后形成森林。"
+        ],
+        "mapping": [
+          "固定木桩与同一取景点 → 让多年记录指向同一地块。",
+          "后来出现并留下的木本个体 → 记录显示组成在改变，但没有直接确定其种源。",
+          "扩大后的灌木和幼树冠层 → 改变近地光照和空间条件。",
+          "喜光草本在亮处更明显 → 群落相对组成和分布随条件改变。",
+          "旧点保留但课程移位 → 人物承认地点在变化，同时继续长期记录。"
+        ],
+        "boundary": "本篇只解释同一地块群落组成随时间改变的一个机制入口。固定地点、相近季节的照片不能单独证明所有因果，气候、管理、扰动历史和其他环境因素也可能参与。保留土壤、根系或存活植物后，变化不必从裸岩开始；演替也没有统一直线、固定年表或永久终态，更不表示所有地点最终都会变成森林。",
+        "reflection": "如果后来几年灌木数量没有继续增加，而一次新的扰动又重新打开了大块光照空间，你会预期原来的变化方向一定继续吗？为什么？"
+      },
+      "referencesZh": [
+        {
+          "id": "nps-plant-succession",
+          "citation": "National Park Service, Kenai Fjords National Park. (2020, January 21, updated). Plant Succession.",
+          "url": "https://www.nps.gov/kefj/learn/nature/plant-succession.htm",
+          "use": "支持植物群落组成会随时间改变，扰动后遗存、土壤、种子到达以及遮阴和竞争都会影响后来者，并支持演替不是永久停止在单一终态；本篇不采用该页面的地域物种次序或时间尺度，也不把虚构步道故事冒称为NPS实测。"
+        },
+        {
+          "id": "nps-woodland-succession",
+          "citation": "National Park Service. (2015, February 3, updated). Pinyon-Juniper Woodlands - Ecosystem Drivers, Disturbance Processes and Succession.",
+          "url": "https://www.nps.gov/articles/pinyon-juniper-woodlands-ecosystem-drivers-disturbance-succession.htm",
+          "use": "支持气候和扰动会影响植物建立，存活者、再生、种子传播和树冠遮阴都可能改变群落路径，并支持地点历史影响后续变化；本篇只借用这些一般作用关系，不移用美国西南物种或火间隔，也不据此断言所有演替通向森林。"
+        }
+      ],
+      "title": "New Shadows at the Old Stop",
+      "summary": "The next course was meant to reuse the old route. When Shen He checks the familiar grassland stop, it no longer looks like the place in the earlier records.",
+      "storyParagraphs": [
+        "The nature education centre is preparing its outdoor course for the next season, and Shen He wants to reuse an observation route that has been followed for years. One stop has always been called the “open grassland,” where students compare low-growing plants. But when she visits the site in advance, shrubs and several young trees have already broken the old view into separate patches, making it difficult for a group of more than ten students to see the continuous herbaceous cover shown in the earlier records.",
+        "At first she thinks perhaps this year has simply been unusually vigorous, so she retrieves the multi-year photographs taken from the same fixed point. In the earlier photographs from similar seasons, soil is already present and the original perennial plants have not all disappeared. In later years, woody seedlings first appear sparsely along the edge of the plot, after which some remain and gradually grow. The change in the photographs is not simply the same grasses becoming taller; new members have appeared in the plot.",
+        "As Shen He continues through the later records, she sees the sequence that actually changes her decision. As the surviving shrubs and young trees expand their crowns, more shade appears on ground that was once bright. Some light-demanding herbaceous plants that had previously spread broadly are, in later records from comparable seasons, more conspicuous only in brighter gaps and along the edges. New seedlings also appear, while some woody plants that had established earlier do not remain. She therefore stops thinking of the site as “the old grassland that has simply grown untidy” and instead sees the proportions and distribution of members within the same plot as changing.",
+        "She had expected only to print the old route again. Instead, she removes the “open grassland” stop from the large-group activity and keeps it as a small-group stop for observing long-term change; the activity that requires a broad area for comparing herbaceous plants moves to another location that is still open. The course now requires a longer walk, and part of the continuity of the long-running activity at the old site is interrupted.",
+        "The day before leading the group, Shen He clips the new route card behind her badge and walks alone to the old observation point. The tree shadows have already crossed the faded wooden stake on the ground, while a small bright patch beside it still holds low-growing herbaceous plants. Standing at the same viewpoint used in the archive photographs, she takes a new picture. She leaves the wooden stake in place and changes only the arrow on the route card so that it points to the next stop."
+      ],
+      "overall": "This article explains that community composition within the same plot can change as different plants survive, arrive, establish, and interact, while conditions created by later arrivals, such as increased shade, can in turn affect which plants are more likely to persist.",
+      "conceptName": "Ecological succession",
+      "explanationParagraphs": [
+        "This example uses multi-year records from the same fixed location and similar seasons to distinguish individual growth from a change in community composition. Some newly visible woody plants persist, and their expanding crowns alter near-ground light, which can affect the relative abundance and distribution of light-demanding herbs.",
+        "New woody growth can come from incoming seeds, previously present seeds, or regrowth; these photographs alone cannot distinguish those origins.",
+        "These records support one understandable mechanism, but they do not prove that shade is the only cause or exclude effects from climate, management history, or other environmental changes. Soil and existing roots remain present in this example, so the change does not begin from bare ground. The later pathway also need not follow a single straight line and is not guaranteed to end in forest."
+      ],
+      "module": {
+        "intro": "First hold the location and season broadly comparable, then trace who arrives, who establishes, who remains, and how those members alter the conditions experienced by later organisms.",
+        "diagramTitle": "Why Can the Same Plot Shift from Herb-Dominated to Having More Shrubs and Young Trees?",
+        "diagramSteps": [
+          "Use multi-year records from the same small plot and similar seasons so that seasonal differences or viewpoint changes are not mistaken for long-term compositional change",
+          "Observe that original herbaceous plants remain while new woody individuals appear, some persist, and they gradually grow",
+          "As some shrubs and young trees grow, more shade and space occupation develop near the ground",
+          "Under darker conditions, some light-demanding herbaceous plants decline in relative abundance and distribution within the plot, while new individuals continue to establish or disappear",
+          "Interpret the result as an ongoing adjustment in community composition rather than a fixed stage sequence or an inevitable path toward one final community"
+        ],
+        "diagramStepNotes": [
+          "Using the same location and similar seasons reduces obvious observational confusion but does not exclude every influence from climate, management, or other environmental factors.",
+          "Seed arrival does not guarantee establishment; existing seeds can also germinate and surviving plants can regrow. A newly visible individual does not by itself prove that its seed came from outside the plot.",
+          "Shade is one traceable mechanism in this story, not the only possible driver.",
+          "The story describes changes in relative abundance and distribution of species or functional groups within the same plot; it does not mean the original herbaceous plants actively move toward brighter places.",
+          "Ecological succession has no universal timetable and does not guarantee that every site will eventually become forest."
+        ],
+        "mapping": [
+          "Fixed wooden stake and repeated viewpoint → keeping the multi-year records tied to the same plot.",
+          "Woody individuals that appear and persist → evidence of changing composition, without direct identification of their seed source.",
+          "Expanding shrub and young-tree crowns → changing near-ground light and space conditions.",
+          "Light-demanding herbaceous plants becoming more evident in brighter areas → community composition and distribution changing with local conditions.",
+          "Keeping the old site while moving the course activity → acknowledging that the site is changing while continuing the long-term record."
+        ],
+        "boundary": "This article explains only one entry point into how community composition changes over time within the same plot. Photographs from a fixed site and similar seasons cannot by themselves establish every causal relationship; climate, management, disturbance history, and other environmental factors may also contribute. Where soil, roots, or surviving plants remain, change need not begin from bare rock. Succession also has no universal straight line, fixed timetable, or permanent endpoint, and it does not mean every site will ultimately become forest.",
+        "reflection": "If shrub abundance stopped increasing in later years and a new disturbance reopened a large amount of light space, would you expect the previous direction of change to continue automatically? Why or why not?"
+      },
+      "references": [
+        {
+          "id": "nps-plant-succession",
+          "citation": "National Park Service, Kenai Fjords National Park. (2020, January 21, updated). Plant Succession.",
+          "url": "https://www.nps.gov/kefj/learn/nature/plant-succession.htm",
+          "use": "Supports that plant-community composition changes over time, that surviving organisms, soil, seed arrival, shading, and competition can affect later arrivals after disturbance, and that succession does not stop permanently at one final state. This article does not adopt the page's regional species sequence or time scale and does not present the fictional trail story as NPS field data."
+        },
+        {
+          "id": "nps-woodland-succession",
+          "citation": "National Park Service. (2015, February 3, updated). Pinyon-Juniper Woodlands - Ecosystem Drivers, Disturbance Processes and Succession.",
+          "url": "https://www.nps.gov/articles/pinyon-juniper-woodlands-ecosystem-drivers-disturbance-succession.htm",
+          "use": "Supports that climate and disturbance can affect plant establishment, that surviving organisms, regeneration, seed dispersal, and canopy shading can alter community pathways, and that site history influences later change. This article borrows only those general relationships, does not transfer southwestern U.S. species or fire intervals into the fictional site, and does not use the source to claim that all succession leads to forest."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "forest-fisheries-night-28-preparation/group1-pdc-round3.json",
+        "edits": [
+          "forest-fisheries-night-28-preparation/group1-edit-pass1-evidence.json",
+          "forest-fisheries-night-28-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13perspectives;4real ordinary ChatGPT GPT-5.6 Sol High stages."
       }
     },
     {
@@ -887,41 +981,135 @@
       "fieldCode": "0821",
       "fieldTitle": "Forestry",
       "fieldTitleZh": "林业",
-      "title": "Thirty Years Without Fire",
-      "titleZh": "没有火的三十年",
-      "summary": "A forest crew extinguishes every small flame in the mountains; thirty years later, the forest burns its accumulated fuel all at once.",
-      "summaryZh": "护林队扑灭了山里每一簇小火，三十年后，整片森林把积下的枯枝一次烧完。",
-      "storyParagraphs": [
-        "As a young ranger, Han Shuo was famous for rapid suppression. His crew extinguished smoke moments after lightning strikes and prohibited the small wet-season burns long practised by local herders. For thirty years, the mountain showed no obvious burn scars, and officials called it a forest that had finally defeated fire. Suppression protected timber revenue and homes in the short term, so each extinguished ignition reinforced the policy.",
-        "Unburned shrubs, fallen branches, and young trees accumulated each year. Plants needing open patches declined and the understorey became dense. During an extreme drought, lightning fire entered the crowns under strong wind. Heavy fuel made it burn far beyond the small fires of earlier years. Crews protected the village but could not prevent large areas of old forest being damaged together. Evacuation and lost timber consumed years of savings, while the uniform dense stand carried flame across boundaries once considered safe.",
-        "Han left the stronger-suppression pledge unsigned and funded a slower map of vegetation, ownership, cultural sites, smoke exposure, and escape routes. The delay cost him a promotion tied to hectares protected. Treatments were selected by place, never prescribed from the fable for an individual property. Fuel maps separated surface, ladder, and crown fuels, while historical records distinguished frequent low-intensity fire from rare severe events.",
-        "The investigation did not produce the simple answer that more burning was always better. Forest types, slopes, and communities had different histories; season, frequency, extent, intensity, and severity changed effects. Some wet forests rarely burned, while other ecosystems had long experienced low-intensity patch fire. Universal suppression had itself changed how the next fire could behave. Prescribed work was paired with home hardening and evacuation planning; no burn was treated as a substitute for emergency capacity.",
-        "Han worked with traditional fire practitioners, firefighters, and ecologists to divide the landscape. In suitable places they reduced dense fuel and carried out small prescribed burns only when moisture, wind, staffing, and safety plans allowed. Communities strengthened defensible space and evacuation preparation, and monitoring continued after burns. Other methods served places where fire was unsuitable or unsafe. A contingency crew, weather limits, smoke plan, and stop conditions were agreed before ignition; a cancelled burn counted as correct control, not failure. Smoke and ecological responses were measured after the burn, and unexpected effects changed the next prescription.",
-        "On the first prescribed burn, flames stayed below ankle height. Han carried the igniter to the planned boundary, then personally extinguished the final strip. Behind him, the ground formed a patchwork of black and pale rather than one charred sheet."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "同一场火，三个停留点",
+      "summaryZh": "叶澄只有二十分钟带游客看火后的森林。她先选中一处黑色地表，调查组却送来了另外几个地点的照片。",
       "storyParagraphsZh": [
-        "年轻时，护林长韩朔以扑火快闻名。雷击刚冒烟，他便带队压灭；牧民按旧习在湿冷季烧过的小片草地，也被一律禁止。三十年里，山上没有留下明显火痕，政府把这称为一片终于战胜火的森林。扑灭小火短期保护木材收入与住家，因此每次成功都继续强化旧政策。",
-        "没有烧过的灌木、落枝和幼树一年年堆积。几种需要开阔地的草木减少，林下变得密不透风。极端干旱的一年，雷火在大风中越过树冠，厚燃料让它烧得远超旧日小火。护林队守住了村庄，却无法阻止大片老林同时受损。疏散与木材损失耗尽多年储备，整齐密林又把火越过原以为安全的边界。",
-        "韩朔没有在加强扑救的承诺书上签字，转而出资绘制植被、权属、文化地点、烟暴露与撤离路。这套慢方案让他失去按保护面积评定的晋升。措施按地点选择，不能由寓言替个别土地直接开处方。燃料图区分地表、梯状与冠层燃料，历史记录也分开频繁低强度火与罕见严重火。",
-        "火后调查没有得出‘应当多烧’这样简单的答案。不同林型、坡向和社区有不同历史；火的季节、频率、范围与强度会改变结果。某些湿林很少需要火，另一些生态系统长期经历低强度斑块燃烧。过去一律扑灭，也已改变了下一场火会怎样发生。计划用火同房屋防护和撤离准备并行，不能把燃烧当成应急能力的替代。",
-        "韩朔同当地传统用火者、消防员和生态学者一起划分区域。在适合地点，他们清理过密燃料，并在湿度、风和人员都符合计划时进行小范围规定燃烧；居民区加强防护和撤离准备，烧后持续监测。不能安全处理或不适合燃烧的地方，采用其他办法。点火前先定后备队、天气界限、烟管理与停止条件；不合条件取消燃烧算正确控制，并非失败。燃后监测烟与生态响应，意外结果会直接修改下一次方案。",
-        "第一次规定燃烧那天，火线只到脚踝高。韩朔握着点火器一直走到预定边界，亲手把最后一小段火压灭，身后留下黑白相间而非整面焦黑的地面。"
+        "森林教育员叶澄要为一条已经重新开放的步道准备二十分钟短课，只能安排很少几个停留点。她原本想在火场边界内选一处黑色地表，告诉游客“这里就是烧过后的样子”，然后把剩下时间留给另一项森林活动。可调查组的资料让这个安排变得太简单了。",
+        "在已经获准调查的几个固定点里，一处火前地表燃料较连续，火后低层植被和部分木本变化明显；另一处靠近裸露岩地，燃料分布更断续，资料中保留了更多未烧小斑块；还有一个坡位不同的地点，火后仍能看到存活的木本部分，但地表和低层植物已经发生改变。三处记录旁都附着当时的天气资料，叶澄把它们和照片一一对上。",
+        "叶澄把原先的单站课程摊开重排。她不能只挑最黑的一处，因为黑色外观不能告诉游客当时到底释放了多少能量；也不能只挑仍有绿色树冠的一处，因为木本部分存活不代表下面什么都没变。她最终保留三个地点，让大家把火前燃料分布、地形背景和火后留下的生物与地表变化放在一起看，而不是让一个点替整场火说话。",
+        "三次短暂停留把原来的时间吃掉了，叶澄只好删去计划中的树皮辨认小游戏。她还把讲义里那张统一涂黑的火场轮廓换成三个地点照片，每到一站只让大家比较眼前还保留什么、什么发生了变化，再和调查记录对应。",
+        "正式带队那天，最后一个停留点旁还能看到一块未烧的低矮植被，几步外地表却已经明显改变。计时器震了一下，提醒她二十分钟快到了。叶澄把原本装着树皮卡片的小袋塞回背包，举起三张地点照片，让队伍按刚走过的顺序重新排好。"
       ],
-      "conceptName": "Fire ecology",
+      "overallZh": "这篇在讲：同一场火内部可以形成不同的烧过、未烧和生态影响斑块，因为燃料、天气、地形等条件并不处处相同；火后生态影响也不能由外框或颜色一概而论。",
       "conceptNameZh": "火生态学",
-      "explanationParagraphs": [
-        "Fire ecology studies two-way relationships among fire regimes, organisms, fuels, climate, soil, landscapes, and human societies. Frequency, season, extent, intensity, severity, and history jointly determine effects, so permanent suppression and indiscriminate burning can both be inappropriate. Cultural or prescribed fire, fuel treatment, adaptation, and emergency response require ecosystem-specific evidence, authority, safety conditions, and monitoring."
-      ],
       "explanationParagraphsZh": [
-        "火生态学研究火制度与生物、燃料、气候、土壤、景观和人类社会的双向关系。火的频率、季节、范围、强度、严重度与历史共同决定影响，因此永久扑灭和无差别燃烧都可能不合适。文化或规定燃烧、燃料处理、适应和应急响应需依据具体生态系统证据、权责、安全条件与监测。"
+        "相邻的可燃物能让火沿地表继续传播，裸露岩地等缺少可燃物的位置则可能打断这种连续性。燃料数量、含水状态、天气和地形还会共同影响燃烧，因此同一火场内可能留下未烧及生态变化程度不同的斑块。",
+        "绿色树冠不说明地表和低层植被没变，黑色地表也不说明所有生物都死亡。",
+        "燃烧强度与生态严重度不是同一概念：强度指燃烧过程中能量释放的程度，严重度关注火后生物和环境发生了多大变化。因此不能只凭火后颜色或一张照片倒推完整热释放过程。一次火形成的空间斑块也不等于已经知道该生态系统长期的火情势；后者还涉及频率、季节、范围等长期特征。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先把一场火的外边界和内部斑块分开，再把燃料、天气和地形等背景与火后生态变化放在一起解释。",
+        "diagramTitle": "为什么同一场火的三个地点会留下不同的火后结果",
+        "diagramSteps": [
+          "确定三个地点都处在同一次火的边界内，但火前燃料连续性和地形背景并不完全相同",
+          "比较火后资料：有的地点保留未烧小斑块，有的地表和低层植被变化明显，有的仍保留部分木本存活",
+          "把这些差异与燃料、天气和地形等可能共同影响燃烧空间表现的因素联系起来",
+          "区分燃烧强度与生态严重度，不用黑色程度或绿色树冠单独推断热释放或整体生态影响",
+          "把本次火后的斑块作为一次事件的空间结果，并与长期火发生模式分开理解"
+        ],
+        "diagramStepNotes": [
+          "同一外框内并不代表燃料、地形或燃烧过程处处相同。",
+          "未烧、变化较轻或变化较重都可以在同一火场中形成斑块。",
+          "故事只支持这些因素共同影响空间差异的机制，不证明某个单一因素独自造成某一斑块。",
+          "强度关注能量释放，严重度关注生物和环境变化，两者不能从单张火后照片互相直接换算。",
+          "一次火的斑块分布不是长期火情势本身，不能据此单独推出未来频率、季节或恢复轨迹。"
+        ],
+        "mapping": [
+          "燃料较连续的地点 → 燃烧传播条件与其他地点不同的背景之一。",
+          "靠裸露岩地的断续燃料 → 可能形成空间中断和未烧小斑块的背景之一。",
+          "仍存活的木本部分 → 局部生物存活，不代表地表或全区影响轻微。",
+          "黑色地表 → 火后外观，不能直接当成燃烧强度测量。",
+          "三个停留点 → 用空间对照代替一个地点代表整场火。"
+        ],
+        "boundary": "本篇只用已开放步道和既有调查资料解释火后生态斑块，不涉及游客进入许可、现场危险判断、点火或规定烧操作。黑色地表不能直接还原燃烧强度，绿色树冠也不能证明生态影响轻微；单次火后观察不能预测恢复结果。一次事件的空间斑块也不能替代长期火情势，后者涉及频率、季节、范围、强度和严重度等更长时间尺度的特征。",
+        "reflection": "如果另一次火发生在相似地形上，但当时燃料连续性和天气条件明显不同，你会期待火后斑块一定和这次一样吗？为什么？"
+      },
+      "referencesZh": [
+        {
+          "id": "nps-fire-effects",
+          "citation": "National Park Service, Lassen Volcanic National Park. (2022, May 13, updated). Fire Ecology and Effects.",
+          "url": "https://www.nps.gov/lavo/learn/nature/fire-ecology-and-effects.htm",
+          "use": "支持火与生物和环境相互作用，同一火场可形成烧过、未烧及不同生态严重度的斑块，并支持区分燃烧强度的能量释放与生态严重度的生物环境变化；本篇不采用特定火间隔，不提供点火或燃烧处方，也不从单张照片判断燃烧强度或安全许可。"
+        },
+        {
+          "id": "nps-fire-regime",
+          "citation": "National Park Service, Yosemite National Park. (2022, August 17, updated). Fire Ecology and Monitoring.",
+          "url": "https://www.nps.gov/yose/learn/nature/fireecology.htm",
+          "use": "支持火的作用会随植被、天气和地形而变化，并支持长期火情势包含频率、季节、范围、强度和严重度等特征；本篇不把Yosemite特定林型经验推广到所有生态系统，也不把有火或无火简单写成普遍好坏。"
+        }
+      ],
+      "title": "One Fire, Three Stops",
+      "summary": "Ye Cheng has twenty minutes to show visitors a forest after fire. She chooses a patch of blackened ground, then the survey team sends photographs from other locations.",
+      "storyParagraphs": [
+        "Forest educator Ye Cheng has to prepare a twenty-minute lesson for a trail that has already reopened, leaving room for only a few stops. She originally plans to choose one patch of blackened ground within the fire perimeter, tell visitors, “This is what it looks like after a fire,” and save the remaining time for another forest activity. But the survey team's records make that arrangement look too simple.",
+        "Among several fixed points already included in authorized survey work, one location had relatively continuous surface fuel before the fire and later showed marked changes in low vegetation and some woody plants. Another lies beside exposed rock, where fuel distribution was more discontinuous and the records retain more small unburned patches. At a third point with a different slope position, surviving woody parts can still be seen after the fire even though the ground surface and low vegetation have changed. The records include the weather at the time. Ye Cheng matches each sheet to its site photograph.",
+        "Ye Cheng spreads out her original one-stop lesson and rearranges it. She cannot choose only the blackest location, because black appearance cannot tell visitors how much energy was released during burning. Nor can she choose only a place with surviving green canopy, because survival of woody parts does not mean nothing changed below. She keeps all three locations so that visitors can compare pre-fire fuel distribution, topographic context, and the biological and surface changes left after the fire rather than letting one point speak for the entire event.",
+        "Three short stops consume the time she had set aside, so Ye Cheng removes the planned bark-identification game. She also replaces the uniformly blackened fire-perimeter outline in the handout with three site photographs. At each stop, she asks visitors first to compare what remains and what has changed around them, then to relate those observations to the survey records.",
+        "On the day of the walk, a patch of low vegetation remains unburned beside the final stop, while only a few steps away the ground surface is visibly altered. The timer vibrates to warn her that the twenty minutes are nearly over. Ye Cheng puts the unused bag of bark cards back into her backpack, raises the three site photographs, and asks the group to arrange them in the order of the locations they have just visited."
+      ],
+      "overall": "This article explains that a single fire can contain burned, unburned, and differently affected ecological patches because fuel, weather, topography, and other conditions are not uniform across the area; post-fire ecological effects therefore cannot be inferred from the perimeter or surface colour alone.",
+      "conceptName": "Fire ecology",
+      "explanationParagraphs": [
+        "Adjacent combustible material can allow fire to keep spreading along the ground, while gaps in that material, such as exposed rock, can interrupt local continuity. Fuel amount and moisture, weather, and terrain also influence burning, so one fire can leave unburned patches and patches with different ecological effects.",
+        "A green canopy does not mean the ground and low vegetation were unchanged; blackened ground does not mean every organism died.",
+        "Fire intensity and ecological severity are not the same concept. Intensity concerns the degree of energy release during burning, while severity concerns how much biological and environmental change occurred after the fire. Post-fire colour or a single photograph therefore cannot reconstruct the full energy-release process. The spatial patchiness produced by one fire also does not by itself establish the ecosystem's long-term fire regime, which involves longer-term characteristics such as frequency, season, and extent."
+      ],
+      "module": {
+        "intro": "Separate the outer perimeter of one fire from the patches within it, then interpret post-fire ecological change alongside background differences in fuel, weather, and topography.",
+        "diagramTitle": "Why Did Three Locations Within the Same Fire Leave Different Post-Fire Outcomes?",
+        "diagramSteps": [
+          "Establish that all three locations lie within the same fire perimeter while their pre-fire fuel continuity and topographic settings are not identical",
+          "Compare the post-fire records: some locations retain small unburned patches, some show marked changes in ground surface and low vegetation, and some retain surviving woody parts",
+          "Relate these differences to factors such as fuel, weather, and topography that can jointly influence the spatial expression of fire",
+          "Distinguish fire intensity from ecological severity, and do not use the darkness of the ground or the presence of green canopy alone to infer heat release or overall ecological impact",
+          "Treat the post-fire patches as spatial outcomes of one event and keep them conceptually separate from the long-term pattern of fire occurrence"
+        ],
+        "diagramStepNotes": [
+          "Being inside the same perimeter does not mean fuel, topography, or the burning process was identical everywhere.",
+          "Unburned, less changed, and more strongly changed patches can all occur within the same fire area.",
+          "The story supports only the mechanism that these factors can jointly influence spatial differences; it does not prove that any one factor alone created a particular patch.",
+          "Intensity concerns energy release, while severity concerns biological and environmental change; neither can be directly converted into the other from a single post-fire photograph.",
+          "The patch pattern from one fire is not itself the long-term fire regime and cannot by itself establish future frequency, season, or recovery trajectory."
+        ],
+        "mapping": [
+          "Location with more continuous fuel → one background condition in which fire spread conditions differ from other sites.",
+          "Discontinuous fuel beside exposed rock → one background condition that can contribute to spatial interruption and small unburned patches.",
+          "Surviving woody parts → local biological survival, not proof that ground-level or whole-area impacts were minor.",
+          "Blackened ground → a post-fire appearance, not a direct measurement of fire intensity.",
+          "Three lesson stops → using spatial comparison instead of allowing one location to represent the entire fire."
+        ],
+        "boundary": "This article uses an already reopened trail and existing survey records only to interpret post-fire ecological patchiness; it does not address visitor-entry authorization, on-site hazard assessment, ignition, or prescribed burning operations. Blackened ground cannot directly reconstruct fire intensity, and green canopy does not prove that ecological effects were minor. A single post-fire observation cannot predict recovery. Spatial patches from one event also cannot substitute for a long-term fire regime, which includes characteristics such as frequency, season, extent, intensity, and severity over longer time scales.",
+        "reflection": "If another fire occurred on similar terrain but fuel continuity and weather conditions were substantially different, would you expect its post-fire patch pattern to be identical to this one? Why or why not?"
+      },
+      "references": [
+        {
+          "id": "nps-fire-effects",
+          "citation": "National Park Service, Lassen Volcanic National Park. (2022, May 13, updated). Fire Ecology and Effects.",
+          "url": "https://www.nps.gov/lavo/learn/nature/fire-ecology-and-effects.htm",
+          "use": "Supports that fire interacts with living organisms and the environment, that a single fire area can contain burned, unburned, and differently severe ecological patches, and that fire intensity as energy release differs from ecological severity as biological and environmental change. This article does not adopt any specific fire-return interval, provide ignition or burning prescriptions, or use a single post-fire photograph to determine fire intensity or access authorization."
+        },
+        {
+          "id": "nps-fire-regime",
+          "citation": "National Park Service, Yosemite National Park. (2022, August 17, updated). Fire Ecology and Monitoring.",
+          "url": "https://www.nps.gov/yose/learn/nature/fireecology.htm",
+          "use": "Supports that fire effects vary with vegetation, weather, and topography and that long-term fire regimes include characteristics such as frequency, season, extent, intensity, and severity. This article does not generalize experience from specific Yosemite forest types to all ecosystems and does not portray the presence or absence of fire as universally good or bad."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "forest-fisheries-night-28-preparation/group1-pdc-round3.json",
+        "edits": [
+          "forest-fisheries-night-28-preparation/group1-edit-pass1-evidence.json",
+          "forest-fisheries-night-28-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13perspectives;4real ordinary ChatGPT GPT-5.6 Sol High stages."
       }
     },
     {
@@ -1072,41 +1260,147 @@
       "fieldCode": "0831",
       "fieldTitle": "Fisheries",
       "fieldTitleZh": "渔业",
-      "title": "The Haul Missing from the Market Ledger",
-      "titleZh": "没有写进鱼市账本的那一网",
-      "summary": "A shrimp boat records only the shrimp it sells; juvenile fish, turtles, and small sharks caught in the same net disappear before the boat reaches port.",
-      "summaryZh": "虾船的账上只记卖掉的虾，跟网一起上来的幼鱼、海龟和小鲨鱼都在回港前消失了。",
-      "storyParagraphs": [
-        "Silver Sand Harbour named its captain of the year by landed shrimp. Qiu Hai's trawler won three years in a row, with every basket of shrimp carefully recorded. Juvenile fish, turtles, and small sharks arriving in the same net could not be sold, so crews threw them back before port. Because they never entered the market, Qiu did not consider them part of the fishery's catch. The prize attracted credit and crew, so recording discarded catch threatened the business identity built around first place.",
-        "In the fourth year, nearshore fish declined while the turtle rescue centre received more injured animals. An observer joined the boat and found that one basket of shrimp often came with several baskets of non-target life. Some animals did not survive pressure or time out of water even when returned. Looking only at shrimp left effects on nursery habitat, food relationships, and other fisheries outside the ledger. Discarded animals were sampled by species, size, condition, and location; absence from the quay was no longer treated as zero impact.",
-        "The prize judges reached the quay as the observer stepped aboard. Qiu left the trophy form unsigned and used the peak fishing day for paired, comparable tows. He posted the shrimp catch beside the non-target catch, then watched some large animals escape while small fish remained in the tray. A second vessel worked the old net in the same tide for comparison; the observer called out depth and tow time while Qiu's mate wrote down catch handling on a salt-stiff page.",
-        "Qiu feared that changing the net would remove his income. A trial began on one vessel. The net gained an opening for larger animals, while mesh and fishing depth were adjusted to the target shrimp. Times and areas where young fish and turtles gathered were temporarily avoided. The observer recorded survival after release rather than merely counting animals thrown overboard. Compensation helped crews accept lower short-term landings, while rules prevented the trial from simply shifting effort to an unobserved night.",
-        "The changes reduced some shrimp catch but also shortened sorting and reduced net damage. Monitoring continued because avoiding one place could transfer pressure elsewhere and devices performed differently by species and sea condition. Total effort, habitat, and target-stock condition entered decisions; no one escape panel carried the whole plan. Crew safety, fuel use, seabed contact, and displacement to other grounds were reviewed beside catch composition. Port awards were changed to include documented non-target outcomes, not just shrimp weight.",
-        "During one haul, a turtle pushed through the square opening and swam away. Qiu did not tell the crew to narrow it. Beneath that day's shrimp total, he drew one empty square."
-      ],
-      "storyParagraphsZh": [
-        "银沙港按上岸虾量评选年度船长。邱海的拖网船连续三年第一，账本上每一筐虾都写得清楚。网里一同上来的幼鱼、海龟和小鲨鱼不能卖，船员便在回港前扔回海里；邱海认为它们既没进鱼市，就不算这门生意的收获。年度第一带来贷款与船员，记录弃获会动摇围绕冠军建立的生意身份。",
-        "第四年，近岸鱼群明显变少，海龟救护站却接到更多受伤个体。一名观察员随船记录，发现一筐虾往往伴着数筐非目标生物，其中一些离水或受压后即使放回也难以存活。只看目标虾，让捕捞对幼鱼栖息地、食物关系和其他渔业的影响全留在账外。弃获按物种、大小、状态与地点抽样，不再把未上码头等同于零影响。",
-        "评奖人到达码头时，观察员正跨上船。邱海没有在奖项表上签字，把旺捕日用来做条件相近的配对拖网。他把虾获与非目标渔获并排贴出，又看着部分大型动物从逃生口出去，幼鱼却仍留在盘里。同一潮次，另一艘船使用旧网作比较；观察员高声报水深和拖网时长，邱海的伙伴把渔获处理写在被盐浸硬的纸上。",
-        "邱海担心改网会失去收入。试验先从一条船开始：网口增加能让大型动物逃出的装置，网目和作业深度按目标虾调整；幼鱼和海龟聚集的时段与海区暂时避开。观察员还记录放回后的存活，而不是只数甲板上扔下去多少。补偿帮助船员承受短期少捕，规则也防止试验只把作业转到无人观察的夜里。",
-        "改动减少了部分虾获，分拣时间和破损网具却也减少。船队继续监测，因为避开一处可能把压力转移到另一处，设备对不同物种和海况的效果也不一样。总作业强度、栖息地和目标种群状态同样进入决定，而非把所有希望交给一扇逃生口。船员安全、耗油、海床接触及压力转移到其他海区，也同渔获组成一起复核。港口奖项改为同时纳入有记录的非目标结果，不再只称虾重。",
-        "一次起网时，一只海龟撞开网口的方框游了出去。邱海没有催人把口封小，只在当天账本的虾数下面添了一只空方框。"
-      ],
-      "conceptName": "Bycatch and ecosystem-based fisheries",
-      "conceptNameZh": "兼捕与生态系统渔业",
-      "explanationParagraphs": [
-        "Bycatch is the unintended capture, injury, or mortality of non-target or unwanted organisms. Ecosystem-based fisheries management also places target fishing within relationships among habitats, food webs, multiple species, environmental change, and people. Gear selectivity, time-area measures, post-release survival, total effort, monitoring, and incentives must work together, with attention to whether an intervention merely shifts impacts elsewhere."
-      ],
-      "explanationParagraphsZh": [
-        "兼捕是捕捞中意外捕获、伤害或杀死非目标和不需要生物。生态系统渔业还把目标捕捞放进栖息地、食物网、多物种、环境和人的关系中管理。渔具选择性、时空避让、释放后存活、总作业强度、监测与激励要共同考虑，也要防止措施只是把影响转移到别处。"
-      ],
       "mode": "concept-fable",
+      "titleZh": "签字栏上的便签",
+      "summaryZh": "餐厅们等着确定下一季度的食材成本。孟青手里的两份鱼货记录，目标鱼到货量差不多，附件却不一样。",
+      "storyParagraphsZh": [
+        "海边几家餐厅已经把下一季度的菜单排好，只等采购合作社锁定鱼货供应。孟青负责在两家长期供货方之间做选择：两边记录里的目标鱼上岸量相近，其中一家价格明显更低。厨师们等着固定成本，她也已经把那份便宜的季度合同放到了签字夹最上面。",
+        "下午，她在另一家供应记录的附件里看到了一页平时很少进入菜单会议的内容：作业过程中还有一些没有作为目标鱼上岸销售的生物，其中一部分被弃回，而这些弃回个体中有些后续情况无法确认。记录旁还注明，有些非目标生物也是其他动物的食物，还有一些属于别的渔民赖以谋生的种群。孟青第一次发现，餐厅最终收到多少目标鱼，只描述了捕捞活动的一部分。",
+        "她又翻回价格更低的那份记录，弃获一栏只有零散备注。两边到底有多大差别，还比不出来。另一份资料里，一尾非目标鱼放回时仍能游动，之后是否存活却不知道。孟青在这一行旁边贴上“未知”，没有把空格填成零。",
+        "孟青把季度合同收回签字夹，先让合作社延长一小段现有采购安排，同时请两边用可比较的方式补充能提供的弃获和后续信息。当天主厨来问下一季价格，她只能先给出更贵的短期报价。菜单已经排好，固定成本却还得再等等。",
+        "第二天早上，主厨们来开菜单会。桌上仍摆着两份目标鱼到货记录，旁边多了一张画着简单食物关系箭头的便签和几处标着“未知”的黄色标签。有人把季度合同推到孟青面前，她没有拿笔，而是先把那张便签压在合同签字栏上，请大家把没进餐厅箱子的那部分也看完。"
+      ],
+      "overallZh": "这篇在讲：目标渔获上岸量只描述捕捞影响的一部分；未上岸的非目标生物仍可能受伤或死亡，并与其他物种、栖息地和人的利用关系相连，因此不能把未知或弃回自动记成零影响。",
+      "conceptNameZh": "兼捕与生态系统渔业",
+      "explanationParagraphsZh": [
+        "捕捞活动除了目标渔获，还可能捕到非目标生物，其中一部分会被弃回。释放时还能游动并不能证明最终存活，因为之后仍可能受到受伤、应激或捕食等影响。",
+        "如果后续结果未知，合理做法是保留未知，而不是填成零死亡或自行编出死亡率。",
+        "未上岸生物仍可能属于其他种群、参与食物关系，或与其他渔业和栖息地相联系，因此只看目标鱼上岸量不足以描述全部影响。但一份记录更完整也不等于对应供应方实际影响一定更小，记录不足也不证明另一方更差。把这些信息纳入判断只是生态系统视角的一个入口，不等于完成了完整的生态系统渔业管理。"
+      ],
+      "moduleZh": {
+        "intro": "把‘卖上岸的目标鱼’和‘捕捞过程中还影响了什么’分开，再把未知的释放后结果保留为未知。",
+        "diagramTitle": "为什么两家目标鱼上岸量相近，仍不足以说明捕捞影响相近",
+        "diagramSteps": [
+          "先比较两家相近的目标鱼上岸记录，确认这只描述进入销售链的目标渔获",
+          "再查看是否存在被捕获但未作为目标鱼上岸销售的非目标生物和弃回记录",
+          "对释放个体区分‘释放时仍活着’与‘最终存活’，缺少后续信息时保留未知",
+          "考虑非目标生物被移除或受伤死亡后，可能怎样影响以它们为食的动物、相关种群和其他渔民的生计",
+          "据此把采购或管理判断从单一上岸量扩展到更多影响信息，但不把一次记录扩充当成完整生态系统管理"
+        ],
+        "diagramStepNotes": [
+          "目标鱼上岸量不能代表捕捞过程中所有生物影响。",
+          "不同制度对兼捕和保留非目标渔获的术语可能不同，本篇聚焦未上岸弃获及其影响。",
+          "释放时游动只是当下状态，不等于之后一定存活；未知既不能记零，也不能自行编死亡数。",
+          "生态关系意味着未售出的生物仍可能影响或受到其他种群和人类利用的联系，但不能据此把某一鱼群变化全部归因于兼捕。",
+          "一次记录变得更完整只是让判断信息增加，不等于已经建立完整生态系统模型或现实捕捞处方。"
+        ],
+        "mapping": [
+          "相近的目标鱼到货记录 → 两家在销售端看起来相似的部分。",
+          "未上岸的非目标生物 → 原本没有进入餐厅采购比较的捕捞影响。",
+          "释放时仍能游动 → 当下观察，不能替代最终存活信息。",
+          "黄色‘未知’标签 → 不把缺失信息自动当作零影响。",
+          "食物关系便签 → 提醒未上岸生物仍属于更广的生态和人类利用关系。"
+        ],
+        "boundary": "本篇不根据两份商业记录判断哪一家真实生态影响更大，也不把记录缺失当作实际兼捕更严重。目标渔获变化可能同时受环境、捕捞努力和种群状态等因素影响，不能把任何种群衰退全部归因于一艘船或一种兼捕关系。释放时活着不保证最终存活，未知不能填零或虚构死亡率。把弃获、生态关系和人的取舍纳入判断只是生态系统渔业视角的一部分，不提供现实配额、放流操作或法域法律结论。",
+        "reflection": "如果两家供应方后来都提供了同样完整的弃获记录，但其中一种非目标生物在当地食物关系和其他渔业中的作用明显不同，你还会只比较弃获数量吗？为什么？"
+      },
+      "referencesZh": [
+        {
+          "id": "noaa-understanding-bycatch",
+          "citation": "NOAA Fisheries. (n.d.). Understanding Bycatch.",
+          "url": "https://www.fisheries.noaa.gov/insight/understanding-bycatch",
+          "use": "支持非目标与弃获生物可能受伤或死亡，并可能影响非目标种群、食物关系和栖息地，也支持通过观察和记录帮助评估这些影响；本篇聚焦未上岸弃获及其生态意义，不宣称各法域对所有非目标渔获采用完全相同的术语或定义。"
+        },
+        {
+          "id": "noaa-release-mortality",
+          "citation": "NOAA Fisheries, Office of Science and Technology. (2019, April 3, updated). Fish Discard and Release Mortality Science.",
+          "url": "https://www.fisheries.noaa.gov/national/bycatch/fish-discard-and-release-mortality-science",
+          "use": "支持释放时仍活着的鱼之后仍可能因受伤、应激或捕食等原因死亡，并支持改进释放后死亡估计并纳入评估；本篇不凭单次游走观察确认最终存活，不把未知当作零，也不提供现实放流操作。"
+        },
+        {
+          "id": "noaa-ebfm",
+          "citation": "NOAA Fisheries, Office of Science and Technology. (2024, November 27, updated). Ecosystem-Based Fisheries Management.",
+          "url": "https://www.fisheries.noaa.gov/national/ecosystems/ecosystem-based-fisheries-management",
+          "use": "支持渔业判断需要考虑物种相互作用、环境与栖息地、人类活动、多重压力及其取舍；本篇只借用这一更广视角说明为什么目标上岸量不足以代表全部影响，不把一次记录扩充写成完整生态系统模型，也不据此给出现实配额或唯一归因。"
+        }
+      ],
+      "title": "The Note on the Signature Line",
+      "summary": "The restaurants are waiting to fix next quarter's ingredient costs. Meng Qing has two fish-supply records with similar target-fish deliveries but different supporting information.",
+      "storyParagraphs": [
+        "Several seaside restaurants have already planned their menus for the next quarter and are waiting only for their purchasing cooperative to secure the fish supply. Meng Qing is responsible for choosing between two long-term suppliers. Their records show similar landed quantities of the target fish, while one supplier offers a clearly lower price. The chefs are waiting for fixed costs, and she has already placed the cheaper quarterly contract at the top of the signature folder.",
+        "That afternoon, she finds a page in the other supplier's supporting records that rarely appears in menu meetings. During fishing operations, other organisms had also been caught without being landed and sold as the target fish; some were discarded, and the later outcomes of some of those discarded animals could not be confirmed. The notes also indicate that some non-target organisms are food for other animals, while others belong to populations on which other fishers depend for their livelihoods. Meng Qing realizes for the first time that the amount of target fish eventually received by the restaurants describes only part of the fishing activity.",
+        "She turns back to the cheaper supplier's record. The discard column holds only scattered notes; she cannot yet tell how the two suppliers' impacts compare. In the other file, one non-target fish was still swimming at release, but its later survival is unknown. Meng Qing puts an “unknown” label beside that entry and leaves the blank without a zero.",
+        "Meng Qing returns the quarterly contract to the folder. She arranges a short extension of the existing supply and asks both suppliers for comparable discard and follow-up information where available. When a chef calls that day to ask about next season's price, she can offer only the more expensive short-term quote. The menus are ready; the fixed costs will have to wait.",
+        "The next morning, the chefs arrive for the menu meeting. The two target-fish delivery records are still on the table, now beside a note with a simple food-web arrow and several yellow labels marked “unknown.” Someone pushes the quarterly contract toward Meng Qing. She does not pick up the pen. Instead, she places the note over the signature line and asks everyone to finish looking at the part that never entered the restaurant boxes."
+      ],
+      "overall": "This article explains that landed target catch describes only part of fishing impacts. Non-target organisms that are not landed can still be injured or die and can remain connected to other species, habitats, and human uses, so unknown outcomes or discarded organisms cannot automatically be counted as zero impact.",
+      "conceptName": "Bycatch and ecosystem-based fisheries",
+      "explanationParagraphs": [
+        "Fishing can catch non-target organisms in addition to the target catch, and some of these organisms may be discarded. Being able to swim at the time of release does not prove eventual survival, because injury, stress, predation, or other effects may still lead to later mortality.",
+        "When the later outcome is unknown, the appropriate representation is to retain that uncertainty rather than record zero mortality or invent a mortality rate.",
+        "Organisms that are not landed may still belong to other populations, participate in food-web relationships, or connect to other fisheries and habitats, so target-fish landings alone cannot describe the full set of impacts. But more complete records do not mean that the corresponding supplier necessarily had lower actual impacts, and missing records do not prove that another supplier was worse. Bringing this information into a decision is only one entry point into an ecosystem perspective, not a complete implementation of ecosystem-based fisheries management."
+      ],
+      "module": {
+        "intro": "Separate 'target fish sold after landing' from 'what else was affected during fishing,' and preserve unknown post-release outcomes as unknown.",
+        "diagramTitle": "Why Are Similar Target-Fish Landings Still Not Enough to Show Similar Fishing Impacts?",
+        "diagramSteps": [
+          "First compare the two suppliers' similar target-fish landing records and recognize that these describe only the target catch entering the sales chain",
+          "Then check whether non-target organisms were caught but not landed and sold as target fish, including any discard records",
+          "For released organisms, distinguish 'alive at release' from 'eventual survival' and retain unknown outcomes when follow-up information is missing",
+          "Consider how removal, injury, or death of non-target organisms could affect animals that eat them, related populations, and other fishers' livelihoods",
+          "Use that broader information to expand purchasing or management judgment beyond landing quantity alone without treating one improvement in records as complete ecosystem management"
+        ],
+        "diagramStepNotes": [
+          "Target-fish landings do not represent every biological effect of fishing activity.",
+          "Terminology for bycatch and retained non-target catch can vary across management systems; this article focuses on discarded organisms that were not landed and their impacts.",
+          "Swimming at release is only an immediate condition and does not mean the organism definitely survives afterward; unknown outcomes cannot be recorded as zero or replaced by an invented mortality number.",
+          "Ecological relationships mean that organisms not sold can still affect or be connected to other populations and human uses, but this does not prove that all change in a particular stock was caused by bycatch.",
+          "More complete records increase the information available for judgment; they do not by themselves constitute a complete ecosystem model or a real-world fishing prescription."
+        ],
+        "mapping": [
+          "Similar target-fish delivery records → the part of the two suppliers that looks similar at the sales end.",
+          "Non-target organisms that were not landed → fishing impacts that had originally been absent from the restaurant purchasing comparison.",
+          "Still able to swim at release → an immediate observation that cannot replace information about eventual survival.",
+          "Yellow 'unknown' labels → preserving missing information rather than automatically treating it as zero impact.",
+          "Food-web note → a reminder that organisms that never reach the market still belong to wider ecological and human-use relationships."
+        ],
+        "boundary": "This article does not use the two commercial records to determine which supplier has the larger real ecological impact, and it does not treat missing records as evidence of more severe actual bycatch. Changes in target catch or stock condition may also be influenced by the environment, fishing effort, stock dynamics, and other factors, so decline in a population cannot be attributed entirely to one vessel or one bycatch relationship. Being alive at release does not guarantee eventual survival, and unknown outcomes must not be recorded as zero or assigned an invented mortality rate. Bringing discards, ecological relationships, and human trade-offs into judgment is only one part of an ecosystem-based fisheries perspective and does not provide real quotas, release procedures, or jurisdiction-specific legal conclusions.",
+        "reflection": "If both suppliers later provided equally complete discard records, but one non-target species played a clearly different role in the local food web and in other fisheries, would you still compare only the number discarded? Why or why not?"
+      },
+      "references": [
+        {
+          "id": "noaa-understanding-bycatch",
+          "citation": "NOAA Fisheries. (n.d.). Understanding Bycatch.",
+          "url": "https://www.fisheries.noaa.gov/insight/understanding-bycatch",
+          "use": "Supports that non-target and discarded organisms can be injured or die and can affect non-target populations, food-web relationships, and habitat, and supports the use of observation and records to help assess these effects. This article focuses on the ecological significance of discarded organisms that are not landed and does not claim that every jurisdiction uses identical terminology or definitions for all non-target catch."
+        },
+        {
+          "id": "noaa-release-mortality",
+          "citation": "NOAA Fisheries, Office of Science and Technology. (2019, April 3, updated). Fish Discard and Release Mortality Science.",
+          "url": "https://www.fisheries.noaa.gov/national/bycatch/fish-discard-and-release-mortality-science",
+          "use": "Supports that fish released alive can still die later because of injury, stress, predation, or related causes and supports improving estimates of post-release mortality and incorporating them into assessment. This article does not use a single observation of a fish swimming away to confirm eventual survival, does not treat unknown outcomes as zero, and provides no real-world release procedure."
+        },
+        {
+          "id": "noaa-ebfm",
+          "citation": "NOAA Fisheries, Office of Science and Technology. (2024, November 27, updated). Ecosystem-Based Fisheries Management.",
+          "url": "https://www.fisheries.noaa.gov/national/ecosystems/ecosystem-based-fisheries-management",
+          "use": "Supports considering species interactions, environment and habitat, human activities, multiple pressures, and their trade-offs in fisheries decisions. This article borrows only that broader perspective to explain why target landings are insufficient to represent all impacts, does not treat one expansion of record-keeping as a complete ecosystem model, and does not use it to provide a real quota or a single-cause attribution."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "forest-fisheries-night-28-preparation/group1-pdc-round3.json",
+        "edits": [
+          "forest-fisheries-night-28-preparation/group1-edit-pass1-evidence.json",
+          "forest-fisheries-night-28-preparation/group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One editor using13perspectives;4real ordinary ChatGPT GPT-5.6 Sol High stages."
       }
     },
     {
