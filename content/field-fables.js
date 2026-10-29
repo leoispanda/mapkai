@@ -24374,47 +24374,141 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0831",
     "fieldTitle": "Fisheries",
     "fieldTitleZh": "渔业",
-    "title": "A Fishing Ban Sent from the Capital",
-    "titleZh": "一张从首都寄来的禁渔令",
-    "summary": "The capital closes a lake by an old calendar after spawning has shifted; lakeside fishers distrust the order, and patrol boats cannot chase every night net.",
-    "summaryZh": "首都按旧日历封湖，鱼产卵的海湾却已换了时节；湖边人不相信命令，巡查船也追不上每一张夜网。",
-    "storyParagraphs": [
-      "Each year North Lake received the same fishing closure from the capital. It followed dates set thirty years earlier without asking about that year's water temperature, fish, or village livelihoods. During a warm spring, fish spawned early in East Bay; by the time the ban began, the most vulnerable period had passed. Fishers considered the rule both late and distant and continued setting nets at night. The uniform rule was easy to print and enforce at checkpoints, giving administrators apparent consistency.",
-      "Government added patrols but could not guard the long shore. A lakeside council then invited fishers to participate. In its first form, several large-boat owners took every seat and shifted restrictions toward shallows used by small boats, leaving their own deep-water grounds mostly untouched. Meetings multiplied, catches declined, and small operators and shoreline harvesters stopped attending. Small fishers paid fines while well-connected owners moved effort elsewhere, deepening distrust.",
-      "The authority left the failed council's empty chairs in place, delayed the season opening, and rebuilt representation and decision rights around them. It funded travel for remote villages. Terms, voting, recusal, data access, and enforcement roles were written before quotas. Independent facilitation prevented the largest fleet from chairing every dispute. Meeting papers were posted in plain language before votes, and minority objections remained attached to final decisions.",
-      "A new charter defined which decisions were shared locally and which remained public responsibilities. Transparent seats represented villages, women processors, small and large boats, and ecological interests. Scientific surveys sat beside local observations, while minutes, conflicts of interest, appeals, and penalties were visible. Participation now included authority, responsibility, and accountability, not merely presence in a room. Catch and effort records were cross-checked with independent surveys and landing inspections; local knowledge informed questions without becoming unquestionable.",
-      "Together they monitored spawning bays and juveniles, adjusting closure timing to actual indicators. Community patrols connected with lawful enforcement, and kinship could not cancel a violation. If closure displaced pressure toward a neighbouring lake, coordination moved to the larger scale. Rules received regular review and formal routes for correction. Compliance and ecological indicators were reviewed together; participation was not credited merely because a meeting occurred. A compensation and review clause addressed who bore the immediate cost of closures, keeping conservation burdens visible.",
-      "The next year, fish gathered early in East Bay. The council announced a temporary closure that day. A large-boat owner hauled his own net first and spread it to dry on the quay; small-boat crews then lifted theirs as well. The old number remained visible beneath it. The date was public."
-    ],
-    "storyParagraphsZh": [
-      "北湖每年都收到首都寄来的同一张禁渔令。命令按三十年前的日期封湖两个月，却没有问当年水温、鱼群或各村生计。暖春里，鱼已经提前在东湾产卵，禁令真正生效时，最脆弱的时段早已过去。渔民觉得规定既迟又远，夜里照样下网。统一命令易印、易在检查站执行，给管理者一种整齐一致。",
-      "官府增加巡查，仍守不住漫长岸线。后来成立湖边议事会，让渔民参与。第一轮席位却全被几家大船主拿走，他们把限制推向小船常去的浅湾，自己的深水网区几乎不受影响。会开了很多，捕量仍下降，小船户和岸边采集者也不再出席。小船户承担罚款，有关系的大船主却把作业移往别处，不信任继续加深。",
-      "主管机关把失败议会的空椅留在原位，推迟开季，围着它们重画代表与权力，并承担偏远村交通费。议程、投票、回避、数据访问与执法职责都在定配额前写清；独立主持人避免最大船队掌控每场争议。表决前以清楚语言公开材料，少数异议也随最终决定留档。",
-      "新章程明确哪些决定由地方共同作出、哪些仍由公共机构负责，并给不同村、女性加工者、小船、大船和生态代表保留公开席位。科学调查同本地观察放在一起，会议记录、利益冲突、申诉和处罚都可查。参与不再只是坐进房间，还包括权力、责任和问责。渔获与努力量记录同独立调查、上岸检查互证；地方知识帮助提出问题，却不因此不可质疑。",
-      "各方共同监测产卵湾和幼鱼，按实际指标调整封闭时间；社区巡护同法定执法衔接，违规者不能只靠亲缘免罚。若一处封闭把压力推向邻湖，还要同更大区域协调。规则定期复核，错误也有正式改正的路径。守规与生态指标一起复核，不能只因开过会议便宣称参与成功。补偿与复核条款写清谁承担封闭的即时成本，让保护负担保持可见。",
-      "第二年，东湾鱼群提前聚集。议事会当天宣布临时封湾，一名大船主先把自己的网从水里拖起，放在码头晾干；小船户随后也收了网。旧数字仍从下面透出。日期公开可查。"
-    ],
-    "conceptName": "Fisheries co-management",
-    "conceptNameZh": "渔业共同管理",
-    "explanationParagraphs": [
-      "Fisheries co-management shares clearly defined authority and responsibility for decisions, implementation, monitoring, enforcement, and learning among public agencies, resource users, scientists, and affected groups. It requires lawful rights, inclusive representation, transparent evidence, accountability, appeals, conflict resolution, and coordination across scales. Attendance alone is insufficient; unequal power or capture by a few interests can still produce unfair rules."
-    ],
-    "explanationParagraphsZh": [
-      "渔业共同管理让公共机构、资源使用者及相关科学和受影响群体，共享界定清楚的决策、执行、监测、执法和学习权责。它需要合法权利、包容代表、透明证据、问责、申诉、冲突解决和跨尺度协调。让利益相关者参加会议并不足够；若权力失衡或被少数人俘获，参与也可能产生不公规则。"
-    ],
     "mode": "concept-fable",
+    "titleZh": "透明纸上的边界",
+    "summaryZh": "程放想在周五前定好一条渔业作业边界。办公室里的直线很省事，渔民带来的几张透明纸却让它不再那么简单。",
+    "storyParagraphsZh": [
+      "渔港管理站准备试行一条临时作业边界，把一小片水域里的定置网作业和流动作业尽量分开，看看两类作业反复挤到同一处的情况能不能减少。程放负责在周五前把线定下来。办公室已经画好一版：沿着图上最直的方向切过去，标记少，之后巡查看图也方便。",
+      "第一次看图时，两类作业的人都来了。长期布设定置网的使用者把不同潮位下常用的网位画在透明纸上，做流动作业的人则标出常用作业水面。几张纸叠起来后，程放发现，原直线会把一段常用网位排出定置网可用区域；如果这些作业转到试行分区外的相邻水面，就可能与那里已有的流动作业重新重叠。图内分开了，问题却可能被挤到图外。",
+      "两边也没有同一个答案。定置网一方希望保留一段长期使用的位置，流动作业一方则担心那会让可用水面变窄。按原先做法，程放完全可以听完意见后由管理站自己选一个折中方案；但这项试行的授权文件本来就允许管理站把这一个边界位置与两类作业代表共同确定。程放于是把三个可选方案并排摊开，管理人员和两类受影响代表一起删掉不能接受的版本，最后共同定下一条。",
+      "管理站要把共同定下的边界正式发出，再汇总记录、安排复看。两类作业代表也分好任务，记下重叠、异常和各自使用位置的变化，到时一起解释记录。管理站得重做一套试行图，几位代表则把原定离港的下午留给了记录方法的核对。墙上的钟走过了原本散会的时间，三张方案纸还铺在桌上。",
+      "周五下午，新图被铺在码头仓库的木桌上。程放拿起原来的直线稿，和新图比了几秒，最后把旧稿卷起来塞进图筒。桌边那支用了半截的铅笔还压着新边界，旁边空出一小块位置，留给下一次复看时继续画。"
+    ],
+    "overallZh": "这篇在讲一种共同决策形式：资源使用者在明确授权范围内与公共机构共同选择管理安排，并承担相应的记录和复核责任，参与因此不止于提供意见。",
+    "conceptNameZh": "渔业共同管理",
+    "explanationParagraphsZh": [
+      "本例把共同决定限制在一个很窄的管理事项：定置网与流动作业之间的临时作业边界。管理站原本拥有决定权，但既有授权允许把这个边界选择与两类受影响使用者共同决定，因此使用者提供的信息不仅进入记录，还实际改变了可选方案和最终边界。",
+      "本例选的是共同作出这一决定的合作形式；现实共同管理还包括不同程度的咨询、合作或委托安排，不能把本例当成唯一合法模板。",
+      "共同管理并不要求各方拥有完全相同的权力，也不表示公共机构退出。管理站仍承担正式发布、汇总和复核责任，使用者则承担约定的观察、记录和解释责任。一次共同决定也不能证明作业冲突、资源状况或生态结果已经改善，后续仍需要实际记录和复看。"
+    ],
+    "moduleZh": {
+      "intro": "本例关注共同作出决定的合作形式：在一个明确授权的事项上分享选择，并让后续责任与之相配。现实共同管理还有其他权责分配形式。",
+      "diagramTitle": "为什么提供作业数据还不等于共同管理",
+      "diagramSteps": [
+        "管理站先明确试行事项：只决定定置网与流动作业之间的一条临时作业边界",
+        "两类受影响作业代表提供各自实际使用位置，使原先直线方案暴露出新的重叠问题",
+        "依据既有授权，管理站不再独自决定，而是让管理人员与两类代表共同从可选边界中作出选择",
+        "最终边界确定后，管理站保留正式发布和汇总职责，两类代表承担约定的使用记录和异常说明责任",
+        "到复看时间，各方用共同收集和解释的信息重新评估这条边界是否需要维持或调整"
+      ],
+      "diagramStepNotes": [
+        "具体管理对象必须明确；本例讨论的是两类作业安排，不是通航权、配额或整个渔业治理体系。",
+        "地方经验显示原分区可能把作业挤到相邻水面；这仍需实际记录检验。收集意见和数据本身不能证明已经分享了本例的共同决定权。",
+        "共享权力可以是不均等的；关键是使用者在授权范围内确实能影响决定，而不是只旁听结果。",
+        "权力与责任需要相配：谁参与选择，也需要承担与该范围相符的实施、记录或复核责任。",
+        "一次共同选择只是一个治理安排，不能单凭会议或新边界宣称冲突、渔获或生态状况已经改善。"
+      ],
+      "mapping": [
+        "三条可选边界 → 授权范围内真正可以共同决定的管理选项。",
+        "定置网代表与流动作业代表 → 两类直接受该边界影响的资源使用者。",
+        "透明纸上的实际作业位置 → 地方使用经验进入管理判断的证据。",
+        "管理站正式发布与汇总 → 公共机构仍保留的职责。",
+        "下一次共同复看 → 决定、实施、记录与评估形成连续责任链。"
+      ],
+      "boundary": "本篇只展示一个已存在授权下的局部共同管理环节，不说明现实法域中的具体法权、配额或许可安排。共享权力不必均等，各方能力和责任也可能不同；仅参加会议、提供数据或听取汇报并不自动构成共同管理。地方经验和调查资料都需要检验，任何单一代表也不能自动代表所有受影响者。一次共同决定不保证冲突、渔获或生态状况改善，也不把作业边界解释为禁航线。",
+      "reflection": "如果管理站仍让两类作业者记录数据、参加每次讨论，却规定最终边界只能由管理站在会后独自选择，这和故事里的安排相比，真正少了哪一部分？"
+    },
+    "referencesZh": [
+      {
+        "id": "fao-co-management",
+        "citation": "Food and Agriculture Organization of the United Nations. (n.d.). Report of the Expert Consultation on Small-Scale Fisheries Management in Sub-Saharan Africa, Accra, Ghana, 12–14 December 2001: Co-management.",
+        "url": "https://www.fao.org/4/y5194e/y5194e0a.htm",
+        "use": "支持资源使用者与公共机构等在界定范围内分享管理责任与权力，并支持共同管理可以有多种安排而不等于政府放弃责任；本篇只借用这一一般治理关系，不把地区经验泛化到所有渔业，不提供现实法权或配额，也不保证一次共同决定带来资源恢复。"
+      },
+      {
+        "id": "fao-co-managers-data",
+        "citation": "Food and Agriculture Organization of the United Nations. (n.d.). Guidelines for designing data collection and sharing systems for co-managed fisheries. Part 2: Technical guidelines. Section 2: The information needs of co-managers.",
+        "url": "https://www.fao.org/4/a0231e/a0231e03.htm",
+        "use": "支持共同管理中的角色、数据收集与解释、决策实施和评估职责需要相互匹配，并支持不同伙伴和问题尺度下的分享安排并非固定比例；本篇只展示一个授权边界决定，明确协助采数本身不等于获得完整管理权。"
+      }
+    ],
+    "title": "The Boundary on the Transparent Sheets",
+    "summary": "Cheng Fang wants a fishing boundary settled by Friday. The office's straight line is convenient, until fishers lay their transparent sheets over it.",
+    "storyParagraphs": [
+      "The fishing port management office is preparing to trial a temporary operating boundary intended to separate set-net operations and mobile fishing operations in a small area of water and see whether repeated overlap between the two can be reduced. Cheng Fang is responsible for fixing the line by Friday. The office has already drawn one version: it cuts across the chart in the straightest direction, requires fewer markers, and will be easy to read during later inspections.",
+      "Representatives of both activities attend the first map review. Set-net users draw their usual net positions at different tides on transparent sheets; mobile operators mark their usual fishing areas. When the sheets are overlaid, Cheng Fang sees that the original line would exclude some customary net positions from the area available to set nets. If those operations moved into adjacent water outside the small zoning trial, they could overlap with mobile fishing already there. Separation inside the trial might simply displace the problem beyond it.",
+      "The two sides do not share a single preferred answer either. The set-net side wants to retain a section it has long used, while the mobile-operation side worries that doing so would narrow the water available to them. Under the original process, Cheng Fang could simply listen to both sides and let the management office choose a compromise afterward. But the authorization for this trial already allows the management office to determine this particular boundary jointly with representatives of both affected groups. Cheng Fang therefore lays out three alternative lines, and management staff and representatives from both sides jointly eliminate the unacceptable versions and settle on one together.",
+      "The office will formally issue the jointly chosen boundary, consolidate the records, and arrange the review. Representatives of both activities divide up the work of recording overlap, unusual events, and changes in their own operating locations, then interpreting those records together. The office has to redo the trial charts, and several representatives stay to check recording methods on an afternoon they had planned to leave port. The clock passes the original finishing time while the three alternative charts still lie on the table.",
+      "On Friday afternoon, the new chart is spread across the wooden table in the dockside warehouse. Cheng Fang lifts the original straight-line draft and compares it with the new one for a few seconds, then rolls the old version up and puts it into the map tube. A half-used pencil still rests across the new boundary, with a small blank area beside it left for the next review."
+    ],
+    "overall": "This article illustrates a cooperative form of co-management: within a defined authorization, resource users and the public authority choose a management arrangement jointly and take on corresponding recording and review responsibilities, so participation goes beyond supplying comments.",
+    "conceptName": "Fisheries co-management",
+    "explanationParagraphs": [
+      "This example limits the shared decision to one narrow management matter: a temporary operating boundary between set-net and mobile fishing operations. The management office originally held the decision authority, but the existing authorization allows this boundary to be determined jointly with representatives of both affected groups. Their information therefore does more than enter the record; it actually changes the available options and the final boundary.",
+      "This story selects a cooperative form involving a joint decision. Real co-management spans different consultative, cooperative, and delegated arrangements; this example is not the only valid template.",
+      "Co-management does not require every party to hold exactly equal power, nor does it mean that the public authority withdraws. The management office still carries responsibility for formal issuance, consolidation, and review, while resource users carry the agreed responsibilities for observation, recording, and interpretation. A single joint decision also cannot demonstrate that operational conflict, resource condition, or ecological outcomes have already improved; actual records and subsequent review are still needed."
+    ],
+    "module": {
+      "intro": "This example focuses on a cooperative form involving a joint decision: share a choice within a defined authorization and align follow-up duties with it. Other co-management forms distribute authority and responsibility differently.",
+      "diagramTitle": "Why Does Providing Fishing-Use Data Still Not Automatically Mean Co-Management?",
+      "diagramSteps": [
+        "The management office first defines the trial task narrowly: only the temporary operating boundary between set-net and mobile fishing operations is being decided",
+        "Representatives of both affected fishing activities provide their actual use locations, revealing that the original straight-line option could create new overlap",
+        "Under the existing authorization, the management office does not decide alone but shares the choice among alternative boundaries with representatives of both groups",
+        "After the final boundary is selected, the management office retains formal issuance and record-consolidation duties, while both groups take on agreed recording and explanation responsibilities",
+        "At the scheduled review, all parties use the jointly collected and interpreted information to reconsider whether the boundary should be maintained or adjusted"
+      ],
+      "diagramStepNotes": [
+        "The management object must be specific. This example concerns two fishing-operation arrangements, not navigation rights, quotas, or the entire fisheries governance system.",
+        "Local knowledge suggests the original zoning could displace activity into adjacent water; actual records are still needed to test that possibility. Collecting comments and data alone does not establish the joint decision authority illustrated here.",
+        "Shared authority does not have to be equal. The key point is that resource users genuinely influence the decision within the authorized scope rather than merely hearing the result.",
+        "Power and responsibility should correspond: parties that participate in the choice should also take on implementation, recording, or review responsibilities appropriate to that scope.",
+        "One jointly chosen arrangement is only a governance mechanism; the meeting or the new boundary alone cannot demonstrate that conflict, catches, or ecological conditions have improved."
+      ],
+      "mapping": [
+        "Three alternative boundaries → management options that can genuinely be decided jointly within the authorized scope.",
+        "Set-net and mobile-operation representatives → the two groups of resource users directly affected by the boundary.",
+        "Actual operating locations drawn on transparent sheets → local-use knowledge entering the management decision as evidence.",
+        "Formal issuance and consolidation by the management office → responsibilities that remain with the public authority.",
+        "The next joint review → a continuing chain linking decision, implementation, recording, and evaluation."
+      ],
+      "boundary": "This article shows only one local co-management step within an existing authorization and does not describe actual legal powers, quotas, or licensing arrangements in any jurisdiction. Shared authority need not be equal, and the capacities and responsibilities of different parties may differ; attending a meeting, supplying data, or hearing a report does not automatically constitute co-management. Local knowledge and survey information both require scrutiny, and no single representative can automatically stand for every affected user. One joint decision does not guarantee improvement in conflict, catch, or ecological condition, and the operating boundary in this story is not a navigation prohibition.",
+      "reflection": "If the management office still asked both groups to collect data and attend every discussion but required the final boundary to be chosen by the office alone after the meeting, what essential element would be missing compared with the arrangement in this story?"
+    },
+    "references": [
+      {
+        "id": "fao-co-management",
+        "citation": "Food and Agriculture Organization of the United Nations. (n.d.). Report of the Expert Consultation on Small-Scale Fisheries Management in Sub-Saharan Africa, Accra, Ghana, 12–14 December 2001: Co-management.",
+        "url": "https://www.fao.org/4/y5194e/y5194e0a.htm",
+        "use": "Supports that resource users, public authorities, and other parties can share management responsibilities and authority within a defined scope, and that co-management can take multiple forms without meaning that government abandons responsibility. This article borrows only that general governance relationship, does not generalize regional experience to all fisheries, provides no real legal authority or quota arrangement, and does not guarantee resource recovery from a single joint decision."
+      },
+      {
+        "id": "fao-co-managers-data",
+        "citation": "Food and Agriculture Organization of the United Nations. (n.d.). Guidelines for designing data collection and sharing systems for co-managed fisheries. Part 2: Technical guidelines. Section 2: The information needs of co-managers.",
+        "url": "https://www.fao.org/4/a0231e/a0231e03.htm",
+        "use": "Supports that roles in co-management, data collection and interpretation, implementation of decisions, and evaluation responsibilities should be aligned, and that sharing arrangements vary with partners and the scale of the problem rather than following a fixed proportion. This article shows only one authorized boundary decision and explicitly does not treat helping collect data as equivalent to holding complete management authority."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "fisheries-welfare-night-29-preparation/group1-pdc-round3.json",
+      "edits": [
+        "fisheries-welfare-night-29-preparation/group1-edit-pass1-evidence.json",
+        "fisheries-welfare-night-29-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13perspectives;4actual original-conversation ordinary ChatGPT GPT-5.6 Sol High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Each year North Lake received the same fishing closure from the capital. It followed dates set thirty years earlier without asking about that year's water temperature, fish, or village livelihoods. During a warm spring, fish spawned early in East Bay; by the time the ban began, the most vulnerable period had passed. Fishers considered the rule both late and distant and continued setting nets at night. The uniform rule was easy to print and enforce at checkpoints, giving administrators apparent consistency.\n\nGovernment added patrols but could not guard the long shore. A lakeside council then invited fishers to participate. In its first form, several large-boat owners took every seat and shifted restrictions toward shallows used by small boats, leaving their own deep-water grounds mostly untouched. Meetings multiplied, catches declined, and small operators and shoreline harvesters stopped attending. Small fishers paid fines while well-connected owners moved effort elsewhere, deepening distrust.\n\nThe authority left the failed council's empty chairs in place, delayed the season opening, and rebuilt representation and decision rights around them. It funded travel for remote villages. Terms, voting, recusal, data access, and enforcement roles were written before quotas. Independent facilitation prevented the largest fleet from chairing every dispute. Meeting papers were posted in plain language before votes, and minority objections remained attached to final decisions.\n\nA new charter defined which decisions were shared locally and which remained public responsibilities. Transparent seats represented villages, women processors, small and large boats, and ecological interests. Scientific surveys sat beside local observations, while minutes, conflicts of interest, appeals, and penalties were visible. Participation now included authority, responsibility, and accountability, not merely presence in a room. Catch and effort records were cross-checked with independent surveys and landing inspections; local knowledge informed questions without becoming unquestionable.\n\nTogether they monitored spawning bays and juveniles, adjusting closure timing to actual indicators. Community patrols connected with lawful enforcement, and kinship could not cancel a violation. If closure displaced pressure toward a neighbouring lake, coordination moved to the larger scale. Rules received regular review and formal routes for correction. Compliance and ecological indicators were reviewed together; participation was not credited merely because a meeting occurred. A compensation and review clause addressed who bore the immediate cost of closures, keeping conservation burdens visible.\n\nThe next year, fish gathered early in East Bay. The council announced a temporary closure that day. A large-boat owner hauled his own net first and spread it to dry on the quay; small-boat crews then lifted theirs as well. The old number remained visible beneath it. The date was public.",
-    "storyBodyZh": "北湖每年都收到首都寄来的同一张禁渔令。命令按三十年前的日期封湖两个月，却没有问当年水温、鱼群或各村生计。暖春里，鱼已经提前在东湾产卵，禁令真正生效时，最脆弱的时段早已过去。渔民觉得规定既迟又远，夜里照样下网。统一命令易印、易在检查站执行，给管理者一种整齐一致。\n\n官府增加巡查，仍守不住漫长岸线。后来成立湖边议事会，让渔民参与。第一轮席位却全被几家大船主拿走，他们把限制推向小船常去的浅湾，自己的深水网区几乎不受影响。会开了很多，捕量仍下降，小船户和岸边采集者也不再出席。小船户承担罚款，有关系的大船主却把作业移往别处，不信任继续加深。\n\n主管机关把失败议会的空椅留在原位，推迟开季，围着它们重画代表与权力，并承担偏远村交通费。议程、投票、回避、数据访问与执法职责都在定配额前写清；独立主持人避免最大船队掌控每场争议。表决前以清楚语言公开材料，少数异议也随最终决定留档。\n\n新章程明确哪些决定由地方共同作出、哪些仍由公共机构负责，并给不同村、女性加工者、小船、大船和生态代表保留公开席位。科学调查同本地观察放在一起，会议记录、利益冲突、申诉和处罚都可查。参与不再只是坐进房间，还包括权力、责任和问责。渔获与努力量记录同独立调查、上岸检查互证；地方知识帮助提出问题，却不因此不可质疑。\n\n各方共同监测产卵湾和幼鱼，按实际指标调整封闭时间；社区巡护同法定执法衔接，违规者不能只靠亲缘免罚。若一处封闭把压力推向邻湖，还要同更大区域协调。规则定期复核，错误也有正式改正的路径。守规与生态指标一起复核，不能只因开过会议便宣称参与成功。补偿与复核条款写清谁承担封闭的即时成本，让保护负担保持可见。\n\n第二年，东湾鱼群提前聚集。议事会当天宣布临时封湾，一名大船主先把自己的网从水里拖起，放在码头晾干；小船户随后也收了网。旧数字仍从下面透出。日期公开可查。",
-    "explanation": "Fisheries co-management shares clearly defined authority and responsibility for decisions, implementation, monitoring, enforcement, and learning among public agencies, resource users, scientists, and affected groups. It requires lawful rights, inclusive representation, transparent evidence, accountability, appeals, conflict resolution, and coordination across scales. Attendance alone is insufficient; unequal power or capture by a few interests can still produce unfair rules.",
-    "explanationZh": "渔业共同管理让公共机构、资源使用者及相关科学和受影响群体，共享界定清楚的决策、执行、监测、执法和学习权责。它需要合法权利、包容代表、透明证据、问责、申诉、冲突解决和跨尺度协调。让利益相关者参加会议并不足够；若权力失衡或被少数人俘获，参与也可能产生不公规则。"
+    "storyBody": "The fishing port management office is preparing to trial a temporary operating boundary intended to separate set-net operations and mobile fishing operations in a small area of water and see whether repeated overlap between the two can be reduced. Cheng Fang is responsible for fixing the line by Friday. The office has already drawn one version: it cuts across the chart in the straightest direction, requires fewer markers, and will be easy to read during later inspections.\n\nRepresentatives of both activities attend the first map review. Set-net users draw their usual net positions at different tides on transparent sheets; mobile operators mark their usual fishing areas. When the sheets are overlaid, Cheng Fang sees that the original line would exclude some customary net positions from the area available to set nets. If those operations moved into adjacent water outside the small zoning trial, they could overlap with mobile fishing already there. Separation inside the trial might simply displace the problem beyond it.\n\nThe two sides do not share a single preferred answer either. The set-net side wants to retain a section it has long used, while the mobile-operation side worries that doing so would narrow the water available to them. Under the original process, Cheng Fang could simply listen to both sides and let the management office choose a compromise afterward. But the authorization for this trial already allows the management office to determine this particular boundary jointly with representatives of both affected groups. Cheng Fang therefore lays out three alternative lines, and management staff and representatives from both sides jointly eliminate the unacceptable versions and settle on one together.\n\nThe office will formally issue the jointly chosen boundary, consolidate the records, and arrange the review. Representatives of both activities divide up the work of recording overlap, unusual events, and changes in their own operating locations, then interpreting those records together. The office has to redo the trial charts, and several representatives stay to check recording methods on an afternoon they had planned to leave port. The clock passes the original finishing time while the three alternative charts still lie on the table.\n\nOn Friday afternoon, the new chart is spread across the wooden table in the dockside warehouse. Cheng Fang lifts the original straight-line draft and compares it with the new one for a few seconds, then rolls the old version up and puts it into the map tube. A half-used pencil still rests across the new boundary, with a small blank area beside it left for the next review.",
+    "storyBodyZh": "渔港管理站准备试行一条临时作业边界，把一小片水域里的定置网作业和流动作业尽量分开，看看两类作业反复挤到同一处的情况能不能减少。程放负责在周五前把线定下来。办公室已经画好一版：沿着图上最直的方向切过去，标记少，之后巡查看图也方便。\n\n第一次看图时，两类作业的人都来了。长期布设定置网的使用者把不同潮位下常用的网位画在透明纸上，做流动作业的人则标出常用作业水面。几张纸叠起来后，程放发现，原直线会把一段常用网位排出定置网可用区域；如果这些作业转到试行分区外的相邻水面，就可能与那里已有的流动作业重新重叠。图内分开了，问题却可能被挤到图外。\n\n两边也没有同一个答案。定置网一方希望保留一段长期使用的位置，流动作业一方则担心那会让可用水面变窄。按原先做法，程放完全可以听完意见后由管理站自己选一个折中方案；但这项试行的授权文件本来就允许管理站把这一个边界位置与两类作业代表共同确定。程放于是把三个可选方案并排摊开，管理人员和两类受影响代表一起删掉不能接受的版本，最后共同定下一条。\n\n管理站要把共同定下的边界正式发出，再汇总记录、安排复看。两类作业代表也分好任务，记下重叠、异常和各自使用位置的变化，到时一起解释记录。管理站得重做一套试行图，几位代表则把原定离港的下午留给了记录方法的核对。墙上的钟走过了原本散会的时间，三张方案纸还铺在桌上。\n\n周五下午，新图被铺在码头仓库的木桌上。程放拿起原来的直线稿，和新图比了几秒，最后把旧稿卷起来塞进图筒。桌边那支用了半截的铅笔还压着新边界，旁边空出一小块位置，留给下一次复看时继续画。",
+    "explanation": "This example limits the shared decision to one narrow management matter: a temporary operating boundary between set-net and mobile fishing operations. The management office originally held the decision authority, but the existing authorization allows this boundary to be determined jointly with representatives of both affected groups. Their information therefore does more than enter the record; it actually changes the available options and the final boundary.\n\nThis story selects a cooperative form involving a joint decision. Real co-management spans different consultative, cooperative, and delegated arrangements; this example is not the only valid template.\n\nCo-management does not require every party to hold exactly equal power, nor does it mean that the public authority withdraws. The management office still carries responsibility for formal issuance, consolidation, and review, while resource users carry the agreed responsibilities for observation, recording, and interpretation. A single joint decision also cannot demonstrate that operational conflict, resource condition, or ecological outcomes have already improved; actual records and subsequent review are still needed.",
+    "explanationZh": "本例把共同决定限制在一个很窄的管理事项：定置网与流动作业之间的临时作业边界。管理站原本拥有决定权，但既有授权允许把这个边界选择与两类受影响使用者共同决定，因此使用者提供的信息不仅进入记录，还实际改变了可选方案和最终边界。\n\n本例选的是共同作出这一决定的合作形式；现实共同管理还包括不同程度的咨询、合作或委托安排，不能把本例当成唯一合法模板。\n\n共同管理并不要求各方拥有完全相同的权力，也不表示公共机构退出。管理站仍承担正式发布、汇总和复核责任，使用者则承担约定的观察、记录和解释责任。一次共同决定也不能证明作业冲突、资源状况或生态结果已经改善，后续仍需要实际记录和复看。"
   },
   {
     "id": "0841-one-health",
@@ -24423,49 +24517,141 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0841",
     "fieldTitle": "Veterinary",
     "fieldTitleZh": "兽医学",
-    "title": "Three Casebooks That Never Met",
-    "titleZh": "三本互不相看的病历",
-    "summary": "After a flood, a clinic records fever in villagers, a veterinary office records illness in cattle, and a water office records contaminated wells; the three books remain in separate buildings.",
-    "summaryZh": "洪水后，诊所记录发热村民，兽医站记录流产牛只，水务所记录井水异常，三本记录却放在三座楼里。",
-    "storyParagraphs": [
-      "After a valley flood receded, the clinic received a series of fever cases, the veterinary office found illness in several cattle herds, and the water service closed two contaminated wells. Each department worked separately. Physicians asked only about human contact, veterinarians examined barns, and water officers measured turbidity. Cases declined for several weeks, then appeared in another village. Separate reporting protected professional routines, but no one held responsibility for patterns crossing their borders.",
-      "A rural physician happened to meet the veterinarian at a pharmacy and learned that patients and sick cattle clustered near the same flooded grazing land. Environmental staff added well locations, standing water, and rodent activity, while the laboratory compared samples from people, animals, and water. Evidence suggested several connected routes rather than three unrelated incidents. The joint investigation tested alternatives and timing; shared location suggested connection but did not prove a single transmission route.",
-      "At the budget meeting, the district crossed out the new office building and funded a joint incident structure. Data-sharing agreements limited identifiers, laboratories harmonised sample labels, and teams wrote what evidence would confirm or weaken each pathway. Public messages separated established findings from precaution. One shared timeline linked rainfall, animal movement, water tests, and symptom onset while preserving each source and uncertainty.",
-      "The joint team did not let one profession replace another. Physicians cared for patients and privacy; veterinarians handled animal diagnosis and immunization; water and agricultural staff improved wellheads, drainage, livestock areas, and manure handling; ecologists observed wildlife and habitat change. Information was shared only as needed, with responsibilities explicit. Actions were evaluated for unintended effects on livelihoods, animal welfare, water access, and wildlife rather than optimising one sector alone. The team rehearsed escalation before the next flood and named one coordinator who could convene sectors without overruling their expertise.",
-      "At the next flood warning, villages protected water sources and moved livestock early, while clinics and veterinary offices used linked alerts for unusual events. A shared map brought early signals together and supported action before risks spread. Cooperation did not assume that every illness had one route, but it stopped fragmenting problems that required work across routes. Community representatives reviewed messages and access measures so prevention would not depend on instructions people could not follow.",
-      "After flood season, the three old casebooks entered one archive room. The archivist did not combine them into one volume. She placed the same valley number on each spine. The dry net beside it showed the immediate cost.",
-      "The three books kept their separate labels; the same valley number now crossed all three spines."
-    ],
-    "storyParagraphsZh": [
-      "河谷洪水退去后，诊所连续接到发热村民；兽医站发现几处牛群生病；水务所则封了两口受污井。三个部门各自忙碌，医生只问人的接触，兽医只查牛舍，水务员只看浑浊度。病例下降几周后又在另一村出现。分开记录保护各专业流程，却没人负责跨越边界的共同图样。",
-      "一名乡医偶然在药店碰见兽医，才发现患者和病牛集中在同一片退水草地附近。环境人员补上井位、积水和鼠类活动，实验室再比较来自人、动物和水中的样本。证据指向几条可能相连的传播路径，而不是三个互不相关的事故。联合调查比较替代解释与时间顺序；共同地点提示联系，却不能证明唯一传播路径。",
-      "预算会上，地区划掉新办公楼，把钱拨给联合事件结构。共享协议限制身份信息，实验室统一样本标签，各队写明何种证据支持或削弱每条路径；公开沟通则区分已证实发现与预防行动。共同时间线连接降雨、动物移动、水检与症状出现，同时保留各来源及不确定性。",
-      "联合小组没有让一种职业替代另一种。医生负责患者和隐私，兽医处理动物诊断与免疫，水务和农业人员改善井口、防洪排水、饲养区与粪污管理，生态人员监测野生动物和栖息地变化。信息只按需要共享，责任也写清楚。措施还要评估对生计、动物福利、饮水与野生动物的副作用，不能只优化一个部门。下一次洪水前，小组演练升级流程，并指定一名能召集各部门、却不凌驾专业判断的协调者。",
-      "下一次洪水预警时，村民提前保护水源并转移牲畜，诊所和兽医站使用相连的异常报告。共同地图让早期信号更快相遇，措施也尽量在风险扩散前发生。跨部门合作没有证明所有疾病都来自同一路径，却让必须跨路径处理的问题不再被切碎。社区代表复核信息与可及措施，避免预防依赖人们无法执行的指令。",
-      "洪水季结束后，三本旧记录被送进同一间档案室。管理员没有把它们合成一本，只在书脊贴上同一个河谷编号。旁边晾干的网标着即时成本。",
-      "三本记录仍保留各自标签，同一个河谷编号却横过三条书脊。"
-    ],
-    "conceptName": "One Health",
-    "conceptNameZh": "同一健康",
-    "explanationParagraphs": [
-      "One Health is a collaborative approach to balancing and improving the health of people, domestic animals, wildlife, plants, and ecosystems. It is useful for cross-boundary issues such as zoonoses, food and water safety, antimicrobial resistance, vectors, and environmental hazards. It requires appropriate evidence sharing and coordinated prevention and response without erasing professional expertise, privacy, authority, or the need for evidence about specific transmission routes."
-    ],
-    "explanationParagraphsZh": [
-      "同一健康以协作方式平衡并改善人类、家养动物、野生动物、植物和生态系统健康，适用于人畜共患病、食品水安全、抗微生物药物耐药、媒介和环境危害等跨界问题。它要求共享适当证据、协调预防和响应，但不抹去专业边界、隐私、权责，也不能在缺乏证据时假定传播路径。"
-    ],
     "mode": "concept-fable",
+    "titleZh": "暂缓开放的院角",
+    "summaryZh": "第一次家庭开放日前，顾遥把农场路线排得很紧凑。一场雨和一次共同试走，让最方便的院角有了新的问题。",
+    "storyParagraphsZh": [
+      "社区农场第一次办家庭开放日，顾遥负责把动物接触区、休息桌和小菜园串成一条路线。她最初只想解决一个现实问题：场地不大，带孩子的家庭越少绕路越好。于是她把最热闹的几处都安排在主棚旁边，工作人员站在一个位置就能照看到大半个院子。",
+      "试走时，动物照护员先指出，连续排队会占掉动物平时可以退到后侧安静区域的空间。当天傍晚又下了一场雨，环境维护人员沿着院子的低处看了一遍，发现棚边的水会流过原定休息区，再汇向菜园边的土带。他没有说水里一定有什么，只提醒顾遥：如果开放日人多，这里既是人停留的地方，也是场地水流经过的地方。",
+      "第二天，负责访客健康安排的人和照护、环境维护人员一起重走路线。他们在同一张图上标出洗手与接触动物的位置、动物能退开的空间，以及水流经过的地方。环境人员又圈住土带和菜园：接水的土壤和植物本身也要了解，不能只看水是否绕开游客。顾遥看着几种需要挤在同一个院角，发现手里的资料还不足以决定这里在忙碌或降雨之后怎样开放。",
+      "顾遥把主棚旁的低处休息区和相邻菜园暂时留在首日开放范围之外，动物接触安排也移开连续排队的位置，等不同专业把需要进一步判断的信息补齐后再决定是否扩大开放。这样一来，家庭少了一个参观点，休息位置更远，当天能接待的人数也必须下调。",
+      "开放当天上午，孩子们从新入口进来，主棚旁那条原本画满箭头的地面没有摆桌子。顾遥走过去，把围住低处区域的最后一根绳带扣好，又把原路线图折成四折塞进外套口袋。她从口袋里取出一张小小的“暂缓”标签，贴在绳带旁的牌子上。"
+    ],
+    "overallZh": "这篇在讲：当同一个场地决定同时影响人的接触活动、动物使用空间和环境条件时，只优化其中一个方向可能把负担转移给另外两个方向，因此需要不同专业把信息放在同一判断中共同取舍。",
+    "conceptNameZh": "同一健康",
+    "explanationParagraphsZh": [
+      "本例中的关键不是三个人分别提供三份意见，而是不同专业的信息实际改变了同一个开放决定。公共健康关注访客停留和动物接触，动物照护关注动物能否退开及其使用空间，环境人员关注雨后水流和低处土带；这些关系在同一小块场地交汇，因此只按游客便利优化路线不足以覆盖全部健康相关条件。",
+      "环境端也不是单纯替人寻找暴露通道，还包括接水土壤和植物本身的状态；本例没有声称这些地方已经受污染。",
+      "这种共同判断不表示人、动物和环境一定共享同一个病原，也不能从一次降雨、位置接近或空间共现证明传播。资料不足时可以保留未知并暂缓部分开放。协作仍需尊重各专业的诊断、环境判断、权限和隐私边界，新方案也不能被当作已经证明安全。"
+    ],
+    "moduleZh": {
+      "intro": "把同一个场地选择同时放到人的接触、动物使用空间和环境条件中看，检查一个方向的便利是否把风险或负担转移到另一个方向。",
+      "diagramTitle": "为什么最方便的开放路线仍需要人、动物与环境信息一起判断",
+      "diagramSteps": [
+        "先确定原方案把动物接触、游客休息和菜园参观集中在主棚旁的同一小块区域",
+        "动物照护信息显示连续排队会占用动物平时退开的空间",
+        "环境观察显示雨后场地水流会经过原定休息区并汇向菜园边低处，但并未因此证明污染",
+        "公共健康、动物照护和环境人员把访客接触、动物使用空间与水流信息叠到同一场地判断中",
+        "由于现有信息仍不足，首日暂缓开放其中一部分区域，并保留之后根据进一步专业判断调整的可能"
+      ],
+      "diagramStepNotes": [
+        "人的便利只是场地选择的一项目标，不能单独代表整体健康条件。",
+        "动物是否拥有退开和安静空间是动物健康与福利相关信息，但不能由一次行为直接诊断疾病。",
+        "水流提供环境连接关系，不代表已经检测到污染物、病原或传播。",
+        "跨专业信息需要进入同一评估和判断；评估可能支持维持原方案，也可能要求改变。本故事中，它们确实改变了开放范围。",
+        "暂缓意味着保留未知并继续判断，不等于已经证明该区域危险，也不等于其他区域获得健康安全认证。"
+      ],
+      "mapping": [
+        "访客停留与动物接触位置 → 人的健康相关接触情境。",
+        "动物后侧退避空间 → 动物使用同一场地的健康与福利条件。",
+        "雨后水流、土带和菜园 → 既连接不同区域，也提醒评估接水土壤和植物本身的状态。",
+        "三类信息叠在同一张图上 → 不同专业共同修正同一个选择。",
+        "“暂缓”标签 → 资料不足时保留判断而非强行给出安全或危险结论。"
+      ],
+      "boundary": "同一健康强调人、动物、植物和生态系统健康之间的关联以及跨专业预防与取舍，但不表示同时发生或空间接近的问题一定来自同一病原。一次雨水流动、动物接触或位置共现不能证明传播、污染或疾病。协作不替代医疗、兽医或环境专业诊断，也不改变各自权限、隐私和责任。本篇只展示预防性的共同场地判断，不提供真实消杀、采样、动物转移、医疗或环境工程操作，也不把新方案称为安全认证。",
+      "reflection": "如果后来确认雨后水流完全不会经过游客停留区，但动物仍无法在高峰时段从人群旁退开，你会期待首日开放方案恢复原样吗？为什么？"
+    },
+    "referencesZh": [
+      {
+        "id": "who-ohhlep-definition",
+        "citation": "World Health Organization. (2021, December 1). Tripartite and UNEP support OHHLEP's definition of \"One Health\".",
+        "url": "https://www.who.int/news/item/01-12-2021-tripartite-and-unep-support-ohhlep-s-definition-of-one-health",
+        "use": "支持人、家养和野生动物、植物与生态系统健康相互关联，并支持通过跨部门和社区协作平衡优化、预防风险和处理取舍；本篇只借用这一关系框架，不把同时出现的问题认定为同源病原，也不以协作替代专业诊断、权限或隐私。"
+      },
+      {
+        "id": "who-one-health-action",
+        "citation": "World Health Organization. (n.d.). One Health Joint Plan of Action: Working together for the health of humans, animals, plants and the environment.",
+        "url": "https://www.who.int/teams/one-health-initiative/quadripartite-secretariat-for-one-health/one-health-joint-plan-of-action",
+        "use": "支持从系统层面共同预防健康风险，并把人的健康与动物、植物和环境条件联系起来，同时保留不同专业的职责与专长；本篇不把网页所述2022–2026计划期冒称为最新政策，也不据此提供现实审批、医疗、防疫或环境工程方案。"
+      }
+    ],
+    "title": "The Courtyard Corner That Waited",
+    "summary": "Before the farm's first family open day, Gu Yao has planned a compact route. Rain and a joint walk-through raise new questions about its most convenient corner.",
+    "storyParagraphs": [
+      "The community farm is preparing its first family open day, and Gu Yao is responsible for linking the animal-contact area, rest tables, and small vegetable garden into one route. At first she wants to solve only one practical problem: the site is small, so families with children should have to make as few detours as possible. She therefore places the busiest activities beside the main shed, where staff can see most of the courtyard from one position.",
+      "During the trial walk, the animal-care worker first points out that a continuous visitor queue would occupy the space animals normally use to retreat toward the quieter rear area. That evening it rains, and the environmental-maintenance worker follows the low points of the courtyard and notices that water from beside the shed flows across the planned rest area and then toward the low soil strip beside the vegetable garden. He does not claim that the water necessarily contains anything harmful; he simply points out that during a busy open day this would be both a place where people linger and a place crossed by site runoff.",
+      "The next day, the person responsible for visitor health walks the route with the care and environmental-maintenance staff. On one map they mark handwashing and animal-contact locations, the animals' retreat space, and the water's path. The environmental worker circles the soil strip and garden: the receiving soil and plants need attention themselves, not only whether water avoids visitors. Looking at these needs crowded into one corner, Gu Yao finds that her information is still insufficient to decide how it should open under heavy use or after rain.",
+      "Gu Yao keeps the low rest area beside the main shed and the adjacent vegetable garden outside the opening-day area, and moves the animal-contact arrangement away from the location where visitors would otherwise queue continuously. Those parts can be reconsidered after the different professionals obtain the additional information they need. The trade-off is immediate: families lose one stop, the rest area is farther away, and the number of visitors that can be received that day has to be reduced.",
+      "On the morning of the open day, children enter through the new entrance, and no tables stand on the section of ground beside the main shed that had originally been covered with route arrows. Gu Yao walks over, fastens the last rope barrier around the low area, and folds the original route map into quarters before slipping it into her coat pocket. She takes a small “temporarily deferred” label from her pocket and fixes it to the sign beside the rope."
+    ],
+    "overall": "This article explains that when one site decision simultaneously affects human contact, animal-use space, and environmental conditions, optimizing only one of those dimensions can shift burdens onto the others, so different professional perspectives need to be brought into the same preventive judgment and trade-off.",
+    "conceptName": "One Health",
+    "explanationParagraphs": [
+      "The key in this example is not that three people each supply separate opinions, but that information from different specialties actually changes the same opening decision. Public health focuses on where visitors stop and contact animals, animal care focuses on whether animals can withdraw and how they use the space, and environmental staff focus on post-rain water flow and the low soil strip. Because these relationships converge in the same small area, optimizing the route only for visitor convenience is not enough to cover all health-related conditions.",
+      "The environmental perspective also concerns the receiving soil and plants themselves, rather than treating the environment only as an exposure route to people. The example does not establish that either is contaminated.",
+      "This kind of joint judgment does not mean that humans, animals, and the environment necessarily share the same pathogen, nor can one infer transmission merely from rain, proximity, or spatial co-occurrence. When information is incomplete, uncertainty can be retained and part of the site can remain temporarily unopened. Collaboration still has to respect the diagnostic roles, environmental judgments, authority, and privacy boundaries of each profession, and a revised plan cannot be treated as proof that the site is safe."
+    ],
+    "module": {
+      "intro": "Evaluate the same site choice simultaneously through human contact, animal-use space, and environmental conditions, and ask whether convenience in one direction shifts risk or burden into another.",
+      "diagramTitle": "Why Does the Most Convenient Visitor Route Still Need Human, Animal, and Environmental Information to Be Considered Together?",
+      "diagramSteps": [
+        "Start with the original plan, which concentrates animal contact, visitor rest, and vegetable-garden access in the same small area beside the main shed",
+        "Animal-care information shows that continuous queuing would occupy the space animals normally use to withdraw",
+        "Environmental observation shows that post-rain runoff crosses the planned rest area and reaches the low ground beside the garden, without thereby proving contamination",
+        "Public-health, animal-care, and environmental staff combine information about visitor contact, animal-use space, and water movement in the same site decision",
+        "Because the available information remains incomplete, part of the area is deferred on the first day while the option to revise the plan after further professional judgment is kept open"
+      ],
+      "diagramStepNotes": [
+        "Human convenience is only one objective in the site decision and cannot by itself represent the overall health conditions.",
+        "Whether animals have access to retreat and quiet space is relevant to animal health and welfare, but one observed behavior cannot by itself diagnose disease.",
+        "Water movement provides an environmental connection between locations; it does not prove that pollutants, pathogens, or transmission are present.",
+        "Information from different specialties needs to inform the same assessment and judgment. That assessment may support retaining or changing a plan; in this story it changes the opening area.",
+        "Deferral means retaining uncertainty and continuing assessment. It does not prove that the deferred area is dangerous, nor does it certify the other areas as safe."
+      ],
+      "mapping": [
+        "Visitor stopping and animal-contact locations → the human-health-related contact context.",
+        "The animals' rear retreat space → animal health and welfare conditions within the same site.",
+        "Runoff, soil strip, and garden → connections between areas and a reason to assess the receiving soil and plants themselves.",
+        "The three information layers on one map → different professional perspectives jointly modifying one decision.",
+        "The “temporarily deferred” sign → retaining uncertainty rather than forcing a conclusion of either safety or danger."
+      ],
+      "boundary": "One Health emphasizes links among human, animal, plant, and ecosystem health, together with cross-disciplinary prevention and trade-offs, but it does not mean that problems occurring at the same time or place must come from the same pathogen. A single episode of runoff, animal contact, or spatial proximity cannot prove transmission, contamination, or disease. Collaboration does not replace medical, veterinary, or environmental diagnosis and does not alter each profession's authority, privacy, or responsibilities. This article shows only preventive joint site judgment and provides no real disinfection, sampling, animal relocation, medical, or environmental-engineering procedure, nor does it treat the revised plan as a safety certification.",
+      "reflection": "If later assessment showed that post-rain runoff never crosses the visitor rest area, but animals still could not withdraw from crowds during peak periods, would you expect the original opening plan to be fully restored? Why or why not?"
+    },
+    "references": [
+      {
+        "id": "who-ohhlep-definition",
+        "citation": "World Health Organization. (2021, December 1). Tripartite and UNEP support OHHLEP's definition of \"One Health\".",
+        "url": "https://www.who.int/news/item/01-12-2021-tripartite-and-unep-support-ohhlep-s-definition-of-one-health",
+        "use": "Supports the interconnectedness of human, domestic and wild animal, plant, and ecosystem health, and supports cross-sector and community collaboration to balance optimization, prevention, and trade-offs. This article borrows only that relational framework, does not treat simultaneously occurring problems as evidence of a shared pathogen, and does not use collaboration as a substitute for professional diagnosis, authority, or privacy."
+      },
+      {
+        "id": "who-one-health-action",
+        "citation": "World Health Organization. (n.d.). One Health Joint Plan of Action: Working together for the health of humans, animals, plants and the environment.",
+        "url": "https://www.who.int/teams/one-health-initiative/quadripartite-secretariat-for-one-health/one-health-joint-plan-of-action",
+        "use": "Supports jointly preventing health risks from a systems perspective and linking human health with animal, plant, and environmental conditions while preserving the responsibilities and expertise of different professions. This article does not present the webpage's stated 2022–2026 plan period as current policy beyond that period and does not use it to provide a real approval, medical, disease-control, or environmental-engineering plan."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "fisheries-welfare-night-29-preparation/group1-pdc-round3.json",
+      "edits": [
+        "fisheries-welfare-night-29-preparation/group1-edit-pass1-evidence.json",
+        "fisheries-welfare-night-29-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13perspectives;4actual original-conversation ordinary ChatGPT GPT-5.6 Sol High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "After a valley flood receded, the clinic received a series of fever cases, the veterinary office found illness in several cattle herds, and the water service closed two contaminated wells. Each department worked separately. Physicians asked only about human contact, veterinarians examined barns, and water officers measured turbidity. Cases declined for several weeks, then appeared in another village. Separate reporting protected professional routines, but no one held responsibility for patterns crossing their borders.\n\nA rural physician happened to meet the veterinarian at a pharmacy and learned that patients and sick cattle clustered near the same flooded grazing land. Environmental staff added well locations, standing water, and rodent activity, while the laboratory compared samples from people, animals, and water. Evidence suggested several connected routes rather than three unrelated incidents. The joint investigation tested alternatives and timing; shared location suggested connection but did not prove a single transmission route.\n\nAt the budget meeting, the district crossed out the new office building and funded a joint incident structure. Data-sharing agreements limited identifiers, laboratories harmonised sample labels, and teams wrote what evidence would confirm or weaken each pathway. Public messages separated established findings from precaution. One shared timeline linked rainfall, animal movement, water tests, and symptom onset while preserving each source and uncertainty.\n\nThe joint team did not let one profession replace another. Physicians cared for patients and privacy; veterinarians handled animal diagnosis and immunization; water and agricultural staff improved wellheads, drainage, livestock areas, and manure handling; ecologists observed wildlife and habitat change. Information was shared only as needed, with responsibilities explicit. Actions were evaluated for unintended effects on livelihoods, animal welfare, water access, and wildlife rather than optimising one sector alone. The team rehearsed escalation before the next flood and named one coordinator who could convene sectors without overruling their expertise.\n\nAt the next flood warning, villages protected water sources and moved livestock early, while clinics and veterinary offices used linked alerts for unusual events. A shared map brought early signals together and supported action before risks spread. Cooperation did not assume that every illness had one route, but it stopped fragmenting problems that required work across routes. Community representatives reviewed messages and access measures so prevention would not depend on instructions people could not follow.\n\nAfter flood season, the three old casebooks entered one archive room. The archivist did not combine them into one volume. She placed the same valley number on each spine. The dry net beside it showed the immediate cost.\n\nThe three books kept their separate labels; the same valley number now crossed all three spines.",
-    "storyBodyZh": "河谷洪水退去后，诊所连续接到发热村民；兽医站发现几处牛群生病；水务所则封了两口受污井。三个部门各自忙碌，医生只问人的接触，兽医只查牛舍，水务员只看浑浊度。病例下降几周后又在另一村出现。分开记录保护各专业流程，却没人负责跨越边界的共同图样。\n\n一名乡医偶然在药店碰见兽医，才发现患者和病牛集中在同一片退水草地附近。环境人员补上井位、积水和鼠类活动，实验室再比较来自人、动物和水中的样本。证据指向几条可能相连的传播路径，而不是三个互不相关的事故。联合调查比较替代解释与时间顺序；共同地点提示联系，却不能证明唯一传播路径。\n\n预算会上，地区划掉新办公楼，把钱拨给联合事件结构。共享协议限制身份信息，实验室统一样本标签，各队写明何种证据支持或削弱每条路径；公开沟通则区分已证实发现与预防行动。共同时间线连接降雨、动物移动、水检与症状出现，同时保留各来源及不确定性。\n\n联合小组没有让一种职业替代另一种。医生负责患者和隐私，兽医处理动物诊断与免疫，水务和农业人员改善井口、防洪排水、饲养区与粪污管理，生态人员监测野生动物和栖息地变化。信息只按需要共享，责任也写清楚。措施还要评估对生计、动物福利、饮水与野生动物的副作用，不能只优化一个部门。下一次洪水前，小组演练升级流程，并指定一名能召集各部门、却不凌驾专业判断的协调者。\n\n下一次洪水预警时，村民提前保护水源并转移牲畜，诊所和兽医站使用相连的异常报告。共同地图让早期信号更快相遇，措施也尽量在风险扩散前发生。跨部门合作没有证明所有疾病都来自同一路径，却让必须跨路径处理的问题不再被切碎。社区代表复核信息与可及措施，避免预防依赖人们无法执行的指令。\n\n洪水季结束后，三本旧记录被送进同一间档案室。管理员没有把它们合成一本，只在书脊贴上同一个河谷编号。旁边晾干的网标着即时成本。\n\n三本记录仍保留各自标签，同一个河谷编号却横过三条书脊。",
-    "explanation": "One Health is a collaborative approach to balancing and improving the health of people, domestic animals, wildlife, plants, and ecosystems. It is useful for cross-boundary issues such as zoonoses, food and water safety, antimicrobial resistance, vectors, and environmental hazards. It requires appropriate evidence sharing and coordinated prevention and response without erasing professional expertise, privacy, authority, or the need for evidence about specific transmission routes.",
-    "explanationZh": "同一健康以协作方式平衡并改善人类、家养动物、野生动物、植物和生态系统健康，适用于人畜共患病、食品水安全、抗微生物药物耐药、媒介和环境危害等跨界问题。它要求共享适当证据、协调预防和响应，但不抹去专业边界、隐私、权责，也不能在缺乏证据时假定传播路径。"
+    "storyBody": "The community farm is preparing its first family open day, and Gu Yao is responsible for linking the animal-contact area, rest tables, and small vegetable garden into one route. At first she wants to solve only one practical problem: the site is small, so families with children should have to make as few detours as possible. She therefore places the busiest activities beside the main shed, where staff can see most of the courtyard from one position.\n\nDuring the trial walk, the animal-care worker first points out that a continuous visitor queue would occupy the space animals normally use to retreat toward the quieter rear area. That evening it rains, and the environmental-maintenance worker follows the low points of the courtyard and notices that water from beside the shed flows across the planned rest area and then toward the low soil strip beside the vegetable garden. He does not claim that the water necessarily contains anything harmful; he simply points out that during a busy open day this would be both a place where people linger and a place crossed by site runoff.\n\nThe next day, the person responsible for visitor health walks the route with the care and environmental-maintenance staff. On one map they mark handwashing and animal-contact locations, the animals' retreat space, and the water's path. The environmental worker circles the soil strip and garden: the receiving soil and plants need attention themselves, not only whether water avoids visitors. Looking at these needs crowded into one corner, Gu Yao finds that her information is still insufficient to decide how it should open under heavy use or after rain.\n\nGu Yao keeps the low rest area beside the main shed and the adjacent vegetable garden outside the opening-day area, and moves the animal-contact arrangement away from the location where visitors would otherwise queue continuously. Those parts can be reconsidered after the different professionals obtain the additional information they need. The trade-off is immediate: families lose one stop, the rest area is farther away, and the number of visitors that can be received that day has to be reduced.\n\nOn the morning of the open day, children enter through the new entrance, and no tables stand on the section of ground beside the main shed that had originally been covered with route arrows. Gu Yao walks over, fastens the last rope barrier around the low area, and folds the original route map into quarters before slipping it into her coat pocket. She takes a small “temporarily deferred” label from her pocket and fixes it to the sign beside the rope.",
+    "storyBodyZh": "社区农场第一次办家庭开放日，顾遥负责把动物接触区、休息桌和小菜园串成一条路线。她最初只想解决一个现实问题：场地不大，带孩子的家庭越少绕路越好。于是她把最热闹的几处都安排在主棚旁边，工作人员站在一个位置就能照看到大半个院子。\n\n试走时，动物照护员先指出，连续排队会占掉动物平时可以退到后侧安静区域的空间。当天傍晚又下了一场雨，环境维护人员沿着院子的低处看了一遍，发现棚边的水会流过原定休息区，再汇向菜园边的土带。他没有说水里一定有什么，只提醒顾遥：如果开放日人多，这里既是人停留的地方，也是场地水流经过的地方。\n\n第二天，负责访客健康安排的人和照护、环境维护人员一起重走路线。他们在同一张图上标出洗手与接触动物的位置、动物能退开的空间，以及水流经过的地方。环境人员又圈住土带和菜园：接水的土壤和植物本身也要了解，不能只看水是否绕开游客。顾遥看着几种需要挤在同一个院角，发现手里的资料还不足以决定这里在忙碌或降雨之后怎样开放。\n\n顾遥把主棚旁的低处休息区和相邻菜园暂时留在首日开放范围之外，动物接触安排也移开连续排队的位置，等不同专业把需要进一步判断的信息补齐后再决定是否扩大开放。这样一来，家庭少了一个参观点，休息位置更远，当天能接待的人数也必须下调。\n\n开放当天上午，孩子们从新入口进来，主棚旁那条原本画满箭头的地面没有摆桌子。顾遥走过去，把围住低处区域的最后一根绳带扣好，又把原路线图折成四折塞进外套口袋。她从口袋里取出一张小小的“暂缓”标签，贴在绳带旁的牌子上。",
+    "explanation": "The key in this example is not that three people each supply separate opinions, but that information from different specialties actually changes the same opening decision. Public health focuses on where visitors stop and contact animals, animal care focuses on whether animals can withdraw and how they use the space, and environmental staff focus on post-rain water flow and the low soil strip. Because these relationships converge in the same small area, optimizing the route only for visitor convenience is not enough to cover all health-related conditions.\n\nThe environmental perspective also concerns the receiving soil and plants themselves, rather than treating the environment only as an exposure route to people. The example does not establish that either is contaminated.\n\nThis kind of joint judgment does not mean that humans, animals, and the environment necessarily share the same pathogen, nor can one infer transmission merely from rain, proximity, or spatial co-occurrence. When information is incomplete, uncertainty can be retained and part of the site can remain temporarily unopened. Collaboration still has to respect the diagnostic roles, environmental judgments, authority, and privacy boundaries of each profession, and a revised plan cannot be treated as proof that the site is safe.",
+    "explanationZh": "本例中的关键不是三个人分别提供三份意见，而是不同专业的信息实际改变了同一个开放决定。公共健康关注访客停留和动物接触，动物照护关注动物能否退开及其使用空间，环境人员关注雨后水流和低处土带；这些关系在同一小块场地交汇，因此只按游客便利优化路线不足以覆盖全部健康相关条件。\n\n环境端也不是单纯替人寻找暴露通道，还包括接水土壤和植物本身的状态；本例没有声称这些地方已经受污染。\n\n这种共同判断不表示人、动物和环境一定共享同一个病原，也不能从一次降雨、位置接近或空间共现证明传播。资料不足时可以保留未知并暂缓部分开放。协作仍需尊重各专业的诊断、环境判断、权限和隐私边界，新方案也不能被当作已经证明安全。"
   },
   {
     "id": "0841-herd-immunity",
@@ -24606,47 +24792,141 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0841",
     "fieldTitle": "Veterinary",
     "fieldTitleZh": "兽医学",
-    "title": "The Stable That Lacked Nothing",
-    "titleZh": "什么都不缺的马厩",
-    "summary": "A champion mare has the cleanest private stall, abundant feed, and normal examinations, yet walks the same seven steps at its door all day.",
-    "summaryZh": "冠军母马住着最干净的单间，饲料足、体检正常，却每天在栏门前重复走同样的七步。",
-    "storyParagraphs": [
-      "Racehorse owner Luo Bin kept his champion mare's private stall spotless. Feed arrived by weight, rain and snow stayed outside, and veterinary examinations found no obvious disease. Yet the mare walked seven steps back and forth along the door all day, wearing a bare track into the floor. When approached, she flattened her ears, bit the halter, and refused to leave. Luo said she lacked nothing and merely had a bad temper. The immaculate stall helped the owner market premium breeding, so absence of wounds became a convenient complete score.",
-      "An animal-welfare veterinarian first examined hooves, stomach, and old injuries, then feeding pattern, air, floor, light, and rest. She observed whether the mare could contact companions, forage, move, explore, and avoid frightening situations. Long isolation, concentrated meals, and training pain interacted. The absence of acute disease did not mean the mare's daily experience was good. Observers recorded duration, frequency, triggers, and recovery rather than labelling one gesture as a direct reading of emotion.",
-      "Luo scratched the mare's name from one race entry, opened the sale-ready stall, and paused training for a broader assessment. He invited the attending veterinarian and experienced handlers to agree on measurable changes. Immediate pain and health issues were addressed professionally before environmental and behavioural trials were expanded. Baseline observations covered day and night, because a quiet inspection visit could miss repeated behaviour and poor rest.",
-      "The stable changed more than one item. Pain received treatment, forage was distributed across time, and the mare gradually gained free movement and safe social contact. Training allowed pauses and choice, and the environment offered things to explore. The team recorded eating, resting, posture, social behaviour, and repetitive movement over time instead of treating one quiet moment as proof. Not every choice was offered safely or all at once; plans were adjusted to species, history, risk, and individual response. Changes were introduced one at a time where possible, then reviewed for injury, conflict, feeding, rest, and voluntary engagement.",
-      "Weeks later, the mare still walked seven steps occasionally, but she also grazed beside another horse, slept stretched on her side, nosed through hanging forage, and approached a familiar carer voluntarily. Her coat was dry, her belly was full, and the stall was warm; now the records also held hours of rest, chosen contact, exploration, and movement. Judgement still required evidence; no one pretended to read the animal's mind directly. The worn seven-step strip remained unpainted so later observations could compare change without pretending the old pattern had vanished overnight.",
-      "One morning, the carer stood outside with a halter and did not reach to catch her. The mare stopped on her sixth step, smelled the halter, and placed her own head through its loop."
-    ],
-    "storyParagraphsZh": [
-      "赛马主人骆宾把冠军母马住的单间打理得一尘不染。饲料按重量送到，雨雪进不来，兽医检查也找不到明显疾病。可母马每天沿栏门来回走七步，磨秃一条地面；有人靠近时，它会贴耳、咬缰，不肯出门。骆宾说它什么都不缺，只是脾气坏。整洁马厩帮助主人销售高价配种，因此“没有伤口”成了一项方便的完整评分。",
-      "动物福利兽医先检查蹄、胃和旧伤，又看饲料方式、空气、地面、光照和休息。她随后观察母马能否同伴接触、觅食、移动、探索和避开害怕的事。长期单独关养、集中喂料和训练疼痛彼此作用，体检没有急病，并不代表它每天的体验良好。观察者记录持续时间、频率、诱因与恢复，不把一个动作直接当作读懂情绪。",
-      "骆宾从一张参赛表上划掉母马名字，打开便于展示的单间，暂停训练做更广评估。他请主诊兽医和有经验照料员确定可测变化。疼痛与健康问题先由专业人员处理，再逐步扩大环境与行为试验。基线观察覆盖昼夜，免得一次安静巡查漏掉重复行为与休息不良。",
-      "马厩改变的不只是一项。疼痛得到处理，粗饲料分散供应，母马逐步增加自由活动和安全同伴接触；训练允许停顿与选择，环境里也有可探索的变化。团队记录进食、休息、姿势、社交和异常重复行为，随时间看改善，而不是凭一次安静就下结论。并非所有选择都能一次安全提供；方案须按物种、经历、风险与个体反应逐步调整。条件允许时逐项改变，再复核受伤、冲突、进食、休息与自愿参与。",
-      "几周后，母马仍偶尔走那七步，却开始同另一匹马并肩吃草，侧身卧下睡觉，用鼻子翻找悬挂的草料，也会主动靠近熟悉的照料员。它的皮毛干燥、腹中有食、栏内温暖；新的记录里又添了休息时数、自主接触、探索和活动。判断仍需证据，不能假装直接读懂它的心。那条七步磨痕没有被涂掉，日后观察可据此比较，也不假装旧行为一夜消失。",
-      "一天清晨，照料员拿着笼头站在门外，没有伸手去抓。母马停在第六步，闻了闻笼头，自己把头伸进了带圈。"
-    ],
-    "conceptName": "Five Domains model of animal welfare",
-    "conceptNameZh": "动物福利五域模型",
-    "explanationParagraphs": [
-      "The Five Domains model of animal welfare integrates evidence from nutrition, physical environment, health, and behavioural interactions to infer an animal's likely overall mental experience. It considers negative and positive states, interactions among domains, individual differences, and change over time. The model organizes observation and improvement but cannot read an animal's mind directly or replace species-, individual-, and context-specific professional judgement with a universal checklist."
-    ],
-    "explanationParagraphsZh": [
-      "动物福利五域模型综合营养、物理环境、健康和行为互动的证据，推断动物可能的整体心理体验。它同时关注负面与正面状态、领域之间的作用、个体差异和时间变化。该模型帮助组织观察与改进，却不能直接读取动物思想，也不能以一份通用清单取代物种、个体和情境所需的专业判断。"
-    ],
     "mode": "concept-fable",
+    "titleZh": "两场探访之间",
+    "summaryZh": "兔舍吃喝稳定，干净又安静，苏岑已排好全天探访。照护员却请她多看几次走廊有人经过时的情形。",
+    "storyParagraphsZh": [
+      "动物收容中心准备重新开放公众探访，苏岑负责安排兔舍一天开放多久。饲料、饮水和环境记录都很稳定，近期也没有发现明显健康异常；从门口看进去，兔舍干净又安静。她原本已经把整天的开放时段排进周末预约系统。",
+      "照护员却提醒她，最近几次有人从走廊经过时，有几只兔会长时间停住。苏岑没有把这个动作马上解释成害怕，也没有反过来把“安静”当成没问题。接下来几天，她在不同时间经过兔舍：有的兔在有人靠近时停住，走廊安静后才重新探索；有的会退到遮蔽处，之后再出来；也有兔在同样时段继续休息，没有出现前两种变化。",
+      "这些差别让她重新看那张“条件都不错”的清单。吃得够、喝得到、环境整洁、近期没发现明显疾病都很重要，但这些信息还需要和动物如何使用空间、能否选择接近或退开、是否探索和正常休息等观察放在一起。兽医也提醒，若出现健康或疼痛疑问，仍要按专业方式继续评估，不能拿行为观察替代健康判断。",
+      "苏岑把全天开放改成几个分开的短时段，中间保留没有访客的空档，并减少同一时间进入走廊的人数。这样做意味着周末能预约的人变少，志愿者原本连续排好的讲解班次也要拆开，但动物仍保留了更多退开、休息和在安静时段探索的机会。",
+      "第一场探访结束后，走廊门合上了。前排一只兔过了一会儿从遮蔽处出来，另一只仍趴在原地。苏岑没有因为前一只出来就去改下一场安排，只在观察卡上记下时间，又把笔插回门边的小夹槽里。门外的新时段表已经提前贴好，下一场仍按原定的间隔开始。"
+    ],
+    "overallZh": "这篇在讲：判断动物福利不能只看吃得够、环境整洁或没有明显疾病，还需要结合行为互动等多类证据，谨慎推断动物可能经历的负面与积极精神状态。",
+    "conceptNameZh": "动物福利五域模型",
+    "explanationParagraphsZh": [
+      "五域模型先从四类可观察证据入手：营养、物理环境、健康以及行为互动。它们不是四个互不相干的分数，而是共同提供线索，用来谨慎推断动物可能经历的第五类精神状态。",
+      "例如，充足饮食和整洁环境重要，但仍需同时关注健康问题，以及动物与环境、同伴和人互动时是否有退开、探索、休息或其他行为机会。",
+      "第五域不是独立再测一次的量尺，也不能把五项简单相加得到福利总分。一次安静、一次接近、一次退开或一次探索都不足以直接读出动物内心；安静可能与休息、害怕、抑制或身体不适等多种情况相符。评估既要减少可能的负面体验，也要注意是否存在积极体验的机会，而健康或疼痛疑问仍需要相应专业评估。"
+    ],
+    "moduleZh": {
+      "intro": "先从营养、环境、健康和行为互动收集不同类型的证据，再把它们合在一起谨慎判断动物可能经历怎样的精神状态。",
+      "diagramTitle": "为什么兔舍干净、吃喝正常、没有明显疾病，仍不足以说明整体体验良好",
+      "diagramSteps": [
+        "查看营养相关证据，例如采食与饮水是否保持稳定",
+        "查看物理环境证据，例如空间、遮蔽、安静条件和环境状态",
+        "查看健康证据，并在出现健康或疼痛疑问时继续由专业人员评估",
+        "查看行为互动证据，包括动物是否能选择接近、退开、探索、休息以及对访客出现的不同反应",
+        "把前四类证据综合起来，谨慎推断可能的负面和积极精神体验，而不是把它们加成一个总分"
+      ],
+      "diagramStepNotes": [
+        "营养充足是重要条件，但不能单独代表整体福利。",
+        "物理环境不仅是干净与否，也包括动物实际能够使用和选择的空间条件。",
+        "行为变化不能替代健康评估；身体不适也可能改变安静、活动或互动方式。",
+        "一次停住、接近或退开都可能有多种解释，因此需要结合情境和连续观察。",
+        "第五域是由前四类证据支持的谨慎精神状态推断，不是第五个独立可相加分数；同时应考虑减少负面体验与提供积极体验机会。"
+      ],
+      "mapping": [
+        "稳定的采食和饮水 → 营养领域的证据。",
+        "整洁兔舍、遮蔽处和安静空档 → 物理环境领域的证据。",
+        "近期健康记录与必要时继续评估 → 健康领域的证据。",
+        "停住、退开、探索、休息和与访客的互动 → 行为互动领域的证据。",
+        "不贴情绪标签而继续综合观察 → 用前四域证据谨慎推断精神状态。"
+      ],
+      "boundary": "动物福利五域模型不是五个独立项目简单加分，也不是通过某一个动作直接读取动物精神状态。安静、接近、退开、探索或休息都可能有多种解释，需要结合营养、物理环境、健康和行为互动等证据以及时间情境综合判断。健康或疼痛问题不能被行为观察跳过，精神状态推断也不是诊断。本篇不提供治疗、饲养处方或通用评分阈值，只展示如何从多类证据同时考虑潜在负面体验与积极体验机会。",
+      "reflection": "如果兔舍的访客全部取消后，一只兔仍持续减少探索，而采食和健康记录也开始变化，你还会把原先的访客安排当成主要解释吗？接下来哪些证据的重要性会改变？"
+    },
+    "referencesZh": [
+      {
+        "id": "mellor-five-domains-2020",
+        "citation": "Mellor, D. J., Beausoleil, N. J., Littlewood, K. E., McLean, A. N., McGreevy, P. D., Jones, B., & Wilkins, C. (2020). The 2020 Five Domains Model: Including Human–Animal Interactions in Assessments of Animal Welfare. Animals, 10(10), 1870. https://doi.org/10.3390/ani10101870",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7602120/",
+        "use": "支持2020版五域模型以前四类证据领域——营养、物理环境、健康和行为互动——共同支持对第五精神状态的谨慎推断，并支持福利评估既关注减少负面体验，也关注积极体验机会以及动物与环境、其他动物和人的互动；本篇不把五域简单相加成总分，不从单一行为直接读心，也不以行为观察替代健康或疼痛评估。"
+      },
+      {
+        "id": "littlewood-five-domains",
+        "citation": "Littlewood, K. (n.d.). The Five Domains Model.",
+        "url": "https://www.fivedomainsmodel.com/",
+        "use": "支持以前四领域的条件与互动作为结构化证据入口，综合推断第五精神状态，并说明该框架可用于不同物种的福利思考；本篇保留网页未核出版日期为n.d.，不把网站图示或开发内容当作新的验证量表，也不使用通用评分。"
+      }
+    ],
+    "title": "Between Two Visits",
+    "summary": "The rabbit housing is clean and quiet, feeding is stable, and Su Cen has scheduled visits all day. The care worker asks her to watch more closely when people pass along the corridor.",
+    "storyParagraphs": [
+      "The animal shelter is preparing to reopen public visits, and Su Cen is responsible for deciding how long the rabbit housing should be open each day. Feed, water, and environmental records are stable, and no obvious recent health abnormality has been identified; from the doorway, the housing looks clean and quiet. She has already entered a full day's visiting schedule into the weekend booking system.",
+      "The animal-care worker, however, points out that during several recent occasions when people passed along the corridor, some rabbits remained still for long periods. Su Cen does not immediately interpret that behavior as fear, nor does she treat “quiet” as proof that nothing is wrong. Over the next several days, she passes through the housing at different times: some rabbits become still when people approach and begin exploring again after the corridor becomes quiet; some retreat into covered areas and later come back out; others continue resting during the same periods without showing either of those changes.",
+      "Those differences make her reconsider the checklist that had seemed to show that “conditions are good.” Having enough food and water, a clean environment, and no obvious recent disease are all important, but this information also needs to be considered together with how the animals use the space, whether they can choose to approach or withdraw, and whether they explore and rest normally. The veterinarian also reminds her that if questions about health or pain arise, they still need appropriate professional assessment rather than having behavioral observations substitute for health evaluation.",
+      "Su Cen replaces full-day opening with several separate shorter visiting periods, keeps visitor-free intervals between them, and reduces the number of people entering the corridor at one time. The change means fewer weekend bookings and requires the volunteers' previously continuous interpretation shifts to be split apart, but it also preserves more opportunities for the rabbits to withdraw, rest, and explore during quiet periods.",
+      "After the first visiting period ends, the corridor door closes. One rabbit near the front emerges from a covered area after a while, while another remains lying where it was. Su Cen does not change the next session because the first rabbit came out. She simply records the time on the observation card and returns the pen to the small holder beside the door. The new timetable is already posted outside, and the next group will still begin after the planned interval."
+    ],
+    "overall": "This article explains that animal welfare cannot be judged only from adequate feeding, a clean environment, or the absence of obvious disease. Evidence from behavior and interactions also needs to be considered alongside other domains to cautiously infer possible negative and positive mental experiences.",
+    "conceptName": "Five Domains model of animal welfare",
+    "explanationParagraphs": [
+      "The Five Domains model begins with four categories of observable evidence: nutrition, physical environment, health, and behavioral interactions. These are not four unrelated scores. Together they provide evidence used to cautiously infer the fifth domain, the animal's possible mental state.",
+      "Adequate food and a clean environment are important, for example, but health concerns still need attention, as do whether animals can withdraw, explore, rest, and engage with their environment, other animals, and people.",
+      "The fifth domain is not an independent extra measuring scale, and the five domains cannot simply be added together into a welfare total. One episode of stillness, approach, withdrawal, or exploration is not enough to read an animal's internal state directly. Quiet behavior may be consistent with rest, fear, suppression, physical discomfort, or other possibilities. Welfare assessment therefore considers both reducing potential negative experiences and providing opportunities for positive experiences, while health or pain concerns still require appropriate professional evaluation."
+    ],
+    "module": {
+      "intro": "Begin with different kinds of evidence from nutrition, environment, health, and behavioral interactions, then consider them together when cautiously inferring what kinds of mental experiences the animal may be having.",
+      "diagramTitle": "Why Are a Clean Rabbit Area, Normal Eating and Drinking, and No Obvious Disease Still Not Enough to Show That Overall Experience Is Good?",
+      "diagramSteps": [
+        "Examine nutrition-related evidence, such as whether feeding and drinking remain stable",
+        "Examine evidence from the physical environment, including space, shelter, quiet conditions, and the state of the surroundings",
+        "Examine health evidence and continue professional assessment whenever health or pain concerns arise",
+        "Examine behavioral-interaction evidence, including whether animals can choose to approach, withdraw, explore, rest, and how they respond differently to visitors",
+        "Consider the first four categories of evidence together to cautiously infer possible negative and positive mental experiences rather than adding them into a single score"
+      ],
+      "diagramStepNotes": [
+        "Adequate nutrition is important but cannot by itself represent overall welfare.",
+        "The physical environment concerns not only cleanliness but also the space and choices animals can actually use.",
+        "Behavioral change cannot replace health assessment; physical discomfort can also alter stillness, activity, or interaction.",
+        "A single episode of stillness, approach, or withdrawal may have several explanations and therefore needs to be interpreted with context and repeated observation.",
+        "The fifth domain is a cautious inference about mental state supported by evidence from the first four domains, not a fifth independent score that can be added to them; assessment also considers both reducing negative experiences and providing opportunities for positive ones."
+      ],
+      "mapping": [
+        "Stable feeding and drinking → evidence from the nutrition domain.",
+        "Clean housing, covered retreat areas, and quiet intervals → evidence from the physical-environment domain.",
+        "Recent health records and further assessment when needed → evidence from the health domain.",
+        "Stillness, withdrawal, exploration, rest, and interactions with visitors → evidence from the behavioral-interactions domain.",
+        "Continuing integrated observation without assigning emotion labels → cautiously inferring mental state from evidence across the first four domains."
+      ],
+      "boundary": "The Five Domains model of animal welfare is not a system in which five independent items are simply added together, nor is it a way to read an animal's mental state directly from one behavior. Stillness, approach, withdrawal, exploration, or rest can each have multiple explanations and need to be interpreted together with evidence from nutrition, physical environment, health, behavioral interactions, and the relevant time and context. Health or pain concerns cannot be skipped because behavioral observations are available, and an inference about mental state is not a diagnosis. This article provides no treatment, husbandry prescription, or universal welfare scoring threshold and only illustrates how multiple kinds of evidence can be used to consider both possible negative experiences and opportunities for positive ones.",
+      "reflection": "If all visitors were removed but one rabbit still continued to explore less, while its feeding and health records also began to change, would you still treat the original visitor arrangement as the main explanation? Which kinds of evidence would become more important next?"
+    },
+    "references": [
+      {
+        "id": "mellor-five-domains-2020",
+        "citation": "Mellor, D. J., Beausoleil, N. J., Littlewood, K. E., McLean, A. N., McGreevy, P. D., Jones, B., & Wilkins, C. (2020). The 2020 Five Domains Model: Including Human–Animal Interactions in Assessments of Animal Welfare. Animals, 10(10), 1870. https://doi.org/10.3390/ani10101870",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7602120/",
+        "use": "Supports the 2020 Five Domains model in which four evidence domains—nutrition, physical environment, health, and behavioral interactions—jointly support cautious inference about the fifth domain of mental state. It also supports considering opportunities for positive experience as well as reducing negative experience, including interactions with the environment, other animals, and people. This article does not add the five domains into a simple total score, does not infer mental state directly from one behavior, and does not use behavioral observation to replace health or pain assessment."
+      },
+      {
+        "id": "littlewood-five-domains",
+        "citation": "Littlewood, K. (n.d.). The Five Domains Model.",
+        "url": "https://www.fivedomainsmodel.com/",
+        "use": "Supports using conditions and interactions across the first four domains as a structured evidence base for inferring the fifth domain of mental state and presents the framework as an entry point for welfare assessment across species. This article preserves the website's unverified publication date as n.d., does not treat website graphics or development content as a newly validated scale, and does not use a universal scoring system."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "fisheries-welfare-night-29-preparation/group1-pdc-round3.json",
+      "edits": [
+        "fisheries-welfare-night-29-preparation/group1-edit-pass1-evidence.json",
+        "fisheries-welfare-night-29-preparation/group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One editor using13perspectives;4actual original-conversation ordinary ChatGPT GPT-5.6 Sol High stages."
     },
     "collection": "field-core-fables",
-    "storyBody": "Racehorse owner Luo Bin kept his champion mare's private stall spotless. Feed arrived by weight, rain and snow stayed outside, and veterinary examinations found no obvious disease. Yet the mare walked seven steps back and forth along the door all day, wearing a bare track into the floor. When approached, she flattened her ears, bit the halter, and refused to leave. Luo said she lacked nothing and merely had a bad temper. The immaculate stall helped the owner market premium breeding, so absence of wounds became a convenient complete score.\n\nAn animal-welfare veterinarian first examined hooves, stomach, and old injuries, then feeding pattern, air, floor, light, and rest. She observed whether the mare could contact companions, forage, move, explore, and avoid frightening situations. Long isolation, concentrated meals, and training pain interacted. The absence of acute disease did not mean the mare's daily experience was good. Observers recorded duration, frequency, triggers, and recovery rather than labelling one gesture as a direct reading of emotion.\n\nLuo scratched the mare's name from one race entry, opened the sale-ready stall, and paused training for a broader assessment. He invited the attending veterinarian and experienced handlers to agree on measurable changes. Immediate pain and health issues were addressed professionally before environmental and behavioural trials were expanded. Baseline observations covered day and night, because a quiet inspection visit could miss repeated behaviour and poor rest.\n\nThe stable changed more than one item. Pain received treatment, forage was distributed across time, and the mare gradually gained free movement and safe social contact. Training allowed pauses and choice, and the environment offered things to explore. The team recorded eating, resting, posture, social behaviour, and repetitive movement over time instead of treating one quiet moment as proof. Not every choice was offered safely or all at once; plans were adjusted to species, history, risk, and individual response. Changes were introduced one at a time where possible, then reviewed for injury, conflict, feeding, rest, and voluntary engagement.\n\nWeeks later, the mare still walked seven steps occasionally, but she also grazed beside another horse, slept stretched on her side, nosed through hanging forage, and approached a familiar carer voluntarily. Her coat was dry, her belly was full, and the stall was warm; now the records also held hours of rest, chosen contact, exploration, and movement. Judgement still required evidence; no one pretended to read the animal's mind directly. The worn seven-step strip remained unpainted so later observations could compare change without pretending the old pattern had vanished overnight.\n\nOne morning, the carer stood outside with a halter and did not reach to catch her. The mare stopped on her sixth step, smelled the halter, and placed her own head through its loop.",
-    "storyBodyZh": "赛马主人骆宾把冠军母马住的单间打理得一尘不染。饲料按重量送到，雨雪进不来，兽医检查也找不到明显疾病。可母马每天沿栏门来回走七步，磨秃一条地面；有人靠近时，它会贴耳、咬缰，不肯出门。骆宾说它什么都不缺，只是脾气坏。整洁马厩帮助主人销售高价配种，因此“没有伤口”成了一项方便的完整评分。\n\n动物福利兽医先检查蹄、胃和旧伤，又看饲料方式、空气、地面、光照和休息。她随后观察母马能否同伴接触、觅食、移动、探索和避开害怕的事。长期单独关养、集中喂料和训练疼痛彼此作用，体检没有急病，并不代表它每天的体验良好。观察者记录持续时间、频率、诱因与恢复，不把一个动作直接当作读懂情绪。\n\n骆宾从一张参赛表上划掉母马名字，打开便于展示的单间，暂停训练做更广评估。他请主诊兽医和有经验照料员确定可测变化。疼痛与健康问题先由专业人员处理，再逐步扩大环境与行为试验。基线观察覆盖昼夜，免得一次安静巡查漏掉重复行为与休息不良。\n\n马厩改变的不只是一项。疼痛得到处理，粗饲料分散供应，母马逐步增加自由活动和安全同伴接触；训练允许停顿与选择，环境里也有可探索的变化。团队记录进食、休息、姿势、社交和异常重复行为，随时间看改善，而不是凭一次安静就下结论。并非所有选择都能一次安全提供；方案须按物种、经历、风险与个体反应逐步调整。条件允许时逐项改变，再复核受伤、冲突、进食、休息与自愿参与。\n\n几周后，母马仍偶尔走那七步，却开始同另一匹马并肩吃草，侧身卧下睡觉，用鼻子翻找悬挂的草料，也会主动靠近熟悉的照料员。它的皮毛干燥、腹中有食、栏内温暖；新的记录里又添了休息时数、自主接触、探索和活动。判断仍需证据，不能假装直接读懂它的心。那条七步磨痕没有被涂掉，日后观察可据此比较，也不假装旧行为一夜消失。\n\n一天清晨，照料员拿着笼头站在门外，没有伸手去抓。母马停在第六步，闻了闻笼头，自己把头伸进了带圈。",
-    "explanation": "The Five Domains model of animal welfare integrates evidence from nutrition, physical environment, health, and behavioural interactions to infer an animal's likely overall mental experience. It considers negative and positive states, interactions among domains, individual differences, and change over time. The model organizes observation and improvement but cannot read an animal's mind directly or replace species-, individual-, and context-specific professional judgement with a universal checklist.",
-    "explanationZh": "动物福利五域模型综合营养、物理环境、健康和行为互动的证据，推断动物可能的整体心理体验。它同时关注负面与正面状态、领域之间的作用、个体差异和时间变化。该模型帮助组织观察与改进，却不能直接读取动物思想，也不能以一份通用清单取代物种、个体和情境所需的专业判断。"
+    "storyBody": "The animal shelter is preparing to reopen public visits, and Su Cen is responsible for deciding how long the rabbit housing should be open each day. Feed, water, and environmental records are stable, and no obvious recent health abnormality has been identified; from the doorway, the housing looks clean and quiet. She has already entered a full day's visiting schedule into the weekend booking system.\n\nThe animal-care worker, however, points out that during several recent occasions when people passed along the corridor, some rabbits remained still for long periods. Su Cen does not immediately interpret that behavior as fear, nor does she treat “quiet” as proof that nothing is wrong. Over the next several days, she passes through the housing at different times: some rabbits become still when people approach and begin exploring again after the corridor becomes quiet; some retreat into covered areas and later come back out; others continue resting during the same periods without showing either of those changes.\n\nThose differences make her reconsider the checklist that had seemed to show that “conditions are good.” Having enough food and water, a clean environment, and no obvious recent disease are all important, but this information also needs to be considered together with how the animals use the space, whether they can choose to approach or withdraw, and whether they explore and rest normally. The veterinarian also reminds her that if questions about health or pain arise, they still need appropriate professional assessment rather than having behavioral observations substitute for health evaluation.\n\nSu Cen replaces full-day opening with several separate shorter visiting periods, keeps visitor-free intervals between them, and reduces the number of people entering the corridor at one time. The change means fewer weekend bookings and requires the volunteers' previously continuous interpretation shifts to be split apart, but it also preserves more opportunities for the rabbits to withdraw, rest, and explore during quiet periods.\n\nAfter the first visiting period ends, the corridor door closes. One rabbit near the front emerges from a covered area after a while, while another remains lying where it was. Su Cen does not change the next session because the first rabbit came out. She simply records the time on the observation card and returns the pen to the small holder beside the door. The new timetable is already posted outside, and the next group will still begin after the planned interval.",
+    "storyBodyZh": "动物收容中心准备重新开放公众探访，苏岑负责安排兔舍一天开放多久。饲料、饮水和环境记录都很稳定，近期也没有发现明显健康异常；从门口看进去，兔舍干净又安静。她原本已经把整天的开放时段排进周末预约系统。\n\n照护员却提醒她，最近几次有人从走廊经过时，有几只兔会长时间停住。苏岑没有把这个动作马上解释成害怕，也没有反过来把“安静”当成没问题。接下来几天，她在不同时间经过兔舍：有的兔在有人靠近时停住，走廊安静后才重新探索；有的会退到遮蔽处，之后再出来；也有兔在同样时段继续休息，没有出现前两种变化。\n\n这些差别让她重新看那张“条件都不错”的清单。吃得够、喝得到、环境整洁、近期没发现明显疾病都很重要，但这些信息还需要和动物如何使用空间、能否选择接近或退开、是否探索和正常休息等观察放在一起。兽医也提醒，若出现健康或疼痛疑问，仍要按专业方式继续评估，不能拿行为观察替代健康判断。\n\n苏岑把全天开放改成几个分开的短时段，中间保留没有访客的空档，并减少同一时间进入走廊的人数。这样做意味着周末能预约的人变少，志愿者原本连续排好的讲解班次也要拆开，但动物仍保留了更多退开、休息和在安静时段探索的机会。\n\n第一场探访结束后，走廊门合上了。前排一只兔过了一会儿从遮蔽处出来，另一只仍趴在原地。苏岑没有因为前一只出来就去改下一场安排，只在观察卡上记下时间，又把笔插回门边的小夹槽里。门外的新时段表已经提前贴好，下一场仍按原定的间隔开始。",
+    "explanation": "The Five Domains model begins with four categories of observable evidence: nutrition, physical environment, health, and behavioral interactions. These are not four unrelated scores. Together they provide evidence used to cautiously infer the fifth domain, the animal's possible mental state.\n\nAdequate food and a clean environment are important, for example, but health concerns still need attention, as do whether animals can withdraw, explore, rest, and engage with their environment, other animals, and people.\n\nThe fifth domain is not an independent extra measuring scale, and the five domains cannot simply be added together into a welfare total. One episode of stillness, approach, withdrawal, or exploration is not enough to read an animal's internal state directly. Quiet behavior may be consistent with rest, fear, suppression, physical discomfort, or other possibilities. Welfare assessment therefore considers both reducing potential negative experiences and providing opportunities for positive experiences, while health or pain concerns still require appropriate professional evaluation.",
+    "explanationZh": "五域模型先从四类可观察证据入手：营养、物理环境、健康以及行为互动。它们不是四个互不相干的分数，而是共同提供线索，用来谨慎推断动物可能经历的第五类精神状态。\n\n例如，充足饮食和整洁环境重要，但仍需同时关注健康问题，以及动物与环境、同伴和人互动时是否有退开、探索、休息或其他行为机会。\n\n第五域不是独立再测一次的量尺，也不能把五项简单相加得到福利总分。一次安静、一次接近、一次退开或一次探索都不足以直接读出动物内心；安静可能与休息、害怕、抑制或身体不适等多种情况相符。评估既要减少可能的负面体验，也要注意是否存在积极体验的机会，而健康或疼痛疑问仍需要相应专业评估。"
   },
   {
     "id": "0911-caries-biofilm",

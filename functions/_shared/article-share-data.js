@@ -1872,22 +1872,22 @@ export default {
   },
   "/concept-fables/0831-fisheries-co-management": {
     "zh": {
-      "title": "一张从首都寄来的禁渔令",
-      "description": "首都按旧日历封湖，鱼产卵的海湾却已换了时节；湖边人不相信命令，巡查船也追不上每一张夜网。"
+      "title": "透明纸上的边界",
+      "description": "程放想在周五前定好一条渔业作业边界。办公室里的直线很省事，渔民带来的几张透明纸却让它不再那么简单。"
     },
     "en": {
-      "title": "A Fishing Ban Sent from the Capital",
-      "description": "The capital closes a lake by an old calendar after spawning has shifted; lakeside fishers distrust the order, and patrol boats cannot chase every night net."
+      "title": "The Boundary on the Transparent Sheets",
+      "description": "Cheng Fang wants a fishing boundary settled by Friday. The office's straight line is convenient, until fishers lay their transparent sheets over it."
     }
   },
   "/concept-fables/0841-one-health": {
     "zh": {
-      "title": "三本互不相看的病历",
-      "description": "洪水后，诊所记录发热村民，兽医站记录流产牛只，水务所记录井水异常，三本记录却放在三座楼里。"
+      "title": "暂缓开放的院角",
+      "description": "第一次家庭开放日前，顾遥把农场路线排得很紧凑。一场雨和一次共同试走，让最方便的院角有了新的问题。"
     },
     "en": {
-      "title": "Three Casebooks That Never Met",
-      "description": "After a flood, a clinic records fever in villagers, a veterinary office records illness in cattle, and a water office records contaminated wells; the three books remain in separate buildings."
+      "title": "The Courtyard Corner That Waited",
+      "description": "Before the farm's first family open day, Gu Yao has planned a compact route. Rain and a joint walk-through raise new questions about its most convenient corner."
     }
   },
   "/concept-fables/0841-herd-immunity": {
@@ -1902,12 +1902,12 @@ export default {
   },
   "/concept-fables/0841-five-domains-welfare": {
     "zh": {
-      "title": "什么都不缺的马厩",
-      "description": "冠军母马住着最干净的单间，饲料足、体检正常，却每天在栏门前重复走同样的七步。"
+      "title": "两场探访之间",
+      "description": "兔舍吃喝稳定，干净又安静，苏岑已排好全天探访。照护员却请她多看几次走廊有人经过时的情形。"
     },
     "en": {
-      "title": "The Stable That Lacked Nothing",
-      "description": "A champion mare has the cleanest private stall, abundant feed, and normal examinations, yet walks the same seven steps at its door all day."
+      "title": "Between Two Visits",
+      "description": "The rabbit housing is clean and quiet, feeding is stable, and Su Cen has scheduled visits all day. The care worker asks her to watch more closely when people pass along the corridor."
     }
   },
   "/concept-fables/0911-caries-biofilm": {
