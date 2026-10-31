@@ -9,9 +9,54 @@ const freeze = value => {
   return value;
 };
 
-export const VIDEO_REVISION = 'watch-only-20261024';
+export const VIDEO_REVISION = 'watch-only-20261031';
 
 export const MUSIC_VIDEOS = freeze([
+  {
+    "id": "when-the-money-arrives",
+    "title": {
+      "zh": "When the Money Arrives",
+      "en": "When the Money Arrives"
+    },
+    "description": {
+      "zh": "钱什么时候到账，决定小店今天能支付什么、下周还能留下多少现金。",
+      "en": "When money arrives, the order of receipts and payments changes what a shop can pay today and carry into next week."
+    },
+    "durationSeconds": 120.043,
+    "version": "v1-mapkai",
+    "poster": "/music/videos/posters/when-the-money-arrives.jpg",
+    "featured": true,
+    "qualities": [
+      {
+        "id": "hd",
+        "label": {
+          "zh": "1080p · 高清兼容版",
+          "en": "1080p · Compatible HD"
+        },
+        "bytes": 189857776,
+        "width": 1920,
+        "height": 1080,
+        "objectKey": "music-videos/when-the-money-arrives/934545be418c45fb1938fe6d5bad7e1eec44293a851fcab96f648c70192e7c58.mp4",
+        "sha256": "934545be418c45fb1938fe6d5bad7e1eec44293a851fcab96f648c70192e7c58",
+        "etag": "81216b6edce9fc5a59932c439e8c5798",
+        "filename": "mapkai-when-the-money-arrives-hd.mp4"
+      },
+      {
+        "id": "phone",
+        "label": {
+          "zh": "720p · 流畅版",
+          "en": "720p · Smooth"
+        },
+        "bytes": 127137467,
+        "width": 1280,
+        "height": 720,
+        "objectKey": "music-videos/when-the-money-arrives/6135c8e78a946a70c0d81569ed1fb33be56dc56c980b0f2f0fd426c42a25e6fb.mp4",
+        "sha256": "6135c8e78a946a70c0d81569ed1fb33be56dc56c980b0f2f0fd426c42a25e6fb",
+        "etag": "98f4a531cd0eb19a7b9767b3d8386dce",
+        "filename": "mapkai-when-the-money-arrives-phone.mp4"
+      }
+    ]
+  },
   {
     "id": "under-the-blue",
     "title": {
