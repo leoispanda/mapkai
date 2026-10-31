@@ -46,17 +46,17 @@ test('archived, missing and invalid works never fall back to a collection or pri
 });
 
 test('music video links render only the selected film with no download controls or links', async () => {
-  for (const id of ['when-the-money-arrives', 'under-the-blue', 'leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original']) {
+  for (const id of ['warm-a-little-longer', 'when-the-money-arrives', 'under-the-blue', 'leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original']) {
     const response = await call('film', id, {}); const html = await response.text();
     assert.equal(response.status, 200); assert.equal((html.match(/<video /g) || []).length, 1);
     assert.match(html, new RegExp(`/share/film/${id}\\?lang=en`)); assert.match(html, new RegExp(`/music/videos/posters/${id}.jpg`));
     assert.match(html, /AI generated/); assert.doesNotMatch(html, /autoplay|objectKey|sha256/);
     assert.match(html, /controlslist="nodownload"/); assert.doesNotMatch(html, /<a[^>]+\bdownload\b|downloadUrl|download=1|href="undefined"/);
-    if (id === 'when-the-money-arrives') {
-      assert.match(html, /src="\/api\/music\/video\?id=when-the-money-arrives&amp;quality=hd&amp;revision=watch-only-20261031"/);
-      assert.match(html, /data-src="\/api\/music\/video\?id=when-the-money-arrives&amp;quality=phone&amp;revision=watch-only-20261031"/);
+    if (id === 'warm-a-little-longer' || id === 'when-the-money-arrives') {
+      assert.match(html, new RegExp(`src="/api/music/video\\?id=${id}&amp;quality=hd&amp;revision=watch-only-20261031"`));
+      assert.match(html, new RegExp(`data-src="/api/music/video\\?id=${id}&amp;quality=phone&amp;revision=watch-only-20261031"`));
       const zh = await call('film', id, {}, '?lang=zh'); const zhHtml = await zh.text();
-      assert.equal(zh.status, 200); assert.match(zhHtml, /When the Money Arrives/);
+      assert.equal(zh.status, 200);
       assert.match(zhHtml, /画面与人物为艺术演绎/);
     }
   }

@@ -13,6 +13,51 @@ export const VIDEO_REVISION = 'watch-only-20261031';
 
 export const MUSIC_VIDEOS = freeze([
   {
+    "id": "warm-a-little-longer",
+    "title": {
+      "zh": "Warm a Little Longer",
+      "en": "Warm a Little Longer"
+    },
+    "description": {
+      "zh": "清晨茶杯的羊毛杯套与双杯对照实验：隔热不是凭空产生热量，而是让热散失得更慢一些。",
+      "en": "A wool sleeve on a morning mug and a two-cup experiment: thermal insulation does not create heat, it slows the heat escaping."
+    },
+    "durationSeconds": 120.033,
+    "version": "v1-mapkai",
+    "poster": "/music/videos/posters/warm-a-little-longer.jpg",
+    "featured": true,
+    "qualities": [
+      {
+        "id": "hd",
+        "label": {
+          "zh": "1080p · 高清兼容版",
+          "en": "1080p · Compatible HD"
+        },
+        "bytes": 44349564,
+        "width": 1920,
+        "height": 1080,
+        "objectKey": "music-videos/warm-a-little-longer/fe7fcd160659f3212b3b7e75434eea5ddb7db0aeb63652629e337ce946a4809b.mp4",
+        "sha256": "fe7fcd160659f3212b3b7e75434eea5ddb7db0aeb63652629e337ce946a4809b",
+        "etag": "31f0e7451193515243b3f446d32be1d1",
+        "filename": "mapkai-warm-a-little-longer-hd.mp4"
+      },
+      {
+        "id": "phone",
+        "label": {
+          "zh": "720p · 流畅版",
+          "en": "720p · Smooth"
+        },
+        "bytes": 17854690,
+        "width": 1280,
+        "height": 720,
+        "objectKey": "music-videos/warm-a-little-longer/93d253412a54bdf8a3843aca89637ba33fa960a59a02387cefdc3556b2dbbf59.mp4",
+        "sha256": "93d253412a54bdf8a3843aca89637ba33fa960a59a02387cefdc3556b2dbbf59",
+        "etag": "9f38632adda656330a21aaa28054fb61",
+        "filename": "mapkai-warm-a-little-longer-phone.mp4"
+      }
+    ]
+  },
+  {
     "id": "when-the-money-arrives",
     "title": {
       "zh": "When the Money Arrives",

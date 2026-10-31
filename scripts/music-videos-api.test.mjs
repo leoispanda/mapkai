@@ -54,13 +54,13 @@ function fixture({ costMissing = false, reservationLimit = Infinity, missing = f
     ...(!costMissing ? { CLOUDFLARE_COST_DB: database } : {}) } };
 }
 
-test('catalog publishes six recordings, ten renditions and only same-origin public metadata', async () => {
+test('catalog publishes seven recordings, twelve renditions and only same-origin public metadata', async () => {
   const response = videos({ request: new Request('https://www.mapkai.com/api/music/videos') });
   assert.equal(response.status, 200);
   const data = await response.json();
-  assert.deepEqual(data.items.map(item => item.id), ['when-the-money-arrives', 'under-the-blue', 'leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original']);
-  assert.deepEqual(data.items.map(item => item.qualities.length), [2, 2, 2, 2, 1, 1]);
-  assert.equal(data.items.filter(item => item.featured).length, 4);
+  assert.deepEqual(data.items.map(item => item.id), ['warm-a-little-longer', 'when-the-money-arrives', 'under-the-blue', 'leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original']);
+  assert.deepEqual(data.items.map(item => item.qualities.length), [2, 2, 2, 2, 2, 1, 1]);
+  assert.equal(data.items.filter(item => item.featured).length, 5);
   assert.equal(data.items[0].featured, true);
   for (const item of data.items) {
     assert.deepEqual(Object.keys(item).sort(), ['id', 'title', 'description', 'durationSeconds', 'poster', 'featured', 'version', 'qualities'].sort());
@@ -81,7 +81,7 @@ test('catalog publishes six recordings, ten renditions and only same-origin publ
   assert.equal(await head.text(), '');
 });
 
-test('all ten frozen renditions stream only the approved object with conditional range reads', async () => {
+test('all twelve frozen renditions stream only the approved object with conditional range reads', async () => {
   for (const item of MUSIC_VIDEOS) {
     for (const quality of item.qualities) {
       const { env, calls } = fixture();
