@@ -9,7 +9,7 @@ const freeze = value => {
   return value;
 };
 
-export const VIDEO_REVISION = 'watch-only-20261031';
+export const VIDEO_REVISION = 'read-the-small-print-20261101';
 
 export const MUSIC_VIDEOS = freeze([
   {
@@ -54,6 +54,51 @@ export const MUSIC_VIDEOS = freeze([
         "sha256": "93d253412a54bdf8a3843aca89637ba33fa960a59a02387cefdc3556b2dbbf59",
         "etag": "9f38632adda656330a21aaa28054fb61",
         "filename": "mapkai-warm-a-little-longer-phone.mp4"
+      }
+    ]
+  },
+  {
+    "id": "read-the-small-print",
+    "title": {
+      "zh": "Read the Small Print",
+      "en": "Read the Small Print"
+    },
+    "description": {
+      "zh": "一张折起的时刻表、一站改变的路线：先读懂变化，再决定下一步。",
+      "en": "A folded timetable and a changed stop: read what changed before choosing the next step."
+    },
+    "durationSeconds": 120.033,
+    "version": "v1-mapkai",
+    "poster": "/music/videos/posters/read-the-small-print.jpg",
+    "featured": true,
+    "qualities": [
+      {
+        "id": "hd",
+        "label": {
+          "zh": "1080p · 高清兼容版",
+          "en": "1080p · Compatible HD"
+        },
+        "bytes": 64735683,
+        "width": 1920,
+        "height": 1080,
+        "objectKey": "music-videos/read-the-small-print/6fc4855b79a17bb02ad494d78fb94050d99964a24b8b3b4d0421a65332f38502.mp4",
+        "sha256": "6fc4855b79a17bb02ad494d78fb94050d99964a24b8b3b4d0421a65332f38502",
+        "etag": "5290e5e722f01e857724da39efa8138a",
+        "filename": "mapkai-read-the-small-print-hd.mp4"
+      },
+      {
+        "id": "phone",
+        "label": {
+          "zh": "720p · 流畅版",
+          "en": "720p · Smooth"
+        },
+        "bytes": 38407778,
+        "width": 1280,
+        "height": 720,
+        "objectKey": "music-videos/read-the-small-print/33e2346aee974d357a7023ab96a631989b35a851d869396b3f1b7382253bb2f4.mp4",
+        "sha256": "33e2346aee974d357a7023ab96a631989b35a851d869396b3f1b7382253bb2f4",
+        "etag": "314aebba7b4d75becd1f03153614fd39",
+        "filename": "mapkai-read-the-small-print-phone.mp4"
       }
     ]
   },
