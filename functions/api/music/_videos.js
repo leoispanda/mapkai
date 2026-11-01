@@ -9,9 +9,54 @@ const freeze = value => {
   return value;
 };
 
-export const VIDEO_REVISION = 'same-length-20261101';
+export const VIDEO_REVISION = 'read-before-you-choose-20261101';
 
 export const MUSIC_VIDEOS = freeze([
+  {
+    "id": "read-before-you-choose",
+    "title": {
+      "zh": "Read Before You Choose",
+      "en": "Read Before You Choose"
+    },
+    "description": {
+      "zh": "并排比较两袋麦片的单位价格，先看清每一份值多少，再决定买哪一袋。",
+      "en": "Compare the unit prices on two cereal bags to see what each one offers before you choose."
+    },
+    "durationSeconds": 120.033,
+    "version": "v1-mapkai",
+    "poster": "/music/videos/posters/read-before-you-choose.jpg",
+    "featured": true,
+    "qualities": [
+      {
+        "id": "hd",
+        "label": {
+          "zh": "1080p · 高清兼容版",
+          "en": "1080p · Compatible HD"
+        },
+        "bytes": 101313752,
+        "width": 1920,
+        "height": 1080,
+        "objectKey": "music-videos/read-before-you-choose/9d6bfeb66449a402354c3aed624dda2d7392a324397a53d4802489f334125e5c.mp4",
+        "sha256": "9d6bfeb66449a402354c3aed624dda2d7392a324397a53d4802489f334125e5c",
+        "etag": "22f66aed528f7aebc001c97498c1706c",
+        "filename": "mapkai-read-before-you-choose-hd.mp4"
+      },
+      {
+        "id": "phone",
+        "label": {
+          "zh": "720p · 流畅版",
+          "en": "720p · Smooth"
+        },
+        "bytes": 59670570,
+        "width": 1280,
+        "height": 720,
+        "objectKey": "music-videos/read-before-you-choose/14db2ab65ee5ca52590031bfa54b62087d43238cd2c11f4844eb0ef7054743ae.mp4",
+        "sha256": "14db2ab65ee5ca52590031bfa54b62087d43238cd2c11f4844eb0ef7054743ae",
+        "etag": "a8a4bb5e6ca1635d87d2755ab4d673ff",
+        "filename": "mapkai-read-before-you-choose-phone.mp4"
+      }
+    ]
+  },
   {
     "id": "warm-a-little-longer",
     "title": {

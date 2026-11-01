@@ -1,3 +1,4 @@
+import { VIDEO_REVISION } from '../functions/api/music/_videos.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -46,15 +47,15 @@ test('archived, missing and invalid works never fall back to a collection or pri
 });
 
 test('music video links render only the selected film with no download controls or links', async () => {
-  for (const id of ['warm-a-little-longer', 'when-the-money-arrives', 'under-the-blue', 'leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original']) {
+  for (const id of ['read-before-you-choose', 'read-the-small-print', 'same-length', 'warm-a-little-longer', 'when-the-money-arrives', 'under-the-blue', 'leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original']) {
     const response = await call('film', id, {}); const html = await response.text();
     assert.equal(response.status, 200); assert.equal((html.match(/<video /g) || []).length, 1);
     assert.match(html, new RegExp(`/share/film/${id}\\?lang=en`)); assert.match(html, new RegExp(`/music/videos/posters/${id}.jpg`));
     assert.match(html, /AI generated/); assert.doesNotMatch(html, /autoplay|objectKey|sha256/);
     assert.match(html, /controlslist="nodownload"/); assert.doesNotMatch(html, /<a[^>]+\bdownload\b|downloadUrl|download=1|href="undefined"/);
-    if (id === 'warm-a-little-longer' || id === 'when-the-money-arrives') {
-      assert.match(html, new RegExp(`src="/api/music/video\\?id=${id}&amp;quality=hd&amp;revision=watch-only-20261031"`));
-      assert.match(html, new RegExp(`data-src="/api/music/video\\?id=${id}&amp;quality=phone&amp;revision=watch-only-20261031"`));
+    if (['read-before-you-choose', 'read-the-small-print', 'same-length', 'warm-a-little-longer', 'when-the-money-arrives'].includes(id)) {
+      assert.match(html, new RegExp(`src="/api/music/video\\?id=${id}&amp;quality=hd&amp;revision=${VIDEO_REVISION}"`));
+      assert.match(html, new RegExp(`data-src="/api/music/video\\?id=${id}&amp;quality=phone&amp;revision=${VIDEO_REVISION}"`));
       const zh = await call('film', id, {}, '?lang=zh'); const zhHtml = await zh.text();
       assert.equal(zh.status, 200);
       assert.match(zhHtml, /画面与人物为艺术演绎/);
