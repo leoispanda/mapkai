@@ -9,7 +9,7 @@ const freeze = value => {
   return value;
 };
 
-export const VIDEO_REVISION = 'read-the-small-print-20261101';
+export const VIDEO_REVISION = 'same-length-20261101';
 
 export const MUSIC_VIDEOS = freeze([
   {
@@ -99,6 +99,51 @@ export const MUSIC_VIDEOS = freeze([
         "sha256": "33e2346aee974d357a7023ab96a631989b35a851d869396b3f1b7382253bb2f4",
         "etag": "314aebba7b4d75becd1f03153614fd39",
         "filename": "mapkai-read-the-small-print-phone.mp4"
+      }
+    ]
+  },
+  {
+    "id": "same-length",
+    "title": {
+      "zh": "Same Length",
+      "en": "Same Length"
+    },
+    "description": {
+      "zh": "两条纸带、一把尺子与共同的零刻度：把单位和数字写在一起，再比较长度。",
+      "en": "Two paper strips, one ruler and a shared zero mark: keep the unit with the number to compare their lengths."
+    },
+    "durationSeconds": 120.033,
+    "version": "v1-mapkai",
+    "poster": "/music/videos/posters/same-length.jpg",
+    "featured": true,
+    "qualities": [
+      {
+        "id": "hd",
+        "label": {
+          "zh": "1080p · 高清兼容版",
+          "en": "1080p · Compatible HD"
+        },
+        "bytes": 85538135,
+        "width": 1920,
+        "height": 1080,
+        "objectKey": "music-videos/same-length/a9622701148f7b2e78655779c3afedd5bb3c52871e4353666e5c5811abe8e670.mp4",
+        "sha256": "a9622701148f7b2e78655779c3afedd5bb3c52871e4353666e5c5811abe8e670",
+        "etag": "e82c41409364b29175929a0f62f3343e",
+        "filename": "mapkai-same-length-hd.mp4"
+      },
+      {
+        "id": "phone",
+        "label": {
+          "zh": "720p · 流畅版",
+          "en": "720p · Smooth"
+        },
+        "bytes": 76778557,
+        "width": 1280,
+        "height": 720,
+        "objectKey": "music-videos/same-length/d9ad1763bd5fd11ad8fe19d1d5fdda6919de4dd4aa413ed4bb1fa54dbbaf1757.mp4",
+        "sha256": "d9ad1763bd5fd11ad8fe19d1d5fdda6919de4dd4aa413ed4bb1fa54dbbaf1757",
+        "etag": "9a3b818df049002a20c34192a046857c",
+        "filename": "mapkai-same-length-phone.mp4"
       }
     ]
   },

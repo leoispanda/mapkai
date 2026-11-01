@@ -7,7 +7,7 @@ function selectedVideo(url) {
   if ([...params.keys()].some(key => !['id', 'quality', 'revision'].includes(key))
     || params.getAll('id').length !== 1 || params.getAll('quality').length > 1
     || params.getAll('revision').length > 1
-    || (params.has('revision') && ![VIDEO_REVISION, 'song-names-20261024', 'ai-label-20261023'].includes(params.get('revision')))) return null;
+    || (params.has('revision') && ![VIDEO_REVISION, 'read-the-small-print-20261101', 'song-names-20261024', 'ai-label-20261023'].includes(params.get('revision')))) return null;
   return findVideoQuality(params.get('id'), params.get('quality') ?? undefined);
 }
 
