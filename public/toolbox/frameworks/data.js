@@ -1,4 +1,4 @@
-import { additions } from './library.js?v=0.1.291';
+import { additions } from './library.js?v=0.1.360';
 // Stable ids preserve existing deep links.
 export const frameworks = [
   {

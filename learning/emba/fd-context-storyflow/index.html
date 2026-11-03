@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f4f0e7">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="EMBA concept demonstration: FD Context explains a business article and FD StoryFlow traces what changed across its reporting history.">
+  <title>FD Context + StoryFlow — MapKAI EMBA</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.360">
+  <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=concept-1">
+  <script src="/learning/emba/fd-context-storyflow/script.js?v=concept-1" defer></script>
+</head>
+<body data-mapkai-page="emba">
+  <a class="skip-link" href="#demo">Skip to product demo</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="MapKAI home"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a>
+    <span class="product-label">FD Context <i>+</i> StoryFlow</span>
+    <nav class="nav-links" aria-label="Site">
+      <a href="/">Home</a><a href="/explore">Explore</a><a href="/map">Knowledge Map</a>
+      <a href="/categories">Learning</a><a class="nav-emba" href="/learning/emba" aria-current="page">EMBA</a><a href="/toolbox/en/">MapKAI Toolbox</a><a href="/about">About</a>
+    </nav>
+    <span class="page-label">EMBA</span>
+  </header>
+
+  <main class="fd-storyflow">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">FROM READING NEWS TO UNDERSTANDING CHANGE</p>
+        <div class="concept-badge">Concept demo · Illustrative data</div>
+        <h1>Understand today’s news —<br><em>and how we got here.</em></h1>
+        <p class="hero-intro">FD Context explains a complex article. FD StoryFlow connects it to years of verified reporting, showing what changed, what remains uncertain, and which source supports each step.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#demo">Open the demo <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#safeguards">View editorial safeguards <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <aside class="hero-note" aria-label="Concept boundary">
+        <p class="note-number">01</p>
+        <p>This prototype demonstrates five things: explanation, historical reporting, evidence, change, and editorial review.</p>
+        <p class="fine-print">All examples are illustrative. No FD archive is connected.</p>
+      </aside>
+    </section>
+
+    <section class="demo-wrap" id="demo">
+      <div class="demo-kicker section-shell">
+        <p>INTERACTIVE PRODUCT PROTOTYPE</p>
+        <span>Illustrative topic — replace with a verified FD article before any real test.</span>
+      </div>
+      <div class="product-shell section-shell">
+        <article class="article-pane">
+          <div class="article-meta"><span>Technology &amp; Business</span><span>Concept article · 8 min read</span></div>
+          <h2>Why has AI investment not yet delivered the expected productivity gains?</h2>
+          <p class="dek">Companies have moved from experiments to deployment. The question is shifting from access to AI toward the harder work of redesigning processes, measuring returns, and managing uncertainty.</p>
+          <div class="article-rule"></div>
+          <p class="article-copy">The answer cannot be found in one quarter or one company’s result. It requires context: what businesses expected, what they implemented, which constraints emerged, and how evidence changed over time.</p>
+          <div class="source-chip"><span aria-hidden="true">!</span> Demo copy — not actual FD reporting</div>
+        </article>
+
+        <aside class="context-pane" aria-label="FD Context interactive demo">
+          <div class="context-head">
+            <div><p class="eyebrow">FD CONTEXT</p><h3>Read with evidence</h3></div>
+            <div class="review-state"><i aria-hidden="true"></i> AI draft</div>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Context mode">
+            <button class="tab active" id="explain-tab" type="button" role="tab" aria-selected="true" aria-controls="explain-panel" tabindex="0">Explain it</button>
+            <button class="tab" id="story-tab" type="button" role="tab" aria-selected="false" aria-controls="story-panel" tabindex="-1">StoryFlow</button>
+          </div>
+
+          <div id="explain-panel" class="tab-panel" role="tabpanel" aria-labelledby="explain-tab">
+            <div class="depth-control" role="group" aria-label="Explanation depth">
+              <button type="button" data-depth="simple" class="active" aria-pressed="true">Simple</button>
+              <button type="button" data-depth="business" aria-pressed="false">Business</button>
+              <button type="button" data-depth="deep" aria-pressed="false">Deep dive</button>
+            </div>
+            <div class="explanation-copy" aria-live="polite">
+              <section><p class="micro-label">WHAT THE ARTICLE SAYS</p><p id="says-copy">Buying AI tools does not automatically make a company more productive. Teams also need to change how work is organised.</p></section>
+              <section><p class="micro-label">WHY IT MATTERS</p><p id="matters-copy">Businesses may spend heavily before the benefits become visible, which makes investment decisions harder.</p></section>
+              <section><p class="micro-label">WHAT REMAINS UNCERTAIN</p><p id="uncertain-copy">The demo does not claim how long results will take or which companies will benefit most.</p></section>
+            </div>
+            <div class="claim-rule"><span>No source, no claim.</span> A real explanation must cite the current FD article and approved evidence.</div>
+          </div>
+
+          <div id="story-panel" class="tab-panel" role="tabpanel" aria-labelledby="story-tab" hidden>
+            <div class="timeline" role="group" aria-label="Illustrative reporting timeline">
+              <button class="timeline-node active" type="button" data-node="0" aria-pressed="true"><span>2023</span><b>Expectations rise</b></button>
+              <button class="timeline-node" type="button" data-node="1" aria-pressed="false"><span>2024</span><b>Pilots move into operations</b></button>
+              <button class="timeline-node" type="button" data-node="2" aria-pressed="false"><span>2025</span><b>Workflow constraints emerge</b></button>
+              <button class="timeline-node" type="button" data-node="3" aria-pressed="false"><span>2026</span><b>Returns take focus</b></button>
+            </div>
+            <div class="timeline-detail" aria-live="polite">
+              <p class="micro-label" id="timeline-date">2023 · EXPECTATIONS RISE</p>
+              <h4 id="timeline-title">The business case begins with possibility.</h4>
+              <p id="timeline-summary">Discussion centres on what generative AI could make faster, cheaper, or newly possible.</p>
+              <dl>
+                <div><dt>What was known then</dt><dd id="known-copy">Early tools showed promise in writing, research, and software work.</dd></div>
+                <div><dt>What changed next</dt><dd id="changed-copy">Companies moved from demonstrations into controlled pilots.</dd></div>
+              </dl>
+              <button class="disabled-source" type="button" disabled>Verified FD archive link required</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="change-section section-shell">
+      <div class="section-heading"><p class="eyebrow">THE VALUE BEYOND A SUMMARY</p><h2>What changed?</h2><p>A useful context layer makes the development of knowledge visible instead of flattening years of reporting into one confident answer.</p></div>
+      <div class="change-grid">
+        <article><span>01</span><h3>What we knew before</h3><p>AI could accelerate specific knowledge tasks, but company-wide gains were unproven.</p></article>
+        <article><span>02</span><h3>What changed</h3><p>Implementation revealed that workflow design, data access, and adoption shape the return.</p></article>
+        <article><span>03</span><h3>What remains uncertain</h3><p>The timing, distribution, and durability of productivity gains still need evidence.</p></article>
+        <article><span>04</span><h3>What to watch next</h3><p>Comparable measures, redesigned processes, and verified operational results.</p></article>
+      </div>
+      <p class="disclosure">Concept demonstration. All topic copy and timeline entries are illustrative and are not presented as actual FD reporting.</p>
+    </section>
+
+    <section class="evidence-section" id="sources">
+      <div class="section-shell evidence-layout">
+        <div><p class="eyebrow">EVIDENCE DISCIPLINE</p><h2>Sources are part of the interface.</h2><p class="section-intro">The prototype shows the source requirement instead of filling gaps with plausible-looking citations.</p><button class="source-toggle" type="button" aria-expanded="true" aria-controls="source-list">Hide source requirements <span aria-hidden="true">−</span></button></div>
+        <div id="source-list" class="source-list">
+          <article><span class="source-index">A</span><div><h3>Current FD article</h3><p>Required for the explanation and every statement about the present.</p></div><b>Required</b></article>
+          <article><span class="source-index">B</span><div><h3>Historical FD archive article</h3><p>Required for every StoryFlow node, with date, author, and direct link.</p></div><b>Per node</b></article>
+          <article><span class="source-index">C</span><div><h3>Approved external evidence</h3><p>Optional, clearly attributed, and never presented as FD’s own reporting.</p></div><b>Optional</b></article>
+          <div class="source-principle">No source, no claim. Every historical node must open the underlying article.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="safeguards-section section-shell" id="safeguards">
+      <div class="section-heading compact"><p class="eyebrow">HUMAN EDITORIAL CONTROL</p><h2>A visible route from draft to trust.</h2></div>
+      <div class="workflow" aria-label="Editorial workflow">
+        <div><i>1</i><strong>AI draft</strong><span>Generate bounded explanation</span></div><em aria-hidden="true">→</em>
+        <div><i>2</i><strong>Source matching</strong><span>Bind each claim to evidence</span></div><em aria-hidden="true">→</em>
+        <div><i>3</i><strong>Editor review</strong><span>Check accuracy and omissions</span></div><em aria-hidden="true">→</em>
+        <div><i>4</i><strong>Published context</strong><span>Expose verified information</span></div><em aria-hidden="true">→</em>
+        <div><i>5</i><strong>Update suggestion</strong><span>Flag a possible new node</span></div>
+      </div>
+      <div class="state-legend"><span><i class="draft"></i> AI draft</span><span><i class="matched"></i> Source matched</span><span><i class="verified"></i> Editor verified</span><p>Only content marked <strong>Editor verified</strong> may appear as verified information.</p></div>
+    </section>
+
+    <section class="pilot-section section-shell">
+      <div class="pilot-card">
+        <div><p class="eyebrow">THE MINIMUM CREDIBLE PILOT</p><h2>Start with one story that has history.</h2></div>
+        <div class="pilot-list"><p><span>01</span> One long-running topic</p><p><span>02</span> 30–50 historical FD articles</p><p><span>03</span> One editor-reviewed timeline</p><p><span>04</span> A small reader comprehension test</p></div>
+        <div class="pilot-measure"><p>Measure</p><strong>Comprehension</strong><strong>Source opening</strong><strong>Timeline use</strong><strong>Return intent</strong></div>
+      </div>
+      <p class="final-disclosure">Before a real pilot, replace every placeholder with a verified FD article, source link, date, author, and editorial approval record.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell"><a class="footer-brand" href="/">MapKAI Product Lab</a><p>Independent concept prototype · No affiliation or live integration implied</p><a href="#demo">Return to demo ↑</a></footer>
+</body>
+</html>
