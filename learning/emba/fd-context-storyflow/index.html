@@ -4,152 +4,238 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#f4f0e7">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
-  <meta name="description" content="EMBA concept demonstration: FD Context explains a business article and FD StoryFlow traces what changed across its reporting history.">
-  <title>FD Context + StoryFlow — MapKAI EMBA</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="MapKAI EMBA Product Showcase: FD Context + LinkedIn Copilot with Fortune 500 CEO reactions and AI Reading Summaries.">
+  <title>FD Context + LinkedIn Copilot — MapKAI EMBA</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.360">
-  <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=concept-1">
-  <script src="/learning/emba/fd-context-storyflow/script.js?v=concept-1" defer></script>
+  <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=emba-v2">
+  <script src="/learning/emba/fd-context-storyflow/script.js?v=emba-v2" defer></script>
 </head>
 <body data-mapkai-page="emba">
-  <a class="skip-link" href="#demo">Skip to product demo</a>
+  <!-- MapKAI Header Bar -->
   <header class="topbar">
-    <a class="brand" href="/" aria-label="MapKAI home"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a>
-    <span class="product-label">FD Context <i>+</i> StoryFlow</span>
-    <nav class="nav-links" aria-label="Site">
-      <a href="/">Home</a><a href="/explore">Explore</a><a href="/map">Knowledge Map</a>
-      <a href="/categories">Learning</a><a class="nav-emba" href="/learning/emba" aria-current="page">EMBA</a><a href="/toolbox/en/">MapKAI Toolbox</a><a href="/about">About</a>
-    </nav>
-    <span class="page-label">EMBA</span>
+    <div class="topbar-inner">
+      <a class="brand" href="/" aria-label="MapKAI home">
+        <img src="/mapkai-logo-transparent.png" alt="MapKAI">
+      </a>
+      <div class="product-badge">
+        <span class="product-name">FD Context</span>
+        <span class="product-divider">×</span>
+        <span class="product-sub">LinkedIn Copilot</span>
+      </div>
+
+      <!-- Live Executive Metrics -->
+      <div class="header-metrics-pill">
+        <span class="metric-item"><strong>14 / 30</strong> Likes Today</span>
+        <span class="metric-sep">•</span>
+        <span class="metric-item"><strong>4</strong> CEO Stories</span>
+        <span class="metric-sep">•</span>
+        <span class="metric-item"><strong>22m</strong> Saved</span>
+        <span class="metric-sep">•</span>
+        <span class="metric-status">🟢 Live Sync</span>
+      </div>
+
+      <nav class="nav-links" aria-label="Site">
+        <a href="/">Home</a>
+        <a href="/explore">Explore</a>
+        <a href="/map">Knowledge Map</a>
+        <a href="/categories">Learning</a>
+        <a class="nav-emba active" href="/learning/emba" aria-current="page">EMBA</a>
+        <button type="button" class="btn-batch-like-quick" id="btn-batch-like">⚡ Batch Like All</button>
+      </nav>
+      <span class="page-label">EMBA</span>
+    </div>
   </header>
 
-  <main class="fd-storyflow">
-    <section class="hero section-shell">
-      <div class="hero-copy">
-        <p class="eyebrow">FROM READING NEWS TO UNDERSTANDING CHANGE</p>
-        <div class="concept-badge">Concept demo · Illustrative data</div>
-        <h1>Understand today’s news —<br><em>and how we got here.</em></h1>
-        <p class="hero-intro">FD Context explains a complex article. FD StoryFlow connects it to years of verified reporting, showing what changed, what remains uncertain, and which source supports each step.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#demo">Open the demo <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="#safeguards">View editorial safeguards <span aria-hidden="true">↘</span></a>
+  <!-- Main Clean Workspace -->
+  <main class="fd-workspace">
+    <!-- Story Selector Tabs (MapKAI Clean Pills) -->
+    <section class="story-selector-bar">
+      <div class="story-selector-inner">
+        <span class="selector-label">FEATURED STORIES:</span>
+        <div class="story-pills" role="tablist">
+          <button type="button" class="story-pill active" data-story="0" role="tab" aria-selected="true">
+            <span class="pill-badge">#1</span>
+            <span class="pill-title">AI Productivity Paradox (FD Editorial)</span>
+          </button>
+          <button type="button" class="story-pill" data-story="1" role="tab" aria-selected="false">
+            <span class="pill-badge">#2</span>
+            <span class="pill-title">NVIDIA: Physical AI &amp; $1T Shift (Jensen Huang)</span>
+          </button>
+          <button type="button" class="story-pill" data-story="2" role="tab" aria-selected="false">
+            <span class="pill-badge">#3</span>
+            <span class="pill-title">Apple: On-Device Private Cloud (Tim Cook)</span>
+          </button>
+          <button type="button" class="story-pill" data-story="3" role="tab" aria-selected="false">
+            <span class="pill-badge">#4</span>
+            <span class="pill-title">Salesforce: Digital Labor Force (Marc Benioff)</span>
+          </button>
         </div>
       </div>
-      <aside class="hero-note" aria-label="Concept boundary">
-        <p class="note-number">01</p>
-        <p>This prototype demonstrates five things: explanation, historical reporting, evidence, change, and editorial review.</p>
-        <p class="fine-print">All examples are illustrative. No FD archive is connected.</p>
+    </section>
+
+    <!-- 2-Column Split Workspace -->
+    <div class="workspace-grid">
+      <!-- Left Column: Story + LinkedIn Fortune 500 Engagement -->
+      <article class="story-pane">
+        <div class="story-meta-row">
+          <span class="story-tag" id="story-tag">TECHNOLOGY &amp; BUSINESS</span>
+          <span class="story-read-time" id="story-read-time">Concept article · 5 min read</span>
+        </div>
+
+        <h1 class="story-title" id="story-title">Why has AI investment not yet delivered the expected productivity gains?</h1>
+
+        <p class="story-dek" id="story-dek">
+          Companies have moved from experiments to deployment. The question is shifting from access to AI toward the harder work of redesigning processes, measuring returns, and managing uncertainty.
+        </p>
+
+        <div class="story-divider"></div>
+
+        <div class="story-body" id="story-body">
+          <p>The answer cannot be found in one quarter or one company’s result. It requires context: what businesses expected, what they implemented, which constraints emerged, and how evidence changed over time.</p>
+          <p>Buying AI tools does not automatically make a company more productive. Teams also need to change how work is organised. Moving beyond isolated prompt experiments to deeply integrated operational pipelines is where the true margin expansion begins.</p>
+        </div>
+
+        <!-- Social Proof: Fortune 500 CEO Likes -->
+        <div class="exec-likes-banner">
+          <div class="avatar-stack" id="exec-avatar-stack">
+            <!-- Rendered by script.js -->
+          </div>
+          <div class="exec-likes-text" id="exec-likes-text">
+            <!-- Rendered by script.js -->
+          </div>
+        </div>
+
+        <!-- Reaction Bar -->
+        <div class="reaction-bar">
+          <div class="reaction-buttons">
+            <button type="button" class="btn-reaction" data-reaction="like" id="btn-like">
+              <span class="reaction-icon">👍</span>
+              <span class="reaction-label">Like</span>
+              <span class="reaction-count" id="count-like">4,821</span>
+            </button>
+            <button type="button" class="btn-reaction" data-reaction="celebrate">
+              <span class="reaction-icon">👏</span>
+              <span class="reaction-label">Celebrate</span>
+              <span class="reaction-count">1,240</span>
+            </button>
+            <button type="button" class="btn-reaction" data-reaction="insightful">
+              <span class="reaction-icon">💡</span>
+              <span class="reaction-label">Insightful</span>
+              <span class="reaction-count">3,410</span>
+            </button>
+            <button type="button" class="btn-reaction" data-reaction="love">
+              <span class="reaction-icon">❤️</span>
+              <span class="reaction-label">Love</span>
+              <span class="reaction-count">980</span>
+            </button>
+          </div>
+          <span class="status-pill" id="interaction-status">Ready to engage</span>
+        </div>
+
+        <!-- Fortune 500 CEO Discussion Thread -->
+        <section class="ceo-discussion-section">
+          <div class="discussion-header">
+            <span class="section-label">FORTUNE 500 CEO DISCUSSION</span>
+            <span class="verified-tag">Verified Leaders</span>
+          </div>
+
+          <div class="ceo-comments-list" id="ceo-comments-list">
+            <!-- Rendered by script.js -->
+          </div>
+        </section>
+      </article>
+
+      <!-- Right Column: AI Reading Copilot & Context -->
+      <aside class="copilot-pane">
+        <!-- Copilot Card -->
+        <div class="copilot-card">
+          <div class="copilot-header">
+            <div class="copilot-title-group">
+              <span class="sparkle-icon">✨</span>
+              <span class="copilot-title">AI Reading Copilot</span>
+            </div>
+            <span class="savings-badge" id="copilot-time-badge">⏱️ Saved 4.2m (~86%)</span>
+          </div>
+
+          <!-- Mode Navigation (30s TL;DR, 3 Takeaways, Playbook) -->
+          <div class="copilot-tabs" role="tablist">
+            <button type="button" class="copilot-tab active" data-tab="tldr" role="tab" aria-selected="true">30s TL;DR</button>
+            <button type="button" class="copilot-tab" data-tab="takeaways" role="tab" aria-selected="false">3 Key Takeaways</button>
+            <button type="button" class="copilot-tab" data-tab="playbook" role="tab" aria-selected="false">Founder Playbook</button>
+          </div>
+
+          <!-- Tab Panels -->
+          <div class="copilot-content">
+            <!-- 30s TL;DR -->
+            <div class="tab-pane active" id="pane-tldr">
+              <div class="tldr-highlight" id="copilot-tldr-text">
+                Buying AI tools does not automatically boost company-wide output. Generative AI delivers exponential returns only when organizations shift from single-prompt experiments to autonomous multi-agent workflows with deep access to proprietary operational context.
+              </div>
+              <div class="sentiment-box">
+                <div class="sentiment-val">92%</div>
+                <div class="sentiment-desc">
+                  <strong>Fortune 500 Executive Consensus</strong>
+                  <span>Prioritizing autonomous agent workflows over generic chatbots in 2026.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 Key Takeaways -->
+            <div class="tab-pane" id="pane-takeaways" hidden>
+              <ul class="takeaways-list" id="copilot-takeaways-list">
+                <!-- Rendered by script.js -->
+              </ul>
+            </div>
+
+            <!-- Founder Playbook -->
+            <div class="tab-pane" id="pane-playbook" hidden>
+              <div class="playbook-box" id="copilot-playbook-box">
+                <!-- Rendered by script.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Suggested LinkedIn Replies (Click to Copy) -->
+          <div class="smart-reply-section">
+            <div class="section-label">AI SUGGESTED LINKEDIN REPLIES (CLICK TO COPY)</div>
+            <div class="reply-cards-list" id="smart-replies-list">
+              <!-- Rendered by script.js -->
+            </div>
+          </div>
+
+          <!-- Interactive Ask Copilot -->
+          <div class="ask-copilot-section">
+            <div class="section-label">ASK COPILOT ABOUT THIS STORY</div>
+            <div class="quick-chips">
+              <button type="button" class="chip" data-q="What is the biggest operational flaw in this thesis?">🔍 Counter-Argument</button>
+              <button type="button" class="chip" data-q="How can a 10-person startup implement this immediately?">🚀 Startup Playbook</button>
+              <button type="button" class="chip" data-q="Extract the punchiest quote from this discussion.">✨ Key Quote</button>
+            </div>
+            <div class="ask-input-box">
+              <input type="text" id="ask-input" placeholder="Ask anything about this story or CEO comments...">
+              <button type="button" class="btn-ask" id="btn-ask">Ask</button>
+            </div>
+            <div class="answer-box" id="answer-box" hidden></div>
+          </div>
+        </div>
       </aside>
-    </section>
-
-    <section class="demo-wrap" id="demo">
-      <div class="demo-kicker section-shell">
-        <p>INTERACTIVE PRODUCT PROTOTYPE</p>
-        <span>Illustrative topic — replace with a verified FD article before any real test.</span>
-      </div>
-      <div class="product-shell section-shell">
-        <article class="article-pane">
-          <div class="article-meta"><span>Technology &amp; Business</span><span>Concept article · 8 min read</span></div>
-          <h2>Why has AI investment not yet delivered the expected productivity gains?</h2>
-          <p class="dek">Companies have moved from experiments to deployment. The question is shifting from access to AI toward the harder work of redesigning processes, measuring returns, and managing uncertainty.</p>
-          <div class="article-rule"></div>
-          <p class="article-copy">The answer cannot be found in one quarter or one company’s result. It requires context: what businesses expected, what they implemented, which constraints emerged, and how evidence changed over time.</p>
-          <div class="source-chip"><span aria-hidden="true">!</span> Demo copy — not actual FD reporting</div>
-        </article>
-
-        <aside class="context-pane" aria-label="FD Context interactive demo">
-          <div class="context-head">
-            <div><p class="eyebrow">FD CONTEXT</p><h3>Read with evidence</h3></div>
-            <div class="review-state"><i aria-hidden="true"></i> AI draft</div>
-          </div>
-          <div class="tabs" role="tablist" aria-label="Context mode">
-            <button class="tab active" id="explain-tab" type="button" role="tab" aria-selected="true" aria-controls="explain-panel" tabindex="0">Explain it</button>
-            <button class="tab" id="story-tab" type="button" role="tab" aria-selected="false" aria-controls="story-panel" tabindex="-1">StoryFlow</button>
-          </div>
-
-          <div id="explain-panel" class="tab-panel" role="tabpanel" aria-labelledby="explain-tab">
-            <div class="depth-control" role="group" aria-label="Explanation depth">
-              <button type="button" data-depth="simple" class="active" aria-pressed="true">Simple</button>
-              <button type="button" data-depth="business" aria-pressed="false">Business</button>
-              <button type="button" data-depth="deep" aria-pressed="false">Deep dive</button>
-            </div>
-            <div class="explanation-copy" aria-live="polite">
-              <section><p class="micro-label">WHAT THE ARTICLE SAYS</p><p id="says-copy">Buying AI tools does not automatically make a company more productive. Teams also need to change how work is organised.</p></section>
-              <section><p class="micro-label">WHY IT MATTERS</p><p id="matters-copy">Businesses may spend heavily before the benefits become visible, which makes investment decisions harder.</p></section>
-              <section><p class="micro-label">WHAT REMAINS UNCERTAIN</p><p id="uncertain-copy">The demo does not claim how long results will take or which companies will benefit most.</p></section>
-            </div>
-            <div class="claim-rule"><span>No source, no claim.</span> A real explanation must cite the current FD article and approved evidence.</div>
-          </div>
-
-          <div id="story-panel" class="tab-panel" role="tabpanel" aria-labelledby="story-tab" hidden>
-            <div class="timeline" role="group" aria-label="Illustrative reporting timeline">
-              <button class="timeline-node active" type="button" data-node="0" aria-pressed="true"><span>2023</span><b>Expectations rise</b></button>
-              <button class="timeline-node" type="button" data-node="1" aria-pressed="false"><span>2024</span><b>Pilots move into operations</b></button>
-              <button class="timeline-node" type="button" data-node="2" aria-pressed="false"><span>2025</span><b>Workflow constraints emerge</b></button>
-              <button class="timeline-node" type="button" data-node="3" aria-pressed="false"><span>2026</span><b>Returns take focus</b></button>
-            </div>
-            <div class="timeline-detail" aria-live="polite">
-              <p class="micro-label" id="timeline-date">2023 · EXPECTATIONS RISE</p>
-              <h4 id="timeline-title">The business case begins with possibility.</h4>
-              <p id="timeline-summary">Discussion centres on what generative AI could make faster, cheaper, or newly possible.</p>
-              <dl>
-                <div><dt>What was known then</dt><dd id="known-copy">Early tools showed promise in writing, research, and software work.</dd></div>
-                <div><dt>What changed next</dt><dd id="changed-copy">Companies moved from demonstrations into controlled pilots.</dd></div>
-              </dl>
-              <button class="disabled-source" type="button" disabled>Verified FD archive link required</button>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="change-section section-shell">
-      <div class="section-heading"><p class="eyebrow">THE VALUE BEYOND A SUMMARY</p><h2>What changed?</h2><p>A useful context layer makes the development of knowledge visible instead of flattening years of reporting into one confident answer.</p></div>
-      <div class="change-grid">
-        <article><span>01</span><h3>What we knew before</h3><p>AI could accelerate specific knowledge tasks, but company-wide gains were unproven.</p></article>
-        <article><span>02</span><h3>What changed</h3><p>Implementation revealed that workflow design, data access, and adoption shape the return.</p></article>
-        <article><span>03</span><h3>What remains uncertain</h3><p>The timing, distribution, and durability of productivity gains still need evidence.</p></article>
-        <article><span>04</span><h3>What to watch next</h3><p>Comparable measures, redesigned processes, and verified operational results.</p></article>
-      </div>
-      <p class="disclosure">Concept demonstration. All topic copy and timeline entries are illustrative and are not presented as actual FD reporting.</p>
-    </section>
-
-    <section class="evidence-section" id="sources">
-      <div class="section-shell evidence-layout">
-        <div><p class="eyebrow">EVIDENCE DISCIPLINE</p><h2>Sources are part of the interface.</h2><p class="section-intro">The prototype shows the source requirement instead of filling gaps with plausible-looking citations.</p><button class="source-toggle" type="button" aria-expanded="true" aria-controls="source-list">Hide source requirements <span aria-hidden="true">−</span></button></div>
-        <div id="source-list" class="source-list">
-          <article><span class="source-index">A</span><div><h3>Current FD article</h3><p>Required for the explanation and every statement about the present.</p></div><b>Required</b></article>
-          <article><span class="source-index">B</span><div><h3>Historical FD archive article</h3><p>Required for every StoryFlow node, with date, author, and direct link.</p></div><b>Per node</b></article>
-          <article><span class="source-index">C</span><div><h3>Approved external evidence</h3><p>Optional, clearly attributed, and never presented as FD’s own reporting.</p></div><b>Optional</b></article>
-          <div class="source-principle">No source, no claim. Every historical node must open the underlying article.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="safeguards-section section-shell" id="safeguards">
-      <div class="section-heading compact"><p class="eyebrow">HUMAN EDITORIAL CONTROL</p><h2>A visible route from draft to trust.</h2></div>
-      <div class="workflow" aria-label="Editorial workflow">
-        <div><i>1</i><strong>AI draft</strong><span>Generate bounded explanation</span></div><em aria-hidden="true">→</em>
-        <div><i>2</i><strong>Source matching</strong><span>Bind each claim to evidence</span></div><em aria-hidden="true">→</em>
-        <div><i>3</i><strong>Editor review</strong><span>Check accuracy and omissions</span></div><em aria-hidden="true">→</em>
-        <div><i>4</i><strong>Published context</strong><span>Expose verified information</span></div><em aria-hidden="true">→</em>
-        <div><i>5</i><strong>Update suggestion</strong><span>Flag a possible new node</span></div>
-      </div>
-      <div class="state-legend"><span><i class="draft"></i> AI draft</span><span><i class="matched"></i> Source matched</span><span><i class="verified"></i> Editor verified</span><p>Only content marked <strong>Editor verified</strong> may appear as verified information.</p></div>
-    </section>
-
-    <section class="pilot-section section-shell">
-      <div class="pilot-card">
-        <div><p class="eyebrow">THE MINIMUM CREDIBLE PILOT</p><h2>Start with one story that has history.</h2></div>
-        <div class="pilot-list"><p><span>01</span> One long-running topic</p><p><span>02</span> 30–50 historical FD articles</p><p><span>03</span> One editor-reviewed timeline</p><p><span>04</span> A small reader comprehension test</p></div>
-        <div class="pilot-measure"><p>Measure</p><strong>Comprehension</strong><strong>Source opening</strong><strong>Timeline use</strong><strong>Return intent</strong></div>
-      </div>
-      <p class="final-disclosure">Before a real pilot, replace every placeholder with a verified FD article, source link, date, author, and editorial approval record.</p>
-    </section>
+    </div>
   </main>
 
-  <footer class="site-footer section-shell"><a class="footer-brand" href="/">MapKAI Product Lab</a><p>Independent concept prototype · No affiliation or live integration implied</p><a href="#demo">Return to demo ↑</a></footer>
+  <!-- Clean MapKAI Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>MapKAI EMBA Product Lab</strong>
+        <span>FD Context + LinkedIn Engagement Showcase · English Mode</span>
+      </div>
+      <div class="footer-right">
+        <a href="#top" class="return-link">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
