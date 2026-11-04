@@ -257,6 +257,63 @@
           </div>
         </div>
       </div>
+
+      <!-- Executive Masterclasses & Live Interactive Webinars Section -->
+      <section class="masterclasses-section" id="masterclasses-section">
+        <div class="section-title-row">
+          <div>
+            <p class="hero-eyebrow">EXECUTIVE EDUCATION &amp; MASTERCLASSES</p>
+            <h2>Executive Masterclasses &amp; Live Interactive Webinars</h2>
+            <p class="section-dek">Cohort-based learning labs connecting boardroom strategic dilemmas with MapKAI foundational disciplines and accredited faculty.</p>
+          </div>
+          <div class="masterclass-filter-chips">
+            <span class="cohort-tag">Cohort Intake 2026/2027</span>
+          </div>
+        </div>
+
+        <div class="masterclass-cards-grid" id="masterclass-cards-grid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </section>
+
+      <!-- Global Industry Panels & Academic-Enterprise Hosts Section -->
+      <section class="symposia-section" id="symposia-section">
+        <div class="section-title-row">
+          <div>
+            <p class="hero-eyebrow">ACADEMIC-ENTERPRISE COLLABORATION &amp; HOSTS</p>
+            <h2>Global Industry Panels &amp; Institutional Hosts</h2>
+            <p class="section-dek">Convening university leadership, research institutes, and Fortune 500 chief executives across technological and economic frontiers.</p>
+          </div>
+        </div>
+
+        <!-- Academic & Corporate Co-Hosts Consortium -->
+        <div class="hosts-consortium-card">
+          <div class="hosts-header">
+            <div>
+              <h3>Institutional Academic Hosts &amp; Enterprise Consortium</h3>
+              <p class="subtext">Jointly accredited by university faculties, research centers, and global corporate partners</p>
+            </div>
+            <span class="badge-accreditation">Accredited Consortium</span>
+          </div>
+          <div class="hosts-grid" id="hosts-grid">
+            <!-- Rendered dynamically by script.js -->
+          </div>
+        </div>
+
+        <!-- Executive Industry Panels Agenda -->
+        <div class="panels-agenda-card">
+          <div class="panels-header">
+            <div>
+              <h3>Upcoming Executive Industry Panels &amp; Roundtable Symposia</h3>
+              <p class="subtext">Chaired by academic deans, research fellows, and Fortune 500 executives</p>
+            </div>
+            <span class="badge-calendar">Q4 2026 – Q1 2027 Schedule</span>
+          </div>
+          <div class="panels-list" id="panels-list">
+            <!-- Rendered dynamically by script.js -->
+          </div>
+        </div>
+      </section>
     </section>
 
     <!-- VIEW 2: STORY & COPILOT READER (Clean 2-Column Mode) -->
@@ -507,5 +564,65 @@
       </div>
     </div>
   </footer>
+
+  <!-- Executive Event Registration Modal -->
+  <div class="event-modal-backdrop" id="event-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-event-title">
+    <div class="event-modal-card">
+      <div class="event-modal-header">
+        <div class="modal-badge-group">
+          <span class="modal-type-badge" id="modal-event-type">MASTERCLASS</span>
+          <span class="modal-host-badge" id="modal-event-host">FD Executive Institute</span>
+        </div>
+        <button type="button" class="btn-close-modal" id="btn-close-modal" aria-label="Close dialog">×</button>
+      </div>
+
+      <div class="event-modal-body" id="modal-form-view">
+        <h3 class="modal-event-title" id="modal-event-title">Navigating the $50B AI CapEx Hurdle</h3>
+        <p class="modal-event-meta" id="modal-event-meta">📅 November 18, 2026 · 17:00 CET · Faculty: Erik Brynjolfsson &amp; David Solomon</p>
+        <p class="modal-event-domain" id="modal-event-domain">🏛️ Linked Discipline: ISCED 0412 Corporate Finance &amp; Valuation</p>
+        
+        <form class="event-reg-form" id="event-reg-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reg-name">Full Name *</label>
+              <input type="text" id="reg-name" required placeholder="e.g. Elena Rostova">
+            </div>
+            <div class="form-group">
+              <label for="reg-title">Executive Title *</label>
+              <input type="text" id="reg-title" required placeholder="e.g. Chief Financial Officer">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reg-email">Corporate Email *</label>
+              <input type="email" id="reg-email" required placeholder="elena@enterprise.com">
+            </div>
+            <div class="form-group">
+              <label for="reg-company">Organization / Firm *</label>
+              <input type="text" id="reg-company" required placeholder="e.g. Global Logistics AG">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reg-cohort-goal">Executive Discussion Topic / Board Objective</label>
+            <input type="text" id="reg-cohort-goal" placeholder="e.g. Assessing balance sheet capacity for AI compute leasebacks">
+          </div>
+          <div class="modal-actions-row">
+            <button type="button" class="btn-modal-cancel" id="btn-modal-cancel">Cancel</button>
+            <button type="submit" class="btn-modal-submit" id="btn-modal-submit">Confirm Registration &amp; RSVP →</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success View (Shown after submission) -->
+      <div class="event-modal-success" id="modal-success-view" hidden>
+        <div class="success-icon-box">✓</div>
+        <h3>Registration Confirmed</h3>
+        <p class="success-text" id="success-message">You have successfully secured your seat for the executive cohort. A calendar invitation (.ics) and MapKAI foundational pre-reading monograph have been delivered to your email.</p>
+        <div class="success-actions">
+          <button type="button" class="btn-modal-done" id="btn-modal-done">Done &amp; Return to Newsroom</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

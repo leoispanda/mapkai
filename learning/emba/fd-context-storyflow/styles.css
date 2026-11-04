@@ -2029,3 +2029,599 @@ body[data-mapkai-page="showcase"] {
   color: var(--fd-orange-dark);
   margin-bottom: 2px;
 }
+
+/* ==========================================================================
+   Masterclasses, Webinars, Hosts Consortium & Industry Panels Styles
+   ========================================================================== */
+
+.masterclasses-section,
+.symposia-section {
+  margin-bottom: 40px;
+}
+
+.masterclass-filter-chips .cohort-tag {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--fd-orange-dark);
+  background: #fff5ed;
+  border: 1px solid #fed7aa;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+.masterclass-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
+}
+
+.masterclass-card {
+  background: #ffffff;
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.masterclass-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--fd-orange);
+  box-shadow: 0 8px 24px rgba(217, 83, 40, 0.08);
+}
+
+.mc-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.mc-type-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fd-orange-dark);
+  background: #fff5ed;
+  border: 1px solid #fed7aa;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.mc-seats-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 3px 8px;
+  border-radius: 99px;
+}
+
+.mc-title {
+  font-family: var(--fd-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--fd-ink);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.mc-hosts-line {
+  font-size: 0.74rem;
+  color: var(--fd-muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mc-meta-box {
+  background: var(--fd-paper-warm);
+  border: 1px solid #ebd9c0;
+  border-radius: var(--fd-radius);
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  font-size: 0.74rem;
+  color: var(--fd-ink);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mc-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mc-syllabus-list {
+  margin: 0 0 16px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mc-syllabus-item {
+  font-size: 0.73rem;
+  color: var(--fd-ink);
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.mc-syllabus-item::before {
+  content: "•";
+  color: var(--fd-orange);
+  font-weight: bold;
+}
+
+.mc-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid #f0e6d6;
+}
+
+.btn-register-mc {
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--fd-orange);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--fd-radius);
+  cursor: pointer;
+  transition: all 140ms ease;
+}
+
+.btn-register-mc:hover {
+  background: var(--fd-orange-dark);
+  transform: translateY(-1px);
+}
+
+.btn-syllabus-link {
+  font-size: 0.73rem;
+  font-weight: 600;
+  color: var(--fd-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Institutional Academic Hosts & Enterprise Consortium */
+.hosts-consortium-card {
+  background: #ffffff;
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.hosts-header,
+.panels-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.badge-accreditation,
+.badge-calendar {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--fd-orange-dark);
+  background: var(--fd-paper-warm);
+  border: 1px solid #ebd9c0;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+.hosts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.host-item-card {
+  background: var(--fd-paper-warm);
+  border: 1px solid #eee5d4;
+  border-radius: var(--fd-radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 140ms ease;
+}
+
+.host-item-card:hover {
+  border-color: var(--fd-orange);
+}
+
+.host-role-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--fd-orange-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.host-name {
+  font-family: var(--fd-serif);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--fd-ink);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.host-desc {
+  font-size: 0.74rem;
+  color: var(--fd-muted);
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.host-partners-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.partner-tag {
+  font-size: 0.69rem;
+  font-weight: 600;
+  background: #ffffff;
+  border: 1px solid #e0d4be;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: var(--fd-ink);
+}
+
+/* Executive Industry Panels */
+.panels-agenda-card {
+  background: #ffffff;
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius-lg);
+  padding: 24px 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.panels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel-agenda-row {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  background: var(--fd-paper-warm);
+  border: 1px solid #ebd9c0;
+  border-radius: var(--fd-radius);
+  padding: 16px 20px;
+  transition: border-color 140ms ease;
+}
+
+.panel-agenda-row:hover {
+  border-color: var(--fd-orange);
+}
+
+.panel-date-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.panel-date-badge {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--fd-ink);
+}
+
+.panel-location {
+  font-size: 0.7rem;
+  color: var(--fd-muted);
+}
+
+.panel-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.panel-symposium-tag {
+  font-size: 0.66rem;
+  font-weight: 800;
+  color: var(--fd-orange-dark);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.panel-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--fd-ink);
+  line-height: 1.35;
+}
+
+.panel-speakers {
+  font-size: 0.73rem;
+  color: var(--fd-muted);
+  line-height: 1.4;
+}
+
+.panel-speakers strong {
+  color: var(--fd-ink);
+}
+
+.btn-panel-rsvp {
+  font-size: 0.76rem;
+  font-weight: 700;
+  background: #fff8f3;
+  border: 1px solid #fed7aa;
+  color: var(--fd-orange-dark);
+  padding: 8px 14px;
+  border-radius: var(--fd-radius);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 140ms ease;
+}
+
+.btn-panel-rsvp:hover {
+  background: var(--fd-orange);
+  color: #ffffff;
+  border-color: var(--fd-orange);
+}
+
+/* Event Registration Modal */
+.event-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 25, 23, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.event-modal-backdrop[hidden] {
+  display: none !important;
+}
+
+.event-modal-card {
+  background: #ffffff;
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius-lg);
+  width: 100%;
+  max-width: 580px;
+  padding: 28px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.event-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-type-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--fd-orange-dark);
+  background: #fff5ed;
+  border: 1px solid #fed7aa;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.modal-host-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--fd-muted);
+  background: var(--fd-paper-warm);
+  border: 1px solid var(--fd-line);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.btn-close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--fd-muted);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.btn-close-modal:hover {
+  color: var(--fd-ink);
+}
+
+.modal-event-title {
+  font-family: var(--fd-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--fd-ink);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.modal-event-meta {
+  font-size: 0.76rem;
+  color: var(--fd-muted);
+  margin-bottom: 4px;
+}
+
+.modal-event-domain {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--fd-orange-dark);
+  margin-bottom: 18px;
+}
+
+.event-reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--fd-ink);
+}
+
+.form-group input {
+  padding: 8px 12px;
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius);
+  font-size: 0.8rem;
+  background: var(--fd-paper-warm);
+  color: var(--fd-ink);
+  outline: none;
+  transition: border-color 140ms ease;
+}
+
+.form-group input:focus {
+  border-color: var(--fd-orange);
+  background: #ffffff;
+}
+
+.modal-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-modal-cancel {
+  background: none;
+  border: 1px solid var(--fd-line);
+  padding: 8px 16px;
+  border-radius: var(--fd-radius);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--fd-muted);
+  cursor: pointer;
+}
+
+.btn-modal-cancel:hover {
+  color: var(--fd-ink);
+  background: var(--fd-paper-warm);
+}
+
+.btn-modal-submit {
+  background: var(--fd-orange);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: var(--fd-radius);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 140ms ease;
+}
+
+.btn-modal-submit:hover {
+  background: var(--fd-orange-dark);
+}
+
+.event-modal-success {
+  text-align: center;
+  padding: 24px 12px;
+}
+
+.success-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 1.6rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.event-modal-success h3 {
+  font-family: var(--fd-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--fd-ink);
+  margin-bottom: 8px;
+}
+
+.success-text {
+  font-size: 0.78rem;
+  color: var(--fd-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn-modal-done {
+  background: var(--fd-ink);
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: var(--fd-radius);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-modal-done:hover {
+  background: #000000;
+}
+
+@media (max-width: 768px) {
+  .panel-agenda-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

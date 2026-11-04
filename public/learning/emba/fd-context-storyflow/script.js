@@ -1224,6 +1224,165 @@ const executiveLeaderboard = [
   { name: "Tim Cook", rank: "Fortune 500 #3", title: "CEO @ Apple", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80", commentsCount: 27, likesCount: "9.4k", topTopic: "Private Cloud Compute & On-Device Neural" }
 ];
 
+// 5. Executive Masterclasses & Live Interactive Webinars Data
+const masterclassesData = [
+  {
+    id: "mc-capex",
+    type: "Executive Masterclass",
+    badge: "4-Week Cohort Lab",
+    title: "Navigating the $50B AI CapEx Hurdle: Capital Allocation & WACC in the Age of Autonomous AI",
+    domainCode: "ISCED 0412",
+    domainName: "Corporate Finance & Valuation",
+    academicHost: "FD Institute of Advanced Finance",
+    enterpriseHost: "Goldman Sachs Global Investment Research",
+    date: "November 18, 2026 · 17:00 CET / 11:00 EST",
+    faculty: "Prof. Erik Brynjolfsson (Stanford) & David Solomon (Goldman Sachs Keynote)",
+    format: "Live Interactive Case Lab · Cap 35 Board Executives",
+    syllabus: [
+      "Modeling accelerated 3-year GPU depreciation schedules on stated earnings",
+      "WACC hurdle rates vs discounted cash flow (DCF) for $50B hyperscale infrastructure",
+      "Structuring debt facilities and special-purpose vehicle (SPV) leasebacks"
+    ],
+    seatsLeft: 6,
+    linkedStoryId: 5
+  },
+  {
+    id: "web-energy",
+    type: "Live Interactive Webinar",
+    badge: "90-Min Briefing",
+    title: "Gigawatt Datacenters & Nuclear SMRs: Energy Transition Realities for Hyperscale AI",
+    domainCode: "ISCED 0713",
+    domainName: "Electricity & Energy Engineering",
+    academicHost: "FD Energy Transition Center",
+    enterpriseHost: "Amazon AWS Energy Systems Group",
+    date: "December 2, 2026 · 16:00 CET / 10:00 EST",
+    faculty: "Andy Jassy (Amazon Keynote Dialogue) & Dr. Kathryn Huff (Advanced Reactor Systems)",
+    format: "Global Executive Broadcast + Live Boardroom Q&A",
+    syllabus: [
+      "Baseload power capacity factors: advanced nuclear SMRs vs intermittent renewables",
+      "Power Purchase Agreement (PPA) contracting models with utility operators",
+      "Thermal dissipation, Carnot limits, and grid interconnection queue engineering"
+    ],
+    seatsLeft: 42,
+    linkedStoryId: 4
+  },
+  {
+    id: "mc-semiconductors",
+    type: "Executive Masterclass",
+    badge: "Executive Certificate",
+    title: "The Semiconductor Supply Chain Fortress: ASML EUV Optics, TSMC Packaging & Sovereign Fabs",
+    domainCode: "ISCED 0714",
+    domainName: "Electronics & Nanotechnology",
+    academicHost: "FD High-Tech Innovation Center",
+    enterpriseHost: "European Semiconductor Industry Forum",
+    date: "December 12, 2026 · 15:00 CET",
+    faculty: "Peter Wennink (ASML Advisory) & Dr. C.C. Wei (TSMC Fellow)",
+    format: "Hybrid Executive Seminar · Case Monograph Included",
+    syllabus: [
+      "13.5nm EUV laser-produced tin plasma physics and yield economics",
+      "Advanced 2.5D/3D chiplet packaging and CoWoS interconnect scaling limits",
+      "Single-source supplier dependency and geopolitical export control compliance"
+    ],
+    seatsLeft: 9,
+    linkedStoryId: 7
+  },
+  {
+    id: "web-digital-labor",
+    type: "Live Interactive Webinar",
+    badge: "Board Briefing",
+    title: "The Autonomous Enterprise: Digital Labor Governance, ACID Transactions & Human Supervision",
+    domainCode: "ISCED 0612",
+    domainName: "Database Systems & Organizational Strategy",
+    academicHost: "FD Institute for Digital Transformation",
+    enterpriseHost: "Salesforce Enterprise Architecture Alliance",
+    date: "January 8, 2027 · 17:30 CET / 11:30 EST",
+    faculty: "Marc Benioff (Salesforce) & Prof. Shoshana Zuboff (Harvard)",
+    format: "Executive Roundtable & Live Agentic Sandbox Demo",
+    syllabus: [
+      "Decoupling informational chatbots from state-changing transactional database agents",
+      "Corporate liability, automated audit trails, and financial error containment",
+      "Restructuring management spans-of-control and tier-1 workforce supervision ratios"
+    ],
+    seatsLeft: 24,
+    linkedStoryId: 3
+  }
+];
+
+// 6. Academic Institutional Hosts & Enterprise Consortium Data
+const institutionalHostsData = [
+  {
+    role: "Founding Academic Host",
+    name: "FD Executive Institute of Management & Technology",
+    desc: "Provides theoretical grounding across ISCED international disciplines, curriculum governance, and rigorous case method facilitation for multinational cohort executives.",
+    badges: ["EQUIS & AACSB Accredited Faculty", "Global Executive Programs"],
+    leadership: "Dean of Executive Programs & Senior Technology Fellows"
+  },
+  {
+    role: "Knowledge Architecture Host",
+    name: "MapKAI Decision Science & Knowledge Lab",
+    desc: "Develops automated knowledge graph mapping, real-time discipline connectivity, and contextual AI reading companions grounded in UNESCO ISCED-F taxonomy.",
+    badges: ["ISCED-F Taxonomic Compliance", "Semantic Knowledge Graphing"],
+    leadership: "Principal Research Scientists & Systems Knowledge Engineers"
+  },
+  {
+    role: "Corporate Enterprise Research Alliance",
+    name: "Global Fortune 500 Enterprise Consortium",
+    desc: "Directly partners with university faculties to contribute empirical boardroom case studies, technical balance sheet datasets, and executive guest lectures.",
+    badges: [
+      "NVIDIA AI Enterprise Alliance",
+      "Microsoft Cloud Economics Research",
+      "Goldman Sachs Tech Investment Council",
+      "ASML European Semiconductor Forum",
+      "Amazon AWS Energy Transition Group",
+      "Novo Nordisk Health Economics Initiative"
+    ],
+    leadership: "Chief Executive Officers & Corporate Chief Technology Officers"
+  }
+];
+
+// 7. Executive Industry Panels & Symposia Data
+const industryPanelsData = [
+  {
+    id: "panel-labor",
+    title: "The Autonomous Enterprise: Governance, Liability & Human-Agent Supervision Ratios",
+    symposium: "Global Executive AI Summit 2026",
+    date: "November 25, 2026 · 18:00 CET",
+    location: "Zurich Auditorium & Live Global Broadcast",
+    academicHost: "FD Center for Corporate Governance",
+    corporateHost: "Salesforce & Airbnb Executive Offices",
+    chairs: "Prof. Shoshana Zuboff (Harvard) & Marc Benioff (Salesforce CEO)",
+    panelists: "Brian Chesky (Airbnb), Dr. Elena Rostova (Digital Governance Chair), Sundar Pichai (Google)",
+    discipline: "ISCED 0413 Management & ISCED 0421 Law",
+    status: "14 In-Person Seats Left"
+  },
+  {
+    id: "panel-semiconductors",
+    title: "Post-Moore Silicon Architecture: Chiplet Packaging, Thermal Limits & Sovereign Fabs",
+    symposium: "European Semiconductor Roundtable",
+    date: "December 8, 2026 · 15:30 CET",
+    location: "London Science Museum & Virtual Executive Suite",
+    academicHost: "FD High-Tech Innovation Center",
+    corporateHost: "ASML, TSMC & Intel Technical Leadership",
+    chairs: "Peter Wennink (ASML) & Dr. C.C. Wei (TSMC)",
+    panelists: "Lisa Su (AMD CEO), Pat Gelsinger (Intel CEO), Jensen Huang (NVIDIA CEO)",
+    discipline: "ISCED 0714 Electronics & ISCED 0533 Applied Physics",
+    status: "Limited Boardroom Pass"
+  },
+  {
+    id: "panel-health",
+    title: "Healthcare Fiscal Solvency & The Obesity Peptide Era: Corporate Payers vs Public Budgets",
+    symposium: "Nordic Health Economics Symposium",
+    date: "January 14, 2027 · 16:00 CET",
+    location: "Copenhagen Conference Center & Global Stream",
+    academicHost: "FD Health Economics Research Center",
+    corporateHost: "Novo Nordisk & Eli Lilly Executive Suites",
+    chairs: "Lars Fruergaard Jørgensen (Novo Nordisk CEO)",
+    panelists: "David Ricks (Eli Lilly CEO), Albert Bourla (Pfizer CEO), WHO Health Financing Directorate",
+    discipline: "ISCED 0916 Pharmacy & ISCED 0311 Health Economics",
+    status: "RSVP Required"
+  }
+];
+
 let activeStoryIndex = 0;
 let currentCategoryFilter = "all";
 
@@ -1326,6 +1485,168 @@ function renderDashboard() {
       </div>
     `).join("");
   }
+
+  // 5. Executive Masterclasses & Webinars
+  renderMasterclasses();
+
+  // 6. Institutional Hosts & Enterprise Consortium
+  renderInstitutionalHosts();
+
+  // 7. Executive Industry Panels
+  renderIndustryPanels();
+}
+
+// Render Masterclasses & Live Interactive Webinars
+function renderMasterclasses() {
+  const gridEl = document.querySelector("#masterclass-cards-grid");
+  if (!gridEl) return;
+
+  gridEl.innerHTML = masterclassesData.map(mc => `
+    <div class="masterclass-card" data-mc-id="${mc.id}">
+      <div>
+        <div class="mc-card-top">
+          <span class="mc-type-badge">${mc.type}</span>
+          <span class="mc-seats-badge">🟢 ${mc.seatsLeft} Seats Left</span>
+        </div>
+        <h3 class="mc-title">${mc.title}</h3>
+        <div class="mc-hosts-line">
+          <span>🏛️ ${mc.academicHost} × ${mc.enterpriseHost}</span>
+        </div>
+        <div class="mc-meta-box">
+          <div class="mc-meta-row">
+            <span>📅 <strong>${mc.date}</strong></span>
+          </div>
+          <div class="mc-meta-row">
+            <span>🎓 Faculty: ${mc.faculty}</span>
+          </div>
+          <div class="mc-meta-row" style="color:var(--fd-orange-dark); font-weight:600;">
+            <span>📚 ISCED Discipline: ${mc.domainCode} ${mc.domainName}</span>
+          </div>
+        </div>
+        <ul class="mc-syllabus-list">
+          ${mc.syllabus.map(s => `<li class="mc-syllabus-item">${s}</li>`).join("")}
+        </ul>
+      </div>
+
+      <div class="mc-action-row">
+        <button type="button" class="btn-register-mc" data-event-id="${mc.id}">
+          Register / Apply Now →
+        </button>
+        <button type="button" class="btn-syllabus-link" data-event-id="${mc.id}">
+          View Full Syllabus
+        </button>
+      </div>
+    </div>
+  `).join("");
+
+  gridEl.querySelectorAll(".btn-register-mc, .btn-syllabus-link").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const eventId = btn.dataset.eventId;
+      const eventData = masterclassesData.find(m => m.id === eventId);
+      if (eventData) openEventModal(eventData);
+    });
+  });
+}
+
+// Render Institutional Academic & Enterprise Hosts Consortium
+function renderInstitutionalHosts() {
+  const gridEl = document.querySelector("#hosts-grid");
+  if (!gridEl) return;
+
+  gridEl.innerHTML = institutionalHostsData.map(h => `
+    <div class="host-item-card">
+      <div>
+        <span class="host-role-badge">${h.role}</span>
+        <h4 class="host-name">${h.name}</h4>
+        <p class="host-desc">${h.desc}</p>
+      </div>
+      <div>
+        <div style="font-size:0.69rem; color:var(--fd-muted); font-weight:700; margin-bottom:6px;">ACCREDITATION &amp; AFFILIATES:</div>
+        <div class="host-partners-tags">
+          ${h.badges.map(b => `<span class="partner-tag">${b}</span>`).join("")}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+// Render Executive Industry Panels
+function renderIndustryPanels() {
+  const listEl = document.querySelector("#panels-list");
+  if (!listEl) return;
+
+  listEl.innerHTML = industryPanelsData.map(p => `
+    <div class="panel-agenda-row" data-panel-id="${p.id}">
+      <div class="panel-date-col">
+        <span class="panel-date-badge">${p.date.split("·")[0].trim()}</span>
+        <span class="panel-location">📍 ${p.location}</span>
+      </div>
+      <div class="panel-main-col">
+        <span class="panel-symposium-tag">${p.symposium} · ${p.discipline}</span>
+        <h4 class="panel-title">${p.title}</h4>
+        <div class="panel-speakers">
+          Co-Chaired by: <strong>${p.chairs}</strong> | Panel: ${p.panelists}
+        </div>
+      </div>
+      <div>
+        <button type="button" class="btn-panel-rsvp" data-panel-id="${p.id}">
+          RSVP for Panel →
+        </button>
+      </div>
+    </div>
+  `).join("");
+
+  listEl.querySelectorAll(".btn-panel-rsvp").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const panelId = btn.dataset.panelId;
+      const panel = industryPanelsData.find(p => p.id === panelId);
+      if (panel) {
+        openEventModal({
+          type: "Industry Panel Symposium",
+          title: panel.title,
+          academicHost: panel.academicHost,
+          date: `${panel.date} (${panel.location})`,
+          faculty: panel.chairs,
+          domainCode: panel.discipline,
+          domainName: ""
+        });
+      }
+    });
+  });
+}
+
+// Event Modal Handlers
+function openEventModal(eventData) {
+  const modal = document.querySelector("#event-modal");
+  if (!modal) return;
+
+  const typeEl = document.querySelector("#modal-event-type");
+  if (typeEl) typeEl.textContent = (eventData.type || "EXECUTIVE EVENT").toUpperCase();
+
+  const hostEl = document.querySelector("#modal-event-host");
+  if (hostEl) hostEl.textContent = eventData.academicHost || "FD Executive Institute";
+
+  const titleEl = document.querySelector("#modal-event-title");
+  if (titleEl) titleEl.textContent = eventData.title;
+
+  const metaEl = document.querySelector("#modal-event-meta");
+  if (metaEl) metaEl.textContent = `📅 ${eventData.date} · Faculty / Co-Chairs: ${eventData.faculty}`;
+
+  const domainEl = document.querySelector("#modal-event-domain");
+  if (domainEl) domainEl.textContent = `🏛️ Academic Discipline: ${eventData.domainCode} ${eventData.domainName || ''}`;
+
+  document.querySelector("#modal-form-view").hidden = false;
+  document.querySelector("#modal-success-view").hidden = true;
+
+  modal.hidden = false;
+  document.body.style.overflow = "hidden";
+}
+
+function closeEventModal() {
+  const modal = document.querySelector("#event-modal");
+  if (!modal) return;
+  modal.hidden = true;
+  document.body.style.overflow = "";
 }
 
 // Render Category Cards with filtering
@@ -1528,6 +1849,7 @@ function renderStory(index) {
   // Learning Hub Pane inside Copilot
   const learningBoxEl = document.querySelector("#copilot-learning-box");
   if (learningBoxEl && story.learningRoadmap) {
+    const linkedEvent = masterclassesData.find(m => m.linkedStoryId === index) || masterclassesData[0];
     learningBoxEl.innerHTML = `
       <div class="learning-roadmap-card">
         <span class="roadmap-title">🎓 FOUNDATIONAL DISCIPLINE CONCEPTS</span>
@@ -1539,7 +1861,22 @@ function renderStory(index) {
         <strong>EMBA SEMINAR DISCUSSION PROMPT</strong>
         "${story.learningRoadmap.seminarPrompt}"
       </div>
+      <div class="learning-event-recommend-card" style="margin-top:14px; background:#ffffff; border:1px solid #ebd9c0; border-radius:var(--fd-radius); padding:14px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <span style="font-size:0.68rem; font-weight:800; color:var(--fd-orange-dark); letter-spacing:0.06em;">LINKED MASTERCLASS / LAB</span>
+          <span style="font-size:0.68rem; color:#15803d; font-weight:700; background:#dcfce7; padding:2px 7px; border-radius:99px;">RSVP Open</span>
+        </div>
+        <strong style="display:block; font-size:0.82rem; color:var(--fd-ink); margin-bottom:4px; line-height:1.35;">${linkedEvent.title}</strong>
+        <p style="font-size:0.72rem; color:var(--fd-muted); line-height:1.4; margin-bottom:10px;">📅 ${linkedEvent.date} · Faculty: ${linkedEvent.faculty}</p>
+        <button type="button" class="btn-rsvp-linked-event" data-event-id="${linkedEvent.id}" style="width:100%; font-size:0.75rem; font-weight:700; color:#ffffff; background:var(--fd-orange); border:none; padding:8px 12px; border-radius:var(--fd-radius); cursor:pointer; transition:background 140ms ease;">
+          Register for Masterclass Lab →
+        </button>
+      </div>
     `;
+
+    learningBoxEl.querySelector(".btn-rsvp-linked-event")?.addEventListener("click", () => {
+      openEventModal(linkedEvent);
+    });
   }
 
   // Smart Replies
@@ -1712,6 +2049,27 @@ document.addEventListener("DOMContentLoaded", () => {
       if (input && input.value.trim()) {
         submitAsk(input.value.trim());
       }
+    }
+  });
+
+  // 8. Event Registration Modal Listeners
+  document.querySelector("#btn-close-modal")?.addEventListener("click", closeEventModal);
+  document.querySelector("#btn-modal-cancel")?.addEventListener("click", closeEventModal);
+  document.querySelector("#btn-modal-done")?.addEventListener("click", closeEventModal);
+  document.querySelector("#event-modal")?.addEventListener("click", (e) => {
+    if (e.target.id === "event-modal") closeEventModal();
+  });
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeEventModal();
+  });
+
+  document.querySelector("#event-reg-form")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formView = document.querySelector("#modal-form-view");
+    const successView = document.querySelector("#modal-success-view");
+    if (formView && successView) {
+      formView.hidden = true;
+      successView.hidden = false;
     }
   });
 });
