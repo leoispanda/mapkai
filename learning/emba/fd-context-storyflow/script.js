@@ -3100,37 +3100,15 @@ function renderFlagshipEvents() {
               <span>📍</span>
               <span><strong>${evt.location}</strong></span>
             </div>
-            <div class="flagship-meta-item">
-              <span>👥</span>
-              <span>${evt.target}</span>
-            </div>
-          </div>
-
-          <div class="flagship-pillars-banner">
-            <div class="flagship-pillars-grid">
-              ${evt.pillars.map(p => `
-                <div class="flagship-pillar-col">
-                  <span class="p-icon">${p.icon}</span>
-                  <span>${p.title}</span>
-                </div>
-              `).join("")}
-            </div>
-          </div>
-
-          <div class="flagship-highlights-box">
-            <h4 class="flagship-highlights-title">${isClub ? "Club Privileges & Pillars:" : "What to expect:"}</h4>
-            <ul class="flagship-checklist">
-              ${evt.highlights.map(h => `
-                <li><span class="check-icon">✓</span> <span>${h}</span></li>
-              `).join("")}
-            </ul>
           </div>
 
           <div class="flagship-footer-actions">
             <button type="button" class="${btnClass}" data-event-id="${evt.id}" aria-label="Register for ${evt.title}">
               <span class="btn-text">${btnLabel}</span>
             </button>
-            <p class="flagship-tagline">${evt.tagline}</p>
+            <button type="button" class="btn-view-details-ghost" data-event-id="${evt.id}" aria-label="View pillars and agenda details in modal">
+              View Pillars &amp; Agenda Details →
+            </button>
           </div>
         </div>
       </article>
@@ -3147,16 +3125,35 @@ function renderFlagshipEvents() {
     });
   });
 
+  gridEl.querySelectorAll(".btn-view-details-ghost").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const eventId = btn.dataset.eventId;
+      const session = getAllAcademySessions().find(s => s.id === eventId);
+      if (session) openEventModal(session);
+    });
+  });
+
   gridEl.querySelectorAll(".flagship-poster-media").forEach(media => {
-    media.addEventListener("click", () => {
+    media.addEventListener("click", (e) => {
+      e.stopPropagation();
       const eventId = media.dataset.eventId;
+      const session = getAllAcademySessions().find(s => s.id === eventId);
+      if (session) openEventModal(session);
+    });
+  });
+
+  gridEl.querySelectorAll(".flagship-card").forEach(card => {
+    card.addEventListener("click", (e) => {
+      if (e.target.closest("button") || e.target.closest(".flagship-poster-media")) return;
+      const eventId = card.dataset.eventId;
       const session = getAllAcademySessions().find(s => s.id === eventId);
       if (session) openEventModal(session);
     });
   });
 }
 
-// Render FD Academy Executive Learning & Symposia Modules
+// Render FD Academy Executive Learning & Symposia Modules (Compact exterior)
 function renderAcademyModules(filter = "all") {
   const gridEl = document.querySelector("#academy-modules-grid");
   if (!gridEl) return;
@@ -3167,6 +3164,10 @@ function renderAcademyModules(filter = "all") {
   });
 
   gridEl.innerHTML = filteredModules.map(mod => {
+    const firstAct = mod.activities[0] || {};
+    const moreCount = mod.activities.length - 1;
+    const isFirstRegistered = registeredEventIds.has(firstAct.id);
+
     return `
       <article class="module-block-card" data-module-id="${mod.id}">
         <div class="module-card-header">
@@ -3183,43 +3184,28 @@ function renderAcademyModules(filter = "all") {
         </div>
         <p class="module-desc">${mod.desc}</p>
 
-        <!-- Outside Visible Activities List (Visible on Card Exterior) -->
-        <div class="module-activities-list">
-          ${mod.activities.map(act => {
-            const isRegistered = registeredEventIds.has(act.id);
-            const btnLabel = isRegistered ? "✓ Registered" : (act.buttonText || "Register now →");
-            const btnClass = `btn-activity-register ${isRegistered ? 'is-registered' : ''}`;
-
-            return `
-            <div class="module-activity-item" data-activity-id="${act.id}">
-              <div class="activity-top-row">
-                <span class="activity-date">📅 ${act.date.split("·")[0].trim()}</span>
-                <span class="activity-seats-tag">🟢 ${act.seatsLeft} seats</span>
-              </div>
-              <h4 class="activity-title">${act.title}</h4>
-              <div class="activity-footer-line">
-                <div class="activity-avatars-row">
-                  ${(act.facultyAvatars || []).map(name => `
-                    <img class="speaker-avatar" src="${getPortraitUrl(name)}" data-portrait-name="${name}" alt="${name}" title="${name}" loading="lazy" decoding="async">
-                  `).join("")}
-                  <span class="activity-speakers-names">${act.faculty.split("&")[0].trim()}</span>
-                </div>
-                <span class="activity-discipline-chip">${act.domainCode}</span>
-              </div>
-              <div class="activity-action-row">
-                <span class="activity-location-tag">📍 ${(act.location || 'Virtual').split('·')[0].trim()}</span>
-                <button type="button" class="${btnClass}" data-activity-id="${act.id}" aria-label="Register for ${act.title}">
-                  ${btnLabel}
-                </button>
-              </div>
-            </div>
-          `;
-          }).join("")}
+        <!-- Compact Upcoming Session Preview -->
+        <div class="module-preview-block" data-activity-id="${firstAct.id || ''}" title="Click to view syllabus and register">
+          <div class="preview-tag-row">
+            <span class="preview-lead-kicker">UPCOMING SESSION</span>
+            ${firstAct.seatsLeft ? `<span class="preview-seats-tag">🟢 ${firstAct.seatsLeft} seats</span>` : ''}
+          </div>
+          <h4 class="preview-session-title">${firstAct.title || ''}</h4>
+          <div class="preview-meta-row">
+            <span>📅 ${firstAct.date ? firstAct.date.split("·")[0].trim() : ''}</span>
+            <span>🏛️ ${firstAct.domainCode || ''}</span>
+          </div>
         </div>
 
+        ${moreCount > 0 ? `
+          <div class="module-more-strip">
+            <span class="more-indicator">+${moreCount} more masterclass${moreCount > 1 ? 'es' : ''} in syllabus</span>
+          </div>
+        ` : ''}
+
         <div class="module-card-footer">
-          <button type="button" class="btn-open-module" data-module-id="${mod.id}">
-            Explore All Masterclasses &amp; Syllabi →
+          <button type="button" class="btn-open-module" data-module-id="${mod.id}" aria-label="Explore syllabus and register for ${mod.name}">
+            Explore Syllabi &amp; Register (${mod.activities.length}) →
           </button>
         </div>
       </article>
@@ -3227,8 +3213,9 @@ function renderAcademyModules(filter = "all") {
   }).join("");
 
   // Attach event click handlers
-  gridEl.querySelectorAll(".module-activity-item").forEach(item => {
-    item.addEventListener("click", () => {
+  gridEl.querySelectorAll(".module-preview-block").forEach(item => {
+    item.addEventListener("click", (e) => {
+      e.stopPropagation();
       const actId = item.dataset.activityId;
       const allSessions = getAllAcademySessions();
       const session = allSessions.find(s => s.id === actId);
@@ -3236,18 +3223,9 @@ function renderAcademyModules(filter = "all") {
     });
   });
 
-  gridEl.querySelectorAll(".btn-activity-register").forEach(btn => {
+  gridEl.querySelectorAll(".btn-open-module").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
-      const actId = btn.dataset.activityId;
-      const allSessions = getAllAcademySessions();
-      const session = allSessions.find(s => s.id === actId);
-      if (session) openEventModal(session);
-    });
-  });
-
-  gridEl.querySelectorAll(".btn-open-module").forEach(btn => {
-    btn.addEventListener("click", () => {
       const modId = btn.dataset.moduleId;
       const mod = academyModulesData.find(m => m.id === modId);
       if (mod && mod.activities.length > 0) {
@@ -3256,7 +3234,16 @@ function renderAcademyModules(filter = "all") {
     });
   });
 
-  installPortraitFallbacks(gridEl);
+  gridEl.querySelectorAll(".module-block-card").forEach(card => {
+    card.addEventListener("click", (e) => {
+      if (e.target.closest("button") || e.target.closest(".module-preview-block")) return;
+      const modId = card.dataset.moduleId;
+      const mod = academyModulesData.find(m => m.id === modId);
+      if (mod && mod.activities.length > 0) {
+        openEventModal(mod.activities[0]);
+      }
+    });
+  });
 }
 
 // Render Compact Accredited Host Consortium Strip
