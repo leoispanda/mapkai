@@ -372,175 +372,258 @@
         </div>
       </section>
 
-      <!-- 2-Column Split Workspace (Left: Story + CEO Discussion; Right: AI Reading Copilot) -->
-      <div class="workspace-grid">
-        <!-- Left Column: Story + LinkedIn Fortune 500 Engagement -->
-        <article class="story-pane">
-          <div class="story-meta-row">
-            <span class="story-tag" id="story-tag">TECHNOLOGY &amp; BUSINESS</span>
-            <span class="story-read-time" id="story-read-time">Concept article · 5 min read</span>
+      <!-- Digital Broadsheet Paper Sheet (Warm Editorial Paper, Weighted Serif, Clear Rhythm) -->
+      <div class="broadsheet-paper-container">
+        <!-- Top Broadsheet Masthead Header -->
+        <header class="broadsheet-header">
+          <div class="broadsheet-kicker-row">
+            <span class="broadsheet-section-kicker" id="story-tag">TECHNOLOGY &amp; ORGANIZATIONAL DESIGN</span>
+            <span class="broadsheet-edition-tag">FD ACADEMY EDITORIAL CASE DOSSIER · INVESTIGATIVE SERIES</span>
           </div>
 
-          <h1 class="story-title" id="story-title">Why has AI investment not yet delivered the expected productivity gains?</h1>
+          <!-- Layer 1: Front-Page Lead Case (Headline, Deck, Byline, Master Photo) -->
+          <h1 class="broadsheet-headline" id="story-title">Why has AI investment not yet delivered the expected productivity gains?</h1>
 
-          <p class="story-dek" id="story-dek">
+          <p class="broadsheet-deck" id="story-dek">
             Companies have moved from experiments to deployment. The question is shifting from access to AI toward the harder work of redesigning processes, measuring returns, and managing uncertainty.
           </p>
 
-          <div class="story-divider"></div>
-
-          <!-- Story Body with In-text Knowledge Links -->
-          <div class="story-body" id="story-body">
-            <!-- Rendered by script.js -->
+          <div class="broadsheet-byline-bar">
+            <div class="byline-meta-left">
+              <span class="byline-author" id="story-byline">By FD Academy Editorial Board &amp; Stanford Digital Economy Lab Fellows</span>
+              <span class="byline-dot">·</span>
+              <span class="byline-date" id="story-pub-date">November 4, 2026</span>
+              <span class="byline-dot">·</span>
+              <span class="byline-location" id="story-location">London / Zurich / San Francisco</span>
+            </div>
+            <div class="byline-meta-right">
+              <span class="reading-time-pill" id="story-read-time">Concept article · 5 min read</span>
+              <span class="verification-status-badge" id="story-verification-badge">✓ Primary Sourced &amp; Fact-Audited</span>
+            </div>
           </div>
 
-          <!-- MapKAI Linked Knowledge Domains (Learning Feature) -->
-          <div class="linked-domains-container" id="linked-domains-container">
-            <div class="domains-box-header">
-              <div class="domains-title-flex">
-                <span class="domains-badge-icon">🎓</span>
-                <span class="domains-badge-title">LINKED MAPKAI KNOWLEDGE DOMAINS</span>
-                <span class="domains-badge-count" id="domains-badge-count">3 Academic Fields</span>
+          <!-- Master Broadsheet Featured Image with Editorial Caption & Source -->
+          <figure class="broadsheet-lead-figure" id="broadsheet-lead-figure">
+            <img class="broadsheet-lead-img" id="lead-story-image" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&h=600&q=85" alt="Executive case investigation" loading="lazy">
+            <figcaption class="lead-image-caption">
+              <span class="caption-text" id="lead-image-caption-text">Executive boardrooms across the Global 500 are navigating the structural lag between foundational software procurement and internal process redesign.</span>
+              <span class="caption-credit" id="lead-image-credit">Photograph: Unsplash / Editorial Architecture</span>
+            </figcaption>
+          </figure>
+        </header>
+
+        <!-- Two-Column Broadsheet Layout (Desktop: Main Article ~720px + Fact Sidebar ~360px; Mobile: Vertical sequence) -->
+        <div class="broadsheet-layout-grid">
+          <!-- MAIN EDITORIAL COLUMN (680px - 760px) -->
+          <article class="broadsheet-main-column">
+
+            <!-- Layer 2: What Happened (Executive Summary & Key Facts) -->
+            <section class="editorial-block block-what-happened" id="block-what-happened">
+              <div class="block-header">
+                <span class="block-rule-label">WHAT HAPPENED</span>
+                <span class="block-sub">Core Verified Facts &amp; Strategic Baseline</span>
               </div>
-              <span class="domains-box-hint">Tap any domain to explore curriculum &amp; concepts</span>
+              <div class="what-happened-body" id="what-happened-content">
+                <!-- Rendered dynamically by script.js -->
+              </div>
+            </section>
+
+            <!-- Layer 3: Timeline (Chronological Development & Sourced Milestones) -->
+            <section class="editorial-block block-timeline" id="block-timeline">
+              <div class="block-header">
+                <span class="block-rule-label">CHRONOLOGICAL TIMELINE</span>
+                <span class="block-sub">Milestone Events &amp; Primary Evidence Trail</span>
+              </div>
+              <ol class="editorial-timeline-list" id="story-timeline-list">
+                <!-- Rendered dynamically by script.js -->
+              </ol>
+            </section>
+
+            <!-- Layer 4: What Changed / What Remains Uncertain -->
+            <section class="editorial-block block-what-changed" id="block-what-changed">
+              <div class="block-header">
+                <span class="block-rule-label">WHAT CHANGED &amp; WHAT REMAINS UNCERTAIN</span>
+                <span class="block-sub">Operating Paradigm Shift &amp; Key Risk Factors</span>
+              </div>
+              <div class="what-changed-grid" id="what-changed-content">
+                <!-- Rendered dynamically by script.js -->
+              </div>
+            </section>
+
+            <!-- Layer 5: Context & Deep Dive (Serif Prose, Pull Quote, Knowledge Links, AI Decision Analysis) -->
+            <section class="editorial-block block-context-deepdive" id="block-context">
+              <div class="block-header">
+                <span class="block-rule-label">CONTEXT &amp; DEEP EXPLANATION</span>
+                <span class="block-sub">Structural Mechanics &amp; Foundational Discipline Grounding</span>
+              </div>
+
+              <!-- Editorial Pull Quote (26px with teal vertical rule) -->
+              <blockquote class="editorial-pull-quote" id="editorial-pull-quote">
+                Buying AI tools does not automatically boost company-wide output. Generative AI delivers exponential returns only when organizations shift from single-prompt experiments to autonomous multi-agent workflows with deep access to proprietary operational context.
+              </blockquote>
+
+              <!-- Main Serif Prose Body with In-Text Knowledge Links -->
+              <div class="editorial-prose-body" id="story-body">
+                <!-- Rendered dynamically by script.js -->
+              </div>
+
+              <!-- Independent AI Strategic Explanation Sub-section (Clearly labelled as interpretation) -->
+              <div class="ai-editorial-interpretation-box" id="ai-editorial-interpretation">
+                <div class="ai-box-masthead">
+                  <div class="ai-label-group">
+                    <span class="sparkle-icon">✨</span>
+                    <span class="ai-title">FD ACADEMY COGNITIVE COPILOT · STRATEGIC DECISION ANALYSIS</span>
+                  </div>
+                  <span class="ai-disclaimer-pill">AI Editorial Interpretation · Independent Analytical Model</span>
+                </div>
+                <div class="ai-box-inner">
+                  <div class="ai-tldr-callout" id="copilot-tldr-text"></div>
+                  <div class="ai-consensus-stat">
+                    <span class="ai-consensus-num" id="ai-consensus-val">92%</span>
+                    <span class="ai-consensus-lbl">Executive Consensus on Strategic Model</span>
+                  </div>
+                  <div class="ai-takeaways-group">
+                    <strong class="ai-takeaways-heading">Core Boardroom Takeaways:</strong>
+                    <ul class="takeaways-list" id="copilot-takeaways-list"></ul>
+                  </div>
+                  <div class="ai-playbook-callout" id="copilot-playbook-box"></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Executive Forum & Boardroom Reactions -->
+            <section class="editorial-block block-executive-forum" id="block-executive-forum">
+              <div class="block-header">
+                <span class="block-rule-label">EXECUTIVE FORUM &amp; BOARD PERSPECTIVES</span>
+                <span class="block-sub">Illustrative Commentary from Global 500 Leaders</span>
+              </div>
+
+              <!-- Social Proof Likes Banner -->
+              <div class="exec-likes-banner">
+                <div class="avatar-stack" id="exec-avatar-stack"></div>
+                <div class="exec-likes-text" id="exec-likes-text"></div>
+              </div>
+
+              <!-- Reaction Bar -->
+              <div class="reaction-bar">
+                <div class="reaction-buttons">
+                  <button type="button" class="btn-reaction" data-reaction="like" id="btn-like">
+                    <span class="reaction-icon">👍</span>
+                    <span class="reaction-label">Like</span>
+                    <span class="reaction-count" id="count-like">4,821</span>
+                  </button>
+                  <button type="button" class="btn-reaction" data-reaction="celebrate">
+                    <span class="reaction-icon">👏</span>
+                    <span class="reaction-label">Celebrate</span>
+                    <span class="reaction-count">1,240</span>
+                  </button>
+                  <button type="button" class="btn-reaction" data-reaction="insightful">
+                    <span class="reaction-icon">💡</span>
+                    <span class="reaction-label">Insightful</span>
+                    <span class="reaction-count">3,410</span>
+                  </button>
+                  <button type="button" class="btn-reaction" data-reaction="love">
+                    <span class="reaction-icon">❤️</span>
+                    <span class="reaction-label">Love</span>
+                    <span class="reaction-count">980</span>
+                  </button>
+                </div>
+                <span class="status-pill" id="interaction-status">Ready to engage</span>
+              </div>
+
+              <!-- CEO Comments List -->
+              <div class="ceo-comments-list" id="ceo-comments-list"></div>
+            </section>
+
+            <!-- Layer 7: Related Cases (Secondary Newspaper Broadsheet Coverage) -->
+            <section class="editorial-block block-related-cases" id="block-related-cases">
+              <div class="block-header">
+                <span class="block-rule-label">RELATED CASE STUDIES &amp; SECONDARY DISPATCHES</span>
+                <span class="block-sub">Cross-Discipline Precedents &amp; Industry Realignments</span>
+              </div>
+              <div class="related-cases-broadsheet-grid" id="related-cases-grid">
+                <!-- Rendered dynamically by script.js: 3 related case briefs -->
+              </div>
+            </section>
+
+          </article>
+
+          <!-- FACT SIDEBAR & EDITORIAL DOSSIER (340px - 380px) -->
+          <aside class="broadsheet-fact-sidebar">
+            <!-- Layer 6: Sources & Editorial Verification Box -->
+            <div class="sidebar-box verification-audit-box" id="verification-audit-box">
+              <div class="sidebar-box-header">
+                <span class="sidebar-tag">SOURCES &amp; EDITORIAL AUDIT</span>
+                <span class="audit-seal">✓ AUDITED</span>
+              </div>
+              <p class="sidebar-box-desc">All facts, financial figures, and executive quotes undergo multi-source verification against regulatory disclosures and primary recordings.</p>
+              <div class="verification-table-container">
+                <table class="verification-table" id="verification-sources-table">
+                  <thead>
+                    <tr>
+                      <th>Primary Evidence Source</th>
+                      <th>Audit Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="verification-sources-body">
+                    <!-- Rendered dynamically by script.js -->
+                  </tbody>
+                </table>
+              </div>
+              <div class="audit-methodology-note">
+                <small>Methodology: Monitored filings are corroborated across SEC Form 10-K, investor calls, and peer-reviewed faculty monographs.</small>
+              </div>
             </div>
-            <div class="domains-cards-list" id="story-linked-domains">
+
+            <!-- MapKAI Linked Knowledge Domains Box -->
+            <div class="sidebar-box linked-domains-sidebar-box" id="linked-domains-container">
+              <div class="sidebar-box-header">
+                <span class="sidebar-tag">LINKED MAPKAI DISCIPLINES</span>
+                <span class="domains-badge-count" id="domains-badge-count">3 Disciplines</span>
+              </div>
+              <p class="sidebar-box-desc">Academic knowledge domains and ISCED fields contextualizing this business case:</p>
+              <div class="domains-cards-list" id="story-linked-domains">
+                <!-- Rendered dynamically by script.js -->
+              </div>
+            </div>
+
+            <!-- Executive Learning Roadmap & Masterclass RSVP -->
+            <div class="sidebar-box learning-roadmap-sidebar-box" id="learning-roadmap-box">
               <!-- Rendered dynamically by script.js -->
             </div>
-          </div>
 
-          <!-- Social Proof: Fortune 500 CEO Likes -->
-          <div class="exec-likes-banner">
-            <div class="avatar-stack" id="exec-avatar-stack">
-              <!-- Rendered by script.js -->
-            </div>
-            <div class="exec-likes-text" id="exec-likes-text">
-              <!-- Rendered by script.js -->
-            </div>
-          </div>
-
-          <!-- Reaction Bar -->
-          <div class="reaction-bar">
-            <div class="reaction-buttons">
-              <button type="button" class="btn-reaction" data-reaction="like" id="btn-like">
-                <span class="reaction-icon">👍</span>
-                <span class="reaction-label">Like</span>
-                <span class="reaction-count" id="count-like">4,821</span>
-              </button>
-              <button type="button" class="btn-reaction" data-reaction="celebrate">
-                <span class="reaction-icon">👏</span>
-                <span class="reaction-label">Celebrate</span>
-                <span class="reaction-count">1,240</span>
-              </button>
-              <button type="button" class="btn-reaction" data-reaction="insightful">
-                <span class="reaction-icon">💡</span>
-                <span class="reaction-label">Insightful</span>
-                <span class="reaction-count">3,410</span>
-              </button>
-              <button type="button" class="btn-reaction" data-reaction="love">
-                <span class="reaction-icon">❤️</span>
-                <span class="reaction-label">Love</span>
-                <span class="reaction-count">980</span>
-              </button>
-            </div>
-            <span class="status-pill" id="interaction-status">Ready to engage</span>
-          </div>
-
-          <!-- Fortune 500 CEO Discussion Thread -->
-          <section class="ceo-discussion-section">
-            <div class="discussion-header">
-              <span class="section-label">ILLUSTRATIVE EXECUTIVE DISCUSSION</span>
-              <span class="verified-tag">Demo content</span>
-            </div>
-
-            <div class="ceo-comments-list" id="ceo-comments-list">
-              <!-- Rendered by script.js -->
-            </div>
-          </section>
-        </article>
-
-        <!-- Right Column: AI Reading Copilot & Context -->
-        <aside class="copilot-pane">
-          <!-- Copilot Card -->
-          <div class="copilot-card">
-            <div class="copilot-header">
-              <div class="copilot-title-group">
-                <span class="sparkle-icon">✨</span>
-                <span class="copilot-title">AI Reading Copilot</span>
+            <!-- Suggested LinkedIn Executive Drafts -->
+            <div class="sidebar-box smart-reply-sidebar-box">
+              <div class="sidebar-box-header">
+                <span class="sidebar-tag">EXECUTIVE LINKEDIN DRAFTS</span>
+                <span class="copy-hint">Click to Copy</span>
               </div>
-              <span class="savings-badge" id="copilot-time-badge">⏱️ Saved 4.2m (~86%)</span>
-            </div>
-
-            <!-- Mode Navigation (30s TL;DR, 3 Takeaways, Playbook, Learning Hub) -->
-            <div class="copilot-tabs" role="tablist">
-              <button type="button" class="copilot-tab active" data-tab="tldr" role="tab" aria-selected="true">30s TL;DR</button>
-              <button type="button" class="copilot-tab" data-tab="takeaways" role="tab" aria-selected="false">3 Takeaways</button>
-              <button type="button" class="copilot-tab" data-tab="playbook" role="tab" aria-selected="false">Playbook</button>
-              <button type="button" class="copilot-tab" data-tab="learning" role="tab" aria-selected="false">🎓 Learning Hub</button>
-            </div>
-
-            <!-- Tab Panels -->
-            <div class="copilot-content">
-              <!-- 30s TL;DR -->
-              <div class="tab-pane active" id="pane-tldr">
-                <div class="tldr-highlight" id="copilot-tldr-text">
-                  Buying AI tools does not automatically boost company-wide output. Generative AI delivers exponential returns only when organizations shift from single-prompt experiments to autonomous multi-agent workflows with deep access to proprietary operational context.
-                </div>
-                <div class="sentiment-box">
-                  <div class="sentiment-val">92%</div>
-                  <div class="sentiment-desc">
-                    <strong>Illustrative Executive Consensus</strong>
-                    <span>Prioritizing autonomous agent workflows over generic chatbots in 2026.</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 3 Key Takeaways -->
-              <div class="tab-pane" id="pane-takeaways" hidden>
-                <ul class="takeaways-list" id="copilot-takeaways-list">
-                  <!-- Rendered by script.js -->
-                </ul>
-              </div>
-
-              <!-- Founder Playbook -->
-              <div class="tab-pane" id="pane-playbook" hidden>
-                <div class="playbook-box" id="copilot-playbook-box">
-                  <!-- Rendered by script.js -->
-                </div>
-              </div>
-
-              <!-- Learning Hub Tab Pane -->
-              <div class="tab-pane" id="pane-learning" hidden>
-                <div class="learning-pane-content" id="copilot-learning-box">
-                  <!-- Rendered dynamically by script.js -->
-                </div>
-              </div>
-            </div>
-
-            <!-- Suggested LinkedIn Replies (Click to Copy) -->
-            <div class="smart-reply-section">
-              <div class="section-label">AI SUGGESTED LINKEDIN REPLIES (CLICK TO COPY)</div>
               <div class="reply-cards-list" id="smart-replies-list">
-                <!-- Rendered by script.js -->
+                <!-- Rendered dynamically by script.js -->
               </div>
             </div>
 
-            <!-- Interactive Ask Copilot -->
-            <div class="ask-copilot-section">
-              <div class="section-label">ASK COPILOT ABOUT THIS STORY</div>
+            <!-- Ask Copilot Interactive Query Box -->
+            <div class="sidebar-box ask-copilot-sidebar-box">
+              <div class="sidebar-box-header">
+                <span class="sidebar-tag">ASK FD COPILOT</span>
+                <span class="sparkle-icon">✨</span>
+              </div>
+              <p class="sidebar-box-desc">Query case data, counter-arguments, or discipline connections:</p>
               <div class="quick-chips">
                 <button type="button" class="chip" data-q="What is the biggest operational flaw in this thesis?">🔍 Counter-Argument</button>
                 <button type="button" class="chip" data-q="Which MapKAI knowledge domain applies most to this challenge?">🎓 Core Discipline</button>
                 <button type="button" class="chip" data-q="Extract the punchiest quote from this discussion.">✨ Key Quote</button>
               </div>
               <div class="ask-input-box">
-                <input type="text" id="ask-input" placeholder="Ask anything about this story or CEO comments...">
+                <input type="text" id="ask-input" placeholder="Ask about this case or boardroom takeaways...">
                 <button type="button" class="btn-ask" id="btn-ask">Ask</button>
               </div>
               <div class="answer-box" id="answer-box" hidden></div>
             </div>
-          </div>
-        </aside>
+
+          </aside>
+        </div>
       </div>
     </section>
 

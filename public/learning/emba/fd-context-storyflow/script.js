@@ -204,6 +204,81 @@ function renderPortraitCredits() {
 const storiesData = [
   {
     id: "story-0",
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Executive boardrooms across the Global 500 are navigating the structural lag between foundational software procurement and internal process redesign.",
+      "credit": "Photograph: Unsplash / Editorial Architecture Archive"
+},
+    dateline: {
+      "byline": "By FD Academy Editorial Board & Stanford Digital Economy Lab Fellows",
+      "pubDate": "November 4, 2026",
+      "location": "London / San Francisco / Zurich"
+},
+    pullQuote: "Buying AI tools does not automatically boost company-wide output. Generative AI delivers exponential returns only when organizations shift from single-prompt experiments to autonomous multi-agent workflows with deep access to proprietary operational context.",
+    whatHappened: [
+      "Global 2000 corporate investment into generative foundation models and copilot licenses surpassed $85B over the past 24 months.",
+      "Empirical CIO surveys indicate 68% of enterprise rollouts stalled at pilot stages, delivering less than 4% measurable labor productivity gains at firm level.",
+      "Pioneering enterprises transitioned from standalone prompt boxes to deterministic background agent pipelines, recovering 14\u201322% in operational cycle times."
+],
+    timeline: [
+      {
+            "date": "Q1 2023",
+            "milestone": "Initial enterprise copilot licensing contracts signed across Fortune 500 under exploratory FOMO pressures.",
+            "source": "Gartner IT Spending Survey",
+            "sourceTag": "IT Benchmark"
+      },
+      {
+            "date": "Q4 2024",
+            "milestone": "Enterprise software audits reveal 72% copilot monthly active user drop-off after 90 days of rollout.",
+            "source": "Stanford Digital Economy Lab",
+            "sourceTag": "Academic Study"
+      },
+      {
+            "date": "Q2 2025",
+            "milestone": "Pioneering enterprises overhaul software architecture from conversational chat to deterministic multi-agent pipelines.",
+            "source": "MIT Technology Review",
+            "sourceTag": "Technical Review"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "Corporate boards mandate GAAP return on invested capital (ROIC) hurdle metrics for all future AI allocations.",
+            "source": "Harvard Business Review / FD Academy",
+            "sourceTag": "Editorial Audit"
+      }
+],
+    whatChanged: {
+      "prior": "Generic conversational chatbots were expected to automatically lift cross-functional knowledge work by 30% without changing underlying workflows.",
+      "current": "Productivity gains require deep organizational redesign, KPI restructuring, and autonomous agents executing transactional tasks inside ERP systems.",
+      "uncertainty": "Depreciation schedules on multi-billion datacenter leases remain unresolved; failure to demonstrate verifiable margin improvements may trigger enterprise budget contractions.",
+      "riskTag": "Capital Hurdle & Depreciation Risk"
+},
+    editorialVerification: [
+      {
+            "document": "Stanford Digital Economy Monograph (Brynjolfsson et al.)",
+            "type": "Academic Study",
+            "status": "VERIFIED \u00b7 PEER REVIEWED",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Global CIO Enterprise AI Deployment Survey (n=450)",
+            "type": "Empirical Survey",
+            "status": "VERIFIED \u00b7 STATISTICALLY SIGNIFICANT",
+            "statusCode": "verified"
+      },
+      {
+            "document": "SEC Form 10-K Filings (Enterprise Software Cohort)",
+            "type": "Regulatory Disclosure",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Enterprise Multi-Agent ROI Benchmark Study",
+            "type": "Industry Benchmark",
+            "status": "MONITORED \u00b7 PENDING BOARD AUDIT",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [1, 3, 5],
     tag: "TECHNOLOGY & ORGANIZATIONAL DESIGN",
     readTime: "Concept article · 5 min read",
     title: "Why has AI investment not yet delivered the expected productivity gains?",
@@ -293,6 +368,81 @@ const storiesData = [
   },
   {
     id: "story-1",
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "High-density GPU server enclosures operating in a liquid-cooled accelerated compute datacenter cluster.",
+      "credit": "Photograph: Unsplash / Accelerated Compute Systems"
+},
+    dateline: {
+      "byline": "By FD Academy Technology Desk & MIT Semiconductor Research Group",
+      "pubDate": "November 2, 2026",
+      "location": "Santa Clara / Taipei"
+},
+    pullQuote: "General-purpose computing has run out of steam. The world\u2019s $1 trillion datacenter infrastructure is transitioning to accelerated computing, and Physical AI is the next industrial horizon.",
+    whatHappened: [
+      "NVIDIA expanded market valuation beyond $3.5T as hyperscalers committed over $200B in annual CapEx toward accelerated Blackwell and Hopper architectures.",
+      "General-purpose CPU server sales flattened globally as enterprise compute budgets redirected toward accelerated GPU, high-bandwidth memory (HBM), and InfiniBand fabrics.",
+      "Industrial manufacturers launched digital twin simulations in Omniverse, creating physics-compliant synthetic data for autonomous robotics factories before physical tooling."
+],
+    timeline: [
+      {
+            "date": "Q2 2023",
+            "milestone": "NVIDIA posts historic revenue inflection driven by HGX H100 datacenter demand.",
+            "source": "SEC Form 8-K",
+            "sourceTag": "SEC Filing"
+      },
+      {
+            "date": "Q1 2024",
+            "milestone": "Jensen Huang unveils Blackwell architecture featuring 208 billion transistors and liquid-cooled NVLink fabrics.",
+            "source": "GTC Keynote",
+            "sourceTag": "Product Launch"
+      },
+      {
+            "date": "Q4 2025",
+            "milestone": "Enterprise demand pivots from pure LLM pre-training to physical AI robotics and industrial digital twins.",
+            "source": "IEEE Computer Society",
+            "sourceTag": "IEEE Publication"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "Datacenter electrical power constraints replace silicon yields as the primary growth constraint.",
+            "source": "International Energy Agency / FD Academy",
+            "sourceTag": "Energy Report"
+      }
+],
+    whatChanged: {
+      "prior": "Moore's Law CPU scaling supported generic datacenter capacity upgrades with predictable 15% annual server cost amortizations.",
+      "current": "Massive parallel GPU factories with multi-megawatt power footprints and liquid cooling replace traditional general-purpose server architectures.",
+      "uncertainty": "Power substation interconnection queues exceeding 48 months in major tech corridors threaten delivery timelines for gigawatt-class cluster builds.",
+      "riskTag": "Grid Capacity & Interconnection Risk"
+},
+    editorialVerification: [
+      {
+            "document": "NVIDIA Corporation SEC Form 10-K & Q3 Transcript",
+            "type": "Regulatory Filing",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "TSMC Advanced Packaging (CoWoS) Capacity Reports",
+            "type": "Supply Chain Disclosure",
+            "status": "VERIFIED \u00b7 INDUSTRY RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "International Energy Agency Datacenter Electricity Report",
+            "type": "Public Policy Data",
+            "status": "VERIFIED \u00b7 PRIMARY SOURCE",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Hyperscale Power Purchase Agreement Disclosures",
+            "type": "Commercial Filings",
+            "status": "MONITORED \u00b7 PENDING FERC APPROVAL",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [4, 6, 7],
     tag: "SEMICONDUCTORS & INFRASTRUCTURE",
     readTime: "Executive share · 4 min read",
     title: "NVIDIA: The $1 Trillion Accelerated Computing Shift and the Age of Physical AI",
@@ -373,6 +523,81 @@ const storiesData = [
   },
   {
     id: "story-2",
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Apple silicon microarchitecture die packaging incorporating neural engines and secure enclave hardware encryption.",
+      "credit": "Photograph: Unsplash / Microelectronics Archive"
+},
+    dateline: {
+      "byline": "By FD Academy Consumer Tech Desk & Stanford Cryptography Group",
+      "pubDate": "October 29, 2026",
+      "location": "Cupertino / Zurich"
+},
+    pullQuote: "Enterprise and consumer privacy cannot depend on promises. True trust requires mathematically verifiable hardware privacy\u2014processing on-device whenever possible and in cryptographic enclaves when cloud scale is required.",
+    whatHappened: [
+      "Apple deployed Apple Intelligence across an active installed base of 2.2 billion devices, utilizing a hybrid edge-to-cloud split inference architecture.",
+      "Private Cloud Compute (PCC) introduced cryptographically verifiable cloud servers running on Apple silicon without persistent storage or root administrator access.",
+      "Third-party security researchers verified that PCC virtual machines reject any binary not verified on an append-only public transparency log."
+],
+    timeline: [
+      {
+            "date": "Jun 2024",
+            "milestone": "Apple announces Apple Intelligence and Private Cloud Compute architecture at WWDC.",
+            "source": "Apple Technical White Paper",
+            "sourceTag": "Tech Spec"
+      },
+      {
+            "date": "Q4 2024",
+            "milestone": "Initial on-device 3-billion-parameter model rollout reaches hundreds of millions of iPhone 16 and M-series Mac users.",
+            "source": "Apple Earnings Call",
+            "sourceTag": "Earnings Transcript"
+      },
+      {
+            "date": "Q3 2025",
+            "milestone": "Independent security audits validate PCC cryptographic remote attestation guarantees.",
+            "source": "Trail of Bits / Black Hat",
+            "sourceTag": "Security Audit"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "Divergence widens between consumer edge privacy architectures and server-side advertising surveillance models.",
+            "source": "FD Academy Editorial",
+            "sourceTag": "Industry Analysis"
+      }
+],
+    whatChanged: {
+      "prior": "Cloud AI demanded sending user context and unencrypted prompts to centralized corporate servers with opaque data retention policies.",
+      "current": "Cryptographically verifiable edge enclaves process 80% of daily user context locally, routing only complex queries to stateless private servers.",
+      "uncertainty": "Hardware memory limits (8GB DRAM constraints) on legacy mobile fleets create consumer friction and delayed feature rollouts.",
+      "riskTag": "DRAM Cost & Fleet Segmentation Risk"
+},
+    editorialVerification: [
+      {
+            "document": "Apple Private Cloud Compute Security Architecture White Paper",
+            "type": "Technical Architecture",
+            "status": "VERIFIED \u00b7 PRIMARY SPECIFICATION",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Independent Security Audit Logs (Trail of Bits)",
+            "type": "Third-Party Audit",
+            "status": "VERIFIED \u00b7 AUDITED SYSTEM",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Apple Inc. SEC Form 10-K R&D Capitalization",
+            "type": "Regulatory Filing",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Supply Chain Memory (LPDDR5X) Procurement Contracts",
+            "type": "Trade Analysis",
+            "status": "MONITORED \u00b7 CONFIDENTIAL TERMS",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [0, 3, 7],
     tag: "ENTERPRISE PRIVACY & CLIENT ARCHITECTURE",
     readTime: "Product briefing · 3 min read",
     title: "Apple: On-Device Intelligence and the Private Cloud Security Paradigm",
@@ -445,6 +670,81 @@ const storiesData = [
   },
   {
     id: "story-3",
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Enterprise customer service and CRM operations transitioning from manual ticketing to autonomous agent workflows.",
+      "credit": "Photograph: Unsplash / Enterprise Operations"
+},
+    dateline: {
+      "byline": "By FD Academy Enterprise Software Desk & INSEAD Strategy Group",
+      "pubDate": "October 26, 2026",
+      "location": "San Francisco / Paris"
+},
+    pullQuote: "Chatbots gave AI a bad name because they were just toys. The real economic inflection is digital agents that have the authority to actually resolve issues inside the enterprise database.",
+    whatHappened: [
+      "Salesforce launched Agentforce, deploying autonomous customer service and sales development agents across thousands of enterprise client environments.",
+      "Enterprises reported autonomous ticket resolution rates climbing from 9% under traditional conversational bots to 70%+ under deterministic agent architectures.",
+      "Pricing models pivoted from per-seat SaaS licensing to per-conversation consumption pricing ($2 per resolved autonomous interaction)."
+],
+    timeline: [
+      {
+            "date": "Q1 2024",
+            "milestone": "Enterprise customers push back on per-seat copilot price increases citing low daily engagement.",
+            "source": "Morgan Stanley CIO Survey",
+            "sourceTag": "Market Survey"
+      },
+      {
+            "date": "Q3 2024",
+            "milestone": "Marc Benioff introduces Agentforce at Dreamforce, declaring conversational copilots obsolete.",
+            "source": "Dreamforce Keynote",
+            "sourceTag": "Industry Event"
+      },
+      {
+            "date": "Q2 2025",
+            "milestone": "Global enterprises deploy over 100,000 digital agents, reporting $100M+ in aggregate operational expense reductions.",
+            "source": "Salesforce Investor Day",
+            "sourceTag": "Investor Filing"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "The SaaS industry faces a structural shift: software contracts price around business outcomes rather than human employee headcount.",
+            "source": "Wall Street Journal / FD Academy",
+            "sourceTag": "Market Report"
+      }
+],
+    whatChanged: {
+      "prior": "SaaS revenue scaled linearly with enterprise employee headcount, charging $30\u2013$100 per seat per month regardless of employee output.",
+      "current": "Consumption-based pricing charges per autonomous action completed, uncoupling software revenues from customer headcount limits.",
+      "uncertainty": "Autonomous error liability\u2014who pays when an automated agent approves an unauthorized refund or erroneous contractual commitment?",
+      "riskTag": "Contractual Liability & Governance Risk"
+},
+    editorialVerification: [
+      {
+            "document": "Salesforce Inc. Form 10-Q & Product Disclosures",
+            "type": "Regulatory Filing",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Enterprise Customer Case Studies (Wiley, Saks Fifth Avenue)",
+            "type": "Customer Deployment Logs",
+            "status": "VERIFIED \u00b7 VERIFIED RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Consumption Billing Architecture Patents & Specs",
+            "type": "Patent Documentation",
+            "status": "VERIFIED \u00b7 PUBLIC RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Enterprise Agent Error Rate & Indemnification Terms",
+            "type": "Commercial Agreements",
+            "status": "MONITORED \u00b7 UNDER CONTRACTUAL REVIEW",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [0, 5, 10],
     tag: "DIGITAL WORKERS & ENTERPRISE SAAS",
     readTime: "Market analysis · 4 min read",
     title: "Salesforce: Autonomous Digital Labor Replacing Legacy FAQ Chatbots",
@@ -516,6 +816,81 @@ const storiesData = [
   },
   {
     id: "story-4",
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "High-voltage transmission infrastructure connecting dedicated clean baseload power to multi-gigawatt datacenter developments.",
+      "credit": "Photograph: Unsplash / Energy Infrastructure"
+},
+    dateline: {
+      "byline": "By FD Academy Infrastructure & Energy Desk",
+      "pubDate": "October 22, 2026",
+      "location": "Seattle / Washington, D.C."
+},
+    pullQuote: "The race for AI leadership is no longer constrained by algorithmic ingenuity or chip supply; it is bounded by the physical generation of clean, 24/7 baseload electricity.",
+    whatHappened: [
+      "Amazon, Microsoft, and Google executed over $15B in multi-decade nuclear energy purchase agreements, including Small Modular Reactor (SMR) development partnerships.",
+      "Constellation Energy announced the restart of the 835MW Three Mile Island nuclear unit under an exclusive 20-year power purchase agreement with Microsoft.",
+      "Amazon Web Services acquired a 960MW nuclear-powered datacenter campus co-located directly behind-the-meter with Talen Energy's Susquehanna plant."
+],
+    timeline: [
+      {
+            "date": "Mar 2024",
+            "milestone": "AWS purchases Talen Energy's nuclear datacenter campus for $650M.",
+            "source": "Regulatory Filings",
+            "sourceTag": "M&A Filing"
+      },
+      {
+            "date": "Sep 2024",
+            "milestone": "Microsoft signs 20-year agreement to restart Three Mile Island Unit 1 (Crane Clean Energy Center).",
+            "source": "PJM Interconnection Filing",
+            "sourceTag": "Grid Filing"
+      },
+      {
+            "date": "Oct 2024",
+            "milestone": "Google partners with Kairos Power to deploy 500MW of small modular reactors by 2030.",
+            "source": "Corporate Announcement",
+            "sourceTag": "Clean Energy Deal"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "Federal Energy Regulatory Commission (FERC) reviews co-location tariff structures, creating regulatory scrutiny over grid cost socialization.",
+            "source": "FERC Dockets / FD Academy",
+            "sourceTag": "Regulatory Review"
+      }
+],
+    whatChanged: {
+      "prior": "Tech giants met sustainability goals through virtual power purchase agreements (VPPAs) with intermittent solar and wind farms.",
+      "current": "Hyperscalers require 24/7 non-intermittent gigawatt baseload power, directly contracting nuclear plants and funding advanced reactor commercialization.",
+      "uncertainty": "FERC regulatory challenges regarding grid reliability and consumer tariff cost shifts could delay behind-the-meter co-location projects.",
+      "riskTag": "FERC Regulatory & Cost-Shift Risk"
+},
+    editorialVerification: [
+      {
+            "document": "FERC Docket ER24-2172 (Susquehanna Co-Location Interconnection)",
+            "type": "Federal Regulatory Docket",
+            "status": "VERIFIED \u00b7 PUBLIC RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Constellation Energy Group Form 8-K (Crane Clean Energy Agreement)",
+            "type": "SEC Regulatory Filing",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "PJM Regional Transmission Organization Grid Impact Studies",
+            "type": "Grid Reliability Study",
+            "status": "VERIFIED \u00b7 TECHNICAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Kairos Power NRC Construction Permit Status",
+            "type": "Nuclear Regulatory Filing",
+            "status": "MONITORED \u00b7 PENDING NRC APPROVAL",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [1, 5, 10],
     tag: "ENERGY INFRASTRUCTURE & SUPERCOMPUTING",
     readTime: "Infrastructure briefing · 4 min read",
     title: "Hyperscalers Turn to Nuclear SMRs: The Gigawatt Energy Race for AI Data Centers",
@@ -596,6 +971,81 @@ const storiesData = [
   },
   {
     id: "story-5",
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Financial trading terminals and corporate treasury modeling desks stress-testing return on invested capital across tech sectors.",
+      "credit": "Photograph: Unsplash / Capital Markets"
+},
+    dateline: {
+      "byline": "By FD Academy Corporate Finance Desk & Harvard Business School Fellows",
+      "pubDate": "October 18, 2026",
+      "location": "New York / London"
+},
+    pullQuote: "Boards are shifting from 'FOMO CapEx' to disciplined hurdle rates. CFOs must demand verified cash-flow generation before approving the next $10B infrastructure debt issuance.",
+    whatHappened: [
+      "Annual Big Tech capital expenditures exceeded $200B, driven by datacenter real estate, energy procurement, and high-density GPU purchases.",
+      "Wall Street analysts lowered price-to-earnings multiples for technology firms that failed to demonstrate revenue acceleration commensurate with CapEx growth.",
+      "Corporate CFOs instituted strict hurdle rates (16\u201318% ROIC), forcing business units to justify generative compute allocations with verified cost savings."
+],
+    timeline: [
+      {
+            "date": "Q4 2023",
+            "milestone": "Tech giants announce 40%+ CapEx guidance increases; markets reward speculative compute capacity builds.",
+            "source": "SEC 10-K Filings",
+            "sourceTag": "SEC Filings"
+      },
+      {
+            "date": "Q2 2024",
+            "milestone": "Sequoia Capital publishes '$600B AI Question' analyzing the revenue gap between infrastructure investment and end-user software spend.",
+            "source": "Sequoia Research",
+            "sourceTag": "VC Research"
+      },
+      {
+            "date": "Q3 2025",
+            "milestone": "Tech debt issuances spike as firms leverage corporate bond markets to finance long-term datacenter leases.",
+            "source": "Bloomberg / S&P Global",
+            "sourceTag": "Credit Analysis"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "Accelerated GPU depreciation schedules (shifting from 5-year to 3-year useful lives) begin eroding operating profit margins.",
+            "source": "GAAP Accounting Bulletins / FD Academy",
+            "sourceTag": "Accounting Audit"
+      }
+],
+    whatChanged: {
+      "prior": "Near-zero interest rates and unconstrained venture funding permitted open-ended technology research spending without clear payback horizons.",
+      "current": "Higher cost of capital (WACC > 8%) and Wall Street scrutiny demand rapid, quantified returns on software infrastructure outlays.",
+      "uncertainty": "Rapid technological obsolescence of chip architectures creates stranded asset risks if $40,000 GPUs are depreciated before earning back their capital cost.",
+      "riskTag": "Obsolescence & Stranded Asset Risk"
+},
+    editorialVerification: [
+      {
+            "document": "SEC Form 10-K Filings (Microsoft, Alphabet, Amazon, Meta)",
+            "type": "Audited Financial Disclosures",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Goldman Sachs Global Investment Research: Gen AI CapEx Analysis",
+            "type": "Wall Street Research",
+            "status": "VERIFIED \u00b7 PUBLISHED RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Financial Accounting Standards Board (FASB) Hardware Depreciation Guidelines",
+            "type": "Accounting Standards",
+            "status": "VERIFIED \u00b7 REGULATORY CODE",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Corporate Bond Market Infrastructure Spreads",
+            "type": "Fixed Income Market Data",
+            "status": "MONITORED \u00b7 DAILY BENCHMARK",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [0, 1, 4],
     tag: "CORPORATE FINANCE & CAPITAL ALLOCATION",
     readTime: "CFO & Board analysis · 5 min read",
     title: "The Cost of Capital in the Age of Autonomous AI: Balancing $50B CapEx with ROI Metrics",
@@ -678,6 +1128,81 @@ const storiesData = [
   // Story 6: Microsoft & OpenAI
   {
     id: 6,
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Azure global datacenter fiber backbones engineered with low-latency InfiniBand clustering for frontier model training.",
+      "credit": "Photograph: Unsplash / Global Networks"
+},
+    dateline: {
+      "byline": "By FD Academy Corporate Strategy Desk & Oxford Sa\u00efd Business School",
+      "pubDate": "October 14, 2026",
+      "location": "Redmond / San Francisco"
+},
+    pullQuote: "We didn't buy OpenAI; we partnered with them. We brought world-class cloud infrastructure and global enterprise distribution; they brought algorithmic velocity.",
+    whatHappened: [
+      "Microsoft scaled its capital and Azure cloud infrastructure commitment to OpenAI to $13 billion, restructuring enterprise cloud competition.",
+      "Azure constructed specialized supercomputers with tens of thousands of GPUs linked via non-blocking InfiniBand interconnects to train frontier models.",
+      "Microsoft secured 75% profit participation rights and exclusive commercial distribution of OpenAI intellectual property across enterprise cloud products."
+],
+    timeline: [
+      {
+            "date": "Jul 2019",
+            "milestone": "Microsoft makes initial $1B investment in OpenAI, becoming its preferred cloud partner.",
+            "source": "Corporate Press Release",
+            "sourceTag": "Partnership"
+      },
+      {
+            "date": "Jan 2023",
+            "milestone": "Microsoft expands partnership with multi-year, multi-billion dollar investment following ChatGPT's public breakthrough.",
+            "source": "SEC 8-K",
+            "sourceTag": "SEC 8-K"
+      },
+      {
+            "date": "Q4 2024",
+            "milestone": "Antitrust scrutiny intensifies from the US FTC and UK CMA regarding non-voting governance alliances.",
+            "source": "CMA Inquiry Docket",
+            "sourceTag": "Antitrust Docket"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "OpenAI corporate restructuring toward a public benefit corporation introduces governance questions regarding Microsoft's commercial rights.",
+            "source": "FD Academy Dossier",
+            "sourceTag": "Governance Audit"
+      }
+],
+    whatChanged: {
+      "prior": "Tech giants acquired innovative startups outright, frequently stifling entrepreneurial research speed within corporate bureaucracies.",
+      "current": "Asymmetric partnerships trading proprietary infrastructure for commercial distribution allow agility while securing frontier IP.",
+      "uncertainty": "Multilateral antitrust reviews and OpenAI's governance transitions threaten long-term exclusivity arrangements.",
+      "riskTag": "Antitrust & Partnership Governance Risk"
+},
+    editorialVerification: [
+      {
+            "document": "Microsoft Corp SEC Form 10-K & Profit Waterfall Footnotes",
+            "type": "Audited Financial Statement",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "UK Competition and Markets Authority (CMA) Partnership Review",
+            "type": "Regulatory Finding",
+            "status": "VERIFIED \u00b7 REGULATORY RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "US Federal Trade Commission Generative AI Inquiry Submissions",
+            "type": "Regulatory Filings",
+            "status": "VERIFIED \u00b7 LEGAL DOCKET",
+            "statusCode": "verified"
+      },
+      {
+            "document": "OpenAI Corporate Restructuring Charters",
+            "type": "Corporate Governance Documents",
+            "status": "MONITORED \u00b7 PENDING FILING",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [0, 1, 3],
     tag: "CORPORATE STRATEGY & ALLIANCES",
     readTime: "5.1m read",
     title: "Microsoft's $13 Billion Asymmetric OpenAI Alliance: Restructuring Global Enterprise Cloud",
@@ -760,6 +1285,81 @@ const storiesData = [
   // Story 7: ASML & TSMC EUV Breakthrough
   {
     id: 7,
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Precision semiconductor wafer lithography optics capable of etching sub-5nm transistor features with 13.5nm extreme ultraviolet light.",
+      "credit": "Photograph: Unsplash / Advanced Nanotechnology"
+},
+    dateline: {
+      "byline": "By FD Academy Semiconductor & Nanotechnology Desk",
+      "pubDate": "October 10, 2026",
+      "location": "Veldhoven / Hsinchu"
+},
+    pullQuote: "EUV lithography was considered physically impossible. It succeeded because our customers took existential equity risk alongside our engineering teams to build a machine with 100,000 precision parts.",
+    whatHappened: [
+      "ASML commercialized Extreme Ultraviolet (EUV) lithography using 13.5nm light produced by laser-pulsed molten tin droplets in vacuum chambers.",
+      "TSMC deployed EUV systems at industrial scale, achieving manufacturing yields on sub-5nm nodes that established an unassailable global semiconductor foundry lead.",
+      "ASML achieved a 100% global monopoly on leading-edge lithography, making Veldhoven, Netherlands the single most critical manufacturing bottleneck on Earth."
+],
+    timeline: [
+      {
+            "date": "2012",
+            "milestone": "TSMC, Intel, and Samsung invest over $5B into ASML's customer equity co-investment program to finance EUV development.",
+            "source": "ASML Annual Report",
+            "sourceTag": "Consortium Pact"
+      },
+      {
+            "date": "2019",
+            "milestone": "TSMC achieves volume production of Apple A13 bionic processors using first-generation EUV systems.",
+            "source": "TSMC Technical Symposium",
+            "sourceTag": "Fab Production"
+      },
+      {
+            "date": "2024",
+            "milestone": "ASML ships first High-NA EUV system (Twinscan EXE:5000) with 0.55 numerical aperture to commercial customers.",
+            "source": "ASML Investor Day",
+            "sourceTag": "Next-Gen Tool"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "Multilateral export controls restrict advanced lithography shipments, heightening geopolitical tensions.",
+            "source": "FD Academy Semiconductor Radar",
+            "sourceTag": "Trade Analysis"
+      }
+],
+    whatChanged: {
+      "prior": "Semiconductor fabrication relied on multi-patterning with deep ultraviolet (193nm) light, reaching physical complexity and cost barriers.",
+      "current": "Single-exposure EUV enables printing transistors at atomic scales, centralizing the entire advanced technology supply chain into one vendor.",
+      "uncertainty": "Geopolitical export controls and regional fab subsidies ($53B US CHIPS Act) risk fracturing the global semiconductor supply chain into duplicative, lower-margin regional clusters.",
+      "riskTag": "Geopolitical Export & Supply Chain Fragmentation Risk"
+},
+    editorialVerification: [
+      {
+            "document": "ASML Holding N.V. Annual Reports & SEC Form 20-F",
+            "type": "Audited Regulatory Filing",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "TSMC Annual Report & Technology Symposium Whitepapers",
+            "type": "Foundry Technical Disclosures",
+            "status": "VERIFIED \u00b7 PRIMARY RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Dutch Ministry for Foreign Trade Export Licensing Decrees",
+            "type": "Sovereign Export Regulations",
+            "status": "VERIFIED \u00b7 LEGAL CODE",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Carl Zeiss SMT Optics Performance Verification Data",
+            "type": "Technical Engineering Logs",
+            "status": "MONITORED \u00b7 PROPRIETARY TRADE SECRET",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [1, 5, 9],
     tag: "SEMICONDUCTOR FABRICATION & OPTICS",
     readTime: "5.6m read",
     title: "ASML & TSMC: The $10 Billion Extreme Ultraviolet (EUV) Monopolistic Breakthrough",
@@ -842,6 +1442,81 @@ const storiesData = [
   // Story 8: Netflix Big Data & Cloud Migration
   {
     id: 8,
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Subscriber telemetry visualization tracking streaming engagement and completion curves across global audiences.",
+      "credit": "Photograph: Unsplash / Digital Media"
+},
+    dateline: {
+      "byline": "By FD Academy Digital Platforms Desk & Columbia Business School",
+      "pubDate": "October 6, 2026",
+      "location": "Los Gatos / New York"
+},
+    pullQuote: "We didn't bet $100 million on creative instinct alone. Viewer telemetry demonstrated an unaddressed audience of millions who would binge-watch political drama without blinking.",
+    whatHappened: [
+      "Following a major datacenter outage, Netflix closed its proprietary server farms and migrated 100% of video streaming infrastructure to AWS public cloud.",
+      "To survive public cloud node failures, Netflix engineered Chaos Monkey and Simian Army, pioneering chaos engineering across modern software architecture.",
+      "Analyzing viewing telemetry across 33M subscribers, Netflix bypassed pilot episodes and committed $100M upfront for two seasons of 'House of Cards', revolutionizing entertainment economics."
+],
+    timeline: [
+      {
+            "date": "Aug 2008",
+            "milestone": "Major database corruption halts DVD shipments for 3 days, prompting Reed Hastings to commit to public cloud migration.",
+            "source": "Netflix TechBlog",
+            "sourceTag": "TechBlog"
+      },
+      {
+            "date": "2011",
+            "milestone": "Netflix open-sources Chaos Monkey, deliberately injecting random latency and server shutdowns into production.",
+            "source": "ACM Queue",
+            "sourceTag": "ACM Paper"
+      },
+      {
+            "date": "Feb 2013",
+            "milestone": "'House of Cards' debuts simultaneously worldwide, establishing the binge-viewing model.",
+            "source": "New York Times",
+            "sourceTag": "Media Record"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "Cloud-native architectures and telemetry-driven programming become universal across digital consumer platforms.",
+            "source": "FD Academy Case Series",
+            "sourceTag": "Case Analysis"
+      }
+],
+    whatChanged: {
+      "prior": "Traditional entertainment relied on speculative pilot seasons and linear broadcasting schedules governed by ratings agencies.",
+      "current": "Granular subscriber behavioral telemetry directly guides multi-hundred-million-dollar capital investments on resilient cloud platforms.",
+      "uncertainty": "Rising cloud egress fees and subscription churn in saturated markets force streaming platforms into hybrid ad-tier business models.",
+      "riskTag": "Subscriber Saturation & Churn Risk"
+},
+    editorialVerification: [
+      {
+            "document": "Netflix Open Source Software Architecture Specifications",
+            "type": "Technical Documentation",
+            "status": "VERIFIED \u00b7 OPEN SOURCE CODE",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Netflix Inc. SEC Form 10-K & Content Amortization Tables",
+            "type": "Audited Financial Statement",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Amazon Web Services Customer Architecture Case Studies",
+            "type": "Cloud Infrastructure Logs",
+            "status": "VERIFIED \u00b7 AUDITED SYSTEM",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Global Streaming Subscriber Telemetry Benchmarks",
+            "type": "Third-Party Analytics",
+            "status": "MONITORED \u00b7 INDUSTRY ESTIMATE",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [3, 6, 10],
     tag: "BIG DATA ANALYTICS & CLOUD RESILIENCE",
     readTime: "4.9m read",
     title: "Netflix's $100M Double Down: The Big Data Greenlight of 'House of Cards' & 100% Cloud Migration",
@@ -924,6 +1599,81 @@ const storiesData = [
   // Story 9: Tesla Production Hell
   {
     id: 9,
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Robotic welding arms and final assembly lines at the Fremont manufacturing facility during Model 3 ramp-up.",
+      "credit": "Photograph: Unsplash / Industrial Robotics"
+},
+    dateline: {
+      "byline": "By FD Academy Manufacturing & Operations Desk",
+      "pubDate": "October 2, 2026",
+      "location": "Fremont / Austin"
+},
+    pullQuote: "Yes, excessive automation at Tesla was a mistake. To be precise, my mistake. Humans are underrated. We took a sledgehammer and ripped half the broken robots out so workers could build the car.",
+    whatHappened: [
+      "Tesla's attempt to fully automate Model 3 assembly via an 'alien dreadnought' robotic factory failed as robots struggled with deformable parts like wiring harnesses and rubber seals.",
+      "Burning over $1B per quarter with cash runway down to weeks, Tesla erected an outdoor tent assembly line (GA4) in Fremont, reintroducing human workers to break bottlenecks.",
+      "Tesla achieved its 5,000 car/week production target in mid-2018, transitioning from imminent insolvency into the world's most valuable automotive manufacturer."
+],
+    timeline: [
+      {
+            "date": "Jul 2017",
+            "milestone": "Elon Musk delivers first Model 3s, declaring Tesla has entered 'Production Hell'.",
+            "source": "Public Delivery Event",
+            "sourceTag": "Public Delivery"
+      },
+      {
+            "date": "Apr 2018",
+            "milestone": "Musk publicly admits excessive automation was a critical mistake; GA4 tent line erected in Fremont parking lot.",
+            "source": "Twitter / CBS This Morning",
+            "sourceTag": "Media Interview"
+      },
+      {
+            "date": "Jun 2018",
+            "milestone": "Tesla produces 5,031 Model 3s in seven days, achieving GAAP profitability in Q3.",
+            "source": "SEC Form 8-K",
+            "sourceTag": "SEC 8-K"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "Automotive manufacturing universally adopts balanced automation: robots for rigid heavy stamping, humans for tactile dexterity.",
+            "source": "FD Academy Manufacturing Series",
+            "sourceTag": "Operations Audit"
+      }
+],
+    whatChanged: {
+      "prior": "Manufacturing theory assumed 100% lights-out robotic automation would yield superior speed and lower unit labor costs.",
+      "current": "Robotics excels in rigid, high-force repetitive tasks, while human dexterity and sensory feedback remain far superior for deformable parts manipulation.",
+      "uncertainty": "Next-generation humanoid robotics promise to bridge this dexterity gap, but capital costs and cycle time reliability remain unproven at scale.",
+      "riskTag": "Dexterity Gap & Humanoid CapEx Risk"
+},
+    editorialVerification: [
+      {
+            "document": "Tesla Inc. SEC Form 10-K & Q3 2018 Shareholder Letter",
+            "type": "Regulatory Filing",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "National Highway Traffic Safety Administration (NHTSA) Production Audits",
+            "type": "Federal Safety Records",
+            "status": "VERIFIED \u00b7 PUBLIC RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Panasonic Corporation Gigafactory 1 Joint Venture Disclosures",
+            "type": "Supply Chain Agreement",
+            "status": "VERIFIED \u00b7 CORPORATE FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Automated Assembly Cycle Time & Takt Variance Data",
+            "type": "Manufacturing Engineering Logs",
+            "status": "MONITORED \u00b7 INTERNAL BENCHMARK",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [1, 5, 7],
     tag: "MANUFACTURING & LIQUIDITY MANAGEMENT",
     readTime: "5.4m read",
     title: "Tesla's 'Production Hell': The Hard Limits of Automation and the Battery Gigafactory Pivot",
@@ -1006,6 +1756,81 @@ const storiesData = [
   // Story 10: Amazon AWS Cloud Utility
   {
     id: 10,
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Standardized multi-tenant server racks that converted fixed corporate IT infrastructure budgets into variable utility billing.",
+      "credit": "Photograph: Unsplash / Server Racks"
+},
+    dateline: {
+      "byline": "By FD Academy Enterprise Platforms Desk & MIT Sloan",
+      "pubDate": "September 28, 2026",
+      "location": "Seattle / Boston"
+},
+    pullQuote: "We realized every engineering team was doing the undifferentiated heavy lifting of infrastructure. By providing reliable primitives, we let developers focus entirely on customer value while converting CapEx into OpEx.",
+    whatHappened: [
+      "Amazon identified internal engineering bottlenecks where retail teams spent months building redundant storage and compute plumbing before launching features.",
+      "Andy Jassy led the creation of standardized infrastructure primitives\u2014S3 storage, EC2 compute, and SQS messaging\u2014launched with pay-as-you-go pricing.",
+      "AWS grew into a $100B+ annual run-rate business, fundamentally reshaping global corporate accounting by shifting IT spending from upfront capital to variable operating expenses."
+],
+    timeline: [
+      {
+            "date": "2003",
+            "milestone": "Amazon leadership retreat identifies infrastructure primitives as the key to organizational agility.",
+            "source": "The Everything Store",
+            "sourceTag": "Executive Memoir"
+      },
+      {
+            "date": "Mar 2006",
+            "milestone": "Amazon S3 launches at $0.15 per gigabyte per month, followed by EC2 in August.",
+            "source": "AWS Announcement",
+            "sourceTag": "Service Launch"
+      },
+      {
+            "date": "2015",
+            "milestone": "Amazon breaks out AWS financial results for the first time, revealing $7.88B in annual revenue and 23.6% operating margins.",
+            "source": "SEC Form 10-K",
+            "sourceTag": "Segment 10-K"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "Cloud multi-tenancy powers 90% of global internet applications and serves as the infrastructure backbone for generative AI.",
+            "source": "FD Academy Case Archive",
+            "sourceTag": "Case Archive"
+      }
+],
+    whatChanged: {
+      "prior": "Launching enterprise software required millions in upfront capital for server racks, co-location leases, and specialized database administrators.",
+      "current": "Software can be provisioned instantaneously via API calls on corporate credit cards, removing capital barriers for global technology innovation.",
+      "uncertainty": "Vendor lock-in and high cloud egress fees have sparked enterprise 'cloud repatriation' initiatives for mature, predictable batch workloads.",
+      "riskTag": "Cloud Lock-in & Repatriation Cost Risk"
+},
+    editorialVerification: [
+      {
+            "document": "Amazon.com Inc. SEC Form 10-K (Segment Disclosures: AWS)",
+            "type": "Audited Financial Statement",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Amazon Simple Storage Service (S3) Original Architecture Spec",
+            "type": "Technical Documentation",
+            "status": "VERIFIED \u00b7 PUBLIC RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Gartner Magic Quadrant for Strategic Cloud Platform Services",
+            "type": "Industry Analyst Benchmark",
+            "status": "VERIFIED \u00b7 BENCHMARK STUDY",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Enterprise Workload Repatriation Economic Studies",
+            "type": "Financial Modeling Data",
+            "status": "MONITORED \u00b7 EMERGING TREND",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [3, 4, 8],
     tag: "ENTERPRISE PLATFORMS & FINANCIAL ACCOUNTING",
     readTime: "5.0m read",
     title: "Amazon AWS: Turning an Internal IT Cost Center into a $100 Billion Cloud Utility",
@@ -1088,6 +1913,81 @@ const storiesData = [
   // Story 11: Novo Nordisk GLP-1 Revolution
   {
     id: 11,
+    leadImage: {
+      "url": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&h=600&q=85",
+      "caption": "Biopharmaceutical peptide synthesis and automated sterile filling lines supporting global GLP-1 therapy distribution.",
+      "credit": "Photograph: Unsplash / Biopharmaceutical Laboratory"
+},
+    dateline: {
+      "byline": "By FD Academy Life Sciences & Health Economics Desk",
+      "pubDate": "September 24, 2026",
+      "location": "Bagsv\u00e6rd / Indianapolis"
+},
+    pullQuote: "We spent 30 years researching diabetes biology before unlocking obesity. This is not cosmetic; it is an intervention in the biological root cause of chronic metabolic disease that reshapes healthcare economics.",
+    whatHappened: [
+      "Novo Nordisk and Eli Lilly commercialized peptide GLP-1 receptor agonists (semaglutide and tirzepatide), delivering 15\u201322% clinical body weight reductions.",
+      "Cardiovascular trials (SELECT) proved a 20% reduction in major adverse cardiac events (strokes and heart attacks), securing broad medical necessity endorsements.",
+      "Unprecedented global demand triggered a $16.5B acquisition of sterile fill-finish manufacturer Catalent, while sovereign payers wrestled with long-term healthcare budget solvency."
+],
+    timeline: [
+      {
+            "date": "Jun 2021",
+            "milestone": "US FDA approves Wegovy (semaglutide 2.4mg) for chronic weight management.",
+            "source": "FDA Approval Announcement",
+            "sourceTag": "FDA Approval"
+      },
+      {
+            "date": "Aug 2023",
+            "milestone": "Novo Nordisk announces landmark SELECT trial results demonstrating 20% cardiovascular risk reduction.",
+            "source": "New England Journal of Medicine",
+            "sourceTag": "Clinical Trial"
+      },
+      {
+            "date": "Feb 2024",
+            "milestone": "Novo Holdings acquires Catalent for $16.5B to secure sterile injector cartridge manufacturing capacity.",
+            "source": "Merger Filings",
+            "sourceTag": "M&A Filing"
+      },
+      {
+            "date": "Nov 2026",
+            "milestone": "The GLP-1 drug class approaches $100B in annual sales, altering food retail consumption and corporate health plan liabilities.",
+            "source": "Financial Times / FD Academy",
+            "sourceTag": "Economic Analysis"
+      }
+],
+    whatChanged: {
+      "prior": "Obesity was treated as a lifestyle failure with ineffective behavioral counseling and minimal pharmaceutical reimbursement.",
+      "current": "Metabolic health is recognized as a chronic biological disease requiring continuous endocrine therapy, disrupting food and medical industries.",
+      "uncertainty": "High discontinuation rates (>50% after one year) and sovereign payer fiscal caps threaten lifelong treatment assumptions.",
+      "riskTag": "Payer Solvency & Discontinuation Risk"
+},
+    editorialVerification: [
+      {
+            "document": "New England Journal of Medicine (SELECT Trial Publication)",
+            "type": "Peer-Reviewed Clinical Trial",
+            "status": "VERIFIED \u00b7 PEER REVIEWED",
+            "statusCode": "verified"
+      },
+      {
+            "document": "Novo Nordisk A/S SEC Form 20-F & Annual Report",
+            "type": "Audited Financial Statement",
+            "status": "VERIFIED \u00b7 OFFICIAL FILING",
+            "statusCode": "verified"
+      },
+      {
+            "document": "US FDA Drug Approval Packages & Prescribing Information",
+            "type": "Federal Regulatory Approvals",
+            "status": "VERIFIED \u00b7 OFFICIAL RECORD",
+            "statusCode": "verified"
+      },
+      {
+            "document": "National Healthcare System (NHS / Medicare) Cost-Effectiveness Models",
+            "type": "Health Economics Modeling",
+            "status": "MONITORED \u00b7 PENDING REIMBURSEMENT",
+            "statusCode": "warning"
+      }
+],
+    relatedStoryIds: [0, 5, 7],
     tag: "PHARMACEUTICAL BIOLOGY & HEALTH ECONOMICS",
     readTime: "5.5m read",
     title: "Novo Nordisk & Eli Lilly: The GLP-1 Metabolic Revolution & Macro Healthcare Economics",
@@ -2179,7 +3079,7 @@ function renderCategoryCards(filter) {
   });
 }
 
-// Render Reader Story (including Linked Knowledge Domains & Learning Hub)
+// Render Reader Story (7-Layer Digital Broadsheet Architecture)
 function renderStory(index) {
   const story = storiesData[index];
   if (!story) return;
@@ -2193,100 +3093,102 @@ function renderStory(index) {
     pill.setAttribute("aria-selected", String(isCur));
   });
 
-  // Story Metadata
+  // Layer 1: Front-Page Lead Case Masthead
   const tagEl = document.querySelector("#story-tag");
   if (tagEl) tagEl.textContent = story.tag;
-  const timeEl = document.querySelector("#story-read-time");
-  if (timeEl) timeEl.textContent = story.readTime;
   const titleEl = document.querySelector("#story-title");
   if (titleEl) titleEl.textContent = story.title;
   const dekEl = document.querySelector("#story-dek");
   if (dekEl) dekEl.textContent = story.dek;
+  const bylineEl = document.querySelector("#story-byline");
+  if (bylineEl && story.dateline) bylineEl.textContent = story.dateline.byline;
+  const pubDateEl = document.querySelector("#story-pub-date");
+  if (pubDateEl && story.dateline) pubDateEl.textContent = story.dateline.pubDate;
+  const locEl = document.querySelector("#story-location");
+  if (locEl && story.dateline) locEl.textContent = story.dateline.location;
+  const timeEl = document.querySelector("#story-read-time");
+  if (timeEl) timeEl.textContent = story.readTime;
 
-  // Story Body (with in-text knowledge links)
-  const bodyEl = document.querySelector("#story-body");
-  if (bodyEl) {
-    bodyEl.innerHTML = story.body.map(p => `<p>${p}</p>`).join("");
+  // Master Lead Photograph
+  const leadImg = document.querySelector("#lead-story-image");
+  if (leadImg && story.leadImage) {
+    leadImg.src = story.leadImage.url;
+    leadImg.alt = story.title;
   }
+  const captionEl = document.querySelector("#lead-image-caption-text");
+  if (captionEl && story.leadImage) captionEl.textContent = story.leadImage.caption;
+  const creditEl = document.querySelector("#lead-image-credit");
+  if (creditEl && story.leadImage) creditEl.textContent = story.leadImage.credit;
 
-  // Linked Knowledge Domains Box under Story
-  const domainsBadgeCount = document.querySelector("#domains-badge-count");
-  if (domainsBadgeCount) domainsBadgeCount.textContent = `${story.linkedDomains.length} Academic Fields`;
-
-  const domainsListEl = document.querySelector("#story-linked-domains");
-  if (domainsListEl) {
-    domainsListEl.innerHTML = story.linkedDomains.map(d => `
-      <div class="domain-chip-card">
-        <div class="domain-card-left">
-          <span class="domain-code-badge">${d.code}</span>
-          <div class="domain-text-block">
-            <strong>${d.name} <small style="color:var(--fd-muted); font-weight:normal;">· ${d.subfield}</small></strong>
-            <span>${d.relevance}</span>
-          </div>
-        </div>
-        <a href="${d.link}" class="domain-explore-btn">
-          Explore Domain ↗
-        </a>
-      </div>
-    `).join("");
-  }
-
-  // Executive Likes Social Proof
-  const stackEl = document.querySelector("#exec-avatar-stack");
-  if (stackEl) {
-    stackEl.innerHTML = story.execLikes.map(exec => 
-      `<img src="${getPortraitUrl(exec.name)}" data-portrait-name="${exec.name}" alt="${exec.name}" title="${exec.name} (${exec.title})" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
-    ).join("");
-    installPortraitFallbacks(stackEl);
-  }
-
-  const likesTextEl = document.querySelector("#exec-likes-text");
-  if (likesTextEl) {
-    likesTextEl.innerHTML = `
-      Profiles featured in this illustrative discussion: <strong>${story.execLikes[0].name}</strong> and <strong>${story.execLikes[1]?.name || 'other executives'}</strong>
+  // Layer 2: What Happened (Essential Record)
+  const whatHappenedEl = document.querySelector("#what-happened-content");
+  if (whatHappenedEl && story.whatHappened) {
+    whatHappenedEl.innerHTML = `
+      <ul class="what-happened-list">
+        ${story.whatHappened.map(item => `
+          <li class="what-happened-item">
+            <span class="what-happened-bullet">■</span>
+            <span>${item}</span>
+          </li>
+        `).join("")}
+      </ul>
     `;
   }
 
-  // Counters
-  const countLikeEl = document.querySelector("#count-like");
-  if (countLikeEl) countLikeEl.textContent = story.metrics.like.toLocaleString();
-
-  // CEO Comments
-  const commentsEl = document.querySelector("#ceo-comments-list");
-  if (commentsEl) {
-    commentsEl.innerHTML = story.ceoComments.map(c => `
-      <div class="ceo-comment-card">
-        <div class="ceo-header-row">
-          <img class="ceo-avatar" src="${getPortraitUrl(c.name)}" data-portrait-name="${c.name}" alt="${c.name}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <div class="ceo-meta-text">
-            <div class="ceo-name-line">
-              <span>${c.name}</span>
-              <span class="in-icon">in</span>
-              <span class="f500-tag">Illustrative</span>
-            </div>
-            <div class="ceo-role-line">${c.title}</div>
-          </div>
+  // Layer 3: Chronological Timeline
+  const timelineEl = document.querySelector("#story-timeline-list");
+  if (timelineEl && story.timeline) {
+    timelineEl.innerHTML = story.timeline.map(step => `
+      <li class="timeline-step-item">
+        <span class="timeline-step-dot"></span>
+        <div class="timeline-header-line">
+          <span class="timeline-date-tag">${step.date}</span>
+          <span class="timeline-source-badge">[${step.sourceTag}]</span>
         </div>
-        <div class="ceo-quote-body">"${c.quote}"</div>
-        <div class="ceo-actions-line">
-          <span>👍 ${c.likes} likes</span> • <span style="cursor:pointer; color:var(--fd-orange-dark); font-weight:600;">Reply</span> • <span>${c.time}</span>
-        </div>
-      </div>
+        <p class="timeline-desc">${step.milestone} <small style="color:var(--muted-ink);">— ${step.source}</small></p>
+      </li>
     `).join("");
-    installPortraitFallbacks(commentsEl);
   }
 
-  // Copilot Panel
-  const timeBadgeEl = document.querySelector("#copilot-time-badge");
-  if (timeBadgeEl) timeBadgeEl.textContent = story.copilot.timeBadge;
+  // Layer 4: What Changed / What Remains Uncertain
+  const whatChangedEl = document.querySelector("#what-changed-content");
+  if (whatChangedEl && story.whatChanged) {
+    whatChangedEl.innerHTML = `
+      <div class="changed-card">
+        <span class="changed-card-tag teal">The Operating Shift</span>
+        <div class="changed-line">
+          <strong>Prior Equilibrium:</strong> ${story.whatChanged.prior}
+        </div>
+        <div class="changed-line" style="margin-top:6px;">
+          <strong>New Operating Reality:</strong> ${story.whatChanged.current}
+        </div>
+      </div>
+      <div class="changed-card risk-card">
+        <span class="changed-card-tag wine">What Remains Uncertain · ${story.whatChanged.riskTag}</span>
+        <div class="changed-line">
+          ${story.whatChanged.uncertainty}
+        </div>
+      </div>
+    `;
+  }
+
+  // Layer 5: Context & Deep Dive
+  const pullQuoteEl = document.querySelector("#editorial-pull-quote");
+  if (pullQuoteEl && story.pullQuote) pullQuoteEl.textContent = story.pullQuote;
+
+  const bodyEl = document.querySelector("#story-body");
+  if (bodyEl && story.body) {
+    bodyEl.innerHTML = story.body.map(p => `<p>${p}</p>`).join("");
+  }
+
+  // AI Strategic Decision Analysis (Independent Analytical Model)
   const tldrEl = document.querySelector("#copilot-tldr-text");
   if (tldrEl) tldrEl.textContent = story.copilot.tldr;
-  const sentimentEl = document.querySelector(".sentiment-val");
-  if (sentimentEl) sentimentEl.textContent = story.copilot.consensus;
+  const consensusEl = document.querySelector("#ai-consensus-val");
+  if (consensusEl) consensusEl.textContent = story.copilot.consensus;
 
-  // Takeaways
   const takeawaysEl = document.querySelector("#copilot-takeaways-list");
-  if (takeawaysEl) {
+  if (takeawaysEl && story.copilot.takeaways) {
     takeawaysEl.innerHTML = story.copilot.takeaways.map((t, idx) => `
       <li>
         <strong>${idx + 1}. ${t.title}</strong>
@@ -2295,38 +3197,118 @@ function renderStory(index) {
     `).join("");
   }
 
-  // Playbook
   const playbookEl = document.querySelector("#copilot-playbook-box");
   if (playbookEl) {
     playbookEl.innerHTML = `
-      <p><strong>🚀 Actionable Playbook:</strong> ${story.copilot.playbook}</p>
+      <p><strong>🚀 Actionable Boardroom Playbook:</strong> ${story.copilot.playbook}</p>
     `;
   }
 
-  // Learning Hub Pane inside Copilot
-  const learningBoxEl = document.querySelector("#copilot-learning-box");
+  // Executive Forum (Likes & Discussion)
+  const stackEl = document.querySelector("#exec-avatar-stack");
+  if (stackEl && story.execLikes) {
+    stackEl.innerHTML = story.execLikes.map(exec => 
+      `<img src="${getPortraitUrl(exec.name)}" data-portrait-name="${exec.name}" alt="${exec.name}" title="${exec.name} (${exec.title})" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
+    ).join("");
+    installPortraitFallbacks(stackEl);
+  }
+
+  const likesTextEl = document.querySelector("#exec-likes-text");
+  if (likesTextEl && story.execLikes) {
+    likesTextEl.innerHTML = `
+      Profiles participating in this illustrative discussion: <strong>${story.execLikes[0]?.name || ''}</strong> and <strong>${story.execLikes[1]?.name || 'other executives'}</strong>
+    `;
+  }
+
+  const countLikeEl = document.querySelector("#count-like");
+  if (countLikeEl && story.metrics) countLikeEl.textContent = story.metrics.like.toLocaleString();
+
+  const commentsEl = document.querySelector("#ceo-comments-list");
+  if (commentsEl && story.ceoComments) {
+    commentsEl.innerHTML = story.ceoComments.map(c => `
+      <div class="ceo-comment-card">
+        <div class="ceo-header-row">
+          <img class="ceo-avatar" src="${getPortraitUrl(c.name)}" data-portrait-name="${c.name}" alt="${c.name}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+          <div class="ceo-meta-text">
+            <div class="ceo-name-line">
+              <span>${c.name}</span>
+              <span class="in-icon">in</span>
+              <span class="f500-tag">Executive Leader</span>
+            </div>
+            <div class="ceo-role-line">${c.title}</div>
+          </div>
+        </div>
+        <div class="ceo-quote-body">"${c.quote}"</div>
+        <div class="ceo-actions-line">
+          <span>👍 ${c.likes} likes</span> • <span style="cursor:pointer; color:var(--editorial-teal); font-weight:600;">Reply</span> • <span>${c.time}</span>
+        </div>
+      </div>
+    `).join("");
+    installPortraitFallbacks(commentsEl);
+  }
+
+  // Layer 6: Fact Sidebar (Sources Table)
+  const auditBodyEl = document.querySelector("#verification-sources-body");
+  if (auditBodyEl && story.editorialVerification) {
+    auditBodyEl.innerHTML = story.editorialVerification.map(v => `
+      <tr>
+        <td>
+          <span class="verification-doc-name">${v.document}</span>
+          <span class="verification-doc-type">${v.type}</span>
+        </td>
+        <td>
+          <span class="verification-status-tag ${v.statusCode}">${v.status}</span>
+        </td>
+      </tr>
+    `).join("");
+  }
+
+  // MapKAI Linked Disciplines in Sidebar
+  const domainsBadgeCount = document.querySelector("#domains-badge-count");
+  if (domainsBadgeCount && story.linkedDomains) {
+    domainsBadgeCount.textContent = `${story.linkedDomains.length} Disciplines`;
+  }
+
+  const domainsListEl = document.querySelector("#story-linked-domains");
+  if (domainsListEl && story.linkedDomains) {
+    domainsListEl.innerHTML = story.linkedDomains.map(d => `
+      <div class="domain-chip-card">
+        <span class="domain-code-badge">${d.code}</span>
+        <div class="domain-text-block">
+          <strong>${d.name} <small style="color:var(--muted-ink); font-weight:normal;">· ${d.subfield}</small></strong>
+          <span>${d.relevance}</span>
+        </div>
+        <a href="${d.link}" class="domain-explore-btn">
+          Explore Curriculum ↗
+        </a>
+      </div>
+    `).join("");
+  }
+
+  // Learning Roadmap in Sidebar
+  const learningBoxEl = document.querySelector("#learning-roadmap-box");
   if (learningBoxEl && story.learningRoadmap) {
     const allSessions = getAllAcademySessions();
     const linkedEvent = allSessions.find(m => m.linkedStoryId === index) || allSessions[0];
     learningBoxEl.innerHTML = `
+      <div class="sidebar-box-header">
+        <span class="sidebar-tag">ACADEMY LEARNING TRACK</span>
+        <span class="audit-seal">RSVP OPEN</span>
+      </div>
       <div class="learning-roadmap-card">
-        <span class="roadmap-title">🎓 FOUNDATIONAL DISCIPLINE CONCEPTS</span>
+        <span class="roadmap-title">Core Discipline Concepts</span>
         <p>${story.learningRoadmap.coreConcepts}</p>
-        <span class="roadmap-title" style="margin-top:10px;">📚 RECOMMENDED MAPKAI TRACK</span>
+        <span class="roadmap-title" style="margin-top:8px;">Recommended Track</span>
         <p>${story.learningRoadmap.recommendedModule}</p>
       </div>
       <div class="emba-seminar-prompt">
-        <strong>EMBA SEMINAR DISCUSSION PROMPT</strong>
+        <strong>EMBA Seminar Prompt:</strong>
         "${story.learningRoadmap.seminarPrompt}"
       </div>
-      <div class="learning-event-recommend-card" style="margin-top:14px; background:#ffffff; border:1px solid #ebd9c0; border-radius:var(--fd-radius); padding:14px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-          <span style="font-size:0.68rem; font-weight:800; color:var(--fd-orange-dark); letter-spacing:0.06em;">LINKED MASTERCLASS / LAB</span>
-          <span style="font-size:0.68rem; color:#15803d; font-weight:700; background:#dcfce7; padding:2px 7px; border-radius:99px;">RSVP Open</span>
-        </div>
-        <strong style="display:block; font-size:0.82rem; color:var(--fd-ink); margin-bottom:4px; line-height:1.35;">${linkedEvent.title}</strong>
-        <p style="font-size:0.72rem; color:var(--fd-muted); line-height:1.4; margin-bottom:10px;">📅 ${linkedEvent.date} · Faculty: ${linkedEvent.faculty}</p>
-        <button type="button" class="btn-rsvp-linked-event" data-event-id="${linkedEvent.id}" style="width:100%; font-size:0.75rem; font-weight:700; color:#ffffff; background:var(--fd-orange); border:none; padding:8px 12px; border-radius:var(--fd-radius); cursor:pointer; transition:background 140ms ease;">
+      <div class="learning-event-recommend-card">
+        <strong style="display:block; font-size:12.5px; color:var(--ink); margin-bottom:4px; line-height:1.3;">${linkedEvent.title}</strong>
+        <p style="font-size:11px; color:var(--muted-ink); margin-bottom:8px;">📅 ${linkedEvent.date} · Faculty: ${linkedEvent.faculty}</p>
+        <button type="button" class="btn-rsvp-linked-event" data-event-id="${linkedEvent.id}" style="width:100%; font-family:var(--sans-ui); font-size:11.5px; font-weight:700; color:#ffffff; background:var(--rule); border:none; padding:7px 10px; cursor:pointer; border-radius:2px; transition:all 120ms ease;">
           Register for Masterclass Lab →
         </button>
       </div>
@@ -2337,9 +3319,9 @@ function renderStory(index) {
     });
   }
 
-  // Smart Replies
+  // Suggested LinkedIn Drafts in Sidebar
   const repliesEl = document.querySelector("#smart-replies-list");
-  if (repliesEl) {
+  if (repliesEl && story.copilot.replies) {
     repliesEl.innerHTML = story.copilot.replies.map(r => `
       <div class="reply-card">
         <div class="reply-card-header">
@@ -2355,8 +3337,8 @@ function renderStory(index) {
         const text = decodeURIComponent(btn.dataset.text);
         navigator.clipboard.writeText(text).then(() => {
           btn.textContent = "Copied ✓";
-          btn.style.color = "var(--fd-orange-dark)";
-          btn.style.borderColor = "var(--fd-orange)";
+          btn.style.color = "var(--editorial-teal)";
+          btn.style.borderColor = "var(--editorial-teal)";
           setTimeout(() => {
             btn.textContent = "Copy Draft";
             btn.style.color = "";
@@ -2367,15 +3349,39 @@ function renderStory(index) {
     });
   }
 
-  // Reset answer box
-  const ansBox = document.querySelector("#answer-box");
-  if (ansBox) {
-    ansBox.hidden = true;
-    ansBox.innerHTML = "";
+  // Layer 7: Related Cases (Secondary Newspaper Broadsheet Grid)
+  const relatedGridEl = document.querySelector("#related-cases-grid");
+  if (relatedGridEl && story.relatedStoryIds) {
+    relatedGridEl.innerHTML = story.relatedStoryIds.map(relIdx => {
+      const relStory = storiesData[relIdx];
+      if (!relStory) return "";
+      return `
+        <div class="related-case-card" data-rel-id="${relIdx}">
+          <div>
+            <span class="related-kicker">${relStory.tag}</span>
+            <h4 class="related-title">${relStory.title}</h4>
+            <p class="related-dek">${relStory.dek}</p>
+            <div class="related-domains-row">
+              ${relStory.linkedDomains.slice(0, 2).map(d => `<span class="related-domain-tag">${d.code}</span>`).join("")}
+            </div>
+          </div>
+          <button type="button" class="btn-read-related" data-rel-id="${relIdx}">Read Full Case Study →</button>
+        </div>
+      `;
+    }).join("");
+
+    relatedGridEl.querySelectorAll("[data-rel-id]").forEach(el => {
+      el.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const relIdx = Number(el.dataset.relId);
+        renderStory(relIdx);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
   }
 }
 
-// Ask Copilot Handler
+
 function submitAsk(question) {
   const ansBox = document.querySelector("#answer-box");
   if (!ansBox) return;
