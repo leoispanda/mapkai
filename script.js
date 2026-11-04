@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.361";
+const appVersion = "0.1.363";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -9388,12 +9388,12 @@ const field0412 = {
 const embaPublicEntryEnabled = false;
 const pathTypes = [
   ["Quick pickup", "General Knowledge Quick Pickups", "Browse practical fields and pick up a useful idea whenever you want a fast, broader learning moment.", "/categories", "Browse quick pickups"],
-  ["Learning programme", "EMBA", "A growing EMBA learning hub. Start with Corporate Finance, with more subjects to be added over time.", "/learning/emba", "Open EMBA"],
+  ["Learning programme", "EMBA", "Open FD Context + StoryFlow in a password-protected showcase.", "/learning/emba", "Open EMBA"],
 ];
 
 const pathTypesZh = [
   ["快速拾取", "通识知识快速拾取", "浏览实用知识领域，在想快速拓宽认知时，随手拾取一个有用的新知识。", "/categories", "浏览通识知识"],
-  ["学习项目", "EMBA", "一个持续扩展的 EMBA 学习空间。先从公司金融开始，之后会逐步加入其他科目。", "/learning/emba", "打开 EMBA"],
+  ["学习项目", "EMBA", "通过独立密码保护的展示页打开 FD Context + StoryFlow。", "/learning/emba", "打开 EMBA"],
 ];
 
 const foundationPath = [
@@ -15615,6 +15615,13 @@ function getFinanceLessonId(dayNumber) {
 
 function goToRoute(route, replace = false) {
   let target = legacyPdcRoutes[route] || route || "/";
+  if (target === "/learning/emba") {
+    if (window.location.protocol !== "file:") {
+      window.location.assign("/learning/emba/fd-context-storyflow/");
+      return;
+    }
+    target = "/learning/emba/fd-context-storyflow/";
+  }
   // Open the only public learning path without an extra landing-page click.
   if (target === "/learning" && !embaPublicEntryEnabled) {
     target = "/categories";
@@ -20312,16 +20319,16 @@ function renderLearning() {
   }
   if (embaCourseGrid) {
     const embaCourse = currentLanguage === "zh"
-      ? ["课程 01", "公司金融核心课程", "用五天理解价值、现金、风险、治理，以及真实公司决定背后的金融逻辑。", "打开公司金融课程"]
-      : ["Course 01", "Corporate Finance Essentials", "A five-day course through value, cash, risk, governance, and real company decisions.", "Open Corporate Finance"];
+      ? ["EMBA 展示", "FD Context + StoryFlow", "解释一篇文章，串联报道历史，呈现变化，并展示来源与编辑审核。", "打开 EMBA 展示页"]
+      : ["EMBA showcase", "FD Context + StoryFlow", "Explain an article, trace its reporting history, show what changed, and keep sources and editorial review visible.", "Open EMBA showcase"];
     document.querySelector("#emba .section-heading .eyebrow").textContent = "EMBA";
-    document.querySelector("#emba .section-heading h1").textContent = currentLanguage === "zh" ? "EMBA 学习" : "EMBA learning";
-    document.querySelector("#emba .section-heading p:not(.eyebrow)").textContent = currentLanguage === "zh" ? "从公司金融开始，之后会逐步加入其他科目。" : "Start with Corporate Finance, with more subjects to be added over time.";
+    document.querySelector("#emba .section-heading h1").textContent = "FD Context + StoryFlow";
+    document.querySelector("#emba .section-heading p:not(.eyebrow)").textContent = embaCourse[2];
     embaCourseGrid.innerHTML = `<article class="module-card learning-option-card">
       <p class="eyebrow">${embaCourse[0]}</p>
       <h3>${embaCourse[1]}</h3>
       <p>${embaCourse[2]}</p>
-      <a class="button secondary" href="/learning/corporate-finance">${embaCourse[3]}</a>
+      <a class="button secondary" href="/learning/emba/fd-context-storyflow/">${embaCourse[3]}</a>
     </article>`;
   }
   if (timeline) {
@@ -22994,7 +23001,7 @@ function drawKnowledgeMap() {
     return;
   }
   if (requestedSubject) pendingMapSubject = requestedSubject;
-  spatialAtlasImport = import("/map3d.js?v=0.1.361").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.363").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

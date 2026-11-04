@@ -1,21 +1,22 @@
 import { checkRateLimit, getClientIp } from "./api/_shared/rate-limit.js";
 import { articleShareMeta } from "./_shared/article-share.js";
 
-// EMBA is the programme; Corporate Finance is what sits inside it. So there is
-// one door, on EMBA, and unlocking it opens everything within. This is a filter,
-// not a vault -- the lesson text still ships in the public bundle.
+// Keep the EMBA showcase and Corporate Finance behind separate password gates.
+// This is a filter, not a vault -- the lesson text still ships in the public bundle.
 const areas = [
   {
+    id: "emba-showcase",
+    name: "EMBA · FD Context + StoryFlow",
+    prefixes: ["/learning/emba/fd-context-storyflow"],
+    secretKey: "EMBA_PASSWORD",
+    cookieName: "mapkai_emba_showcase_session",
+  },
+  {
+    // Keep the existing signed course session valid after splitting EMBA out.
     id: "emba",
-    name: "EMBA learning",
-    prefixes: [
-      "/learning/emba",
-      "/learning/corporate-finance",
-      "/zh/learning/corporate-finance",
-    ],
-    secretKey: "EMBA_ACCESS_PASSWORD",
-    // keeps working on the secret that is already configured
-    fallbackSecretKey: "COURSE_ACCESS_PASSWORD",
+    name: "Corporate Finance",
+    prefixes: ["/learning/corporate-finance", "/zh/learning/corporate-finance"],
+    secretKey: "COURSE_ACCESS_PASSWORD",
     cookieName: "mapkai_course_session",
   },
 ];
@@ -37,6 +38,15 @@ export async function onRequest(context) {
     response.headers.set('Cache-Control', 'no-cache');
     response.headers.set('Referrer-Policy', 'no-referrer');
     return response;
+  }
+  if (url.pathname === "/learning/emba" || url.pathname === "/learning/emba/") {
+    return new Response(null, {
+      status: 302,
+      headers: {
+        Location: new URL(`/learning/emba/fd-context-storyflow/${url.search}`, url.origin).toString(),
+        "Cache-Control": "no-store",
+      },
+    });
   }
   const area = areaFor(url.pathname);
   if (!area) return articleShareMeta(await context.next(), url);

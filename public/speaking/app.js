@@ -1,4 +1,4 @@
-import { t, language, translatePage, setLanguage } from '/speaking/i18n.js?v=0.1.360';
+import { t, language, translatePage, setLanguage } from '/speaking/i18n.js?v=0.1.363';
 import { storyContext, appendImportedStories, buildSessionContext } from '/speaking/story-context.js';
 import { readStoryFile } from '/speaking/story-import.js';
 const $ = id => document.getElementById(id);
@@ -192,8 +192,8 @@ async function start(skipBackground = false) {
     audioContexts = { output: new AudioContext({ sampleRate: 24000 }), input: new AudioContext({ sampleRate: 16000 }) };
     for (const context of Object.values(audioContexts)) void context.resume().catch(() => {});
     connectionAbort.signal.addEventListener('abort', () => { for (const context of Object.values(audioContexts)) void context.close().catch(() => {}); }, { once: true });
-    const { Conversation } = await import('/speaking/gemini.js?v=0.1.360');
-    const promptResponse = await fetch('/speaking/agent-prompt.txt?v=0.1.360');
+    const { Conversation } = await import('/speaking/gemini.js?v=0.1.363');
+    const promptResponse = await fetch('/speaking/agent-prompt.txt?v=0.1.363');
     if (!promptResponse.ok) throw new Error(t('陪练说明加载失败，请刷新页面。'));
     let prompt = await promptResponse.text();
     const context = buildSessionContext({ name: $('learner-name').value.trim(), level: $('level').value, mode: materials.items.length ? 'podcast' : 'open', scenario: 'A relaxed, curious conversation with open-ended questions', focus: '', boundaries: $('boundaries').value.trim(), minutes: null }, materials);
