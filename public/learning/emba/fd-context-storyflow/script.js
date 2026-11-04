@@ -2,167 +2,166 @@
 
 const peopleLibrary = Object.freeze({
   "Jensen Huang": {
-    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/jensen-huang.jpg",
     credit: "Raysonho @ Open Grid Scheduler / Scalable Grid Engine",
     license: "CC0 1.0",
     licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:JensenHuangSC18.jpg"
   },
   "Satya Nadella": {
-    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/satya-nadella.jpg",
     credit: "Brian Smale / Microsoft",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:MS-Exec-Nadella-Satya-2017-08-31-22-2.jpg"
   },
   "Tim Cook": {
-    imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/tim-cook.jpg",
     credit: "Tessa Bury",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Tim_Cook_March_2026_(cropped).jpg"
   },
   "Sundar Pichai": {
-    imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/sundar-pichai.jpg",
     credit: "Lukasz Kobus / European Commission",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Sundar_Pichai_-_2023_(cropped).jpg"
   },
   "Marc Benioff": {
-    imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/marc-benioff.jpg",
     credit: "Christie Hemm Klok / Salesforce",
     license: "CC BY-SA 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Marc_Benioff.jpg"
   },
   "Lisa Su": {
-    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/lisa-su.jpg",
     credit: "Fuzheado",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:SXSW-2024-alih-OB7A0861-Lisa_Su_(cropped).jpg"
   },
   "Andy Jassy": {
-    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/andy-jassy.jpg",
     credit: "Lisi Mezistrano Wolf",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Andy_Jassy.jpg"
   },
   "Brian Chesky": {
-    imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/brian-chesky.jpg",
     credit: "Celeste Sloman / Airbnb",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Brian_Chesky_2025.jpg"
   },
   "Demis Hassabis": {
-    imageUrl: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/demis-hassabis.jpg",
     credit: "Christopher Michel (Cmichel67)",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Demis_Hassabis_in_2025_by_Christopher_Michel.jpg"
   },
   "David Solomon": {
-    imageUrl: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/david-solomon.jpg",
     credit: "Lisa Ferdinando / U.S. Department of Defense",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:David_Solomon.jpg"
   },
   "Albert Bourla": {
-    imageUrl: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/albert-bourla.png",
     credit: "Ehbrooklyn96",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Albert_Bourla_in_2026.png"
   },
   "Bob Iger": {
-    imageUrl: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/bob-iger.jpg",
     credit: "Village Global",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:2018_Bob_Iger_(cropped).jpg"
   },
   "C.C. Wei": {
-    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/c-c-wei.jpg",
     credit: "Office of the President, Taiwan · photo by Wang Yu Ching",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:10.27_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C%E7%AC%AC9%E5%B1%86%E5%B7%A5%E6%A5%AD%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E9%99%A2%E9%99%A2%E5%A3%AB%E6%8E%88%E8%AD%89%E5%85%B8%E7%A6%AE%E3%80%8D_(50536154856)_(cropped).jpg"
   },
   "David Ricks": {
-    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/david-ricks.jpg",
     credit: "Virginia Office of the Governor",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:David_A._Ricks_2025.jpg"
   },
   "Elon Musk": {
-    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/elon-musk.jpg",
     credit: "Gage Skidmore",
     license: "CC BY-SA 3.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Elon_Musk_by_Gage_Skidmore.jpg"
   },
   "Jeff Bezos": {
-    imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/jeff-bezos.jpg",
     credit: "U.S. Department of Defense · Senior Master Sgt. Adrian Cadiz",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Jeff_Bezos_2016_(cropped).jpg"
   },
   "Jim Farley": {
-    imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/jim-farley.jpg",
     credit: "Bill Cramer / Wonderful Machine",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Jim-farley-by-bill-cramer.jpg"
   },
   "Larry Ellison": {
-    imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/larry-ellison.jpg",
     credit: "Ilan Costica",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Larry_Ellison_CEO_of_Oracle_Corporation.JPG"
   },
   "Lars Fruergaard Jørgensen": {
-    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/lars-fruergaard-jrgensen.jpg",
     credit: "News Øresund · Kristoffer Dahl",
     license: "CC BY 3.0",
     licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Klimatopm%C3%B8de_Lars_Fruergaard_J%C3%B8rgensen_Lifescience_Christiansborg_290120_(49463914018)_(cropped).jpg"
   },
   "Mary Barra": {
-    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/mary-barra.jpg",
     credit: "Homeland Security Council / U.S. Government",
     license: "Public domain (U.S. government work)",
     licenseUrl: "https://commons.wikimedia.org/wiki/Template:PD-USGov",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Mary_Barra,_official_portrait,_Homeland_Security_Council.jpg"
   },
   "Pat Gelsinger": {
-    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/pat-gelsinger.jpg",
     credit: "TechCrunch",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Pat_Gelsinger_December_2025_(cropped).jpg"
   },
   "Peter Wennink": {
-    imageUrl: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=240&h=240&q=85",
-    credit: "European High-Tech Council Fellow",
-    license: "Accredited Fellow",
+    credit: "No single-person portrait with a verified reuse license found; initials are shown.",
+    license: "Initials fallback",
     sourceUrl: ""
   },
   "Reed Hastings": {
-    imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/reed-hastings.jpg",
     credit: "J.D. Lasica",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Reed_Hastings_(50184909).jpg"
   },
   "Sam Altman": {
-    imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=240&h=240&q=85",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/sam-altman.jpg",
     credit: "Village Global",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
@@ -172,8 +171,7 @@ const peopleLibrary = Object.freeze({
 
 function getPortraitUrl(name) {
   const person = peopleLibrary[name];
-  if (person?.imageUrl) return person.imageUrl;
-  return "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=240&h=240&q=85";
+  return person?.imageUrl || getInitialsPortraitUrl(name);
 }
 
 function getInitialsPortraitUrl(name) {
@@ -186,7 +184,7 @@ function installPortraitFallbacks(root) {
   root.querySelectorAll("img[data-portrait-name]").forEach(img => {
     img.addEventListener("error", () => {
       const name = img.dataset.portraitName;
-      img.src = peopleLibrary[name]?.imageUrl || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&h=240&q=85";
+      img.src = getInitialsPortraitUrl(img.dataset.portraitName);
     }, { once: true });
   });
 }
@@ -205,7 +203,7 @@ const storiesData = [
   {
     id: "story-0",
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-01.jpg",
       "caption": "Executive boardrooms across the Global 500 are navigating the structural lag between foundational software procurement and internal process redesign.",
       "credit": "Photograph: Unsplash / Editorial Architecture Archive"
 },
@@ -369,7 +367,7 @@ const storiesData = [
   {
     id: "story-1",
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-02.jpg",
       "caption": "High-density GPU server enclosures operating in a liquid-cooled accelerated compute datacenter cluster.",
       "credit": "Photograph: Unsplash / Accelerated Compute Systems"
 },
@@ -524,7 +522,7 @@ const storiesData = [
   {
     id: "story-2",
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-03.jpg",
       "caption": "Apple silicon microarchitecture die packaging incorporating neural engines and secure enclave hardware encryption.",
       "credit": "Photograph: Unsplash / Microelectronics Archive"
 },
@@ -671,7 +669,7 @@ const storiesData = [
   {
     id: "story-3",
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-04.jpg",
       "caption": "Enterprise customer service and CRM operations transitioning from manual ticketing to autonomous agent workflows.",
       "credit": "Photograph: Unsplash / Enterprise Operations"
 },
@@ -817,7 +815,7 @@ const storiesData = [
   {
     id: "story-4",
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-05.jpg",
       "caption": "High-voltage transmission infrastructure connecting dedicated clean baseload power to multi-gigawatt datacenter developments.",
       "credit": "Photograph: Unsplash / Energy Infrastructure"
 },
@@ -972,7 +970,7 @@ const storiesData = [
   {
     id: "story-5",
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-06.jpg",
       "caption": "Financial trading terminals and corporate treasury modeling desks stress-testing return on invested capital across tech sectors.",
       "credit": "Photograph: Unsplash / Capital Markets"
 },
@@ -1129,7 +1127,7 @@ const storiesData = [
   {
     id: 6,
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-07.jpg",
       "caption": "Azure global datacenter fiber backbones engineered with low-latency InfiniBand clustering for frontier model training.",
       "credit": "Photograph: Unsplash / Global Networks"
 },
@@ -1286,7 +1284,7 @@ const storiesData = [
   {
     id: 7,
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-08.jpg",
       "caption": "Precision semiconductor wafer lithography optics capable of etching sub-5nm transistor features with 13.5nm extreme ultraviolet light.",
       "credit": "Photograph: Unsplash / Advanced Nanotechnology"
 },
@@ -1443,7 +1441,7 @@ const storiesData = [
   {
     id: 8,
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-09.jpg",
       "caption": "Subscriber telemetry visualization tracking streaming engagement and completion curves across global audiences.",
       "credit": "Photograph: Unsplash / Digital Media"
 },
@@ -1600,7 +1598,7 @@ const storiesData = [
   {
     id: 9,
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-10.jpg",
       "caption": "Robotic welding arms and final assembly lines at the Fremont manufacturing facility during Model 3 ramp-up.",
       "credit": "Photograph: Unsplash / Industrial Robotics"
 },
@@ -1757,7 +1755,7 @@ const storiesData = [
   {
     id: 10,
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-11.jpg",
       "caption": "Standardized multi-tenant server racks that converted fixed corporate IT infrastructure budgets into variable utility billing.",
       "credit": "Photograph: Unsplash / Server Racks"
 },
@@ -1914,7 +1912,7 @@ const storiesData = [
   {
     id: 11,
     leadImage: {
-      "url": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&h=600&q=85",
+      "url": "/learning/emba/fd-context-storyflow/assets/stories/case-12.jpg",
       "caption": "Biopharmaceutical peptide synthesis and automated sterile filling lines supporting global GLP-1 therapy distribution.",
       "credit": "Photograph: Unsplash / Biopharmaceutical Laboratory"
 },
