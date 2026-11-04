@@ -1,17 +1,46 @@
-// MapKAI FD Context + LinkedIn Copilot Data & Logic
+// MapKAI FD Context + LinkedIn Copilot & Knowledge Learning Data
 
-// 1. Stories Data (4 Full In-depth CEO Stories)
+// 1. Stories Data (6 Full In-depth CEO Stories linked to MapKAI Knowledge Domains)
 const storiesData = [
   {
     id: "story-0",
-    tag: "TECHNOLOGY & BUSINESS",
+    tag: "TECHNOLOGY & ORGANIZATIONAL DESIGN",
     readTime: "Concept article · 5 min read",
     title: "Why has AI investment not yet delivered the expected productivity gains?",
     dek: "Companies have moved from experiments to deployment. The question is shifting from access to AI toward the harder work of redesigning processes, measuring returns, and managing uncertainty.",
     body: [
       "The answer cannot be found in one quarter or one company’s result. It requires context: what businesses expected, what they implemented, which constraints emerged, and how evidence changed over time.",
-      "Buying AI tools does not automatically make a company more productive. Teams also need to change how work is organised. Moving beyond isolated prompt experiments to deeply integrated operational pipelines is where the true margin expansion begins."
+      "Buying AI tools does not automatically make an enterprise more productive. Knowledge work requires fundamental restructuring: <a class='k-chip' href='/categories/04' title='ISCED 0413: Management & Administration'>0413 Management &amp; Strategy ↗</a>. Moving beyond isolated prompt experiments to deeply integrated operational pipelines <a class='k-chip' href='/categories/06' title='ISCED 0613: Software & Applications'>0613 Software &amp; Applications ↗</a> is where true margin expansion begins.",
+      "Furthermore, boards must calculate clear hurdle rates: <a class='k-chip' href='/categories/04' title='ISCED 0412: Finance & Capital'>0412 Corporate Finance ↗</a>. Without tying generative tools to transactional unit economics, CapEx spending remains unmeasured overhead."
     ],
+    linkedDomains: [
+      {
+        code: "ISCED 0413",
+        name: "Management and Administration",
+        nameZh: "管理与组织流程重构",
+        relevance: "Firms require organizational redesign, KPI restructuring, and managerial process re-engineering rather than superficial chatbot adoption.",
+        link: "/categories/04"
+      },
+      {
+        code: "ISCED 0412",
+        name: "Finance, Banking and Insurance",
+        nameZh: "公司金融与投资评估",
+        relevance: "Evaluating capital expenditures (CapEx), return on invested capital (ROIC), and opportunity cost of delayed technology modernization.",
+        link: "/categories/04"
+      },
+      {
+        code: "ISCED 0613",
+        name: "Software & Applications Development",
+        nameZh: "软件工程与应用开发",
+        relevance: "Building multi-agent deterministic pipelines with permissioned internal database read/write access.",
+        link: "/categories/06"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "Process Re-engineering, Total Cost of Ownership (TCO), Agentic Orchestration vs Chatbot Interfaces.",
+      recommendedModule: "MapKAI Foundation Course: Management Strategy & Workflow Operations (Day 4: Beyond the KPI Trap).",
+      seminarPrompt: "If 80% of routine knowledge tasks can be automated, how should an executive board restructure management incentive bonuses?"
+    },
     execLikes: [
       { name: "Jensen Huang", title: "CEO @ NVIDIA", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
       { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" },
@@ -72,9 +101,38 @@ const storiesData = [
     title: "NVIDIA: The $1 Trillion Accelerated Computing Shift and the Age of Physical AI",
     dek: "Jensen Huang declares general-purpose computing exhausted, forecasting a $1T transition to accelerated AI factories and highlighting Physical AI as the next frontier.",
     body: [
-      "General-purpose computing has run out of steam. CPU scaling has slowed, yet computing demand continues to skyrocket exponentially. Accelerated computing is the only path forward.",
-      "The next wave is Physical AI: AI that understands the laws of physics, interacting with the real world through robotics, autonomous vehicles, and industrial digital twins in Omniverse."
+      "General-purpose computing has run out of steam. CPU scaling has slowed, yet computing demand continues to skyrocket exponentially. Accelerated computing <a class='k-chip' href='/categories/07' title='ISCED 0714: Electronics & Automation'>0714 Electronics &amp; Automation ↗</a> is the only path forward.",
+      "The next wave is Physical AI: systems that understand physical dynamics, interacting with the real world through robotics, autonomous transport, and digital twins in Omniverse <a class='k-chip' href='/categories/06' title='ISCED 0611: Computer Science'>0611 Computer Science ↗</a>.",
+      "Crucially, the scale of gigawatt clusters has shifted the critical path to energy infrastructure: <a class='k-chip' href='/categories/07' title='ISCED 0713: Electricity & Energy'>0713 Electricity &amp; Energy ↗</a>. Silicon design alone is no longer the sole determining bottleneck."
     ],
+    linkedDomains: [
+      {
+        code: "ISCED 0714",
+        name: "Electronics and Automation",
+        nameZh: "电子工程、半导体与自动化",
+        relevance: "Hardware architecture shifts from scalar CPUs to tensor cores, high-bandwidth memory (HBM), and heterogeneous supercomputers.",
+        link: "/categories/07"
+      },
+      {
+        code: "ISCED 0611",
+        name: "Computer Science & AI Simulation",
+        nameZh: "计算机仿真与物理模拟",
+        relevance: "Physics-informed neural networks and Omniverse synthetic data generation for industrial robotics.",
+        link: "/categories/06"
+      },
+      {
+        code: "ISCED 0713",
+        name: "Electricity and Energy",
+        nameZh: "电力与能源系统工程",
+        relevance: "Megawatt-per-rack power constraints, liquid cooling thermal cycles, and sub-station co-location.",
+        link: "/categories/07"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "Accelerated Computing, Sim-to-Real Transfer, High-Bandwidth Memory (HBM3e), Thermal Dissipation Limits.",
+      recommendedModule: "MapKAI Engineering & Technology Track: Industrial Electronics & Digital Twins.",
+      seminarPrompt: "How does a manufacturing enterprise shift capital planning when physical equipment is simulated in software before factory tooling?"
+    },
     execLikes: [
       { name: "Lisa Su", title: "CEO @ AMD", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80" },
       { name: "Tim Cook", title: "CEO @ Apple", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" },
@@ -125,9 +183,38 @@ const storiesData = [
     title: "Apple: On-Device Intelligence and the Private Cloud Security Paradigm",
     dek: "Tim Cook explains Apple's hybrid compute model: running sub-3B parameter models on-device and routing heavy inferences to custom Apple Silicon servers with verifiable cryptographic privacy.",
     body: [
-      "Privacy isn't a feature; it's the fundamental architecture. By performing the vast majority of semantic indexing directly on the user's Neural Engine, sensitive user context never leaves the perimeter.",
-      "When complex multi-step reasoning requires server-scale compute, Private Cloud Compute verifies the server software image cryptographically before a single packet of user prompt is decrypted."
+      "Privacy is not an afterthought; it is the foundational architectural pillar. By performing local semantic indexing on client Neural Engines <a class='k-chip' href='/categories/06' title='ISCED 0613: Software & Systems'>0613 Software Systems ↗</a>, sensitive user context never leaves the perimeter.",
+      "When multi-step reasoning requires server-scale compute, Private Cloud Compute verifies the OS image cryptographically before decrypting payloads: <a class='k-chip' href='/categories/06' title='ISCED 0612: Distributed Architecture'>0612 Distributed Networks ↗</a>.",
+      "This architecture establishes compliance with global corporate governance and regulatory requirements: <a class='k-chip' href='/categories/04' title='ISCED 0421: Law & Compliance'>0421 Law &amp; Data Sovereignty ↗</a>."
     ],
+    linkedDomains: [
+      {
+        code: "ISCED 0613",
+        name: "Software & System Security",
+        nameZh: "系统安全与端侧智能架构",
+        relevance: "Zero-knowledge proof, client-side quantization, and ephemeral enclave execution.",
+        link: "/categories/06"
+      },
+      {
+        code: "ISCED 0612",
+        name: "Distributed Network Design",
+        nameZh: "分布式网络与云端调度",
+        relevance: "Verifiable server image attestation, stateless container orchestration, and low-latency packet routing.",
+        link: "/categories/06"
+      },
+      {
+        code: "ISCED 0421",
+        name: "Law and Data Governance",
+        nameZh: "数据合规、隐私法与主权治理",
+        relevance: "Satisfying GDPR, HIPAA, and cross-border data transfer compliance without sacrificing AI intelligence.",
+        link: "/categories/04"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "Homomorphic Encryption, Attestation Security, Edge Quantization, Sovereign Cloud Boundaries.",
+      recommendedModule: "MapKAI Technology Governance: Enterprise Privacy in the AI Era.",
+      seminarPrompt: "Can an enterprise truly claim data compliance when proprietary customer conversations flow through third-party multi-tenant APIs?"
+    },
     execLikes: [
       { name: "Sundar Pichai", title: "CEO @ Google", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" },
       { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" },
@@ -169,9 +256,38 @@ const storiesData = [
     title: "Salesforce: Autonomous Digital Labor Replacing Legacy FAQ Chatbots",
     dek: "Marc Benioff declares the first wave of conversational chatbots a failure, unveiling Agentforce to deploy autonomous agents with write permissions inside corporate systems of record.",
     body: [
-      "Enterprise software is undergoing its largest structural disruption in thirty years. The conversational chatbot era was merely a prologue filled with hallucinations and shallow search queries.",
-      "The real economic inflection point is digital labor: autonomous agents that operate inside your system of record, executing business processes end-to-end with deterministic guarantees."
+      "Enterprise software is undergoing its largest structural disruption in thirty years. Read-only search bots were merely a prologue with high error rates.",
+      "The real economic inflection point is transactional digital labor: <a class='k-chip' href='/categories/06' title='ISCED 0612: Database & Transactions'>0612 Database Systems ↗</a>. Agents must execute state-changing actions inside core databases with atomic rollback safeguards.",
+      "This unlocks dramatic improvements in organizational span-of-control and personnel scalability: <a class='k-chip' href='/categories/04' title='ISCED 0413: Management'>0413 Management &amp; Labor ↗</a>, transforming customer experience pipelines: <a class='k-chip' href='/categories/04' title='ISCED 0414: Marketing & CRM'>0414 Marketing &amp; CRM ↗</a>."
     ],
+    linkedDomains: [
+      {
+        code: "ISCED 0612",
+        name: "Database & System Architecture",
+        nameZh: "数据库与事务控制架构",
+        relevance: "ACID transactions, idempotency guards, and state machine consistency during autonomous agent actions.",
+        link: "/categories/06"
+      },
+      {
+        code: "ISCED 0413",
+        name: "Management & Workforce Strategy",
+        nameZh: "人力资源组织与数字劳动协作",
+        relevance: "Redesigning staffing models, employee-to-agent supervision ratios, and frontline tier-1 support roles.",
+        link: "/categories/04"
+      },
+      {
+        code: "ISCED 0414",
+        name: "Marketing & Customer Lifecycle",
+        nameZh: "营销工程与客户生命周期",
+        relevance: "Automating lead scoring, real-time ticket escalation, and hyper-personalized customer journey nurturing.",
+        link: "/categories/04"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "Transactional Agency, Idempotent APIs, Workforce Augmentation, Customer Lifetime Value (LTV).",
+      recommendedModule: "MapKAI EMBA Strategic Pillar: Digital Transformation & Enterprise Software Operations.",
+      seminarPrompt: "If an AI agent makes a $50,000 refund error without human signoff, how should governance and liability be structured?"
+    },
     execLikes: [
       { name: "Brian Chesky", title: "CEO @ Airbnb", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" },
       { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" }
@@ -202,6 +318,170 @@ const storiesData = [
       replies: [
         { tone: "Insightful", text: "Moving from informational dialog boxes to transactional action execution is the real enterprise turning point." },
         { tone: "Founder Perspective", text: "Giving our agent direct refund authority reduced our tier-1 support backlog by 72% within the first month." }
+      ]
+    }
+  },
+  {
+    id: "story-4",
+    tag: "ENERGY INFRASTRUCTURE & SUPERCOMPUTING",
+    readTime: "Infrastructure briefing · 4 min read",
+    title: "Hyperscalers Turn to Nuclear SMRs: The Gigawatt Energy Race for AI Data Centers",
+    dek: "With regional power grids maxed out, Amazon, Google, and Microsoft strike historic PPAs with Small Modular Reactor developers to guarantee clean, 24/7 baseload power.",
+    body: [
+      "The ultimate constraint on artificial intelligence scaling is no longer token parameters or silicon supply—it is electricity: <a class='k-chip' href='/categories/07' title='ISCED 0713: Electricity & Energy'>0713 Electricity &amp; Energy ↗</a>. Planning 1-gigawatt AI clusters requires continuous baseload energy that intermittent renewables cannot supply alone.",
+      "By signing multi-decade power contracts with advanced nuclear developers, hyperscalers are vertically integrating from silicon chips down to thermal electrons: <a class='k-chip' href='/categories/07' title='ISCED 0714: Electronics & Power Distribution'>0714 Electronics &amp; Automation ↗</a>.",
+      "This fundamental physical constraint links thermodynamics directly with capital allocation: <a class='k-chip' href='/categories/05' title='ISCED 0533: Physics & Thermodynamics'>0533 Applied Physics ↗</a>, reshaping the geopolitical map of datacenter real estate."
+    ],
+    linkedDomains: [
+      {
+        code: "ISCED 0713",
+        name: "Electricity and Energy Engineering",
+        nameZh: "电力工程、核能与电网系统",
+        relevance: "High-voltage transmission interconnection queues, baseload capacity factors, and SMR small modular nuclear reactor thermodynamics.",
+        link: "/categories/07"
+      },
+      {
+        code: "ISCED 0714",
+        name: "Electronics & High-Density Power",
+        nameZh: "电力电子与高压配电",
+        relevance: "Megawatt-per-row power distribution units (PDUs), 48V to 1V step-down conversion on motherboards, and direct-to-chip liquid cooling.",
+        link: "/categories/07"
+      },
+      {
+        code: "ISCED 0533",
+        name: "Applied Physics & Thermodynamics",
+        nameZh: "应用物理学与热力学极限",
+        relevance: "Carnot efficiency of datacenter cooling, heat rejection density, and nuclear reactor containment physics.",
+        link: "/categories/05"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "Small Modular Reactors (SMRs), Baseload Power, Power Usage Effectiveness (PUE), Grid Interconnection Constraints.",
+      recommendedModule: "MapKAI Engineering Science: Clean Energy Generation and Modern Industrial Power Grids.",
+      seminarPrompt: "Should tech companies own and operate nuclear power generation assets directly, or rely on regulated public utilities?"
+    },
+    execLikes: [
+      { name: "Andy Jassy", title: "CEO @ Amazon", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" },
+      { name: "Jensen Huang", title: "CEO @ NVIDIA", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
+      { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" }
+    ],
+    execLikesCount: "16,400",
+    metrics: { like: 10400, celebrate: 2600, insightful: 5800, love: 1400 },
+    ceoComments: [
+      {
+        name: "Andy Jassy",
+        rank: "Fortune 500 #2",
+        title: "President & CEO @ Amazon",
+        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80",
+        quote: "We reached the limit of regional utility interconnect queues. Co-locating next to zero-carbon SMRs is the only path to guarantee gigawatts of unconstrained 24/7 computing for AWS customers.",
+        likes: "2,140",
+        time: "2h ago"
+      },
+      {
+        name: "Jensen Huang",
+        rank: "Fortune 500 #65",
+        title: "Founder & CEO @ NVIDIA",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
+        quote: "Compute factories require power plants directly co-located with high-density transformer clusters. Energy has officially become the foundational reserve currency of artificial intelligence.",
+        likes: "1,980",
+        time: "1h ago"
+      }
+    ],
+    copilot: {
+      timeBadge: "⏱️ Saved 3.4m (~85%)",
+      tldr: "Hyperscalers are signing historic power purchase agreements with Small Modular Reactor developers as regional electric grids fail to meet 1-gigawatt AI datacenter demands without dedicated zero-carbon baseload power.",
+      consensus: "94%",
+      takeaways: [
+        { title: "Energy Is the Real Silicon Ceiling", desc: "Chip delivery times have dropped, but regional utility grid connection queues now extend 5-7 years into the future." },
+        { title: "Nuclear SMRs Win Baseload Mandate", desc: "Intermittent wind and solar cannot sustain 99.999% datacenter uptime without uneconomic battery storage." },
+        { title: "Vertical Infrastructure Integration", desc: "Leading cloud providers are transforming into integrated energy operators with on-site generation." }
+      ],
+      playbook: "Audit enterprise datacenter provider contracts for sovereign energy risk. Prefer facilities with dedicated behind-the-meter clean power agreements.",
+      replies: [
+        { tone: "Insightful", text: "The convergence of advanced nuclear physics and supercomputing is the most consequential industrial realignment of the decade." },
+        { tone: "Founder Perspective", text: "Moving our batch training workloads to regions with clean hydro and nuclear power halved our energy costs while eliminating carbon penalties." }
+      ]
+    }
+  },
+  {
+    id: "story-5",
+    tag: "CORPORATE FINANCE & CAPITAL ALLOCATION",
+    readTime: "CFO & Board analysis · 5 min read",
+    title: "The Cost of Capital in the Age of Autonomous AI: Balancing $50B CapEx with ROI Metrics",
+    dek: "As Big Tech CapEx exceeds $200B annually, Wall Street and corporate boards demand rigorous return on invested capital (ROIC) models to replace speculative infrastructure spending.",
+    body: [
+      "For the past twenty-four months, corporate AI spending was driven by FOMO—fear of missing out on foundation model access. Today, the conversation in boardrooms is dominated by the weighted average cost of capital: <a class='k-chip' href='/categories/04' title='ISCED 0412: Corporate Finance'>0412 Corporate Finance ↗</a>.",
+      "CFOs are establishing strict economic hurdle rates: every dollar allocated to GPU clusters must be offset by measurable reduction in operating expenses or verifiable ARR acceleration under GAAP accounting: <a class='k-chip' href='/categories/04' title='ISCED 0411: Accounting & Taxes'>0411 Accounting &amp; Taxation ↗</a>.",
+      "This marks the classical transition from the speculative installation phase to the deployment phase in economic technological revolutions: <a class='k-chip' href='/categories/03' title='ISCED 0311: Macroeconomics'>0311 Macroeconomics ↗</a>."
+    ],
+    linkedDomains: [
+      {
+        code: "ISCED 0412",
+        name: "Finance, Banking & Capital Markets",
+        nameZh: "公司金融与资本成本评估",
+        relevance: "Weighted average cost of capital (WACC), discounted cash flow (DCF) under high technological obsolescence, and return on invested capital (ROIC).",
+        link: "/categories/04"
+      },
+      {
+        code: "ISCED 0411",
+        name: "Accounting and Taxation",
+        nameZh: "财务会计与资产折旧摊销",
+        relevance: "Accelerated depreciation schedules for 3-year GPU lifecycles and capitalized R&D software asset recognition under GAAP/IFRS.",
+        link: "/categories/04"
+      },
+      {
+        code: "ISCED 0311",
+        name: "Macroeconomics and Labor Markets",
+        nameZh: "宏观经济学与要素替代生产函数",
+        relevance: "Cobb-Douglas production functions, capital-labor elasticity of substitution, and macro total factor productivity (TFP).",
+        link: "/categories/03"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "WACC, ROIC Hurdle Rates, Capitalized R&D, Depreciation Cycles, Capital-Labor Substitution.",
+      recommendedModule: "MapKAI Executive Corporate Finance: Day 1 (Cost of Capital) & Day 4 (Capital Allocation).",
+      seminarPrompt: "If an AI datacenter cluster depreciates in 3 years instead of 5, what must the internal rate of return (IRR) be to justify bond financing?"
+    },
+    execLikes: [
+      { name: "David Solomon", title: "CEO @ Goldman Sachs", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
+      { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" },
+      { name: "Marc Benioff", title: "CEO @ Salesforce", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" }
+    ],
+    execLikesCount: "13,800",
+    metrics: { like: 8900, celebrate: 2100, insightful: 4700, love: 1100 },
+    ceoComments: [
+      {
+        name: "David Solomon",
+        rank: "Fortune 500 #55",
+        title: "Chairman and CEO @ Goldman Sachs",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
+        quote: "Boards are shifting from 'FOMO CapEx' to disciplined hurdle rates. CFOs must demand verified cash-flow generation before approving the next $10B infrastructure debt issuance.",
+        likes: "2,350",
+        time: "3h ago"
+      },
+      {
+        name: "Satya Nadella",
+        rank: "Fortune 500 #13",
+        title: "Chairman and CEO @ Microsoft",
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80",
+        quote: "Every dollar of datacenter lease commitment is mapped directly against recurring enterprise software ARR expansion. CapEx discipline creates long-term operating leverage.",
+        likes: "1,790",
+        time: "2h ago"
+      }
+    ],
+    copilot: {
+      timeBadge: "⏱️ Saved 4.1m (~87%)",
+      tldr: "Corporate boards are shifting AI evaluation from exploratory tech demonstrations to traditional corporate finance discipline, requiring measurable operating margin expansion to offset surging capital expenditures and rapid chip depreciation.",
+      consensus: "91%",
+      takeaways: [
+        { title: "The 3-Year GPU Depreciation Reality", desc: "Treating server hardware with rapid obsolescence as a 5-year asset inflates stated earnings; CFOs are taking conservative write-downs." },
+        { title: "Return on Invested Capital (ROIC)", desc: "Speculative pilot budgets are terminating; ongoing AI spend must demonstrate clear unit margin expansion." },
+        { title: "Financing Mix Strategy", desc: "Leading tech firms are utilizing debt issuances and special-purpose vehicle (SPV) leasebacks to fund energy and compute infrastructure." }
+      ],
+      playbook: "Establish an internal hurdle rate (e.g. 18% ROIC) for every business unit's AI tools budget. Require quarterly verification of headcount savings or new revenue.",
+      replies: [
+        { tone: "Insightful", text: "Treating AI as an operational efficiency discipline rather than a novelty is where sustainable competitive advantage will be built." },
+        { tone: "Founder Perspective", text: "We tied our AI software spend directly to gross margin contribution per customer, cutting our unnecessary SaaS bloat by 38%." }
       ]
     }
   }
@@ -302,8 +582,8 @@ const categoriesData = [
       { name: "Andy Jassy", title: "Amazon CEO", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" },
       { name: "Satya Nadella", title: "Microsoft CEO", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" }
     ],
-    topHeadline: "Hyperscalers Sign Historic Small Modular Reactor (SMR) Power Contracts",
-    topStoryId: 1,
+    topHeadline: "Hyperscalers Turn to Nuclear SMRs: The Gigawatt Energy Race for AI Data Centers",
+    topStoryId: 4,
     executiveTakeaway: "Gigawatt-scale AI computing creates unprecedented baseload energy demand, triggering nuclear revitalisation."
   },
   {
@@ -318,11 +598,11 @@ const categoriesData = [
     isHot: false,
     color: "#6366f1",
     activeCeos: [
-      { name: "Marc Benioff", title: "Salesforce CEO", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" },
-      { name: "Jensen Huang", title: "NVIDIA CEO", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" }
+      { name: "David Solomon", title: "Goldman Sachs CEO", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
+      { name: "Marc Benioff", title: "Salesforce CEO", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" }
     ],
-    topHeadline: "Strategic Acquhires Rebound as Big Tech Buys AI Talent at Record Multiples",
-    topStoryId: 0,
+    topHeadline: "The Cost of Capital in the Age of Autonomous AI: Balancing $50B CapEx with ROI Metrics",
+    topStoryId: 5,
     executiveTakeaway: "Balance sheets deployed aggressively to acquire specialized engineering teams and proprietary datasets."
   },
   {
@@ -346,14 +626,58 @@ const categoriesData = [
   }
 ];
 
-// 3. Executive Leaderboard Data
+// 3. MapKAI Knowledge Architecture Overview Data (Dashboard Cross-Map)
+const overviewKnowledgeDomains = [
+  {
+    code: "ISCED 0613",
+    name: "Software & Applications",
+    nameZh: "软件开发与应用系统",
+    connections: 184,
+    link: "/categories/06",
+    focus: "Multi-agent pipelines, database transactions, API security"
+  },
+  {
+    code: "ISCED 0413",
+    name: "Management & Strategy",
+    nameZh: "管理战略与组织流程",
+    connections: 156,
+    link: "/categories/04",
+    focus: "Workflow re-engineering, digital labor management, KPI redesign"
+  },
+  {
+    code: "ISCED 0714",
+    name: "Electronics & Automation",
+    nameZh: "电子工程与半导体自动化",
+    connections: 128,
+    link: "/categories/07",
+    focus: "GPU architectures, high-bandwidth memory, robotics kinematics"
+  },
+  {
+    code: "ISCED 0412",
+    name: "Finance, Banking & Capital",
+    nameZh: "金融、银行与资本运作",
+    connections: 98,
+    link: "/categories/04",
+    focus: "WACC, ROIC hurdle rates, infrastructure leasebacks, debt financing"
+  },
+  {
+    code: "ISCED 0713",
+    name: "Electricity & Energy Systems",
+    nameZh: "电力工程与能源系统",
+    connections: 74,
+    link: "/categories/07",
+    focus: "SMR nuclear power, megawatt datacenter grids, baseload cooling"
+  }
+];
+
+// 4. Executive Leaderboard Data
 const executiveLeaderboard = [
   { name: "Jensen Huang", rank: "Fortune 500 #65", title: "CEO @ NVIDIA", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80", commentsCount: 48, likesCount: "14.2k", topTopic: "Physical AI & Accelerated Computing" },
   { name: "Satya Nadella", rank: "Fortune 500 #13", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80", commentsCount: 39, likesCount: "11.5k", topTopic: "Enterprise Context & Agentic Workflow" },
+  { name: "David Solomon", rank: "Fortune 500 #55", title: "CEO @ Goldman Sachs", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80", commentsCount: 34, likesCount: "12.8k", topTopic: "Cost of Capital & ROIC Hurdle Rates" },
   { name: "Marc Benioff", rank: "Fortune 500 #127", title: "CEO @ Salesforce", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80", commentsCount: 31, likesCount: "8.9k", topTopic: "Autonomous Digital Workers (Agentforce)" },
-  { name: "Tim Cook", rank: "Fortune 500 #3", title: "CEO @ Apple", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80", commentsCount: 27, likesCount: "9.4k", topTopic: "Private Cloud Compute & On-Device Neural" },
-  { name: "Lisa Su", rank: "Fortune 500 #300", title: "CEO @ AMD", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80", commentsCount: 22, likesCount: "7.1k", topTopic: "Heterogeneous Compute & Open Silicon" },
-  { name: "Brian Chesky", rank: "Fortune 500 #450", title: "CEO @ Airbnb", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80", commentsCount: 18, likesCount: "5.8k", topTopic: "Transactional Customer Agents" }
+  { name: "Andy Jassy", rank: "Fortune 500 #2", title: "CEO @ Amazon", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80", commentsCount: 29, likesCount: "10.4k", topTopic: "Nuclear SMRs & Cloud Power Infrastructure" },
+  { name: "Tim Cook", rank: "Fortune 500 #3", title: "CEO @ Apple", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80", commentsCount: 27, likesCount: "9.4k", topTopic: "Private Cloud Compute & On-Device Neural" }
 ];
 
 let activeStoryIndex = 0;
@@ -387,7 +711,7 @@ function switchView(viewName) {
   }
 }
 
-// Render Dashboard (Distribution bar, cards, leaderboard)
+// Render Dashboard
 function renderDashboard() {
   // 1. Multi-segment Bar
   const segmentBar = document.querySelector("#multi-segment-bar");
@@ -410,7 +734,6 @@ function renderDashboard() {
       </div>
     `).join("");
 
-    // Click legend to filter
     legendEl.querySelectorAll(".legend-item").forEach(item => {
       item.addEventListener("click", () => {
         const catId = item.dataset.catId;
@@ -422,7 +745,24 @@ function renderDashboard() {
   // 2. Category Cards
   renderCategoryCards("all");
 
-  // 3. Leaderboard
+  // 3. Knowledge Domains Cross-Map in Dashboard
+  const domainsGridEl = document.querySelector("#domains-overview-grid");
+  if (domainsGridEl) {
+    domainsGridEl.innerHTML = overviewKnowledgeDomains.map(d => `
+      <div class="domain-overview-item">
+        <div>
+          <span class="overview-code-tag">${d.code}</span>
+          <div class="overview-domain-name">${d.name}</div>
+          <div class="overview-zh-name">${d.nameZh}</div>
+          <div class="overview-count-pill">🔗 ${d.connections} News Connections</div>
+          <p style="font-size:0.72rem; color:var(--fd-muted); line-height:1.4; margin-bottom:12px;">${d.focus}</p>
+        </div>
+        <a href="${d.link}" class="overview-link">Explore Map Domain ↗</a>
+      </div>
+    `).join("");
+  }
+
+  // 4. Leaderboard
   const leaderEl = document.querySelector("#leaderboard-list");
   if (leaderEl) {
     leaderEl.innerHTML = executiveLeaderboard.map((ceo, i) => `
@@ -509,7 +849,6 @@ function renderCategoryCards(filter) {
     </div>
   `).join("");
 
-  // Bind click handlers to "Read Story" buttons
   gridEl.querySelectorAll(".cat-action-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -520,14 +859,14 @@ function renderCategoryCards(filter) {
   });
 }
 
-// Render Reader Story
+// Render Reader Story (including Linked Knowledge Domains & Learning Hub)
 function renderStory(index) {
   const story = storiesData[index];
   if (!story) return;
 
   activeStoryIndex = index;
 
-  // Header pills state
+  // Header story pills state
   document.querySelectorAll(".story-pill").forEach((pill, i) => {
     const isCur = i === index;
     pill.classList.toggle("active", isCur);
@@ -544,10 +883,32 @@ function renderStory(index) {
   const dekEl = document.querySelector("#story-dek");
   if (dekEl) dekEl.textContent = story.dek;
 
-  // Story Body
+  // Story Body (with in-text knowledge links)
   const bodyEl = document.querySelector("#story-body");
   if (bodyEl) {
     bodyEl.innerHTML = story.body.map(p => `<p>${p}</p>`).join("");
+  }
+
+  // Linked Knowledge Domains Box under Story
+  const domainsBadgeCount = document.querySelector("#domains-badge-count");
+  if (domainsBadgeCount) domainsBadgeCount.textContent = `${story.linkedDomains.length} Academic Fields`;
+
+  const domainsListEl = document.querySelector("#story-linked-domains");
+  if (domainsListEl) {
+    domainsListEl.innerHTML = story.linkedDomains.map(d => `
+      <div class="domain-chip-card">
+        <div class="domain-card-left">
+          <span class="domain-code-badge">${d.code}</span>
+          <div class="domain-text-block">
+            <strong>${d.name} <small style="color:var(--fd-muted); font-weight:normal;">(${d.nameZh})</small></strong>
+            <span>${d.relevance}</span>
+          </div>
+        </div>
+        <a href="${d.link}" class="domain-explore-btn">
+          Explore Domain ↗
+        </a>
+      </div>
+    `).join("");
   }
 
   // Executive Likes Social Proof
@@ -620,6 +981,23 @@ function renderStory(index) {
     `;
   }
 
+  // Learning Hub Pane inside Copilot
+  const learningBoxEl = document.querySelector("#copilot-learning-box");
+  if (learningBoxEl && story.learningRoadmap) {
+    learningBoxEl.innerHTML = `
+      <div class="learning-roadmap-card">
+        <span class="roadmap-title">🎓 FOUNDATIONAL DISCIPLINE CONCEPTS</span>
+        <p>${story.learningRoadmap.coreConcepts}</p>
+        <span class="roadmap-title" style="margin-top:10px;">📚 RECOMMENDED MAPKAI TRACK</span>
+        <p>${story.learningRoadmap.recommendedModule}</p>
+      </div>
+      <div class="emba-seminar-prompt">
+        <strong>EMBA SEMINAR DISCUSSION PROMPT</strong>
+        "${story.learningRoadmap.seminarPrompt}"
+      </div>
+    `;
+  }
+
   // Smart Replies
   const repliesEl = document.querySelector("#smart-replies-list");
   if (repliesEl) {
@@ -673,6 +1051,9 @@ function submitAsk(question) {
     const qLower = question.toLowerCase();
     if (qLower.includes("flaw") || qLower.includes("counter")) {
       reply = `From a critical analysis perspective, ${curStory.title} assumes enterprise workflows can be cleanly restructured without operational resistance. In practice, legacy ERP and compliance silos account for 80% of real-world friction.`;
+    } else if (qLower.includes("knowledge") || qLower.includes("domain") || qLower.includes("discipline")) {
+      const topDomain = curStory.linkedDomains[0];
+      reply = `Core Academic Anchor: This business challenge is primarily governed by ${topDomain.code} (${topDomain.name}). Grounding executive decisions in this discipline clarifies the structural trade-offs between short-term CapEx and long-term operating leverage.`;
     } else if (qLower.includes("startup") || qLower.includes("10-person")) {
       reply = `Startup Playbook: Skip complex multi-month roadmaps. Pick a single high-friction task (e.g., invoice reconciliation or customer triage), wire a specialized agent directly to your database, and iterate daily with real users.`;
     } else {
@@ -717,7 +1098,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 4. Story Selector Pill click handlers in Reader
+  // 4. Story Selector Pill click handlers in Reader (all 6 stories)
   document.querySelectorAll(".story-pill").forEach(pill => {
     pill.addEventListener("click", () => {
       const idx = Number(pill.dataset.story);
@@ -725,7 +1106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 5. Copilot Tabs Handler (TL;DR, Takeaways, Playbook)
+  // 5. Copilot Tabs Handler (TL;DR, Takeaways, Playbook, Learning Hub)
   document.querySelectorAll(".copilot-tab").forEach(tab => {
     tab.addEventListener("click", () => {
       document.querySelectorAll(".copilot-tab").forEach(t => {

@@ -1714,3 +1714,317 @@ body[data-mapkai-page="showcase"] {
     align-items: flex-start;
   }
 }
+
+
+/* ==========================================================================
+   MapKAI Knowledge Domains & Learning Integration
+   ========================================================================== */
+
+/* In-text Knowledge Links inside article paragraphs */
+.k-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 7px;
+  margin: 0 3px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--fd-orange-dark);
+  background: #fbf2e5;
+  border: 1px solid #ebd9c0;
+  border-radius: 4px;
+  text-decoration: none;
+  vertical-align: baseline;
+  transition: all 140ms ease;
+}
+
+.k-chip:hover {
+  background: var(--fd-orange);
+  color: #ffffff;
+  border-color: var(--fd-orange);
+  box-shadow: 0 2px 6px rgba(217, 83, 40, 0.25);
+}
+
+/* Linked Knowledge Domains Box under Story */
+.linked-domains-container {
+  background: #faf7f0;
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius-lg);
+  padding: 18px 22px;
+  margin: 24px 0 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.domains-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.domains-title-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.domains-badge-icon {
+  font-size: 1.15rem;
+}
+
+.domains-badge-title {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--fd-ink);
+}
+
+.domains-badge-count {
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #ffedd5;
+  color: var(--fd-orange-dark);
+  padding: 2px 7px;
+  border-radius: 99px;
+}
+
+.domains-box-hint {
+  font-size: 0.72rem;
+  color: var(--fd-muted);
+}
+
+.domains-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.domain-chip-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #ebd9c0;
+  border-radius: var(--fd-radius);
+  padding: 12px 16px;
+  gap: 16px;
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+
+.domain-chip-card:hover {
+  transform: translateX(2px);
+  border-color: var(--fd-orange);
+}
+
+.domain-card-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.domain-code-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  font-family: monospace;
+  background: var(--fd-paper-warm);
+  border: 1px solid var(--fd-line);
+  color: var(--fd-orange-dark);
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.domain-text-block strong {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--fd-ink);
+  margin-bottom: 2px;
+}
+
+.domain-text-block span {
+  display: block;
+  font-size: 0.73rem;
+  color: var(--fd-muted);
+  line-height: 1.4;
+}
+
+.domain-explore-btn {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--fd-orange-dark);
+  text-decoration: none;
+  background: #fff8f3;
+  border: 1px solid #fed7aa;
+  padding: 6px 12px;
+  border-radius: var(--fd-radius);
+  white-space: nowrap;
+  transition: all 140ms ease;
+}
+
+.domain-explore-btn:hover {
+  background: var(--fd-orange);
+  color: #ffffff;
+  border-color: var(--fd-orange);
+}
+
+/* Knowledge Overview on Dashboard */
+.domains-overview-card {
+  background: #ffffff;
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 36px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.domains-overview-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.domains-overview-header h3 {
+  font-family: var(--fd-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--fd-ink);
+  margin-bottom: 3px;
+}
+
+.link-view-all-map {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--fd-orange-dark);
+  text-decoration: none;
+  padding: 6px 12px;
+  background: var(--fd-paper-warm);
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius);
+  transition: all 140ms ease;
+}
+
+.link-view-all-map:hover {
+  background: var(--fd-ink);
+  color: #ffffff;
+  border-color: var(--fd-ink);
+}
+
+.domains-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.domain-overview-item {
+  background: var(--fd-paper-warm);
+  border: 1px solid #eee5d4;
+  border-radius: var(--fd-radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 140ms ease;
+}
+
+.domain-overview-item:hover {
+  border-color: var(--fd-orange);
+}
+
+.overview-code-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  font-family: monospace;
+  color: var(--fd-orange-dark);
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.overview-domain-name {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--fd-ink);
+  margin-bottom: 4px;
+}
+
+.overview-zh-name {
+  font-size: 0.72rem;
+  color: var(--fd-muted);
+  margin-bottom: 10px;
+}
+
+.overview-count-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 2px 7px;
+  border-radius: 99px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.overview-link {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--fd-orange-dark);
+  text-decoration: none;
+}
+
+.overview-link:hover {
+  text-decoration: underline;
+}
+
+/* Learning Hub Pane inside Copilot */
+.learning-pane-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.learning-roadmap-card {
+  background: #faf7f0;
+  border: 1px solid #ebd9c0;
+  border-radius: var(--fd-radius);
+  padding: 14px;
+}
+
+.roadmap-title {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--fd-orange-dark);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.learning-roadmap-card p {
+  font-size: 0.76rem;
+  color: var(--fd-ink);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.emba-seminar-prompt {
+  background: #ffffff;
+  border-left: 3px solid var(--fd-orange);
+  padding: 10px 12px;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--fd-ink);
+}
+
+.emba-seminar-prompt strong {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--fd-orange-dark);
+  margin-bottom: 2px;
+}

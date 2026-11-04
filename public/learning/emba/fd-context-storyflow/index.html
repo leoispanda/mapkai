@@ -6,12 +6,12 @@
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#f7f4ed">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'">
-  <meta name="description" content="MapKAI EMBA Showcase: FD Executive Newsroom Dashboard and LinkedIn Copilot with Fortune 500 CEO reactions.">
+  <meta name="description" content="MapKAI EMBA Showcase: FD Executive Newsroom Dashboard and LinkedIn Copilot with Fortune 500 CEO reactions and Knowledge Domain learning.">
   <title>FD Executive Newsroom Dashboard — MapKAI EMBA</title>
   <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/site-shell.css?v=0.1.361">
-  <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=dashboard-v3">
-  <script src="/learning/emba/fd-context-storyflow/script.js?v=dashboard-v3" defer></script>
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.365">
+  <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=learning-v4">
+  <script src="/learning/emba/fd-context-storyflow/script.js?v=learning-v4" defer></script>
 </head>
 <body data-mapkai-page="emba">
   <!-- MapKAI Header Bar -->
@@ -23,7 +23,7 @@
       <div class="product-badge">
         <span class="product-name">FD Newsroom</span>
         <span class="product-divider">×</span>
-        <span class="product-sub">Executive Dashboard</span>
+        <span class="product-sub">Executive Dashboard &amp; Learning</span>
       </div>
 
       <!-- Live Executive Metrics -->
@@ -34,7 +34,7 @@
         <span class="metric-sep">•</span>
         <span class="metric-item"><strong>84</strong> CEOs</span>
         <span class="metric-sep">•</span>
-        <span class="metric-item"><strong>1,480h</strong> Saved</span>
+        <span class="metric-item"><strong>12</strong> Knowledge Domains</span>
         <span class="metric-sep">•</span>
         <span class="metric-status">🟢 Live Sync</span>
       </div>
@@ -62,12 +62,12 @@
         <button type="button" class="view-toggle-pill" id="btn-view-reader" role="tab" aria-selected="false" aria-controls="view-reader-section">
           <span class="pill-icon">📰</span>
           <span class="pill-title">Story &amp; Copilot Reader</span>
-          <span class="pill-count-tag">4 CEO Showcases</span>
+          <span class="pill-count-tag">6 CEO Showcases</span>
         </button>
       </div>
       <div class="view-status-hint">
         <span class="live-pulse"></span>
-        <span>Executive Prototype Showcase · Non-Real-time Static Data</span>
+        <span>Executive Prototype Showcase · Linked to MapKAI Knowledge Domains</span>
       </div>
     </div>
   </nav>
@@ -83,7 +83,7 @@
           <p class="hero-eyebrow">EXECUTIVE INTELLIGENCE DASHBOARD</p>
           <h1 class="hero-title">Global Business Newsroom &amp; Sector Monitor</h1>
           <p class="hero-description">
-            Aggregated intelligence tracking 499 enterprise reports across 7 core sectors, verified Fortune 500 CEO sentiment, and AI reading speedup across EMBA cohorts.
+            Aggregated intelligence tracking 499 enterprise reports across 7 core sectors, verified Fortune 500 CEO sentiment, and direct linkages to MapKAI foundational knowledge domains.
           </p>
         </div>
         <div class="hero-right">
@@ -146,14 +146,14 @@
 
         <div class="kpi-card">
           <div class="kpi-head">
-            <span class="kpi-label">STRATEGIC CONSENSUS</span>
-            <span class="kpi-icon">💡</span>
+            <span class="kpi-label">LINKED KNOWLEDGE DOMAINS</span>
+            <span class="kpi-icon">🎓</span>
           </div>
           <div class="kpi-main">
-            <span class="kpi-number">91%</span>
-            <span class="kpi-badge highlight">Strong Moat</span>
+            <span class="kpi-number">12</span>
+            <span class="kpi-badge highlight">MapKAI Core</span>
           </div>
-          <p class="kpi-sub">Prioritizing agentic context access</p>
+          <p class="kpi-sub">Anchored to ISCED academic fields</p>
         </div>
       </div>
 
@@ -179,7 +179,7 @@
         <div class="section-title-row">
           <div>
             <h2>Category Newsroom Breakdown (各门类新闻统计与动态)</h2>
-            <p class="section-dek">Real-time categorized news counts, growth velocities, active CEO thought-leaders, and actionable insights.</p>
+            <p class="section-dek">Categorized news counts, growth velocities, active CEO thought-leaders, and direct learning links.</p>
           </div>
           <div class="category-filter-chips" role="group" aria-label="Filter by sector">
             <button type="button" class="cat-filter-chip active" data-filter="all">All Sectors (7)</button>
@@ -191,6 +191,21 @@
 
         <div class="category-cards-grid" id="category-cards-grid">
           <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
+
+      <!-- MapKAI Knowledge Architecture Overview -->
+      <div class="domains-overview-card">
+        <div class="domains-overview-header">
+          <div>
+            <p class="hero-eyebrow">MAPKAI KNOWLEDGE ARCHITECTURE</p>
+            <h3>Academic Knowledge Domains Mentioned Across Newsroom</h3>
+            <p class="subtext">Every business story is grounded in MapKAI foundational fields and ISCED disciplines</p>
+          </div>
+          <a href="/map" class="link-view-all-map" target="_blank" rel="noopener">Explore Full Knowledge Map ↗</a>
+        </div>
+        <div class="domains-overview-grid" id="domains-overview-grid">
+          <!-- Rendered by script.js -->
         </div>
       </div>
 
@@ -270,6 +285,14 @@
               <span class="pill-badge">#4</span>
               <span class="pill-title">Salesforce: Digital Labor Force (Marc Benioff)</span>
             </button>
+            <button type="button" class="story-pill" data-story="4" role="tab" aria-selected="false">
+              <span class="pill-badge">#5</span>
+              <span class="pill-title">Hyperscalers: Nuclear SMR Energy Race (Andy Jassy)</span>
+            </button>
+            <button type="button" class="story-pill" data-story="5" role="tab" aria-selected="false">
+              <span class="pill-badge">#6</span>
+              <span class="pill-title">Cost of Capital &amp; $50B CapEx Hurdle (David Solomon)</span>
+            </button>
           </div>
         </div>
       </section>
@@ -291,9 +314,24 @@
 
           <div class="story-divider"></div>
 
+          <!-- Story Body with In-text Knowledge Links -->
           <div class="story-body" id="story-body">
-            <p>The answer cannot be found in one quarter or one company’s result. It requires context: what businesses expected, what they implemented, which constraints emerged, and how evidence changed over time.</p>
-            <p>Buying AI tools does not automatically make a company more productive. Teams also need to change how work is organised. Moving beyond isolated prompt experiments to deeply integrated operational pipelines is where the true margin expansion begins.</p>
+            <!-- Rendered by script.js -->
+          </div>
+
+          <!-- MapKAI Linked Knowledge Domains (Learning Feature) -->
+          <div class="linked-domains-container" id="linked-domains-container">
+            <div class="domains-box-header">
+              <div class="domains-title-flex">
+                <span class="domains-badge-icon">🎓</span>
+                <span class="domains-badge-title">LINKED MAPKAI KNOWLEDGE DOMAINS</span>
+                <span class="domains-badge-count" id="domains-badge-count">3 Academic Fields</span>
+              </div>
+              <span class="domains-box-hint">Tap any domain to explore curriculum &amp; concepts</span>
+            </div>
+            <div class="domains-cards-list" id="story-linked-domains">
+              <!-- Rendered dynamically by script.js -->
+            </div>
           </div>
 
           <!-- Social Proof: Fortune 500 CEO Likes -->
@@ -358,11 +396,12 @@
               <span class="savings-badge" id="copilot-time-badge">⏱️ Saved 4.2m (~86%)</span>
             </div>
 
-            <!-- Mode Navigation (30s TL;DR, 3 Takeaways, Playbook) -->
+            <!-- Mode Navigation (30s TL;DR, 3 Takeaways, Playbook, Learning Hub) -->
             <div class="copilot-tabs" role="tablist">
               <button type="button" class="copilot-tab active" data-tab="tldr" role="tab" aria-selected="true">30s TL;DR</button>
-              <button type="button" class="copilot-tab" data-tab="takeaways" role="tab" aria-selected="false">3 Key Takeaways</button>
-              <button type="button" class="copilot-tab" data-tab="playbook" role="tab" aria-selected="false">Founder Playbook</button>
+              <button type="button" class="copilot-tab" data-tab="takeaways" role="tab" aria-selected="false">3 Takeaways</button>
+              <button type="button" class="copilot-tab" data-tab="playbook" role="tab" aria-selected="false">Playbook</button>
+              <button type="button" class="copilot-tab" data-tab="learning" role="tab" aria-selected="false">🎓 Learning Hub</button>
             </div>
 
             <!-- Tab Panels -->
@@ -394,6 +433,13 @@
                   <!-- Rendered by script.js -->
                 </div>
               </div>
+
+              <!-- Learning Hub Tab Pane -->
+              <div class="tab-pane" id="pane-learning" hidden>
+                <div class="learning-pane-content" id="copilot-learning-box">
+                  <!-- Rendered dynamically by script.js -->
+                </div>
+              </div>
             </div>
 
             <!-- Suggested LinkedIn Replies (Click to Copy) -->
@@ -409,7 +455,7 @@
               <div class="section-label">ASK COPILOT ABOUT THIS STORY</div>
               <div class="quick-chips">
                 <button type="button" class="chip" data-q="What is the biggest operational flaw in this thesis?">🔍 Counter-Argument</button>
-                <button type="button" class="chip" data-q="How can a 10-person startup implement this immediately?">🚀 Startup Playbook</button>
+                <button type="button" class="chip" data-q="Which MapKAI knowledge domain applies most to this challenge?">🎓 Core Discipline</button>
                 <button type="button" class="chip" data-q="Extract the punchiest quote from this discussion.">✨ Key Quote</button>
               </div>
               <div class="ask-input-box">
@@ -430,7 +476,7 @@
     <div class="footer-inner">
       <div class="footer-left">
         <strong>MapKAI EMBA Product Lab</strong>
-        <span>FD Executive Newsroom Dashboard &amp; LinkedIn Engagement Showcase · Non-Real-time Static Data</span>
+        <span>FD Executive Newsroom Dashboard &amp; Knowledge Domain Learning Hub · Non-Real-time Static Data</span>
       </div>
       <div class="footer-right">
         <a href="#top" class="return-link">Back to top ↑</a>
