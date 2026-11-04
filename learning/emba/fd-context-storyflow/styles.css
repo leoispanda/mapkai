@@ -128,22 +128,6 @@ body[data-mapkai-page="showcase"] {
   color: var(--fd-orange);
 }
 
-.btn-batch-like-quick {
-  background: var(--fd-orange);
-  color: #ffffff;
-  border: none;
-  padding: 6px 12px;
-  border-radius: var(--fd-radius);
-  font-size: 0.74rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 150ms ease;
-}
-
-.btn-batch-like-quick:hover {
-  background: var(--fd-orange-dark);
-}
-
 /* ==========================================================================
    Story Selector Bar (Pills)
    ========================================================================== */

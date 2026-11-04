@@ -764,24 +764,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 7. Quick Batch Like All
-  document.querySelector("#btn-batch-like")?.addEventListener("click", () => {
-    const likeBtn = document.querySelector("#btn-like");
-    if (likeBtn && !likeBtn.classList.contains("active")) {
-      likeBtn.click();
-    }
-    const btn = document.querySelector("#btn-batch-like");
-    if (btn) {
-      btn.textContent = "⚡ Batch Liked (4/4) ✓";
-      btn.style.background = "#15803d";
-      setTimeout(() => {
-        btn.textContent = "⚡ Batch Like All";
-        btn.style.background = "";
-      }, 2500);
-    }
-  });
-
-  // 8. Ask Copilot events
+  // 7. Ask Copilot events
   document.querySelectorAll(".chip").forEach(chip => {
     chip.addEventListener("click", () => {
       const q = chip.dataset.q;
