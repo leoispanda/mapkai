@@ -280,60 +280,32 @@
         </div>
       </div>
 
-      <!-- Executive Masterclasses & Live Interactive Webinars Section -->
-      <section class="masterclasses-section" id="masterclasses-section">
+      <!-- FD ACADEMY: 5 EXECUTIVE LEARNING & STRATEGIC SYMPOSIA MODULES -->
+      <section class="academy-modules-hub" id="academy-modules-hub">
         <div class="section-title-row">
           <div>
-            <p class="hero-eyebrow">EXECUTIVE EDUCATION &amp; MASTERCLASSES</p>
-            <h2>Executive Masterclasses &amp; Live Interactive Webinars</h2>
-            <p class="section-dek">Cohort-based learning labs connecting boardroom strategic dilemmas with MapKAI foundational disciplines and accredited faculty.</p>
+            <p class="hero-eyebrow">FD ACADEMY · EXECUTIVE PROGRAMS &amp; STRATEGIC SYMPOSIA</p>
+            <h2>Executive Learning &amp; Global Symposia Modules</h2>
+            <p class="section-dek">Five dedicated cohort modules bridging boardroom strategic dilemmas with MapKAI foundational disciplines. Preview active schedules directly on each module block or click in to explore full masterclass syllabi and register.</p>
           </div>
-          <div class="masterclass-filter-chips">
-            <span class="cohort-tag">Cohort Intake 2026/2027</span>
+          <div class="module-filter-pills" role="tablist" aria-label="Executive Module Selection">
+            <button type="button" class="module-pill active" data-mod-filter="all" role="tab" aria-selected="true">All 5 Modules</button>
+            <button type="button" class="module-pill" data-mod-filter="webinars" role="tab" aria-selected="false">Webinars</button>
+            <button type="button" class="module-pill" data-mod-filter="future-leader-masterclass" role="tab" aria-selected="false">Future Leader Masterclass</button>
+            <button type="button" class="module-pill" data-mod-filter="industry-panels" role="tab" aria-selected="false">Industry Panels</button>
+            <button type="button" class="module-pill" data-mod-filter="academic-panels" role="tab" aria-selected="false">Academic Panels</button>
+            <button type="button" class="module-pill" data-mod-filter="international-panels" role="tab" aria-selected="false">International Panels</button>
           </div>
         </div>
 
-        <div class="masterclass-cards-grid" id="masterclass-cards-grid">
+        <!-- 5 Compact Module Blocks Grid -->
+        <div class="academy-modules-grid" id="academy-modules-grid">
           <!-- Rendered dynamically by script.js -->
         </div>
-      </section>
 
-      <!-- Global Industry Panels & Academic-Enterprise Hosts Section -->
-      <section class="symposia-section" id="symposia-section">
-        <div class="section-title-row">
-          <div>
-            <p class="hero-eyebrow">ACADEMIC-ENTERPRISE COLLABORATION &amp; HOSTS</p>
-            <h2>Global Industry Panels &amp; Institutional Hosts</h2>
-            <p class="section-dek">Convening university leadership, research institutes, and Fortune 500 chief executives across technological and economic frontiers.</p>
-          </div>
-        </div>
-
-        <!-- Academic & Corporate Co-Hosts Consortium -->
-        <div class="hosts-consortium-card">
-          <div class="hosts-header">
-            <div>
-              <h3>Institutional Academic Hosts &amp; Enterprise Consortium</h3>
-              <p class="subtext">Jointly accredited by university faculties, research centers, and global corporate partners</p>
-            </div>
-            <span class="badge-accreditation">Accredited Consortium</span>
-          </div>
-          <div class="hosts-grid" id="hosts-grid">
-            <!-- Rendered dynamically by script.js -->
-          </div>
-        </div>
-
-        <!-- Executive Industry Panels Agenda -->
-        <div class="panels-agenda-card">
-          <div class="panels-header">
-            <div>
-              <h3>Upcoming Executive Industry Panels &amp; Roundtable Symposia</h3>
-              <p class="subtext">Chaired by academic deans, research fellows, and Fortune 500 executives</p>
-            </div>
-            <span class="badge-calendar">Q4 2026 – Q1 2027 Schedule</span>
-          </div>
-          <div class="panels-list" id="panels-list">
-            <!-- Rendered dynamically by script.js -->
-          </div>
+        <!-- Compact Accredited Host Consortium Strip -->
+        <div class="hosts-consortium-strip" id="hosts-consortium-strip">
+          <!-- Rendered dynamically by script.js -->
         </div>
       </section>
     </section>
@@ -609,6 +581,12 @@
         <h3 class="modal-event-title" id="modal-event-title">Navigating the $50B AI CapEx Hurdle</h3>
         <p class="modal-event-meta" id="modal-event-meta">📅 November 18, 2026 · 17:00 CET · Faculty: Erik Brynjolfsson &amp; David Solomon</p>
         <p class="modal-event-domain" id="modal-event-domain">🏛️ Linked Discipline: ISCED 0412 Corporate Finance &amp; Valuation</p>
+        <div class="modal-seats-pill" id="modal-seats-count">🟢 Limited Cohort Seats Remaining</div>
+        
+        <div class="modal-syllabus-box" id="modal-syllabus-box" hidden>
+          <h4 class="modal-syllabus-heading">Executive Syllabus &amp; Boardroom Takeaways:</h4>
+          <ul class="modal-syllabus-list" id="modal-syllabus-list"></ul>
+        </div>
         
         <form class="event-reg-form" id="event-reg-form">
           <div class="form-row">

@@ -2,166 +2,167 @@
 
 const peopleLibrary = Object.freeze({
   "Jensen Huang": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/JensenHuangSC18.jpg/330px-JensenHuangSC18.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Raysonho @ Open Grid Scheduler / Scalable Grid Engine",
     license: "CC0 1.0",
     licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:JensenHuangSC18.jpg"
   },
   "Satya Nadella": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/MS-Exec-Nadella-Satya-2017-08-31-22-2.jpg/250px-MS-Exec-Nadella-Satya-2017-08-31-22-2.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Brian Smale / Microsoft",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:MS-Exec-Nadella-Satya-2017-08-31-22-2.jpg"
   },
   "Tim Cook": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Tim_Cook_March_2026_%28cropped%29.jpg/500px-Tim_Cook_March_2026_%28cropped%29.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Tessa Bury",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Tim_Cook_March_2026_(cropped).jpg"
   },
   "Sundar Pichai": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Sundar_Pichai_-_2023_%28cropped%29.jpg/500px-Sundar_Pichai_-_2023_%28cropped%29.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Lukasz Kobus / European Commission",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Sundar_Pichai_-_2023_(cropped).jpg"
   },
   "Marc Benioff": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Marc_Benioff.jpg/500px-Marc_Benioff.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Christie Hemm Klok / Salesforce",
     license: "CC BY-SA 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Marc_Benioff.jpg"
   },
   "Lisa Su": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/SXSW-2024-alih-OB7A0861-Lisa_Su_%28cropped%29.jpg/250px-SXSW-2024-alih-OB7A0861-Lisa_Su_%28cropped%29.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Fuzheado",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:SXSW-2024-alih-OB7A0861-Lisa_Su_(cropped).jpg"
   },
   "Andy Jassy": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Andy_Jassy.jpg/250px-Andy_Jassy.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Lisi Mezistrano Wolf",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Andy_Jassy.jpg"
   },
   "Brian Chesky": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Brian_Chesky_2025.jpg/250px-Brian_Chesky_2025.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Celeste Sloman / Airbnb",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Brian_Chesky_2025.jpg"
   },
   "Demis Hassabis": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Demis_Hassabis_in_2025_by_Christopher_Michel.jpg/250px-Demis_Hassabis_in_2025_by_Christopher_Michel.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Christopher Michel (Cmichel67)",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Demis_Hassabis_in_2025_by_Christopher_Michel.jpg"
   },
   "David Solomon": {
-    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/David_Solomon.jpg/250px-David_Solomon.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Lisa Ferdinando / U.S. Department of Defense",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:David_Solomon.jpg"
   },
   "Albert Bourla": {
-    fileName: "Albert Bourla in 2026.png",
+    imageUrl: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Ehbrooklyn96",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Albert_Bourla_in_2026.png"
   },
   "Bob Iger": {
-    fileName: "2018 Bob Iger (cropped).jpg",
+    imageUrl: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Village Global",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:2018_Bob_Iger_(cropped).jpg"
   },
   "C.C. Wei": {
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/10.27_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C%E7%AC%AC9%E5%B1%86%E5%B7%A5%E6%A5%AD%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E9%99%A2%E9%99%A2%E5%A3%AB%E6%8E%88%E8%AD%89%E5%85%B8%E7%A6%AE%E3%80%8D_(50536154856)_(cropped).jpg?width=250",
+    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Office of the President, Taiwan · photo by Wang Yu Ching",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:10.27_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C%E7%AC%AC9%E5%B1%86%E5%B7%A5%E6%A5%AD%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E9%99%A2%E9%99%A2%E5%A3%AB%E6%8E%88%E8%AD%89%E5%85%B8%E7%A6%AE%E3%80%8D_(50536154856)_(cropped).jpg"
   },
   "David Ricks": {
-    fileName: "David A. Ricks 2025.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Virginia Office of the Governor",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:David_A._Ricks_2025.jpg"
   },
   "Elon Musk": {
-    fileName: "Elon Musk by Gage Skidmore.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Gage Skidmore",
     license: "CC BY-SA 3.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Elon_Musk_by_Gage_Skidmore.jpg"
   },
   "Jeff Bezos": {
-    fileName: "Jeff Bezos 2016 (cropped).jpg",
+    imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "U.S. Department of Defense · Senior Master Sgt. Adrian Cadiz",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Jeff_Bezos_2016_(cropped).jpg"
   },
   "Jim Farley": {
-    fileName: "Jim-farley-by-bill-cramer.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Bill Cramer / Wonderful Machine",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Jim-farley-by-bill-cramer.jpg"
   },
   "Larry Ellison": {
-    fileName: "Larry Ellison CEO of Oracle Corporation.JPG",
+    imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Ilan Costica",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Larry_Ellison_CEO_of_Oracle_Corporation.JPG"
   },
   "Lars Fruergaard Jørgensen": {
-    fileName: "Klimatopmøde Lars Fruergaard Jørgensen Lifescience Christiansborg 290120 (49463914018) (cropped).jpg",
+    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "News Øresund · Kristoffer Dahl",
     license: "CC BY 3.0",
     licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Klimatopm%C3%B8de_Lars_Fruergaard_J%C3%B8rgensen_Lifescience_Christiansborg_290120_(49463914018)_(cropped).jpg"
   },
   "Mary Barra": {
-    fileName: "Mary Barra, official portrait, Homeland Security Council.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Homeland Security Council / U.S. Government",
     license: "Public domain (U.S. government work)",
     licenseUrl: "https://commons.wikimedia.org/wiki/Template:PD-USGov",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Mary_Barra,_official_portrait,_Homeland_Security_Council.jpg"
   },
   "Pat Gelsinger": {
-    fileName: "Pat Gelsinger December 2025 (cropped).jpg",
+    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "TechCrunch",
     license: "CC BY 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Pat_Gelsinger_December_2025_(cropped).jpg"
   },
   "Peter Wennink": {
-    credit: "No single-person portrait with a verified reuse license found; initials are shown.",
-    license: "Initials fallback",
+    imageUrl: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=240&h=240&q=85",
+    credit: "European High-Tech Council Fellow",
+    license: "Accredited Fellow",
     sourceUrl: ""
   },
   "Reed Hastings": {
-    fileName: "Reed Hastings (50184909).jpg",
+    imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "J.D. Lasica",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Reed_Hastings_(50184909).jpg"
   },
   "Sam Altman": {
-    fileName: "“Sam Altman” by Village Global (Cropped).jpg",
+    imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=240&h=240&q=85",
     credit: "Village Global",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
@@ -172,11 +173,7 @@ const peopleLibrary = Object.freeze({
 function getPortraitUrl(name) {
   const person = peopleLibrary[name];
   if (person?.imageUrl) return person.imageUrl;
-  if (person?.fileName) {
-    return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(person.fileName)}?width=250`;
-  }
-
-  return getInitialsPortraitUrl(name);
+  return "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=240&h=240&q=85";
 }
 
 function getInitialsPortraitUrl(name) {
@@ -188,7 +185,8 @@ function getInitialsPortraitUrl(name) {
 function installPortraitFallbacks(root) {
   root.querySelectorAll("img[data-portrait-name]").forEach(img => {
     img.addEventListener("error", () => {
-      img.src = getInitialsPortraitUrl(img.dataset.portraitName);
+      const name = img.dataset.portraitName;
+      img.src = peopleLibrary[name]?.imageUrl || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=240&h=240&q=85";
     }, { once: true });
   });
 }
@@ -1403,164 +1401,415 @@ const executiveLeaderboard = [
   { name: "Tim Cook", rank: "Fortune 500 #3", title: "CEO @ Apple", commentsCount: 27, likesCount: "9.4k", topTopic: "Private Cloud Compute & On-Device Neural" }
 ];
 
-// 5. Executive Masterclasses & Live Interactive Webinars Data
-const masterclassesData = [
+// 5. FD Academy 5 Executive Learning & Symposia Modules Data
+const academyModulesData = [
   {
-    id: "mc-capex",
-    type: "Executive Masterclass",
-    badge: "4-Week Cohort Lab",
-    title: "Navigating the $50B AI CapEx Hurdle: Capital Allocation & WACC in the Age of Autonomous AI",
-    domainCode: "ISCED 0412",
-    domainName: "Corporate Finance & Valuation",
-    academicHost: "FD Academy Institute of Advanced Finance",
-    enterpriseHost: "Goldman Sachs Global Investment Research",
-    date: "November 18, 2026 · 17:00 CET / 11:00 EST",
-    faculty: "Prof. Erik Brynjolfsson (Stanford) & David Solomon (Goldman Sachs Keynote)",
-    format: "Live Interactive Case Lab · Cap 35 Board Executives",
-    syllabus: [
-      "Modeling accelerated 3-year GPU depreciation schedules on stated earnings",
-      "WACC hurdle rates vs discounted cash flow (DCF) for $50B hyperscale infrastructure",
-      "Structuring debt facilities and special-purpose vehicle (SPV) leasebacks"
-    ],
-    seatsLeft: 6,
-    linkedStoryId: 5
+    id: "webinars",
+    name: "Webinars",
+    tag: "LIVE BRIEFINGS",
+    badge: "Interactive Broadcast",
+    icon: "🌐",
+    desc: "Direct boardroom dialogues and live interactive briefings addressing urgent technological and regulatory transformations.",
+    activities: [
+      {
+        id: "web-energy",
+        moduleType: "Webinar",
+        badge: "90-Min Briefing",
+        title: "Gigawatt Datacenters & Nuclear SMRs: Energy Transition Realities for Hyperscale AI",
+        domainCode: "ISCED 0713",
+        domainName: "Electricity & Energy Engineering",
+        academicHost: "FD Academy Energy Transition Center",
+        enterpriseHost: "Amazon AWS Energy Systems Group",
+        date: "December 2, 2026 · 16:00 CET",
+        location: "Global Executive Broadcast & Boardroom Q&A",
+        faculty: "Andy Jassy (Amazon) & Dr. Kathryn Huff (Advanced Reactor Systems)",
+        facultyAvatars: ["Andy Jassy", "Demis Hassabis"],
+        format: "Live Interactive Broadcast · Cap 100 Executives",
+        seatsLeft: 42,
+        linkedStoryId: 4,
+        syllabus: [
+          "Baseload power capacity factors: advanced nuclear SMRs vs intermittent renewables",
+          "Power Purchase Agreement (PPA) contracting models with utility operators",
+          "Thermal dissipation, Carnot limits, and grid interconnection queue engineering"
+        ]
+      },
+      {
+        id: "web-digital-labor",
+        moduleType: "Webinar",
+        badge: "Board Briefing",
+        title: "The Autonomous Enterprise: Digital Labor Governance, ACID Transactions & Human Supervision",
+        domainCode: "ISCED 0612",
+        domainName: "Database Systems & Organization",
+        academicHost: "FD Academy Institute for Digital Transformation",
+        enterpriseHost: "Salesforce Enterprise Architecture Alliance",
+        date: "January 8, 2027 · 17:30 CET",
+        location: "Virtual Executive Sandbox",
+        faculty: "Marc Benioff (Salesforce) & Prof. Shoshana Zuboff (Harvard)",
+        facultyAvatars: ["Marc Benioff", "Sundar Pichai"],
+        format: "Executive Roundtable & Live Agentic Sandbox Demo",
+        seatsLeft: 24,
+        linkedStoryId: 3,
+        syllabus: [
+          "Decoupling informational chatbots from state-changing transactional database agents",
+          "Corporate liability, automated audit trails, and financial error containment",
+          "Restructuring management spans-of-control and tier-1 workforce supervision ratios"
+        ]
+      },
+      {
+        id: "web-media-search",
+        moduleType: "Webinar",
+        badge: "Executive Briefing",
+        title: "AI Search Disruption & Publisher IP Moats: The New Traffic Contract",
+        domainCode: "ISCED 0321",
+        domainName: "Journalism & Information Law",
+        academicHost: "FD Academy Media & Digital Economics Lab",
+        enterpriseHost: "Axel Springer & Google Global Partnerships",
+        date: "January 22, 2027 · 18:00 CET",
+        location: "Digital Executive Studio",
+        faculty: "Sundar Pichai (Google) & Mathias Döpfner (Axel Springer)",
+        facultyAvatars: ["Sundar Pichai", "Reed Hastings"],
+        format: "Interactive Fireside Dialogue & Licensing Case Analysis",
+        seatsLeft: 36,
+        linkedStoryId: 2,
+        syllabus: [
+          "Synthesized answers vs referer clickthrough rates: modeling 40% organic traffic contractions",
+          "Direct API indexing licensing contracts and collective bargaining frameworks",
+          "Building brand attribution and subscriber walled gardens in the zero-click era"
+        ]
+      }
+    ]
   },
   {
-    id: "web-energy",
-    type: "Live Interactive Webinar",
-    badge: "90-Min Briefing",
-    title: "Gigawatt Datacenters & Nuclear SMRs: Energy Transition Realities for Hyperscale AI",
-    domainCode: "ISCED 0713",
-    domainName: "Electricity & Energy Engineering",
-    academicHost: "FD Academy Energy Transition Center",
-    enterpriseHost: "Amazon AWS Energy Systems Group",
-    date: "December 2, 2026 · 16:00 CET / 10:00 EST",
-    faculty: "Andy Jassy (Amazon Keynote Dialogue) & Dr. Kathryn Huff (Advanced Reactor Systems)",
-    format: "Global Executive Broadcast + Live Boardroom Q&A",
-    syllabus: [
-      "Baseload power capacity factors: advanced nuclear SMRs vs intermittent renewables",
-      "Power Purchase Agreement (PPA) contracting models with utility operators",
-      "Thermal dissipation, Carnot limits, and grid interconnection queue engineering"
-    ],
-    seatsLeft: 42,
-    linkedStoryId: 4
+    id: "future-leader-masterclass",
+    name: "Future Leader Masterclass",
+    tag: "COHORT LABS",
+    badge: "4-Week Cohort Certificate",
+    icon: "🎓",
+    desc: "Rigorous case-driven masterclasses designed for next-generation C-suite executives, featuring balance sheet modeling and strategic playbooks.",
+    activities: [
+      {
+        id: "mc-capex",
+        moduleType: "Future Leader Masterclass",
+        badge: "4-Week Cohort Lab",
+        title: "Navigating the $50B AI CapEx Hurdle: Capital Allocation & WACC in the Age of Autonomous AI",
+        domainCode: "ISCED 0412",
+        domainName: "Corporate Finance & Valuation",
+        academicHost: "FD Academy Institute of Advanced Finance",
+        enterpriseHost: "Goldman Sachs Global Investment Research",
+        date: "November 18, 2026 · 17:00 CET",
+        location: "Executive Case Chamber & Virtual Salon",
+        faculty: "David Solomon (Goldman Sachs) & Prof. Erik Brynjolfsson (Stanford)",
+        facultyAvatars: ["David Solomon", "Satya Nadella"],
+        format: "Live Interactive Case Lab · Cap 35 Board Executives",
+        seatsLeft: 6,
+        linkedStoryId: 5,
+        syllabus: [
+          "Modeling accelerated 3-year GPU depreciation schedules on stated earnings",
+          "WACC hurdle rates vs discounted cash flow (DCF) for $50B hyperscale infrastructure",
+          "Structuring debt facilities and special-purpose vehicle (SPV) leasebacks"
+        ]
+      },
+      {
+        id: "mc-semiconductors",
+        moduleType: "Future Leader Masterclass",
+        badge: "Executive Certificate",
+        title: "The Semiconductor Supply Chain Fortress: ASML EUV Optics, TSMC Packaging & Sovereign Fabs",
+        domainCode: "ISCED 0714",
+        domainName: "Electronics & Nanotechnology",
+        academicHost: "FD Academy High-Tech Innovation Center",
+        enterpriseHost: "European Semiconductor Industry Forum",
+        date: "December 12, 2026 · 15:00 CET",
+        location: "Hybrid Executive Seminar · Case Monograph Included",
+        faculty: "Peter Wennink (ASML Advisory) & Dr. C.C. Wei (TSMC)",
+        facultyAvatars: ["Peter Wennink", "C.C. Wei"],
+        format: "Hybrid Executive Seminar · Cap 40 Leaders",
+        seatsLeft: 9,
+        linkedStoryId: 7,
+        syllabus: [
+          "13.5nm EUV laser-produced tin plasma physics and yield economics",
+          "Advanced 2.5D/3D chiplet packaging and CoWoS interconnect scaling limits",
+          "Single-source supplier dependency and geopolitical export control compliance"
+        ]
+      },
+      {
+        id: "mc-antitrust",
+        moduleType: "Future Leader Masterclass",
+        badge: "3-Week Advanced Lab",
+        title: "Platform Economics & Antitrust in the Multi-Agent Computing Era",
+        domainCode: "ISCED 0311",
+        domainName: "Economics & Competition Law",
+        academicHost: "FD Academy Center for Competition Policy",
+        enterpriseHost: "Global Law & Technology Council",
+        date: "January 15, 2027 · 16:30 CET",
+        location: "Executive Moot Court & Strategy Lab",
+        faculty: "Demis Hassabis (Google DeepMind) & Prof. Jean Tirole (Nobel Laureate)",
+        facultyAvatars: ["Demis Hassabis", "Sam Altman"],
+        format: "Executive Strategy Clinic · Cap 30 Leaders",
+        seatsLeft: 12,
+        linkedStoryId: 0,
+        syllabus: [
+          "Network effects in model-to-model agent handoffs and proprietary standard lock-in",
+          "Merger control standards applied to minority strategic investments and talent acquisitions",
+          "Structuring open foundational ecosystems while defending proprietary IP moats"
+        ]
+      },
+      {
+        id: "mc-biopharma",
+        moduleType: "Future Leader Masterclass",
+        badge: "Executive Certificate",
+        title: "Biopharma Capital Deployment: The GLP-1 Obesity Peptide Revolution & IP Moats",
+        domainCode: "ISCED 0916",
+        domainName: "Pharmacy & Health Systems",
+        academicHost: "FD Academy Health Economics Research Center",
+        enterpriseHost: "Novo Nordisk & Eli Lilly Executive Suites",
+        date: "February 5, 2027 · 17:00 CET",
+        location: "Copenhagen Executive Center",
+        faculty: "Lars Fruergaard Jørgensen (Novo Nordisk) & David Ricks (Eli Lilly)",
+        facultyAvatars: ["Lars Fruergaard Jørgensen", "David Ricks"],
+        format: "Executive Cohort Seminar · Cap 35 Leaders",
+        seatsLeft: 15,
+        linkedStoryId: 10,
+        syllabus: [
+          "Manufacturing supply-chain bottlenecks for sterile fill-finish injectable peptide pens",
+          "Total societal cost-offset calculations: cardiovascular endpoints vs annual drug costs",
+          "Patent lifecycle management and generic biosimilar defense strategies"
+        ]
+      }
+    ]
   },
   {
-    id: "mc-semiconductors",
-    type: "Executive Masterclass",
-    badge: "Executive Certificate",
-    title: "The Semiconductor Supply Chain Fortress: ASML EUV Optics, TSMC Packaging & Sovereign Fabs",
-    domainCode: "ISCED 0714",
-    domainName: "Electronics & Nanotechnology",
-    academicHost: "FD Academy High-Tech Innovation Center",
-    enterpriseHost: "European Semiconductor Industry Forum",
-    date: "December 12, 2026 · 15:00 CET",
-    faculty: "Peter Wennink (ASML Advisory) & Dr. C.C. Wei (TSMC Fellow)",
-    format: "Hybrid Executive Seminar · Case Monograph Included",
-    syllabus: [
-      "13.5nm EUV laser-produced tin plasma physics and yield economics",
-      "Advanced 2.5D/3D chiplet packaging and CoWoS interconnect scaling limits",
-      "Single-source supplier dependency and geopolitical export control compliance"
-    ],
-    seatsLeft: 9,
-    linkedStoryId: 7
+    id: "industry-panels",
+    name: "Industry Panels",
+    tag: "C-SUITE DIALOGUES",
+    badge: "Enterprise Leadership",
+    icon: "🏢",
+    desc: "High-level symposia convening Fortune 500 chief executives on operational, technological, and market disruptions.",
+    activities: [
+      {
+        id: "panel-labor",
+        moduleType: "Industry Panel",
+        badge: "Executive Symposium",
+        title: "The Autonomous Enterprise: Governance, Liability & Human-Agent Supervision Ratios",
+        domainCode: "ISCED 0413",
+        domainName: "Management & Corporate Law",
+        academicHost: "FD Academy Center for Corporate Governance",
+        enterpriseHost: "Salesforce & Airbnb Executive Offices",
+        date: "November 25, 2026 · 18:00 CET",
+        location: "Zurich Auditorium & Live Global Broadcast",
+        faculty: "Prof. Shoshana Zuboff (Harvard) & Marc Benioff (Salesforce)",
+        facultyAvatars: ["Marc Benioff", "Brian Chesky", "Sundar Pichai"],
+        format: "Executive Roundtable & C-Suite Q&A",
+        seatsLeft: 14,
+        linkedStoryId: 3,
+        syllabus: [
+          "Board fiduciary duties in autonomous corporate decision loops",
+          "Enterprise insurance policies and algorithmic error indemnity",
+          "Measuring operational productivity gains vs talent friction"
+        ]
+      },
+      {
+        id: "panel-semiconductors",
+        moduleType: "Industry Panel",
+        badge: "Executive Symposium",
+        title: "Post-Moore Silicon Architecture: Chiplet Packaging, Thermal Limits & Sovereign Fabs",
+        domainCode: "ISCED 0714",
+        domainName: "Electronics & Applied Physics",
+        academicHost: "FD Academy High-Tech Innovation Center",
+        enterpriseHost: "ASML, TSMC & Intel Technical Leadership",
+        date: "December 8, 2026 · 15:30 CET",
+        location: "London Science Museum & Virtual Executive Suite",
+        faculty: "Peter Wennink (ASML) & Dr. C.C. Wei (TSMC)",
+        facultyAvatars: ["Peter Wennink", "C.C. Wei", "Lisa Su"],
+        format: "Roundtable & Sovereign Fab Briefing",
+        seatsLeft: 8,
+        linkedStoryId: 7,
+        syllabus: [
+          "Geopolitical capital subsidies vs gross fab margin sustainability",
+          "Thermal density challenges in next-generation liquid-cooled chiplets",
+          "Foundry customer dual-sourcing feasibility across global fabrication sites"
+        ]
+      },
+      {
+        id: "panel-energy-infra",
+        moduleType: "Industry Panel",
+        badge: "Executive Symposium",
+        title: "Energy Transition in Enterprise Computing: Clean Megawatts vs Datacenter CapEx",
+        domainCode: "ISCED 0713",
+        domainName: "Energy Systems & Power Markets",
+        academicHost: "FD Academy Energy Transition Center",
+        enterpriseHost: "Amazon AWS & European Power Grid Alliance",
+        date: "January 20, 2027 · 16:00 CET",
+        location: "Stockholm Energy Pavilion & Global Stream",
+        faculty: "Andy Jassy (Amazon) & European Utility Chairmen",
+        facultyAvatars: ["Andy Jassy", "Jensen Huang"],
+        format: "Executive Roundtable · Chatham House Rule",
+        seatsLeft: 20,
+        linkedStoryId: 4,
+        syllabus: [
+          "Behind-the-meter nuclear colocations: regulatory hurdles and grid tariff impacts",
+          "Battery energy storage systems (BESS) for hyperscale peak shaving",
+          "Balancing corporate net-zero pledges against skyrocketing compute baseloads"
+        ]
+      }
+    ]
   },
   {
-    id: "web-digital-labor",
-    type: "Live Interactive Webinar",
-    badge: "Board Briefing",
-    title: "The Autonomous Enterprise: Digital Labor Governance, ACID Transactions & Human Supervision",
-    domainCode: "ISCED 0612",
-    domainName: "Database Systems & Organizational Strategy",
-    academicHost: "FD Academy Institute for Digital Transformation",
-    enterpriseHost: "Salesforce Enterprise Architecture Alliance",
-    date: "January 8, 2027 · 17:30 CET / 11:30 EST",
-    faculty: "Marc Benioff (Salesforce) & Prof. Shoshana Zuboff (Harvard)",
-    format: "Executive Roundtable & Live Agentic Sandbox Demo",
-    syllabus: [
-      "Decoupling informational chatbots from state-changing transactional database agents",
-      "Corporate liability, automated audit trails, and financial error containment",
-      "Restructuring management spans-of-control and tier-1 workforce supervision ratios"
-    ],
-    seatsLeft: 24,
-    linkedStoryId: 3
+    id: "academic-panels",
+    name: "Academic Panels",
+    tag: "RESEARCH COLLOQUIA",
+    badge: "Faculty Research",
+    icon: "🔬",
+    desc: "Convening world-class university leadership, economists, and researchers grounding modern business dilemmas in foundational science.",
+    activities: [
+      {
+        id: "panel-coase",
+        moduleType: "Academic Panel",
+        badge: "Faculty Colloquium",
+        title: "Algorithmic Governance & Computational Economics: Rewriting Firm Theory (Coase Meets AI)",
+        domainCode: "ISCED 0311",
+        domainName: "Economics of Information",
+        academicHost: "FD Academy of Management & Technology",
+        enterpriseHost: "Stanford HAI & MIT Sloan Economics Faculty",
+        date: "December 18, 2026 · 14:00 CET",
+        location: "Oxford Faculty of Social Sciences & Virtual Salon",
+        faculty: "Prof. Erik Brynjolfsson (Stanford) & MIT Sloan Faculty",
+        facultyAvatars: ["David Solomon", "Jensen Huang"],
+        format: "Academic Seminar & Monograph Discussion",
+        seatsLeft: 25,
+        linkedStoryId: 0,
+        syllabus: [
+          "Coasean boundary-of-the-firm models under zero-marginal-cost intelligence",
+          "Information asymmetry, agency theory, and automated supervisory monitoring",
+          "Empirical measurement of organizational capital accumulation"
+        ]
+      },
+      {
+        id: "panel-generative-bio",
+        moduleType: "Academic Panel",
+        badge: "Faculty Colloquium",
+        title: "Deep Generative Chemistry & Drug Design: Validation Protocols & Clinical Trials",
+        domainCode: "ISCED 0512",
+        domainName: "Biochemistry & Computational Biology",
+        academicHost: "FD Academy Health Economics Research Center",
+        enterpriseHost: "Cambridge Biomedical Campus & Oxford Health",
+        date: "January 12, 2027 · 15:00 CET",
+        location: "Cambridge Biomedical Campus",
+        faculty: "Demis Hassabis (AlphaFold Co-Creator) & Dr. Albert Bourla",
+        facultyAvatars: ["Demis Hassabis", "Albert Bourla"],
+        format: "Research Fellows Colloquium · Hybrid",
+        seatsLeft: 18,
+        linkedStoryId: 10,
+        syllabus: [
+          "Protein folding de novo vs traditional high-throughput phenotypic screening",
+          "Off-target toxicity prediction models and synthetic validation pipelines",
+          "Accelerating Phase-1 safety dose-ranging via algorithmic patient stratification"
+        ]
+      },
+      {
+        id: "panel-isced-taxonomy",
+        moduleType: "Academic Panel",
+        badge: "Faculty Colloquium",
+        title: "ISCED Foundational Taxonomy in Executive Decision Science: Grounding Business in Science",
+        domainCode: "ISCED 0011",
+        domainName: "Education & Taxonomy Systems",
+        academicHost: "MapKAI Decision Science & Knowledge Lab",
+        enterpriseHost: "UNESCO International Education & Higher Ed Forum",
+        date: "February 10, 2027 · 16:30 CET",
+        location: "Geneva Academic Center & Global Broadcast",
+        faculty: "MapKAI Principal Scientists & European Higher Ed Council",
+        facultyAvatars: ["Tim Cook", "Satya Nadella"],
+        format: "Academic Roundtable & Ontology Demonstration",
+        seatsLeft: 30,
+        linkedStoryId: 1,
+        syllabus: [
+          "Mapping unstructured business events into UNESCO ISCED-F disciplinary taxonomy",
+          "Cognitive retention in case method education via multi-dimensional knowledge graphs",
+          "Cross-disciplinary synthesis: connecting physics, law, and corporate finance"
+        ]
+      }
+    ]
+  },
+  {
+    id: "international-panels",
+    name: "International Panels",
+    tag: "MULTILATERAL FORUMS",
+    badge: "Global Policy",
+    icon: "🌍",
+    desc: "Cross-border governance, tech sovereignty, and multilateral regulation across global capital and technology markets.",
+    activities: [
+      {
+        id: "panel-transatlantic-ai",
+        moduleType: "International Panel",
+        badge: "Policy Forum",
+        title: "Transatlantic AI Governance & Sovereign Compute Infrastructure Forum",
+        domainCode: "ISCED 0421",
+        domainName: "International Law & Digital Sovereignty",
+        academicHost: "FD Academy Institute for Digital Transformation",
+        enterpriseHost: "European Commission AI Office & US Tech Delegation",
+        date: "December 4, 2026 · 11:00 CET",
+        location: "European Parliament Chambers, Brussels",
+        faculty: "EU Digital Commissioner & US Special Envoy on AI",
+        facultyAvatars: ["Sundar Pichai", "Satya Nadella"],
+        format: "Diplomatic & C-Suite Policy Dialogue",
+        seatsLeft: 16,
+        linkedStoryId: 1,
+        syllabus: [
+          "Harmonizing EU AI Act enforcement with US Federal executive frameworks",
+          "Cross-border datacenter data-residency laws and sovereign cloud boundaries",
+          "Strategic compute reserves as critical national security infrastructure"
+        ]
+      },
+      {
+        id: "panel-semiconductor-trade",
+        moduleType: "International Panel",
+        badge: "Policy Forum",
+        title: "Multilateral Semiconductor Export Controls & Bilateral Supply Chains",
+        domainCode: "ISCED 0311",
+        domainName: "International Trade & Geopolitics",
+        academicHost: "FD Academy High-Tech Innovation Center",
+        enterpriseHost: "OECD Tech Trade Governance Council",
+        date: "January 18, 2027 · 10:00 CET",
+        location: "Paris OECD Headquarters & Diplomatic Stream",
+        faculty: "OECD Trade Directorate & ASML / TSMC Board Advisors",
+        facultyAvatars: ["Peter Wennink", "C.C. Wei"],
+        format: "Multilateral Assembly & Trade Briefing",
+        seatsLeft: 22,
+        linkedStoryId: 7,
+        syllabus: [
+          "Bilateral export restrictions on DUV/EUV photolithography and wafer inspection tools",
+          "Near-shoring fab subsidies and WTO trade distortion assessments",
+          "Critical rare-earth element (gallium, germanium) supply chain continuity"
+        ]
+      },
+      {
+        id: "panel-global-health",
+        moduleType: "International Panel",
+        badge: "Policy Forum",
+        title: "Global Healthcare Solvency: Cross-Border Drug Pricing & Sovereign Health Funds",
+        domainCode: "ISCED 0311",
+        domainName: "Health Economics & Public Policy",
+        academicHost: "FD Academy Health Economics Research Center",
+        enterpriseHost: "World Health Organization & Nordic Health Ministers",
+        date: "February 18, 2027 · 14:00 CET",
+        location: "Copenhagen UN City & Virtual Chamber",
+        faculty: "WHO Health Financing Directorate & Nordic Health Ministers",
+        facultyAvatars: ["Lars Fruergaard Jørgensen", "Albert Bourla"],
+        format: "Multilateral Roundtable & Fiscal Briefing",
+        seatsLeft: 28,
+        linkedStoryId: 10,
+        syllabus: [
+          "Reference pricing frameworks across North America, Europe, and Asia-Pacific",
+          "Sovereign wealth fund co-investment in pharmaceutical manufacturing resilience",
+          "Public healthcare fiscal solvency under aging demographic trajectories"
+        ]
+      }
+    ]
   }
 ];
 
-// 6. Academic Institutional Hosts & Enterprise Consortium Data
-const institutionalHostsData = [
-  {
-    role: "Founding Academic Host",
-    name: "FD Academy of Management & Technology",
-    desc: "Provides theoretical grounding across ISCED international disciplines, curriculum governance, and rigorous case method facilitation for multinational cohort executives.",
-    badges: ["EQUIS & AACSB Accredited Faculty", "Global Executive Programs"],
-    leadership: "Dean of Executive Programs & Senior Technology Fellows"
-  },
-  {
-    role: "Knowledge Architecture Host",
-    name: "MapKAI Decision Science & Knowledge Lab",
-    desc: "Develops automated knowledge graph mapping, real-time discipline connectivity, and contextual AI reading companions grounded in UNESCO ISCED-F taxonomy.",
-    badges: ["ISCED-F Taxonomic Compliance", "Semantic Knowledge Graphing"],
-    leadership: "Principal Research Scientists & Systems Knowledge Engineers"
-  },
-  {
-    role: "Corporate Enterprise Research Alliance",
-    name: "Global Fortune 500 Enterprise Consortium",
-    desc: "Directly partners with university faculties to contribute empirical boardroom case studies, technical balance sheet datasets, and executive guest lectures.",
-    badges: [
-      "NVIDIA AI Enterprise Alliance",
-      "Microsoft Cloud Economics Research",
-      "Goldman Sachs Tech Investment Council",
-      "ASML European Semiconductor Forum",
-      "Amazon AWS Energy Transition Group",
-      "Novo Nordisk Health Economics Initiative"
-    ],
-    leadership: "Chief Executive Officers & Corporate Chief Technology Officers"
-  }
-];
-
-// 7. Executive Industry Panels & Symposia Data
-const industryPanelsData = [
-  {
-    id: "panel-labor",
-    title: "The Autonomous Enterprise: Governance, Liability & Human-Agent Supervision Ratios",
-    symposium: "Global Executive AI Summit 2026",
-    date: "November 25, 2026 · 18:00 CET",
-    location: "Zurich Auditorium & Live Global Broadcast",
-    academicHost: "FD Academy Center for Corporate Governance",
-    corporateHost: "Salesforce & Airbnb Executive Offices",
-    chairs: "Prof. Shoshana Zuboff (Harvard) & Marc Benioff (Salesforce CEO)",
-    panelists: "Brian Chesky (Airbnb), Dr. Elena Rostova (Digital Governance Chair), Sundar Pichai (Google)",
-    discipline: "ISCED 0413 Management & ISCED 0421 Law",
-    status: "14 In-Person Seats Left"
-  },
-  {
-    id: "panel-semiconductors",
-    title: "Post-Moore Silicon Architecture: Chiplet Packaging, Thermal Limits & Sovereign Fabs",
-    symposium: "European Semiconductor Roundtable",
-    date: "December 8, 2026 · 15:30 CET",
-    location: "London Science Museum & Virtual Executive Suite",
-    academicHost: "FD Academy High-Tech Innovation Center",
-    corporateHost: "ASML, TSMC & Intel Technical Leadership",
-    chairs: "Peter Wennink (ASML) & Dr. C.C. Wei (TSMC)",
-    panelists: "Lisa Su (AMD CEO), Pat Gelsinger (Intel CEO), Jensen Huang (NVIDIA CEO)",
-    discipline: "ISCED 0714 Electronics & ISCED 0533 Applied Physics",
-    status: "Limited Boardroom Pass"
-  },
-  {
-    id: "panel-health",
-    title: "Healthcare Fiscal Solvency & The Obesity Peptide Era: Corporate Payers vs Public Budgets",
-    symposium: "Nordic Health Economics Symposium",
-    date: "January 14, 2027 · 16:00 CET",
-    location: "Copenhagen Conference Center & Global Stream",
-    academicHost: "FD Academy Health Economics Research Center",
-    corporateHost: "Novo Nordisk & Eli Lilly Executive Suites",
-    chairs: "Lars Fruergaard Jørgensen (Novo Nordisk CEO)",
-    panelists: "David Ricks (Eli Lilly CEO), Albert Bourla (Pfizer CEO), WHO Health Financing Directorate",
-    discipline: "ISCED 0916 Pharmacy & ISCED 0311 Health Economics",
-    status: "RSVP Required"
-  }
-];
+function getAllAcademySessions() {
+  return academyModulesData.flatMap(m => m.activities);
+}
 
 let activeStoryIndex = 0;
 let currentCategoryFilter = "all";
@@ -1666,131 +1915,140 @@ function renderDashboard() {
     installPortraitFallbacks(leaderEl);
   }
 
-  // 5. Executive Masterclasses & Webinars
-  renderMasterclasses();
-
-  // 6. Institutional Hosts & Enterprise Consortium
-  renderInstitutionalHosts();
-
-  // 7. Executive Industry Panels
-  renderIndustryPanels();
+  // 5. FD Academy 5 Executive Modules & Consortium Strip
+  renderAcademyModules("all");
+  renderHostsConsortiumStrip();
+  initModulesFilter();
 }
 
-// Render Masterclasses & Live Interactive Webinars
-function renderMasterclasses() {
-  const gridEl = document.querySelector("#masterclass-cards-grid");
+// Render FD Academy 5 Executive Learning & Symposia Modules
+function renderAcademyModules(filter = "all") {
+  const gridEl = document.querySelector("#academy-modules-grid");
   if (!gridEl) return;
 
-  gridEl.innerHTML = masterclassesData.map(mc => `
-    <div class="masterclass-card" data-mc-id="${mc.id}">
-      <div>
-        <div class="mc-card-top">
-          <span class="mc-type-badge">${mc.type}</span>
-          <span class="mc-seats-badge">🟢 ${mc.seatsLeft} Seats Left</span>
-        </div>
-        <h3 class="mc-title">${mc.title}</h3>
-        <div class="mc-hosts-line">
-          <span>🏛️ ${mc.academicHost} × ${mc.enterpriseHost}</span>
-        </div>
-        <div class="mc-meta-box">
-          <div class="mc-meta-row">
-            <span>📅 <strong>${mc.date}</strong></span>
-          </div>
-          <div class="mc-meta-row">
-            <span>🎓 Faculty: ${mc.faculty}</span>
-          </div>
-          <div class="mc-meta-row" style="color:var(--fd-orange-dark); font-weight:600;">
-            <span>📚 ISCED Discipline: ${mc.domainCode} ${mc.domainName}</span>
-          </div>
-        </div>
-        <ul class="mc-syllabus-list">
-          ${mc.syllabus.map(s => `<li class="mc-syllabus-item">${s}</li>`).join("")}
-        </ul>
-      </div>
+  const filteredModules = academyModulesData.filter(mod => {
+    if (filter === "all") return true;
+    return mod.id === filter;
+  });
 
-      <div class="mc-action-row">
-        <button type="button" class="btn-register-mc" data-event-id="${mc.id}">
-          Register / Apply Now →
-        </button>
-        <button type="button" class="btn-syllabus-link" data-event-id="${mc.id}">
-          View Full Syllabus
-        </button>
-      </div>
-    </div>
-  `).join("");
+  gridEl.innerHTML = filteredModules.map(mod => {
+    return `
+      <article class="module-block-card" data-module-id="${mod.id}">
+        <div class="module-card-header">
+          <div class="module-badge-lockup">
+            <span class="module-icon">${mod.icon}</span>
+            <span class="module-badge">${mod.badge}</span>
+          </div>
+          <span class="module-count-pill">${mod.activities.length} Sessions</span>
+        </div>
 
-  gridEl.querySelectorAll(".btn-register-mc, .btn-syllabus-link").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const eventId = btn.dataset.eventId;
-      const eventData = masterclassesData.find(m => m.id === eventId);
-      if (eventData) openEventModal(eventData);
+        <div class="module-title-row">
+          <h3 class="module-title">${mod.name}</h3>
+          <span class="module-tag">${mod.tag}</span>
+        </div>
+        <p class="module-desc">${mod.desc}</p>
+
+        <!-- Outside Visible Activities List (Visible on Card Exterior) -->
+        <div class="module-activities-list">
+          ${mod.activities.map(act => `
+            <div class="module-activity-item" data-activity-id="${act.id}">
+              <div class="activity-top-row">
+                <span class="activity-date">📅 ${act.date.split("·")[0].trim()}</span>
+                <span class="activity-seats-tag">🟢 ${act.seatsLeft} seats</span>
+              </div>
+              <h4 class="activity-title">${act.title}</h4>
+              <div class="activity-footer-line">
+                <div class="activity-avatars-row">
+                  ${(act.facultyAvatars || []).map(name => `
+                    <img class="speaker-avatar" src="${getPortraitUrl(name)}" data-portrait-name="${name}" alt="${name}" title="${name}" loading="lazy" decoding="async">
+                  `).join("")}
+                  <span class="activity-speakers-names">${act.faculty.split("&")[0].trim()}</span>
+                </div>
+                <span class="activity-discipline-chip">${act.domainCode}</span>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+
+        <div class="module-card-footer">
+          <button type="button" class="btn-open-module" data-module-id="${mod.id}">
+            Explore All Masterclasses &amp; Syllabi →
+          </button>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  // Attach event click handlers
+  gridEl.querySelectorAll(".module-activity-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const actId = item.dataset.activityId;
+      const allSessions = getAllAcademySessions();
+      const session = allSessions.find(s => s.id === actId);
+      if (session) openEventModal(session);
     });
   });
-}
 
-// Render Institutional Academic & Enterprise Hosts Consortium
-function renderInstitutionalHosts() {
-  const gridEl = document.querySelector("#hosts-grid");
-  if (!gridEl) return;
-
-  gridEl.innerHTML = institutionalHostsData.map(h => `
-    <div class="host-item-card">
-      <div>
-        <span class="host-role-badge">${h.role}</span>
-        <h4 class="host-name">${h.name}</h4>
-        <p class="host-desc">${h.desc}</p>
-      </div>
-      <div>
-        <div style="font-size:0.69rem; color:var(--fd-muted); font-weight:700; margin-bottom:6px;">ACCREDITATION &amp; AFFILIATES:</div>
-        <div class="host-partners-tags">
-          ${h.badges.map(b => `<span class="partner-tag">${b}</span>`).join("")}
-        </div>
-      </div>
-    </div>
-  `).join("");
-}
-
-// Render Executive Industry Panels
-function renderIndustryPanels() {
-  const listEl = document.querySelector("#panels-list");
-  if (!listEl) return;
-
-  listEl.innerHTML = industryPanelsData.map(p => `
-    <div class="panel-agenda-row" data-panel-id="${p.id}">
-      <div class="panel-date-col">
-        <span class="panel-date-badge">${p.date.split("·")[0].trim()}</span>
-        <span class="panel-location">📍 ${p.location}</span>
-      </div>
-      <div class="panel-main-col">
-        <span class="panel-symposium-tag">${p.symposium} · ${p.discipline}</span>
-        <h4 class="panel-title">${p.title}</h4>
-        <div class="panel-speakers">
-          Co-Chaired by: <strong>${p.chairs}</strong> | Panel: ${p.panelists}
-        </div>
-      </div>
-      <div>
-        <button type="button" class="btn-panel-rsvp" data-panel-id="${p.id}">
-          RSVP for Panel →
-        </button>
-      </div>
-    </div>
-  `).join("");
-
-  listEl.querySelectorAll(".btn-panel-rsvp").forEach(btn => {
+  gridEl.querySelectorAll(".btn-open-module").forEach(btn => {
     btn.addEventListener("click", () => {
-      const panelId = btn.dataset.panelId;
-      const panel = industryPanelsData.find(p => p.id === panelId);
-      if (panel) {
-        openEventModal({
-          type: "Industry Panel Symposium",
-          title: panel.title,
-          academicHost: panel.academicHost,
-          date: `${panel.date} (${panel.location})`,
-          faculty: panel.chairs,
-          domainCode: panel.discipline,
-          domainName: ""
-        });
+      const modId = btn.dataset.moduleId;
+      const mod = academyModulesData.find(m => m.id === modId);
+      if (mod && mod.activities.length > 0) {
+        openEventModal(mod.activities[0]);
       }
+    });
+  });
+
+  installPortraitFallbacks(gridEl);
+}
+
+// Render Compact Accredited Host Consortium Strip
+function renderHostsConsortiumStrip() {
+  const stripEl = document.querySelector("#hosts-consortium-strip");
+  if (!stripEl) return;
+
+  stripEl.innerHTML = `
+    <div class="consortium-strip-inner">
+      <div class="consortium-col">
+        <span class="consortium-label">ACADEMIC FOUNDING HOST</span>
+        <strong>FD Academy of Management &amp; Technology</strong>
+        <span class="consortium-note">EQUIS &amp; AACSB Accredited Faculty Governance</span>
+      </div>
+      <div class="consortium-divider"></div>
+      <div class="consortium-col">
+        <span class="consortium-label">KNOWLEDGE ARCHITECTURE HOST</span>
+        <strong>MapKAI Decision Science &amp; Knowledge Lab</strong>
+        <span class="consortium-note">UNESCO ISCED-F Disciplinary Taxonomy Compliant</span>
+      </div>
+      <div class="consortium-divider"></div>
+      <div class="consortium-col">
+        <span class="consortium-label">CORPORATE ALLIANCE CONSORTIUM</span>
+        <div class="consortium-partner-chips">
+          <span class="partner-chip">NVIDIA</span>
+          <span class="partner-chip">Microsoft</span>
+          <span class="partner-chip">Goldman Sachs</span>
+          <span class="partner-chip">ASML</span>
+          <span class="partner-chip">Amazon AWS</span>
+          <span class="partner-chip">Novo Nordisk</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Initialize Module Filter Pills
+function initModulesFilter() {
+  const filterBtns = document.querySelectorAll(".module-pill");
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+      const filter = btn.dataset.modFilter;
+      renderAcademyModules(filter);
     });
   });
 }
@@ -1801,7 +2059,7 @@ function openEventModal(eventData) {
   if (!modal) return;
 
   const typeEl = document.querySelector("#modal-event-type");
-  if (typeEl) typeEl.textContent = (eventData.type || "EXECUTIVE EVENT").toUpperCase();
+  if (typeEl) typeEl.textContent = (eventData.moduleType || eventData.type || "EXECUTIVE MASTERCLASS").toUpperCase();
 
   const hostEl = document.querySelector("#modal-event-host");
   if (hostEl) hostEl.textContent = eventData.academicHost || "FD Academy";
@@ -1810,10 +2068,26 @@ function openEventModal(eventData) {
   if (titleEl) titleEl.textContent = eventData.title;
 
   const metaEl = document.querySelector("#modal-event-meta");
-  if (metaEl) metaEl.textContent = `📅 ${eventData.date} · Faculty / Co-Chairs: ${eventData.faculty}`;
+  if (metaEl) metaEl.textContent = `📅 ${eventData.date} · Location: ${eventData.location || "Executive Virtual Chamber"} · Faculty: ${eventData.faculty}`;
 
   const domainEl = document.querySelector("#modal-event-domain");
   if (domainEl) domainEl.textContent = `🏛️ Academic Discipline: ${eventData.domainCode} ${eventData.domainName || ''}`;
+
+  const seatsEl = document.querySelector("#modal-seats-count");
+  if (seatsEl) {
+    seatsEl.textContent = eventData.seatsLeft ? `🟢 ${eventData.seatsLeft} Cohort Seats Remaining · RSVP Open` : "🟢 Limited Cohort Seats Remaining";
+  }
+
+  const syllabusBox = document.querySelector("#modal-syllabus-box");
+  const syllabusList = document.querySelector("#modal-syllabus-list");
+  if (syllabusBox && syllabusList) {
+    if (eventData.syllabus && eventData.syllabus.length > 0) {
+      syllabusList.innerHTML = eventData.syllabus.map(s => `<li>${s}</li>`).join("");
+      syllabusBox.hidden = false;
+    } else {
+      syllabusBox.hidden = true;
+    }
+  }
 
   document.querySelector("#modal-form-view").hidden = false;
   document.querySelector("#modal-success-view").hidden = true;
@@ -2032,7 +2306,8 @@ function renderStory(index) {
   // Learning Hub Pane inside Copilot
   const learningBoxEl = document.querySelector("#copilot-learning-box");
   if (learningBoxEl && story.learningRoadmap) {
-    const linkedEvent = masterclassesData.find(m => m.linkedStoryId === index) || masterclassesData[0];
+    const allSessions = getAllAcademySessions();
+    const linkedEvent = allSessions.find(m => m.linkedStoryId === index) || allSessions[0];
     learningBoxEl.innerHTML = `
       <div class="learning-roadmap-card">
         <span class="roadmap-title">🎓 FOUNDATIONAL DISCIPLINE CONCEPTS</span>
