@@ -4539,3 +4539,10 @@ body[data-mapkai-page="showcase"] {
     font-size: 0.68rem;
   }
 }
+
+/* Switch between the two FD experiences. */
+.fd-product-switcher { display: flex; justify-content: center; gap: 4px; padding: 8px 16px; background: #f3eee5; border-bottom: 1px solid #d5cdc1; font-family: var(--fd-sans); }
+.fd-product-switcher a { padding: 7px 17px; color: #302d29; text-decoration: none; font-size: 0.82rem; font-weight: 700; border: 1px solid transparent; border-radius: 3px; }
+.fd-product-switcher a[aria-current="page"] { background: #1a1917; color: #fff; }
+.fd-product-switcher a:not([aria-current="page"]) { border-color: #b8aea0; }
+.fd-product-switcher a:hover, .fd-product-switcher a:focus-visible { outline: 2px solid #527976; outline-offset: 2px; }
