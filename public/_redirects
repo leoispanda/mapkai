@@ -32,5 +32,9 @@
 /speaking/ /speaking/index.html 200
 /speaking/en /speaking/en/index.html 200
 /speaking/en/ /speaking/en/index.html 200
+/learning/emba/fd-context-storyflow /learning/emba/fd-context-storyflow/index.html 200
+/learning/emba/fd-context-storyflow/ /learning/emba/fd-context-storyflow/index.html 200
+/showcase/fd-context-storyflow /learning/emba/fd-context-storyflow/index.html 302
+/showcase/fd-context-storyflow/ /learning/emba/fd-context-storyflow/index.html 302
 /music /music/ 301
 /* /index.html 200
