@@ -2299,7 +2299,133 @@ const executiveLeaderboard = [
   { name: "Tim Cook", rank: "Fortune 500 #3", title: "CEO @ Apple", commentsCount: 27, likesCount: "9.4k", topTopic: "Private Cloud Compute & On-Device Neural" }
 ];
 
-// 5. FD Academy 5 Executive Learning & Symposia Modules Data
+// 5. FD Academy & The Club: 3 Amsterdam In-Person Flagship Events Data
+const registeredEventIds = new Set();
+let activeModalEvent = null;
+
+const flagshipEventsData = [
+  {
+    id: "flagship-ideation",
+    brand: "fd. Academy",
+    badge: "In-person Masterclass",
+    kicker: "LEADER MASTERCLASS",
+    title: "From Ideation to Investment",
+    subtitle: "How to finance, scale and make strategic decisions for your tech start-up in the Netherlands.",
+    date: "Thu, 22 Jan 2027 · 13:00 – 18:00",
+    dateFormatted: "Thursday, January 22, 2027 · 13:00 – 18:00 CET",
+    location: "Amsterdam (In-Person Masterclass)",
+    target: "For founders, co-founders and early-stage start-ups",
+    domainCode: "ISCED 0412",
+    domainName: "Corporate Finance, Venture Capital & Entrepreneurial Strategy",
+    academicHost: "FD Academy Leader Masterclass",
+    enterpriseHost: "Amsterdam Tech Founders & VC Consortium",
+    faculty: "Dutch Tech Founders, Investors & Industry Experts",
+    facultyAvatars: ["Brian Chesky", "David Solomon", "Marc Benioff"],
+    seatsLeft: 18,
+    posterImage: "/learning/emba/fd-context-storyflow/assets/events/from-ideation-to-investment.jpg",
+    buttonText: "Register now →",
+    tagline: "Part of FD Academy — Financial knowledge for the next generation of business leaders.",
+    pillars: [
+      { icon: "🪙", title: "Accessing funding in the Netherlands" },
+      { icon: "📈", title: "Financial planning for growth" },
+      { icon: "⚖️", title: "Making smart decisions under uncertainty" },
+      { icon: "🍃", title: "Building a scalable and responsible business" }
+    ],
+    highlights: [
+      "Hands-on insights from investors, entrepreneurs and industry experts",
+      "Real cases and proven frameworks for Dutch tech ventures",
+      "Interactive discussions and direct investor Q&A",
+      "A high-value network of founders, seed funds and business leaders"
+    ],
+    syllabus: [
+      "Accessing venture capital, angel syndicates and Dutch non-dilutive innovation subsidies",
+      "Financial planning for hypergrowth: cash runway modeling, unit economics and CapEx controls",
+      "Making strategic decisions under regulatory and macroeconomic uncertainty",
+      "Building scalable governance, ESG credibility, and investor-ready capitalization tables"
+    ]
+  },
+  {
+    id: "flagship-the-club",
+    brand: "fd. The Club",
+    badge: "Exclusive Community",
+    kicker: "EXECUTIVE CIRCLE",
+    title: "Your invitation to a select circle of business leaders",
+    subtitle: "An exclusive community by FD Mediagroep that brings together CEOs, investors and entrepreneurs for high-level conversations, new perspectives and real opportunities.",
+    date: "Ongoing 2026–2027 · Intimate Dinners",
+    dateFormatted: "2026–2027 Executive Cohort · Invitation & Admissions Only",
+    location: "Amsterdam (Curated Venues & Canal Houses)",
+    target: "CEOs, institutional investors and growth entrepreneurs",
+    domainCode: "ISCED 0413",
+    domainName: "Executive Leadership, Governance & Peer Advisory",
+    academicHost: "fd. The Club",
+    enterpriseHost: "FD Mediagroep Executive Leadership Circle",
+    faculty: "CEOs, Institutional Investors & FD Senior Editors",
+    facultyAvatars: ["Satya Nadella", "Tim Cook", "David Solomon"],
+    seatsLeft: 12,
+    posterImage: "/learning/emba/fd-context-storyflow/assets/events/fd-the-club.jpg",
+    buttonText: "Apply for Membership →",
+    tagline: "An exclusive community by FD Mediagroep.",
+    pillars: [
+      { icon: "🍽️", title: "Curated events: Intimate dinners and expert conversations at exceptional locations in Amsterdam" },
+      { icon: "🤝", title: "Trusted network: A select circle of decision-makers across industries" },
+      { icon: "📊", title: "Investment insights: Early views on emerging opportunities and market developments" }
+    ],
+    highlights: [
+      "Curated events: intimate dinners and expert conversations at exceptional locations in Amsterdam",
+      "Trusted network: a select circle of decision-makers across European industries",
+      "Investment insights: early views on emerging opportunities and market developments",
+      "Strict Chatham House Rule dialogues and confidential founder-investor roundtables"
+    ],
+    syllabus: [
+      "Intimate dinners and expert conversations at exceptional private canal house venues in Amsterdam",
+      "Trusted network: a select circle of decision-makers across high-tech, finance, and industrial sectors",
+      "Investment insights: early views on emerging opportunities, market developments, and deal-flow",
+      "Peer problem-solving and cross-border executive partnerships"
+    ]
+  },
+  {
+    id: "flagship-climate",
+    brand: "fd. Academy",
+    badge: "In-person event",
+    kicker: "INDUSTRY FORUM",
+    title: "Climate Risk & Investments in Insurance",
+    subtitle: "From risk to resilience: how the insurance sector can navigate climate impact, protect value and unlock new opportunities.",
+    date: "Tue, 16 Dec 2026 · 09:00 – 17:00",
+    dateFormatted: "Tuesday, December 16, 2026 · 09:00 – 17:00 CET",
+    location: "Amsterdam (In-Person Event)",
+    target: "Insurance leaders, institutional investors, policymakers and climate experts",
+    domainCode: "ISCED 0412",
+    domainName: "Insurance Economics, Actuarial Risk & Climate Finance",
+    academicHost: "FD Academy Industry Forum",
+    enterpriseHost: "European Insurance & Institutional Investors Forum",
+    faculty: "FD Mediagroep Senior Journalists & Insurer Chief Risk Officers",
+    facultyAvatars: ["Andy Jassy", "Albert Bourla", "David Solomon"],
+    seatsLeft: 14,
+    posterImage: "/learning/emba/fd-context-storyflow/assets/events/climate-risk-investments-insurance.jpg",
+    buttonText: "Register now →",
+    tagline: "Part of FD Academy — Financial knowledge for a more resilient world.",
+    pillars: [
+      { icon: "📊", title: "Industry perspectives from leading insurers" },
+      { icon: "🍃", title: "Climate risk and financial impact" },
+      { icon: "⚖️", title: "Regulation and market shifts" },
+      { icon: "💡", title: "Actionable strategies for a resilient future" }
+    ],
+    highlights: [
+      "Keynotes from leading insurance chief executives and risk architects",
+      "Panel debate moderated by senior FD financial journalists",
+      "Real cases, underwriting frameworks, and actuarial insights",
+      "Networking reception to foster institutional co-investment partnerships"
+    ],
+    syllabus: [
+      "Industry perspectives from leading insurers on systemic multi-hazard climate exposures",
+      "Climate risk modeling and financial impact: pricing catastrophic physical hazards into underwriting",
+      "European regulation and market shifts: Solvency II climate stress testing and ESG directives",
+      "Actionable asset management strategies for a resilient balance sheet future"
+    ]
+  }
+];
+
+// 6. FD Academy Executive Learning & Symposia Modules Data
 const academyModulesData = [
   {
     id: "webinars",
@@ -2383,8 +2509,45 @@ const academyModulesData = [
     tag: "COHORT LABS",
     badge: "4-Week Cohort Certificate",
     icon: "🎓",
-    desc: "Rigorous case-driven masterclasses designed for next-generation C-suite executives, featuring balance sheet modeling and strategic playbooks.",
+    desc: "Rigorous case-driven masterclasses designed for next-generation C-suite executives and tech founders, featuring balance sheet modeling, startup funding, and strategic playbooks.",
     activities: [
+      {
+        id: "flagship-ideation",
+        moduleType: "Leader Masterclass",
+        badge: "In-Person Masterclass",
+        title: "From Ideation to Investment: How to finance, scale and make strategic decisions for your tech start-up in the Netherlands",
+        domainCode: "ISCED 0412",
+        domainName: "Corporate Finance & Entrepreneurial Strategy",
+        academicHost: "FD Academy Leader Masterclass",
+        enterpriseHost: "Amsterdam Tech Founders & VC Consortium",
+        date: "January 22, 2027 · 13:00 – 18:00 CET",
+        location: "Amsterdam (In-Person Masterclass)",
+        faculty: "Dutch Tech Founders, Investors & Industry Experts",
+        facultyAvatars: ["Brian Chesky", "David Solomon", "Marc Benioff"],
+        format: "In-Person Masterclass · Amsterdam · For Founders & Early-Stage Startups",
+        seatsLeft: 18,
+        linkedStoryId: 5,
+        posterImage: "/learning/emba/fd-context-storyflow/assets/events/from-ideation-to-investment.jpg",
+        buttonText: "Register now →",
+        pillars: [
+          { icon: "🪙", title: "Accessing funding in the Netherlands" },
+          { icon: "📈", title: "Financial planning for growth" },
+          { icon: "⚖️", title: "Making smart decisions under uncertainty" },
+          { icon: "🍃", title: "Building a scalable and responsible business" }
+        ],
+        highlights: [
+          "Hands-on insights from investors, entrepreneurs and industry experts",
+          "Real cases and proven frameworks for Dutch tech ventures",
+          "Interactive discussions and direct investor Q&A",
+          "A high-value network of founders, seed funds and business leaders"
+        ],
+        syllabus: [
+          "Accessing venture capital, angel syndicates and Dutch non-dilutive innovation subsidies",
+          "Financial planning for hypergrowth: cash runway modeling, unit economics and CapEx controls",
+          "Making strategic decisions under regulatory and macroeconomic uncertainty",
+          "Building scalable governance, ESG credibility, and investor-ready capitalization tables"
+        ]
+      },
       {
         id: "mc-capex",
         moduleType: "Future Leader Masterclass",
@@ -2476,6 +2639,52 @@ const academyModulesData = [
     ]
   },
   {
+    id: "the-club",
+    name: "fd. The Club",
+    tag: "EXECUTIVE CIRCLE",
+    badge: "Invitation Only",
+    icon: "🏛️",
+    desc: "An exclusive community by FD Mediagroep bringing together CEOs, investors and entrepreneurs for high-level conversations, intimate dinners, and real opportunities in Amsterdam.",
+    activities: [
+      {
+        id: "flagship-the-club",
+        moduleType: "fd. The Club",
+        badge: "Exclusive Community",
+        title: "Your invitation to a select circle of business leaders: Curated Events, Intimate Dinners & Trusted Network",
+        domainCode: "ISCED 0413",
+        domainName: "Executive Leadership, Governance & Peer Advisory",
+        academicHost: "fd. The Club",
+        enterpriseHost: "FD Mediagroep Executive Leadership Circle",
+        date: "Ongoing 2026–2027 · Intimate Dinners",
+        location: "Amsterdam (Curated Venues & Canal Houses)",
+        faculty: "CEOs, Institutional Investors & FD Senior Editors",
+        facultyAvatars: ["Satya Nadella", "Tim Cook", "David Solomon"],
+        format: "Intimate Dinners & Chatham House Dialogue · Cap 20 Leaders",
+        seatsLeft: 12,
+        linkedStoryId: 6,
+        posterImage: "/learning/emba/fd-context-storyflow/assets/events/fd-the-club.jpg",
+        buttonText: "Apply for Membership →",
+        pillars: [
+          { icon: "🍽️", title: "Curated events: Intimate dinners and expert conversations at exceptional locations in Amsterdam" },
+          { icon: "🤝", title: "Trusted network: A select circle of decision-makers across industries" },
+          { icon: "📊", title: "Investment insights: Early views on emerging opportunities and market developments" }
+        ],
+        highlights: [
+          "Curated events at exceptional Amsterdam locations",
+          "Trusted network of cross-industry decision-makers",
+          "Early views on emerging opportunities and market developments",
+          "Chatham House Rule confidentiality and peer dialogue"
+        ],
+        syllabus: [
+          "Curated events: intimate dinners and expert conversations at exceptional locations in Amsterdam",
+          "Trusted network: a select circle of decision-makers across industries",
+          "Investment insights: early views on emerging opportunities and market developments",
+          "Private deal-flow introductions and strategic roundtables"
+        ]
+      }
+    ]
+  },
+  {
     id: "industry-panels",
     name: "Industry Panels",
     tag: "C-SUITE DIALOGUES",
@@ -2483,6 +2692,43 @@ const academyModulesData = [
     icon: "🏢",
     desc: "High-level symposia convening Fortune 500 chief executives on operational, technological, and market disruptions.",
     activities: [
+      {
+        id: "flagship-climate",
+        moduleType: "Industry Forum",
+        badge: "In-Person Event",
+        title: "Climate Risk & Investments in Insurance: From risk to resilience",
+        domainCode: "ISCED 0412",
+        domainName: "Insurance Economics, Actuarial Risk & Climate Finance",
+        academicHost: "FD Academy Industry Forum",
+        enterpriseHost: "European Insurance & Institutional Investors Forum",
+        date: "December 16, 2026 · 09:00 – 17:00 CET",
+        location: "Amsterdam (In-Person Event)",
+        faculty: "FD Mediagroep Senior Journalists & Insurer Chief Risk Officers",
+        facultyAvatars: ["Andy Jassy", "Albert Bourla", "David Solomon"],
+        format: "In-Person Industry Forum · Amsterdam · Insurance Leaders & Investors",
+        seatsLeft: 14,
+        linkedStoryId: 4,
+        posterImage: "/learning/emba/fd-context-storyflow/assets/events/climate-risk-investments-insurance.jpg",
+        buttonText: "Register now →",
+        pillars: [
+          { icon: "📊", title: "Industry perspectives from leading insurers" },
+          { icon: "🍃", title: "Climate risk and financial impact" },
+          { icon: "⚖️", title: "Regulation and market shifts" },
+          { icon: "💡", title: "Actionable strategies for a resilient future" }
+        ],
+        highlights: [
+          "Keynotes from industry leaders",
+          "Panel debate moderated by FD journalists",
+          "Real cases and practical insights",
+          "Networking reception to continue the conversation"
+        ],
+        syllabus: [
+          "Industry perspectives from leading insurers on navigating climate impact",
+          "Climate risk modeling and balance sheet asset re-evaluation",
+          "European regulation and market shifts: Solvency II and ESG directives",
+          "Actionable strategies for resilience and networking reception"
+        ]
+      },
       {
         id: "panel-labor",
         moduleType: "Industry Panel",
@@ -2706,7 +2952,14 @@ const academyModulesData = [
 ];
 
 function getAllAcademySessions() {
-  return academyModulesData.flatMap(m => m.activities);
+  const map = new Map();
+  flagshipEventsData.forEach(e => map.set(e.id, e));
+  academyModulesData.flatMap(m => m.activities).forEach(e => {
+    if (!map.has(e.id)) {
+      map.set(e.id, e);
+    }
+  });
+  return Array.from(map.values());
 }
 
 let activeStoryIndex = 0;
@@ -2813,13 +3066,107 @@ function renderDashboard() {
     installPortraitFallbacks(leaderEl);
   }
 
-  // 5. FD Academy 5 Executive Modules & Consortium Strip
+  // 5. FD Academy Amsterdam Flagship In-Person Events
+  renderFlagshipEvents();
+
+  // 6. FD Academy Executive Modules & Consortium Strip
   renderAcademyModules("all");
   renderHostsConsortiumStrip();
   initModulesFilter();
 }
 
-// Render FD Academy 5 Executive Learning & Symposia Modules
+// Render 3 Amsterdam Flagship In-Person Events & The Club
+function renderFlagshipEvents() {
+  const gridEl = document.querySelector("#flagship-cards-grid");
+  if (!gridEl) return;
+
+  gridEl.innerHTML = flagshipEventsData.map(evt => {
+    const isRegistered = registeredEventIds.has(evt.id);
+    const isClub = evt.id === "flagship-the-club";
+    const btnLabel = isRegistered ? "✓ Registered (RSVP Confirmed)" : evt.buttonText;
+    const btnClass = `btn-flagship-register ${isRegistered ? 'is-registered' : ''} ${isClub ? 'btn-club-apply' : ''}`;
+
+    return `
+      <article class="flagship-card ${isClub ? 'flagship-card-the-club' : ''}" data-event-id="${evt.id}">
+        <div class="flagship-poster-media" data-event-id="${evt.id}" title="Click to view full details and register">
+          <img class="flagship-poster-img" src="${evt.posterImage}" alt="${evt.title}" loading="lazy" decoding="async">
+          <div class="flagship-poster-overlay">
+            <span class="flagship-brand-badge">${evt.brand}</span>
+            <span class="flagship-format-badge">${evt.badge}</span>
+          </div>
+        </div>
+
+        <div class="flagship-card-body">
+          <span class="flagship-kicker">${evt.kicker}</span>
+          <h3 class="flagship-title">${evt.title}</h3>
+          <p class="flagship-subtitle">${evt.subtitle}</p>
+
+          <div class="flagship-meta-strip">
+            <div class="flagship-meta-item">
+              <span>📅</span>
+              <span><strong>${evt.date.split("·")[0].trim()}</strong> ${evt.date.includes("·") ? "· " + evt.date.split("·")[1].trim() : ""}</span>
+            </div>
+            <div class="flagship-meta-item">
+              <span>📍</span>
+              <span><strong>${evt.location}</strong></span>
+            </div>
+            <div class="flagship-meta-item">
+              <span>👥</span>
+              <span>${evt.target}</span>
+            </div>
+          </div>
+
+          <div class="flagship-pillars-banner">
+            <div class="flagship-pillars-grid">
+              ${evt.pillars.map(p => `
+                <div class="flagship-pillar-col">
+                  <span class="p-icon">${p.icon}</span>
+                  <span>${p.title}</span>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <div class="flagship-highlights-box">
+            <h4 class="flagship-highlights-title">${isClub ? "Club Privileges & Pillars:" : "What to expect:"}</h4>
+            <ul class="flagship-checklist">
+              ${evt.highlights.map(h => `
+                <li><span class="check-icon">✓</span> <span>${h}</span></li>
+              `).join("")}
+            </ul>
+          </div>
+
+          <div class="flagship-footer-actions">
+            <button type="button" class="${btnClass}" data-event-id="${evt.id}" aria-label="Register for ${evt.title}">
+              <span class="btn-text">${btnLabel}</span>
+            </button>
+            <p class="flagship-tagline">${evt.tagline}</p>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  // Attach event click handlers for flagship cards
+  gridEl.querySelectorAll(".btn-flagship-register").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const eventId = btn.dataset.eventId;
+      const session = getAllAcademySessions().find(s => s.id === eventId);
+      if (session) openEventModal(session);
+    });
+  });
+
+  gridEl.querySelectorAll(".flagship-poster-media").forEach(media => {
+    media.addEventListener("click", () => {
+      const eventId = media.dataset.eventId;
+      const session = getAllAcademySessions().find(s => s.id === eventId);
+      if (session) openEventModal(session);
+    });
+  });
+}
+
+// Render FD Academy Executive Learning & Symposia Modules
 function renderAcademyModules(filter = "all") {
   const gridEl = document.querySelector("#academy-modules-grid");
   if (!gridEl) return;
@@ -2848,7 +3195,12 @@ function renderAcademyModules(filter = "all") {
 
         <!-- Outside Visible Activities List (Visible on Card Exterior) -->
         <div class="module-activities-list">
-          ${mod.activities.map(act => `
+          ${mod.activities.map(act => {
+            const isRegistered = registeredEventIds.has(act.id);
+            const btnLabel = isRegistered ? "✓ Registered" : (act.buttonText || "Register now →");
+            const btnClass = `btn-activity-register ${isRegistered ? 'is-registered' : ''}`;
+
+            return `
             <div class="module-activity-item" data-activity-id="${act.id}">
               <div class="activity-top-row">
                 <span class="activity-date">📅 ${act.date.split("·")[0].trim()}</span>
@@ -2864,8 +3216,15 @@ function renderAcademyModules(filter = "all") {
                 </div>
                 <span class="activity-discipline-chip">${act.domainCode}</span>
               </div>
+              <div class="activity-action-row">
+                <span class="activity-location-tag">📍 ${(act.location || 'Virtual').split('·')[0].trim()}</span>
+                <button type="button" class="${btnClass}" data-activity-id="${act.id}" aria-label="Register for ${act.title}">
+                  ${btnLabel}
+                </button>
+              </div>
             </div>
-          `).join("")}
+          `;
+          }).join("")}
         </div>
 
         <div class="module-card-footer">
@@ -2881,6 +3240,16 @@ function renderAcademyModules(filter = "all") {
   gridEl.querySelectorAll(".module-activity-item").forEach(item => {
     item.addEventListener("click", () => {
       const actId = item.dataset.activityId;
+      const allSessions = getAllAcademySessions();
+      const session = allSessions.find(s => s.id === actId);
+      if (session) openEventModal(session);
+    });
+  });
+
+  gridEl.querySelectorAll(".btn-activity-register").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const actId = btn.dataset.activityId;
       const allSessions = getAllAcademySessions();
       const session = allSessions.find(s => s.id === actId);
       if (session) openEventModal(session);
@@ -2955,37 +3324,117 @@ function initModulesFilter() {
 function openEventModal(eventData) {
   const modal = document.querySelector("#event-modal");
   if (!modal) return;
+  activeModalEvent = eventData;
 
   const typeEl = document.querySelector("#modal-event-type");
-  if (typeEl) typeEl.textContent = (eventData.moduleType || eventData.type || "EXECUTIVE MASTERCLASS").toUpperCase();
+  if (typeEl) typeEl.textContent = (eventData.badge || eventData.moduleType || eventData.type || "EXECUTIVE MASTERCLASS").toUpperCase();
 
   const hostEl = document.querySelector("#modal-event-host");
-  if (hostEl) hostEl.textContent = eventData.academicHost || "FD Academy";
+  if (hostEl) hostEl.textContent = eventData.academicHost || eventData.brand || "FD Academy";
 
   const titleEl = document.querySelector("#modal-event-title");
   if (titleEl) titleEl.textContent = eventData.title;
 
+  const subtitleEl = document.querySelector("#modal-event-subtitle");
+  if (subtitleEl) {
+    if (eventData.subtitle) {
+      subtitleEl.textContent = eventData.subtitle;
+      subtitleEl.hidden = false;
+    } else {
+      subtitleEl.hidden = true;
+    }
+  }
+
   const metaEl = document.querySelector("#modal-event-meta");
-  if (metaEl) metaEl.textContent = `📅 ${eventData.date} · Location: ${eventData.location || "Executive Virtual Chamber"} · Faculty: ${eventData.faculty}`;
+  if (metaEl) {
+    const dateText = eventData.dateFormatted || eventData.date;
+    const loc = eventData.location || "Amsterdam (In-Person)";
+    metaEl.textContent = `📅 ${dateText} · 📍 ${loc} · Faculty: ${eventData.faculty || 'Senior Industry Faculty'}`;
+  }
+
+  const targetEl = document.querySelector("#modal-event-target");
+  if (targetEl) {
+    if (eventData.target) {
+      targetEl.textContent = `👥 Target Audience: ${eventData.target}`;
+      targetEl.hidden = false;
+    } else {
+      targetEl.hidden = true;
+    }
+  }
 
   const domainEl = document.querySelector("#modal-event-domain");
   if (domainEl) domainEl.textContent = `🏛️ Academic Discipline: ${eventData.domainCode} ${eventData.domainName || ''}`;
 
   const seatsEl = document.querySelector("#modal-seats-count");
   if (seatsEl) {
-    seatsEl.textContent = eventData.seatsLeft ? `🟢 ${eventData.seatsLeft} Cohort Seats Remaining · RSVP Open` : "🟢 Limited Cohort Seats Remaining";
+    const isRegistered = registeredEventIds.has(eventData.id);
+    if (isRegistered) {
+      seatsEl.textContent = "✓ RSVP Confirmed for Your Seat";
+    } else {
+      seatsEl.textContent = eventData.seatsLeft ? `🟢 ${eventData.seatsLeft} Cohort Seats Remaining · RSVP Open` : "🟢 Limited Cohort Seats Remaining";
+    }
   }
 
+  // Poster Image Preview in Modal
+  const posterBox = document.querySelector("#modal-poster-box");
+  const posterImg = document.querySelector("#modal-poster-img");
+  if (posterBox && posterImg) {
+    if (eventData.posterImage) {
+      posterImg.src = eventData.posterImage;
+      posterImg.alt = eventData.title;
+      posterBox.hidden = false;
+    } else {
+      posterBox.hidden = true;
+    }
+  }
+
+  // Pillars preview in modal
+  const pillarsBox = document.querySelector("#modal-pillars-box");
+  const pillarsGrid = document.querySelector("#modal-pillars-grid");
+  if (pillarsBox && pillarsGrid) {
+    if (eventData.pillars && eventData.pillars.length > 0) {
+      pillarsGrid.innerHTML = eventData.pillars.map(p => `
+        <div class="modal-pillar-item">
+          <span class="pillar-icon">${p.icon || '▪'}</span>
+          <span class="pillar-text">${p.title || p}</span>
+        </div>
+      `).join("");
+      pillarsBox.hidden = false;
+    } else {
+      pillarsBox.hidden = true;
+    }
+  }
+
+  // Syllabus / Highlights in modal
   const syllabusBox = document.querySelector("#modal-syllabus-box");
   const syllabusList = document.querySelector("#modal-syllabus-list");
+  const syllabusHeading = document.querySelector("#modal-syllabus-heading");
   if (syllabusBox && syllabusList) {
-    if (eventData.syllabus && eventData.syllabus.length > 0) {
-      syllabusList.innerHTML = eventData.syllabus.map(s => `<li>${s}</li>`).join("");
+    const items = eventData.highlights || eventData.syllabus || [];
+    if (items.length > 0) {
+      if (syllabusHeading) {
+        syllabusHeading.textContent = eventData.highlights ? "Event Highlights & What to Expect:" : "Executive Syllabus & Boardroom Takeaways:";
+      }
+      syllabusList.innerHTML = items.map(s => `<li>${s}</li>`).join("");
       syllabusBox.hidden = false;
     } else {
       syllabusBox.hidden = true;
     }
   }
+
+  // Submit button text
+  const submitBtn = document.querySelector("#btn-modal-submit");
+  if (submitBtn) {
+    if (eventData.id === "flagship-the-club") {
+      submitBtn.textContent = "Submit Membership Application →";
+    } else {
+      submitBtn.textContent = "Confirm Registration & RSVP →";
+    }
+  }
+
+  // Reset form
+  const form = document.querySelector("#event-reg-form");
+  if (form) form.reset();
 
   document.querySelector("#modal-form-view").hidden = false;
   document.querySelector("#modal-success-view").hidden = true;
@@ -3407,6 +3856,35 @@ function submitAsk(question) {
   }, 350);
 }
 
+function updateRegistrationButtons() {
+  document.querySelectorAll(".btn-flagship-register").forEach(btn => {
+    const eventId = btn.dataset.eventId;
+    if (registeredEventIds.has(eventId)) {
+      btn.classList.add("is-registered");
+      const isClub = eventId === "flagship-the-club";
+      btn.innerHTML = `<span class="btn-text">✓ ${isClub ? 'Application Submitted' : 'Registered & Confirmed'}</span>`;
+      btn.setAttribute("aria-label", "Registration confirmed for this session");
+    }
+  });
+
+  document.querySelectorAll(".btn-activity-register").forEach(btn => {
+    const actId = btn.dataset.activityId;
+    if (registeredEventIds.has(actId)) {
+      btn.classList.add("is-registered");
+      btn.innerHTML = `✓ Registered`;
+      btn.setAttribute("aria-label", "Registration confirmed for this session");
+    }
+  });
+
+  document.querySelectorAll(".btn-rsvp-linked-event").forEach(btn => {
+    const eventId = btn.dataset.eventId;
+    if (registeredEventIds.has(eventId)) {
+      btn.style.background = "#15803d";
+      btn.innerHTML = `✓ Registered for Session`;
+    }
+  });
+}
+
 // Initialize all DOM events
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Initial Render
@@ -3530,6 +4008,30 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     const formView = document.querySelector("#modal-form-view");
     const successView = document.querySelector("#modal-success-view");
+    const name = document.querySelector("#reg-name")?.value.trim() || "Executive";
+    const email = document.querySelector("#reg-email")?.value.trim() || "";
+    const titleEl = document.querySelector("#success-title");
+    const msgEl = document.querySelector("#success-message");
+
+    if (activeModalEvent) {
+      registeredEventIds.add(activeModalEvent.id);
+      if (activeModalEvent.seatsLeft && activeModalEvent.seatsLeft > 0) {
+        activeModalEvent.seatsLeft -= 1;
+      }
+
+      if (titleEl && msgEl) {
+        if (activeModalEvent.id === "flagship-the-club") {
+          titleEl.textContent = "Membership Application Submitted";
+          msgEl.innerHTML = `Thank you, <strong>${name}</strong>. Your membership application for <strong>fd. The Club</strong> has been received by the Admissions Secretariat. A verification link and private onboarding brief have been sent to <strong>${email || 'your corporate email'}</strong>.`;
+        } else {
+          titleEl.textContent = "Registration Confirmed";
+          msgEl.innerHTML = `Congratulations, <strong>${name}</strong>! You have successfully secured your seat for <strong>${activeModalEvent.title}</strong> in Amsterdam. A calendar invitation (.ics), venue pass, and executive reading monograph have been dispatched to <strong>${email || 'your corporate email'}</strong>.`;
+        }
+      }
+
+      updateRegistrationButtons();
+    }
+
     if (formView && successView) {
       formView.hidden = true;
       successView.hidden = false;

@@ -2883,6 +2883,316 @@ body[data-mapkai-page="showcase"] {
 }
 
 /* ==========================================================================
+   Flagship In-Person Events & The Club Showcase (Amsterdam)
+   ========================================================================== */
+
+.flagship-events-section {
+  margin-bottom: 44px;
+}
+
+.flagship-cohort-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid var(--fd-line);
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--fd-ink);
+}
+
+.flagship-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.flagship-card {
+  background: #0d1721;
+  color: #f7f4ed;
+  border: 1px solid rgba(216, 179, 128, 0.32);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms ease, border-color 200ms ease;
+  position: relative;
+}
+
+.flagship-card:hover {
+  transform: translateY(-4px);
+  border-color: #d8b380;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+}
+
+.flagship-card-the-club {
+  background: #091016;
+  border-color: rgba(197, 168, 128, 0.35);
+}
+
+.flagship-poster-media {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #000000;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(216, 179, 128, 0.2);
+}
+
+.flagship-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 300ms ease, opacity 200ms ease;
+  display: block;
+}
+
+.flagship-poster-media:hover .flagship-poster-img {
+  transform: scale(1.03);
+  opacity: 0.92;
+}
+
+.flagship-poster-overlay {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.flagship-brand-badge {
+  font-family: var(--fd-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(13, 23, 33, 0.88);
+  backdrop-filter: blur(6px);
+  padding: 4px 12px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.flagship-format-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #d8b380;
+  background: rgba(13, 23, 33, 0.92);
+  backdrop-filter: blur(6px);
+  padding: 4px 12px;
+  border-radius: 99px;
+  border: 1px solid rgba(216, 179, 128, 0.45);
+}
+
+.flagship-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.flagship-kicker {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d8b380;
+  margin-bottom: 6px;
+}
+
+.flagship-title {
+  font-family: var(--fd-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.28;
+  margin-bottom: 8px;
+}
+
+.flagship-subtitle {
+  font-size: 0.8rem;
+  color: #b8c7d5;
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+.flagship-meta-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+}
+
+.flagship-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  color: #f7f4ed;
+}
+
+.flagship-meta-item strong {
+  color: #d8b380;
+}
+
+.flagship-pillars-banner {
+  background: rgba(216, 179, 128, 0.08);
+  border: 1px solid rgba(216, 179, 128, 0.22);
+  border-radius: 3px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+
+.flagship-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.flagship-pillar-col {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: #e8d9c5;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.flagship-pillar-col .p-icon {
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.flagship-highlights-box {
+  margin-bottom: 18px;
+}
+
+.flagship-highlights-title {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d8b380;
+  margin-bottom: 8px;
+}
+
+.flagship-checklist {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flagship-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.74rem;
+  color: #d3dbe3;
+  line-height: 1.38;
+}
+
+.flagship-checklist .check-icon {
+  color: #d8b380;
+  font-weight: 800;
+}
+
+.flagship-footer-actions {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-flagship-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #e8d5bf;
+  color: #121d27;
+  font-family: var(--fd-sans);
+  font-size: 0.84rem;
+  font-weight: 800;
+  padding: 11px 24px;
+  border-radius: 999px;
+  border: 1px solid #d8b380;
+  cursor: pointer;
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  width: 100%;
+}
+
+.btn-flagship-register:hover {
+  background: #f4e5d2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-flagship-register:active {
+  transform: scale(0.98);
+}
+
+.btn-flagship-register .btn-arrow {
+  transition: transform 160ms ease;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.btn-flagship-register:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.btn-flagship-register.btn-club-apply {
+  background: transparent;
+  color: #e8d5bf;
+  border: 1px solid #c5a880;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.btn-flagship-register.btn-club-apply:hover {
+  background: #c5a880;
+  color: #0b1117;
+  box-shadow: 0 6px 20px rgba(197, 168, 128, 0.35);
+}
+
+.btn-flagship-register.is-registered {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  border-color: #86efac !important;
+  cursor: default !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.flagship-tagline {
+  font-size: 0.67rem;
+  color: #8898a6;
+  text-align: center;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
    FD Academy 5 Executive Learning & Symposia Modules Hub
    ========================================================================== */
 
@@ -3112,6 +3422,47 @@ body[data-mapkai-page="showcase"] {
   border-radius: 4px;
 }
 
+.activity-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px dashed #e8decb;
+}
+
+.activity-location-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--fd-muted);
+}
+
+.btn-activity-register {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--fd-orange-dark);
+  background: #fff5ed;
+  border: 1px solid #fed7aa;
+  padding: 4px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.btn-activity-register:hover {
+  background: var(--fd-orange);
+  color: #ffffff;
+  border-color: var(--fd-orange);
+  transform: translateY(-1px);
+}
+
+.btn-activity-register.is-registered {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  border-color: #86efac !important;
+  cursor: default !important;
+}
+
 .module-card-footer {
   padding-top: 10px;
   border-top: 1px solid #f0e6d6;
@@ -3323,6 +3674,23 @@ body[data-mapkai-page="showcase"] {
   color: var(--fd-ink);
 }
 
+.modal-poster-preview-box {
+  margin-bottom: 16px;
+  border-radius: var(--fd-radius);
+  overflow: hidden;
+  max-height: 190px;
+  border: 1px solid var(--fd-line);
+  background: #000000;
+}
+
+.modal-poster-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
 .modal-event-title {
   font-family: var(--fd-serif);
   font-size: 1.25rem;
@@ -3332,9 +3700,23 @@ body[data-mapkai-page="showcase"] {
   line-height: 1.35;
 }
 
+.modal-event-subtitle {
+  font-size: 0.78rem;
+  color: var(--fd-muted);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
 .modal-event-meta {
   font-size: 0.76rem;
   color: var(--fd-muted);
+  margin-bottom: 4px;
+}
+
+.modal-event-target {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--fd-ink);
   margin-bottom: 4px;
 }
 
@@ -3342,7 +3724,36 @@ body[data-mapkai-page="showcase"] {
   font-size: 0.74rem;
   font-weight: 600;
   color: var(--fd-orange-dark);
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+}
+
+.modal-pillars-box {
+  background: var(--fd-paper-warm);
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius);
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+
+.modal-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.modal-pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: var(--fd-ink);
+  line-height: 1.35;
+}
+
+.modal-pillar-item .pillar-icon {
+  font-size: 0.82rem;
+  flex-shrink: 0;
 }
 
 .event-reg-form {
@@ -3474,6 +3885,15 @@ body[data-mapkai-page="showcase"] {
 }
 
 @media (max-width: 768px) {
+  .flagship-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .flagship-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-pillars-grid {
+    grid-template-columns: 1fr;
+  }
   .panel-agenda-row {
     grid-template-columns: 1fr;
     gap: 12px;

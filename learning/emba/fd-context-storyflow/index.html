@@ -50,7 +50,9 @@
         <span class="metric-sep">•</span>
         <span class="metric-item"><strong>12</strong> Cases</span>
         <span class="metric-sep">•</span>
-        <span class="metric-item"><strong>4</strong> Masterclasses</span>
+        <span class="metric-item"><strong>3</strong> Flagship In-Person</span>
+        <span class="metric-sep">•</span>
+        <span class="metric-item"><strong>6</strong> Executive Modules</span>
         <span class="metric-sep">•</span>
         <span class="metric-item"><strong>FD Academy</strong> Consortium</span>
         <span class="metric-sep">•</span>
@@ -280,19 +282,40 @@
         </div>
       </div>
 
-      <!-- FD ACADEMY: 5 EXECUTIVE LEARNING & STRATEGIC SYMPOSIA MODULES -->
+      <!-- FD ACADEMY & THE CLUB: 3 AMSTERDAM IN-PERSON FLAGSHIP EVENTS -->
+      <section class="flagship-events-section" id="flagship-events-section" aria-label="Flagship In-Person Events and The Club">
+        <div class="section-title-row">
+          <div>
+            <p class="hero-eyebrow">FD ACADEMY &amp; FD THE CLUB · IN-PERSON AMSTERDAM SESSIONS</p>
+            <h2>Flagship Masterclasses &amp; Executive Community</h2>
+            <p class="section-dek">Official in-person programs hosted at premier venues in Amsterdam. Direct cohort networking with institutional investors, industry leaders, and tech founders across the Netherlands.</p>
+          </div>
+          <div class="flagship-cohort-pill">
+            <span class="live-pulse"></span>
+            <span>📍 Amsterdam In-Person Cohorts · 2026–2027</span>
+          </div>
+        </div>
+
+        <!-- 3 Flagship Event Cards Grid -->
+        <div class="flagship-cards-grid" id="flagship-cards-grid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </section>
+
+      <!-- FD ACADEMY: EXECUTIVE LEARNING & STRATEGIC SYMPOSIA MODULES -->
       <section class="academy-modules-hub" id="academy-modules-hub">
         <div class="section-title-row">
           <div>
             <p class="hero-eyebrow">FD ACADEMY · EXECUTIVE PROGRAMS &amp; STRATEGIC SYMPOSIA</p>
             <h2>Executive Learning &amp; Global Symposia Modules</h2>
-            <p class="section-dek">Five dedicated cohort modules bridging boardroom strategic dilemmas with MapKAI foundational disciplines. Preview active schedules directly on each module block or click in to explore full masterclass syllabi and register.</p>
+            <p class="section-dek">Six dedicated cohort modules bridging boardroom strategic dilemmas with MapKAI foundational disciplines. Preview active schedules directly on each module block or click in to explore full masterclass syllabi and register.</p>
           </div>
           <div class="module-filter-pills" role="tablist" aria-label="Executive Module Selection">
-            <button type="button" class="module-pill active" data-mod-filter="all" role="tab" aria-selected="true">All 5 Modules</button>
+            <button type="button" class="module-pill active" data-mod-filter="all" role="tab" aria-selected="true">All Modules</button>
+            <button type="button" class="module-pill" data-mod-filter="future-leader-masterclass" role="tab" aria-selected="false">Leader Masterclass</button>
+            <button type="button" class="module-pill" data-mod-filter="the-club" role="tab" aria-selected="false">fd. The Club</button>
+            <button type="button" class="module-pill" data-mod-filter="industry-panels" role="tab" aria-selected="false">Industry Forums &amp; Panels</button>
             <button type="button" class="module-pill" data-mod-filter="webinars" role="tab" aria-selected="false">Webinars</button>
-            <button type="button" class="module-pill" data-mod-filter="future-leader-masterclass" role="tab" aria-selected="false">Future Leader Masterclass</button>
-            <button type="button" class="module-pill" data-mod-filter="industry-panels" role="tab" aria-selected="false">Industry Panels</button>
             <button type="button" class="module-pill" data-mod-filter="academic-panels" role="tab" aria-selected="false">Academic Panels</button>
             <button type="button" class="module-pill" data-mod-filter="international-panels" role="tab" aria-selected="false">International Panels</button>
           </div>
@@ -661,13 +684,23 @@
       </div>
 
       <div class="event-modal-body" id="modal-form-view">
+        <div class="modal-poster-preview-box" id="modal-poster-box" hidden>
+          <img id="modal-poster-img" class="modal-poster-img" src="" alt="Event poster">
+        </div>
         <h3 class="modal-event-title" id="modal-event-title">Navigating the $50B AI CapEx Hurdle</h3>
+        <p class="modal-event-subtitle" id="modal-event-subtitle" hidden></p>
         <p class="modal-event-meta" id="modal-event-meta">📅 November 18, 2026 · 17:00 CET · Faculty: Erik Brynjolfsson &amp; David Solomon</p>
+        <p class="modal-event-target" id="modal-event-target" hidden>👥 Target: For founders, co-founders and early-stage start-ups</p>
         <p class="modal-event-domain" id="modal-event-domain">🏛️ Linked Discipline: ISCED 0412 Corporate Finance &amp; Valuation</p>
         <div class="modal-seats-pill" id="modal-seats-count">🟢 Limited Cohort Seats Remaining</div>
         
+        <div class="modal-pillars-box" id="modal-pillars-box" hidden>
+          <h4 class="modal-syllabus-heading">Key Focus Pillars:</h4>
+          <div class="modal-pillars-grid" id="modal-pillars-grid"></div>
+        </div>
+
         <div class="modal-syllabus-box" id="modal-syllabus-box" hidden>
-          <h4 class="modal-syllabus-heading">Executive Syllabus &amp; Boardroom Takeaways:</h4>
+          <h4 class="modal-syllabus-heading" id="modal-syllabus-heading">Executive Syllabus &amp; Boardroom Takeaways:</h4>
           <ul class="modal-syllabus-list" id="modal-syllabus-list"></ul>
         </div>
         
@@ -706,7 +739,7 @@
       <!-- Success View (Shown after submission) -->
       <div class="event-modal-success" id="modal-success-view" hidden>
         <div class="success-icon-box">✓</div>
-        <h3>Registration Confirmed</h3>
+        <h3 id="success-title">Registration Confirmed</h3>
         <p class="success-text" id="success-message">You have successfully secured your seat for the executive cohort. A calendar invitation (.ics) and MapKAI foundational pre-reading monograph have been delivered to your email.</p>
         <div class="success-actions">
           <button type="button" class="btn-modal-done" id="btn-modal-done">Done &amp; Return to Academy</button>
