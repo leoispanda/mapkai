@@ -2300,7 +2300,23 @@ const executiveLeaderboard = [
 ];
 
 // 5. FD Academy & The Club: 3 Amsterdam In-Person Flagship Events Data
-const registeredEventIds = new Set();
+const STORAGE_KEY_REGISTERED = "mapkai_fd_registered_events";
+function loadRegisteredEvents() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_REGISTERED);
+    if (raw) {
+      const arr = JSON.parse(raw);
+      if (Array.isArray(arr)) return new Set(arr);
+    }
+  } catch {}
+  return new Set();
+}
+function saveRegisteredEvents() {
+  try {
+    localStorage.setItem(STORAGE_KEY_REGISTERED, JSON.stringify(Array.from(registeredEventIds)));
+  } catch {}
+}
+const registeredEventIds = loadRegisteredEvents();
 let activeModalEvent = null;
 
 const flagshipEventsData = [
@@ -3959,17 +3975,54 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") closeEventModal();
   });
 
-  document.querySelector("#event-reg-form")?.addEventListener("submit", (e) => {
+  document.querySelector("#event-reg-form")?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const formView = document.querySelector("#modal-form-view");
     const successView = document.querySelector("#modal-success-view");
+    const submitBtn = document.querySelector("#btn-modal-submit");
+
     const name = document.querySelector("#reg-name")?.value.trim() || "Executive";
+    const title = document.querySelector("#reg-title")?.value.trim() || "";
     const email = document.querySelector("#reg-email")?.value.trim() || "";
+    const company = document.querySelector("#reg-company")?.value.trim() || "";
+    const cohortGoal = document.querySelector("#reg-cohort-goal")?.value.trim() || "";
+
     const titleEl = document.querySelector("#success-title");
     const msgEl = document.querySelector("#success-message");
 
+    const originalBtnText = submitBtn ? submitBtn.textContent : "Confirm Registration →";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Connecting to API & Recording...";
+    }
+
+    // Call real backend registration API (triggers Resend email & Cloudflare D1 persistence if configured)
+    try {
+      await fetch("/api/emba/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          eventId: activeModalEvent?.id || "unknown",
+          eventTitle: activeModalEvent?.title || "Executive Program",
+          name,
+          title,
+          email,
+          company,
+          cohortGoal
+        })
+      });
+    } catch (err) {
+      console.warn("Notice: Local or offline registration mode:", err);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    }
+
     if (activeModalEvent) {
       registeredEventIds.add(activeModalEvent.id);
+      saveRegisteredEvents();
       if (activeModalEvent.seatsLeft && activeModalEvent.seatsLeft > 0) {
         activeModalEvent.seatsLeft -= 1;
       }

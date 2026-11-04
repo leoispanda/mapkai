@@ -5,6 +5,8 @@ import { extname, join, normalize } from "node:path";
 import { createHash, randomInt, randomUUID, timingSafeEqual } from "node:crypto";
 import { pathToFileURL } from "node:url";
 import { Readable } from "node:stream";
+import { retiredCourseResponse } from "./functions/_shared/retired-courses.js";
+import { embaLoginHtml, hasEmbaAccess } from "./functions/_shared/emba-access.js";
 
 const root = process.cwd();
 const port = Number(process.env.PORT || 3000);
@@ -21,6 +23,8 @@ const speakingLocal = process.env.MAPKAI_SPEAKING_LOCAL === "1"
   : null;
 
 const localFunctionRoutes = {
+  "/api/emba/auth": "functions/api/emba/auth.js",
+  "/api/emba/register": "functions/api/emba/register.js",
   "/api/dishkai/auth": "functions/api/dishkai/auth.js",
   "/api/dishkai/analyze-menu-text": "functions/api/dishkai/analyze-menu-text.js",
   "/api/dishkai/analyze-menu-image": "functions/api/dishkai/analyze-menu-image.js",
@@ -47,15 +51,6 @@ const localFunctionRoutes = {
   "/api/music/video": "functions/api/music/video.js",
 };
 
-const legacyRedirects = {
-  "/management": "/learning/corporate-finance",
-  "/management/day-1-value-and-capital": "/learning/corporate-finance/day-1",
-  "/management/day-2-trust-and-license": "/learning/corporate-finance/day-2",
-  "/management/day-3-risk-and-governance": "/learning/corporate-finance/day-3",
-  "/management/day-4-strategy-and-action": "/learning/corporate-finance/day-4",
-  "/management/day-5-evidence-and-recommendation": "/learning/corporate-finance/day-5",
-};
-
 const mimeTypes = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -76,7 +71,35 @@ const mimeTypes = {
 const server = createServer(async (request, response) => {
   try {
     const url = new URL(request.url, appOrigin);
+    const retired = retiredCourseResponse({ url: url.href, method: request.method });
+    if (retired) {
+      response.writeHead(retired.status, Object.fromEntries(retired.headers));
+      response.end(await retired.text());
+      return;
+    }
     if (speakingLocal && await speakingLocal(request, response, url)) return;
+
+    if (url.pathname === "/showcase/fd-context-storyflow" || url.pathname.startsWith("/showcase/fd-context-storyflow/")) {
+      response.writeHead(302, { Location: "/learning/emba/fd-context-storyflow/", "Cache-Control": "no-store" });
+      response.end();
+      return;
+    }
+
+    if ((url.pathname === "/emba" || url.pathname.startsWith("/emba/")) && !await hasEmbaAccess(request, process.env)) {
+      const gateRequest = new Request(url.href, { headers: { "Accept-Language": request.headers["accept-language"] || "" } });
+      response.writeHead(200, {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+        "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex, nofollow",
+      });
+      response.end(embaLoginHtml(gateRequest, {
+        configured: Boolean(process.env.EMBA_PASSWORD),
+        incorrect: url.searchParams.get("error") === "1",
+      }));
+      return;
+    }
 
     if (request.method === "POST" && url.pathname === "/api/auth/start") {
       await startAuth(request, response);
@@ -90,12 +113,6 @@ const server = createServer(async (request, response) => {
 
     if (request.method === "GET" && url.pathname === "/api/health") {
       sendJson(response, 200, { ok: true });
-      return;
-    }
-
-    if ((request.method === "GET" || request.method === "HEAD") && legacyRedirects[url.pathname]) {
-      response.writeHead(301, { Location: legacyRedirects[url.pathname] });
-      response.end();
       return;
     }
 
