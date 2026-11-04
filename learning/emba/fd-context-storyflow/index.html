@@ -6,12 +6,12 @@
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#f7f4ed">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'">
-  <meta name="description" content="MapKAI EMBA Product Showcase: FD Context + LinkedIn Copilot with Fortune 500 CEO reactions and AI Reading Summaries.">
-  <title>FD Context + LinkedIn Copilot — MapKAI EMBA</title>
+  <meta name="description" content="MapKAI EMBA Showcase: FD Executive Newsroom Dashboard and LinkedIn Copilot with Fortune 500 CEO reactions.">
+  <title>FD Executive Newsroom Dashboard — MapKAI EMBA</title>
   <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/site-shell.css?v=0.1.360">
-  <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=emba-v2">
-  <script src="/learning/emba/fd-context-storyflow/script.js?v=emba-v2" defer></script>
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.361">
+  <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=dashboard-v3">
+  <script src="/learning/emba/fd-context-storyflow/script.js?v=dashboard-v3" defer></script>
 </head>
 <body data-mapkai-page="emba">
   <!-- MapKAI Header Bar -->
@@ -21,18 +21,20 @@
         <img src="/mapkai-logo-transparent.png" alt="MapKAI">
       </a>
       <div class="product-badge">
-        <span class="product-name">FD Context</span>
+        <span class="product-name">FD Newsroom</span>
         <span class="product-divider">×</span>
-        <span class="product-sub">LinkedIn Copilot</span>
+        <span class="product-sub">Executive Dashboard</span>
       </div>
 
       <!-- Live Executive Metrics -->
       <div class="header-metrics-pill">
-        <span class="metric-item"><strong>14 / 30</strong> Likes Today</span>
+        <span class="metric-item"><strong>499</strong> Total Stories</span>
         <span class="metric-sep">•</span>
-        <span class="metric-item"><strong>4</strong> CEO Stories</span>
+        <span class="metric-item"><strong>7</strong> Sectors</span>
         <span class="metric-sep">•</span>
-        <span class="metric-item"><strong>22m</strong> Saved</span>
+        <span class="metric-item"><strong>84</strong> CEOs</span>
+        <span class="metric-sep">•</span>
+        <span class="metric-item"><strong>1,480h</strong> Saved</span>
         <span class="metric-sep">•</span>
         <span class="metric-status">🟢 Live Sync</span>
       </div>
@@ -49,180 +51,379 @@
     </div>
   </header>
 
+  <!-- Primary View Switcher Bar (Dashboard vs Reader) -->
+  <nav class="view-switch-bar">
+    <div class="view-switch-inner">
+      <div class="view-toggle-pills" role="tablist" aria-label="Executive View Selection">
+        <button type="button" class="view-toggle-pill active" id="btn-view-dashboard" role="tab" aria-selected="true" aria-controls="view-dashboard-section">
+          <span class="pill-icon">📊</span>
+          <span class="pill-title">Category Newsroom Dashboard</span>
+          <span class="pill-count-tag">7 Sectors · 499 Stories</span>
+        </button>
+        <button type="button" class="view-toggle-pill" id="btn-view-reader" role="tab" aria-selected="false" aria-controls="view-reader-section">
+          <span class="pill-icon">📰</span>
+          <span class="pill-title">Story &amp; Copilot Reader</span>
+          <span class="pill-count-tag">4 CEO Showcases</span>
+        </button>
+      </div>
+      <div class="view-status-hint">
+        <span class="live-pulse"></span>
+        <span>Executive Prototype Showcase · Non-Real-time Static Data</span>
+      </div>
+    </div>
+  </nav>
+
   <!-- Main Clean Workspace -->
   <main class="fd-workspace">
-    <!-- Story Selector Tabs (MapKAI Clean Pills) -->
-    <section class="story-selector-bar">
-      <div class="story-selector-inner">
-        <span class="selector-label">FEATURED STORIES:</span>
-        <div class="story-pills" role="tablist">
-          <button type="button" class="story-pill active" data-story="0" role="tab" aria-selected="true">
-            <span class="pill-badge">#1</span>
-            <span class="pill-title">AI Productivity Paradox (FD Editorial)</span>
-          </button>
-          <button type="button" class="story-pill" data-story="1" role="tab" aria-selected="false">
-            <span class="pill-badge">#2</span>
-            <span class="pill-title">NVIDIA: Physical AI &amp; $1T Shift (Jensen Huang)</span>
-          </button>
-          <button type="button" class="story-pill" data-story="2" role="tab" aria-selected="false">
-            <span class="pill-badge">#3</span>
-            <span class="pill-title">Apple: On-Device Private Cloud (Tim Cook)</span>
-          </button>
-          <button type="button" class="story-pill" data-story="3" role="tab" aria-selected="false">
-            <span class="pill-badge">#4</span>
-            <span class="pill-title">Salesforce: Digital Labor Force (Marc Benioff)</span>
-          </button>
+
+    <!-- VIEW 1: EXECUTIVE CATEGORY DASHBOARD -->
+    <section class="dashboard-section" id="view-dashboard-section">
+      <!-- Dashboard Hero / Briefing Header -->
+      <div class="dashboard-hero">
+        <div class="hero-left">
+          <p class="hero-eyebrow">EXECUTIVE INTELLIGENCE DASHBOARD</p>
+          <h1 class="hero-title">Global Business Newsroom &amp; Sector Monitor</h1>
+          <p class="hero-description">
+            Aggregated intelligence tracking 499 enterprise reports across 7 core sectors, verified Fortune 500 CEO sentiment, and AI reading speedup across EMBA cohorts.
+          </p>
+        </div>
+        <div class="hero-right">
+          <div class="cohort-badge-card">
+            <div class="cohort-badge-header">
+              <span class="cohort-tag">EMBA COHORT INSIGHT</span>
+              <span class="sync-badge">✓ Updated</span>
+            </div>
+            <div class="cohort-stat-row">
+              <strong class="cohort-stat-val">94%</strong>
+              <div class="cohort-stat-text">
+                <strong>Executive Reading Rate</strong>
+                <span>Average 3.2m spent per 500-word brief</span>
+              </div>
+            </div>
+            <div class="cohort-progress-bar">
+              <div class="cohort-progress-fill" style="width: 94%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Top KPI Stat Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-head">
+            <span class="kpi-label">TOTAL MONITORED STORIES</span>
+            <span class="kpi-icon">📰</span>
+          </div>
+          <div class="kpi-main">
+            <span class="kpi-number">499</span>
+            <span class="kpi-badge positive">+42 this wk</span>
+          </div>
+          <p class="kpi-sub">Across 7 strategic global sectors</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-head">
+            <span class="kpi-label">FORTUNE 500 CEO VOICES</span>
+            <span class="kpi-icon">👔</span>
+          </div>
+          <div class="kpi-main">
+            <span class="kpi-number">84</span>
+            <span class="kpi-badge neutral">100% Verified</span>
+          </div>
+          <p class="kpi-sub">48,290+ leadership reactions</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-head">
+            <span class="kpi-label">AI READING TIME SAVED</span>
+            <span class="kpi-icon">⚡</span>
+          </div>
+          <div class="kpi-main">
+            <span class="kpi-number">1,480h</span>
+            <span class="kpi-badge positive">86.4% faster</span>
+          </div>
+          <p class="kpi-sub">Via 30s TL;DR &amp; Copilot Playbooks</p>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-head">
+            <span class="kpi-label">STRATEGIC CONSENSUS</span>
+            <span class="kpi-icon">💡</span>
+          </div>
+          <div class="kpi-main">
+            <span class="kpi-number">91%</span>
+            <span class="kpi-badge highlight">Strong Moat</span>
+          </div>
+          <p class="kpi-sub">Prioritizing agentic context access</p>
+        </div>
+      </div>
+
+      <!-- Sector Distribution Bar Visualization -->
+      <div class="distribution-card">
+        <div class="distribution-header">
+          <div class="dist-title-group">
+            <h3>Sector News Distribution (各门类新闻占比)</h3>
+            <span class="dist-sub">Click a sector to filter newsroom view</span>
+          </div>
+          <span class="dist-total">499 Total Articles</span>
+        </div>
+        <div class="multi-segment-bar" id="multi-segment-bar">
+          <!-- Rendered by script.js -->
+        </div>
+        <div class="bar-legend" id="bar-legend">
+          <!-- Rendered by script.js -->
+        </div>
+      </div>
+
+      <!-- Sector News Breakdown Cards Section -->
+      <div class="sector-cards-section">
+        <div class="section-title-row">
+          <div>
+            <h2>Category Newsroom Breakdown (各门类新闻统计与动态)</h2>
+            <p class="section-dek">Real-time categorized news counts, growth velocities, active CEO thought-leaders, and actionable insights.</p>
+          </div>
+          <div class="category-filter-chips" role="group" aria-label="Filter by sector">
+            <button type="button" class="cat-filter-chip active" data-filter="all">All Sectors (7)</button>
+            <button type="button" class="cat-filter-chip" data-filter="hot">🔥 High Growth</button>
+            <button type="button" class="cat-filter-chip" data-filter="tech">Compute &amp; Chips</button>
+            <button type="button" class="cat-filter-chip" data-filter="enterprise">Enterprise SaaS</button>
+          </div>
+        </div>
+
+        <div class="category-cards-grid" id="category-cards-grid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
+
+      <!-- Executive Leaderboard & Insights Strip -->
+      <div class="dashboard-secondary-grid">
+        <!-- Left: Fortune 500 CEO Leaderboard -->
+        <div class="leaderboard-card">
+          <div class="leaderboard-header">
+            <div>
+              <h3>Fortune 500 CEO Voice Leaderboard</h3>
+              <p class="subtext">Most engaged chief executives across monitored business coverage</p>
+            </div>
+            <span class="badge-f500">Top 6 Leaders</span>
+          </div>
+          <div class="leaderboard-list" id="leaderboard-list">
+            <!-- Rendered by script.js -->
+          </div>
+        </div>
+
+        <!-- Right: Executive Radar & Synthesis Brief -->
+        <div class="radar-card">
+          <div class="radar-header">
+            <div>
+              <span class="sparkle-icon">✨</span>
+              <h3>Executive Synthesis Radar</h3>
+              <p class="subtext">AI-distilled high-level takeaways across 499 articles</p>
+            </div>
+          </div>
+          <div class="radar-content">
+            <div class="radar-item">
+              <strong class="radar-point">1. From LLM Scale to Enterprise Agentic Context</strong>
+              <p>78% of coverage reflects consensus that foundation model intelligence is commoditizing; real enterprise defensibility lies in permissioned integration with core ERP/CRM databases.</p>
+            </div>
+            <div class="radar-rule"></div>
+            <div class="radar-item">
+              <strong class="radar-point">2. The $1T Accelerated Datacenter Overhaul</strong>
+              <p>Hardware demand has transitioned from research clusters to factory-floor digital twins (Omniverse) and physical robotics simulations, driving baseload nuclear power deals.</p>
+            </div>
+            <div class="radar-rule"></div>
+            <div class="radar-item">
+              <strong class="radar-point">3. End-to-End Transactional Agency</strong>
+              <p>Top software executives (Benioff, Chesky) report that giving digital agents write authority to complete refunds and contracts unlocks 70%+ productivity gains.</p>
+            </div>
+          </div>
+          <div class="radar-footer">
+            <button type="button" class="btn-open-featured" id="btn-dashboard-to-reader">
+              Explore Featured Stories in Reader &amp; Copilot →
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 2-Column Split Workspace -->
-    <div class="workspace-grid">
-      <!-- Left Column: Story + LinkedIn Fortune 500 Engagement -->
-      <article class="story-pane">
-        <div class="story-meta-row">
-          <span class="story-tag" id="story-tag">TECHNOLOGY &amp; BUSINESS</span>
-          <span class="story-read-time" id="story-read-time">Concept article · 5 min read</span>
-        </div>
-
-        <h1 class="story-title" id="story-title">Why has AI investment not yet delivered the expected productivity gains?</h1>
-
-        <p class="story-dek" id="story-dek">
-          Companies have moved from experiments to deployment. The question is shifting from access to AI toward the harder work of redesigning processes, measuring returns, and managing uncertainty.
-        </p>
-
-        <div class="story-divider"></div>
-
-        <div class="story-body" id="story-body">
-          <p>The answer cannot be found in one quarter or one company’s result. It requires context: what businesses expected, what they implemented, which constraints emerged, and how evidence changed over time.</p>
-          <p>Buying AI tools does not automatically make a company more productive. Teams also need to change how work is organised. Moving beyond isolated prompt experiments to deeply integrated operational pipelines is where the true margin expansion begins.</p>
-        </div>
-
-        <!-- Social Proof: Fortune 500 CEO Likes -->
-        <div class="exec-likes-banner">
-          <div class="avatar-stack" id="exec-avatar-stack">
-            <!-- Rendered by script.js -->
-          </div>
-          <div class="exec-likes-text" id="exec-likes-text">
-            <!-- Rendered by script.js -->
-          </div>
-        </div>
-
-        <!-- Reaction Bar -->
-        <div class="reaction-bar">
-          <div class="reaction-buttons">
-            <button type="button" class="btn-reaction" data-reaction="like" id="btn-like">
-              <span class="reaction-icon">👍</span>
-              <span class="reaction-label">Like</span>
-              <span class="reaction-count" id="count-like">4,821</span>
+    <!-- VIEW 2: STORY & COPILOT READER (Clean 2-Column Mode) -->
+    <section class="reader-view" id="view-reader-section" hidden>
+      <!-- Story Selector Tabs (MapKAI Clean Pills) -->
+      <section class="story-selector-bar">
+        <div class="story-selector-inner">
+          <button type="button" class="btn-back-to-dashboard" id="btn-back-dash">
+            ← Back to Dashboard
+          </button>
+          <span class="selector-label">FEATURED STORIES:</span>
+          <div class="story-pills" role="tablist">
+            <button type="button" class="story-pill active" data-story="0" role="tab" aria-selected="true">
+              <span class="pill-badge">#1</span>
+              <span class="pill-title">AI Productivity Paradox (FD Editorial)</span>
             </button>
-            <button type="button" class="btn-reaction" data-reaction="celebrate">
-              <span class="reaction-icon">👏</span>
-              <span class="reaction-label">Celebrate</span>
-              <span class="reaction-count">1,240</span>
+            <button type="button" class="story-pill" data-story="1" role="tab" aria-selected="false">
+              <span class="pill-badge">#2</span>
+              <span class="pill-title">NVIDIA: Physical AI &amp; $1T Shift (Jensen Huang)</span>
             </button>
-            <button type="button" class="btn-reaction" data-reaction="insightful">
-              <span class="reaction-icon">💡</span>
-              <span class="reaction-label">Insightful</span>
-              <span class="reaction-count">3,410</span>
+            <button type="button" class="story-pill" data-story="2" role="tab" aria-selected="false">
+              <span class="pill-badge">#3</span>
+              <span class="pill-title">Apple: On-Device Private Cloud (Tim Cook)</span>
             </button>
-            <button type="button" class="btn-reaction" data-reaction="love">
-              <span class="reaction-icon">❤️</span>
-              <span class="reaction-label">Love</span>
-              <span class="reaction-count">980</span>
+            <button type="button" class="story-pill" data-story="3" role="tab" aria-selected="false">
+              <span class="pill-badge">#4</span>
+              <span class="pill-title">Salesforce: Digital Labor Force (Marc Benioff)</span>
             </button>
           </div>
-          <span class="status-pill" id="interaction-status">Ready to engage</span>
         </div>
+      </section>
 
-        <!-- Fortune 500 CEO Discussion Thread -->
-        <section class="ceo-discussion-section">
-          <div class="discussion-header">
-            <span class="section-label">FORTUNE 500 CEO DISCUSSION</span>
-            <span class="verified-tag">Verified Leaders</span>
+      <!-- 2-Column Split Workspace (Left: Story + CEO Discussion; Right: AI Reading Copilot) -->
+      <div class="workspace-grid">
+        <!-- Left Column: Story + LinkedIn Fortune 500 Engagement -->
+        <article class="story-pane">
+          <div class="story-meta-row">
+            <span class="story-tag" id="story-tag">TECHNOLOGY &amp; BUSINESS</span>
+            <span class="story-read-time" id="story-read-time">Concept article · 5 min read</span>
           </div>
 
-          <div class="ceo-comments-list" id="ceo-comments-list">
-            <!-- Rendered by script.js -->
-          </div>
-        </section>
-      </article>
+          <h1 class="story-title" id="story-title">Why has AI investment not yet delivered the expected productivity gains?</h1>
 
-      <!-- Right Column: AI Reading Copilot & Context -->
-      <aside class="copilot-pane">
-        <!-- Copilot Card -->
-        <div class="copilot-card">
-          <div class="copilot-header">
-            <div class="copilot-title-group">
-              <span class="sparkle-icon">✨</span>
-              <span class="copilot-title">AI Reading Copilot</span>
+          <p class="story-dek" id="story-dek">
+            Companies have moved from experiments to deployment. The question is shifting from access to AI toward the harder work of redesigning processes, measuring returns, and managing uncertainty.
+          </p>
+
+          <div class="story-divider"></div>
+
+          <div class="story-body" id="story-body">
+            <p>The answer cannot be found in one quarter or one company’s result. It requires context: what businesses expected, what they implemented, which constraints emerged, and how evidence changed over time.</p>
+            <p>Buying AI tools does not automatically make a company more productive. Teams also need to change how work is organised. Moving beyond isolated prompt experiments to deeply integrated operational pipelines is where the true margin expansion begins.</p>
+          </div>
+
+          <!-- Social Proof: Fortune 500 CEO Likes -->
+          <div class="exec-likes-banner">
+            <div class="avatar-stack" id="exec-avatar-stack">
+              <!-- Rendered by script.js -->
             </div>
-            <span class="savings-badge" id="copilot-time-badge">⏱️ Saved 4.2m (~86%)</span>
-          </div>
-
-          <!-- Mode Navigation (30s TL;DR, 3 Takeaways, Playbook) -->
-          <div class="copilot-tabs" role="tablist">
-            <button type="button" class="copilot-tab active" data-tab="tldr" role="tab" aria-selected="true">30s TL;DR</button>
-            <button type="button" class="copilot-tab" data-tab="takeaways" role="tab" aria-selected="false">3 Key Takeaways</button>
-            <button type="button" class="copilot-tab" data-tab="playbook" role="tab" aria-selected="false">Founder Playbook</button>
-          </div>
-
-          <!-- Tab Panels -->
-          <div class="copilot-content">
-            <!-- 30s TL;DR -->
-            <div class="tab-pane active" id="pane-tldr">
-              <div class="tldr-highlight" id="copilot-tldr-text">
-                Buying AI tools does not automatically boost company-wide output. Generative AI delivers exponential returns only when organizations shift from single-prompt experiments to autonomous multi-agent workflows with deep access to proprietary operational context.
-              </div>
-              <div class="sentiment-box">
-                <div class="sentiment-val">92%</div>
-                <div class="sentiment-desc">
-                  <strong>Fortune 500 Executive Consensus</strong>
-                  <span>Prioritizing autonomous agent workflows over generic chatbots in 2026.</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 3 Key Takeaways -->
-            <div class="tab-pane" id="pane-takeaways" hidden>
-              <ul class="takeaways-list" id="copilot-takeaways-list">
-                <!-- Rendered by script.js -->
-              </ul>
-            </div>
-
-            <!-- Founder Playbook -->
-            <div class="tab-pane" id="pane-playbook" hidden>
-              <div class="playbook-box" id="copilot-playbook-box">
-                <!-- Rendered by script.js -->
-              </div>
-            </div>
-          </div>
-
-          <!-- Suggested LinkedIn Replies (Click to Copy) -->
-          <div class="smart-reply-section">
-            <div class="section-label">AI SUGGESTED LINKEDIN REPLIES (CLICK TO COPY)</div>
-            <div class="reply-cards-list" id="smart-replies-list">
+            <div class="exec-likes-text" id="exec-likes-text">
               <!-- Rendered by script.js -->
             </div>
           </div>
 
-          <!-- Interactive Ask Copilot -->
-          <div class="ask-copilot-section">
-            <div class="section-label">ASK COPILOT ABOUT THIS STORY</div>
-            <div class="quick-chips">
-              <button type="button" class="chip" data-q="What is the biggest operational flaw in this thesis?">🔍 Counter-Argument</button>
-              <button type="button" class="chip" data-q="How can a 10-person startup implement this immediately?">🚀 Startup Playbook</button>
-              <button type="button" class="chip" data-q="Extract the punchiest quote from this discussion.">✨ Key Quote</button>
+          <!-- Reaction Bar -->
+          <div class="reaction-bar">
+            <div class="reaction-buttons">
+              <button type="button" class="btn-reaction" data-reaction="like" id="btn-like">
+                <span class="reaction-icon">👍</span>
+                <span class="reaction-label">Like</span>
+                <span class="reaction-count" id="count-like">4,821</span>
+              </button>
+              <button type="button" class="btn-reaction" data-reaction="celebrate">
+                <span class="reaction-icon">👏</span>
+                <span class="reaction-label">Celebrate</span>
+                <span class="reaction-count">1,240</span>
+              </button>
+              <button type="button" class="btn-reaction" data-reaction="insightful">
+                <span class="reaction-icon">💡</span>
+                <span class="reaction-label">Insightful</span>
+                <span class="reaction-count">3,410</span>
+              </button>
+              <button type="button" class="btn-reaction" data-reaction="love">
+                <span class="reaction-icon">❤️</span>
+                <span class="reaction-label">Love</span>
+                <span class="reaction-count">980</span>
+              </button>
             </div>
-            <div class="ask-input-box">
-              <input type="text" id="ask-input" placeholder="Ask anything about this story or CEO comments...">
-              <button type="button" class="btn-ask" id="btn-ask">Ask</button>
-            </div>
-            <div class="answer-box" id="answer-box" hidden></div>
+            <span class="status-pill" id="interaction-status">Ready to engage</span>
           </div>
-        </div>
-      </aside>
-    </div>
+
+          <!-- Fortune 500 CEO Discussion Thread -->
+          <section class="ceo-discussion-section">
+            <div class="discussion-header">
+              <span class="section-label">FORTUNE 500 CEO DISCUSSION</span>
+              <span class="verified-tag">Verified Leaders</span>
+            </div>
+
+            <div class="ceo-comments-list" id="ceo-comments-list">
+              <!-- Rendered by script.js -->
+            </div>
+          </section>
+        </article>
+
+        <!-- Right Column: AI Reading Copilot & Context -->
+        <aside class="copilot-pane">
+          <!-- Copilot Card -->
+          <div class="copilot-card">
+            <div class="copilot-header">
+              <div class="copilot-title-group">
+                <span class="sparkle-icon">✨</span>
+                <span class="copilot-title">AI Reading Copilot</span>
+              </div>
+              <span class="savings-badge" id="copilot-time-badge">⏱️ Saved 4.2m (~86%)</span>
+            </div>
+
+            <!-- Mode Navigation (30s TL;DR, 3 Takeaways, Playbook) -->
+            <div class="copilot-tabs" role="tablist">
+              <button type="button" class="copilot-tab active" data-tab="tldr" role="tab" aria-selected="true">30s TL;DR</button>
+              <button type="button" class="copilot-tab" data-tab="takeaways" role="tab" aria-selected="false">3 Key Takeaways</button>
+              <button type="button" class="copilot-tab" data-tab="playbook" role="tab" aria-selected="false">Founder Playbook</button>
+            </div>
+
+            <!-- Tab Panels -->
+            <div class="copilot-content">
+              <!-- 30s TL;DR -->
+              <div class="tab-pane active" id="pane-tldr">
+                <div class="tldr-highlight" id="copilot-tldr-text">
+                  Buying AI tools does not automatically boost company-wide output. Generative AI delivers exponential returns only when organizations shift from single-prompt experiments to autonomous multi-agent workflows with deep access to proprietary operational context.
+                </div>
+                <div class="sentiment-box">
+                  <div class="sentiment-val">92%</div>
+                  <div class="sentiment-desc">
+                    <strong>Fortune 500 Executive Consensus</strong>
+                    <span>Prioritizing autonomous agent workflows over generic chatbots in 2026.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3 Key Takeaways -->
+              <div class="tab-pane" id="pane-takeaways" hidden>
+                <ul class="takeaways-list" id="copilot-takeaways-list">
+                  <!-- Rendered by script.js -->
+                </ul>
+              </div>
+
+              <!-- Founder Playbook -->
+              <div class="tab-pane" id="pane-playbook" hidden>
+                <div class="playbook-box" id="copilot-playbook-box">
+                  <!-- Rendered by script.js -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Suggested LinkedIn Replies (Click to Copy) -->
+            <div class="smart-reply-section">
+              <div class="section-label">AI SUGGESTED LINKEDIN REPLIES (CLICK TO COPY)</div>
+              <div class="reply-cards-list" id="smart-replies-list">
+                <!-- Rendered by script.js -->
+              </div>
+            </div>
+
+            <!-- Interactive Ask Copilot -->
+            <div class="ask-copilot-section">
+              <div class="section-label">ASK COPILOT ABOUT THIS STORY</div>
+              <div class="quick-chips">
+                <button type="button" class="chip" data-q="What is the biggest operational flaw in this thesis?">🔍 Counter-Argument</button>
+                <button type="button" class="chip" data-q="How can a 10-person startup implement this immediately?">🚀 Startup Playbook</button>
+                <button type="button" class="chip" data-q="Extract the punchiest quote from this discussion.">✨ Key Quote</button>
+              </div>
+              <div class="ask-input-box">
+                <input type="text" id="ask-input" placeholder="Ask anything about this story or CEO comments...">
+                <button type="button" class="btn-ask" id="btn-ask">Ask</button>
+              </div>
+              <div class="answer-box" id="answer-box" hidden></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
   </main>
 
   <!-- Clean MapKAI Footer -->
@@ -230,7 +431,7 @@
     <div class="footer-inner">
       <div class="footer-left">
         <strong>MapKAI EMBA Product Lab</strong>
-        <span>FD Context + LinkedIn Engagement Showcase · English Mode</span>
+        <span>FD Executive Newsroom Dashboard &amp; LinkedIn Engagement Showcase · Non-Real-time Static Data</span>
       </div>
       <div class="footer-right">
         <a href="#top" class="return-link">Back to top ↑</a>
