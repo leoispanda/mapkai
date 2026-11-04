@@ -1,5 +1,207 @@
 // MapKAI FD Context + LinkedIn Copilot & Knowledge Learning Data
 
+const peopleLibrary = Object.freeze({
+  "Jensen Huang": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/JensenHuangSC18.jpg/330px-JensenHuangSC18.jpg",
+    credit: "Raysonho @ Open Grid Scheduler / Scalable Grid Engine",
+    license: "CC0 1.0",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:JensenHuangSC18.jpg"
+  },
+  "Satya Nadella": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/MS-Exec-Nadella-Satya-2017-08-31-22-2.jpg/250px-MS-Exec-Nadella-Satya-2017-08-31-22-2.jpg",
+    credit: "Brian Smale / Microsoft",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:MS-Exec-Nadella-Satya-2017-08-31-22-2.jpg"
+  },
+  "Tim Cook": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Tim_Cook_March_2026_%28cropped%29.jpg/500px-Tim_Cook_March_2026_%28cropped%29.jpg",
+    credit: "Tessa Bury",
+    license: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Tim_Cook_March_2026_(cropped).jpg"
+  },
+  "Sundar Pichai": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Sundar_Pichai_-_2023_%28cropped%29.jpg/500px-Sundar_Pichai_-_2023_%28cropped%29.jpg",
+    credit: "Lukasz Kobus / European Commission",
+    license: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Sundar_Pichai_-_2023_(cropped).jpg"
+  },
+  "Marc Benioff": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Marc_Benioff.jpg/500px-Marc_Benioff.jpg",
+    credit: "Christie Hemm Klok / Salesforce",
+    license: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Marc_Benioff.jpg"
+  },
+  "Lisa Su": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/SXSW-2024-alih-OB7A0861-Lisa_Su_%28cropped%29.jpg/250px-SXSW-2024-alih-OB7A0861-Lisa_Su_%28cropped%29.jpg",
+    credit: "Fuzheado",
+    license: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:SXSW-2024-alih-OB7A0861-Lisa_Su_(cropped).jpg"
+  },
+  "Andy Jassy": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Andy_Jassy.jpg/250px-Andy_Jassy.jpg",
+    credit: "Lisi Mezistrano Wolf",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Andy_Jassy.jpg"
+  },
+  "Brian Chesky": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Brian_Chesky_2025.jpg/250px-Brian_Chesky_2025.jpg",
+    credit: "Celeste Sloman / Airbnb",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Brian_Chesky_2025.jpg"
+  },
+  "Demis Hassabis": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Demis_Hassabis_in_2025_by_Christopher_Michel.jpg/250px-Demis_Hassabis_in_2025_by_Christopher_Michel.jpg",
+    credit: "Christopher Michel (Cmichel67)",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Demis_Hassabis_in_2025_by_Christopher_Michel.jpg"
+  },
+  "David Solomon": {
+    imageUrl: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/David_Solomon.jpg/250px-David_Solomon.jpg",
+    credit: "Lisa Ferdinando / U.S. Department of Defense",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:David_Solomon.jpg"
+  },
+  "Albert Bourla": {
+    fileName: "Albert Bourla in 2026.png",
+    credit: "Ehbrooklyn96",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Albert_Bourla_in_2026.png"
+  },
+  "Bob Iger": {
+    fileName: "2018 Bob Iger (cropped).jpg",
+    credit: "Village Global",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:2018_Bob_Iger_(cropped).jpg"
+  },
+  "C.C. Wei": {
+    fileName: "10.27 總統出席「第9屆工業技術研究院院士授證典禮」 (50536154856) (cropped).jpg",
+    credit: "Office of the President, Taiwan · photo by Wang Yu Ching",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:10.27_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C%E7%AC%AC9%E5%B1%86%E5%B7%A5%E6%A5%AD%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E9%99%A2%E9%99%A2%E5%A3%AB%E6%8E%88%E8%AD%89%E5%85%B8%E7%A6%AE%E3%80%8D_(50536154856)_(cropped).jpg"
+  },
+  "David Ricks": {
+    fileName: "David A. Ricks 2025.jpg",
+    credit: "Virginia Office of the Governor",
+    license: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:David_A._Ricks_2025.jpg"
+  },
+  "Elon Musk": {
+    fileName: "Elon Musk by Gage Skidmore.jpg",
+    credit: "Gage Skidmore",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Elon_Musk_by_Gage_Skidmore.jpg"
+  },
+  "Jeff Bezos": {
+    fileName: "Jeff Bezos 2016 (cropped).jpg",
+    credit: "U.S. Department of Defense · Senior Master Sgt. Adrian Cadiz",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Jeff_Bezos_2016_(cropped).jpg"
+  },
+  "Jim Farley": {
+    fileName: "Jim-farley-by-bill-cramer.jpg",
+    credit: "Bill Cramer / Wonderful Machine",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Jim-farley-by-bill-cramer.jpg"
+  },
+  "Larry Ellison": {
+    fileName: "Larry Ellison CEO of Oracle Corporation.JPG",
+    credit: "Ilan Costica",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Larry_Ellison_CEO_of_Oracle_Corporation.JPG"
+  },
+  "Lars Fruergaard Jørgensen": {
+    fileName: "Klimatopmøde Lars Fruergaard Jørgensen Lifescience Christiansborg 290120 (49463914018) (cropped).jpg",
+    credit: "News Øresund · Kristoffer Dahl",
+    license: "CC BY 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Klimatopm%C3%B8de_Lars_Fruergaard_J%C3%B8rgensen_Lifescience_Christiansborg_290120_(49463914018)_(cropped).jpg"
+  },
+  "Mary Barra": {
+    fileName: "Mary Barra, official portrait, Homeland Security Council.jpg",
+    credit: "Homeland Security Council / U.S. Government",
+    license: "Public domain (U.S. government work)",
+    licenseUrl: "https://commons.wikimedia.org/wiki/Template:PD-USGov",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Mary_Barra,_official_portrait,_Homeland_Security_Council.jpg"
+  },
+  "Pat Gelsinger": {
+    fileName: "Pat Gelsinger December 2025 (cropped).jpg",
+    credit: "TechCrunch",
+    license: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Pat_Gelsinger_December_2025_(cropped).jpg"
+  },
+  "Peter Wennink": {
+    credit: "No single-person portrait with a verified reuse license found; initials are shown.",
+    license: "Initials fallback",
+    sourceUrl: ""
+  },
+  "Reed Hastings": {
+    fileName: "Reed Hastings (50184909).jpg",
+    credit: "J.D. Lasica",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Reed_Hastings_(50184909).jpg"
+  },
+  "Sam Altman": {
+    fileName: "“Sam Altman” by Village Global (Cropped).jpg",
+    credit: "Village Global",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:%E2%80%9CSam_Altman%E2%80%9D_by_Village_Global_(Cropped).jpg"
+  }
+});
+
+function getPortraitUrl(name) {
+  const person = peopleLibrary[name];
+  if (person?.imageUrl) return person.imageUrl;
+  if (person?.fileName) {
+    return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(person.fileName)}?width=250`;
+  }
+
+  return getInitialsPortraitUrl(name);
+}
+
+function getInitialsPortraitUrl(name) {
+  const initials = name.split(/\s+/).map(part => part[0]).slice(0, 2).join("").toUpperCase();
+  const fallbackSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><rect width="96" height="96" rx="48" fill="#e8e1d4"/><text x="48" y="58" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#614b2d">${initials}</text></svg>`;
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(fallbackSvg)}`;
+}
+
+function installPortraitFallbacks(root) {
+  root.querySelectorAll("img[data-portrait-name]").forEach(img => {
+    img.addEventListener("error", () => {
+      img.src = getInitialsPortraitUrl(img.dataset.portraitName);
+    }, { once: true });
+  });
+}
+
+function renderPortraitCredits() {
+  const creditsEl = document.querySelector("#portrait-credit-list");
+  if (!creditsEl) return;
+
+  creditsEl.innerHTML = Object.entries(peopleLibrary).map(([name, person]) => `
+    <li><strong>${name}</strong> — ${person.credit}${person.sourceUrl ? `. <a href="${person.sourceUrl}" target="_blank" rel="noopener noreferrer">Photo source</a> · <a href="${person.licenseUrl}" target="_blank" rel="noopener noreferrer">${person.license}</a>` : ""}</li>
+  `).join("");
+}
+
 // 1. Stories Data (6 Full In-depth CEO Stories linked to MapKAI Knowledge Domains)
 const storiesData = [
   {
@@ -42,10 +244,10 @@ const storiesData = [
       seminarPrompt: "If 80% of routine knowledge tasks can be automated, how should an executive board restructure management incentive bonuses?"
     },
     execLikes: [
-      { name: "Jensen Huang", title: "CEO @ NVIDIA", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" },
-      { name: "Tim Cook", title: "CEO @ Apple", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" },
-      { name: "Sundar Pichai", title: "CEO @ Google", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+      { name: "Jensen Huang", title: "CEO @ NVIDIA" },
+      { name: "Satya Nadella", title: "CEO @ Microsoft" },
+      { name: "Tim Cook", title: "CEO @ Apple" },
+      { name: "Sundar Pichai", title: "CEO @ Google" }
     ],
     execLikesCount: "8,420",
     metrics: { like: 4821, celebrate: 1240, insightful: 3410, love: 980 },
@@ -54,7 +256,6 @@ const storiesData = [
         name: "Jensen Huang",
         rank: "Fortune 500 #65",
         title: "Founder, President & CEO @ NVIDIA",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
         quote: "The reason productivity gains feel delayed is that enterprises are trying to graft AI onto 1990s CPU workflows. Once you modernize data centers with accelerated computing and Omniverse digital twins, the return is immediate.",
         likes: "1,420",
         time: "1h ago"
@@ -63,7 +264,6 @@ const storiesData = [
         name: "Satya Nadella",
         rank: "Fortune 500 #13",
         title: "Chairman and CEO @ Microsoft",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80",
         quote: "Exactly, Jensen. In our customer deployments, task-level copilots delivered a 20% speedup, but the real productivity leap happened when multi-agent orchestrations were given permissioned access to internal enterprise context.",
         likes: "1,105",
         time: "45m ago"
@@ -72,7 +272,6 @@ const storiesData = [
         name: "Marc Benioff",
         rank: "Fortune 500 #127",
         title: "Chair and CEO @ Salesforce",
-        avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80",
         quote: "The first wave of chatbots failed because they were informational toys. Our Agentforce enterprise customers are seeing real ROI because digital workers can actually execute refunds and close deals inside the database.",
         likes: "890",
         time: "30m ago"
@@ -134,9 +333,9 @@ const storiesData = [
       seminarPrompt: "How does a manufacturing enterprise shift capital planning when physical equipment is simulated in software before factory tooling?"
     },
     execLikes: [
-      { name: "Lisa Su", title: "CEO @ AMD", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80" },
-      { name: "Tim Cook", title: "CEO @ Apple", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" },
-      { name: "Andy Jassy", title: "CEO @ Amazon", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+      { name: "Lisa Su", title: "CEO @ AMD" },
+      { name: "Tim Cook", title: "CEO @ Apple" },
+      { name: "Andy Jassy", title: "CEO @ Amazon" }
     ],
     execLikesCount: "18,920",
     metrics: { like: 12100, celebrate: 3400, insightful: 6200, love: 1800 },
@@ -145,7 +344,6 @@ const storiesData = [
         name: "Lisa Su",
         rank: "Fortune 500 #300",
         title: "Chair and CEO @ AMD",
-        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80",
         quote: "Couldn't agree more, Jensen. The sheer compute density required to simulate physical environments in real time demands architectural breakthroughs from silicon to system software.",
         likes: "1,840",
         time: "3h ago"
@@ -154,7 +352,6 @@ const storiesData = [
         name: "Andy Jassy",
         rank: "Fortune 500 #2",
         title: "President & CEO @ Amazon",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80",
         quote: "We are seeing this transformation firsthand across AWS. Enterprises aren't just training models; they are transforming supply chains, robotics, and logistics with continuous simulation.",
         likes: "1,210",
         time: "2h ago"
@@ -216,9 +413,9 @@ const storiesData = [
       seminarPrompt: "Can an enterprise truly claim data compliance when proprietary customer conversations flow through third-party multi-tenant APIs?"
     },
     execLikes: [
-      { name: "Sundar Pichai", title: "CEO @ Google", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" },
-      { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" },
-      { name: "Jensen Huang", title: "CEO @ NVIDIA", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" }
+      { name: "Sundar Pichai", title: "CEO @ Google" },
+      { name: "Satya Nadella", title: "CEO @ Microsoft" },
+      { name: "Jensen Huang", title: "CEO @ NVIDIA" }
     ],
     execLikesCount: "14,500",
     metrics: { like: 9400, celebrate: 2100, insightful: 4800, love: 1200 },
@@ -227,7 +424,6 @@ const storiesData = [
         name: "Sundar Pichai",
         rank: "Fortune 500 #8",
         title: "CEO @ Alphabet and Google",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80",
         quote: "The hybrid client-cloud continuum is indeed where the entire industry is converging. Combining on-device Gemini Nano with verifiable cloud inference allows consumer trust at global scale.",
         likes: "1,520",
         time: "4h ago"
@@ -289,8 +485,8 @@ const storiesData = [
       seminarPrompt: "If an AI agent makes a $50,000 refund error without human signoff, how should governance and liability be structured?"
     },
     execLikes: [
-      { name: "Brian Chesky", title: "CEO @ Airbnb", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" },
-      { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" }
+      { name: "Brian Chesky", title: "CEO @ Airbnb" },
+      { name: "Satya Nadella", title: "CEO @ Microsoft" }
     ],
     execLikesCount: "11,200",
     metrics: { like: 7800, celebrate: 1900, insightful: 3900, love: 1100 },
@@ -299,7 +495,6 @@ const storiesData = [
         name: "Brian Chesky",
         rank: "Fortune 500 #450",
         title: "Co-Founder & CEO @ Airbnb",
-        avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80",
         quote: "'Glorified FAQ search bars' describes 90% of early AI tools. The real magic happens when agents have transactional authority to solve problems end-to-end.",
         likes: "810",
         time: "6h ago"
@@ -361,9 +556,9 @@ const storiesData = [
       seminarPrompt: "Should tech companies own and operate nuclear power generation assets directly, or rely on regulated public utilities?"
     },
     execLikes: [
-      { name: "Andy Jassy", title: "CEO @ Amazon", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" },
-      { name: "Jensen Huang", title: "CEO @ NVIDIA", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" }
+      { name: "Andy Jassy", title: "CEO @ Amazon" },
+      { name: "Jensen Huang", title: "CEO @ NVIDIA" },
+      { name: "Satya Nadella", title: "CEO @ Microsoft" }
     ],
     execLikesCount: "16,400",
     metrics: { like: 10400, celebrate: 2600, insightful: 5800, love: 1400 },
@@ -372,7 +567,6 @@ const storiesData = [
         name: "Andy Jassy",
         rank: "Fortune 500 #2",
         title: "President & CEO @ Amazon",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80",
         quote: "We reached the limit of regional utility interconnect queues. Co-locating next to zero-carbon SMRs is the only path to guarantee gigawatts of unconstrained 24/7 computing for AWS customers.",
         likes: "2,140",
         time: "2h ago"
@@ -381,7 +575,6 @@ const storiesData = [
         name: "Jensen Huang",
         rank: "Fortune 500 #65",
         title: "Founder & CEO @ NVIDIA",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
         quote: "Compute factories require power plants directly co-located with high-density transformer clusters. Energy has officially become the foundational reserve currency of artificial intelligence.",
         likes: "1,980",
         time: "1h ago"
@@ -443,9 +636,9 @@ const storiesData = [
       seminarPrompt: "If an AI datacenter cluster depreciates in 3 years instead of 5, what must the internal rate of return (IRR) be to justify bond financing?"
     },
     execLikes: [
-      { name: "David Solomon", title: "CEO @ Goldman Sachs", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" },
-      { name: "Marc Benioff", title: "CEO @ Salesforce", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" }
+      { name: "David Solomon", title: "CEO @ Goldman Sachs" },
+      { name: "Satya Nadella", title: "CEO @ Microsoft" },
+      { name: "Marc Benioff", title: "CEO @ Salesforce" }
     ],
     execLikesCount: "13,800",
     metrics: { like: 8900, celebrate: 2100, insightful: 4700, love: 1100 },
@@ -454,7 +647,6 @@ const storiesData = [
         name: "David Solomon",
         rank: "Fortune 500 #55",
         title: "Chairman and CEO @ Goldman Sachs",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
         quote: "Boards are shifting from 'FOMO CapEx' to disciplined hurdle rates. CFOs must demand verified cash-flow generation before approving the next $10B infrastructure debt issuance.",
         likes: "2,350",
         time: "3h ago"
@@ -463,7 +655,6 @@ const storiesData = [
         name: "Satya Nadella",
         rank: "Fortune 500 #13",
         title: "Chairman and CEO @ Microsoft",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80",
         quote: "Every dollar of datacenter lease commitment is mapped directly against recurring enterprise software ARR expansion. CapEx discipline creates long-term operating leverage.",
         likes: "1,790",
         time: "2h ago"
@@ -527,9 +718,9 @@ const storiesData = [
       seminarPrompt: "When partnering with a fast-moving AI frontier lab, should an incumbent enterprise prioritize exclusive commercial distribution rights or majority equity voting control?"
     },
     execLikes: [
-      { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" },
-      { name: "Sam Altman", title: "CEO @ OpenAI", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Sundar Pichai", title: "CEO @ Google", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+      { name: "Satya Nadella", title: "CEO @ Microsoft" },
+      { name: "Sam Altman", title: "CEO @ OpenAI" },
+      { name: "Sundar Pichai", title: "CEO @ Google" }
     ],
     execLikesCount: 312,
     metrics: { like: 1840, comment: 426, share: 615 },
@@ -538,7 +729,6 @@ const storiesData = [
         name: "Satya Nadella",
         title: "Chairman & CEO @ Microsoft",
         rank: "Fortune 500 #13",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80",
         quote: "We didn't buy OpenAI; we partnered with them. We brought world-class cloud infrastructure and global enterprise distribution; they brought frontier algorithmic velocity.",
         likes: "3.4k",
         time: "4h ago"
@@ -547,7 +737,6 @@ const storiesData = [
         name: "Sam Altman",
         title: "CEO @ OpenAI",
         rank: "Tech Pioneer",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
         quote: "Microsoft built us a dedicated supercomputer that literally did not exist anywhere else on Earth. The Azure infrastructure bet made GPT-4 physically possible.",
         likes: "2.8k",
         time: "2h ago"
@@ -611,9 +800,9 @@ const storiesData = [
       seminarPrompt: "When an entire multi-trillion-dollar global technology ecosystem depends on a single manufacturing facility in Veldhoven, how should multinational tech CEOs hedge sovereign and supply shock risks?"
     },
     execLikes: [
-      { name: "Peter Wennink", title: "Former CEO @ ASML", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" },
-      { name: "C.C. Wei", title: "CEO @ TSMC", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Pat Gelsinger", title: "CEO @ Intel", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+      { name: "Peter Wennink", title: "Former CEO @ ASML" },
+      { name: "C.C. Wei", title: "CEO @ TSMC" },
+      { name: "Pat Gelsinger", title: "CEO @ Intel" }
     ],
     execLikesCount: 429,
     metrics: { like: 2150, comment: 512, share: 780 },
@@ -622,7 +811,6 @@ const storiesData = [
         name: "Peter Wennink",
         title: "Former President & CEO @ ASML",
         rank: "Global Tech Monopolist",
-        avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80",
         quote: "Everyone in the 2000s told us commercial EUV was physically impossible. It succeeded because our customers took existential equity risk alongside our engineering teams.",
         likes: "4.1k",
         time: "6h ago"
@@ -631,7 +819,6 @@ const storiesData = [
         name: "C.C. Wei",
         title: "Chairman & CEO @ TSMC",
         rank: "Fortune Global 500 #186",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
         quote: "Without ASML's EUV breakthrough, Moore's Law would have halted dead at 7 nanometers. Yield mastery on EUV scanners is the foundational bedrock of TSMC's manufacturing moat.",
         likes: "3.7k",
         time: "3h ago"
@@ -695,9 +882,9 @@ const storiesData = [
       seminarPrompt: "If predictive big data models can forecast 90% of user demand, under what conditions should executive leadership overrule algorithmic recommendations?"
     },
     execLikes: [
-      { name: "Reed Hastings", title: "Executive Chairman @ Netflix", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" },
-      { name: "Jeff Bezos", title: "Executive Chair @ Amazon", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" },
-      { name: "Bob Iger", title: "CEO @ Disney", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+      { name: "Reed Hastings", title: "Executive Chairman @ Netflix" },
+      { name: "Jeff Bezos", title: "Executive Chair @ Amazon" },
+      { name: "Bob Iger", title: "CEO @ Disney" }
     ],
     execLikesCount: 388,
     metrics: { like: 1950, comment: 462, share: 640 },
@@ -706,7 +893,6 @@ const storiesData = [
         name: "Reed Hastings",
         title: "Co-Founder & Executive Chairman @ Netflix",
         rank: "Fortune 500 #115",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80",
         quote: "We didn't bet $100 million on creative instinct alone. The viewer telemetry demonstrated an unaddressed audience of millions who would binge-watch Fincher and political drama without blinking.",
         likes: "3.2k",
         time: "5h ago"
@@ -715,7 +901,6 @@ const storiesData = [
         name: "Bob Iger",
         title: "CEO @ The Walt Disney Company",
         rank: "Fortune 500 #48",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80",
         quote: "Netflix's mastery of subscriber telemetry forced traditional Hollywood studios to realize that century-old theatrical release windows were no longer defensible.",
         likes: "2.6k",
         time: "2h ago"
@@ -779,9 +964,9 @@ const storiesData = [
       seminarPrompt: "How does an operational executive identify when robotic capital expenditure crosses the threshold into negative marginal returns on an assembly line?"
     },
     execLikes: [
-      { name: "Elon Musk", title: "CEO @ Tesla", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Mary Barra", title: "CEO @ General Motors", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80" },
-      { name: "Jim Farley", title: "CEO @ Ford Motor", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" }
+      { name: "Elon Musk", title: "CEO @ Tesla" },
+      { name: "Mary Barra", title: "CEO @ General Motors" },
+      { name: "Jim Farley", title: "CEO @ Ford Motor" }
     ],
     execLikesCount: 465,
     metrics: { like: 2420, comment: 590, share: 810 },
@@ -790,7 +975,6 @@ const storiesData = [
         name: "Elon Musk",
         title: "Technoking & CEO @ Tesla",
         rank: "Fortune 500 #50",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
         quote: "We put crazy robotic automation everywhere—conveyor networks inside conveyor networks. We had to take a sledgehammer and rip half of it out to let human workers build the car.",
         likes: "4.8k",
         time: "7h ago"
@@ -799,7 +983,6 @@ const storiesData = [
         name: "Mary Barra",
         title: "Chair & CEO @ General Motors",
         rank: "Fortune 500 #21",
-        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80",
         quote: "Automotive assembly is a brutal physical discipline. Automating for the sake of novelty without respecting tactile ergonomics and tolerance stack-ups will paralyze any factory.",
         likes: "3.5k",
         time: "4h ago"
@@ -863,9 +1046,9 @@ const storiesData = [
       seminarPrompt: "If cloud computing shifts fixed infrastructure depreciation into variable operating cash outflows, how does this alter a firm's operational leverage and enterprise valuation multiples?"
     },
     execLikes: [
-      { name: "Andy Jassy", title: "CEO @ Amazon", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" },
-      { name: "Jeff Bezos", title: "Executive Chair @ Amazon", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" },
-      { name: "Larry Ellison", title: "CTO @ Oracle", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" }
+      { name: "Andy Jassy", title: "CEO @ Amazon" },
+      { name: "Jeff Bezos", title: "Executive Chair @ Amazon" },
+      { name: "Larry Ellison", title: "CTO @ Oracle" }
     ],
     execLikesCount: 512,
     metrics: { like: 2680, comment: 630, share: 890 },
@@ -874,7 +1057,6 @@ const storiesData = [
         name: "Andy Jassy",
         title: "President & CEO @ Amazon",
         rank: "Fortune 500 #2",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80",
         quote: "We realized every engineering team was doing the undifferentiated heavy lifting of infrastructure. By providing reliable primitives, we let developers focus entirely on their customer value.",
         likes: "4.3k",
         time: "8h ago"
@@ -883,7 +1065,6 @@ const storiesData = [
         name: "Larry Ellison",
         title: "Chairman & CTO @ Oracle",
         rank: "Fortune 500 #82",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
         quote: "We initially scoffed at AWS as a toy for cash-poor startups. By the time Fortune 500 banks began migrating mission-critical workloads, Amazon had established a seven-year head start.",
         likes: "3.6k",
         time: "5h ago"
@@ -947,9 +1128,9 @@ const storiesData = [
       seminarPrompt: "If a chronic medication reduces national cardiovascular mortality by 20% but consumes 15% of total public healthcare budgets at current pricing, how should governments and insurers negotiate value-based reimbursement?"
     },
     execLikes: [
-      { name: "Lars Fruergaard Jørgensen", title: "CEO @ Novo Nordisk", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "David Ricks", title: "CEO @ Eli Lilly", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" },
-      { name: "Albert Bourla", title: "CEO @ Pfizer", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+      { name: "Lars Fruergaard Jørgensen", title: "CEO @ Novo Nordisk" },
+      { name: "David Ricks", title: "CEO @ Eli Lilly" },
+      { name: "Albert Bourla", title: "CEO @ Pfizer" }
     ],
     execLikesCount: 478,
     metrics: { like: 2310, comment: 540, share: 720 },
@@ -958,7 +1139,6 @@ const storiesData = [
         name: "Lars Fruergaard Jørgensen",
         title: "President & CEO @ Novo Nordisk",
         rank: "Europe's Most Valuable Firm",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
         quote: "We spent 30 years researching diabetes biology before unlocking obesity. This is not cosmetic; it is an intervention in the biological root cause of chronic metabolic disease.",
         likes: "4.5k",
         time: "6h ago"
@@ -967,7 +1147,6 @@ const storiesData = [
         name: "David Ricks",
         title: "Chair & CEO @ Eli Lilly",
         rank: "Fortune 500 #127",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80",
         quote: "GLP-1 and dual GIP agonists represent the largest drug class in pharmaceutical history. Expanding sterile injectable manufacturing capacity is the defining capital challenge.",
         likes: "3.8k",
         time: "3h ago"
@@ -1005,9 +1184,9 @@ const categoriesData = [
     isHot: true,
     color: "#d95328",
     activeCeos: [
-      { name: "Jensen Huang", title: "NVIDIA CEO", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Satya Nadella", title: "Microsoft CEO", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" },
-      { name: "Sundar Pichai", title: "Google CEO", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+      { name: "Jensen Huang", title: "NVIDIA CEO" },
+      { name: "Satya Nadella", title: "Microsoft CEO" },
+      { name: "Sundar Pichai", title: "Google CEO" }
     ],
     topHeadline: "Why has AI investment not yet delivered expected productivity gains?",
     topStoryId: 0,
@@ -1025,9 +1204,9 @@ const categoriesData = [
     isHot: true,
     color: "#b45309",
     activeCeos: [
-      { name: "Jensen Huang", title: "NVIDIA CEO", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Lisa Su", title: "AMD CEO", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80" },
-      { name: "Andy Jassy", title: "Amazon CEO", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+      { name: "Jensen Huang", title: "NVIDIA CEO" },
+      { name: "Lisa Su", title: "AMD CEO" },
+      { name: "Andy Jassy", title: "Amazon CEO" }
     ],
     topHeadline: "NVIDIA: The $1 Trillion Accelerated Shift and Age of Physical AI",
     topStoryId: 1,
@@ -1045,8 +1224,8 @@ const categoriesData = [
     isHot: false,
     color: "#0a66c2",
     activeCeos: [
-      { name: "Marc Benioff", title: "Salesforce CEO", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" },
-      { name: "Brian Chesky", title: "Airbnb CEO", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" }
+      { name: "Marc Benioff", title: "Salesforce CEO" },
+      { name: "Brian Chesky", title: "Airbnb CEO" }
     ],
     topHeadline: "Salesforce: Autonomous Digital Labor Replacing Legacy FAQ Chatbots",
     topStoryId: 3,
@@ -1064,8 +1243,8 @@ const categoriesData = [
     isHot: false,
     color: "#475569",
     activeCeos: [
-      { name: "Tim Cook", title: "Apple CEO", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" },
-      { name: "Sundar Pichai", title: "Google CEO", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+      { name: "Tim Cook", title: "Apple CEO" },
+      { name: "Sundar Pichai", title: "Google CEO" }
     ],
     topHeadline: "Apple: On-Device Private Cloud Intelligence Architecture",
     topStoryId: 2,
@@ -1083,8 +1262,8 @@ const categoriesData = [
     isHot: true,
     color: "#15803d",
     activeCeos: [
-      { name: "Andy Jassy", title: "Amazon CEO", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" },
-      { name: "Satya Nadella", title: "Microsoft CEO", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" }
+      { name: "Andy Jassy", title: "Amazon CEO" },
+      { name: "Satya Nadella", title: "Microsoft CEO" }
     ],
     topHeadline: "Hyperscalers Turn to Nuclear SMRs: The Gigawatt Energy Race for AI Data Centers",
     topStoryId: 4,
@@ -1102,8 +1281,8 @@ const categoriesData = [
     isHot: false,
     color: "#6366f1",
     activeCeos: [
-      { name: "David Solomon", title: "Goldman Sachs CEO", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Marc Benioff", title: "Salesforce CEO", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" }
+      { name: "David Solomon", title: "Goldman Sachs CEO" },
+      { name: "Marc Benioff", title: "Salesforce CEO" }
     ],
     topHeadline: "The Cost of Capital in the Age of Autonomous AI: Balancing $50B CapEx with ROI Metrics",
     topStoryId: 5,
@@ -1121,8 +1300,8 @@ const categoriesData = [
     isHot: false,
     color: "#0891b2",
     activeCeos: [
-      { name: "Jensen Huang", title: "NVIDIA CEO", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
-      { name: "Lisa Su", title: "AMD CEO", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80" }
+      { name: "Jensen Huang", title: "NVIDIA CEO" },
+      { name: "Lisa Su", title: "AMD CEO" }
     ],
     topHeadline: "Tesla's 'Production Hell': The Hard Limits of Automation on Assembly Lines",
     topStoryId: 9,
@@ -1216,12 +1395,12 @@ const overviewKnowledgeDomains = [
 
 // 4. Executive Leaderboard Data
 const executiveLeaderboard = [
-  { name: "Jensen Huang", rank: "Fortune 500 #65", title: "CEO @ NVIDIA", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80", commentsCount: 48, likesCount: "14.2k", topTopic: "Physical AI & Accelerated Computing" },
-  { name: "Satya Nadella", rank: "Fortune 500 #13", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80", commentsCount: 39, likesCount: "11.5k", topTopic: "Enterprise Context & Agentic Workflow" },
-  { name: "David Solomon", rank: "Fortune 500 #55", title: "CEO @ Goldman Sachs", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80", commentsCount: 34, likesCount: "12.8k", topTopic: "Cost of Capital & ROIC Hurdle Rates" },
-  { name: "Marc Benioff", rank: "Fortune 500 #127", title: "CEO @ Salesforce", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80", commentsCount: 31, likesCount: "8.9k", topTopic: "Autonomous Digital Workers (Agentforce)" },
-  { name: "Andy Jassy", rank: "Fortune 500 #2", title: "CEO @ Amazon", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80", commentsCount: 29, likesCount: "10.4k", topTopic: "Nuclear SMRs & Cloud Power Infrastructure" },
-  { name: "Tim Cook", rank: "Fortune 500 #3", title: "CEO @ Apple", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80", commentsCount: 27, likesCount: "9.4k", topTopic: "Private Cloud Compute & On-Device Neural" }
+  { name: "Jensen Huang", rank: "Fortune 500 #65", title: "CEO @ NVIDIA", commentsCount: 48, likesCount: "14.2k", topTopic: "Physical AI & Accelerated Computing" },
+  { name: "Satya Nadella", rank: "Fortune 500 #13", title: "CEO @ Microsoft", commentsCount: 39, likesCount: "11.5k", topTopic: "Enterprise Context & Agentic Workflow" },
+  { name: "David Solomon", rank: "Fortune 500 #55", title: "CEO @ Goldman Sachs", commentsCount: 34, likesCount: "12.8k", topTopic: "Cost of Capital & ROIC Hurdle Rates" },
+  { name: "Marc Benioff", rank: "Fortune 500 #127", title: "CEO @ Salesforce", commentsCount: 31, likesCount: "8.9k", topTopic: "Autonomous Digital Workers (Agentforce)" },
+  { name: "Andy Jassy", rank: "Fortune 500 #2", title: "CEO @ Amazon", commentsCount: 29, likesCount: "10.4k", topTopic: "Nuclear SMRs & Cloud Power Infrastructure" },
+  { name: "Tim Cook", rank: "Fortune 500 #3", title: "CEO @ Apple", commentsCount: 27, likesCount: "9.4k", topTopic: "Private Cloud Compute & On-Device Neural" }
 ];
 
 // 5. Executive Masterclasses & Live Interactive Webinars Data
@@ -1472,18 +1651,19 @@ function renderDashboard() {
       <div class="leaderboard-item">
         <div class="leader-left">
           <span class="leader-rank-num">#${i + 1}</span>
-          <img class="leader-avatar" src="${ceo.avatar}" alt="${ceo.name}">
+          <img class="leader-avatar" src="${getPortraitUrl(ceo.name)}" data-portrait-name="${ceo.name}" alt="${ceo.name}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
           <div class="leader-meta">
-            <strong>${ceo.name} <small style="color:var(--fd-muted); font-weight:normal;">(${ceo.rank})</small></strong>
+            <strong>${ceo.name}</strong>
             <span>${ceo.title}</span>
           </div>
         </div>
         <div class="leader-right">
           <span class="leader-topic">${ceo.topTopic}</span>
-          <span class="leader-stats">💬 ${ceo.commentsCount} quotes • 👍 ${ceo.likesCount}</span>
+          <span class="leader-stats">Example activity: ${ceo.commentsCount} comments · ${ceo.likesCount} reactions</span>
         </div>
       </div>
     `).join("");
+    installPortraitFallbacks(leaderEl);
   }
 
   // 5. Executive Masterclasses & Webinars
@@ -1693,16 +1873,16 @@ function renderCategoryCards(filter) {
         </div>
 
         <div class="cat-ceos-row">
-          <span class="cat-ceos-label">Key Executive Voices:</span>
+          <span class="cat-ceos-label">People shown:</span>
           <div class="cat-ceos-stack">
             ${c.activeCeos.map(ceo => `
-              <img src="${ceo.avatar}" alt="${ceo.name}" title="${ceo.name} (${ceo.title})">
+              <img src="${getPortraitUrl(ceo.name)}" data-portrait-name="${ceo.name}" alt="${ceo.name}" title="${ceo.name} (${ceo.title})" loading="lazy" decoding="async" referrerpolicy="no-referrer">
             `).join("")}
           </div>
         </div>
 
         <div class="cat-headline-box">
-          <strong>TRENDING EXECUTIVE REPORT</strong>
+          <strong>FEATURED HISTORICAL CASE</strong>
           "${c.topHeadline}"
         </div>
       </div>
@@ -1713,6 +1893,7 @@ function renderCategoryCards(filter) {
       </button>
     </div>
   `).join("");
+  installPortraitFallbacks(gridEl);
 
   gridEl.querySelectorAll(".cat-action-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -1780,14 +1961,15 @@ function renderStory(index) {
   const stackEl = document.querySelector("#exec-avatar-stack");
   if (stackEl) {
     stackEl.innerHTML = story.execLikes.map(exec => 
-      `<img src="${exec.avatar}" alt="${exec.name}" title="${exec.name} (${exec.title})">`
+      `<img src="${getPortraitUrl(exec.name)}" data-portrait-name="${exec.name}" alt="${exec.name}" title="${exec.name} (${exec.title})" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
     ).join("");
+    installPortraitFallbacks(stackEl);
   }
 
   const likesTextEl = document.querySelector("#exec-likes-text");
   if (likesTextEl) {
     likesTextEl.innerHTML = `
-      Liked by <strong>${story.execLikes[0].name}</strong>, <strong>${story.execLikes[1]?.name || 'peer CEOs'}</strong>, and <strong>${story.execLikesCount} other executives</strong>
+      Profiles featured in this illustrative discussion: <strong>${story.execLikes[0].name}</strong> and <strong>${story.execLikes[1]?.name || 'other executives'}</strong>
     `;
   }
 
@@ -1801,12 +1983,12 @@ function renderStory(index) {
     commentsEl.innerHTML = story.ceoComments.map(c => `
       <div class="ceo-comment-card">
         <div class="ceo-header-row">
-          <img class="ceo-avatar" src="${c.avatar}" alt="${c.name}">
+          <img class="ceo-avatar" src="${getPortraitUrl(c.name)}" data-portrait-name="${c.name}" alt="${c.name}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
           <div class="ceo-meta-text">
             <div class="ceo-name-line">
               <span>${c.name}</span>
               <span class="in-icon">in</span>
-              <span class="f500-tag">${c.rank}</span>
+              <span class="f500-tag">Illustrative</span>
             </div>
             <div class="ceo-role-line">${c.title}</div>
           </div>
@@ -1817,6 +1999,7 @@ function renderStory(index) {
         </div>
       </div>
     `).join("");
+    installPortraitFallbacks(commentsEl);
   }
 
   // Copilot Panel
@@ -1948,6 +2131,7 @@ function submitAsk(question) {
 // Initialize all DOM events
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Initial Render
+  renderPortraitCredits();
   renderDashboard();
   renderStory(0);
 

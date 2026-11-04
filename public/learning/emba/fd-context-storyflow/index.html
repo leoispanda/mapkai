@@ -9,9 +9,9 @@
   <meta name="description" content="MapKAI EMBA Showcase: FD Executive Newsroom Dashboard and LinkedIn Copilot with Fortune 500 CEO reactions and Knowledge Domain learning.">
   <title>FD Executive Newsroom Dashboard — MapKAI EMBA</title>
   <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/site-shell.css?v=0.1.365">
-  <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=learning-v4">
-  <script src="/learning/emba/fd-context-storyflow/script.js?v=learning-v4" defer></script>
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.373">
+  <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=learning-v5">
+  <script src="/learning/emba/fd-context-storyflow/script.js?v=learning-v5" defer></script>
 </head>
 <body data-mapkai-page="emba">
   <!-- MapKAI Header Bar -->
@@ -26,17 +26,17 @@
         <span class="product-sub">Executive Dashboard &amp; Learning</span>
       </div>
 
-      <!-- Live Executive Metrics -->
+      <!-- Prototype Metrics -->
       <div class="header-metrics-pill">
-        <span class="metric-item"><strong>499</strong> Total Stories</span>
+        <span class="metric-item"><strong>12</strong> Case Studies</span>
         <span class="metric-sep">•</span>
         <span class="metric-item"><strong>7</strong> Sectors</span>
         <span class="metric-sep">•</span>
-        <span class="metric-item"><strong>84</strong> CEOs</span>
+        <span class="metric-item"><strong>24</strong> People</span>
         <span class="metric-sep">•</span>
         <span class="metric-item"><strong>12</strong> Knowledge Domains</span>
         <span class="metric-sep">•</span>
-        <span class="metric-status">🟢 Live Sync</span>
+        <span class="metric-status">Demo data</span>
       </div>
 
       <nav class="nav-links" aria-label="Site">
@@ -57,7 +57,7 @@
         <button type="button" class="view-toggle-pill active" id="btn-view-dashboard" role="tab" aria-selected="true" aria-controls="view-dashboard-section">
           <span class="pill-icon">📊</span>
           <span class="pill-title">Category Newsroom Dashboard</span>
-          <span class="pill-count-tag">7 Sectors · 499 Stories</span>
+          <span class="pill-count-tag">7 Sectors · 12 Case Studies</span>
         </button>
         <button type="button" class="view-toggle-pill" id="btn-view-reader" role="tab" aria-selected="false" aria-controls="view-reader-section">
           <span class="pill-icon">📰</span>
@@ -74,6 +74,7 @@
 
   <!-- Main Clean Workspace -->
   <main class="fd-workspace">
+    <p class="demo-notice">Prototype data · The case studies are based on historical business events. Executive quotes, comments, reactions, sentiment scores, rankings, and activity metrics are illustrative; they are not statements or endorsements from the people pictured.</p>
 
     <!-- VIEW 1: EXECUTIVE CATEGORY DASHBOARD -->
     <section class="dashboard-section" id="view-dashboard-section">
@@ -83,7 +84,7 @@
           <p class="hero-eyebrow">EXECUTIVE INTELLIGENCE DASHBOARD</p>
           <h1 class="hero-title">Global Business Newsroom &amp; Sector Monitor</h1>
           <p class="hero-description">
-            Aggregated intelligence tracking 499 enterprise reports across 7 core sectors, verified Fortune 500 CEO sentiment, and direct linkages to MapKAI foundational knowledge domains.
+            A demonstration dashboard with historical business cases, illustrative executive discussion, and links to MapKAI knowledge domains.
           </p>
         </div>
         <div class="hero-right">
@@ -110,38 +111,38 @@
       <div class="kpi-grid">
         <div class="kpi-card">
           <div class="kpi-head">
-            <span class="kpi-label">TOTAL MONITORED STORIES</span>
+            <span class="kpi-label">SELECTED HISTORICAL CASES</span>
             <span class="kpi-icon">📰</span>
           </div>
           <div class="kpi-main">
-            <span class="kpi-number">499</span>
-            <span class="kpi-badge positive">+42 this wk</span>
+            <span class="kpi-number">12</span>
+            <span class="kpi-badge neutral">Static examples</span>
           </div>
           <p class="kpi-sub">Across 7 strategic global sectors</p>
         </div>
 
         <div class="kpi-card">
           <div class="kpi-head">
-            <span class="kpi-label">FORTUNE 500 CEO VOICES</span>
+            <span class="kpi-label">PEOPLE IN THIS PROTOTYPE</span>
             <span class="kpi-icon">👔</span>
           </div>
           <div class="kpi-main">
-            <span class="kpi-number">84</span>
-            <span class="kpi-badge neutral">100% Verified</span>
+            <span class="kpi-number">24</span>
+            <span class="kpi-badge neutral">Photo sources linked</span>
           </div>
-          <p class="kpi-sub">48,290+ leadership reactions</p>
+          <p class="kpi-sub">Portraits identify people; they do not imply endorsement</p>
         </div>
 
         <div class="kpi-card">
           <div class="kpi-head">
-            <span class="kpi-label">AI READING TIME SAVED</span>
+            <span class="kpi-label">COPILOT EXAMPLE OUTPUT</span>
             <span class="kpi-icon">⚡</span>
           </div>
           <div class="kpi-main">
-            <span class="kpi-number">1,480h</span>
-            <span class="kpi-badge positive">86.4% faster</span>
+            <span class="kpi-number">Demo</span>
+            <span class="kpi-badge neutral">Illustrative</span>
           </div>
-          <p class="kpi-sub">Via 30s TL;DR &amp; Copilot Playbooks</p>
+          <p class="kpi-sub">Example summaries and playbooks for selected cases</p>
         </div>
 
         <div class="kpi-card">
@@ -164,7 +165,7 @@
             <h3>Sector News Distribution</h3>
             <span class="dist-sub">Click a sector to filter newsroom view</span>
           </div>
-          <span class="dist-total">499 Total Articles</span>
+          <span class="dist-total">12 Selected Cases</span>
         </div>
         <div class="multi-segment-bar" id="multi-segment-bar">
           <!-- Rendered by script.js -->
@@ -211,14 +212,14 @@
 
       <!-- Executive Leaderboard & Insights Strip -->
       <div class="dashboard-secondary-grid">
-        <!-- Left: Fortune 500 CEO Leaderboard -->
+        <!-- Left: Executive Profiles -->
         <div class="leaderboard-card">
           <div class="leaderboard-header">
             <div>
-              <h3>Fortune 500 CEO Voice Leaderboard</h3>
-              <p class="subtext">Most engaged chief executives across monitored business coverage</p>
+              <h3>Executive Profiles</h3>
+              <p class="subtext">Example profile list; order and activity figures are illustrative</p>
             </div>
-            <span class="badge-f500">Top 6 Leaders</span>
+            <span class="badge-f500">Demo data</span>
           </div>
           <div class="leaderboard-list" id="leaderboard-list">
             <!-- Rendered by script.js -->
@@ -231,7 +232,7 @@
             <div>
               <span class="sparkle-icon">✨</span>
               <h3>Executive Synthesis Radar</h3>
-              <p class="subtext">AI-distilled high-level takeaways across 499 articles</p>
+              <p class="subtext">Illustrative takeaways across the 12 selected cases</p>
             </div>
           </div>
           <div class="radar-content">
@@ -455,8 +456,8 @@
           <!-- Fortune 500 CEO Discussion Thread -->
           <section class="ceo-discussion-section">
             <div class="discussion-header">
-              <span class="section-label">FORTUNE 500 CEO DISCUSSION</span>
-              <span class="verified-tag">Verified Leaders</span>
+              <span class="section-label">ILLUSTRATIVE EXECUTIVE DISCUSSION</span>
+              <span class="verified-tag">Demo content</span>
             </div>
 
             <div class="ceo-comments-list" id="ceo-comments-list">
@@ -495,7 +496,7 @@
                 <div class="sentiment-box">
                   <div class="sentiment-val">92%</div>
                   <div class="sentiment-desc">
-                    <strong>Fortune 500 Executive Consensus</strong>
+                    <strong>Illustrative Executive Consensus</strong>
                     <span>Prioritizing autonomous agent workflows over generic chatbots in 2026.</span>
                   </div>
                 </div>
@@ -560,6 +561,13 @@
         <span>FD Executive Newsroom Dashboard &amp; Knowledge Domain Learning Hub · Non-Real-time Static Data</span>
       </div>
       <div class="footer-right">
+        <details class="portrait-credits">
+          <summary>Portrait credits &amp; licenses</summary>
+          <div class="portrait-credit-popover">
+            <p>Portraits identify the people shown and do not imply participation or endorsement. Images are cropped for avatars; source pages and license terms are listed below.</p>
+            <ul id="portrait-credit-list"></ul>
+          </div>
+        </details>
         <a href="#top" class="return-link">Back to top ↑</a>
       </div>
     </div>
