@@ -481,8 +481,10 @@ body[data-mapkai-page="showcase"] {
 
 .broadsheet-lead-img {
   width: 100%;
+  aspect-ratio: 2 / 1;
   max-height: 520px;
   object-fit: cover;
+  object-position: center;
   border: 1px solid var(--hairline);
   border-radius: 0;
   display: block;
@@ -947,12 +949,17 @@ body[data-mapkai-page="showcase"] {
 }
 
 .avatar-stack img {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: 2px solid #ffffff;
   margin-left: -8px;
   object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  display: block;
+  background-color: var(--paper-white);
 }
 
 .avatar-stack img:first-child {
@@ -1037,11 +1044,16 @@ body[data-mapkai-page="showcase"] {
 }
 
 .ceo-avatar {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid var(--hairline);
+  object-position: center;
+  border: 1.5px solid var(--hairline);
+  flex-shrink: 0;
+  display: block;
+  background-color: var(--paper);
 }
 
 .ceo-meta-text {
@@ -2273,12 +2285,17 @@ body[data-mapkai-page="showcase"] {
 }
 
 .cat-ceos-stack img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: 2px solid #ffffff;
   margin-left: -6px;
   object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  display: block;
+  background-color: var(--fd-paper-warm);
 }
 
 .cat-ceos-stack img:first-child {
@@ -2407,11 +2424,16 @@ body[data-mapkai-page="showcase"] {
 }
 
 .leader-avatar {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid var(--fd-line);
+  object-position: center;
+  border: 1.5px solid var(--fd-line);
+  flex-shrink: 0;
+  display: block;
+  background-color: var(--fd-paper-warm);
 }
 
 .leader-meta strong {
@@ -3058,11 +3080,16 @@ body[data-mapkai-page="showcase"] {
 }
 
 .speaker-avatar {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
   border: 1px solid var(--fd-line);
+  flex-shrink: 0;
+  display: block;
+  background-color: var(--fd-paper-warm);
 }
 
 .activity-speakers-names {

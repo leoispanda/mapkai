@@ -72,7 +72,7 @@ const peopleLibrary = Object.freeze({
     sourceUrl: "https://commons.wikimedia.org/wiki/File:David_Solomon.jpg"
   },
   "Albert Bourla": {
-    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/albert-bourla.png",
+    imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/albert-bourla.jpg",
     credit: "Ehbrooklyn96",
     license: "CC BY-SA 4.0",
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
