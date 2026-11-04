@@ -484,6 +484,510 @@ const storiesData = [
         { tone: "Founder Perspective", text: "We tied our AI software spend directly to gross margin contribution per customer, cutting our unnecessary SaaS bloat by 38%." }
       ]
     }
+  },
+
+  // Story 6: Microsoft & OpenAI
+  {
+    id: 6,
+    tag: "CORPORATE STRATEGY & ALLIANCES",
+    readTime: "5.1m read",
+    title: "Microsoft's $13 Billion Asymmetric OpenAI Alliance: Restructuring Global Enterprise Cloud",
+    dek: "How Satya Nadella outmaneuvered incumbent cloud rivals by trading Azure supercomputing credits for exclusive commercialization rights to frontier AI models.",
+    body: [
+      "In July 2019, Microsoft CEO Satya Nadella made a calculated gamble that Wall Street initially questioned: injecting $1 billion—and subsequently scaling to $13 billion—into San Francisco research lab OpenAI. Rather than pursuing a standard outright buyout, Microsoft structured an asymmetric partnership trading Azure compute credits for exclusive commercial distribution rights: <a class='k-chip' href='/categories/04' title='ISCED 0413: Management & Strategic Alliances'>0413 Management &amp; Strategy ↗</a>.",
+      "Under CTO Kevin Scott, Microsoft fundamentally overhauled Azure's data center fabric, constructing massive supercomputers with tens of thousands of NVIDIA GPUs linked via non-blocking InfiniBand interconnects: <a class='k-chip' href='/categories/06' title='ISCED 0612: Cloud Architecture & High-Performance Networks'>0612 Cloud Infrastructure ↗</a>. This purpose-built infrastructure enabled OpenAI to train GPT-3.5 and GPT-4 at unprecedented scale.",
+      "From a corporate valuation standpoint, Microsoft pioneered a profit-capped liquidation waterfall, capturing 75% of operating profits until its capital investment is fully recouped, all while insulating the relationship from immediate antitrust change-of-control triggers: <a class='k-chip' href='/categories/04' title='ISCED 0412: Corporate Valuation & Venture Financing'>0412 Corporate Finance ↗</a>."
+    ],
+    linkedDomains: [
+      {
+        code: "ISCED 0413",
+        name: "Management & Strategic Alliances",
+        subfield: "Asymmetric Joint Ventures & Governance Firewalls",
+        relevance: "Structuring multi-stage corporate alliances, commercial IP licensing, and governance firewalls between corporate sponsors and agile research labs.",
+        link: "/categories/04"
+      },
+      {
+        code: "ISCED 0612",
+        name: "Cloud Infrastructure & Distributed Networks",
+        subfield: "Supercomputing Clusters & InfiniBand Interconnects",
+        relevance: "Designing non-blocking fat-tree network topologies and high-throughput fabric latency necessary for synchronized parameter gradient descent.",
+        link: "/categories/06"
+      },
+      {
+        code: "ISCED 0412",
+        name: "Finance, Banking & Corporate Valuation",
+        subfield: "Profit-Capped Equity & Convertible Financing",
+        relevance: "Valuing non-voting equity instruments, liquidation waterfalls, and milestone-gated cloud credit financing structures.",
+        link: "/categories/04"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "Asymmetric Corporate Alliances, Non-Voting Profit Participation, InfiniBand Fabric Latency, First-Mover Cloud Lock-In.",
+      recommendedModule: "MapKAI Executive Strategy: M&A, Joint Ventures and High-Tech Strategic Partnerships.",
+      seminarPrompt: "When partnering with a fast-moving AI frontier lab, should an incumbent enterprise prioritize exclusive commercial distribution rights or majority equity voting control?"
+    },
+    execLikes: [
+      { name: "Satya Nadella", title: "CEO @ Microsoft", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80" },
+      { name: "Sam Altman", title: "CEO @ OpenAI", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
+      { name: "Sundar Pichai", title: "CEO @ Google", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+    ],
+    execLikesCount: 312,
+    metrics: { like: 1840, comment: 426, share: 615 },
+    ceoComments: [
+      {
+        name: "Satya Nadella",
+        title: "Chairman & CEO @ Microsoft",
+        rank: "Fortune 500 #13",
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=80",
+        quote: "We didn't buy OpenAI; we partnered with them. We brought world-class cloud infrastructure and global enterprise distribution; they brought frontier algorithmic velocity.",
+        likes: "3.4k",
+        time: "4h ago"
+      },
+      {
+        name: "Sam Altman",
+        title: "CEO @ OpenAI",
+        rank: "Tech Pioneer",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
+        quote: "Microsoft built us a dedicated supercomputer that literally did not exist anywhere else on Earth. The Azure infrastructure bet made GPT-4 physically possible.",
+        likes: "2.8k",
+        time: "2h ago"
+      }
+    ],
+    copilot: {
+      timeBadge: "⏱️ Saved 4.3m (~88%)",
+      tldr: "Microsoft's multi-billion dollar alliance with OpenAI demonstrates how incumbent technology leaders can outflank rivals by providing dedicated high-performance compute and enterprise distribution in exchange for exclusive frontier AI intellectual property.",
+      consensus: "94%",
+      takeaways: [
+        { title: "Asymmetric Value Exchange", desc: "Trading internal infrastructure capacity (Azure credits) rather than pure cash preserves liquidity while securing premier model access." },
+        { title: "Custom Supercomputing Moat", desc: "Integrating tens of thousands of GPUs over low-latency InfiniBand networks established an infrastructure lead competitors took years to match." },
+        { title: "Regulatory Isolation", desc: "Non-voting profit-capped structures allowed rapid operational integration without immediate merger clearance deadlocks." }
+      ],
+      playbook: "Audit internal cloud and distribution assets to identify where non-monetary strategic joint ventures can secure exclusive early access to disruptive tech startups.",
+      replies: [
+        { tone: "Strategic", text: "The OpenAI alliance is a textbook masterclass in corporate partnering: commercial exclusivity without bureaucratic absorption." },
+        { tone: "Infrastructure", text: "Overhauling Azure's physical networking fabric was the unheralded engineering feat that turned algorithmic potential into commercial reality." }
+      ]
+    }
+  },
+
+  // Story 7: ASML & TSMC EUV Breakthrough
+  {
+    id: 7,
+    tag: "SEMICONDUCTOR FABRICATION & OPTICS",
+    readTime: "5.6m read",
+    title: "ASML & TSMC: The $10 Billion Extreme Ultraviolet (EUV) Monopolistic Breakthrough",
+    dek: "How European precision optics, molten tin laser plasma, and Taiwanese foundries conquered the physical limits of light to enable sub-5nm microchips.",
+    body: [
+      "For decades, the semiconductor industry faced an insurmountable physical barrier: 193nm deep ultraviolet light could no longer etch transistor gates below 10 nanometers without multi-patterning defects. Under Peter Wennink, Dutch manufacturer ASML embarked on the most complex engineering gamble in industrial history: commercializing Extreme Ultraviolet (EUV) lithography at a 13.5nm wavelength: <a class='k-chip' href='/categories/07' title='ISCED 0714: Semiconductor Nanotechnology'>0714 Electronics &amp; Automation ↗</a>.",
+      "The underlying mechanics required commercializing high-power CO2 lasers firing twice at 50,000 molten tin droplets per second in a vacuum chamber, vaporizing tin into EUV-emitting plasma: <a class='k-chip' href='/categories/05' title='ISCED 0533: Optics & Laser Plasma Physics'>0533 Applied Physics &amp; Optics ↗</a>. Partner Carl Zeiss manufactured Bragg mirrors so precise that if scaled to the land area of Germany, the highest bump would measure less than one millimeter.",
+      "Strategically, ASML secured customer co-investment from TSMC, Intel, and Samsung, who contributed over $5 billion in direct R&D capital: <a class='k-chip' href='/categories/04' title='ISCED 0413: Monopolistic Supply Chains'>0413 Operations &amp; Supply Chain Strategy ↗</a>. Today, every advanced AI accelerator and smartphone processor in the world depends exclusively on ASML Twinscan EUV systems."
+    ],
+    linkedDomains: [
+      {
+        code: "ISCED 0714",
+        name: "Electronics and Automation",
+        subfield: "Semiconductor Lithography & Sub-5nm Fabrication",
+        relevance: "Wafer stage positioning with sub-nanometer interferometric accuracy and photolithographic reticle alignment.",
+        link: "/categories/07"
+      },
+      {
+        code: "ISCED 0533",
+        name: "Applied Physics & Optics",
+        subfield: "Laser-Produced Plasma & Extreme Ultraviolet Optics",
+        relevance: "Short-wavelength photon absorption, multilayer molybdenum-silicon dielectric mirrors, and tin droplet fluid dynamics.",
+        link: "/categories/05"
+      },
+      {
+        code: "ISCED 0413",
+        name: "Management & Operations Strategy",
+        subfield: "Monopolistic Supply Chain Integration & Co-Funding",
+        relevance: "Customer consortium equity funding models, single-source dependency risk management, and export control geopolitical compliance.",
+        link: "/categories/04"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "EUV Photolithography, Tin Plasma Physics, Customer Equity Co-Funding, Monopolistic Moats, Single-Source Resilience.",
+      recommendedModule: "MapKAI Industrial Engineering & Geopolitical Supply Chain Strategy.",
+      seminarPrompt: "When an entire multi-trillion-dollar global technology ecosystem depends on a single manufacturing facility in Veldhoven, how should multinational tech CEOs hedge sovereign and supply shock risks?"
+    },
+    execLikes: [
+      { name: "Peter Wennink", title: "Former CEO @ ASML", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" },
+      { name: "C.C. Wei", title: "CEO @ TSMC", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
+      { name: "Pat Gelsinger", title: "CEO @ Intel", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+    ],
+    execLikesCount: 429,
+    metrics: { like: 2150, comment: 512, share: 780 },
+    ceoComments: [
+      {
+        name: "Peter Wennink",
+        title: "Former President & CEO @ ASML",
+        rank: "Global Tech Monopolist",
+        avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80",
+        quote: "Everyone in the 2000s told us commercial EUV was physically impossible. It succeeded because our customers took existential equity risk alongside our engineering teams.",
+        likes: "4.1k",
+        time: "6h ago"
+      },
+      {
+        name: "C.C. Wei",
+        title: "Chairman & CEO @ TSMC",
+        rank: "Fortune Global 500 #186",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
+        quote: "Without ASML's EUV breakthrough, Moore's Law would have halted dead at 7 nanometers. Yield mastery on EUV scanners is the foundational bedrock of TSMC's manufacturing moat.",
+        likes: "3.7k",
+        time: "3h ago"
+      }
+    ],
+    copilot: {
+      timeBadge: "⏱️ Saved 4.7m (~87%)",
+      tldr: "ASML's 20-year development of Extreme Ultraviolet (EUV) lithography created an unassailable global semiconductor monopoly by combining cutting-edge laser plasma physics with a customer equity co-funding consortium.",
+      consensus: "96%",
+      takeaways: [
+        { title: "Defying Physical Diffraction", desc: "Transitioning from 193nm to 13.5nm wavelengths required commercializing extreme laser-produced tin plasma inside vacuum chambers." },
+        { title: "Consortium Risk-Sharing", desc: "TSMC, Intel, and Samsung funded ASML's multi-billion R&D program through minority equity stakes, de-risking capital requirements." },
+        { title: "Geopolitical Bottleneck", desc: "A single supplier now manufactures 100% of the world's leading-edge lithography equipment, redefining high-tech sovereignty." }
+      ],
+      playbook: "When pursuing generational, high-risk industrial R&D, form customer-financed risk sharing consortiums that bind key buyers directly to technological milestones.",
+      replies: [
+        { tone: "Industrial", text: "EUV proves that true technological moats are forged at the atomic intersection of precision mechanical engineering and applied physics." },
+        { tone: "Economic", text: "ASML is the ultimate example of a natural industrial monopoly created not through pricing collusion, but sheer technological preeminence." }
+      ]
+    }
+  },
+
+  // Story 8: Netflix Big Data & Cloud Migration
+  {
+    id: 8,
+    tag: "BIG DATA ANALYTICS & CLOUD RESILIENCE",
+    readTime: "4.9m read",
+    title: "Netflix's $100M Double Down: The Big Data Greenlight of 'House of Cards' & 100% Cloud Migration",
+    dek: "How Reed Hastings decoupled streaming distribution from physical datacenter hardware while using predictive algorithmic analytics to dismantle Hollywood's pilot-season model.",
+    body: [
+      "In 2011, following a major database corruption event that paralyzed DVD shipments for three days, Netflix co-founder Reed Hastings took an audacious step: dismantle all company-owned server farms and migrate 100% of customer streaming to Amazon Web Services—a direct retail video competitor: <a class='k-chip' href='/categories/06' title='ISCED 0613: Distributed Software Architecture'>0613 Distributed Cloud Systems ↗</a>.",
+      "To ensure zero downtime on public cloud instances, Netflix pioneered Chaos Monkey, purposefully terminating production instances during peak hours to mandate fault-tolerant, stateless software designs: <a class='k-chip' href='/categories/06' title='ISCED 0612: Database & Network Reliability'>0612 Database Reliability &amp; Telemetry ↗</a>. This cloud resilience enabled Netflix to absorb tens of millions of concurrent global streaming sessions without buffering.",
+      "Simultaneously, Netflix analyzed viewing telemetry from 33 million subscribers, uncovering high overlapping affinity between David Fincher films and British political drama. Bypassing Hollywood's traditional $5 million pilot episode ritual, Netflix made a historic $100 million upfront commitment for two full seasons of 'House of Cards': <a class='k-chip' href='/categories/04' title='ISCED 0414: Marketing Analytics & LTV'>0414 Marketing Analytics &amp; LTV ↗</a>, transforming customer retention economics."
+    ],
+    linkedDomains: [
+      {
+        code: "ISCED 0612",
+        name: "Database and Network Design",
+        subfield: "Big Data Telemetry & Predictive Analytics",
+        relevance: "Mining continuous user telemetry, collaborative filtering, completion curve metrics, and low-latency feature stores.",
+        link: "/categories/06"
+      },
+      {
+        code: "ISCED 0613",
+        name: "Software & Systems Architecture",
+        subfield: "Chaos Engineering & Fault-Tolerant Microservices",
+        relevance: "Designing resilient distributed microservices capable of surviving spontaneous cloud node termination and region failovers.",
+        link: "/categories/06"
+      },
+      {
+        code: "ISCED 0414",
+        name: "Marketing and Advertising",
+        subfield: "Subscriber Retention & Customer Lifetime Value (LTV)",
+        relevance: "Quantifying churn mitigation, CAC payback intervals, and content amortization schedules in recurring subscription models.",
+        link: "/categories/04"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "Chaos Engineering, Telemetry-Driven Capital Commitments, Subscriber Churn Analytics, Cloud Multi-Tenancy.",
+      recommendedModule: "MapKAI Data Science & Product Analytics: Turning Telemetry into Capital Allocations.",
+      seminarPrompt: "If predictive big data models can forecast 90% of user demand, under what conditions should executive leadership overrule algorithmic recommendations?"
+    },
+    execLikes: [
+      { name: "Reed Hastings", title: "Executive Chairman @ Netflix", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" },
+      { name: "Jeff Bezos", title: "Executive Chair @ Amazon", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" },
+      { name: "Bob Iger", title: "CEO @ Disney", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+    ],
+    execLikesCount: 388,
+    metrics: { like: 1950, comment: 462, share: 640 },
+    ceoComments: [
+      {
+        name: "Reed Hastings",
+        title: "Co-Founder & Executive Chairman @ Netflix",
+        rank: "Fortune 500 #115",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80",
+        quote: "We didn't bet $100 million on creative instinct alone. The viewer telemetry demonstrated an unaddressed audience of millions who would binge-watch Fincher and political drama without blinking.",
+        likes: "3.2k",
+        time: "5h ago"
+      },
+      {
+        name: "Bob Iger",
+        title: "CEO @ The Walt Disney Company",
+        rank: "Fortune 500 #48",
+        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80",
+        quote: "Netflix's mastery of subscriber telemetry forced traditional Hollywood studios to realize that century-old theatrical release windows were no longer defensible.",
+        likes: "2.6k",
+        time: "2h ago"
+      }
+    ],
+    copilot: {
+      timeBadge: "⏱️ Saved 4.2m (~86%)",
+      tldr: "Netflix's dual transformation—migrating completely to AWS cloud while greenlighting 'House of Cards' based on subscriber telemetry—pioneered modern chaos engineering and predictive content investment.",
+      consensus: "93%",
+      takeaways: [
+        { title: "Embracing Cloud Specialization", desc: "Shutting internal datacenters freed thousands of engineers to focus exclusively on recommendation algorithms and user interfaces." },
+        { title: "Chaos Monkey Architecture", desc: "Engineering for inevitable hardware failure created a fault-tolerant microservices standard adopted worldwide." },
+        { title: "Direct-to-Series Economics", desc: "Replacing speculative pilot seasons with data-backed multi-season commitments maximized subscriber retention while amortizing capital costs." }
+      ],
+      playbook: "Transition internal IT teams from maintaining generic physical infrastructure to generating proprietary customer data insights that inform high-value capital commitments.",
+      replies: [
+        { tone: "Architectural", text: "The decision to run an entire entertainment business on your chief competitor's cloud infrastructure was one of the boldest decoupling strategies in corporate history." },
+        { tone: "Data-Driven", text: "House of Cards proved that granular subscriber telemetry delivers far higher capital allocation accuracy than creative studio guesswork." }
+      ]
+    }
+  },
+
+  // Story 9: Tesla Production Hell
+  {
+    id: 9,
+    tag: "MANUFACTURING & LIQUIDITY MANAGEMENT",
+    readTime: "5.4m read",
+    title: "Tesla's 'Production Hell': The Hard Limits of Automation and the Battery Gigafactory Pivot",
+    dek: "How Tesla survived weeks from insolvency by recognizing the engineering boundaries between robotic automation and human dexterity on high-throughput assembly lines.",
+    body: [
+      "In late 2017, Tesla's target of manufacturing 5,000 Model 3 sedans per week collided with mechanical realities. Elon Musk's vision of an 'alien dreadnought'—a factory where robotic arms assembled electric cars at superhuman speeds without human operators—devolved into catastrophic assembly bottlenecks: <a class='k-chip' href='/categories/07' title='ISCED 0716: Automotive Manufacturing'>0716 Motor Vehicles &amp; Manufacturing ↗</a>.",
+      "High-speed robotic manipulators failed constantly when threading flexible wiring harnesses, seating rubber weather seals, and aligning complex interior panels—tasks human assemblers accomplish intuitively: <a class='k-chip' href='/categories/07' title='ISCED 0714: Robotics & Automation Kinematics'>0714 Automation &amp; Industrial Robotics ↗</a>. Musk famously conceded on Twitter: 'Yes, excessive automation at Tesla was a mistake. To be precise, my mistake. Humans are underrated.'",
+      "Burning over $1 billion per quarter with cash reserves dwindling to weeks of runway, Tesla drastically simplified production, constructed an open-air tent assembly line (GA4) in Fremont to bypass broken automated conveyors, and accelerated battery pack production with Panasonic at the Nevada Gigafactory: <a class='k-chip' href='/categories/04' title='ISCED 0412: Working Capital & Liquidity Management'>0412 Working Capital &amp; Cash Flow ↗</a>."
+    ],
+    linkedDomains: [
+      {
+        code: "ISCED 0716",
+        name: "Motor Vehicles, Ships and Aircraft",
+        subfield: "High-Throughput Automotive Assembly Lines",
+        relevance: "Body-in-white stamping, structural battery pack integration, cycle time bottlenecks, and quality variance control.",
+        link: "/categories/07"
+      },
+      {
+        code: "ISCED 0714",
+        name: "Electronics and Automation",
+        subfield: "Robotics Kinematics & Tactile Automation Limits",
+        relevance: "Distinguishing rigid-body robotic handling from deformable object manipulation (rubber gaskets, wire harnesses).",
+        link: "/categories/07"
+      },
+      {
+        code: "ISCED 0412",
+        name: "Finance, Banking and Insurance",
+        subfield: "Working Capital, Cash Runway & Distress Financing",
+        relevance: "Managing Days Sales of Inventory (DSI), inventory carrying costs, supplier payment terms, and avoiding debt covenant breaches.",
+        link: "/categories/04"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "Automation Overkill, Deformable Object Kinematics, Cash Burn Runway, Bottleneck Theory (Theory of Constraints).",
+      recommendedModule: "MapKAI Industrial Operations: Manufacturing Throughput & Working Capital Turnaround.",
+      seminarPrompt: "How does an operational executive identify when robotic capital expenditure crosses the threshold into negative marginal returns on an assembly line?"
+    },
+    execLikes: [
+      { name: "Elon Musk", title: "CEO @ Tesla", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
+      { name: "Mary Barra", title: "CEO @ General Motors", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80" },
+      { name: "Jim Farley", title: "CEO @ Ford Motor", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" }
+    ],
+    execLikesCount: 465,
+    metrics: { like: 2420, comment: 590, share: 810 },
+    ceoComments: [
+      {
+        name: "Elon Musk",
+        title: "Technoking & CEO @ Tesla",
+        rank: "Fortune 500 #50",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
+        quote: "We put crazy robotic automation everywhere—conveyor networks inside conveyor networks. We had to take a sledgehammer and rip half of it out to let human workers build the car.",
+        likes: "4.8k",
+        time: "7h ago"
+      },
+      {
+        name: "Mary Barra",
+        title: "Chair & CEO @ General Motors",
+        rank: "Fortune 500 #21",
+        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80",
+        quote: "Automotive assembly is a brutal physical discipline. Automating for the sake of novelty without respecting tactile ergonomics and tolerance stack-ups will paralyze any factory.",
+        likes: "3.5k",
+        time: "4h ago"
+      }
+    ],
+    copilot: {
+      timeBadge: "⏱️ Saved 4.6m (~87%)",
+      tldr: "Tesla's Model 3 'Production Hell' highlights the operational risks of premature over-automation, proving that rigid industrial robotics cannot easily match human sensory adaptation in deformable assembly tasks.",
+      consensus: "95%",
+      takeaways: [
+        { title: "The Deformable Parts Trap", desc: "Automating rigid steel stamping is solved; handling flexible hoses, seals, and wires with robotic grippers causes catastrophic downtime." },
+        { title: "Pragmatic Improvisation", desc: "Erecting an outdoor tent line (GA4) in days bypassed hundreds of millions in stalled automation, restoring factory cash flow." },
+        { title: "Vertical Battery Co-Location", desc: "Partnering with Panasonic inside the Gigafactory compressed battery transport lead times from weeks to minutes." }
+      ],
+      playbook: "When designing high-throughput operations, automate only standardized, rigid steps; deploy human workers where flexible dexterity and visual inspection prevent assembly stalls.",
+      replies: [
+        { tone: "Operational", text: "Musk's willingness to publicly admit that 'humans are underrated' and scrap broken robots saved Tesla from chapter 11." },
+        { tone: "Manufacturing", text: "True lean manufacturing is not about maximizing robot headcount—it is about minimizing takt time variance and bottlenecks." }
+      ]
+    }
+  },
+
+  // Story 10: Amazon AWS Cloud Utility
+  {
+    id: 10,
+    tag: "ENTERPRISE PLATFORMS & FINANCIAL ACCOUNTING",
+    readTime: "5.0m read",
+    title: "Amazon AWS: Turning an Internal IT Cost Center into a $100 Billion Cloud Utility",
+    dek: "How Andy Jassy and Jeff Bezos commercialized standardized compute primitives, fundamentally converting global tech financing from upfront CapEx to variable OpEx.",
+    body: [
+      "In 2003 at an executive retreat, Amazon leadership examined an internal bottleneck: every retail engineering group was wasting up to three months reinventing basic storage backends and database plumbing before building customer-facing features: <a class='k-chip' href='/categories/04' title='ISCED 0413: Strategic Capability Monetization'>0413 Strategic Process Architecture ↗</a>.",
+      "Andy Jassy led a stealth team to isolate fundamental primitives—storage (S3), compute (EC2), and message queues (SQS)—wrapping hardware virtualization in clean REST APIs: <a class='k-chip' href='/categories/06' title='ISCED 0612: Cloud Systems & Virtualization'>0612 Cloud Systems &amp; Virtualization ↗</a>. In March 2006, Simple Storage Service (S3) launched at $0.15 per gigabyte per month.",
+      "The true economic inflection was financial: AWS completely transformed technology accounting. Startups and enterprises no longer needed to budget millions in upfront capital expenditures (CapEx) for physical servers; compute became a variable operating expense (OpEx) paid by the minute on a corporate credit card: <a class='k-chip' href='/categories/04' title='ISCED 0412: CapEx to OpEx Accounting'>0412 Financial Accounting &amp; Pricing Models ↗</a>."
+    ],
+    linkedDomains: [
+      {
+        code: "ISCED 0612",
+        name: "Database and Network Design",
+        subfield: "Multi-Tenant Cloud Virtualization & Distributed Primitives",
+        relevance: "Hardware hypervisors, distributed block storage replication, multi-tenant isolation, and elastic load balancing.",
+        link: "/categories/06"
+      },
+      {
+        code: "ISCED 0412",
+        name: "Finance, Banking and Insurance",
+        subfield: "CapEx to OpEx Shift & Marginal Infrastructure Pricing",
+        relevance: "Accounting treatment of leased cloud capacity versus capitalized hardware asset depreciation on corporate balance sheets.",
+        link: "/categories/04"
+      },
+      {
+        code: "ISCED 0413",
+        name: "Management and Administration",
+        subfield: "Platform Modularization & Internal Capability Monetization",
+        relevance: "Decoupling organizational capability into external two-sided API platforms and managing developer ecosystem flywheel dynamics.",
+        link: "/categories/04"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "Two-Sided Platform Economics, Infrastructure as a Service (IaaS), CapEx vs OpEx Financial Modeling, API Primitives.",
+      recommendedModule: "MapKAI Executive Platform Strategy: Transforming Enterprise Cost Centers into Profit Engines.",
+      seminarPrompt: "If cloud computing shifts fixed infrastructure depreciation into variable operating cash outflows, how does this alter a firm's operational leverage and enterprise valuation multiples?"
+    },
+    execLikes: [
+      { name: "Andy Jassy", title: "CEO @ Amazon", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" },
+      { name: "Jeff Bezos", title: "Executive Chair @ Amazon", avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&q=80" },
+      { name: "Larry Ellison", title: "CTO @ Oracle", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" }
+    ],
+    execLikesCount: 512,
+    metrics: { like: 2680, comment: 630, share: 890 },
+    ceoComments: [
+      {
+        name: "Andy Jassy",
+        title: "President & CEO @ Amazon",
+        rank: "Fortune 500 #2",
+        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80",
+        quote: "We realized every engineering team was doing the undifferentiated heavy lifting of infrastructure. By providing reliable primitives, we let developers focus entirely on their customer value.",
+        likes: "4.3k",
+        time: "8h ago"
+      },
+      {
+        name: "Larry Ellison",
+        title: "Chairman & CTO @ Oracle",
+        rank: "Fortune 500 #82",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
+        quote: "We initially scoffed at AWS as a toy for cash-poor startups. By the time Fortune 500 banks began migrating mission-critical workloads, Amazon had established a seven-year head start.",
+        likes: "3.6k",
+        time: "5h ago"
+      }
+    ],
+    copilot: {
+      timeBadge: "⏱️ Saved 4.4m (~88%)",
+      tldr: "AWS transformed corporate computing by turning internal IT infrastructure into modular, pay-as-you-go primitives, pioneering cloud multi-tenancy and shifting global IT expenditures from CapEx to OpEx.",
+      consensus: "97%",
+      takeaways: [
+        { title: "Primitive-Based Architecture", desc: "Rather than building complex bespoke applications, offering raw storage, compute, and queuing primitives fostered universal developer adoption." },
+        { title: "Financial Model Disruption", desc: "Eliminating multi-million-dollar upfront hardware leases lowered the capital barrier to launch enterprise-grade software to zero." },
+        { title: "Monetizing Internal Tooling", desc: "Converting an internal cost center into an external utility created the primary profit engine of a trillion-dollar conglomerate." }
+      ],
+      playbook: "Identify internal shared services and operational infrastructure within your firm that could be standardized into external APIs or service units.",
+      replies: [
+        { tone: "Financial", text: "The CapEx to OpEx transition unlocked an entire generation of software startups that could scale to billions without owning a single server rack." },
+        { tone: "Strategic", text: "AWS is the gold standard for platform strategy: package your hardest internal operational challenges into external developer primitives." }
+      ]
+    }
+  },
+
+  // Story 11: Novo Nordisk GLP-1 Revolution
+  {
+    id: 11,
+    tag: "PHARMACEUTICAL BIOLOGY & HEALTH ECONOMICS",
+    readTime: "5.5m read",
+    title: "Novo Nordisk & Eli Lilly: The GLP-1 Metabolic Revolution & Macro Healthcare Economics",
+    dek: "How two pharmaceutical giants scaled peptide chemistry into the largest drug class in history, reshaping corporate market capitalizations and sovereign health budgets.",
+    body: [
+      "In 2021, the US FDA approved semaglutide for chronic weight management under the brand name Wegovy. Developed by Denmark's Novo Nordisk under CEO Lars Fruergaard Jørgensen, the therapeutic peptide mimicked native glucagon-like peptide-1 (GLP-1), stimulating insulin secretion while delaying gastric emptying and signaling satiety directly to the brain: <a class='k-chip' href='/categories/09' title='ISCED 0916: Peptide Drug Formulation'>0916 Pharmaceutical Chemistry ↗</a>.",
+      "Landmark clinical trials like SELECT confirmed not only 15% to 20% weight loss, but a 20% reduction in major adverse cardiovascular events (stroke and myocardial infarction): <a class='k-chip' href='/categories/09' title='ISCED 0912: Clinical Medicine & Cardiology'>0912 Clinical Medicine &amp; Epidemiology ↗</a>. The unprecedented global demand prompted Novo Nordisk's controlling foundation to execute a $16.5 billion acquisition of sterile fill-finish manufacturer Catalent.",
+      "Economically, the GLP-1 wave triggered ripples across the Fortune 500: Walmart reported shifts in grocery shopping baskets, airlines modeled fuel savings from lighter passenger weights, while sovereign healthcare payers grappled with the fiscal solvency of covering lifelong $1,000-per-month treatments: <a class='k-chip' href='/categories/03' title='ISCED 0311: Macro Health Economics'>0311 Health Economics &amp; Fiscal Policy ↗</a>."
+    ],
+    linkedDomains: [
+      {
+        code: "ISCED 0916",
+        name: "Pharmacy and Pharmacology",
+        subfield: "Peptide Synthesis & Sterile Fill-Finish Manufacturing",
+        relevance: "Recombinant DNA peptide expression, lipid acylation for half-life extension, and aseptic autoinjector cartridge filling lines.",
+        link: "/categories/09"
+      },
+      {
+        code: "ISCED 0912",
+        name: "Clinical Medicine and Surgery",
+        subfield: "Metabolic Endocrinology & Cardiovascular Risk",
+        relevance: "Neuro-endocrine signaling pathways, visceral adipose reduction, and clinical endpoint trials (MACE-3).",
+        link: "/categories/09"
+      },
+      {
+        code: "ISCED 0311",
+        name: "Economics and Econometrics",
+        subfield: "Health Economics, Payer Solvency & Macro Productivity",
+        relevance: "Quality-Adjusted Life Years (QALY), lifetime chronic disease medical cost offsets, and consumer packaged goods consumption elasticity.",
+        link: "/categories/03"
+      }
+    ],
+    learningRoadmap: {
+      coreConcepts: "GLP-1 Receptor Agonists, Sterile Fill-Finish Supply Chains, QALY Cost-Effectiveness, Consumer Calorie Elasticity.",
+      recommendedModule: "MapKAI Life Sciences & Healthcare Strategy: Commercializing Blockbuster Biologics.",
+      seminarPrompt: "If a chronic medication reduces national cardiovascular mortality by 20% but consumes 15% of total public healthcare budgets at current pricing, how should governments and insurers negotiate value-based reimbursement?"
+    },
+    execLikes: [
+      { name: "Lars Fruergaard Jørgensen", title: "CEO @ Novo Nordisk", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
+      { name: "David Ricks", title: "CEO @ Eli Lilly", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" },
+      { name: "Albert Bourla", title: "CEO @ Pfizer", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80" }
+    ],
+    execLikesCount: 478,
+    metrics: { like: 2310, comment: 540, share: 720 },
+    ceoComments: [
+      {
+        name: "Lars Fruergaard Jørgensen",
+        title: "President & CEO @ Novo Nordisk",
+        rank: "Europe's Most Valuable Firm",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
+        quote: "We spent 30 years researching diabetes biology before unlocking obesity. This is not cosmetic; it is an intervention in the biological root cause of chronic metabolic disease.",
+        likes: "4.5k",
+        time: "6h ago"
+      },
+      {
+        name: "David Ricks",
+        title: "Chair & CEO @ Eli Lilly",
+        rank: "Fortune 500 #127",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80",
+        quote: "GLP-1 and dual GIP agonists represent the largest drug class in pharmaceutical history. Expanding sterile injectable manufacturing capacity is the defining capital challenge.",
+        likes: "3.8k",
+        time: "3h ago"
+      }
+    ],
+    copilot: {
+      timeBadge: "⏱️ Saved 4.9m (~89%)",
+      tldr: "Novo Nordisk and Eli Lilly transformed peptide biotechnology into a half-trillion-dollar pharmaceutical industry, proving that addressing biological satiety pathways dramatically reduces cardiovascular disease while disrupting global food and healthcare economics.",
+      consensus: "95%",
+      takeaways: [
+        { title: "Peptide Engineering Breakthrough", desc: "Chemical acylation with fatty acid side chains extended native GLP-1's half-life from two minutes to one week." },
+        { title: "Sterile Fill-Finish Bottleneck", desc: "The critical manufacturing constraint is not active pharmaceutical ingredient (API) synthesis, but sterile cartridge injection assembly." },
+        { title: "Macroeconomic Cross-Impact", desc: "Reduced caloric intake affects food retail, aviation fuel consumption, and insurance actuarial tables across the economy." }
+      ],
+      playbook: "Assess how biological interventions in chronic human health and longevity will alter consumer behavior, insurance underwriting, and workforce productivity in your sector.",
+      replies: [
+        { tone: "Biopharmaceutical", text: "GLP-1 proves that breakthrough commercial success comes from decades of persistent basic biological science before market realization." },
+        { tone: "Macroeconomic", text: "The ripple effects on consumer packaged goods and healthcare budget solvency make GLP-1 a macro phenomenon, not just a pharmaceutical drug." }
+      ]
+    }
   }
 ];
 
@@ -620,9 +1124,9 @@ const categoriesData = [
       { name: "Jensen Huang", title: "NVIDIA CEO", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" },
       { name: "Lisa Su", title: "AMD CEO", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80" }
     ],
-    topHeadline: "Factory Deployment of Bipedal Robots Accelerates Across Tier-1 Assembly",
-    topStoryId: 1,
-    executiveTakeaway: "Sim-to-real transfer models allow robotics hardware to train in virtual factories before physical landing."
+    topHeadline: "Tesla's 'Production Hell': The Hard Limits of Automation on Assembly Lines",
+    topStoryId: 9,
+    executiveTakeaway: "Excessive robotics on flexible components paralyzed factory lines; Tesla's turnaround proved human dexterity remains essential."
   }
 ];
 
@@ -667,6 +1171,46 @@ const overviewKnowledgeDomains = [
     connections: 74,
     link: "/categories/07",
     focus: "SMR nuclear power, megawatt datacenter grids, baseload cooling"
+  },
+  {
+    code: "ISCED 0533",
+    name: "Applied Physics & Optics",
+    subfield: "Laser Plasma, Extreme Ultraviolet & Thermodynamics",
+    connections: 62,
+    link: "/categories/05",
+    focus: "EUV photolithography, sub-nanometer mirrors, datacenter Carnot cooling"
+  },
+  {
+    code: "ISCED 0716",
+    name: "Motor Vehicles & Manufacturing",
+    subfield: "High-Throughput Automotive & Industrial Assembly",
+    connections: 58,
+    link: "/categories/07",
+    focus: "Factory automation limits, structural battery packs, cycle-time bottlenecks"
+  },
+  {
+    code: "ISCED 0612",
+    name: "Cloud & Network Infrastructure",
+    subfield: "Distributed Virtualization & High-Throughput Fabrics",
+    connections: 88,
+    link: "/categories/06",
+    focus: "InfiniBand clusters, Chaos Monkey fault-tolerance, multi-tenant IaaS"
+  },
+  {
+    code: "ISCED 0916",
+    name: "Pharmacy & Biotechnology",
+    subfield: "Peptide Synthesis & Sterile Biologics Formulation",
+    connections: 45,
+    link: "/categories/09",
+    focus: "GLP-1 receptor agonists, aseptic fill-finish lines, recombinant expression"
+  },
+  {
+    code: "ISCED 0311",
+    name: "Macroeconomics & Health Policy",
+    subfield: "Factor Substitution & Healthcare Solvency",
+    connections: 52,
+    link: "/categories/03",
+    focus: "Capital-labor substitution, QALY cost-effectiveness, consumer calorie shifts"
   }
 ];
 
