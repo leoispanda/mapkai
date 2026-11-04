@@ -1952,6 +1952,7 @@ body[data-mapkai-page="showcase"] {
   margin-bottom: 4px;
 }
 
+.overview-sub-name,
 .overview-zh-name {
   font-size: 0.72rem;
   color: var(--fd-muted);

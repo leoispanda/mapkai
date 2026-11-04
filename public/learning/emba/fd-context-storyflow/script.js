@@ -17,21 +17,21 @@ const storiesData = [
       {
         code: "ISCED 0413",
         name: "Management and Administration",
-        nameZh: "管理与组织流程重构",
+        subfield: "Organizational Process Restructuring",
         relevance: "Firms require organizational redesign, KPI restructuring, and managerial process re-engineering rather than superficial chatbot adoption.",
         link: "/categories/04"
       },
       {
         code: "ISCED 0412",
         name: "Finance, Banking and Insurance",
-        nameZh: "公司金融与投资评估",
+        subfield: "Corporate Finance & Capital Evaluation",
         relevance: "Evaluating capital expenditures (CapEx), return on invested capital (ROIC), and opportunity cost of delayed technology modernization.",
         link: "/categories/04"
       },
       {
         code: "ISCED 0613",
         name: "Software & Applications Development",
-        nameZh: "软件工程与应用开发",
+        subfield: "Systems Architecture & Scalability",
         relevance: "Building multi-agent deterministic pipelines with permissioned internal database read/write access.",
         link: "/categories/06"
       }
@@ -109,21 +109,21 @@ const storiesData = [
       {
         code: "ISCED 0714",
         name: "Electronics and Automation",
-        nameZh: "电子工程、半导体与自动化",
+        subfield: "Semiconductor Packaging & Robotics",
         relevance: "Hardware architecture shifts from scalar CPUs to tensor cores, high-bandwidth memory (HBM), and heterogeneous supercomputers.",
         link: "/categories/07"
       },
       {
         code: "ISCED 0611",
         name: "Computer Science & AI Simulation",
-        nameZh: "计算机仿真与物理模拟",
+        subfield: "Digital Twin & Physics Simulation",
         relevance: "Physics-informed neural networks and Omniverse synthetic data generation for industrial robotics.",
         link: "/categories/06"
       },
       {
         code: "ISCED 0713",
         name: "Electricity and Energy",
-        nameZh: "电力与能源系统工程",
+        subfield: "Datacenter Power Systems & Efficiency",
         relevance: "Megawatt-per-rack power constraints, liquid cooling thermal cycles, and sub-station co-location.",
         link: "/categories/07"
       }
@@ -191,21 +191,21 @@ const storiesData = [
       {
         code: "ISCED 0613",
         name: "Software & System Security",
-        nameZh: "系统安全与端侧智能架构",
+        subfield: "Cryptographic Attestation & On-Device ML",
         relevance: "Zero-knowledge proof, client-side quantization, and ephemeral enclave execution.",
         link: "/categories/06"
       },
       {
         code: "ISCED 0612",
         name: "Distributed Network Design",
-        nameZh: "分布式网络与云端调度",
+        subfield: "Private Cloud Compute & Cloud Scheduling",
         relevance: "Verifiable server image attestation, stateless container orchestration, and low-latency packet routing.",
         link: "/categories/06"
       },
       {
         code: "ISCED 0421",
         name: "Law and Data Governance",
-        nameZh: "数据合规、隐私法与主权治理",
+        subfield: "Regulatory Compliance & Sovereignty",
         relevance: "Satisfying GDPR, HIPAA, and cross-border data transfer compliance without sacrificing AI intelligence.",
         link: "/categories/04"
       }
@@ -264,21 +264,21 @@ const storiesData = [
       {
         code: "ISCED 0612",
         name: "Database & System Architecture",
-        nameZh: "数据库与事务控制架构",
+        subfield: "Transactional Database Architecture",
         relevance: "ACID transactions, idempotency guards, and state machine consistency during autonomous agent actions.",
         link: "/categories/06"
       },
       {
         code: "ISCED 0413",
         name: "Management & Workforce Strategy",
-        nameZh: "人力资源组织与数字劳动协作",
+        subfield: "Workforce Strategy & Digital Labor",
         relevance: "Redesigning staffing models, employee-to-agent supervision ratios, and frontline tier-1 support roles.",
         link: "/categories/04"
       },
       {
         code: "ISCED 0414",
         name: "Marketing & Customer Lifecycle",
-        nameZh: "营销工程与客户生命周期",
+        subfield: "CRM Automation & Lifecycle Marketing",
         relevance: "Automating lead scoring, real-time ticket escalation, and hyper-personalized customer journey nurturing.",
         link: "/categories/04"
       }
@@ -336,21 +336,21 @@ const storiesData = [
       {
         code: "ISCED 0713",
         name: "Electricity and Energy Engineering",
-        nameZh: "电力工程、核能与电网系统",
+        subfield: "Nuclear SMRs & Power Grid Engineering",
         relevance: "High-voltage transmission interconnection queues, baseload capacity factors, and SMR small modular nuclear reactor thermodynamics.",
         link: "/categories/07"
       },
       {
         code: "ISCED 0714",
         name: "Electronics & High-Density Power",
-        nameZh: "电力电子与高压配电",
+        subfield: "High-Voltage Distribution & Power Electronics",
         relevance: "Megawatt-per-row power distribution units (PDUs), 48V to 1V step-down conversion on motherboards, and direct-to-chip liquid cooling.",
         link: "/categories/07"
       },
       {
         code: "ISCED 0533",
         name: "Applied Physics & Thermodynamics",
-        nameZh: "应用物理学与热力学极限",
+        subfield: "Thermodynamics & Heat Dissipation Limits",
         relevance: "Carnot efficiency of datacenter cooling, heat rejection density, and nuclear reactor containment physics.",
         link: "/categories/05"
       }
@@ -418,21 +418,21 @@ const storiesData = [
       {
         code: "ISCED 0412",
         name: "Finance, Banking & Capital Markets",
-        nameZh: "公司金融与资本成本评估",
+        subfield: "WACC, ROIC & Discounted Cash Flows",
         relevance: "Weighted average cost of capital (WACC), discounted cash flow (DCF) under high technological obsolescence, and return on invested capital (ROIC).",
         link: "/categories/04"
       },
       {
         code: "ISCED 0411",
         name: "Accounting and Taxation",
-        nameZh: "财务会计与资产折旧摊销",
+        subfield: "Depreciation Schedules & CapEx Accounting",
         relevance: "Accelerated depreciation schedules for 3-year GPU lifecycles and capitalized R&D software asset recognition under GAAP/IFRS.",
         link: "/categories/04"
       },
       {
         code: "ISCED 0311",
         name: "Macroeconomics and Labor Markets",
-        nameZh: "宏观经济学与要素替代生产函数",
+        subfield: "Production Functions & Capital-Labor Substitution",
         relevance: "Cobb-Douglas production functions, capital-labor elasticity of substitution, and macro total factor productivity (TFP).",
         link: "/categories/03"
       }
@@ -493,7 +493,7 @@ const categoriesData = [
     id: "cat-ai",
     filterGroup: "tech",
     name: "Generative AI & Core Models",
-    nameZh: "生成式 AI 与大模型基建",
+    subtitle: "Hyperscale Compute, LLMs & Training Clusters",
     icon: "💻",
     count: 142,
     percentage: 28.5,
@@ -513,7 +513,7 @@ const categoriesData = [
     id: "cat-chips",
     filterGroup: "tech",
     name: "Semiconductors & Compute",
-    nameZh: "半导体、算力硬件与物理 AI",
+    subtitle: "Accelerators, Silicon Packaging & Physical AI",
     icon: "⚡",
     count: 98,
     percentage: 19.6,
@@ -533,7 +533,7 @@ const categoriesData = [
     id: "cat-saas",
     filterGroup: "enterprise",
     name: "Enterprise Software & Digital Labor",
-    nameZh: "企业级软件与数字劳动力",
+    subtitle: "Agentic Workflows, SaaS Copilots & Enterprise Systems",
     icon: "☁️",
     count: 76,
     percentage: 15.2,
@@ -552,7 +552,7 @@ const categoriesData = [
     id: "cat-consumer",
     filterGroup: "tech",
     name: "Consumer Platforms & Edge Devices",
-    nameZh: "消费电子平台与端侧智能",
+    subtitle: "Edge Inference, Neural Engines & Privacy Architecture",
     icon: "📱",
     count: 64,
     percentage: 12.8,
@@ -571,7 +571,7 @@ const categoriesData = [
     id: "cat-energy",
     filterGroup: "hot",
     name: "Energy, Nuclear & Datacenter Utilities",
-    nameZh: "能源电力、核能与数据中心公用事业",
+    subtitle: "Clean Energy, SMR Reactors & Datacenter Utilities",
     icon: "🔋",
     count: 48,
     percentage: 9.6,
@@ -590,7 +590,7 @@ const categoriesData = [
     id: "cat-finance",
     filterGroup: "enterprise",
     name: "Capital Markets & Tech M&A",
-    nameZh: "资本市场、科技并购与估值",
+    subtitle: "Tech M&A, VC Allocations & CapEx Depreciation",
     icon: "🏦",
     count: 42,
     percentage: 8.4,
@@ -609,7 +609,7 @@ const categoriesData = [
     id: "cat-robotics",
     filterGroup: "tech",
     name: "Industrial Robotics & Automation",
-    nameZh: "实体工业自动化与人形机器人",
+    subtitle: "Industrial Automation, Actuators & Physical Embodiment",
     icon: "🤖",
     count: 29,
     percentage: 5.8,
@@ -631,7 +631,7 @@ const overviewKnowledgeDomains = [
   {
     code: "ISCED 0613",
     name: "Software & Applications",
-    nameZh: "软件开发与应用系统",
+    subfield: "Applied Software Systems & Agentic Frameworks",
     connections: 184,
     link: "/categories/06",
     focus: "Multi-agent pipelines, database transactions, API security"
@@ -639,7 +639,7 @@ const overviewKnowledgeDomains = [
   {
     code: "ISCED 0413",
     name: "Management & Strategy",
-    nameZh: "管理战略与组织流程",
+    subfield: "Strategic Leadership & Process Architecture",
     connections: 156,
     link: "/categories/04",
     focus: "Workflow re-engineering, digital labor management, KPI redesign"
@@ -647,7 +647,7 @@ const overviewKnowledgeDomains = [
   {
     code: "ISCED 0714",
     name: "Electronics & Automation",
-    nameZh: "电子工程与半导体自动化",
+    subfield: "Semiconductor Silicon & Industrial Robotics",
     connections: 128,
     link: "/categories/07",
     focus: "GPU architectures, high-bandwidth memory, robotics kinematics"
@@ -655,7 +655,7 @@ const overviewKnowledgeDomains = [
   {
     code: "ISCED 0412",
     name: "Finance, Banking & Capital",
-    nameZh: "金融、银行与资本运作",
+    subfield: "Capital Markets, Valuation & Corporate Finance",
     connections: 98,
     link: "/categories/04",
     focus: "WACC, ROIC hurdle rates, infrastructure leasebacks, debt financing"
@@ -663,7 +663,7 @@ const overviewKnowledgeDomains = [
   {
     code: "ISCED 0713",
     name: "Electricity & Energy Systems",
-    nameZh: "电力工程与能源系统",
+    subfield: "Nuclear SMRs, Grid Infrastructure & Power Grids",
     connections: 74,
     link: "/categories/07",
     focus: "SMR nuclear power, megawatt datacenter grids, baseload cooling"
@@ -753,7 +753,7 @@ function renderDashboard() {
         <div>
           <span class="overview-code-tag">${d.code}</span>
           <div class="overview-domain-name">${d.name}</div>
-          <div class="overview-zh-name">${d.nameZh}</div>
+          <div class="overview-sub-name">${d.subfield}</div>
           <div class="overview-count-pill">🔗 ${d.connections} News Connections</div>
           <p style="font-size:0.72rem; color:var(--fd-muted); line-height:1.4; margin-bottom:12px;">${d.focus}</p>
         </div>
@@ -807,7 +807,7 @@ function renderCategoryCards(filter) {
             <div class="cat-icon-box">${c.icon}</div>
             <div class="cat-title-text">
               <strong>${c.name}</strong>
-              <span>${c.nameZh}</span>
+              <span>${c.subtitle}</span>
             </div>
           </div>
           <div class="cat-badge-wrap">
@@ -900,7 +900,7 @@ function renderStory(index) {
         <div class="domain-card-left">
           <span class="domain-code-badge">${d.code}</span>
           <div class="domain-text-block">
-            <strong>${d.name} <small style="color:var(--fd-muted); font-weight:normal;">(${d.nameZh})</small></strong>
+            <strong>${d.name} <small style="color:var(--fd-muted); font-weight:normal;">· ${d.subfield}</small></strong>
             <span>${d.relevance}</span>
           </div>
         </div>
