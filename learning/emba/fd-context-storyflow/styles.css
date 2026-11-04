@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MapKAI FD Context + LinkedIn Copilot Workspace
+   MapKAI FD Academy + Executive Decision Science & Knowledge Architecture
    Design Philosophy: Warm editorial paper, restrained typography, crisp layout
    ========================================================================== */
 
@@ -35,6 +35,96 @@ body[data-mapkai-page="showcase"] {
   font-family: var(--fd-sans);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   FD Academy Premier Slogan Bar (Topmost Executive Creed)
+   ========================================================================== */
+
+.fd-academy-slogan-bar {
+  background: #1a1917;
+  color: #f7f4ed;
+  border-bottom: 1px solid rgba(217, 83, 40, 0.45);
+  padding: 8px 24px;
+  font-size: 0.85rem;
+  position: relative;
+  z-index: 60;
+}
+
+.slogan-bar-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.slogan-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--fd-orange);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.slogan-crest {
+  font-size: 0.95rem;
+}
+
+.slogan-sep {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.slogan-label {
+  color: #a3a199;
+  font-weight: 600;
+}
+
+.slogan-quote-block {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.slogan-quote {
+  font-family: var(--fd-serif);
+  font-size: 0.96rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #f7f4ed;
+  letter-spacing: 0.02em;
+}
+
+.slogan-cohort-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #f0ede4;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .slogan-bar-inner {
+    justify-content: center;
+    text-align: center;
+  }
+  .slogan-cohort-tag {
+    display: none;
+  }
 }
 
 /* ==========================================================================
@@ -1032,6 +1122,26 @@ body[data-mapkai-page="showcase"] {
   letter-spacing: 0.12em;
   color: var(--fd-orange);
   margin-bottom: 6px;
+}
+
+.hero-creed-callout {
+  display: inline-block;
+  border-left: 3px solid var(--fd-orange);
+  padding: 4px 0 4px 14px;
+  font-family: var(--fd-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--fd-orange-dark);
+  margin: 4px 0 10px 0;
+  letter-spacing: 0.01em;
+}
+
+.hero-creed-callout .creed-mark {
+  color: var(--fd-orange);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 2px;
 }
 
 .hero-title {

@@ -1,4 +1,4 @@
-// MapKAI FD Context + LinkedIn Copilot & Knowledge Learning Data
+// MapKAI FD Academy + Executive Decision Science & Knowledge Architecture
 
 const peopleLibrary = Object.freeze({
   "Jensen Huang": {
@@ -86,7 +86,7 @@ const peopleLibrary = Object.freeze({
     sourceUrl: "https://commons.wikimedia.org/wiki/File:2018_Bob_Iger_(cropped).jpg"
   },
   "C.C. Wei": {
-    fileName: "10.27 總統出席「第9屆工業技術研究院院士授證典禮」 (50536154856) (cropped).jpg",
+    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/10.27_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C%E7%AC%AC9%E5%B1%86%E5%B7%A5%E6%A5%AD%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E9%99%A2%E9%99%A2%E5%A3%AB%E6%8E%88%E8%AD%89%E5%85%B8%E7%A6%AE%E3%80%8D_(50536154856)_(cropped).jpg?width=250",
     credit: "Office of the President, Taiwan · photo by Wang Yu Ching",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
@@ -1412,7 +1412,7 @@ const masterclassesData = [
     title: "Navigating the $50B AI CapEx Hurdle: Capital Allocation & WACC in the Age of Autonomous AI",
     domainCode: "ISCED 0412",
     domainName: "Corporate Finance & Valuation",
-    academicHost: "FD Institute of Advanced Finance",
+    academicHost: "FD Academy Institute of Advanced Finance",
     enterpriseHost: "Goldman Sachs Global Investment Research",
     date: "November 18, 2026 · 17:00 CET / 11:00 EST",
     faculty: "Prof. Erik Brynjolfsson (Stanford) & David Solomon (Goldman Sachs Keynote)",
@@ -1432,7 +1432,7 @@ const masterclassesData = [
     title: "Gigawatt Datacenters & Nuclear SMRs: Energy Transition Realities for Hyperscale AI",
     domainCode: "ISCED 0713",
     domainName: "Electricity & Energy Engineering",
-    academicHost: "FD Energy Transition Center",
+    academicHost: "FD Academy Energy Transition Center",
     enterpriseHost: "Amazon AWS Energy Systems Group",
     date: "December 2, 2026 · 16:00 CET / 10:00 EST",
     faculty: "Andy Jassy (Amazon Keynote Dialogue) & Dr. Kathryn Huff (Advanced Reactor Systems)",
@@ -1452,7 +1452,7 @@ const masterclassesData = [
     title: "The Semiconductor Supply Chain Fortress: ASML EUV Optics, TSMC Packaging & Sovereign Fabs",
     domainCode: "ISCED 0714",
     domainName: "Electronics & Nanotechnology",
-    academicHost: "FD High-Tech Innovation Center",
+    academicHost: "FD Academy High-Tech Innovation Center",
     enterpriseHost: "European Semiconductor Industry Forum",
     date: "December 12, 2026 · 15:00 CET",
     faculty: "Peter Wennink (ASML Advisory) & Dr. C.C. Wei (TSMC Fellow)",
@@ -1472,7 +1472,7 @@ const masterclassesData = [
     title: "The Autonomous Enterprise: Digital Labor Governance, ACID Transactions & Human Supervision",
     domainCode: "ISCED 0612",
     domainName: "Database Systems & Organizational Strategy",
-    academicHost: "FD Institute for Digital Transformation",
+    academicHost: "FD Academy Institute for Digital Transformation",
     enterpriseHost: "Salesforce Enterprise Architecture Alliance",
     date: "January 8, 2027 · 17:30 CET / 11:30 EST",
     faculty: "Marc Benioff (Salesforce) & Prof. Shoshana Zuboff (Harvard)",
@@ -1491,7 +1491,7 @@ const masterclassesData = [
 const institutionalHostsData = [
   {
     role: "Founding Academic Host",
-    name: "FD Executive Institute of Management & Technology",
+    name: "FD Academy of Management & Technology",
     desc: "Provides theoretical grounding across ISCED international disciplines, curriculum governance, and rigorous case method facilitation for multinational cohort executives.",
     badges: ["EQUIS & AACSB Accredited Faculty", "Global Executive Programs"],
     leadership: "Dean of Executive Programs & Senior Technology Fellows"
@@ -1527,7 +1527,7 @@ const industryPanelsData = [
     symposium: "Global Executive AI Summit 2026",
     date: "November 25, 2026 · 18:00 CET",
     location: "Zurich Auditorium & Live Global Broadcast",
-    academicHost: "FD Center for Corporate Governance",
+    academicHost: "FD Academy Center for Corporate Governance",
     corporateHost: "Salesforce & Airbnb Executive Offices",
     chairs: "Prof. Shoshana Zuboff (Harvard) & Marc Benioff (Salesforce CEO)",
     panelists: "Brian Chesky (Airbnb), Dr. Elena Rostova (Digital Governance Chair), Sundar Pichai (Google)",
@@ -1540,7 +1540,7 @@ const industryPanelsData = [
     symposium: "European Semiconductor Roundtable",
     date: "December 8, 2026 · 15:30 CET",
     location: "London Science Museum & Virtual Executive Suite",
-    academicHost: "FD High-Tech Innovation Center",
+    academicHost: "FD Academy High-Tech Innovation Center",
     corporateHost: "ASML, TSMC & Intel Technical Leadership",
     chairs: "Peter Wennink (ASML) & Dr. C.C. Wei (TSMC)",
     panelists: "Lisa Su (AMD CEO), Pat Gelsinger (Intel CEO), Jensen Huang (NVIDIA CEO)",
@@ -1553,7 +1553,7 @@ const industryPanelsData = [
     symposium: "Nordic Health Economics Symposium",
     date: "January 14, 2027 · 16:00 CET",
     location: "Copenhagen Conference Center & Global Stream",
-    academicHost: "FD Health Economics Research Center",
+    academicHost: "FD Academy Health Economics Research Center",
     corporateHost: "Novo Nordisk & Eli Lilly Executive Suites",
     chairs: "Lars Fruergaard Jørgensen (Novo Nordisk CEO)",
     panelists: "David Ricks (Eli Lilly CEO), Albert Bourla (Pfizer CEO), WHO Health Financing Directorate",
@@ -1804,7 +1804,7 @@ function openEventModal(eventData) {
   if (typeEl) typeEl.textContent = (eventData.type || "EXECUTIVE EVENT").toUpperCase();
 
   const hostEl = document.querySelector("#modal-event-host");
-  if (hostEl) hostEl.textContent = eventData.academicHost || "FD Executive Institute";
+  if (hostEl) hostEl.textContent = eventData.academicHost || "FD Academy";
 
   const titleEl = document.querySelector("#modal-event-title");
   if (titleEl) titleEl.textContent = eventData.title;
