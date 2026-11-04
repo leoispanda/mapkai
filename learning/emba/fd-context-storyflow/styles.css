@@ -2465,6 +2465,39 @@ body[data-mapkai-page="showcase"] {
   color: var(--fd-muted);
 }
 
+.leaderboard-club-footer {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--fd-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.club-footer-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--fd-muted);
+}
+
+.leaderboard-club-link {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--fd-orange-dark);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: transform 140ms ease;
+}
+
+.leaderboard-club-link:hover {
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+
 /* Radar Content */
 .radar-content {
   display: flex;
@@ -2905,8 +2938,9 @@ body[data-mapkai-page="showcase"] {
 
 .flagship-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+  align-items: stretch;
 }
 
 .flagship-card {
@@ -2917,6 +2951,7 @@ body[data-mapkai-page="showcase"] {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
   transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms ease, border-color 200ms ease;
   position: relative;
@@ -2930,17 +2965,18 @@ body[data-mapkai-page="showcase"] {
 
 .flagship-card-the-club {
   background: #091016;
-  border-color: rgba(197, 168, 128, 0.35);
+  border-color: rgba(197, 168, 128, 0.45);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.24);
 }
 
 .flagship-poster-media {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 260px;
   overflow: hidden;
-  background: #000000;
+  background: #060b10;
   cursor: pointer;
-  border-bottom: 1px solid rgba(216, 179, 128, 0.2);
+  border-bottom: 1px solid rgba(216, 179, 128, 0.22);
 }
 
 .flagship-poster-img {
@@ -2954,7 +2990,7 @@ body[data-mapkai-page="showcase"] {
 
 .flagship-poster-media:hover .flagship-poster-img {
   transform: scale(1.03);
-  opacity: 0.92;
+  opacity: 0.94;
 }
 
 .flagship-poster-overlay {
@@ -3007,22 +3043,27 @@ body[data-mapkai-page="showcase"] {
   text-transform: uppercase;
   color: #d8b380;
   margin-bottom: 6px;
+  height: 16px;
 }
 
 .flagship-title {
   font-family: var(--fd-serif);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.28;
+  line-height: 1.3;
   margin-bottom: 8px;
+  min-height: 60px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .flagship-subtitle {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: #b8c7d5;
   line-height: 1.45;
   margin-bottom: 16px;
+  min-height: 48px;
 }
 
 .flagship-meta-strip {
@@ -3034,6 +3075,8 @@ body[data-mapkai-page="showcase"] {
   border-radius: 2px;
   padding: 10px 12px;
   margin-bottom: 16px;
+  min-height: 84px;
+  justify-content: center;
 }
 
 .flagship-meta-item {
@@ -3054,6 +3097,7 @@ body[data-mapkai-page="showcase"] {
   border-radius: 3px;
   padding: 12px 14px;
   margin-bottom: 16px;
+  min-height: 96px;
 }
 
 .flagship-pillars-grid {
@@ -3079,6 +3123,7 @@ body[data-mapkai-page="showcase"] {
 
 .flagship-highlights-box {
   margin-bottom: 18px;
+  flex: 1;
 }
 
 .flagship-highlights-title {
@@ -3164,10 +3209,11 @@ body[data-mapkai-page="showcase"] {
   background: transparent;
   color: #e8d5bf;
   border: 1px solid #c5a880;
-  border-radius: 3px;
+  border-radius: 999px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 .btn-flagship-register.btn-club-apply:hover {
@@ -3882,6 +3928,13 @@ body[data-mapkai-page="showcase"] {
 
 .btn-modal-done:hover {
   background: #000000;
+}
+
+@media (max-width: 1080px) {
+  .flagship-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 
 @media (max-width: 768px) {

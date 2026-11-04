@@ -2332,55 +2332,16 @@ const flagshipEventsData = [
       { icon: "🍃", title: "Building a scalable and responsible business" }
     ],
     highlights: [
-      "Hands-on insights from investors, entrepreneurs and industry experts",
-      "Real cases and proven frameworks for Dutch tech ventures",
-      "Interactive discussions and direct investor Q&A",
-      "A high-value network of founders, seed funds and business leaders"
+      "Hands-on insights from tech founders and investors",
+      "Real cases and proven Dutch scale-up frameworks",
+      "Interactive strategy discussions and direct investor Q&A",
+      "High-value network of venture funds and peer founders"
     ],
     syllabus: [
       "Accessing venture capital, angel syndicates and Dutch non-dilutive innovation subsidies",
       "Financial planning for hypergrowth: cash runway modeling, unit economics and CapEx controls",
       "Making strategic decisions under regulatory and macroeconomic uncertainty",
       "Building scalable governance, ESG credibility, and investor-ready capitalization tables"
-    ]
-  },
-  {
-    id: "flagship-the-club",
-    brand: "fd. The Club",
-    badge: "Exclusive Community",
-    kicker: "EXECUTIVE CIRCLE",
-    title: "Your invitation to a select circle of business leaders",
-    subtitle: "An exclusive community by FD Mediagroep that brings together CEOs, investors and entrepreneurs for high-level conversations, new perspectives and real opportunities.",
-    date: "Ongoing 2026–2027 · Intimate Dinners",
-    dateFormatted: "2026–2027 Executive Cohort · Invitation & Admissions Only",
-    location: "Amsterdam (Curated Venues & Canal Houses)",
-    target: "CEOs, institutional investors and growth entrepreneurs",
-    domainCode: "ISCED 0413",
-    domainName: "Executive Leadership, Governance & Peer Advisory",
-    academicHost: "fd. The Club",
-    enterpriseHost: "FD Mediagroep Executive Leadership Circle",
-    faculty: "CEOs, Institutional Investors & FD Senior Editors",
-    facultyAvatars: ["Satya Nadella", "Tim Cook", "David Solomon"],
-    seatsLeft: 12,
-    posterImage: "/learning/emba/fd-context-storyflow/assets/events/fd-the-club.jpg",
-    buttonText: "Apply for Membership →",
-    tagline: "An exclusive community by FD Mediagroep.",
-    pillars: [
-      { icon: "🍽️", title: "Curated events: Intimate dinners and expert conversations at exceptional locations in Amsterdam" },
-      { icon: "🤝", title: "Trusted network: A select circle of decision-makers across industries" },
-      { icon: "📊", title: "Investment insights: Early views on emerging opportunities and market developments" }
-    ],
-    highlights: [
-      "Curated events: intimate dinners and expert conversations at exceptional locations in Amsterdam",
-      "Trusted network: a select circle of decision-makers across European industries",
-      "Investment insights: early views on emerging opportunities and market developments",
-      "Strict Chatham House Rule dialogues and confidential founder-investor roundtables"
-    ],
-    syllabus: [
-      "Intimate dinners and expert conversations at exceptional private canal house venues in Amsterdam",
-      "Trusted network: a select circle of decision-makers across high-tech, finance, and industrial sectors",
-      "Investment insights: early views on emerging opportunities, market developments, and deal-flow",
-      "Peer problem-solving and cross-border executive partnerships"
     ]
   },
   {
@@ -2411,16 +2372,56 @@ const flagshipEventsData = [
       { icon: "💡", title: "Actionable strategies for a resilient future" }
     ],
     highlights: [
-      "Keynotes from leading insurance chief executives and risk architects",
-      "Panel debate moderated by senior FD financial journalists",
-      "Real cases, underwriting frameworks, and actuarial insights",
-      "Networking reception to foster institutional co-investment partnerships"
+      "Keynotes from leading insurance chief executives",
+      "Panel debate moderated by senior FD journalists",
+      "Real cases, underwriting frameworks & risk insights",
+      "Executive networking reception to continue dialogue"
     ],
     syllabus: [
       "Industry perspectives from leading insurers on systemic multi-hazard climate exposures",
       "Climate risk modeling and financial impact: pricing catastrophic physical hazards into underwriting",
       "European regulation and market shifts: Solvency II climate stress testing and ESG directives",
       "Actionable asset management strategies for a resilient balance sheet future"
+    ]
+  },
+  {
+    id: "flagship-the-club",
+    brand: "fd. The Club",
+    badge: "Exclusive Community",
+    kicker: "EXECUTIVE CIRCLE",
+    title: "Your invitation to a select circle of business leaders",
+    subtitle: "An exclusive community by FD Mediagroep that brings together CEOs, investors and entrepreneurs for high-level conversations, new perspectives and real opportunities.",
+    date: "Ongoing 2026–2027 · Intimate Dinners",
+    dateFormatted: "2026–2027 Executive Cohort · Invitation & Admissions Only",
+    location: "Amsterdam (Curated Venues & Canal Houses)",
+    target: "CEOs, institutional investors and growth entrepreneurs",
+    domainCode: "ISCED 0413",
+    domainName: "Executive Leadership, Governance & Peer Advisory",
+    academicHost: "fd. The Club",
+    enterpriseHost: "FD Mediagroep Executive Leadership Circle",
+    faculty: "CEOs, Institutional Investors & FD Senior Editors",
+    facultyAvatars: ["Satya Nadella", "Tim Cook", "David Solomon"],
+    seatsLeft: 12,
+    posterImage: "/learning/emba/fd-context-storyflow/assets/events/fd-the-club.jpg",
+    buttonText: "Apply for Membership →",
+    tagline: "An exclusive community by FD Mediagroep.",
+    pillars: [
+      { icon: "🍽️", title: "Curated events: Intimate private dinners" },
+      { icon: "🤝", title: "Trusted network of senior decision-makers" },
+      { icon: "📊", title: "Investment insights & early market views" },
+      { icon: "🏛️", title: "Exclusive canal house venues in Amsterdam" }
+    ],
+    highlights: [
+      "Curated events at exceptional Amsterdam locations",
+      "Trusted network of cross-industry decision-makers",
+      "Early views on emerging opportunities and market shifts",
+      "Chatham House Rule confidentiality & peer dialogue"
+    ],
+    syllabus: [
+      "Intimate dinners and expert conversations at exceptional private canal house venues in Amsterdam",
+      "Trusted network: a select circle of decision-makers across high-tech, finance, and industrial sectors",
+      "Investment insights: early views on emerging opportunities, market developments, and deal-flow",
+      "Peer problem-solving and cross-border executive partnerships"
     ]
   }
 ];
@@ -2634,52 +2635,6 @@ const academyModulesData = [
           "Manufacturing supply-chain bottlenecks for sterile fill-finish injectable peptide pens",
           "Total societal cost-offset calculations: cardiovascular endpoints vs annual drug costs",
           "Patent lifecycle management and generic biosimilar defense strategies"
-        ]
-      }
-    ]
-  },
-  {
-    id: "the-club",
-    name: "fd. The Club",
-    tag: "EXECUTIVE CIRCLE",
-    badge: "Invitation Only",
-    icon: "🏛️",
-    desc: "An exclusive community by FD Mediagroep bringing together CEOs, investors and entrepreneurs for high-level conversations, intimate dinners, and real opportunities in Amsterdam.",
-    activities: [
-      {
-        id: "flagship-the-club",
-        moduleType: "fd. The Club",
-        badge: "Exclusive Community",
-        title: "Your invitation to a select circle of business leaders: Curated Events, Intimate Dinners & Trusted Network",
-        domainCode: "ISCED 0413",
-        domainName: "Executive Leadership, Governance & Peer Advisory",
-        academicHost: "fd. The Club",
-        enterpriseHost: "FD Mediagroep Executive Leadership Circle",
-        date: "Ongoing 2026–2027 · Intimate Dinners",
-        location: "Amsterdam (Curated Venues & Canal Houses)",
-        faculty: "CEOs, Institutional Investors & FD Senior Editors",
-        facultyAvatars: ["Satya Nadella", "Tim Cook", "David Solomon"],
-        format: "Intimate Dinners & Chatham House Dialogue · Cap 20 Leaders",
-        seatsLeft: 12,
-        linkedStoryId: 6,
-        posterImage: "/learning/emba/fd-context-storyflow/assets/events/fd-the-club.jpg",
-        buttonText: "Apply for Membership →",
-        pillars: [
-          { icon: "🍽️", title: "Curated events: Intimate dinners and expert conversations at exceptional locations in Amsterdam" },
-          { icon: "🤝", title: "Trusted network: A select circle of decision-makers across industries" },
-          { icon: "📊", title: "Investment insights: Early views on emerging opportunities and market developments" }
-        ],
-        highlights: [
-          "Curated events at exceptional Amsterdam locations",
-          "Trusted network of cross-industry decision-makers",
-          "Early views on emerging opportunities and market developments",
-          "Chatham House Rule confidentiality and peer dialogue"
-        ],
-        syllabus: [
-          "Curated events: intimate dinners and expert conversations at exceptional locations in Amsterdam",
-          "Trusted network: a select circle of decision-makers across industries",
-          "Investment insights: early views on emerging opportunities and market developments",
-          "Private deal-flow introductions and strategic roundtables"
         ]
       }
     ]
