@@ -8,11 +8,15 @@ import { Readable } from "node:stream";
 import { retiredCourseResponse } from "./functions/_shared/retired-courses.js";
 import { embaLoginHtml, hasEmbaAccess } from "./functions/_shared/emba-access.js";
 
+try {
+  process.loadEnvFile?.();
+} catch {}
+
 const root = process.cwd();
 const port = Number(process.env.PORT || 3000);
 const host = process.env.HOST || "127.0.0.1";
 const resendApiKey = process.env.RESEND_API_KEY || "";
-const emailFrom = process.env.EMAIL_FROM || "MapKAI <onboarding@resend.dev>";
+const emailFrom = process.env.EMAIL_FROM || "MapKAI <admissions@turnpo.com>";
 const appOrigin = process.env.APP_ORIGIN || `http://${host}:${port}`;
 
 const codes = new Map();

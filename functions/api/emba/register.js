@@ -65,7 +65,7 @@ export async function onRequestPost({ request, env = {} }) {
   const resendApiKey = env.RESEND_API_KEY || (typeof process !== "undefined" ? process?.env?.RESEND_API_KEY : "");
   if (resendApiKey) {
     const isClub = eventId === "flagship-the-club";
-    const emailFrom = env.EMAIL_FROM || (typeof process !== "undefined" ? process?.env?.EMAIL_FROM : "") || "MapKAI Executive Academy <onboarding@resend.dev>";
+    const emailFrom = env.EMAIL_FROM || (typeof process !== "undefined" ? process?.env?.EMAIL_FROM : "") || "MapKAI Executive Academy <admissions@turnpo.com>";
     const adminEmail = env.ADMIN_EMAIL || (typeof process !== "undefined" ? process?.env?.ADMIN_EMAIL : "");
 
     const emailSubject = isClub
