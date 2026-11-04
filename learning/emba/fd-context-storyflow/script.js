@@ -1,5 +1,16 @@
 // MapKAI FD Academy + Executive Decision Science & Knowledge Architecture
 
+function escapeHtml(str) {
+  if (typeof str !== 'string') return '';
+  return str.replace(/[&<>"']/g, match => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[match]));
+}
+
 const peopleLibrary = Object.freeze({
   "Jensen Huang": {
     imageUrl: "/learning/emba/fd-context-storyflow/assets/portraits/jensen-huang.jpg",
@@ -2301,6 +2312,8 @@ const executiveLeaderboard = [
 
 // 5. FD Academy & The Club: 3 Amsterdam In-Person Flagship Events Data
 const STORAGE_KEY_REGISTERED = "mapkai_fd_registered_events";
+const STORAGE_KEY_VIEW = "mapkai_fd_emba_view";
+const STORAGE_KEY_STORY = "mapkai_fd_emba_story";
 function loadRegisteredEvents() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY_REGISTERED);
@@ -2937,11 +2950,17 @@ let activeStoryIndex = 0;
 let currentCategoryFilter = "all";
 
 // Switch between Dashboard View and Reader View
-function switchView(viewName) {
+function switchView(viewName, updateStorage = true) {
   const dashBtn = document.querySelector("#btn-view-dashboard");
   const readerBtn = document.querySelector("#btn-view-reader");
   const dashSection = document.querySelector("#view-dashboard-section");
   const readerSection = document.querySelector("#view-reader-section");
+
+  if (updateStorage) {
+    try {
+      localStorage.setItem(STORAGE_KEY_VIEW, viewName);
+    } catch {}
+  }
 
   if (viewName === "reader") {
     dashBtn.classList.remove("active");
@@ -3498,11 +3517,16 @@ function renderCategoryCards(filter) {
 }
 
 // Render Reader Story (7-Layer Digital Broadsheet Architecture)
-function renderStory(index) {
+function renderStory(index, updateStorage = true) {
   const story = storiesData[index];
   if (!story) return;
 
   activeStoryIndex = index;
+  if (updateStorage) {
+    try {
+      localStorage.setItem(STORAGE_KEY_STORY, String(index));
+    } catch {}
+  }
 
   // Header story pills state
   document.querySelectorAll(".story-pill").forEach((pill, i) => {
@@ -3510,6 +3534,12 @@ function renderStory(index) {
     pill.classList.toggle("active", isCur);
     pill.setAttribute("aria-selected", String(isCur));
   });
+
+  // Floating sticky bar indicator
+  const floatIndicator = document.querySelector("#floating-story-indicator");
+  if (floatIndicator) {
+    floatIndicator.textContent = `Case ${index + 1} of ${storiesData.length}`;
+  }
 
   // Layer 1: Front-Page Lead Case Masthead
   const tagEl = document.querySelector("#story-tag");
@@ -3823,7 +3853,7 @@ function submitAsk(question) {
       reply = `Executive Quote: "${curStory.ceoComments[0].name}: Accelerated compute and deep permissioned context integration are the only sustainable moats when raw code generation is commoditized."`;
     }
 
-    ansBox.innerHTML = `<strong>Q: ${question}</strong><p style="margin-top:4px;">${reply}</p>`;
+    ansBox.innerHTML = `<strong>Q: ${escapeHtml(question)}</strong><p style="margin-top:4px;">${escapeHtml(reply)}</p>`;
   }, 350);
 }
 
@@ -3858,24 +3888,62 @@ function updateRegistrationButtons() {
 
 // Initialize all DOM events
 document.addEventListener("DOMContentLoaded", () => {
+  // Determine default story
+  let savedStoryIndex = 0;
+  try {
+    const rawStory = localStorage.getItem(STORAGE_KEY_STORY);
+    if (rawStory !== null) {
+      const parsed = Number(rawStory);
+      if (Number.isInteger(parsed) && parsed >= 0 && parsed < storiesData.length) {
+        savedStoryIndex = parsed;
+      }
+    }
+  } catch {}
+
   // 1. Initial Render
   renderPortraitCredits();
   renderDashboard();
-  renderStory(0);
+  renderStory(savedStoryIndex, false);
 
-  // Check URL param for default view (e.g. ?view=reader)
+  // Check URL param, hash or local storage for default view (e.g. ?view=reader or #reader)
   const urlParams = new URLSearchParams(window.location.search);
   const viewParam = urlParams.get("view");
-  if (viewParam === "reader") {
-    switchView("reader");
+  const hashParam = window.location.hash.replace("#", "").toLowerCase();
+  let defaultView = "dashboard";
+
+  if (viewParam === "reader" || hashParam === "reader") {
+    defaultView = "reader";
+  } else if (viewParam === "dashboard" || hashParam === "dashboard") {
+    defaultView = "dashboard";
   } else {
-    switchView("dashboard");
+    try {
+      const savedView = localStorage.getItem(STORAGE_KEY_VIEW);
+      if (savedView === "reader" || savedView === "dashboard") {
+        defaultView = savedView;
+      }
+    } catch {}
   }
+
+  switchView(defaultView, false);
 
   // 2. View Toggle Buttons
   document.querySelector("#btn-view-dashboard")?.addEventListener("click", () => switchView("dashboard"));
   document.querySelector("#btn-view-reader")?.addEventListener("click", () => switchView("reader"));
   document.querySelector("#btn-back-dash")?.addEventListener("click", () => switchView("dashboard"));
+  document.querySelector("#btn-float-dashboard")?.addEventListener("click", () => switchView("dashboard"));
+  document.querySelector("#btn-float-top")?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  document.querySelector("#btn-float-prev")?.addEventListener("click", () => {
+    const prevIdx = (activeStoryIndex - 1 + storiesData.length) % storiesData.length;
+    renderStory(prevIdx);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  document.querySelector("#btn-float-next")?.addEventListener("click", () => {
+    const nextIdx = (activeStoryIndex + 1) % storiesData.length;
+    renderStory(nextIdx);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
   document.querySelector("#btn-dashboard-to-reader")?.addEventListener("click", () => {
     renderStory(0);
     switchView("reader");
@@ -4028,12 +4096,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (titleEl && msgEl) {
+        const safeName = escapeHtml(name);
+        const safeEmail = escapeHtml(email || 'your corporate email');
+        const safeTitle = escapeHtml(activeModalEvent.title);
         if (activeModalEvent.id === "flagship-the-club") {
           titleEl.textContent = "Membership Application Submitted";
-          msgEl.innerHTML = `Thank you, <strong>${name}</strong>. Your membership application for <strong>fd. The Club</strong> has been received by the Admissions Secretariat. A verification link and private onboarding brief have been sent to <strong>${email || 'your corporate email'}</strong>.`;
+          msgEl.innerHTML = `Thank you, <strong>${safeName}</strong>. Your membership application for <strong>fd. The Club</strong> has been received by the Admissions Secretariat. A verification link and private onboarding brief have been sent to <strong>${safeEmail}</strong>.`;
         } else {
           titleEl.textContent = "Registration Confirmed";
-          msgEl.innerHTML = `Congratulations, <strong>${name}</strong>! You have successfully secured your seat for <strong>${activeModalEvent.title}</strong> in Amsterdam. A calendar invitation (.ics), venue pass, and executive reading monograph have been dispatched to <strong>${email || 'your corporate email'}</strong>.`;
+          msgEl.innerHTML = `Congratulations, <strong>${safeName}</strong>! You have successfully secured your seat for <strong>${safeTitle}</strong> in Amsterdam. A calendar invitation (.ics), venue pass, and executive reading monograph have been dispatched to <strong>${safeEmail}</strong>.`;
         }
       }
 
