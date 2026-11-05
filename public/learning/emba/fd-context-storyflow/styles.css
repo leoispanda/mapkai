@@ -3262,6 +3262,71 @@ body[data-mapkai-page="showcase"] {
   box-shadow: 0 6px 20px rgba(197, 168, 128, 0.35);
 }
 
+.flagship-card-the-club {
+  background: #f3eee5;
+  color: #1b1a18;
+  border-color: #b7ad9e;
+  cursor: default;
+  box-shadow: 0 6px 24px rgba(39, 34, 27, 0.1);
+}
+
+.flagship-card-the-club:hover {
+  transform: none;
+  border-color: #527976;
+  box-shadow: 0 8px 26px rgba(39, 34, 27, 0.13);
+}
+
+.club-prototype-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #cfc6b8;
+  color: #285d53;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.flagship-card-the-club .flagship-kicker {
+  color: #285d53;
+}
+
+.flagship-card-the-club .flagship-title {
+  color: #1b1a18;
+}
+
+.flagship-card-the-club .flagship-subtitle {
+  color: #615d56;
+}
+
+.club-card-values {
+  margin: 5px 0 14px;
+  color: #285d53;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.flagship-card-the-club .flagship-footer-actions {
+  border-color: #cfc6b8;
+}
+
+.flagship-card-the-club .btn-flagship-register.btn-club-apply {
+  background: #285d53;
+  color: #fff;
+  border-color: #285d53;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 0.82rem;
+}
+
+.flagship-card-the-club .btn-flagship-register.btn-club-apply:hover {
+  background: #1b453e;
+  color: #fff;
+}
+
 .btn-flagship-register.is-registered {
   background: #dcfce7 !important;
   color: #15803d !important;

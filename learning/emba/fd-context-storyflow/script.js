@@ -2330,6 +2330,7 @@ function saveRegisteredEvents() {
   } catch {}
 }
 const registeredEventIds = loadRegisteredEvents();
+if (registeredEventIds.delete("flagship-the-club")) saveRegisteredEvents();
 let activeModalEvent = null;
 
 const flagshipEventsData = [
@@ -2416,41 +2417,31 @@ const flagshipEventsData = [
   {
     id: "flagship-the-club",
     brand: "fd. The Club",
-    badge: "Exclusive Community",
+    badge: "Concept prototype",
     kicker: "EXECUTIVE CIRCLE",
-    title: "Your invitation to a select circle of business leaders",
-    subtitle: "An exclusive community by FD Mediagroep that brings together CEOs, investors and entrepreneurs for high-level conversations, new perspectives and real opportunities.",
-    date: "Ongoing 2026–2027 · Intimate Dinners",
-    dateFormatted: "2026–2027 Executive Cohort · Invitation & Admissions Only",
-    location: "Amsterdam (Curated Venues & Canal Houses)",
-    target: "CEOs, institutional investors and growth entrepreneurs",
-    domainCode: "ISCED 0413",
-    domainName: "Executive Leadership, Governance & Peer Advisory",
-    academicHost: "fd. The Club",
-    enterpriseHost: "FD Mediagroep Executive Leadership Circle",
-    faculty: "CEOs, Institutional Investors & FD Senior Editors",
-    facultyAvatars: ["Satya Nadella", "Tim Cook", "David Solomon"],
-    seatsLeft: 12,
-    posterImage: "/learning/emba/fd-context-storyflow/assets/events/fd-the-club.jpg",
-    buttonText: "Apply for Membership →",
-    tagline: "An exclusive community by FD Mediagroep.",
+    title: "fd. The Club",
+    subtitle: "A proposed invitation-only peer circle for CEOs, CFOs and senior executives with company-wide strategic decision responsibility.",
+    date: "A-Team United concept prototype",
+    location: "No event date, venue or host confirmed",
+    target: "CEOs, CFOs and senior executives",
+    academicHost: "fd. The Club · concept by A-Team United",
+    enterpriseHost: "A-Team United concept prototype",
+    buttonText: "Explore FD Club →",
+    tagline: "Trusted peers · informed perspectives · confidential dialogue.",
     pillars: [
-      { icon: "🍽️", title: "Curated events: Intimate private dinners" },
-      { icon: "🤝", title: "Trusted network of senior decision-makers" },
-      { icon: "📊", title: "Investment insights & early market views" },
-      { icon: "🏛️", title: "Exclusive canal house venues in Amsterdam" }
+      { icon: "", title: "Trusted peers" },
+      { icon: "", title: "Informed perspectives" },
+      { icon: "", title: "Confidential dialogue" }
     ],
     highlights: [
-      "Curated events at exceptional Amsterdam locations",
-      "Trusted network of cross-industry decision-makers",
-      "Early views on emerging opportunities and market shifts",
-      "Chatham House Rule confidentiality & peer dialogue"
+      "Proposed facilitated roundtables on current strategic questions",
+      "Journalism-informed briefings grounded in reporting and public evidence",
+      "Peer exchange and introductions by mutual agreement"
     ],
     syllabus: [
-      "Intimate dinners and expert conversations at exceptional private canal house venues in Amsterdam",
-      "Trusted network: a select circle of decision-makers across high-tech, finance, and industrial sectors",
-      "Investment insights: early views on emerging opportunities, market developments, and deal-flow",
-      "Peer problem-solving and cross-border executive partnerships"
+      "Illustrative Boardroom Circle discussions of consequential business decisions",
+      "Selection review based on senior responsibility, relevance and willingness to contribute",
+      "Proposed confidentiality expectations; no formal legal arrangement is established"
     ]
   }
 ];
@@ -3071,13 +3062,30 @@ function renderFlagshipEvents() {
   if (!gridEl) return;
 
   gridEl.innerHTML = flagshipEventsData.map(evt => {
-    const isRegistered = registeredEventIds.has(evt.id);
     const isClub = evt.id === "flagship-the-club";
+    if (isClub) {
+      return `
+        <article class="flagship-card flagship-card-the-club" data-event-id="${evt.id}">
+          <div class="club-prototype-topline"><span>fd. The Club</span><span>Concept prototype</span></div>
+          <div class="flagship-card-body">
+            <span class="flagship-kicker">ACCESS AS A SERVICE</span>
+            <h3 class="flagship-title">A trusted circle for consequential decisions.</h3>
+            <p class="flagship-subtitle">A proposed invitation-only community for CEOs, CFOs and senior executives.</p>
+            <p class="club-card-values">Trusted peers · Informed perspectives · Confidential dialogue</p>
+            <div class="flagship-footer-actions">
+              <a class="btn-flagship-register btn-club-apply" href="/learning/emba/fd-context-storyflow/fd-club/#interest">Express interest <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    const isRegistered = registeredEventIds.has(evt.id);
     const btnLabel = isRegistered ? "✓ Registered (RSVP Confirmed)" : evt.buttonText;
-    const btnClass = `btn-flagship-register ${isRegistered ? 'is-registered' : ''} ${isClub ? 'btn-club-apply' : ''}`;
+    const btnClass = `btn-flagship-register ${isRegistered ? 'is-registered' : ''}`;
 
     return `
-      <article class="flagship-card ${isClub ? 'flagship-card-the-club' : ''}" data-event-id="${evt.id}">
+      <article class="flagship-card" data-event-id="${evt.id}">
         <div class="flagship-poster-media" data-event-id="${evt.id}" title="Click to view full details and register">
           <img class="flagship-poster-img" src="${evt.posterImage}" alt="${evt.title}" loading="lazy" decoding="async">
           <div class="flagship-poster-overlay">
@@ -3144,6 +3152,7 @@ function renderFlagshipEvents() {
   });
 
   gridEl.querySelectorAll(".flagship-card").forEach(card => {
+    if (card.dataset.eventId === "flagship-the-club") return;
     card.addEventListener("click", (e) => {
       if (e.target.closest("button") || e.target.closest(".flagship-poster-media")) return;
       const eventId = card.dataset.eventId;
@@ -3299,6 +3308,7 @@ function initModulesFilter() {
 
 // Event Modal Handlers
 function openEventModal(eventData) {
+  if (eventData?.id === "flagship-the-club") return;
   const modal = document.querySelector("#event-modal");
   if (!modal) return;
   activeModalEvent = eventData;
@@ -3401,13 +3411,7 @@ function openEventModal(eventData) {
 
   // Submit button text
   const submitBtn = document.querySelector("#btn-modal-submit");
-  if (submitBtn) {
-    if (eventData.id === "flagship-the-club") {
-      submitBtn.textContent = "Submit Membership Application →";
-    } else {
-      submitBtn.textContent = "Confirm Registration & RSVP →";
-    }
-  }
+  if (submitBtn) submitBtn.textContent = "Confirm Registration & RSVP →";
 
   // Reset form
   const form = document.querySelector("#event-reg-form");
@@ -3847,10 +3851,10 @@ function submitAsk(question) {
 function updateRegistrationButtons() {
   document.querySelectorAll(".btn-flagship-register").forEach(btn => {
     const eventId = btn.dataset.eventId;
+    if (eventId === "flagship-the-club") return;
     if (registeredEventIds.has(eventId)) {
       btn.classList.add("is-registered");
-      const isClub = eventId === "flagship-the-club";
-      btn.innerHTML = `<span class="btn-text">✓ ${isClub ? 'Application Submitted' : 'Registered & Confirmed'}</span>`;
+      btn.innerHTML = `<span class="btn-text">✓ Registered & Confirmed</span>`;
       btn.setAttribute("aria-label", "Registration confirmed for this session");
     }
   });
@@ -4086,13 +4090,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const safeName = escapeHtml(name);
         const safeEmail = escapeHtml(email || 'your corporate email');
         const safeTitle = escapeHtml(activeModalEvent.title);
-        if (activeModalEvent.id === "flagship-the-club") {
-          titleEl.textContent = "Membership Application Submitted";
-          msgEl.innerHTML = `Thank you, <strong>${safeName}</strong>. Your membership application for <strong>fd. The Club</strong> has been received by the Admissions Secretariat. A verification link and private onboarding brief have been sent to <strong>${safeEmail}</strong>.`;
-        } else {
-          titleEl.textContent = "Registration Confirmed";
-          msgEl.innerHTML = `Congratulations, <strong>${safeName}</strong>! You have successfully secured your seat for <strong>${safeTitle}</strong> in Amsterdam. A calendar invitation (.ics), venue pass, and executive reading monograph have been dispatched to <strong>${safeEmail}</strong>.`;
-        }
+        titleEl.textContent = "Registration Confirmed";
+        msgEl.innerHTML = `Congratulations, <strong>${safeName}</strong>! You have successfully secured your seat for <strong>${safeTitle}</strong> in Amsterdam. A calendar invitation (.ics), venue pass, and executive reading monograph have been dispatched to <strong>${safeEmail}</strong>.`;
       }
 
       updateRegistrationButtons();
