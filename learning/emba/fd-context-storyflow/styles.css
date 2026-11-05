@@ -67,57 +67,10 @@ body[data-mapkai-page="showcase"] {
    FD Academy Premier Slogan Bar (Topmost Executive Creed)
    ========================================================================== */
 
-.fd-academy-slogan-bar {
-  background: #171614;
-  color: #f7f4ed;
-  border-bottom: 1px solid rgba(217, 83, 40, 0.35);
-  padding: 7px 24px;
-  position: relative;
-  z-index: 60;
-  text-align: center;
-}
-
-.slogan-bar-inner {
-  max-width: 1360px;
-  margin: 0 auto;
-  text-align: center;
+.fd-academy-slogan-bar img {
+  display: block;
   width: 100%;
-}
-
-.slogan-brand-lockup,
-.slogan-cohort-tag {
-  display: none !important;
-}
-
-.slogan-quote-block {
-  flex: 1;
-  text-align: center;
-  min-width: 0;
-}
-
-.slogan-quote {
-  font-family: var(--fd-serif);
-  font-size: clamp(0.88rem, 1.15vw, 1.05rem);
-  font-weight: 600;
-  font-style: italic;
-  color: #fbf8f2;
-  letter-spacing: 0.015em;
-  margin: 0;
-  line-height: 1.3;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  min-width: 0;
-  width: 100%;
-  max-width: 100%;
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-break: normal;
-}
-
-@media (max-width: 900px) {
-  .fd-academy-slogan-bar {
-    padding: 6px 16px;
-  }
+  height: auto;
 }
 
 /* ==========================================================================
@@ -4117,25 +4070,6 @@ body[data-mapkai-page="showcase"] {
   .page-label,
   .nav-links {
     display: none !important;
-  }
-
-  .fd-academy-slogan-bar {
-    padding: 8px 14px;
-    max-width: 100vw;
-    box-sizing: border-box;
-    overflow: visible;
-  }
-
-  .slogan-bar-inner {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .slogan-quote {
-    font-size: 0.84rem;
-    line-height: 1.4;
-    text-align: center;
   }
 
   .hosts-consortium-strip {

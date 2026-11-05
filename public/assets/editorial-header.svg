@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="300" viewBox="0 0 2400 300" role="img" aria-label="News is yesterday, knowledge is future, intelligence is asset.">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBF4E8"/>
+      <stop offset="0.52" stop-color="#FFF8EC"/>
+      <stop offset="1" stop-color="#F9F1E4"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="300" fill="url(#paper)"/>
+  <text x="1200" y="150" text-anchor="middle" dominant-baseline="middle" textLength="2240" lengthAdjust="spacingAndGlyphs" font-family="Bodoni 72, Didot, Georgia, 'Times New Roman', serif" font-size="108" font-weight="400" fill="#11100E" font-kerning="normal">
+    <tspan>News is </tspan><tspan fill="#C44C1D" font-style="italic">yesterday</tspan><tspan fill="#11100E">, knowledge is </tspan><tspan fill="#0E6870" font-style="italic">future</tspan><tspan fill="#11100E">, intelligence is </tspan><tspan fill="#C44C1D" font-style="italic">asset</tspan><tspan fill="#11100E">.</tspan>
+  </text>
+</svg>
