@@ -1619,76 +1619,6 @@ body[data-mapkai-page="showcase"] {
 }
 
 
-/* ==========================================================================
-   View Switcher Bar
-   ========================================================================== */
-
-.view-switch-bar {
-  background: #ffffff;
-  border-bottom: 1px solid var(--fd-line);
-  padding: 5px 24px;
-}
-
-.view-switch-inner {
-  max-width: 1360px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.view-toggle-pills {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.view-toggle-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: var(--fd-radius);
-  border: 1px solid var(--fd-line);
-  background: var(--fd-paper-warm);
-  color: var(--fd-ink);
-  font-size: 0.78rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 160ms ease;
-}
-
-.view-toggle-pill:hover {
-  border-color: var(--fd-orange);
-  background: #ffffff;
-}
-
-.view-toggle-pill.active {
-  background: var(--fd-ink);
-  color: #ffffff;
-  border-color: var(--fd-ink);
-}
-
-.view-toggle-pill.active .pill-count-tag {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
-
-.pill-count-tag {
-  font-size: 0.65rem;
-  font-weight: 700;
-  background: #eae3d2;
-  color: var(--fd-muted);
-  padding: 2px 7px;
-  border-radius: 99px;
-}
-
-.view-status-hint {
-  display: none !important;
-}
-
 .live-pulse {
   width: 8px;
   height: 8px;
@@ -2558,10 +2488,6 @@ body[data-mapkai-page="showcase"] {
 }
 
 @media (max-width: 640px) {
-  .view-switch-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
   .footer-inner,
   .footer-left,
   .footer-right {
@@ -4243,16 +4169,6 @@ body[data-mapkai-page="showcase"] {
     box-sizing: border-box;
   }
 
-  .view-switch-bar {
-    padding: 8px 12px;
-    max-width: 100vw;
-    box-sizing: border-box;
-  }
-
-  .view-status-hint {
-    display: none;
-  }
-
   .story-selector-bar {
     padding: 8px 12px;
     max-width: 100vw;
@@ -4356,33 +4272,6 @@ body[data-mapkai-page="showcase"] {
   .module-pill {
     flex-shrink: 0;
     white-space: nowrap;
-  }
-  .view-toggle-pills {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
-  }
-  .view-toggle-pill {
-    width: 100%;
-    min-width: 0;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2px;
-    padding: 7px 4px;
-    text-align: center;
-  }
-  .view-toggle-pill .pill-title {
-    font-size: 0.72rem;
-  }
-  .view-toggle-pill .pill-count-tag {
-    font-size: 0.56rem;
-    white-space: nowrap;
-    padding: 2px 4px;
-  }
-  .view-switch-inner {
-    flex-direction: column;
-    align-items: flex-start;
   }
   .footer-inner,
   .footer-left,

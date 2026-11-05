@@ -2312,7 +2312,6 @@ const executiveLeaderboard = [
 
 // 5. FD Academy & The Club: 3 Amsterdam In-Person Flagship Events Data
 const STORAGE_KEY_REGISTERED = "mapkai_fd_registered_events";
-const STORAGE_KEY_VIEW = "mapkai_fd_emba_view";
 const STORAGE_KEY_STORY = "mapkai_fd_emba_story";
 function loadRegisteredEvents() {
   try {
@@ -2940,38 +2939,16 @@ function getAllAcademySessions() {
 let activeStoryIndex = 0;
 let currentCategoryFilter = "all";
 
-// Switch between Dashboard View and Reader View
-function switchView(viewName, updateStorage = true) {
-  const dashBtn = document.querySelector("#btn-view-dashboard");
-  const readerBtn = document.querySelector("#btn-view-reader");
+// Switch between the Academy dashboard and story reader
+function switchView(viewName) {
   const dashSection = document.querySelector("#view-dashboard-section");
   const readerSection = document.querySelector("#view-reader-section");
+  if (!dashSection || !readerSection) return;
 
-  if (updateStorage) {
-    try {
-      localStorage.setItem(STORAGE_KEY_VIEW, viewName);
-    } catch {}
-  }
-
-  if (viewName === "reader") {
-    dashBtn.classList.remove("active");
-    dashBtn.setAttribute("aria-selected", "false");
-    readerBtn.classList.add("active");
-    readerBtn.setAttribute("aria-selected", "true");
-
-    dashSection.hidden = true;
-    readerSection.hidden = false;
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } else {
-    readerBtn.classList.remove("active");
-    readerBtn.setAttribute("aria-selected", "false");
-    dashBtn.classList.add("active");
-    dashBtn.setAttribute("aria-selected", "true");
-
-    readerSection.hidden = true;
-    dashSection.hidden = false;
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+  const showReader = viewName === "reader";
+  dashSection.hidden = showReader;
+  readerSection.hidden = !showReader;
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 // Render Dashboard
@@ -3896,30 +3873,13 @@ document.addEventListener("DOMContentLoaded", () => {
   renderDashboard();
   renderStory(savedStoryIndex, false);
 
-  // Check URL param, hash or local storage for default view (e.g. ?view=reader or #reader)
+  // Open the Academy dashboard by default; allow explicit reader deep links.
   const urlParams = new URLSearchParams(window.location.search);
   const viewParam = urlParams.get("view");
   const hashParam = window.location.hash.replace("#", "").toLowerCase();
-  let defaultView = "dashboard";
+  const defaultView = viewParam === "reader" || hashParam === "reader" ? "reader" : "dashboard";
+  switchView(defaultView);
 
-  if (viewParam === "reader" || hashParam === "reader") {
-    defaultView = "reader";
-  } else if (viewParam === "dashboard" || hashParam === "dashboard") {
-    defaultView = "dashboard";
-  } else {
-    try {
-      const savedView = localStorage.getItem(STORAGE_KEY_VIEW);
-      if (savedView === "reader" || savedView === "dashboard") {
-        defaultView = savedView;
-      }
-    } catch {}
-  }
-
-  switchView(defaultView, false);
-
-  // 2. View Toggle Buttons
-  document.querySelector("#btn-view-dashboard")?.addEventListener("click", () => switchView("dashboard"));
-  document.querySelector("#btn-view-reader")?.addEventListener("click", () => switchView("reader"));
   document.querySelector("#btn-back-dash")?.addEventListener("click", () => switchView("dashboard"));
   document.querySelector("#btn-float-dashboard")?.addEventListener("click", () => switchView("dashboard"));
   document.querySelector("#btn-float-top")?.addEventListener("click", () => {
