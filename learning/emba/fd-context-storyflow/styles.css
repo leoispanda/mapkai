@@ -4471,3 +4471,6 @@ body[data-mapkai-page="showcase"] {
     margin-top: 8px;
   }
 }
+
+/* Disclosure for the student presentation. */
+.emba-course-notice { padding: 10px 20px; background: #f3eee5; border-bottom: 1px solid #d5cdc1; color: #383430; font: 500 13px/1.5 Arial, sans-serif; text-align: center; }

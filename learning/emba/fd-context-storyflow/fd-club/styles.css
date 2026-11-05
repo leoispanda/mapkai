@@ -4,3 +4,6 @@
 .club-slogan-bar{background:#171614;color:#f7f4ed;border-bottom:1px solid rgba(217,83,40,.35);padding:12px 24px;text-align:center}
 .club-slogan-bar p{max-width:1360px;width:100%;margin:0 auto;color:#fbf8f2;font:italic 600 clamp(.92rem,1.8vw,1.25rem)/1.45 var(--serif);letter-spacing:.025em;text-shadow:0 1px 2px rgba(0,0,0,.35);overflow-wrap:break-word}
 @media(max-width:900px){.club-slogan-bar{padding:10px 16px}}
+
+/* Disclosure for the student presentation. */
+.emba-course-notice { padding: 10px 20px; background: #f3eee5; border-bottom: 1px solid #d5cdc1; color: #383430; font: 500 13px/1.5 Arial, sans-serif; text-align: center; }
