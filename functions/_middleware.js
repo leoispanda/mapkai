@@ -11,7 +11,13 @@ export async function onRequest(context) {
     return Response.redirect(new URL("/learning/emba/fd-context-storyflow/", url), 302);
   }
   if (url.pathname === "/emba" || url.pathname.startsWith("/emba/")) {
-    if (await hasEmbaAccess(context.request, context.env)) return context.next();
+    if (await hasEmbaAccess(context.request, context.env)) {
+      if (url.pathname === "/emba" || url.pathname === "/emba/") {
+        const academyUrl = new URL("/learning/emba/fd-context-storyflow/", url.origin);
+        return context.next(new Request(academyUrl, context.request));
+      }
+      return context.next();
+    }
     return new Response(embaLoginHtml(context.request, {
       configured: Boolean(context.env?.EMBA_PASSWORD),
       incorrect: url.searchParams.get("error") === "1",
