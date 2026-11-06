@@ -3146,17 +3146,17 @@ html body[data-mapkai-page] .flagship-card:not(.flagship-card-the-club) .flagshi
 }
 
 .flagship-card-the-club {
-  background: #f3eee5;
-  color: #1b1a18;
-  border-color: #b7ad9e;
+  background: linear-gradient(155deg, #161713 0%, #0a0d10 60%, #15120d 100%);
+  color: #f4eee2;
+  border-color: #a7834b;
   cursor: default;
-  box-shadow: 0 6px 24px rgba(39, 34, 27, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(225, 190, 127, 0.16), 0 12px 30px rgba(31, 24, 13, 0.22);
 }
 
 .flagship-card-the-club:hover {
   transform: none;
-  border-color: #527976;
-  box-shadow: 0 8px 26px rgba(39, 34, 27, 0.13);
+  border-color: #d4b475;
+  box-shadow: inset 0 0 0 1px rgba(225, 190, 127, 0.25), 0 16px 34px rgba(31, 24, 13, 0.27);
 }
 
 .club-card-poster {
@@ -3164,6 +3164,7 @@ html body[data-mapkai-page] .flagship-card:not(.flagship-card-the-club) .flagshi
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #0b1117;
+  border-bottom: 1px solid rgba(213, 174, 105, 0.55);
 }
 
 .club-card-poster img {
@@ -3173,47 +3174,50 @@ html body[data-mapkai-page] .flagship-card:not(.flagship-card-the-club) .flagshi
   object-fit: cover;
 }
 
-.club-card-poster:focus-visible {
-  outline: 3px solid #527976;
+.club-card-poster:focus-visible,
+.flagship-card-the-club .btn-club-apply:focus-visible {
+  outline: 2px solid #e7c989;
   outline-offset: -3px;
 }
 
-.flagship-card-the-club .flagship-kicker {
-  color: #285d53;
-}
-
-.flagship-card-the-club .flagship-title {
-  color: #1b1a18;
+html body[data-mapkai-page] .flagship-card-the-club .flagship-title {
+  color: #f7f1e6;
+  font-family: var(--fd-serif);
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 .flagship-card-the-club .flagship-subtitle {
-  color: #615d56;
+  color: #c8c1b5;
 }
 
 .club-card-values {
   margin: 5px 0 14px;
-  color: #285d53;
+  color: #d8b778;
   font-size: 0.7rem;
   font-weight: 700;
   line-height: 1.5;
 }
 
 .flagship-card-the-club .flagship-footer-actions {
-  border-color: #cfc6b8;
+  border-color: rgba(212, 180, 117, 0.36);
 }
 
 .flagship-card-the-club .btn-flagship-register.btn-club-apply {
-  background: #285d53;
-  color: #fff;
-  border-color: #285d53;
-  letter-spacing: normal;
+  background: linear-gradient(135deg, #edcf93, #c29a5d);
+  color: #18140d;
+  border-color: #e2c58c;
+  box-shadow: inset 0 1px rgba(255, 247, 222, 0.5);
+  letter-spacing: 0.02em;
   text-transform: none;
   font-size: 0.82rem;
 }
 
 .flagship-card-the-club .btn-flagship-register.btn-club-apply:hover {
-  background: #1b453e;
-  color: #fff;
+  background: linear-gradient(135deg, #f5dca8, #d6b274);
+  color: #18140d;
+  border-color: #f2d9a2;
+  box-shadow: 0 6px 20px rgba(183, 142, 74, 0.25);
 }
 
 .btn-flagship-register.is-registered {
