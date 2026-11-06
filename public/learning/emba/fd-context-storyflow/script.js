@@ -2352,6 +2352,7 @@ const flagshipEventsData = [
     facultyAvatars: ["Brian Chesky", "David Solomon", "Marc Benioff"],
     seatsLeft: 18,
     posterImage: "/learning/emba/fd-context-storyflow/assets/events/from-ideation-to-investment.jpg",
+    cardPosterImage: "/learning/emba/fd-context-storyflow/assets/events/from-ideation-card.png",
     buttonText: "Register now →",
     tagline: "Part of FD Academy — Financial knowledge for the next generation of business leaders.",
     pillars: [
@@ -2392,6 +2393,7 @@ const flagshipEventsData = [
     facultyAvatars: ["Andy Jassy", "Albert Bourla", "David Solomon"],
     seatsLeft: 14,
     posterImage: "/learning/emba/fd-context-storyflow/assets/events/climate-risk-investments-insurance.jpg",
+    cardPosterImage: "/learning/emba/fd-context-storyflow/assets/events/climate-risk-card.png",
     buttonText: "Register now →",
     tagline: "Part of FD Academy — Financial knowledge for a more resilient world.",
     pillars: [
@@ -3065,9 +3067,8 @@ function renderFlagshipEvents() {
     return `
       <article class="flagship-card" data-event-id="${evt.id}">
         <div class="flagship-poster-media" data-event-id="${evt.id}" title="Click to view full details and register">
-          <img class="flagship-poster-img" src="${evt.posterImage}" alt="${evt.title}" loading="lazy" decoding="async">
+          <img class="flagship-poster-img" src="${evt.cardPosterImage || evt.posterImage}" alt="${evt.title}" loading="lazy" decoding="async">
           <div class="flagship-poster-overlay">
-            <span class="flagship-brand-badge">${evt.brand}</span>
             <span class="flagship-format-badge">${evt.badge}</span>
           </div>
         </div>
