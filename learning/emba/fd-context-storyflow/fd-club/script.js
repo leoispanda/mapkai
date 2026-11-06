@@ -1,3 +1,9 @@
+const clubFilm = document.querySelector(".film-section video");
+if (clubFilm) {
+  clubFilm.defaultPlaybackRate = 1.15;
+  clubFilm.playbackRate = 1.15;
+}
+
 const interestForm = document.querySelector("#interest-form");
 const formStatus = document.querySelector("#form-status");
 const submitButton = interestForm?.querySelector("[type=submit]");

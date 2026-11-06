@@ -3856,11 +3856,13 @@ function updateRegistrationButtons() {
 
 // Initialize all DOM events
 document.addEventListener("DOMContentLoaded", () => {
-  const academyFilm = document.querySelector('[aria-labelledby="academy-film-title"] video');
-  if (academyFilm) {
-    academyFilm.defaultPlaybackRate = 1.15;
-    academyFilm.playbackRate = 1.15;
-  }
+  const academyFilms = document.querySelectorAll(
+    '[aria-labelledby="academy-film-title"] video, [aria-labelledby="academy-noah-film-title"] video'
+  );
+  academyFilms.forEach((film) => {
+    film.defaultPlaybackRate = 1.15;
+    film.playbackRate = 1.15;
+  });
 
   // Determine default story
   let savedStoryIndex = 0;
