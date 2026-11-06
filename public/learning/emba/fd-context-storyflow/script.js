@@ -3043,9 +3043,10 @@ function renderFlagshipEvents() {
     if (isClub) {
       return `
         <article class="flagship-card flagship-card-the-club" data-event-id="${evt.id}">
-          <div class="club-prototype-topline"><span>fd. The Club</span><span>Concept prototype</span></div>
+          <a class="club-card-poster" href="/learning/emba/fd-context-storyflow/fd-club/">
+            <img src="/learning/emba/fd-context-storyflow/assets/events/fd-the-club-concept-card.png" alt="fd. The Club — Access as a Service. Concept prototype." loading="lazy" decoding="async">
+          </a>
           <div class="flagship-card-body">
-            <span class="flagship-kicker">ACCESS AS A SERVICE</span>
             <h3 class="flagship-title">A trusted circle for consequential decisions.</h3>
             <p class="flagship-subtitle">A proposed invitation-only community for CEOs, CFOs and senior executives.</p>
             <p class="club-card-values">Trusted peers · Informed perspectives · Confidential dialogue</p>
