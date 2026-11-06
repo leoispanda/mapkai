@@ -3467,7 +3467,7 @@ function renderCategoryCards(filter) {
       </div>
 
       <button type="button" class="cat-action-btn" data-story-id="${c.topStoryId}">
-        <span>Read Story &amp; Copilot</span>
+        <span>Read Story</span>
         <span aria-hidden="true">→</span>
       </button>
     </div>
@@ -3597,11 +3597,9 @@ function renderStory(index, updateStorage = true) {
     bodyEl.innerHTML = story.body.map(p => `<p>${p}</p>`).join("");
   }
 
-  // AI Strategic Decision Analysis (Independent Analytical Model)
+  // Selected insights for the current case
   const tldrEl = document.querySelector("#copilot-tldr-text");
   if (tldrEl) tldrEl.textContent = story.copilot.tldr;
-  const consensusEl = document.querySelector("#ai-consensus-val");
-  if (consensusEl) consensusEl.textContent = story.copilot.consensus;
 
   const takeawaysEl = document.querySelector("#copilot-takeaways-list");
   if (takeawaysEl && story.copilot.takeaways) {
@@ -3616,8 +3614,13 @@ function renderStory(index, updateStorage = true) {
   const playbookEl = document.querySelector("#copilot-playbook-box");
   if (playbookEl) {
     playbookEl.innerHTML = `
-      <p><strong>🚀 Actionable Boardroom Playbook:</strong> ${story.copilot.playbook}</p>
+      <p><strong>Actionable next step:</strong> ${story.copilot.playbook}</p>
     `;
+  }
+
+  const reflectionQuestionEl = document.querySelector("#case-reflection-question");
+  if (reflectionQuestionEl) {
+    reflectionQuestionEl.textContent = story.learningRoadmap?.seminarPrompt || "";
   }
 
   // Executive Forum (Likes & Discussion)
@@ -3798,33 +3801,6 @@ function renderStory(index, updateStorage = true) {
 }
 
 
-function submitAsk(question) {
-  const ansBox = document.querySelector("#answer-box");
-  if (!ansBox) return;
-
-  ansBox.hidden = false;
-  ansBox.innerHTML = `<em>Copilot thinking...</em>`;
-
-  const curStory = storiesData[activeStoryIndex];
-
-  setTimeout(() => {
-    let reply = "";
-    const qLower = question.toLowerCase();
-    if (qLower.includes("flaw") || qLower.includes("counter")) {
-      reply = `From a critical analysis perspective, ${curStory.title} assumes enterprise workflows can be cleanly restructured without operational resistance. In practice, legacy ERP and compliance silos account for 80% of real-world friction.`;
-    } else if (qLower.includes("knowledge") || qLower.includes("domain") || qLower.includes("discipline")) {
-      const topDomain = curStory.linkedDomains[0];
-      reply = `Core Academic Anchor: This business challenge is primarily governed by ${topDomain.code} (${topDomain.name}). Grounding executive decisions in this discipline clarifies the structural trade-offs between short-term CapEx and long-term operating leverage.`;
-    } else if (qLower.includes("startup") || qLower.includes("10-person")) {
-      reply = `Startup Playbook: Skip complex multi-month roadmaps. Pick a single high-friction task (e.g., invoice reconciliation or customer triage), wire a specialized agent directly to your database, and iterate daily with real users.`;
-    } else {
-      reply = `Executive Quote: "${curStory.ceoComments[0].name}: Accelerated compute and deep permissioned context integration are the only sustainable moats when raw code generation is commoditized."`;
-    }
-
-    ansBox.innerHTML = `<strong>Q: ${escapeHtml(question)}</strong><p style="margin-top:4px;">${escapeHtml(reply)}</p>`;
-  }, 350);
-}
-
 function updateRegistrationButtons() {
   document.querySelectorAll(".btn-flagship-register").forEach(btn => {
     const eventId = btn.dataset.eventId;
@@ -3963,32 +3939,6 @@ document.addEventListener("DOMContentLoaded", () => {
         statusEl.style.color = isAct ? "var(--fd-muted)" : "var(--fd-orange-dark)";
       }
     });
-  });
-
-  // 7. Ask Copilot events
-  document.querySelectorAll(".chip").forEach(chip => {
-    chip.addEventListener("click", () => {
-      const q = chip.dataset.q;
-      const input = document.querySelector("#ask-input");
-      if (input) input.value = q;
-      submitAsk(q);
-    });
-  });
-
-  document.querySelector("#btn-ask")?.addEventListener("click", () => {
-    const input = document.querySelector("#ask-input");
-    if (input && input.value.trim()) {
-      submitAsk(input.value.trim());
-    }
-  });
-
-  document.querySelector("#ask-input")?.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      const input = document.querySelector("#ask-input");
-      if (input && input.value.trim()) {
-        submitAsk(input.value.trim());
-      }
-    }
   });
 
   // 8. Event Registration Modal Listeners

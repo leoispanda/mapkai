@@ -11,7 +11,7 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.373">
   <link rel="stylesheet" href="/learning/emba/fd-context-storyflow/styles.css?v=learning-v18">
-  <script src="/learning/emba/fd-context-storyflow/script.js?v=learning-v14" defer></script>
+  <script src="/learning/emba/fd-context-storyflow/script.js?v=learning-v15" defer></script>
 </head>
 <body data-mapkai-page="emba">
   <!-- FD Academy creed -->
@@ -97,7 +97,7 @@
 
         <div class="kpi-card">
           <div class="kpi-head">
-            <span class="kpi-label">COPILOT EXAMPLE OUTPUT</span>
+            <span class="kpi-label">SELECTED CASE INSIGHTS</span>
             <span class="kpi-icon">⚡</span>
           </div>
           <div class="kpi-main">
@@ -222,7 +222,7 @@
           </div>
           <div class="radar-footer">
             <button type="button" class="btn-open-featured" id="btn-dashboard-to-reader">
-              Explore Featured Stories in Reader &amp; Copilot →
+              Explore Featured Stories →
             </button>
           </div>
         </div>
@@ -439,19 +439,14 @@
               <div class="ai-editorial-interpretation-box" id="ai-editorial-interpretation">
                 <div class="ai-box-masthead">
                   <div class="ai-label-group">
-                    <span class="sparkle-icon">✨</span>
-                    <span class="ai-title">FD ACADEMY COGNITIVE COPILOT · STRATEGIC DECISION ANALYSIS</span>
+                    <span class="ai-title">FD ACADEMY · SELECTED INSIGHTS</span>
                   </div>
-                  <span class="ai-disclaimer-pill">AI Editorial Interpretation · Independent Analytical Model</span>
+                  <span class="ai-disclaimer-pill">Illustrative case analysis</span>
                 </div>
                 <div class="ai-box-inner">
                   <div class="ai-tldr-callout" id="copilot-tldr-text"></div>
-                  <div class="ai-consensus-stat">
-                    <span class="ai-consensus-num" id="ai-consensus-val">92%</span>
-                    <span class="ai-consensus-lbl">Executive Consensus on Strategic Model</span>
-                  </div>
                   <div class="ai-takeaways-group">
-                    <strong class="ai-takeaways-heading">Core Boardroom Takeaways:</strong>
+                    <strong class="ai-takeaways-heading">Key takeaways</strong>
                     <ul class="takeaways-list" id="copilot-takeaways-list"></ul>
                   </div>
                   <div class="ai-playbook-callout" id="copilot-playbook-box"></div>
@@ -571,23 +566,12 @@
               </div>
             </div>
 
-            <!-- Ask Copilot Interactive Query Box -->
-            <div class="sidebar-box ask-copilot-sidebar-box">
+            <!-- Case-specific discussion prompt -->
+            <div class="sidebar-box">
               <div class="sidebar-box-header">
-                <span class="sidebar-tag">ASK FD COPILOT</span>
-                <span class="sparkle-icon">✨</span>
+                <span class="sidebar-tag">A QUESTION TO CONSIDER</span>
               </div>
-              <p class="sidebar-box-desc">Query case data, counter-arguments, or discipline connections:</p>
-              <div class="quick-chips">
-                <button type="button" class="chip" data-q="What is the biggest operational flaw in this thesis?">🔍 Counter-Argument</button>
-                <button type="button" class="chip" data-q="Which MapKAI knowledge domain applies most to this challenge?">🎓 Core Discipline</button>
-                <button type="button" class="chip" data-q="Extract the punchiest quote from this discussion.">✨ Key Quote</button>
-              </div>
-              <div class="ask-input-box">
-                <input type="text" id="ask-input" placeholder="Ask about this case or boardroom takeaways...">
-                <button type="button" class="btn-ask" id="btn-ask">Ask</button>
-              </div>
-              <div class="answer-box" id="answer-box" hidden></div>
+              <p class="sidebar-box-desc" id="case-reflection-question"></p>
             </div>
 
           </aside>
