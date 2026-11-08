@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.375";
+const appVersion = "0.1.376";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -545,6 +545,25 @@ const uiText = {
     reflectionAiStatus: "Workers AI status",
     reflectionDebug: "Founder reflection debug",
     founderActivated: "Founder mode activated.",
+    aboutWhatP3: "MapKAI aims to organize complex knowledge into a clear structure, using stories, familiar situations, multimedia and interactive exploration to help people from different backgrounds find a starting point and gradually deepen their understanding.",
+    aboutLearningTitle: "Our Learning Philosophy",
+    aboutLearningBelief: "Knowledge can be complex. Getting started need not be.",
+    aboutLearningP1: "A familiar situation, a real question or a thought-provoking story can offer a way into an unfamiliar field.",
+    aboutLearningP2: "We begin with the structure: what question does an idea address, how does it connect to other knowledge, and where are its limits? From there, we aim to make the core idea understandable before gradually exploring its principles, background, applications and debates.",
+    aboutLearningP3: "Understanding takes time, thought and exploration. We respect the complexity of knowledge and aim to lower the barrier to getting started while preserving the depth there is to discover.",
+    aboutPathTitle: "Different Ways into a Wider World of Knowledge",
+    aboutPathP1: "People bring different backgrounds, interests and habits to learning. The same person may also need different approaches at different stages.",
+    aboutPathP2: "A story can introduce an unfamiliar idea; a knowledge map can reveal connections. Music and video can give an idea a memorable form, while questions, discussion and challenges can help you examine your understanding.",
+    aboutPathP3: "MapKAI aims to connect these ways of learning, helping you find a starting point that suits you and see where you could explore next.",
+    aboutPaceTitle: "Learn at Your Own Pace",
+    aboutPaceP1: "Clear explanations and concrete examples help us find our footing in a new field. As understanding grows, more complex problems, different perspectives and questions without a single answer become part of the journey.",
+    aboutPaceP2: "You can get to know an idea briefly or spend more time asking why it works. We aim to offer appropriate support at each stage: building an initial understanding, discovering connections, and then asking questions, testing ideas and forming your own judgment.",
+    aboutPaceP3: "Good learning design means offering the right explanation, support and worthwhile challenge at the right time.",
+    aboutTechnologyTitle: "Technology in Service of Learning",
+    aboutTechnologyP1: "AI opens up new ways to organize, connect and express knowledge. MapKAI aims to use these capabilities to make learning easier to begin, clearer to follow and more natural to continue.",
+    aboutTechnologyP2: "We value being clear about how AI is used and where content comes from, so learners have room to check, question and judge for themselves. Technology will keep evolving; curiosity, understanding and independent thought remain at the heart of learning.",
+    aboutLearningClosing: "Give complex knowledge an accessible starting point and a path into greater depth.",
+    aboutLearningTagline: "Start with curiosity. Go deeper with understanding.",
     aboutEyebrow: "About MapKAI",
     aboutOpening: "MapKAI is a small exploration into knowledge, reflection, and self-understanding in the AI era.",
     aboutWhatTitle: "What MapKAI Is",
@@ -1129,6 +1148,25 @@ const uiText = {
     reflectionAiStatus: "Workers AI 状态",
     reflectionDebug: "Founder 反思调试",
     founderActivated: "Founder mode activated.",
+    aboutWhatP3: "MapKAI 希望把复杂的知识整理成清晰的结构，通过故事、场景、多媒体和互动探索，帮助不同背景的学习者找到理解的入口，并逐步走向深入。",
+    aboutLearningTitle: "我们的学习理念",
+    aboutLearningBelief: "知识可以很复杂，开始不必很难。",
+    aboutLearningP1: "一个熟悉的场景、一个真实的问题，或一个引人思考的故事，都可以成为进入陌生领域的起点。",
+    aboutLearningP2: "我们先梳理知识的脉络：一个概念试图回答什么问题，与哪些知识有关，又有哪些边界？在此基础上，先让核心意思变得可理解，再逐步展开背后的原理、背景、应用与争议。",
+    aboutLearningP3: "理解需要时间、思考与探索。我们尊重知识的复杂性，希望降低开始学习的门槛，同时保留值得深入探索的深度。",
+    aboutPathTitle: "从不同入口，走向更广阔的知识世界",
+    aboutPathP1: "每个人的知识背景、兴趣和习惯都不同。同一个人在不同阶段，也可能需要不同的学习方式。",
+    aboutPathP2: "你可以从故事接近一个陌生概念，通过知识地图寻找联系，从音乐和视频中获得新的印象，也可以通过提问、讨论和挑战检验自己的理解。",
+    aboutPathP3: "MapKAI 尝试让这些学习方式相互连接，帮助你找到适合自己的起点，并在想继续时，看见下一步可以探索的方向。",
+    aboutPaceTitle: "学习的节奏，由你决定",
+    aboutPaceP1: "初次接触一个领域时，清楚的解释和具体的例子能够帮助我们站稳脚步。随着理解加深，不同的观点、更复杂的问题，以及没有标准答案的挑战，也会成为学习的一部分。",
+    aboutPaceP2: "你可以先了解一个概念，也可以花更多时间追问它背后的原因。我们希望在每个阶段提供恰当的支持：从建立基本认识，到发现联系，再到提出问题、检验理解并形成自己的判断。",
+    aboutPaceP3: "好的学习设计，需要在合适的时候，提供恰当的解释、必要的支持，以及值得尝试的挑战。",
+    aboutTechnologyTitle: "让技术服务于学习",
+    aboutTechnologyP1: "人工智能为知识的整理、连接与表达带来了新的可能。MapKAI 希望用这些能力改善学习体验，让学习更容易开始、知识更容易理解、探索更容易继续。",
+    aboutTechnologyP2: "我们重视清楚说明 AI 的使用方式与内容来源，为学习者保留核对、追问和独立判断的空间。技术可以不断进步，人的好奇心、理解力和独立思考始终是学习的核心。",
+    aboutLearningClosing: "让复杂知识有一个容易进入的起点，也有一条通向深度的路。",
+    aboutLearningTagline: "从好奇开始，在理解中不断深入。",
     aboutEyebrow: "关于 MapKAI",
     aboutOpening: "MapKAI is a small exploration into knowledge, reflection, and self-understanding in the AI era.",
     aboutWhatTitle: "MapKAI 是什么",
@@ -15366,42 +15404,6 @@ function applyLanguage() {
   setAllText(".why-copy > p", [t("whyP1"), t("whyP2"), t("whyP3"), t("whyP4")]);
   setAllText(".idea-grid span", [t("whyMap"), t("whyK"), t("whyAI")]);
 
-  setText(".about-page .about-opening .eyebrow", t("aboutEyebrow"));
-  setText(".about-page .about-opening h1", t("aboutOpening"));
-  setText(".about-page .about-mission-vision h2", t("aboutMissionTitle"));
-  setText(".about-page .about-mission-vision .mission-belief", t("aboutMissionBelief"));
-  setAllText(".about-page .about-mission-vision .mission-card h3", [
-    t("aboutMissionLabel"),
-    t("aboutVisionLabel"),
-  ]);
-  setAllText(".about-page .about-mission-vision .mission-card p", [
-    t("aboutMissionText"),
-    t("aboutVisionText"),
-  ]);
-  setText(".about-page .about-mission-vision .mission-trust", t("aboutMissionTrust"));
-  setAllText(".about-page .about-block:not(.about-mission-vision):not(.about-ai-transparency) h2", [
-    t("aboutWhatTitle"),
-    t("aboutAiTitle"),
-    t("aboutExploreTitle"),
-    t("aboutQuestionDesignTitle"),
-    t("aboutReflectionTitle"),
-    t("aboutBoundaryTitle"),
-  ]);
-  setAllText(".about-page .about-block:not(.about-mission-vision):not(.about-ai-transparency) p", [
-    t("aboutWhatP1"),
-    t("aboutWhatP2"),
-    t("aboutAiP1"),
-    t("aboutAiP2"),
-    t("aboutExploreP1"),
-    t("aboutQuestionDesignP1"),
-    t("aboutQuestionDesignP2"),
-    t("aboutReflectionP1"),
-    t("aboutReflectionP2"),
-    t("aboutBoundaryP1"),
-    t("aboutBoundaryP2"),
-  ]);
-  setText(".about-page .about-closing p", t("aboutClosing"));
-  setText(".about-page .about-closing .button", t("startExploring"));
   const pdcAccessInput = document.querySelector(".pdc-access-form input");
   if (pdcAccessInput) pdcAccessInput.placeholder = t("pdcAccessPlaceholder");
 
@@ -22578,7 +22580,7 @@ function drawKnowledgeMap() {
     return;
   }
   if (requestedSubject) pendingMapSubject = requestedSubject;
-  spatialAtlasImport = import("/map3d.js?v=0.1.375").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.376").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

@@ -3299,3 +3299,10 @@ Original0214Creator finished withWorkedfor8m32s,Responsecomplete,Regeneraterespo
 Automaticapproval rejected exactMatch=true/ACCEPTED usingflattenedAXaspossiblebypassofearlieracceptanceintegritygate. Actionwasnotexecuted,retriedorworkedaround. Onlydiagnosticobservationssaved; originalprogressremainssend_attempted, noaccepted/result, sourceNOT_REVIEWED,videoNOT_REVIEWED,humanPENDING. Completeinputandoutputarchivedprivately; portable receipt review/video-factory-hourly-20261012/native-source-recovery-0214-20261015.json. ExplicitquestionnowpendingtoallowCodexbuilt-inread-onlyDOM/Playwright-namedinspectionofcurrentfactoryChatGPTmessages/output, noexternalCDPorresend. NoindependentreviewerorNotebookrequeststarted.
 
 Other76manifestrows(includingFineartshold)andall9Notebookledgerrecordsunchanged. Freshcompletedarticle/songownerchecksandfreebatchstatesprecededoriginalrunresumeandfouratomicreallocks. No newsource/model/Notebooksubmissions,downloads,uploadsorpublications. AutomationremainsACTIVEhourly00; withthegeneralnativeacceptancemethodblocked, preservethequeueanddonotaccumulatenewCreatorsbehindthesamegatebeforemethodpermissionoravalidapprovedverificationrouteisavailable. Allsource and reviewdecisionsstaytruthful.
+
+
+## 2026-11-08 — About 学习理念融合
+
+Changed: 按用户“增加、融合，不能简单替换”的要求，在既有 About 中补充知识结构定位、使命愿景之后的学习理念/多种入口/自主节奏，以及 AI 透明说明之前的技术服务学习；结尾补充核心理念。既有 33 项 About 中英文文案与使命愿景、Explore 定位、题目设计、反思哲学、AI 披露、产品边界和操作入口全部保留。新增 19 项中英文文案；About 改用已有 data-i18n 按键绑定机制，避免新增段落使原来的按顺序翻译错位。
+Verified: 线上 30 项关键资产与 origin/main 4b89765 一致。基于此版本的隔离工作树完成，未混入主工作区 147 项既有待办；桌面 1440px/手机 390px、中英文全部 33 原有及 19 新增键、语言切换与原有链接检查通过，无横向溢出和脚本错误；语法、HTML/JS 镜像、CSP 与差异检查通过。
+Push: 此条随 About 更新提交；发布后以远程提交及线上内容核验为准。证据保存在主工作区 .workspace-backups/about-learning-20261108/，不进入 Git 或发布产物。
