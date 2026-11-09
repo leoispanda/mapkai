@@ -13,6 +13,51 @@ export const VIDEO_REVISION = 'read-before-you-choose-20261101';
 
 export const MUSIC_VIDEOS = freeze([
   {
+    "id": "hold-the-frame",
+    "title": {
+      "zh": "Hold The Frame",
+      "en": "Hold The Frame"
+    },
+    "description": {
+      "zh": "林岚重剪十五秒短片：更宽的视角让工具箱上两双手的意义发生改变。",
+      "en": "Lin Lan revises a fifteen-second film when a wider view changes how two hands on a toolbox are understood."
+    },
+    "durationSeconds": 120.033,
+    "version": "v1-mapkai",
+    "poster": "/music/videos/posters/hold-the-frame.jpg",
+    "featured": true,
+    "qualities": [
+      {
+        "id": "hd",
+        "label": {
+          "zh": "1080p · 高清兼容版",
+          "en": "1080p · Compatible HD"
+        },
+        "bytes": 80175966,
+        "width": 1920,
+        "height": 1080,
+        "objectKey": "music-videos/hold-the-frame/8d9b942956cb01479cf04ea900dbeb02a5df5d1790845dd3b2c29a8327350cfd.mp4",
+        "sha256": "8d9b942956cb01479cf04ea900dbeb02a5df5d1790845dd3b2c29a8327350cfd",
+        "etag": "199a98248a5a83b96ab1b917b2ba32cb",
+        "filename": "mapkai-hold-the-frame-hd.mp4"
+      },
+      {
+        "id": "phone",
+        "label": {
+          "zh": "720p · 流畅版",
+          "en": "720p · Smooth"
+        },
+        "bytes": 47621533,
+        "width": 1280,
+        "height": 720,
+        "objectKey": "music-videos/hold-the-frame/e3e3fc2c67b872f5b9fcc7b14975554f7ebda4f67a85a17198b6b403da2fdfb0.mp4",
+        "sha256": "e3e3fc2c67b872f5b9fcc7b14975554f7ebda4f67a85a17198b6b403da2fdfb0",
+        "etag": "a62ca73a3f142b5853daef31e131b928",
+        "filename": "mapkai-hold-the-frame-phone.mp4"
+      }
+    ]
+  },
+  {
     "id": "read-before-you-choose",
     "title": {
       "zh": "Read Before You Choose",
