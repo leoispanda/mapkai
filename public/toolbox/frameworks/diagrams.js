@@ -1,4 +1,4 @@
-import { additionalNotes, drawAdditional } from './library.js?v=0.1.363';
+import { additionalNotes, drawAdditional } from './library.js?v=0.1.377';
 // Original vector redraws with publication-based attribution and explicit editorial scope.
 const bi = (zh, en) => ({ zh, en });
 const part = (key, zh, en, zhBody, enBody) => ({ key, label: bi(zh, en), body: bi(zhBody, enBody) });

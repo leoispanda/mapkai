@@ -137,3 +137,16 @@ test('a real field with a slug id plays on both its short code route and full sl
     assert.equal(route, `/fields/${routeKey}`);
   }
 });
+
+test('story theme is bound to its source and remains available in its subject', () => {
+  const id = '7fc66d32-03e6-41e8-bd72-044582308385';
+  for (const language of ['en', 'zh']) {
+    const h = harness(language);
+    assert.equal(h.songs('0011').filter(x => x.id === id).length, 1);
+    const field = fields.find(x => x.code === '0011');
+    assert.ok(h.render('0011').includes(id));
+    assert.ok(!h.context.renderFieldSongs(field, '/concept-fables/0011-prerequisite-structure', id).includes(id));
+    assert.match(handler('renderConceptFableDetail'), /fable\.id === "0011-prerequisite-structure"/);
+    assert.ok(handler('renderConceptFableDetail').includes(id));
+  }
+});

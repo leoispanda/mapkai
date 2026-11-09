@@ -1,4 +1,4 @@
-import { translations } from './translations.js?v=0.1.363';
+import { translations } from './translations.js?v=0.1.377';
 export let language = (new URLSearchParams(location.search).get('lang') || (location.pathname.includes('/en') ? 'en' : 'zh')) === 'en' ? 'en' : 'zh';
 const escape = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const pairs = Object.entries(translations);

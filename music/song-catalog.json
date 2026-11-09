@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 111,
+  "nextNumber": 112,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -1382,6 +1382,19 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "110 Watch, Then Try - MapKAI - Education - Worked Examples"
+    },
+    {
+      "id": "7fc66d32-03e6-41e8-bd72-044582308385",
+      "number": 111,
+      "numberLabel": "111",
+      "songName": "The Wet Rope Holds",
+      "subjectName": "Basic Programmes and Qualifications",
+      "canonicalSubjectName": "Basic programmes and qualifications",
+      "conceptName": "Prerequisite Structure",
+      "createdAt": "2026-11-09T10:15:16.311Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "111 The Wet Rope Holds - MapKAI - Basic Programmes and Qualifications - Prerequisite Structure"
     }
   ]
 }

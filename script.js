@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.376";
+const appVersion = "0.1.377";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15966,7 +15966,8 @@ function renderConceptFableDetail(fableId) {
       </div>
     </aside>
     ${renderConceptFableModule(fable)}
-    ${renderFieldSongs(connectedField, `/concept-fables/${fable.id}`)}
+    ${fable.id === "0011-prerequisite-structure" ? `<section class="field-music" aria-label="${escapeHtml(currentLanguage === "zh" ? "故事主题曲 · AI 生成" : "Story theme song · AI-generated")}"><h2>${escapeHtml(currentLanguage === "zh" ? "故事主题曲 · AI 生成" : "Story theme song · AI-generated")}</h2><div class="field-music-grid">${renderCategorySongModule(categoryGroupSongEditions["001"].find(song => song.id === "7fc66d32-03e6-41e8-bd72-044582308385"), "00", `/concept-fables/${fable.id}`)}</div></section>` : ""}
+    ${renderFieldSongs(connectedField, `/concept-fables/${fable.id}`, fable.id === "0011-prerequisite-structure" ? "7fc66d32-03e6-41e8-bd72-044582308385" : "")}
     ${renderSiblingConceptFables(fable)}
     ${renderStoryRatingPanel(ratingArticle)}
     ${renderStoryNavigation(ratingArticle)}`;
@@ -18823,6 +18824,27 @@ const categoryGroupSongEditions = {
         "zh": "基础课程与资格",
         "en": "Basic Programmes and Qualifications"
       }
+    },
+    {
+      "id": "7fc66d32-03e6-41e8-bd72-044582308385",
+      "title": "111 The Wet Rope Holds - MapKAI - Basic Programmes and Qualifications - Prerequisite Structure",
+      "durationSeconds": 120.032625,
+      "meta": {
+        "zh": "英文 · 原版 · 2:00 · 待听审",
+        "en": "English · Original · 2:00 · Listening review pending"
+      },
+      "core": {
+        "zh": "根据《海图夹里的免修卡》创作：季衡沿着正确的海图航行，却发现湿绳受力时滑脱。他重新练习，让路线与基础能力一起经得起风。",
+        "en": "A song for The Exemption Card in the Chart Folder: Ji Heng learns to secure a wet rope under load so his charted route can be followed."
+      },
+      "style": {
+        "zh": "故事主题曲 · 待听审",
+        "en": "Story theme · Listening review pending"
+      },
+      "subjectLabel": {
+        "zh": "基础课程与资格",
+        "en": "Basic Programmes and Qualifications"
+      }
     }
   ],
   "002": [
@@ -19282,7 +19304,8 @@ const categorySongTopicLabelsZh = {
   "Finding Relevant Information": "查找相关信息",
   "Task Decomposition": "任务分解",
   "Source Attribution": "来源归属",
-  "Worked Examples": "例题示范"
+  "Worked Examples": "例题示范",
+  "Prerequisite Structure": "先备知识结构"
 };
 
 // Topic placements are explicit: sharing a broad category does not make a song
@@ -19313,12 +19336,27 @@ const categoryGroupSongFieldCodes = {
 };
 
 const categorySongEditionFieldCodes = {
-  "88540d5e-041c-4528-a51a-2f81a2ed9fee": ["0021"],
-  "4b851156-1e07-4933-b684-ec35d813e1b5": ["0011"],
-  "25422116-ab16-4dad-b6e6-112be1d30ede": ["0021"],
-  "a8909f9a-7b32-47f2-a4c2-e682a5c54037": ["0031"],
-  "7c17ece8-494a-46c7-b672-24f60be0d730": ["0021"],
-  "f16e9b4a-a60a-4618-bbb0-a87980a2203d": ["0111"]
+  "88540d5e-041c-4528-a51a-2f81a2ed9fee": [
+    "0021"
+  ],
+  "4b851156-1e07-4933-b684-ec35d813e1b5": [
+    "0011"
+  ],
+  "25422116-ab16-4dad-b6e6-112be1d30ede": [
+    "0021"
+  ],
+  "a8909f9a-7b32-47f2-a4c2-e682a5c54037": [
+    "0031"
+  ],
+  "7c17ece8-494a-46c7-b672-24f60be0d730": [
+    "0021"
+  ],
+  "f16e9b4a-a60a-4618-bbb0-a87980a2203d": [
+    "0111"
+  ],
+  "7fc66d32-03e6-41e8-bd72-044582308385": [
+    "0011"
+  ]
 };
 
 function getFieldSongs(field) {
@@ -19337,8 +19375,8 @@ function getFieldSongs(field) {
   return [...new Map(songs.filter(Boolean).map(song => [song.id, song])).values()];
 }
 
-function renderFieldSongs(field, songRoute) {
-  const songs = getFieldSongs(field);
+function renderFieldSongs(field, songRoute, excludeSongId = "") {
+  const songs = getFieldSongs(field).filter(song => song.id !== excludeSongId);
   if (!songs.length) return "";
   const label = currentLanguage === "zh" ? "学科歌曲 · AI 生成" : "Music from this subject · AI-generated";
   return `<section class="field-music" data-field-music="${escapeHtml(field.code)}" aria-label="${escapeHtml(label)}">
@@ -22580,7 +22618,7 @@ function drawKnowledgeMap() {
     return;
   }
   if (requestedSubject) pendingMapSubject = requestedSubject;
-  spatialAtlasImport = import("/map3d.js?v=0.1.376").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.377").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
