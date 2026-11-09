@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.377";
+const appVersion = "0.1.378";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15907,6 +15907,21 @@ function renderConceptFableModule(fable) {
     </section>`;
 }
 
+const storyThemeSongIds = {
+  "0011-prerequisite-structure": "7fc66d32-03e6-41e8-bd72-044582308385",
+  "0211-framing": "bf2cc9c5-407a-4bbd-81c0-b051c09ebd3a",
+  "0011-mastery-learning": "f4446f54-73d1-4fda-bb98-6d5d5ffbad07"
+};
+
+function renderStoryThemeSong(fable) {
+  const id = storyThemeSongIds[fable.id];
+  if (!id) return "";
+  const song = Object.values(categoryGroupSongEditions).flat().find(item => item.id === id);
+  if (!song) return "";
+  const label = currentLanguage === "zh" ? "故事主题曲 · AI 生成" : "Story theme song · AI-generated";
+  return `<section class="field-music" aria-label="${escapeHtml(label)}"><h2>${escapeHtml(label)}</h2><div class="field-music-grid">${renderCategorySongModule(song, fable.fieldCode.slice(0, 2), `/concept-fables/${fable.id}`)}</div></section>`;
+}
+
 function renderConceptFableDetail(fableId) {
   resetCategorySongModules();
   const target = document.getElementById("conceptFableReader");
@@ -15966,8 +15981,8 @@ function renderConceptFableDetail(fableId) {
       </div>
     </aside>
     ${renderConceptFableModule(fable)}
-    ${fable.id === "0011-prerequisite-structure" ? `<section class="field-music" aria-label="${escapeHtml(currentLanguage === "zh" ? "故事主题曲 · AI 生成" : "Story theme song · AI-generated")}"><h2>${escapeHtml(currentLanguage === "zh" ? "故事主题曲 · AI 生成" : "Story theme song · AI-generated")}</h2><div class="field-music-grid">${renderCategorySongModule(categoryGroupSongEditions["001"].find(song => song.id === "7fc66d32-03e6-41e8-bd72-044582308385"), "00", `/concept-fables/${fable.id}`)}</div></section>` : ""}
-    ${renderFieldSongs(connectedField, `/concept-fables/${fable.id}`, fable.id === "0011-prerequisite-structure" ? "7fc66d32-03e6-41e8-bd72-044582308385" : "")}
+    ${renderStoryThemeSong(fable)}
+    ${renderFieldSongs(connectedField, `/concept-fables/${fable.id}`, storyThemeSongIds[fable.id] || "")}
     ${renderSiblingConceptFables(fable)}
     ${renderStoryRatingPanel(ratingArticle)}
     ${renderStoryNavigation(ratingArticle)}`;
@@ -18845,6 +18860,27 @@ const categoryGroupSongEditions = {
         "zh": "基础课程与资格",
         "en": "Basic Programmes and Qualifications"
       }
+    },
+    {
+      "id": "f4446f54-73d1-4fda-bb98-6d5d5ffbad07",
+      "title": "113 One More Look - MapKAI - Basic Programmes and Qualifications - Mastery Learning",
+      "durationSeconds": 120.032625,
+      "meta": {
+        "zh": "英文 · 原版 · 2:00 · 待听审",
+        "en": "English · Original · 2:00 · Listening review pending"
+      },
+      "core": {
+        "zh": "阿岚调整萃取技术并反复检查，在一次合格之后寻找稳定发挥。",
+        "en": "A-Lan adjusts her espresso technique and checks it again, finding steadiness beyond a single passing shot."
+      },
+      "style": {
+        "zh": "故事主题曲 · 待听审",
+        "en": "Story theme · Listening review pending"
+      },
+      "subjectLabel": {
+        "zh": "基础课程与资格",
+        "en": "Basic Programmes and Qualifications"
+      }
     }
   ],
   "002": [
@@ -18936,6 +18972,29 @@ const categoryGroupSongEditions = {
       "subjectLabel": {
         "zh": "教育",
         "en": "Education"
+      }
+    }
+  ],
+  "021": [
+    {
+      "id": "bf2cc9c5-407a-4bbd-81c0-b051c09ebd3a",
+      "title": "112 Hold The Frame - MapKAI - Audio-visual techniques and media production - Framing",
+      "durationSeconds": 120.032625,
+      "meta": {
+        "zh": "英文 · 原版 · 2:00 · 待听审",
+        "en": "English · Original · 2:00 · Listening review pending"
+      },
+      "core": {
+        "zh": "林岚重剪十五秒短片：更宽的视角让工具箱上两双手的意义发生改变。",
+        "en": "Lin Lan revises a fifteen-second film when a wider view changes how two hands on a toolbox are understood."
+      },
+      "style": {
+        "zh": "故事主题曲 · 待听审",
+        "en": "Story theme · Listening review pending"
+      },
+      "subjectLabel": {
+        "zh": "视听技术与媒体制作",
+        "en": "Audio-visual techniques and media production"
       }
     }
   ]
@@ -19305,7 +19364,9 @@ const categorySongTopicLabelsZh = {
   "Task Decomposition": "任务分解",
   "Source Attribution": "来源归属",
   "Worked Examples": "例题示范",
-  "Prerequisite Structure": "先备知识结构"
+  "Prerequisite Structure": "先备知识结构",
+  "Framing": "取景",
+  "Mastery Learning": "掌握学习"
 };
 
 // Topic placements are explicit: sharing a broad category does not make a song
@@ -19355,6 +19416,12 @@ const categorySongEditionFieldCodes = {
     "0111"
   ],
   "7fc66d32-03e6-41e8-bd72-044582308385": [
+    "0011"
+  ],
+  "bf2cc9c5-407a-4bbd-81c0-b051c09ebd3a": [
+    "0211"
+  ],
+  "f4446f54-73d1-4fda-bb98-6d5d5ffbad07": [
     "0011"
   ]
 };
@@ -22618,7 +22685,7 @@ function drawKnowledgeMap() {
     return;
   }
   if (requestedSubject) pendingMapSubject = requestedSubject;
-  spatialAtlasImport = import("/map3d.js?v=0.1.377").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.378").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

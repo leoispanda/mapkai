@@ -146,7 +146,20 @@ test('story theme is bound to its source and remains available in its subject', 
     const field = fields.find(x => x.code === '0011');
     assert.ok(h.render('0011').includes(id));
     assert.ok(!h.context.renderFieldSongs(field, '/concept-fables/0011-prerequisite-structure', id).includes(id));
-    assert.match(handler('renderConceptFableDetail'), /fable\.id === "0011-prerequisite-structure"/);
-    assert.ok(handler('renderConceptFableDetail').includes(id));
+    assert.equal(literal("storyThemeSongIds")["0011-prerequisite-structure"], id);
+    assert.ok(handler("renderConceptFableDetail").includes("renderStoryThemeSong(fable)"));
+  }
+});
+
+
+test('each new theme points to one story and its subject field', () => {
+  const map = literal('storyThemeSongIds');
+  for (const [story, id, field] of [['0211-framing','bf2cc9c5-407a-4bbd-81c0-b051c09ebd3a','0211'], ['0011-mastery-learning','f4446f54-73d1-4fda-bb98-6d5d5ffbad07','0011']]) {
+    assert.equal(map[story], id);
+    for (const language of ['en','zh']) {
+      const h = harness(language);
+      assert.equal(h.songs(field).filter(song => song.id === id).length, 1);
+      assert.ok(!h.context.renderFieldSongs(fields.find(f => f.code === field), '/concept-fables/'+story, id).includes(id));
+    }
   }
 });

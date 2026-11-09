@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 112,
+  "nextNumber": 114,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -1395,6 +1395,32 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "111 The Wet Rope Holds - MapKAI - Basic Programmes and Qualifications - Prerequisite Structure"
+    },
+    {
+      "id": "bf2cc9c5-407a-4bbd-81c0-b051c09ebd3a",
+      "number": 112,
+      "numberLabel": "112",
+      "songName": "Hold The Frame",
+      "subjectName": "Audio-visual techniques and media production",
+      "canonicalSubjectName": "Audio-visual techniques and media production",
+      "conceptName": "Framing",
+      "createdAt": "2026-11-09T10:47:12.048Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "112 Hold The Frame - MapKAI - Audio-visual techniques and media production - Framing"
+    },
+    {
+      "id": "f4446f54-73d1-4fda-bb98-6d5d5ffbad07",
+      "number": 113,
+      "numberLabel": "113",
+      "songName": "One More Look",
+      "subjectName": "Basic Programmes and Qualifications",
+      "canonicalSubjectName": "Basic Programmes and Qualifications",
+      "conceptName": "Mastery Learning",
+      "createdAt": "2026-11-09T10:47:12.060Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "113 One More Look - MapKAI - Basic Programmes and Qualifications - Mastery Learning"
     }
   ]
 }
