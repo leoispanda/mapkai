@@ -9,7 +9,7 @@ const freeze = value => {
   return value;
 };
 
-export const VIDEO_REVISION = 'read-before-you-choose-20261101';
+export const VIDEO_REVISION = 'hold-the-frame-lyrics-20261110';
 
 export const MUSIC_VIDEOS = freeze([
   {
@@ -23,7 +23,7 @@ export const MUSIC_VIDEOS = freeze([
       "en": "Lin Lan revises a fifteen-second film when a wider view changes how two hands on a toolbox are understood."
     },
     "durationSeconds": 120.033,
-    "version": "v1-mapkai",
+    "version": "v2-mapkai-lyrics",
     "poster": "/music/videos/posters/hold-the-frame.jpg",
     "featured": true,
     "qualities": [
@@ -33,12 +33,12 @@ export const MUSIC_VIDEOS = freeze([
           "zh": "1080p · 高清兼容版",
           "en": "1080p · Compatible HD"
         },
-        "bytes": 80175966,
+        "bytes": 80098920,
         "width": 1920,
         "height": 1080,
-        "objectKey": "music-videos/hold-the-frame/8d9b942956cb01479cf04ea900dbeb02a5df5d1790845dd3b2c29a8327350cfd.mp4",
-        "sha256": "8d9b942956cb01479cf04ea900dbeb02a5df5d1790845dd3b2c29a8327350cfd",
-        "etag": "199a98248a5a83b96ab1b917b2ba32cb",
+        "objectKey": "music-videos/hold-the-frame/851cdaf03c3e580f9b4b72457e4a5b07847d794a979a3bbce3ff7441e06005bb.mp4",
+        "sha256": "851cdaf03c3e580f9b4b72457e4a5b07847d794a979a3bbce3ff7441e06005bb",
+        "etag": "88ea5575eae299fdc8e55fe8564cfc3d",
         "filename": "mapkai-hold-the-frame-hd.mp4"
       },
       {
@@ -47,12 +47,12 @@ export const MUSIC_VIDEOS = freeze([
           "zh": "720p · 流畅版",
           "en": "720p · Smooth"
         },
-        "bytes": 47621533,
+        "bytes": 49158466,
         "width": 1280,
         "height": 720,
-        "objectKey": "music-videos/hold-the-frame/e3e3fc2c67b872f5b9fcc7b14975554f7ebda4f67a85a17198b6b403da2fdfb0.mp4",
-        "sha256": "e3e3fc2c67b872f5b9fcc7b14975554f7ebda4f67a85a17198b6b403da2fdfb0",
-        "etag": "a62ca73a3f142b5853daef31e131b928",
+        "objectKey": "music-videos/hold-the-frame/09b138f1ef4ae0b6ae50e9e8e6e04b66fac20380f0b66242e204a10982c5ee82.mp4",
+        "sha256": "09b138f1ef4ae0b6ae50e9e8e6e04b66fac20380f0b66242e204a10982c5ee82",
+        "etag": "86dd770b65e639e68278eb5e2a501974",
         "filename": "mapkai-hold-the-frame-phone.mp4"
       }
     ]
@@ -498,3 +498,4 @@ export function publicVideos() {
     }),
   }));
 }
+
