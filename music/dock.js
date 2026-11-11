@@ -241,14 +241,14 @@
     const votesReady = preferences?.refresh().catch(() => {});
     fetchPromise = (async () => {
       const found = new Map(), cursors = new Set(); let cursor = null;
-      for (let count = 0; count < 10; count++) {
+      while (true) {
         const response = await fetch(`/api/music/tracks${cursor ? `?cursor=${encodeURIComponent(cursor)}` : ''}`, { credentials: 'same-origin', cache: 'no-store', signal: AbortSignal.timeout(20000) });
         if (!response.ok) throw new Error('Catalog unavailable');
         const data = await response.json(); if (!Array.isArray(data.tracks) || data.tracks.length > 500) throw new Error('Invalid catalog');
         for (const raw of data.tracks) { const track = validTrack(raw); if (track) found.set(track.id, track); }
         cursor = data.nextCursor;
-        if (!cursor) break;
-        if (typeof cursor !== 'string' || cursor.length > 1000 || cursors.has(cursor) || count === 9) throw new Error('Invalid catalog cursor');
+        if (cursor === null || cursor === undefined || cursor === '') break;
+        if (typeof cursor !== 'string' || cursor.length > 2048 || cursors.has(cursor)) throw new Error('Invalid catalog cursor');
         cursors.add(cursor);
       }
       await votesReady;
@@ -506,7 +506,15 @@
   $('play').onclick = toggle; $('mini-play').onclick = toggle;
   $('car').onchange = () => setCarLyrics($('car').checked);
   $('prev').onclick = $('mini-prev').onclick = () => move(-1); $('next').onclick = $('mini-next').onclick = () => move(1);
-  $('collapse').onclick = () => { collapse(!dock.classList.contains('is-collapsed')); render(); persist(true); };
+  $('collapse').onclick = () => {
+    const expanding = dock.classList.contains('is-collapsed');
+    collapse(!expanding);
+    if (expanding) {
+      const current = state();
+      if (!current.loaded || current.libraryFailed) load();
+    }
+    render(); persist(true);
+  };
   $('select').onchange = () => {
     const track = state().tracks.find(item => item.id === $('select').value); if (!track) return;
     externalMediaOwner = null; restorePlayIntent = false; autoResumeBlocked = false; cancelRequestedPlay(); explicitSelection = true;
@@ -605,6 +613,6 @@
     carLyricsState: () => ({ enabled: carLyrics, supported: carSupported }) });
   window.dispatchEvent(new Event('mapkai:music-dock-ready'));
   render(); restore();
-  // Visitors who have not started listening incur no catalog/audio read.
+  // Restore returning listeners immediately; new visitors load on expansion or Play.
   if (saved?.id && !page()) load();
 })();

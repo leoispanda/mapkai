@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { createVegetation, createShoreRocks } from './map3d-flora.js?v=0.1.378';
+import { createVegetation, createShoreRocks } from './map3d-flora.js?v=0.1.379';
 
 // A loose, asymmetric archipelago: broad foreground shores and smaller distant islets.
 export const ISLANDS = [

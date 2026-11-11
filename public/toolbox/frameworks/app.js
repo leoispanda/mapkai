@@ -1,7 +1,7 @@
-import { frameworks } from './data.js?v=0.1.378';
-import { diagramNotes, drawDiagram } from './diagrams.js?v=0.1.378';
-import { references, categories, evidence } from './references.js?v=0.1.378';
-import { categoryStories } from './stories.js?v=0.1.378';
+import { frameworks } from './data.js?v=0.1.379';
+import { diagramNotes, drawDiagram } from './diagrams.js?v=0.1.379';
+import { references, categories, evidence } from './references.js?v=0.1.379';
+import { categoryStories } from './stories.js?v=0.1.379';
 import { frameworkStoryFor } from './framework-stories.js?v=0.1.253';
 
 const language = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';

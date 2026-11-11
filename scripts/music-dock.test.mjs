@@ -22,7 +22,7 @@ const flush = async () => { for (let count = 0; count < 12; count++) await Promi
 
 // Delayed catalog and media events run the actual dock source. The small DOM and
 // page bridge model only browser/integration contracts, not playback decisions.
-function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false, continuous = 'on', initialMediaActions = [], playGates = [], audioSessionType = null, hidden = false, pagehideClearsIntent = false, savedCarLyrics = 'off' } = {}) {
+function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false, catalogPages = null, continuous = 'on', initialMediaActions = [], playGates = [], audioSessionType = null, hidden = false, pagehideClearsIntent = false, savedCarLyrics = 'off' } = {}) {
   const ids = new Map(), elements = [], operations = [], selectWrites = [], mutationObservers = [];
   class Target {
     addEventListener(type, callback, options = {}) {
@@ -182,7 +182,8 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
     },
     AbortSignal: { timeout: () => undefined },
     fetch: async () => {
-      fetchCalls++; const data = await request.promise;
+      const requestIndex = fetchCalls++;
+      const data = Array.isArray(catalogPages) ? catalogPages[requestIndex] : await request.promise;
       return { ok: !catalogFailure, json: async () => vm.runInContext(`JSON.parse(${JSON.stringify(JSON.stringify(data))})`, context) };
     },
   });
@@ -207,6 +208,63 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
     lesson: () => { const audio = new Audio(); audio.play(); return audio; },
   };
 }
+
+test('expanding the shared dock loads the catalog into its song picker without starting audio', async () => {
+  const h = harness();
+  assert.equal(h.fetchCalls(), 0);
+  assert.equal(h.control('select').disabled, true);
+  h.control('collapse').onclick();
+  await flush();
+  assert.equal(h.fetchCalls(), 1);
+  assert.equal(h.ownAudio.playCalls, 0);
+
+  h.request.resolve({ tracks: catalog, nextCursor: null });
+  await flush();
+  const select = h.control('select');
+  assert.equal(select.disabled, false);
+  assert.deepEqual(select.options.slice(1).map(option => option.value), [firstId, secondId]);
+  assert.equal(h.ownAudio.playCalls, 0);
+
+  select.value = secondId;
+  select.onchange();
+  await flush();
+  assert.equal(h.dock.snapshot().id, secondId);
+  assert.equal(h.dock.snapshot().playing, true);
+  assert.equal(h.fetchCalls(), 1);
+});
+
+test('shared song picker follows the full catalog beyond ten pages', async () => {
+  const tracks = Array.from({ length: 11 }, (_, index) => {
+    const id = `a1000000-0000-4000-8000-${String(index + 1).padStart(12, '0')}`;
+    return { id, title: `Paged song ${index + 1}`, url: `/api/music/audio?id=${id}`, language: 'en', aiGenerated: true,
+      createdAt: `2026-11-${String(index + 1).padStart(2, '0')}T00:00:00.000Z`, lyrics: '', lyricsTiming: [] };
+  });
+  const pages = tracks.map((track, index) => ({ tracks: [track], nextCursor: index < tracks.length - 1 ? `page-${index + 1}` : null }));
+  const h = harness({ catalogPages: pages });
+  h.control('collapse').onclick();
+  await new Promise(resolve => setTimeout(resolve, 0));
+
+  const select = h.control('select');
+  const values = select.options.slice(1).map(option => option.value).sort();
+  assert.equal(h.fetchCalls(), 11);
+  assert.equal(select.disabled, false);
+  assert.deepEqual(values, tracks.map(track => track.id).sort());
+});
+
+test('expanding a loaded Music-page dock does not reload the catalog or interrupt playback', async () => {
+  const h = harness({ pageLoaded: true });
+  assert.equal(await h.dock.play(firstId), true);
+  await flush();
+  const audio = h.pageState.audio;
+  const playCalls = audio.playCalls;
+
+  h.control('collapse').onclick();
+  await flush();
+  assert.equal(h.pageCalls.load, 0);
+  assert.equal(audio.paused, false);
+  assert.equal(audio.playCalls, playCalls);
+  assert.equal(h.control('select').options.length, 3);
+});
 
 test('fresh visitor incurs no catalog/audio read until Play, then starts once after catalog arrival', async () => {
   const h = harness(); assert.equal(h.fetchCalls(), 0);

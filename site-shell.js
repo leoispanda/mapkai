@@ -78,7 +78,7 @@
     };
     const mountDock = () => {
       const script = document.createElement('script');
-      script.src = '/music/dock.js?v=stable-picker-20261024'; document.head.append(script);
+      script.src = '/music/dock.js?v=catalog-on-expand-20261111'; document.head.append(script);
     };
     const launch = () => {
       const ready = () => {
